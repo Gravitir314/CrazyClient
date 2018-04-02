@@ -2488,16 +2488,16 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         _local_9.magicPotionCount_ = _local_5;
                         break;
                     case StatData.TEXTURE_STAT:
-                        if (((_local_9 == player) && (!(Parameters.data_.nsetSkin[1] == -1))))
-                        {
+                        if (!Parameters.data_.showSkins){
+                            break
+                        };
+                        if (_local_9 != null){
+                            (((!(_local_9.skinId == _local_5)) && (_local_5 >= 0)) && (this.setPlayerSkinTemplate(_local_9, _local_5)));
+                        };
+                        if (((_local_9 == player) && (!(Parameters.data_.nsetSkin[1] == -1)))) {
                             player.skin = AnimatedChars.getAnimatedChar(Parameters.data_.nsetSkin[0], Parameters.data_.nsetSkin[1]);
-                        }
-                        else
-                        {
-                            if (Parameters.data_.showSkins)
-                            {
-                                this.setPlayerSkinTemplate(_local_9, _local_5);
-                            };
+                        } else if (((_arg_1.objectType_ == 1813) && (_local_5 > 0))){
+                            _arg_1.setTexture(_local_5);
                         };
                         break;
                     case StatData.HASBACKPACK_STAT:

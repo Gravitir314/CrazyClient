@@ -323,6 +323,13 @@ public class GameObject extends BasicObject
             };
         }
 
+        public function setTexture(_arg_1:int):void{
+            var _local_2:TextureData = ObjectLibrary.typeToTextureData_[_arg_1];
+            this.texture_ = _local_2.texture_;
+            this.mask_ = _local_2.mask_;
+            this.animatedChar_ = _local_2.animatedChar_;
+        }
+
         public function setAltTexture(_arg_1:int):void
         {
             var _local_2:TextureData;
