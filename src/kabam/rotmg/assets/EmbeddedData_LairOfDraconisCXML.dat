@@ -280,6 +280,7 @@
       <Defense>40</Defense>
       <XpMult>1.0</XpMult>
       <Level>20</Level>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -366,6 +367,7 @@
       <Defense>75</Defense>
       <XpMult>1.0</XpMult>
       <Level>20</Level>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -530,6 +532,7 @@
       <Defense>40</Defense>
       <XpMult>5.0</XpMult>
       <Level>20</Level>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -652,6 +655,7 @@
       <Defense>40</Defense>
       <XpMult>1.0</XpMult>
       <Level>20</Level>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -825,6 +829,7 @@
       <Defense>60</Defense>
       <XpMult>5.0</XpMult>
       <Level>20</Level>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -917,6 +922,7 @@
       <Defense>60</Defense>
       <XpMult>1.0</XpMult>
       <Level>20</Level>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -1110,6 +1116,7 @@
       <MaxHitPoints>110000</MaxHitPoints>
       <Defense>70</Defense>
       <XpMult>7.5</XpMult>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>
@@ -1236,6 +1243,7 @@
       <MaxHitPoints>110000</MaxHitPoints>
       <Defense>70</Defense>
       <XpMult>7.5</XpMult>
+      <Quest/>
       <God/>
       <ParalyzeImmune/>
       <DazedImmune/>

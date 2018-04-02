@@ -1,387 +1,547 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
-   <Object type="0x23A6" id="Platinum Dungeon Shard x 1">
+   <Object type="0x20A0" id="Kingdom Skins Token x1">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>1</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A7" id="Platinum Dungeon Shard x 2">
+   <Object type="0x20A1" id="Kingdom Skins Token x2">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>2</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A8" id="Platinum Dungeon Shard x 3">
+   <Object type="0x20A2" id="Kingdom Skins Token x3">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>3</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A9" id="Platinum Dungeon Shard x 4">
+   <Object type="0x20A3" id="Kingdom Skins Token x4">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>4</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23AA" id="Platinum Dungeon Shard x 5">
+   <Object type="0x20A4" id="Kingdom Skins Token x5">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>5</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23AB" id="Platinum Dungeon Shard x 6">
+   <Object type="0x20A5" id="Kingdom Skins Token x6">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>6</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23AC" id="Platinum Dungeon Shard x 7">
+   <Object type="0x20A6" id="Kingdom Skins Token x7">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>7</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23AD" id="Platinum Dungeon Shard x 8">
+   <Object type="0x20A7" id="Kingdom Skins Token x8">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>8</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23AE" id="Platinum Dungeon Shard x 9">
+   <Object type="0x20A8" id="Kingdom Skins Token x9">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>9</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23AF" id="Platinum Dungeon Shard x 10">
+   <Object type="0x20A9" id="Kingdom Skins Token x10">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x76</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
       <Quantity>10</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x239B" id="Ruby Dungeon Shard x 1">
+   <Object type="0x20AA" id="Kingdom Skins Token x11">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>1</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>11</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x239C" id="Ruby Dungeon Shard x 2">
+   <Object type="0x20AB" id="Kingdom Skins Token x12">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>2</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>12</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x239D" id="Ruby Dungeon Shard x 3">
+   <Object type="0x20AC" id="Kingdom Skins Token x13">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>3</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>13</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x239E" id="Ruby Dungeon Shard x 4">
+   <Object type="0x20AD" id="Kingdom Skins Token x14">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>4</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>14</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x239F" id="Ruby Dungeon Shard x 5">
+   <Object type="0x20AE" id="Kingdom Skins Token x15">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>5</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>15</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A0" id="Ruby Dungeon Shard x 6">
+   <Object type="0x20AF" id="Kingdom Skins Token x16">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>6</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>16</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A1" id="Ruby Dungeon Shard x 7">
+   <Object type="0x20B0" id="Kingdom Skins Token x17">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>7</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>17</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A2" id="Ruby Dungeon Shard x 8">
+   <Object type="0x20B1" id="Kingdom Skins Token x18">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>8</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>18</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A3" id="Ruby Dungeon Shard x 9">
+   <Object type="0x20B2" id="Kingdom Skins Token x19">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>9</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>19</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x23A4" id="Ruby Dungeon Shard x 10">
+   <Object type="0x20B3" id="Kingdom Skins Token x20">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x75</Index>
+         <Index>0x6e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>10</Quantity>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>20</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x2390" id="Obsidian Dungeon Shard x 1">
+   <Object type="0x20B4" id="Kingdom Skins Token x21">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>21</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20B5" id="Kingdom Skins Token x22">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>22</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20B6" id="Kingdom Skins Token x23">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>23</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20B7" id="Kingdom Skins Token x24">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>24</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20B8" id="Kingdom Skins Token x25">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>25</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20B9" id="Kingdom Skins Token x26">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>26</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20BA" id="Kingdom Skins Token x27">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>27</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20BB" id="Kingdom Skins Token x28">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>28</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20BC" id="Kingdom Skins Token x29">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>29</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x20BD" id="Kingdom Skins Token x30">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring 30 of these tokens to the Tinkerer to get one of the Kingdom Skins.</Description>
+      <Quantity>30</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="30"/>
+         <EffectInfo name="Event" description="Kingdom Skins"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x21ab" id="ORYX April Shard x1">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -389,913 +549,893 @@
          <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2391" id="Obsidian Dungeon Shard x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2392" id="Obsidian Dungeon Shard x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2393" id="Obsidian Dungeon Shard x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2394" id="Obsidian Dungeon Shard x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2395" id="Obsidian Dungeon Shard x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2396" id="Obsidian Dungeon Shard x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2397" id="Obsidian Dungeon Shard x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2398" id="Obsidian Dungeon Shard x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2399" id="Obsidian Dungeon Shard x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2385" id="Gold Dungeon Shard x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2386" id="Gold Dungeon Shard x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2387" id="Gold Dungeon Shard x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2388" id="Gold Dungeon Shard x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2389" id="Gold Dungeon Shard x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x238A" id="Gold Dungeon Shard x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x238B" id="Gold Dungeon Shard x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x238C" id="Gold Dungeon Shard x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x238D" id="Gold Dungeon Shard x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x238E" id="Gold Dungeon Shard x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x73</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Bring a stack of shards to the Tinkerer to complete the "Dungeon of the Week" quest.\n\nThis item will disappear after this month.</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Quest" description="Dungeon of the Week"/>
-         <EffectInfo name="Month" description="February 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x641E" id="Heart x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x641F" id="Heart x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6420" id="Heart x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6421" id="Heart x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6422" id="Heart x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6423" id="Heart x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6424" id="Heart x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6425" id="Heart x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6426" id="Heart x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6427" id="Heart x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Hearts and exchange them for love letters!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6409" id="Love Letter x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>1</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x640A" id="Love Letter x 2">
+   <Object type="0x21ac" id="ORYX April Shard x2">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect Love Letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>2</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x640B" id="Love Letter x 3">
+   <Object type="0x21ad" id="ORYX April Shard x3">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>3</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x640C" id="Love Letter x 4">
+   <Object type="0x21ae" id="ORYX April Shard x4">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>4</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x640D" id="Love Letter x 5">
+   <Object type="0x21af" id="ORYX April Shard x5">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>5</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x640E" id="Love Letter x 6">
+   <Object type="0x21b0" id="ORYX April Shard x6">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>6</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x640F" id="Love Letter x 7">
+   <Object type="0x21b1" id="ORYX April Shard x7">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>7</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6410" id="Love Letter x 8">
+   <Object type="0x21b2" id="ORYX April Shard x8">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>8</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6411" id="Love Letter x 9">
+   <Object type="0x21b3" id="ORYX April Shard x9">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>9</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6412" id="Love Letter x 10">
+   <Object type="0x21b4" id="ORYX April Shard x10">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>10</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6413" id="Love Letter x 11">
+   <Object type="0x21b5" id="ORYX April Shard x11">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>11</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6414" id="Love Letter x 12">
+   <Object type="0x21b6" id="ORYX April Shard x12">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>12</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6415" id="Love Letter x 13">
+   <Object type="0x21b7" id="ORYX April Shard x13">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>13</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6416" id="Love Letter x 14">
+   <Object type="0x21b8" id="ORYX April Shard x14">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>14</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6417" id="Love Letter x 15">
+   <Object type="0x21b9" id="ORYX April Shard x15">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>15</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6418" id="Love Letter x 16">
+   <Object type="0x21ba" id="ORYX April Shard x16">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>16</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6419" id="Love Letter x 17">
+   <Object type="0x21bb" id="ORYX April Shard x17">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>17</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x641A" id="Love Letter x 18">
+   <Object type="0x21bc" id="ORYX April Shard x18">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>18</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x641B" id="Love Letter x 19">
+   <Object type="0x21bd" id="ORYX April Shard x19">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>19</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x641C" id="Love Letter x 20">
+   <Object type="0x21be" id="ORYX April Shard x20">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0x69</Index>
+         <Index>0x74</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Collect love letters and exchange them for exclusive rewards!</Description>
+      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
       <Quantity>20</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Valentine's Day 2018"/>
+         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x413" id="Golden Egg x1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x414" id="Golden Egg x2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x415" id="Golden Egg x3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x416" id="Golden Egg x4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x417" id="Golden Egg x5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x418" id="Golden Egg x6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x419" id="Golden Egg x7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x41A" id="Golden Egg x8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x41B" id="Golden Egg x9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x41C" id="Golden Egg x10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x41D" id="Golden Egg x11">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>11</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x41E" id="Golden Egg x12">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>12</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x41F" id="Golden Egg x13">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>13</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x420" id="Golden Egg x14">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>14</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x421" id="Golden Egg x15">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>15</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x422" id="Golden Egg x16">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>16</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x423" id="Golden Egg x17">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>17</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x424" id="Golden Egg x18">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>18</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x425" id="Golden Egg x19">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>19</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x426" id="Golden Egg x20">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
+      <Quantity>20</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x408" id="Magic Egg x1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x409" id="Magic Egg x2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x40A" id="Magic Egg x3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x40B" id="Magic Egg x4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x40C" id="Magic Egg x5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x40D" id="Magic Egg x6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x40E" id="Magic Egg x7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x40F" id="Magic Egg x8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x410" id="Magic Egg x9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x411" id="Magic Egg x10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x3e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Easter 2018"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>

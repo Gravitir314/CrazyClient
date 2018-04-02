@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x295c" id="St. Patricks Event 2018">
+      <DisplayId>Leprechaun</DisplayId>
+      <Enemy/>
+      <Class>Character</Class>
+      <AnimatedTexture>
+         <File>stPatricksChars8x8</File>
+         <Index>0</Index>
+      </AnimatedTexture>
+      <HitSound>monster/dwarves_hit</HitSound>
+      <DeathSound>monster/dwarves_death</DeathSound>
+      <PerRealmMax>1</PerRealmMax>
+      <Size>20</Size>
+      <ShadowSize>60</ShadowSize>
+      <MaxHitPoints>25000</MaxHitPoints>
+      <Defense>25</Defense>
+      <XpMult>2.5</XpMult>
+      <Quest/>
+      <Level>20</Level>
+      <ParalyzeImmune/>
+   </Object>
    <Object type="0x1648" id="Rainbow Road">
       <DisplayId>Rainbow Portal</DisplayId>
       <Class>Portal</Class>
@@ -22,6 +42,7 @@
       </AnimatedTexture>
       <HitSound>monster/dwarves_hit</HitSound>
       <DeathSound>monster/dwarves_death</DeathSound>
+      <Terrain>MidForest</Terrain>
       <PerRealmMax>1</PerRealmMax>
       <Size>20</Size>
       <ShadowSize>60</ShadowSize>
@@ -44,7 +65,7 @@
       <DeathSound>monster/stone_walls_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>120000</MaxHitPoints>
+      <MaxHitPoints>45000</MaxHitPoints>
       <Defense>5</Defense>
       <XpMult>0.8</XpMult>
       <StasisImmune/>

@@ -58,6 +58,16 @@
       </Texture>
       <Size>120</Size>
    </Object>
+   <Object type="0x141" id="Arena Reward Chest">
+      <Class>OneWayContainer</Class>
+      <Container/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x7f</Index>
+      </Texture>
+      <Size>120</Size>
+      <SlotTypes>0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+   </Object>
    <Object type="0x0503" id="Soulbound Loot Bag">
       <Class>Container</Class>
       <Container/>

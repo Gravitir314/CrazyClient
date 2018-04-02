@@ -1,11 +1,80 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x427" id="Easter Egg Basket Mid">
+      <Class>Character</Class>
+      <DisplayId>Easter Egg Basket</DisplayId>
+      <Enemy/>
+      <Texture>
+         <File>buffedBunnyObjects16x16</File>
+         <Index>0x17</Index>
+      </Texture>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+      <HitSound>monster/eggs_hit</HitSound>
+      <DeathSound>monster/eggs_death</DeathSound>
+      <MaxHitPoints>25000</MaxHitPoints>
+      <Defense>0</Defense>
+      <XpMult>0.0</XpMult>
+      <Size>120</Size>
+      <ShadowSize>100</ShadowSize>
+      <Terrain>MidPlains</Terrain>
+      <PerRealmMax>20</PerRealmMax>
+      <SpawnProb>1.0</SpawnProb>
+      <Level>20</Level>
+   </Object>
+   <Object type="0x428" id="Easter Egg Basket High">
+      <Class>Character</Class>
+      <DisplayId>Easter Egg Basket</DisplayId>
+      <Enemy/>
+      <Texture>
+         <File>buffedBunnyObjects16x16</File>
+         <Index>0x17</Index>
+      </Texture>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+      <HitSound>monster/eggs_hit</HitSound>
+      <DeathSound>monster/eggs_death</DeathSound>
+      <MaxHitPoints>25000</MaxHitPoints>
+      <Defense>0</Defense>
+      <XpMult>0.0</XpMult>
+      <Size>120</Size>
+      <ShadowSize>100</ShadowSize>
+      <PerRealmMax>20</PerRealmMax>
+      <Terrain>HighPlains</Terrain>
+      <SpawnProb>1.0</SpawnProb>
+      <Level>20</Level>
+   </Object>
+   <Object type="0x429" id="Easter Egg Basket God">
+      <Class>Character</Class>
+      <DisplayId>Easter Egg Basket</DisplayId>
+      <Enemy/>
+      <Texture>
+         <File>buffedBunnyObjects16x16</File>
+         <Index>0x17</Index>
+      </Texture>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+      <HitSound>monster/eggs_hit</HitSound>
+      <DeathSound>monster/eggs_death</DeathSound>
+      <MaxHitPoints>25000</MaxHitPoints>
+      <Defense>0</Defense>
+      <XpMult>0.0</XpMult>
+      <Size>120</Size>
+      <ShadowSize>100</ShadowSize>
+      <PerRealmMax>40</PerRealmMax>
+      <Terrain>Mountains</Terrain>
+      <SpawnProb>1.0</SpawnProb>
+      <Level>20</Level>
+   </Object>
    <Object type="0x893" id="BB Bunny Blaster">
       <Class>Projectile</Class>
       <Texture>
          <File>buffedBunnyObjects8x8</File>
-         <Index>0x23</Index>
+         <Index>0x12</Index>
       </Texture>
       <AngleCorrection>1</AngleCorrection>
    </Object>
@@ -30,23 +99,23 @@
       <RandomTexture>
          <Texture>
             <File>buffedBunnyObjects8x8</File>
-            <Index>0x24</Index>
+            <Index>0x14</Index>
          </Texture>
          <Texture>
             <File>buffedBunnyObjects8x8</File>
-            <Index>0x25</Index>
+            <Index>0x15</Index>
          </Texture>
          <Texture>
             <File>buffedBunnyObjects8x8</File>
-            <Index>0x26</Index>
+            <Index>0x16</Index>
          </Texture>
          <Texture>
             <File>buffedBunnyObjects8x8</File>
-            <Index>0x27</Index>
+            <Index>0x17</Index>
          </Texture>
          <Texture>
             <File>buffedBunnyObjects8x8</File>
-            <Index>0x28</Index>
+            <Index>0x18</Index>
          </Texture>
       </RandomTexture>
       <Rotation>50</Rotation>
@@ -104,6 +173,9 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
+      <Terrain>LowPlains</Terrain>
+      <PerRealmMax>5</PerRealmMax>
+      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -135,6 +207,9 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
+      <Terrain>MidPlains</Terrain>
+      <PerRealmMax>5</PerRealmMax>
+      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -166,6 +241,9 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
+      <Terrain>HighPlains</Terrain>
+      <PerRealmMax>5</PerRealmMax>
+      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -197,6 +275,9 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
+      <Terrain>Mountains</Terrain>
+      <PerRealmMax>1</PerRealmMax>
+      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -207,7 +288,7 @@
       <Class>Character</Class>
       <Texture>
          <File>buffedBunnyObjects16x16</File>
-         <Index>0x18</Index>
+         <Index>0x3</Index>
       </Texture>
       <AltTexture id="1">
          <Texture>
@@ -218,13 +299,13 @@
       <AltTexture id="2">
          <Texture>
             <File>buffedBunnyObjects16x16</File>
-            <Index>0x19</Index>
+            <Index>0x13</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="3">
          <Texture>
             <File>buffedBunnyObjects16x16</File>
-            <Index>0x1a</Index>
+            <Index>0x14</Index>
          </Texture>
       </AltTexture>
       <HitSound>monster/eggs_hit</HitSound>
@@ -233,6 +314,8 @@
       <MaxHitPoints>300000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
+      <Terrain>Mountains</Terrain>
+      <SpawnProb>1.0</SpawnProb>
       <PerRealmMax>1</PerRealmMax>
       <ShadowSize>0</ShadowSize>
       <DisplayId>Mysterious Egg</DisplayId>
@@ -243,14 +326,14 @@
       <Class>Character</Class>
       <AnimatedTexture>
          <File>buffedBunnyChars16x16</File>
-         <Index>1</Index>
+         <Index>0</Index>
       </AnimatedTexture>
       <HitSound>monster/archdemon_hit</HitSound>
       <DeathSound>monster/archdemon_death</DeathSound>
       <Size>120</Size>
       <Quest/>
       <Level>20</Level>
-      <MaxHitPoints>208000</MaxHitPoints>
+      <MaxHitPoints>80000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
       <StunImmune/>

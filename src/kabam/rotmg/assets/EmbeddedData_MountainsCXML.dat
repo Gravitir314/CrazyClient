@@ -212,9 +212,10 @@
       <Group>Gods</Group>
       <Enemy/>
       <Class>Character</Class>
+      <DisplayId>Smile God</DisplayId>
       <AnimatedTexture>
-         <File>chars16x16dMountains1</File>
-         <Index>0x07</Index>
+         <File>d3Chars16x16rEmbed</File>
+         <Index>36</Index>
       </AnimatedTexture>
       <HitSound>monster/slimes_hit</HitSound>
       <DeathSound>monster/slimes_death</DeathSound>

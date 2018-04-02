@@ -4060,15 +4060,6 @@
       <NoMiniMap/>
       <Effect color="0xF2C43C" rate="50" life=".5" lifeVariance="0" speed="0" speedVariance="0" size="5" rise="0" riseVariance="0" rangeX="3" rangeY="3">CustomParticles</Effect>
    </Object>
-   <Object type="0xb101" id="Golem Decoy">
-      <Class>Character</Class>
-      <Texture>
-         <File>lostHallsObjects8x8</File>
-         <Index>0xbe</Index>
-      </Texture>
-      <Friendly/>
-      <NoMiniMap/>
-   </Object>
    <Object type="0xb097" id="LH Lost Halls Debug">
       <Class>Character</Class>
       <NoMiniMap/>
@@ -6674,6 +6665,7 @@
       <Defense>40</Defense>
       <God/>
       <Encounter/>
+      <Level>30</Level>
       <PerRealmMax>1</PerRealmMax>
       <Size>140</Size>
       <XpMult>51.29</XpMult>

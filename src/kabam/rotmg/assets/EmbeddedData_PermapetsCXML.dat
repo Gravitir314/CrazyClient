@@ -2097,9 +2097,9 @@
       <SuccessorId>Snowball x 19</SuccessorId>
       <Quantity>20</Quantity>
    </Object>
-   <Object type="0xbfe" id="heartDecoyHeart">
+   <Object type="0xbfe" id="Heart Decoy Particles">
       <Class>GameObject</Class>
-      <Effect color="0xCC0000" color2="0xFF0066" minRadius="0.2" maxRadius="2" rise="1.8" life="1" amount="40">Heart</Effect>
+      <Effect color="0xCC0000" color2="0xFF0066" minRadius="0.2" maxRadius="1.5" rise="2.6" life="1.0" amount="35">Heart</Effect>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>

@@ -377,7 +377,7 @@
          <MultiHit/>
       </Projectile>
    </Object>
-   <Object type="0xb0b3" id="Encore Portal Dropper">
+   <Object type="0x21c1" id="Encore Portal Dropper">
       <Class>GameObject</Class>
       <Texture>
          <File>lofiEnvironment</File>

@@ -573,10 +573,10 @@
    <Object type="0x5e8c" id="Arena North Gate Spawner">
       <Class>Character</Class>
       <Enemy/>
-      <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
-      </Texture>
+      <AnimatedTexture>
+         <File>chars8x8rEncounters</File>
+         <Index>69</Index>
+      </AnimatedTexture>
       <NoMiniMap/>
       <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
@@ -584,10 +584,10 @@
    <Object type="0x5e8d" id="Arena South Gate Spawner">
       <Class>Character</Class>
       <Enemy/>
-      <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
-      </Texture>
+      <AnimatedTexture>
+         <File>chars8x8rEncounters</File>
+         <Index>69</Index>
+      </AnimatedTexture>
       <NoMiniMap/>
       <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
@@ -595,10 +595,10 @@
    <Object type="0x5e8e" id="Arena East Gate Spawner">
       <Class>Character</Class>
       <Enemy/>
-      <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
-      </Texture>
+      <AnimatedTexture>
+         <File>chars8x8rEncounters</File>
+         <Index>69</Index>
+      </AnimatedTexture>
       <NoMiniMap/>
       <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
@@ -606,10 +606,10 @@
    <Object type="0x5e8f" id="Arena West Gate Spawner">
       <Class>Character</Class>
       <Enemy/>
-      <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
-      </Texture>
+      <AnimatedTexture>
+         <File>chars8x8rEncounters</File>
+         <Index>69</Index>
+      </AnimatedTexture>
       <NoMiniMap/>
       <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
@@ -982,7 +982,6 @@
       <ShadowSize>100</ShadowSize>
       <MaxHitPoints>14000</MaxHitPoints>
       <Defense>20</Defense>
-      <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Assassin Slash</ObjectId>
          <Damage>125</Damage>
@@ -1419,7 +1418,6 @@
       <ShadowSize>0</ShadowSize>
       <MaxHitPoints>14000</MaxHitPoints>
       <Defense>30</Defense>
-      <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demon Fire Blast</ObjectId>
          <Damage>90</Damage>

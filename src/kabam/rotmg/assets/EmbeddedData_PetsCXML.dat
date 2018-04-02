@@ -7268,7 +7268,7 @@
       <Family>Farm</Family>
       <Rarity>Rare</Rarity>
       <DefaultSkin>Mini Pegasus Skin</DefaultSkin>
-      <Size>60</Size>
+      <Size>80</Size>
    </Object>
    <Object type="0x609a" id="Mini Pegasus Skin">
       <PetSkin/>
@@ -7305,7 +7305,7 @@
       <Family>Aquatic</Family>
       <Rarity>Rare</Rarity>
       <DefaultSkin>Prince Frog Skin</DefaultSkin>
-      <Size>60</Size>
+      <Size>80</Size>
    </Object>
    <Object type="0x609d" id="Prince Frog Skin">
       <PetSkin/>
@@ -7379,7 +7379,7 @@
       <Family>Avian</Family>
       <Rarity>Rare</Rarity>
       <DefaultSkin>Lovebird Skin</DefaultSkin>
-      <Size>60</Size>
+      <Size>80</Size>
    </Object>
    <Object type="0x6200" id="Lovebird Skin">
       <PetSkin/>
@@ -7459,6 +7459,968 @@
       <SlotType>10</SlotType>
       <Description>One flap of these wings can create a hurricane on the other side of the world.\n\nSprite Credits: Phops\n\nTransform your pet into Giant Monarch of the Insect family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
       <Activate skinId="25096">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Zodiac Dog" type="0x620b">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Canine</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Zodiac Dog Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x620c" id="Zodiac Dog Skin">
+      <PetSkin/>
+      <DisplayId>Zodiac Dog</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>58</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x620d" id="Zodiac Dog Pet Stone">
+      <DisplayId>Zodiac Dog Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>58</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>There has never been a gooder boy in a thousand dynasties.\n\nSprite Credits: Dappertron\n\nTransform your pet into Zodiac Dog of the Canine family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="25099">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Floomp" type="0x23ca">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Floomp Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x23cb" id="Floomp Skin">
+      <PetSkin/>
+      <DisplayId>Floomp</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>59</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23cc" id="Floomp Pet Stone">
+      <DisplayId>Floomp Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>59</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A giant plush dinosaur brought to life through nefarious rituals - also doubles as a beanbag chair!\n\nSprite Credits: Santeripe\n\nTransform your pet into Floomp of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9162">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Vermilion Dragon" type="0x23cd">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Vermilion Dragon Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x23cf" id="Vermilion Dragon Skin">
+      <PetSkin/>
+      <DisplayId>Vermilion Dragon</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>60</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23d1" id="Vermilion Dragon Pet Stone">
+      <DisplayId>Vermilion Dragon Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>60</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A mythical mammoth whose flame strikes fear into even the most stalwart armies - now, its will is your command.\n\nSprite Credits: Piggby\n\nTransform your pet into Vermilion Dragon of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9165">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Golden Capricorn" type="0x23d2">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Farm</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Golden Capricorn Skin</DefaultSkin>
+      <Size>70</Size>
+   </Object>
+   <Object type="0x23d3" id="Golden Capricorn Skin">
+      <PetSkin/>
+      <DisplayId>Golden Capricorn</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>61</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23d4" id="Golden Capricorn Pet Stone">
+      <DisplayId>Golden Capricorn Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>61</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A magical golden statue of Capricorn, brought to life with divine Ambrosia.\n\nSprite Credits: Lovens\n\nTransform your pet into Golden Capricorn of the Farm family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9170">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Golden Sagittarius" type="0x23d5">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Golden Sagittarius Skin</DefaultSkin>
+      <Size>70</Size>
+   </Object>
+   <Object type="0x23d6" id="Golden Sagittarius Skin">
+      <PetSkin/>
+      <DisplayId>Golden Sagittarius</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>62</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23d7" id="Golden Sagittarius Pet Stone">
+      <DisplayId>Golden Sagittarius Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>62</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A magical golden statue of Sagittarius, brought to life with divine Ambrosia.\n\nSprite Credits: Lovens\n\nTransform your pet into Golden Sagittarius of the Humanoid family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9173">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Golden Aquarius" type="0x23d8">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Golden Aquarius Skin</DefaultSkin>
+      <Size>70</Size>
+   </Object>
+   <Object type="0x23d9" id="Golden Aquarius Skin">
+      <PetSkin/>
+      <DisplayId>Golden Aquarius</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>63</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23da" id="Golden Aquarius Pet Stone">
+      <DisplayId>Golden Aquarius Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>63</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A magical golden statue of Aquarius, brought to life with divine Ambrosia.\n\nSprite Credits: Lovens\n\nTransform your pet into Golden Aquarius of the Humanoid family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9176">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Capricorn" type="0x23db">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Farm</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Capricorn Skin</DefaultSkin>
+      <Size>70</Size>
+   </Object>
+   <Object type="0x23dc" id="Capricorn Skin">
+      <PetSkin/>
+      <DisplayId>Capricorn</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>64</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23dd" id="Capricorn Pet Stone">
+      <DisplayId>Capricorn Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>64</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>This mythical beast is enchanted to survive both on land and in the ocean and will follow you around wherever you go.\n\nSprite Credits: Lovens\n\nTransform your pet into Capricorn of the Farm family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9179">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Sagittarius" type="0x23de">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Sagittarius Skin</DefaultSkin>
+      <Size>70</Size>
+   </Object>
+   <Object type="0x23df" id="Sagittarius Skin">
+      <PetSkin/>
+      <DisplayId>Sagittarius</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>65</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23e1" id="Sagittarius Pet Stone">
+      <DisplayId>Sagittarius Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>65</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A traveller from places far beyond our imagination can reach, she can shoot that arrow so fast that it will reach the stars.\n\nSprite Credits: Lovens\n\nTransform your pet into Sagittarius of the Humanoid family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9182">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Aquarius" type="0x23e2">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Aquarius Skin</DefaultSkin>
+      <Size>70</Size>
+   </Object>
+   <Object type="0x23e3" id="Aquarius Skin">
+      <PetSkin/>
+      <DisplayId>Aquarius</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>66</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23e4" id="Aquarius Pet Stone">
+      <DisplayId>Aquarius Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>66</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>If there's magic in this realm, it's contained in water.\n\nSprite Credits: Lovens\n\nTransform your pet into Aquarius of the Humanoid family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9186">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Bouncing Slime" type="0x23e5">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Bouncing Slime Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x23e6" id="Bouncing Slime Skin">
+      <PetSkin/>
+      <DisplayId>Bouncing Slime</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>184</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23e7" id="Bouncing Slime Pet Stone">
+      <DisplayId>Bouncing Slime Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>184</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>It just can't stop bouncing!\n\nSprite Credits: Ruandrs\n\nTransform your pet into Bouncing Slime of the ? ? ? ? family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9189">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Mini Pot Of Gold" type="0x23e8">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Mini Pot Of Gold Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x23e9" id="Mini Pot Of Gold Skin">
+      <PetSkin/>
+      <DisplayId>Mini Pot Of Gold</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>185</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23ea" id="Mini Pot Of Gold Pet Stone">
+      <DisplayId>Mini Pot Of Gold Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>185</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Catch it before it runs away!\n\nSprite Credits: Lovens\n\nTransform your pet into Mini Pot Of Gold of the ? ? ? ? family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9192">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Leprechaun's Walking Hat" type="0x23eb">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Leprechaun's Walking Hat Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x23ec" id="Leprechaun's Walking Hat Skin">
+      <PetSkin/>
+      <DisplayId>Leprechaun's Walking Hat</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>186</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23ed" id="Leprechaun's Walking Hat Pet Stone">
+      <DisplayId>Leprechaun's Walking Hat Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>186</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>You don't choose this hat, it chooses you.\n\nTransform your pet into Leprechaun's Walking Hat of the ? ? ? ? family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9195">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Rainbow Rocketeer" type="0x23ee">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Rainbow Rocketeer Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x23ef" id="Rainbow Rocketeer Skin">
+      <PetSkin/>
+      <DisplayId>Rainbow Rocketeer</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>67</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x23f0" id="Rainbow Rocketeer Pet Stone">
+      <DisplayId>Rainbow Rocketeer Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>67</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Unfortunately, he doesn't make cat noises while he blazes off into the stars.\n\nSprite Credits: Poshun\n\nTransform your pet into Rainbow Rocketeer of the Humanoid family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9198">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Tuxedo Bird" type="0x2423">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Avian</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Tuxedo Bird Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2424" id="Tuxedo Bird Pet Skin">
+      <PetSkin/>
+      <DisplayId>Tuxedo Bird</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>69</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2425" id="Tuxedo Bird Pet Stone">
+      <DisplayId>Tuxedo Bird Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>69</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Blue blue blue canary - tweet tweet tweet - the whole day long.\n\nSprite Credits: Lovens\n\nTransform your pet into Tuxedo Bird of the Avian family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9251">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Flamingo" type="0x2426">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Exotic</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Flamingo Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2427" id="Flamingo Pet Skin">
+      <PetSkin/>
+      <DisplayId>Flamingo</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>70</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2428" id="Flamingo Pet Stone">
+      <DisplayId>Flamingo Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>70</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>How many shrimps do you have to eat before you make your skin turn pink?\n\nSprite Credits: Lovens\n\nTransform your pet into Flamingo of the Exotic family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9254">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Heron" type="0x2429">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Avian</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Heron Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x242a" id="Heron Pet Skin">
+      <PetSkin/>
+      <DisplayId>Heron</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>71</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x242b" id="Heron Pet Stone">
+      <DisplayId>Heron Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>71</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>I was going to help you get loot, but you weren't heron time.\n\nSprite Credits: Lovens\n\nTransform your pet into Heron of the Avian family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9257">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Angelic Drake" type="0x242c">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Angelic Drake Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x242d" id="Angelic Drake Pet Skin">
+      <PetSkin/>
+      <DisplayId>Angelic Drake</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>72</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x242e" id="Angelic Drake Pet Stone">
+      <DisplayId>Angelic Drake Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>72</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Won't you pray to God for divine grace?\n\nSprite Credits: Nazoado\n\nTransform your pet into Angelic Drake of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9260">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Demonic Drake" type="0x242f">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Demonic Drake Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2430" id="Demonic Drake Pet Skin">
+      <PetSkin/>
+      <DisplayId>Demonic Drake</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>73</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2431" id="Demonic Drake Pet Stone">
+      <DisplayId>Demonic Drake Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>73</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Why don't you trade with demons?\n\nSprite Credits: Nazoado\n\nTransform your pet into Demonic Drake of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9263">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Fusion Golem" type="0x2432">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Automaton</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Fusion Golem Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2433" id="Fusion Golem Pet Skin">
+      <PetSkin/>
+      <DisplayId>Fusion Golem</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>74</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2434" id="Fusion Golem Pet Stone">
+      <DisplayId>Fusion Golem Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>74</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>This vigilant guardian is powered by the stuff of stars, its blade ablaze with searing plasma.\n\nSprite Credits: Piggby\n\nTransform your pet into Fusion Golem of the Automaton family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9266">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Vibrant Seadragon" type="0x2435">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Aquatic</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Vibrant Seadragon Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2436" id="Vibrant Seadragon Pet Skin">
+      <PetSkin/>
+      <DisplayId>Vibrant Seadragon</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>75</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2437" id="Vibrant Seadragon Pet Stone">
+      <DisplayId>Vibrant Seadragon Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>75</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A docile creature that brings with it the light of a thousand suns.\n\nSprite Credits: Piggby\n\nTransform your pet into Vibrant Seadragon of the Aquatic family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9269">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Arthro-bot" type="0x2438">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Automaton</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Arthro-bot Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2439" id="Arthro-bot Pet Skin">
+      <PetSkin/>
+      <DisplayId>Arthro-bot</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>188</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x243a" id="Arthro-bot Pet Stone">
+      <DisplayId>Arthro-bot Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>188</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Coal-powered and a hundred times cooler than a regular spider.\n\nSprite Credits: Santeripe\n\nTransform your pet into Arthro-bot of the Automaton family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9272">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Mini Biff" type="0x243b">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Farm</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Mini Biff Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x243c" id="Mini Biff Pet Skin">
+      <PetSkin/>
+      <DisplayId>Mini Biff</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>189</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x243d" id="Mini Biff Pet Stone">
+      <DisplayId>Mini Biff Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>189</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>While not nearly as buff as the real Biff, he's just as protective of his precious colored eggs.\n\nSprite Credits: Nazoado\n\nTransform your pet into Mini Biff of the Farm family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9275">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Newborn Chick" type="0x243e">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Farm</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Newborn Chick Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x243f" id="Newborn Chick Pet Skin">
+      <PetSkin/>
+      <DisplayId>Newborn Chick</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>190</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2440" id="Newborn Chick Pet Stone">
+      <DisplayId>Newborn Chick Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>190</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Tame it early and it won't join the evil chicken army!\n\nSprite Credits: Lovens\n\nTransform your pet into Newborn Chick of the Farm family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9278">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Amazon" type="0x2441">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Exotic</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Amazon Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2442" id="Amazon Pet Skin">
+      <PetSkin/>
+      <DisplayId>Amazon</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>191</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2443" id="Amazon Pet Stone">
+      <DisplayId>Amazon Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>191</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>¡Ay, caramba!\n\nSprite Credits: Lovens\n\nTransform your pet into Amazon of the Exotic family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9281">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Party Crow" type="0x2444">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Avian</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Party Crow Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2445" id="Party Crow Pet Skin">
+      <PetSkin/>
+      <DisplayId>Party Crow</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>192</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2446" id="Party Crow Pet Stone">
+      <DisplayId>Party Crow Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>192</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>He just can't stop raven.\n\nSprite Credits: Lovens\n\nTransform your pet into Party Crow of the Avian family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9284">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Honey-bot Ant" type="0x2447">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Automaton</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Honey-bot Ant Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2448" id="Honey-bot Ant Pet Skin">
+      <PetSkin/>
+      <DisplayId>Honey-bot Ant</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>193</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2449" id="Honey-bot Ant Pet Stone">
+      <DisplayId>Honey-bot Ant Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>193</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>The Ambrosia it stores in its abdomen is used as fuel.\n\nSprite Credits: Santeripe\n\nTransform your pet into Honey-bot Ant of the Automaton family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9287">PetSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>

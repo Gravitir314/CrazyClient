@@ -4517,4 +4517,82 @@
       </Texture>
       <AngleCorrection>1</AngleCorrection>
    </Object>
+   <Object type="0x841" id="Woodland Missile">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>magicWoodsObjects8x8</File>
+         <Index>0x33</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x13a9" id="Spring Shield">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x13ae" id="Flower Slash">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>buffedBunnyObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x13af" id="Egg Bow missiles">
+      <Class>Projectile</Class>
+      <RandomTexture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x31</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x32</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x33</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x34</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x35</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x36</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x37</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x38</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x39</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x3a</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x3b</Index>
+         </Texture>
+         <Texture>
+            <File>buffedBunnyObjects8x8</File>
+            <Index>0x3c</Index>
+         </Texture>
+      </RandomTexture>
+      <Rotation>100</Rotation>
+   </Object>
 </Objects>

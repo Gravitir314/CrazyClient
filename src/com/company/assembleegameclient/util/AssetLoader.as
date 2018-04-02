@@ -178,8 +178,7 @@ public class AssetLoader
             };
         }
 
-        private function addImages():void
-        {
+        private function addImages():void{
             AssetLibrary.addImageSet("lofiChar8x8", new EmbeddedAssets.lofiCharEmbed_().bitmapData, 8, 8);
             AssetLibrary.addImageSet("lofiChar16x8", new EmbeddedAssets.lofiCharEmbed_().bitmapData, 16, 8);
             AssetLibrary.addImageSet("lofiChar16x16", new EmbeddedAssets.lofiCharEmbed_().bitmapData, 16, 16);
@@ -229,6 +228,8 @@ public class AssetLoader
             AssetLibrary.addImageSet("mountainTempleObjects16x16", new EmbeddedAssets.mountainTempleObjects16x16Embed_().bitmapData, 16, 16);
             AssetLibrary.addImageSet("oryxHordeObjects8x8", new EmbeddedAssets.oryxHordeObjects8x8Embed_().bitmapData, 8, 8);
             AssetLibrary.addImageSet("oryxHordeObjects16x16", new EmbeddedAssets.oryxHordeObjects16x16Embed_().bitmapData, 16, 16);
+            AssetLibrary.addImageSet("santaWorkshopObjects8x8", new EmbeddedAssets.santaWorkshopObjects8x8Embed_().bitmapData, 8, 8);
+            AssetLibrary.addImageSet("santaWorkshopObjects16x16", new EmbeddedAssets.santaWorkshopObjects16x16Embed_().bitmapData, 16, 16);
             AssetLibrary.addImageSet("parasiteDenObjects8x8", new EmbeddedAssets.parasiteDenObjects8x8Embed_().bitmapData, 8, 8);
             AssetLibrary.addImageSet("parasiteDenObjects16x16", new EmbeddedAssets.parasiteDenObjects16x16Embed_().bitmapData, 16, 16);
             AssetLibrary.addImageSet("stPatricksObjects8x8", new EmbeddedAssets.stPatricksObjects8x8Embed_().bitmapData, 8, 8);
@@ -246,12 +247,11 @@ public class AssetLoader
             AssetLibrary.addImageSet("epicHiveObjects16x16", new EmbeddedAssets.epicHiveObjects16x16Embed_().bitmapData, 16, 16);
             AssetLibrary.addImageSet("lostHallsObjects8x8", new EmbeddedAssets.lostHallsObjects8x8Embed_().bitmapData, 8, 8);
             AssetLibrary.addImageSet("lostHallsObjects16x16", new EmbeddedAssets.lostHallsObjects16x16Embed_().bitmapData, 16, 16);
-            AssetLibrary.addImageSet("santaWorkshopObjects8x8", new EmbeddedAssets.santaWorkshopObjects8x8Embed_().bitmapData, 8, 8);
-            AssetLibrary.addImageSet("santaWorkshopObjects16x16", new EmbeddedAssets.santaWorkshopObjects16x16Embed_().bitmapData, 16, 16);
+            AssetLibrary.addImageSet("magicWoodsObjects8x8", new EmbeddedAssets.magicWoodsObjects8x8Embed_().bitmapData, 8, 8);
+            AssetLibrary.addImageSet("magicWoodsObjects16x16", new EmbeddedAssets.magicWoodsObjects16x16Embed_().bitmapData, 16, 16);
         }
 
-        private function addAnimatedCharacters():void
-        {
+        private function addAnimatedCharacters():void{
             AnimatedChars.add("chars8x8rBeach", new EmbeddedAssets.chars8x8rBeachEmbed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
             AnimatedChars.add("chars8x8dBeach", new EmbeddedAssets.chars8x8dBeachEmbed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.DOWN);
             AnimatedChars.add("chars8x8rLow1", new EmbeddedAssets.chars8x8rLow1Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
@@ -291,6 +291,8 @@ public class AssetLoader
             AnimatedChars.add("mountainTempleChars16x16", new EmbeddedAssets.mountainTempleChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
             AnimatedChars.add("oryxHordeChars8x8", new EmbeddedAssets.oryxHordeChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
             AnimatedChars.add("oryxHordeChars16x16", new EmbeddedAssets.oryxHordeChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
+            AnimatedChars.add("santaWorkshopChars8x8", new EmbeddedAssets.santaWorkshopChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+            AnimatedChars.add("santaWorkshopChars16x16", new EmbeddedAssets.santaWorkshopChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
             AnimatedChars.add("Hanami8x8chars", new EmbeddedAssets.Hanami8x8charsEmbed_().bitmapData, null, 8, 8, 64, 8, AnimatedChar.RIGHT);
             AnimatedChars.add("summerNexusChars8x8", new EmbeddedAssets.summerNexusChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
             AnimatedChars.add("summerNexusChars16x16", new EmbeddedAssets.summerNexusChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
@@ -300,8 +302,8 @@ public class AssetLoader
             AnimatedChars.add("epicHiveChars16x16", new EmbeddedAssets.epicHiveChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
             AnimatedChars.add("lostHallsChars16x16", new EmbeddedAssets.lostHallsChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
             AnimatedChars.add("lostHallsChars8x8", new EmbeddedAssets.lostHallsChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
-            AnimatedChars.add("santaWorkshopChars8x8", new EmbeddedAssets.santaWorkshopChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
-            AnimatedChars.add("santaWorkshopChars16x16", new EmbeddedAssets.santaWorkshopChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
+            AnimatedChars.add("magicWoodsChars8x8", new EmbeddedAssets.magicWoodsChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+            AnimatedChars.add("magicWoodsChars16x16", new EmbeddedAssets.magicWoodsChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
         }
 
         private function addSoundEffects():void

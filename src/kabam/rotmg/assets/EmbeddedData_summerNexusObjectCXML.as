@@ -1,14 +1,14 @@
-package kabam.rotmg.assets
+package kabam.rotmg.assets 
 {
-import mx.core.*;
-
-[Embed(source="EmbeddedData_summerNexusObjectCXML.dat", mimeType="application/octet-stream")]
-	public class EmbeddedData_summerNexusObjectCXML extends ByteArrayAsset
-	{
-		public function EmbeddedData_summerNexusObjectCXML()
-		{
-			super();
-			return;
-		}
-	}
+    import mx.core.*;
+    
+    [Embed(source="EmbeddedData_summerNexusObjectCXML.dat", mimeType="application/octet-stream")]
+    public class EmbeddedData_summerNexusObjectCXML extends mx.core.ByteArrayAsset
+    {
+        public function EmbeddedData_summerNexusObjectCXML()
+        {
+            super();
+            return;
+        }
+    }
 }

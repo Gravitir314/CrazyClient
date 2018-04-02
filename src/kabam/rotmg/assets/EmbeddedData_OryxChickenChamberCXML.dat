@@ -92,7 +92,7 @@
       </AltTexture>
       <HitSound>monster/eggs_hit</HitSound>
       <DeathSound>monster/eggs_death</DeathSound>
-      <MaxHitPoints>650000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <Defense>0</Defense>
       <XpMult>0.0</XpMult>
       <Size>130</Size>
@@ -106,16 +106,16 @@
          <File>chars16x16rEncounters</File>
          <Index>22</Index>
       </AnimatedTexture>
-      <MaxHitPoints>80000</MaxHitPoints>
-      <Defense>55</Defense>
-      <XpMult>0.35</XpMult>
       <Size>40</Size>
       <ShadowSize>80</ShadowSize>
+      <HitSound>monster/chicken_hit</HitSound>
+      <DeathSound>monster/chicken_death</DeathSound>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Defense>55</Defense>
+      <XpMult>51.2821</XpMult>
       <StasisImmune/>
       <StunImmune/>
       <ParalyzeImmune/>
-      <HitSound>monster/chicken_hit</HitSound>
-      <DeathSound>monster/chicken_death</DeathSound>
       <Projectile id="0">
          <ObjectId>Pink Dot</ObjectId>
          <Damage>100</Damage>

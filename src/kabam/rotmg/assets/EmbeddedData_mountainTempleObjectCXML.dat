@@ -2619,7 +2619,7 @@
       <DeathSound>monster/dark_elves_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>250000</MaxHitPoints>
+      <MaxHitPoints>85000</MaxHitPoints>
       <Defense>65</Defense>
       <StasisImmune/>
       <StunImmune/>
@@ -3500,6 +3500,7 @@
       <StunImmune/>
       <ParalyzeImmune/>
       <Encounter/>
+      <Level>20</Level>
       <PerRealmMax>1</PerRealmMax>
       <Hero/>
    </Object>

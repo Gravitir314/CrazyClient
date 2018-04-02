@@ -4075,4 +4075,256 @@
       <Soulbound/>
       <BagType>8</BagType>
    </Object>
+   <Object type="0x1261" id="Large Stormy Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Large_Stormy_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1b</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1c</Index>
+      </Mask>
+      <Tex1>0xa00003e</Tex1>
+      <SlotType>10</SlotType>
+      <Description>A large bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1361" id="Small Stormy Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Small_Stormy_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1d</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1e</Index>
+      </Mask>
+      <Tex2>0xa00003e</Tex2>
+      <SlotType>10</SlotType>
+      <Description>A small bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1262" id="Large Musical Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Large_Musical_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1b</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1c</Index>
+      </Mask>
+      <Tex1>0xa00003f</Tex1>
+      <SlotType>10</SlotType>
+      <Description>A large bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1362" id="Small Musical Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Small_Musical_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1d</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1e</Index>
+      </Mask>
+      <Tex2>0xa00003f</Tex2>
+      <SlotType>10</SlotType>
+      <Description>A small bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1263" id="Large Digital Navy Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Large_Digital_Navy_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1b</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1c</Index>
+      </Mask>
+      <Tex1>0xa000040</Tex1>
+      <SlotType>10</SlotType>
+      <Description>A large bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1363" id="Small Digital Navy Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Small_Digital_Navy_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1d</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1e</Index>
+      </Mask>
+      <Tex2>0xa000040</Tex2>
+      <SlotType>10</SlotType>
+      <Description>A small bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1264" id="Large Digital Fall Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Large_Digital_Fall_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1b</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1c</Index>
+      </Mask>
+      <Tex1>0xa000041</Tex1>
+      <SlotType>10</SlotType>
+      <Description>A large bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1364" id="Small Digital Fall Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Small_Digital_Fall_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1d</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1e</Index>
+      </Mask>
+      <Tex2>0xa000041</Tex2>
+      <SlotType>10</SlotType>
+      <Description>A small bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1265" id="Large Digital Woods Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Large_Digital_Woods_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1b</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1c</Index>
+      </Mask>
+      <Tex1>0xa000042</Tex1>
+      <SlotType>10</SlotType>
+      <Description>A large bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1365" id="Small Digital Woods Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Small_Digital_Woods_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1d</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1e</Index>
+      </Mask>
+      <Tex2>0xa000042</Tex2>
+      <SlotType>10</SlotType>
+      <Description>A small bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1266" id="Large Digital Arctic Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Large_Digital_Arctic_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1b</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1c</Index>
+      </Mask>
+      <Tex1>0xa000043</Tex1>
+      <SlotType>10</SlotType>
+      <Description>A large bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1366" id="Small Digital Arctic Camo Cloth">
+      <Class>Dye</Class>
+      <DisplayId>{textiles.Small_Digital_Arctic_Camo_Cloth}</DisplayId>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x1d</Index>
+      </Texture>
+      <Mask>
+         <File>lofiObj3</File>
+         <Index>0x1e</Index>
+      </Mask>
+      <Tex2>0xa000043</Tex2>
+      <SlotType>10</SlotType>
+      <Description>A small bolt of cloth.</Description>
+      <Activate>Dye</Activate>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
 </Objects>
