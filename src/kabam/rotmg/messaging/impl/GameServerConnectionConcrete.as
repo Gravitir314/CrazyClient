@@ -622,14 +622,12 @@ public class GameServerConnectionConcrete extends GameServerConnection
             _local_1.unmap(PLAYSOUND);
         }
 
-        private function encryptConnection():void
-        {
+        private function encryptConnection():void{
             var _local_1:ICipher;
             var _local_2:ICipher;
-            if (Parameters.ENABLE_ENCRYPTION)
-            {
-                _local_1 = Crypto.getCipher("rc4", MoreStringUtil.hexStringToByteArray("311f80691451c71d09a13a2a6e"));
-                _local_2 = Crypto.getCipher("rc4", MoreStringUtil.hexStringToByteArray("72c5583cafb6818995cdd74b80"));
+            if (Parameters.ENABLE_ENCRYPTION){
+                _local_1 = Crypto.getCipher("rc4", MoreStringUtil.hexStringToByteArray("6a39570cc9de4ec71d64821894c79332b197f92ba85ed281a023".substring(0, 26)));
+                _local_2 = Crypto.getCipher("rc4", MoreStringUtil.hexStringToByteArray("6a39570cc9de4ec71d64821894c79332b197f92ba85ed281a023".substring(26)));
                 serverConnection.setOutgoingCipher(_local_1);
                 serverConnection.setIncomingCipher(_local_2);
             };
