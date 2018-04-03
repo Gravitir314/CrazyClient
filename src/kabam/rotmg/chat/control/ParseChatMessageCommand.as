@@ -294,6 +294,27 @@ public class ParseChatMessageCommand
                 Parameters.save();
                 return (true);
             };
+            _local_2 = _arg_1.match("^/awn (\\w+)$");
+            if (_local_2 != null)
+            {
+                _local_4 = false;
+                for each (_local_5 in Parameters.data_.wordNotiList)
+                {
+                    if (_local_5 == _local_2[1])
+                    {
+                        _local_4 = true;
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in notifier keyword list.')));
+                        break;
+                    };
+                };
+                if (_local_4 == false)
+                {
+                    Parameters.data_.wordNotiList.push(_local_2[1]);
+                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to notifier keyword list.')));
+                };
+                Parameters.save();
+                return (true);
+            };
             return (false);
         }
 
@@ -488,6 +509,29 @@ public class ParseChatMessageCommand
                 Parameters.save();
                 return (true);
             };
+            _local_2 = _arg_1.match("^/rwn (\\w+)$");
+            if (_local_2 != null)
+            {
+                _local_3 = false;
+                _local_4 = 0;
+                while (_local_4 < Parameters.data_.wordNotiList.length)
+                {
+                    if (Parameters.data_.tptoList[_local_4] == _local_2[1])
+                    {
+                        _local_3 = true;
+                        Parameters.data_.wordNotiList.splice(_local_4, 1);
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from notifier keyword list.')));
+                        break;
+                    };
+                    _local_4++;
+                };
+                if (_local_3 == false)
+                {
+                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in notifier keyword list.')));
+                };
+                Parameters.save();
+                return (true);
+            };
             return (false);
         }
 
@@ -571,6 +615,17 @@ public class ParseChatMessageCommand
                 };
                 return (true);
             };
+            if (_arg_1 == "/wnlist")
+            {
+                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Notifier keyword list (" + Parameters.data_.wordNotiList.length) + " keywords):")));
+                _local_2 = 0;
+                while (_local_2 < Parameters.data_.wordNotiList.length)
+                {
+                    this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.wordNotiList[_local_2]));
+                    _local_2++;
+                };
+                return (true);
+            };
             return (false);
         }
 
@@ -625,6 +680,13 @@ public class ParseChatMessageCommand
                 Parameters.save();
                 return (true);
             };
+            if (_arg_1 == "/wnclear")
+            {
+                Parameters.data_.wordNotiList = new Array();
+                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Notifier keyword list cleared."));
+                Parameters.save();
+                return (true);
+            };
             return (false);
         }
 
@@ -669,6 +731,13 @@ public class ParseChatMessageCommand
             {
                 Parameters.data_.lootIgnore = [9018, 9019, 9020, 9021, 9022, 9023, 9024, 9025, 3861, 2635];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default loot ignore list restored."));
+                Parameters.save();
+                return (true);
+            };
+            if (_arg_1 == "/wndefault")
+            {
+                Parameters.data_.wordNotiList = ["tp"];
+                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default notifier keyword list restored."));
                 Parameters.save();
                 return (true);
             };

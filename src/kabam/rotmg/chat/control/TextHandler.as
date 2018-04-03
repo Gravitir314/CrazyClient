@@ -97,6 +97,7 @@ public class TextHandler
             var _local_14:* = (_arg_1.numStars_ == -1);
             var _local_15:Player = this.hudModel.gameSprite.map.player_;
             var _local_16:Array = ["Debauchery", "XP"];
+            var _local_17:Array;
             if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
@@ -134,11 +135,18 @@ public class TextHandler
                 Parameters.data_.bDebug = false;
                 Parameters.save();
             }
-            if (Parameters.data_.keynoti)
-            {
+            if (Parameters.data_.keyNoti) {
                 _local_7 = "server.dungeon_opened_by";
                 _local_6 = _arg_1.text_;
                 if (_local_6.indexOf(_local_7) != -1)
+                {
+                    _local_15.levelUpEffect("", true);
+                    SoundEffectLibrary.play("level_up");
+                }
+            }
+            for each (_local_4 in Parameters.data_.wordNotiList)
+            {
+                if (_local_6.indexOf(_local_4) != -1)
                 {
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("level_up");

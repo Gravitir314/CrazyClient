@@ -323,6 +323,26 @@
       <Explanation>Clears the teleport keyword list</Explanation>
    </Article>
    <Article>
+      <Command>/awn &lt;word&gt;</Command>
+      <Explanation>Adds a word to the notifier keyword list&#xA;You receive sound notification if someone say word in list.</Explanation>
+   </Article>
+   <Article>
+      <Command>/rwn &lt;word&gt;</Command>
+      <Explanation>Removes a word from the notifier keyword list</Explanation>
+   </Article>
+   <Article>
+      <Command>/wnlist</Command>
+      <Explanation>Prints out the notifier keyword list</Explanation>
+   </Article>
+   <Article>
+      <Command>/wndefault</Command>
+      <Explanation>Sets the notifier keyword list to its default values</Explanation>
+   </Article>
+   <Article>
+      <Command>/wnclear</Command>
+      <Explanation>Clears the notifier keyword list</Explanation>
+   </Article>
+   <Article>
       <Command>/ali &lt;partial item name&gt;</Command>
       <Explanation>Adds a mob to the loot ignore list&#xA;Items on the loot ignore list will not be auto looted or show loot notifications</Explanation>
    </Article>
