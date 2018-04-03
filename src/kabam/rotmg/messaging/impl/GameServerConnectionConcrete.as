@@ -1799,10 +1799,13 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         private function onNotification(_arg_1:Notification):void
         {
+            if (!Parameters.data_.statusText) {
+                return;
+            }
             if ((((!(Parameters.data_.AntiLag)) || (_arg_1.objectId_ == this.playerId_)) || (!(Parameters.data_.noAllyNotifications))))
             {
                 this.notify_(_arg_1);
-            };
+            }
         }
 
         private function notify_(_arg_1:Notification):void

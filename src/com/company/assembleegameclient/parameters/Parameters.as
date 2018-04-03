@@ -96,7 +96,6 @@ public class Parameters
                 data_ = {};
             };
             setDefaults();
-            setTimerPhases();
             save();
         }
 
@@ -477,6 +476,7 @@ public class Parameters
             setDefault("cultistStaffDisable", true);
             setDefault("AutoReply", true);
             setDefault("curseIndication", false);
+            setDefault("statusText", true);
         }
 
 

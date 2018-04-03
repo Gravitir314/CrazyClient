@@ -781,6 +781,10 @@ public class ParseChatMessageCommand
             }
             switch (this.data.toLowerCase())
             {
+                case "/statustext":
+                    Parameters.data_.statusText = (!(Parameters.data_.statusText));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.statusText) ? "Status Text: On" : "Status Text: Off")));
+                    return (true);
                 case "/dodbot":
                     Parameters.data_.dodBot = (!(Parameters.data_.dodBot));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Doer of Deeds Bot: On" : "Doer of Deeds Bot: Off")));
