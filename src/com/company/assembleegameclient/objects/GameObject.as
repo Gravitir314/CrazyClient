@@ -985,7 +985,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.SLOWED:
                                     if (this.isSlowedImmune())
@@ -998,7 +998,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.ARMORBROKEN:
                                     if (this.isArmorBrokenImmune())
@@ -1011,7 +1011,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.STUNNED:
                                     if (this.isStunImmune())
@@ -1024,7 +1024,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.DAZED:
                                     if (this.isDazedImmune())
@@ -1037,7 +1037,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.PARALYZED:
                                     if (this.isParalyzeImmune())
@@ -1050,7 +1050,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.PETRIFIED:
                                     if (this.isPetrifiedImmune())
@@ -1063,7 +1063,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.CURSE:
                                     if (this.isCursedImmune())
@@ -1076,7 +1076,7 @@ public class GameObject extends BasicObject
                                     else
                                     {
                                         _local_8 = ConditionEffect.effects_[_local_7];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.GROUND_DAMAGE:
                                     _local_15 = true;
@@ -1093,15 +1093,15 @@ public class GameObject extends BasicObject
                                 {
                                     if ((this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_8.bit_) == this.condition_[ConditionEffect.CE_SECOND_BATCH]) continue;
                                     this.condition_[ConditionEffect.CE_SECOND_BATCH] = (this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_8.bit_);
-                                };
+                                }
                                 _local_12 = _local_8.localizationKey_;
                                 this.showConditionEffect(_local_6, _local_12);
                                 _local_6 = (_local_6 + 500);
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             if (((!((this.props_.isEnemy_) && (Parameters.data_.disableEnemyParticles))) && (!((!(this.props_.isEnemy_)) && (Parameters.data_.disablePlayersHitParticles)))))
             {
                 _local_13 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
@@ -1118,18 +1118,21 @@ public class GameObject extends BasicObject
                     else
                     {
                         map_.addObj(new ExplosionEffect(_local_13, this.size_, 10), x_, y_);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_)))))
             {
                 return;
-            };
-            if (_arg_2 > 0)
+            }
+            if (((_arg_2 > 0) && (!(this.dead_))))
             {
+                if (((Parameters.data_.autoDecrementHP) && (!(this == this.map_.player_)))){
+                    this.hp_ = (this.hp_ - _arg_2);
+                }
                 _local_14 = (((this.isArmorBroken()) || ((!(_arg_5 == null)) && (_arg_5.projProps_.armorPiercing_))) || (_local_15));
                 this.showDamageText(_arg_2, _local_14);
-            };
+            }
         }
 
         public function showConditionEffect(_arg_1:int, _arg_2:String):void

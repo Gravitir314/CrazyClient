@@ -438,6 +438,7 @@ public class Parameters
             setDefault("keynoti", false);
             setDefault("teehee", false);
             setDefault("dodBot", false);
+            setDefault("autoDecrementHP", true);
         }
 
 

@@ -627,6 +627,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("PassesCover", makeOnOffLabels(), [true, false], "Projectile No-Clip", "Toggle allowing projectiles to pass through solid objects as well as invulnerable enemies. Only you can see the effect.", null));
             this.addOptionAndPosition(new ChoiceOption("AATargetLead", makeOnOffLabels(), [true, false], "Target Lead", "Enables leading of targets.", null));
             this.addOptionAndPosition(new KeyMapper("tPassCover", "Toggle Projectile No-Clip", "Toggles the hack on and off."));
+            this.addOptionAndPosition(new ChoiceOption("autoDecrementHP", makeOnOffLabels(), [true, false], "Remove HP when dealing damage", "Decreases an enemy's health when you deal damage to them, this allows you to one shot enemies with spellbombs.", null));
         }
 
         private function addAbilityOptions():void
