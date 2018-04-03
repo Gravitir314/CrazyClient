@@ -802,7 +802,17 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("conCom", makeOnOffLabels(), ["/conn", "/con"], "Replace /con with /conn", "Helps proxy users who want to use said proxy's built-in connect command.", null));
             this.addOptionAndPosition(new KeyMapper("msg3key", "Custom Message 3", (('Currently set to "' + Parameters.data_.msg3) + '". Use /setmsg 3 <message> to replace this message.')));
             this.addOptionAndPosition(new ChoiceOption("AutoReply", makeOnOffLabels(), [true, false], "Auto Reply", "Automatically replies to monster questions", null));
+            this.addOptionAndPosition(new KeyMapper("msg4key", "Custom Message 4", (('Currently set to "' + Parameters.data_.msg4) + '". Use /setmsg 4 <message> to replace this message.')));
             this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("msg5key", "Custom Message 5", (('Currently set to "' + Parameters.data_.msg5) + '". Use /setmsg 5 <message> to replace this message.')));
+            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("msg6key", "Custom Message 6", (('Currently set to "' + Parameters.data_.msg6) + '". Use /setmsg 6 <message> to replace this message.')));
+            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("msg7key", "Custom Message 7", (('Currently set to "' + Parameters.data_.msg7) + '". Use /setmsg 7 <message> to replace this message.')));
+            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("msg8key", "Custom Message 8", (('Currently set to "' + Parameters.data_.msg8) + '". Use /setmsg 8 <message> to replace this message.')));
+            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("msg9key", "Custom Message 9", (('Currently set to "' + Parameters.data_.msg9) + '". Use /setmsg 9 <message> to replace this message.')));
         }
 
         private function AutoNexusValues():Vector.<StringBuilder>

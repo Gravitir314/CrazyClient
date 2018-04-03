@@ -959,6 +959,30 @@ public class MapUserInput
                     if (Parameters.data_.msg3 == null) break;
                     this.parseChatMessage.dispatch(Parameters.data_.msg3);
                     break;
+                case Parameters.data_.msg4key:
+                    if (Parameters.data_.msg4 == null) break;
+                    this.parseChatMessage.dispatch(Parameters.data_.msg4);
+                    break;
+                case Parameters.data_.msg5key:
+                    if (Parameters.data_.msg5 == null) break;
+                    this.parseChatMessage.dispatch(Parameters.data_.msg5);
+                    break;
+                case Parameters.data_.msg6key:
+                    if (Parameters.data_.msg6 == null) break;
+                    this.parseChatMessage.dispatch(Parameters.data_.msg6);
+                    break;
+                case Parameters.data_.msg7key:
+                    if (Parameters.data_.msg7 == null) break;
+                    this.parseChatMessage.dispatch(Parameters.data_.msg7);
+                    break;
+                case Parameters.data_.msg8key:
+                    if (Parameters.data_.msg8 == null) break;
+                    this.parseChatMessage.dispatch(Parameters.data_.msg8);
+                    break;
+                case Parameters.data_.msg9key:
+                    if (Parameters.data_.msg9 == null) break;
+                    this.parseChatMessage.dispatch(Parameters.data_.msg9);
+                    break;
                 case Parameters.data_.SkipRenderKey:
                     MapUserInput.skipRender = (!(MapUserInput.skipRender));
                     break;

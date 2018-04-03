@@ -1417,25 +1417,42 @@ public class ParseChatMessageCommand
             if (_local_1 == null)
             {
                 return (false);
-            };
-            if (_local_1[1] == "1")
-            {
-                Parameters.data_.msg1 = _local_1[2];
             }
-            else
-            {
-                if (_local_1[1] == "2")
-                {
+            if (_local_1[1] == "1") {
+                Parameters.data_.msg1 = _local_1[2];
+            } else {
+                if (_local_1[1] == "2") {
                     Parameters.data_.msg2 = _local_1[2];
-                }
-                else
-                {
-                    if (_local_1[1] == "3")
-                    {
+                } else {
+                    if (_local_1[1] == "3") {
                         Parameters.data_.msg3 = _local_1[2];
-                    };
-                };
-            };
+                    } else {
+                        if (_local_1[1] == "4") {
+                            Parameters.data_.msg4 = _local_1[2];
+                        } else {
+                            if (_local_1[1] == "5") {
+                                Parameters.data_.msg5 = _local_1[2];
+                            } else {
+                                if (_local_1[1] == "6") {
+                                    Parameters.data_.msg6 = _local_1[2];
+                                } else {
+                                    if (_local_1[1] == "7") {
+                                        Parameters.data_.msg7 = _local_1[2];
+                                    } else {
+                                        if (_local_1[1] == "8") {
+                                            Parameters.data_.msg8 = _local_1[2];
+                                        } else {
+                                            if (_local_1[1] == "9") {
+                                                Parameters.data_.msg9 = _local_1[2];
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             this.addTextLine.dispatch(ChatMessage.make("*Help*", (((("Message #" + _local_1[1]) + ' set to "') + _local_1[2]) + '"')));
             Parameters.save();
             return (true);
@@ -1447,7 +1464,7 @@ public class ParseChatMessageCommand
             if (_local_1 == null)
             {
                 return (false);
-            };
+            }
             if (_local_1[1] == "1")
             {
                 Parameters.data_.dbPre1[0] = _local_1[3];
