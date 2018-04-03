@@ -382,7 +382,12 @@ public class GameServerConnectionConcrete extends GameServerConnection
             var _local_1:ChatMessage = new ChatMessage();
             _local_1.name = Parameters.CLIENT_CHAT_NAME;
             _local_1.text = TextKey.CHAT_CONNECTING_TO;
-            _local_1.tokens = {"serverName":server_.name};
+            var _local_2:String = server_.name;
+            if (_local_2 == '{"text":"server.vault"}'){
+                _local_2 = "server.vault";
+            };
+            _local_2 = LineBuilder.getLocalizedStringFromKey(_local_2);
+            _local_1.tokens = {"serverName":_local_2};
             this.addTextLine.dispatch(_local_1);
             serverConnection.connect(server_.address, server_.port);
         }

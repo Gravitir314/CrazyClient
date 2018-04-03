@@ -27,7 +27,6 @@ public class FindMenu extends Frame
         public var gs_:GameSprite;
         public var closeDialogs:CloseDialogsSignal;
         public var p_:Vector.<Player>;
-        public var player_:Player;
 
         public function FindMenu(_arg_1:GameSprite, _arg_2:Vector.<Player>, _arg_3:String)
         {
@@ -46,7 +45,7 @@ public class FindMenu extends Frame
             if ((_local_4 % this.perRow) > 0)
             {
                 h_ = (h_ + this.padY);
-            };
+            }
             this.closeDialogs = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
             while (_local_5 < _local_4)
             {
@@ -56,27 +55,26 @@ public class FindMenu extends Frame
                 addChild(_local_7);
                 _local_7.addEventListener(MouseEvent.CLICK, this.onClick);
                 _local_5++;
-            };
+            }
             _local_6 = new DeprecatedClickableText(18, true, "Close");
             _local_6.buttonMode = true;
             _local_6.x = (w_ - 100);
             _local_6.y = (h_ - 40);
             addChild(_local_6);
             _local_6.addEventListener(MouseEvent.CLICK, this.onClose);
-            if (_local_4 > 1)
-            {
-                _local_8 = new DeprecatedClickableText(18, true, "Trade All");
-                _local_8.buttonMode = true;
-                _local_8.x = (w_ - 200);
-                _local_8.y = (h_ - 40);
-                addChild(_local_8);
-                _local_8.addEventListener(MouseEvent.CLICK, this.tradeAllFunc);
-                _local_9 = new DeprecatedClickableText(18,true, "Lock All");
+            if (_local_4 > 1) {
+                _local_9 = new DeprecatedClickableText(18,true, "Lock");
                 _local_9.buttonMode = true;
-                _local_9.x = (w_ - 300);
+                _local_9.x = (w_ - 175);
                 _local_9.y = (h_ - 40);
                 addChild(_local_9);
                 _local_9.addEventListener(MouseEvent.CLICK, this.lockAllFunc);
+                _local_8 = new DeprecatedClickableText(18, true, "Trade");
+                _local_8.buttonMode = true;
+                _local_8.x = (w_ - 250);
+                _local_8.y = (h_ - 40);
+                addChild(_local_8);
+                _local_8.addEventListener(MouseEvent.CLICK, this.tradeAllFunc);
             }
         }
 
@@ -88,20 +86,20 @@ public class FindMenu extends Frame
 
         private function tradeAllFunc(_arg_1:MouseEvent):void
         {
-            var _local_2:Player;
-            for each (_local_2 in this.p_)
+            var _local_1:Player;
+            for each (_local_1 in this.p_)
             {
-                this.gs_.gsc_.requestTrade(_local_2.name_);
+                this.gs_.gsc_.requestTrade(_local_1.name_);
             };
             this.closeDialogs.dispatch();
         }
 
         private function lockAllFunc(_arg_1:MouseEvent):void
         {
-            var _local_2:Player;
-            for each (_local_2 in this.p_)
+            var _local_1:Player;
+            for each (_local_1 in this.p_)
             {
-                this.gs_.map.party_.lockPlayer(_local_2);
+                this.gs_.map.party_.lockPlayer(_local_1);
             };
             this.closeDialogs.dispatch();
         }
