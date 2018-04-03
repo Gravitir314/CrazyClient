@@ -5,6 +5,7 @@
 
 package com.company.assembleegameclient.objects
 {
+import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
@@ -52,6 +53,7 @@ import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.game.signals.UseBuyPotionSignal;
 import kabam.rotmg.messaging.impl.GameServerConnection;
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
+import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.stage3D.GraphicsFillExtra;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.BitmapTextFactory;
@@ -96,7 +98,9 @@ public class Player extends Character
         public static var lastLootTime:int = 0;
         public static var nextLootSlot:int = -1;
         public static var pItems:eItems = new eItems();
+        public static var reconRealm:ReconnectEvent;
 
+        private var lastreconnect:int = 0;
         private var nextSwap:int = 0;
         public var followTarget:GameObject;
         public var questMob:GameObject;
@@ -1232,6 +1236,7 @@ public class Player extends Character
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
         {
+            var _local_3:GameServerConnection = map_.gs_.gsc_;
             var _local_4:int;
             var _local_5:Number;
             var _local_6:Number;
@@ -1255,7 +1260,8 @@ public class Player extends Character
             var _local_24:Number;
             var _local_25:Vector.<Point>;
             var _local_26:Point;
-            var _local_3:GameServerConnection = map_.gs_.gsc_;
+            var _local_27:Server;
+            var _local_28:ReconnectEvent;
             if (this == map_.player_)
             {
                 if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50))))
@@ -1661,6 +1667,27 @@ public class Player extends Character
                 this.damage(true, _local_10, _local_11, (hp_ < _local_10), null);
                 map_.gs_.gsc_.groundDamage(_arg_1, x_, y_);
                 square_.lastDamage_ = _arg_1;
+            };
+            if (Parameters.data_.autoRecon){
+                if (this.lastreconnect <= getTimer()){
+                    if (((map_.player_ == this) && (map_.name_ == "Nexus"))){
+                        _local_4 = int(((this.chp / this.maxHP_) * 100));
+                        if (_local_4 > 75){
+                            if (reconRealm != null){
+                                reconRealm.charId_ = map_.gs_.gsc_.charId_;
+                                map_.gs_.dispatchEvent(reconRealm);
+                            } else {
+                                _local_27 = new Server();
+                                _local_27.setName(Parameters.data_.servName);
+                                _local_27.setAddress(Parameters.data_.servAddr);
+                                _local_27.setPort(2050);
+                                _local_28 = new ReconnectEvent(_local_27, Parameters.data_.reconGID, false, map_.gs_.gsc_.charId_, Parameters.data_.reconTime, Parameters.data_.reconKey, false);
+                                map_.gs_.dispatchEvent(_local_28);
+                            };
+                            this.lastreconnect = (getTimer() + 2000);
+                        };
+                    };
+                };
             };
             return (true);
         }

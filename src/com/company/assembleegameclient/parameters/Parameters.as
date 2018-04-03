@@ -308,6 +308,7 @@ public class Parameters
             setDefaultKey("ReconDung", KeyCodes.K);
             setDefaultKey("ReconVault", KeyCodes.V);
             setDefaultKey("ReconRandom", KeyCodes.UNSET);
+            setDefault("autoRecon", false);
             setDefault("AutoNexus", 20);
             setDefault("NoClip", false);
             setDefault("NumericalHP", true);

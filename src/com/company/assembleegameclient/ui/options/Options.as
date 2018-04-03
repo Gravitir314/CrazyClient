@@ -739,12 +739,10 @@ public class Options extends Sprite
         private function addReconnectOptions():void
         {
             this.addOptionAndPosition(new KeyMapper("ReconRealm", "Recon Realm", "Key that connects the user to the last realm in."));
-            this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new KeyMapper("ReconDung", "Recon Dungeon", "Key that connects the user to the last dungeon in. Only works when used within three minutes of connecting to the dungeon."));
-            this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new KeyMapper("ReconVault", "Recon Vault", "Key that connects the user to their vault."));
-            this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new KeyMapper("ReconRandom", "Connect to Random Realm", "Key that connects the user to a random realm on the server."));
+            this.addOptionAndPosition(new ChoiceOption("autoRecon", makeOnOffLabels(), [true, false], "Auto Reconnect", "Automatically reconnect to last realm if HP full.", null));
         }
 
         private function addVisualOptions():void
