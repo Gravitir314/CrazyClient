@@ -423,7 +423,7 @@ public class Parameters
             setDefault("rclickTp", false);
             setDefault("autoTp", true);
             setDefault("spriteId", 0);
-            setDefault("questClosest", true);
+            setDefault("questHUD", true);
             setDefault("drinkPot", true);
             setDefault("deactPre", true);
             setDefault("ninjaTap", true);

@@ -763,9 +763,9 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("HidePlayerFilter", makeOnOffLabels(), [true, false], "Star Requirement (Hide)", "Hide players in nexus that are filtered by the star requirement option.", null));
             this.addOptionAndPosition(new ChoiceOption("AntiLag", makeOnOffLabels(), [true, false], "Anti Lag", "Aggressively disables particles.", null));
             this.addOptionAndPosition(new ChoiceOption("showMobInfo", makeOnOffLabels(), [true, false], "Display Mob Info", "Display mob name and id. Useful for finding ids for use with auto aim exception and ignore list.", this.showMobInfo_));
-            this.addOptionAndPosition(new ChoiceOption("questClosest", makeOnOffLabels(), [true, false], "Show Closest Player to Quest", "Extends the quest bar to show closest player to quest and the distance from it.", null));
             this.addOptionAndPosition(new ChoiceOption("clientSwap", makeOnOffLabels(), [true, false], "Responsive Inventory", "Prevents items from teleporting out of your inventory or moving back after switching positions.", null));
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
+            this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD on left side", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "tba", this.onToggleUI));
             this.addOptionAndPosition(new ChoiceOption("uiShadow", makeOnOffLabels(), [true, false], "UI Shadow", "tba", null));
         }

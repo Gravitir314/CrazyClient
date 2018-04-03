@@ -61,6 +61,13 @@ public class QuestHealthBar extends Sprite
 
         public function update(_arg_1:Player):void
         {
+            if (!Parameters.data_.questHUD)
+            {
+                this.questBar.visible = false;
+                this.questBar2.visible = false;
+                this.questBar3.visible = false;
+                return;
+            }
             var _local_2:GameObject;
             var _local_3:int;
             var _local_4:* = "";
@@ -73,7 +80,7 @@ public class QuestHealthBar extends Sprite
                 {
                     _local_4 = ((((Parameters.data_.tombHack) && (Parameters.data_.curBoss == 3368)) && (_local_2 == _arg_1.questMob1)) ? ": Active" : "");
                 };
-                if (((Parameters.data_.questClosest) && (!(_arg_1.questMob == null))))
+                if (!(_arg_1.questMob == null))
                 {
                     if (this.nextUpdate <= getTimer())
                     {
