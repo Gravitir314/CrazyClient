@@ -706,6 +706,11 @@ public class ParseChatMessageCommand
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
             switch (this.data.toLowerCase())
             {
+                case "/dodbot":
+                    Parameters.data_.dodBot = (!(Parameters.data_.dodBot));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Doer of Deeds Bot: On" : "Doer of Deeds Bot: Off")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Use /aex 355 to add walls to aim list. Use /aig 1711 and /aig 1712 to add chickens to ignore list" : "")));
+                    return (true);
                 case "/lf":
                 case "/lockfilter":
                     Parameters.data_.hideLockList = (!(Parameters.data_.hideLockList));

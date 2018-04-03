@@ -1264,6 +1264,9 @@ public class Player extends Character
             var _local_28:ReconnectEvent;
             if (this == map_.player_)
             {
+                if (Parameters.data_.dodBot) {
+                    Party.dodBot(this);
+                }
                 if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50))))
                 {
                     this.thunderTime = getTimer();
@@ -2847,6 +2850,10 @@ public class Player extends Character
             {
                 this.useAltWeapon(_arg_1, _arg_2, 1, 0);
             };
+        }
+
+        public function getPSpeed():Number{
+            return (this.getMoveSpeed());
         }
 
 
