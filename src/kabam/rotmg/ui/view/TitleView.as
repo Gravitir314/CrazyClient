@@ -101,7 +101,7 @@ public class TitleView extends Sprite
             this.versionText.y = MIDDLE_OF_BOTTOM_BAND;
             addChild(this.versionText);
             this.copyrightText = this.makeText().setAutoSize(TextFieldAutoSize.RIGHT).setVerticalAlign(TextFieldDisplayConcrete.MIDDLE);
-            this.copyrightText.setStringBuilder(new LineBuilder().setParams("w.f.b."));
+            this.copyrightText.setStringBuilder(new LineBuilder().setParams(Parameters.COPYRIGHT_TEXT));
             this.copyrightText.filters = [new DropShadowFilter(0, 0, 0)];
             this.copyrightText.x = 800;
             this.copyrightText.y = MIDDLE_OF_BOTTOM_BAND;
@@ -130,7 +130,7 @@ public class TitleView extends Sprite
 
         private function updateVersionText():void
         {
-            this.versionText.setStringBuilder(new StaticStringBuilder(((("CrazyClient " + Parameters.CRAZY_VERSION) + " ") + this.data.buildLabel.substr(6))));
+            this.versionText.setStringBuilder(new StaticStringBuilder(((("CrazyClient " + Parameters.CLIENT_VERSION) + " ") + this.data.buildLabel.substr(6))));
         }
 
         private function handleOptionalButtons():void

@@ -27,6 +27,7 @@ public class FindMenu extends Frame
         public var gs_:GameSprite;
         public var closeDialogs:CloseDialogsSignal;
         public var p_:Vector.<Player>;
+        public var player_:Player;
 
         public function FindMenu(_arg_1:GameSprite, _arg_2:Vector.<Player>, _arg_3:String)
         {
@@ -35,6 +36,7 @@ public class FindMenu extends Frame
             var _local_6:DeprecatedClickableText;
             var _local_7:PlayerGameObjectListItem;
             var _local_8:DeprecatedClickableText;
+            var _local_9:DeprecatedClickableText;
             super((_arg_3 + " (Click to trade)"), "", "");
             this.gs_ = _arg_1;
             this.p_ = _arg_2;
@@ -69,7 +71,13 @@ public class FindMenu extends Frame
                 _local_8.y = (h_ - 40);
                 addChild(_local_8);
                 _local_8.addEventListener(MouseEvent.CLICK, this.tradeAllFunc);
-            };
+                _local_9 = new DeprecatedClickableText(18,true, "Lock All");
+                _local_9.buttonMode = true;
+                _local_9.x = (w_ - 300);
+                _local_9.y = (h_ - 40);
+                addChild(_local_9);
+                _local_9.addEventListener(MouseEvent.CLICK, this.lockAllFunc);
+            }
         }
 
         private function onClick(_arg_1:MouseEvent):void
@@ -84,6 +92,16 @@ public class FindMenu extends Frame
             for each (_local_2 in this.p_)
             {
                 this.gs_.gsc_.requestTrade(_local_2.name_);
+            };
+            this.closeDialogs.dispatch();
+        }
+
+        private function lockAllFunc(_arg_1:MouseEvent):void
+        {
+            var _local_2:Player;
+            for each (_local_2 in this.p_)
+            {
+                this.gs_.map.party_.lockPlayer(_local_2);
             };
             this.closeDialogs.dispatch();
         }

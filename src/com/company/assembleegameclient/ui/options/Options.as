@@ -786,8 +786,8 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("tpto", "Teleport to Caller", ("Teleport to a person calling a dungeon. Current keywords: " + Parameters.data_.tptoList)));
             this.addOptionAndPosition(new KeyMapper("resetCHP", "Reset Client HP", "Use this hotkey if your CL bar doesn't match your HP bar."));
             this.addOptionAndPosition(new ChoiceOption("autoCorrCHP", makeOnOffLabels(), [true, false], "Auto Correct Client HP", "Automatically corrects your health. Increases your chance of dying when turned on.", null, ((Parameters.data_.autoCorrCHP) ? 0xFF0000 : 0xFFFFFF), true));
-            this.addOptionAndPosition(new KeyMapper("Cam45DegInc", "Rotate Left (90�)", "Turns your camera by 90 degrees to the left."));
-            this.addOptionAndPosition(new KeyMapper("Cam45DegDec", "Rotate Right (90�)", "Turns your camera by 90 degrees to the right."));
+            this.addOptionAndPosition(new KeyMapper("Cam90DegInc", "Rotate Left (90�)", "Turns your camera by 90 degrees to the left."));
+            this.addOptionAndPosition(new KeyMapper("Cam90DegDec", "Rotate Right (90�)", "Turns your camera by 90 degrees to the right."));
             this.addOptionAndPosition(new KeyMapper("cam2quest", "Point Camera to Quest", "Turns your camera so that the quest is to your north."));
             this.addOptionAndPosition(new KeyMapper("enterPortal", "Portal Enter", "Enters nearest portal."));
             this.addOptionAndPosition(new ChoiceOption("instaSelect", makeOnOffLabels(), [true, false], "Instantly Select All Items", "When turned on, a right click on the trade window will select all your items instantly. When turned off, selects only items of the same type, smoothly, like an actual player.", null));

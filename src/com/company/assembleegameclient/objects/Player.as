@@ -2245,7 +2245,7 @@ public class Player extends Character
             var _local_13:* = undefined;
             var _local_14:int = Parameters.data_.aimMode;
             var _local_15:Number = (_arg_3.speed_ / 10000);
-            var _local_16:Number = ((_local_15 * _arg_3.lifetime_) + ((Parameters.data_.AAAddOne) ? 0 : 1));
+            var _local_16:Number = ((_local_15 * _arg_3.lifetime_) + ((Parameters.data_.AAAddOne) ? 1 : 0));
             var _local_17:Number = 0;
             var _local_18:Number = int.MAX_VALUE;
             var _local_19:Number = int.MAX_VALUE;

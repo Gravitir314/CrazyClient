@@ -990,11 +990,11 @@ public class MapUserInput
                     this.maxprism = (!(this.maxprism));
                     _local_21.notifyPlayer(((this.maxprism) ? "Max Prism: Enabled" : "Max Prism: Disabled"), 0xFF00, 1500);
                     break;
-                case Parameters.data_.Cam45DegInc:
+                case Parameters.data_.Cam90DegInc:
                     Parameters.data_.cameraAngle = (Parameters.data_.cameraAngle - (0.785398163397448 * 2));
                     Parameters.save();
                     break;
-                case Parameters.data_.Cam45DegDec:
+                case Parameters.data_.Cam90DegDec:
                     Parameters.data_.cameraAngle = (Parameters.data_.cameraAngle + (0.785398163397448 * 2));
                     Parameters.save();
                     break;

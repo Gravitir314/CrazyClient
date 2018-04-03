@@ -293,8 +293,8 @@ public class GameServerConnectionConcrete extends GameServerConnection
         private var ignoreNext:Boolean = false;
 
         private var timedShots:Vector.<int> = new Vector.<int>(0);
-        private const servs:Vector.<String> = new <String>["EUEast", "EUNorth2", "EUNorth", "USWest", "USMidWest", "EUWest", "USEast", "AsiaSouthEast", "USSouth", "USSouthWest", "EUSouthWest", "USEast3", "USWest2", "USMidWest2", "USEast2", "USNorthWest", "AsiaEast", "USSouth3", "EUWest2", "EUSouth", "USSouth2", "USWest3", "Proxy"];
-        private const abbrs:Vector.<String> = new <String>["eue", "eun2", "eun", "usw", "usmw", "euw", "use", "ase", "uss", "ussw", "eusw", "use3", "usw2", "usmw2", "use2", "usnw", "ae", "uss3", "euw2", "eus", "uss2", "usw3", "p"];
+        private const servs:Vector.<String> = new <String>["EUEast", "EUNorth2", "EUNorth", "USWest", "USMidWest", "EUWest", "USEast", "AsiaSouthEast", "USSouth", "USSouthWest", "EUSouthWest", "USEast3", "USWest2", "USMidWest2", "USEast2", "USNorthWest", "AsiaEast", "USSouth3", "EUWest2", "EUSouth", "USSouth2", "USWest3", "Australia", "Proxy"];
+        private const abbrs:Vector.<String> = new <String>["eue", "eun2", "eun", "usw", "usmw", "euw", "use", "ase", "uss", "ussw", "eusw", "use3", "usw2", "usmw2", "use2", "usnw", "ae", "uss3", "euw2", "eus", "uss2", "usw3", "aus", "p"];
         private const realms:Vector.<String> = new <String>["Medusa", "Beholder", "Cyclops", "Djinn", "Ogre", "Flayer", "Sprite", "Golem"];
 
         public function GameServerConnectionConcrete(_arg_1:AGameSprite, _arg_2:Server, _arg_3:int, _arg_4:Boolean, _arg_5:int, _arg_6:int, _arg_7:ByteArray, _arg_8:String, _arg_9:Boolean)
