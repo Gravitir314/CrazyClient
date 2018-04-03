@@ -148,6 +148,8 @@ import kabam.rotmg.ui.view.NotEnoughGoldMediator;
 import kabam.rotmg.ui.view.ServersMediator;
 import kabam.rotmg.ui.view.StatMetersMediator;
 import kabam.rotmg.ui.view.StatMetersView;
+import kabam.rotmg.ui.view.CooldownTimer;
+import kabam.rotmg.ui.view.CooldownTimerMediator;
 import kabam.rotmg.ui.view.StatsDockedSignal;
 import kabam.rotmg.ui.view.TitleMediator;
 import kabam.rotmg.ui.view.TitleView;
@@ -226,6 +228,7 @@ public class UIConfig implements IConfig
             this.mediatorMap.map(LanguageOptionOverlay).toMediator(LanguageOptionOverlayMediator);
             this.mediatorMap.map(ArenaPortalPanel).toMediator(ArenaPortalPanelMediator);
             this.mediatorMap.map(StatMetersView).toMediator(StatMetersMediator);
+            this.mediatorMap.map(CooldownTimer).toMediator(CooldownTimerMediator);
             this.mediatorMap.map(HUDView).toMediator(HUDMediator);
             this.mediatorMap.map(PotionSlotView).toMediator(PotionSlotMediator);
             this.mediatorMap.map(ResurrectionView).toMediator(ResurrectionViewMediator);

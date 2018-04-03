@@ -29,6 +29,7 @@ public class Parameters
         public static const NAME_CHOSEN_COLOR:uint = 0xFCDF00;
         public static var root:DisplayObject;
         public static var PLAYER_ROTATE_SPEED:Number = 0.003;
+        public static const RECONNECT_DELAY:int = 25;
         public static const BREATH_THRESH:int = 20;
         public static const SERVER_CHAT_NAME:String = "";
         public static const CLIENT_CHAT_NAME:String = "*Client*";

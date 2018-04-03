@@ -5,21 +5,21 @@
 
 package io.decagames.rotmg.utils.dictionary
 {
-import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-public class DictionaryUtils
+    public class DictionaryUtils 
     {
 
 
         public static function countKeys(_arg_1:Dictionary):int
         {
-            var _local_3:int;
-            var _local_2:* = undefined;
-            for (_local_2 in _arg_1)
+            var _local_3:*;
+            var _local_2:int;
+            for (_local_3 in _arg_1)
             {
-                _local_3++;
+                _local_2++;
             };
-            return (_local_3);
+            return (_local_2);
         }
 
 

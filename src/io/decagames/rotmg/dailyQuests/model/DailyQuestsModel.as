@@ -5,12 +5,11 @@
 
 package io.decagames.rotmg.dailyQuests.model
 {
-import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.constants.GeneralConstants;
+    import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
 
-import kabam.rotmg.constants.GeneralConstants;
-import kabam.rotmg.ui.model.HUDModel;
-
-public class DailyQuestsModel
+    public class DailyQuestsModel 
     {
 
         private var _questsList:Vector.<DailyQuest> = new Vector.<DailyQuest>();

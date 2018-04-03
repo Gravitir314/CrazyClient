@@ -5,12 +5,11 @@
 
 package io.decagames.rotmg.dailyQuests.utils
 {
-import flash.display.Sprite;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
+    import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
 
-import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
-import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
-
-public class SlotsRendered
+    public class SlotsRendered 
     {
 
 

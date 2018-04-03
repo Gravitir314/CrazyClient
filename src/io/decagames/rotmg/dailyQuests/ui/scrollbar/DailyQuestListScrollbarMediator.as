@@ -5,12 +5,11 @@
 
 package io.decagames.rotmg.dailyQuests.ui.scrollbar
 {
-import flash.events.Event;
-import flash.events.MouseEvent;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class DailyQuestListScrollbarMediator extends Mediator 
+    public class DailyQuestListScrollbarMediator extends Mediator 
     {
 
         [Inject]

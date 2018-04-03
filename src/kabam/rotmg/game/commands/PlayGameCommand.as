@@ -24,8 +24,6 @@ import kabam.rotmg.servers.api.ServerModel;
 
 public class PlayGameCommand
     {
-
-        public static const RECONNECT_DELAY:int = 250;
         public static var startTime:int = -1;
         public static var visited:Array = new Array();
         private static var loaded:Boolean = false;
@@ -55,7 +53,7 @@ public class PlayGameCommand
         {
             if (!this.data.isNewGame)
             {
-                this.socketServerModel.connectDelayMS = PlayGameCommand.RECONNECT_DELAY;
+                this.socketServerModel.connectDelayMS = Parameters.RECONNECT_DELAY;
             };
             this.recordCharacterUseInSharedObject();
             this.makeGameView();

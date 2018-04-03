@@ -5,19 +5,15 @@
 
 package io.decagames.rotmg.dailyQuests.view.panel
 {
-import com.company.assembleegameclient.parameters.Parameters;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+    import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
+    import flash.events.MouseEvent;
+    import flash.events.KeyboardEvent;
+    import io.decagames.rotmg.dailyQuests.view.DailyQuestWindow;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-import flash.events.KeyboardEvent;
-import flash.events.MouseEvent;
-
-import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-import io.decagames.rotmg.dailyQuests.view.DailyQuestWindow;
-
-import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class DailyQuestsPanelMediator extends Mediator 
+    public class DailyQuestsPanelMediator extends Mediator 
     {
 
         [Inject]

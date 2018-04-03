@@ -5,11 +5,10 @@
 
 package io.decagames.rotmg.shop.genericBox.data
 {
-import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
+    import io.decagames.rotmg.utils.date.TimeLeft;
 
-import io.decagames.rotmg.utils.date.TimeLeft;
-
-public class GenericBoxInfo
+    public class GenericBoxInfo 
     {
 
         protected var _id:String;

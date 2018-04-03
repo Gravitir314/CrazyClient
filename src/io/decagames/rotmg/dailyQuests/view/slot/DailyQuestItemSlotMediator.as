@@ -5,21 +5,17 @@
 
 package io.decagames.rotmg.dailyQuests.view.slot
 {
-import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-import com.company.assembleegameclient.objects.ObjectLibrary;
-import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
+    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+    import flash.events.MouseEvent;
 
-import flash.events.MouseEvent;
-
-import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
-
-import kabam.rotmg.core.signals.ShowTooltipSignal;
-import kabam.rotmg.ui.model.HUDModel;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class DailyQuestItemSlotMediator extends Mediator 
+    public class DailyQuestItemSlotMediator extends Mediator 
     {
 
         [Inject]

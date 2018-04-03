@@ -5,10 +5,10 @@
 
 package io.decagames.rotmg.utils.colors
 {
-import flash.display.DisplayObject;
-import flash.geom.ColorTransform;
+    import flash.geom.ColorTransform;
+    import flash.display.DisplayObject;
 
-public class Tint
+    public class Tint 
     {
 
 

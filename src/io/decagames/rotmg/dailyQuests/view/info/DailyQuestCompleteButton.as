@@ -5,18 +5,16 @@
 
 package io.decagames.rotmg.dailyQuests.view.info
 {
-import flash.display.Bitmap;
-import flash.display.DisplayObject;
-import flash.display.Sprite;
-import flash.text.TextFieldAutoSize;
-import flash.text.TextFormatAlign;
+    import flash.display.Sprite;
+    import flash.display.Bitmap;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import flash.display.DisplayObject;
+    import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
 
-import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
-
-import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-
-public class DailyQuestCompleteButton extends Sprite 
+    public class DailyQuestCompleteButton extends Sprite 
     {
 
         public static const BUTTON_WIDTH:int = 149;

@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.utils.date
 {
-import mx.utils.StringUtil;
+    import mx.utils.StringUtil;
 
-public class TimeSpan
+    public class TimeSpan 
     {
 
         public static const MILLISECONDS_IN_DAY:Number = 86400000;

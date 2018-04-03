@@ -5,14 +5,13 @@
 
 package io.decagames.rotmg.dailyQuests.ui.scrollbar
 {
-import flash.display.DisplayObject;
-import flash.display.Sprite;
-import flash.geom.Rectangle;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.utils.display.ScaleBitmap;
+    import flash.display.DisplayObject;
+    import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
+    import flash.geom.Rectangle;
 
-import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
-import io.decagames.rotmg.utils.display.ScaleBitmap;
-
-public class DailyQuestListScrollbar extends Sprite 
+    public class DailyQuestListScrollbar extends Sprite 
     {
 
         public static const SCROLL_BAR_HEIGHT:int = 357;

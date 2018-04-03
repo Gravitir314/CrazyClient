@@ -5,19 +5,17 @@
 
 package io.decagames.rotmg.ui.texture
 {
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.geom.Rectangle;
-import flash.utils.ByteArray;
-import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
+    import kabam.lib.json.JsonParser;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import io.decagames.rotmg.ui.assets.UIAssets;
+    import flash.display.Bitmap;
+    import flash.geom.Rectangle;
+    import flash.utils.ByteArray;
+    import flash.display.BitmapData;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
-import io.decagames.rotmg.ui.assets.UIAssets;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-
-import kabam.lib.json.JsonParser;
-import kabam.rotmg.core.StaticInjectorContext;
-
-public class TextureParser
+    public class TextureParser 
     {
 
         private static var _instance:TextureParser;
@@ -82,9 +80,9 @@ public class TextureParser
 
         public function getSliceScalingBitmap(_arg_1:String, _arg_2:String, _arg_3:int=0):SliceScalingBitmap
         {
-            var _local_6:Rectangle;
             var _local_4:Bitmap = this.getTexture(_arg_1, _arg_2);
             var _local_5:Object = this.textures[_arg_1].sliceRectangles.slices[(_arg_2 + ".png")];
+            var _local_6:Rectangle;
             var _local_7:String = SliceScalingBitmap.SCALE_TYPE_NONE;
             if (_local_5)
             {

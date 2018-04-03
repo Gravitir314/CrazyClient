@@ -5,17 +5,15 @@
 
 package io.decagames.rotmg.ui.spinner
 {
-import flash.display.Sprite;
-import flash.text.TextFieldAutoSize;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import org.osflash.signals.Signal;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import flash.text.TextFieldAutoSize;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.labels.UILabel;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-
-import org.osflash.signals.Signal;
-
-public class NumberSpinner extends Sprite
+    public class NumberSpinner extends Sprite 
     {
 
         private var _upArrow:SliceScalingButton;
@@ -44,13 +42,14 @@ public class NumberSpinner extends Sprite
             this.label.text = (_arg_2.toString() + _arg_6);
             this.label.x = (-(this.label.width) / 2);
             this._upArrow.x = (-(this._upArrow.width) / 2);
-            this.label.y = (this._upArrow.height + 3);
+            this._upArrow.y = 6;
+            this.label.y = (this._upArrow.height + 4);
             addChild(this.label);
             addChild(this._upArrow);
             this._downArrow = new SliceScalingButton(_arg_1.clone());
             this._downArrow.rotation = 180;
             this._downArrow.x = (this._downArrow.width / 2);
-            this._downArrow.y = ((this.label.y + this.label.height) + 10);
+            this._downArrow.y = ((this.label.y + this.label.height) + 6);
             addChild(this._downArrow);
             this._value = _arg_2;
         }

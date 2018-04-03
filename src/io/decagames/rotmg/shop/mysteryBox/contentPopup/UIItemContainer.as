@@ -5,19 +5,16 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-import com.company.assembleegameclient.objects.ObjectLibrary;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import flash.display.Bitmap;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import flash.display.BitmapData;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import flash.text.TextFormat;
+    import kabam.rotmg.text.model.FontModel;
+    import flash.filters.DropShadowFilter;
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.filters.DropShadowFilter;
-import flash.text.TextFormat;
-
-import io.decagames.rotmg.ui.gird.UIGridElement;
-import io.decagames.rotmg.ui.labels.UILabel;
-
-import kabam.rotmg.text.model.FontModel;
-
-public class UIItemContainer extends UIGridElement 
+    public class UIItemContainer extends UIGridElement 
     {
 
         private var _itemId:int;
@@ -54,7 +51,6 @@ public class UIItemContainer extends UIGridElement
         public function showQuantityLabel(_arg_1:int):void
         {
             var _local_2:UILabel;
-            _local_2 = null;
             this._quantity = _arg_1;
             _local_2 = new UILabel();
             var _local_3:TextFormat = new TextFormat();

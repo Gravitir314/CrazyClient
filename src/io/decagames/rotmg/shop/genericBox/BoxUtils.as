@@ -5,17 +5,15 @@
 
 package io.decagames.rotmg.shop.genericBox
 {
-import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.util.Currency;
+    import io.decagames.rotmg.shop.NotEnoughResources;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-import io.decagames.rotmg.shop.NotEnoughResources;
-import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-
-import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.game.model.GameModel;
-
-public class BoxUtils
+    public class BoxUtils 
     {
 
 
@@ -23,8 +21,6 @@ public class BoxUtils
         {
             var _local_6:int;
             var _local_7:int;
-            var _local_9:int;
-            var _local_10:int;
             if (((_arg_1.isOnSale()) && (_arg_1.saleAmount > 0)))
             {
                 _local_6 = int(_arg_1.saleCurrency);
@@ -36,6 +32,8 @@ public class BoxUtils
                 _local_7 = (int(_arg_1.priceAmount) * _arg_2);
             };
             var _local_8:Boolean = true;
+            var _local_9:int;
+            var _local_10:int;
             var _local_11:Player = _arg_3.player;
             if (_local_11 != null)
             {

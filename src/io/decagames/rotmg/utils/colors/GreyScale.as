@@ -5,13 +5,13 @@
 
 package io.decagames.rotmg.utils.colors
 {
-import flash.display.BitmapData;
-import flash.filters.ColorMatrixFilter;
-import flash.geom.Point;
-import flash.geom.Rectangle;
-import flash.display.DisplayObject;
+    import flash.filters.ColorMatrixFilter;
+    import flash.geom.Rectangle;
+    import flash.geom.Point;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
 
-public class GreyScale
+    public class GreyScale 
     {
 
 
@@ -23,6 +23,12 @@ public class GreyScale
             var _local_5:Array = [_local_2, _local_3, _local_4, 0, 0, _local_2, _local_3, _local_4, 0, 0, _local_2, _local_3, _local_4, 0, 0, 0, 0, 0, 1, 0];
             var _local_6:ColorMatrixFilter = new ColorMatrixFilter(_local_5);
             _arg_1.applyFilter(_arg_1, new Rectangle(0, 0, _arg_1.width, _arg_1.height), new Point(0, 0), _local_6);
+            return (_arg_1);
+        }
+
+        public static function clear(_arg_1:BitmapData):BitmapData
+        {
+            _arg_1.applyFilter(_arg_1, new Rectangle(0, 0, _arg_1.width, _arg_1.height), new Point(0, 0), new ColorMatrixFilter());
             return (_arg_1);
         }
 
@@ -40,13 +46,7 @@ public class GreyScale
             else
             {
                 _arg_1.filters = [];
-            }
-        }
-
-        public static function clear(_arg_1:BitmapData):BitmapData
-        {
-            _arg_1.applyFilter(_arg_1, new Rectangle(0, 0, _arg_1.width, _arg_1.height), new Point(0, 0), new ColorMatrixFilter());
-            return (_arg_1);
+            };
         }
 
 

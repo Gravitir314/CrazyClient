@@ -5,25 +5,21 @@
 
 package io.decagames.rotmg.dailyQuests.view
 {
-import com.company.assembleegameclient.map.ParticleModalMap;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.dailyQuests.view.popup.DailyQuestRedeemPopup;
+    import io.decagames.rotmg.dailyQuests.view.list.DailyQuestsList;
+    import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import com.company.assembleegameclient.map.ParticleModalMap;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
+    import flashx.textLayout.formats.TextAlign;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
 
-import flash.display.Bitmap;
-import flash.display.Sprite;
-import flash.text.TextFieldAutoSize;
-import flash.text.TextFormatAlign;
-
-import flashx.textLayout.formats.TextAlign;
-
-import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
-import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
-import io.decagames.rotmg.dailyQuests.view.list.DailyQuestsList;
-import io.decagames.rotmg.dailyQuests.view.popup.DailyQuestRedeemPopup;
-
-import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-
-public class DailyQuestWindow extends Sprite
+    public class DailyQuestWindow extends Sprite 
     {
 
         public static var dailyQuestBanner:Class = DailyQuestWindow_dailyQuestBanner;

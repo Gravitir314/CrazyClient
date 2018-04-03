@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.utils.colors
 {
-import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-public class RandomColorGenerator
+    public class RandomColorGenerator 
     {
 
         private var colorDictionary:Dictionary;
@@ -25,7 +25,8 @@ public class RandomColorGenerator
             var _local_2:int = this.pickHue();
             var _local_3:int = this.pickSaturation(_local_2, _arg_1);
             var _local_4:int = this.pickBrightness(_local_2, _local_3, _arg_1);
-            return (this.HSVtoRGB([_local_2, _local_3, _local_4]));
+            var _local_5:Array = this.HSVtoRGB([_local_2, _local_3, _local_4]);
+            return (_local_5);
         }
 
         private function HSVtoRGB(_arg_1:Array):Array
@@ -34,11 +35,11 @@ public class RandomColorGenerator
             if (_local_2 === 0)
             {
                 _local_2 = 1;
-            }
+            };
             if (_local_2 === 360)
             {
                 _local_2 = 359;
-            }
+            };
             _local_2 = (_local_2 / 360);
             var _local_3:Number = (_arg_1[1] / 100);
             var _local_4:Number = (_arg_1[2] / 100);
@@ -82,7 +83,7 @@ public class RandomColorGenerator
                     _local_11 = _local_7;
                     _local_12 = _local_8;
                     break;
-            }
+            };
             return ([Math.floor((_local_10 * 0xFF)), Math.floor((_local_11 * 0xFF)), Math.floor((_local_12 * 0xFF))]);
         }
 
@@ -102,7 +103,7 @@ public class RandomColorGenerator
                 case "light":
                     _local_5 = 55;
                     break;
-            }
+            };
             return (this.randomWithin([_local_4, _local_5]));
         }
 
@@ -113,15 +114,15 @@ public class RandomColorGenerator
             if (((_arg_1 >= 334) && (_arg_1 <= 360)))
             {
                 _arg_1 = (_arg_1 - 360);
-            }
+            };
             for (_local_2 in this.colorDictionary)
             {
                 _local_3 = this.colorDictionary[_local_2];
                 if ((((_local_3.hueRange) && (_arg_1 >= _local_3.hueRange[0])) && (_arg_1 <= _local_3.hueRange[1])))
                 {
                     return (this.colorDictionary[_local_2]);
-                }
-            }
+                };
+            };
             return (null);
         }
 
@@ -146,7 +147,7 @@ public class RandomColorGenerator
                     _local_4 = 0;
                     _local_5 = 100;
                     break;
-            }
+            };
             return (this.randomWithin([_local_4, _local_5]));
         }
 
@@ -171,17 +172,17 @@ public class RandomColorGenerator
                     _local_9 = ((_local_8 - _local_6) / (_local_7 - _local_5));
                     _local_10 = (_local_6 - (_local_9 * _local_5));
                     return ((_local_9 * _arg_2) + _local_10);
-                }
+                };
                 _local_4++;
-            }
+            };
             return (0);
         }
 
         private function randomWithin(_arg_1:Array):int
         {
-            var _local_2:* = undefined;
-            var _local_3:* = undefined;
-            var _local_4:* = undefined;
+            var _local_2:*;
+            var _local_3:*;
+            var _local_4:*;
             if (this.seed == -1)
             {
                 return (Math.floor((_arg_1[0] + (Math.random() * ((_arg_1[1] + 1) - _arg_1[0])))));

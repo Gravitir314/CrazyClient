@@ -5,13 +5,12 @@
 
 package io.decagames.rotmg.dailyQuests.view.list
 {
-import flash.display.Bitmap;
-import flash.display.Sprite;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.dailyQuests.ui.scrollbar.DailyQuestListScrollbar;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
 
-import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
-import io.decagames.rotmg.dailyQuests.ui.scrollbar.DailyQuestListScrollbar;
-
-public class DailyQuestsList extends Sprite 
+    public class DailyQuestsList extends Sprite 
     {
 
         public static const LIST_WIDTH:int = 223;

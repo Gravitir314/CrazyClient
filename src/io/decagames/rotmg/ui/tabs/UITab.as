@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.ui.tabs
 {
-import flash.display.Sprite;
+    import flash.display.Sprite;
 
-public class UITab extends Sprite
+    public class UITab extends Sprite 
     {
 
         private var _tabName:String;

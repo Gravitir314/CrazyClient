@@ -5,13 +5,12 @@
 
 package io.decagames.rotmg.shop.packages.contentPopup
 {
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.labels.UILabel;
-import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import kabam.rotmg.packages.model.PackageInfo;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-import kabam.rotmg.packages.model.PackageInfo;
-
-public class PackageBoxContentPopup extends ModalPopup 
+    public class PackageBoxContentPopup extends ModalPopup 
     {
 
         private var _info:PackageInfo;

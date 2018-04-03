@@ -5,21 +5,18 @@
 
 package io.decagames.rotmg.dailyQuests.view.info
 {
-import flash.display.Sprite;
-import flash.text.TextFieldAutoSize;
-import flash.text.TextFormatAlign;
+    import flash.display.Sprite;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
+    import flashx.textLayout.formats.TextAlign;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
+    import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
 
-import flashx.textLayout.formats.TextAlign;
-
-import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
-import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
-import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
-
-import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-
-public class DailyQuestInfo extends Sprite 
+    public class DailyQuestInfo extends Sprite 
     {
 
         public static var INFO_WIDTH:int = 328;

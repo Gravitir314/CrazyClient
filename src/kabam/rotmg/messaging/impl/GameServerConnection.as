@@ -318,7 +318,7 @@ public class GameServerConnection
         {
         }
 
-        public function questRedeem(param1:String, param2:Vector.<SlotObjectData>):void
+        public function questRedeem(_arg_1:String, _arg_2:Vector.<SlotObjectData>, _arg_3:int=-1):void
         {
         }
 

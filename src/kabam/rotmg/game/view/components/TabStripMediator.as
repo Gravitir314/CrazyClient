@@ -69,7 +69,6 @@ public class TabStripMediator extends Mediator
             this.statsDocked.add(this.onStatsDocked);
             this.statsTabHotKeyInput.add(this.onTabHotkey);
             this.notifyActivePetUpdated.add(this.onNotifyActivePetUpdated);
-            this.view.initFriendList(this.imageFactory, this.iconButtonFactory, this.onFriendsBtnClicked);
         }
 
         override public function destroy():void
@@ -80,7 +79,6 @@ public class TabStripMediator extends Mediator
             this.statsDocked.remove(this.onStatsDocked);
             this.statsTabHotKeyInput.remove(this.onTabHotkey);
             this.notifyActivePetUpdated.remove(this.onNotifyActivePetUpdated);
-            this.view.friendsBtn.removeEventListener(MouseEvent.CLICK, this.onFriendsBtnClicked);
         }
 
         private function onStatsUndocked(_arg_1:StatsView):void

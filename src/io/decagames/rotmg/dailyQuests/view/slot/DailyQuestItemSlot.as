@@ -5,14 +5,13 @@
 
 package io.decagames.rotmg.dailyQuests.view.slot
 {
-import com.company.assembleegameclient.objects.ObjectLibrary;
+    import flash.display.Sprite;
+    import flash.display.Shape;
+    import flash.display.Bitmap;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import flash.display.BitmapData;
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.Shape;
-import flash.display.Sprite;
-
-public class DailyQuestItemSlot extends Sprite 
+    public class DailyQuestItemSlot extends Sprite 
     {
 
         public static const SLOT_SIZE:int = 40;

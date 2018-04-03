@@ -5,11 +5,13 @@
 
 package io.decagames.rotmg.ui.popups.modal.error
 {
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.popups.modal.TextModal;
-import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    
+    import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
+    
 
-public class ErrorModal extends TextModal 
+    public class ErrorModal extends TextModal 
     {
 
         public function ErrorModal(_arg_1:int, _arg_2:String, _arg_3:String)

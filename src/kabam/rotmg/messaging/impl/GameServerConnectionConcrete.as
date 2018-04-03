@@ -3033,12 +3033,12 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.questRedeemComplete.dispatch(_arg_1);
         }
 
-        override public function questRedeem(_arg_1:String, _arg_2:Vector.<SlotObjectData>):void
-        {
-            var _local_3:QuestRedeem = (this.messages.require(QUEST_REDEEM) as QuestRedeem);
-            _local_3.questID = _arg_1;
-            _local_3.slots = _arg_2;
-            serverConnection.sendMessage(_local_3);
+        override public function questRedeem(_arg_1:String, _arg_2:Vector.<SlotObjectData>, _arg_3:int=-1):void{
+            var _local_4:QuestRedeem = (this.messages.require(QUEST_REDEEM) as QuestRedeem);
+            _local_4.questID = _arg_1;
+            _local_4.item = _arg_3;
+            _local_4.slots = _arg_2;
+            serverConnection.sendMessage(_local_4);
         }
 
         override public function keyInfoRequest(_arg_1:int):void

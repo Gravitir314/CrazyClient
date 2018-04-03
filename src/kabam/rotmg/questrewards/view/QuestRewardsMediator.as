@@ -78,11 +78,6 @@ public class QuestRewardsMediator extends Mediator {
         QuestRewardsView.closed.add(this.onClose);
     }
 
-    private function presentNextQuest():void {
-        this.removeEvents();
-        this.initialize();
-    }
-
     private function removeOldView():void {
         if (((!((this.oldView == null))) && (!((this.oldView.parent == null))))) {
             this.container.removeChild(this.oldView);
@@ -93,15 +88,6 @@ public class QuestRewardsMediator extends Mediator {
         QuestRewardsView.closed.removeAll();
         this.removeEvents();
         this.closeDialogs.dispatch();
-    }
-
-    private function onInit(_arg_1:TimerEvent):void {
-        if (Math.random() < 0.5) {
-            this.view.init(1, 3205, "AAAAAAHHH we are in need of this {goal} now. Help help help.", "http://i.imgur.com/ceobPxd.png");
-        }
-        else {
-            this.view.init(1, 1793, "WOAAH we are in need of this {goal} now. Help help.", "https://www.google.com/images/srpr/logo11w.png");
-        }
     }
 
     private function onQuestFetchComplete(_arg_1:QuestFetchResponse):void {
