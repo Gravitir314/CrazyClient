@@ -61,7 +61,28 @@ public class Parameters
         public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030, 10973, 19494, 19531];
         public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476, 10939, 19494, 19531];
         private static var keyNames_:Dictionary = new Dictionary();
+        public static var timerActive:Boolean;
+        public static var phaseChangeAt:int;
+        public static var phaseName:String;
+        public static var timerPhaseTimes:Dictionary = new Dictionary();
+        public static var timerPhaseNames:Dictionary = new Dictionary();
 
+        public static function setTimerPhases():void{
+            timerPhaseTimes['{"key":"server.oryx_closed_realm"}'] = 120000;
+            timerPhaseTimes['{"key":"server.oryx_minions_failed"}'] = 12000;
+            timerPhaseTimes["Futility!"] = 25000;
+            timerPhaseTimes["Your fervent attacks are no match for my strength! BEGONE!"] = 45000;
+            timerPhaseTimes["You have seen your last glimpse of sunlight!"] = 45000;
+            timerPhaseTimes["You... YOU WILL COME WITH ME!"] = 150000;
+            timerPhaseTimes["DIE! DIE! DIE!!!"] = 23000;
+            timerPhaseNames['{"key":"server.oryx_closed_realm"}'] = "Realm Closed";
+            timerPhaseNames['{"key":"server.oryx_minions_failed"}'] = "Oryx Shake";
+            timerPhaseNames["Futility!"] = "Phase0";
+            timerPhaseNames["Your fervent attacks are no match for my strength! BEGONE!"] = "Phase1";
+            timerPhaseNames["You have seen your last glimpse of sunlight!"] = "Phase2";
+            timerPhaseNames["You... YOU WILL COME WITH ME!"] = "Survival";
+            timerPhaseNames["DIE! DIE! DIE!!!"] = "Vulnerable";
+        }
 
         public static function load():void
         {
@@ -75,6 +96,7 @@ public class Parameters
                 data_ = {};
             };
             setDefaults();
+            setTimerPhases();
             save();
         }
 

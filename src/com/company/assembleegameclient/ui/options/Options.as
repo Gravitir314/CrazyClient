@@ -842,14 +842,15 @@ public class Options extends Sprite
 
         private function addExtraOptions():void
         {
-            this.addOptionAndPosition(new ChoiceOption("curBoss", this.bossNames(), [3368, 3366, 3367], "Current Boss", "You will only be able to hit the current boss.", null));
             this.addOptionAndPosition(new ChoiceOption("etheriteDisable", makeOnOffLabels(), [true, false], "Offset Etherite", "Offsets your firing angle if you have an Etherite equipped to make it so your shots are in a straight line", null));
-            this.addOptionAndPosition(new ChoiceOption("tombHack", makeOnOffLabels(), [true, false], "Tomb Hack", "Tomb hack allows you to only damage the selected boss, leaving others unharmed even if you shoot them.", this.tombDeactivate));
+            this.addOptionAndPosition(new ChoiceOption("curBoss", this.bossNames(), [3368, 3366, 3367], "Current Boss", "You will only be able to hit the current boss.", null));
             this.addOptionAndPosition(new ChoiceOption("cultistStaffDisable", makeOnOffLabels(), [true, false], "Reverse Cultist Staff", "Reverses the angle of the Staff of Unholy Sacrifice (which normally shoots backwards) to make it so you shoot forwards", null));
-            this.addOptionAndPosition(new KeyMapper("tombCycle", "Next Boss", "Selects the next boss.", (!(Parameters.data_.tombHack))));
+            this.addOptionAndPosition(new ChoiceOption("tombHack", makeOnOffLabels(), [true, false], "Tomb Hack", "Tomb hack allows you to only damage the selected boss, leaving others unharmed even if you shoot them.", this.tombDeactivate));
             this.addOptionAndPosition(new ChoiceOption("offsetColossus", makeOnOffLabels(), [true, false], "Offset Colossus Sword", "Attempts to shoot straight, try /colo 0.4 and /colo 0.2", null));
-            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("tombCycle", "Next Boss", "Selects the next boss.", (!(Parameters.data_.tombHack))));
             this.addOptionAndPosition(new ChoiceOption("wordNoti", makeOnOffLabels(), [true, false], "Keyword Notification", "Notifies if someone say word in list in chat.", null));
+            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "notifies you with a sound when a key is popped!", null));
             this.tombDeactivate();
         }
 
@@ -1037,7 +1038,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
             this.addOptionAndPosition(new KeyMapper("Beekey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "notifies you overhead when oryx calls out a new event", null));
-            this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "notifies you with a sound when a key is popped!", null));
         }
 
         private function addGraphicsOptions():void

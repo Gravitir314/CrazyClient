@@ -27,6 +27,7 @@ import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.ColorMatrixFilter;
+import flash.filters.DropShadowFilter;
 import flash.utils.ByteArray;
 import flash.utils.getTimer;
 
@@ -53,6 +54,8 @@ import kabam.rotmg.news.view.NewsTicker;
 import kabam.rotmg.protip.signals.ShowProTipSignal;
 import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.stage3D.Renderer;
+import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.ui.UIUtils;
 import kabam.rotmg.ui.view.HUDView;
 import kabam.rotmg.ui.view.QuestHealthBar;
@@ -62,6 +65,7 @@ import org.osflash.signals.Signal;
 public class GameSprite extends AGameSprite
     {
 
+        protected const EMPTY_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
         protected static const PAUSED_FILTER:ColorMatrixFilter = new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix);
 
         public const monitor:Signal = new Signal(String, int);
@@ -84,6 +88,8 @@ public class GameSprite extends AGameSprite
         private var displaysPosY:uint = 4;
         public var chatPlayerMenu:PlayerMenu;
         public var questBar:QuestHealthBar;
+        private var timerCounter:TextFieldDisplayConcrete;
+        private var timerCounterStringBuilder:StaticStringBuilder;
 
         public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
         {
@@ -511,6 +517,11 @@ public class GameSprite extends AGameSprite
                 CachingColorTransformer.clear();
                 TextureRedrawer.clearCache();
                 Projectile.dispose();
+                if (((this.timerCounter) && (!((Parameters.phaseName == "Realm Closed") || (Parameters.phaseName == "Oryx Shake"))))){
+                    Parameters.timerActive = false;
+                    this.timerCounter.visible = false;
+                    this.timerCounter = null;
+                };
                 gsc_.disconnect();
             };
         }
@@ -543,6 +554,18 @@ public class GameSprite extends AGameSprite
             map.update(_local_3, _local_4);
             this.monitor.dispatch("Map.update", (getTimer() - _local_5));
             camera_.update(_local_4);
+            if (Parameters.timerActive){
+                if (this.timerCounter == null){
+                    this.addTimer();
+                }
+                if (_local_5 >= Parameters.phaseChangeAt){
+                    Parameters.phaseChangeAt = 2147483647;
+                    Parameters.timerActive = false;
+                    this.timerCounter.visible = false;
+                } else {
+                    this.updateTimer(_local_5);
+                }
+            }
             var _local_6:Player = map.player_;
             if (this.focus)
             {
@@ -593,6 +616,54 @@ public class GameSprite extends AGameSprite
         {
         }
 
+        private function updateTimer(_arg_1:int):void{
+            this.timerCounter.visible = true;
+            if (_arg_1 < 3000){
+                this.timerCounter.setColor(this.fadeRed(((Parameters.phaseChangeAt - _arg_1) * 0.00033333333)));
+            };
+            this.timerCounter.setText(((Parameters.phaseName + "\n") + toTimeCode((Parameters.phaseChangeAt - _arg_1))));
+        }
+
+        private function fadeRed(_arg_1:Number):uint{
+            if (_arg_1 > 100){
+                _arg_1 = 100;
+            };
+            var _local_5:int = (0xFF * _arg_1);
+            var _local_2:* = 0xFF0000;
+            var _local_4:* = (_local_5 << 8);
+            var _local_3:* = _local_5;
+            return ((_local_2 | _local_4) | _local_3);
+        }
+
+        public static function toTimeCode_HOWDIDIBREAKTHIS(_arg_1:Number):String{
+            var _local_3:int = (_arg_1 * 0.001);
+            var _local_2:int = Math.floor((_local_3 % 60));
+            var _local_4:String = (((Math.round(Math.floor((_local_3 * 0.0166666666666667))) + ":") + (_local_2 < 10)) ? ("0" + _local_2) : String(_local_2));
+            return (_local_4);
+        }
+
+        public static function toTimeCode(_arg_1:Number):String{
+            var _local_2:int = Math.floor(((_arg_1 * 0.001) % 60));
+            var _local_3:String = ((_local_2 < 10) ? ("0" + _local_2) : String(_local_2));
+            var _local_4:int = Math.round(Math.floor(((_arg_1 * 0.001) * 0.0166666666666667)));
+            var _local_5:String = String(_local_4);
+            var _local_6:String = ((_local_5 + ":") + _local_3);
+            return (_local_6);
+        }
+
+        private function addTimer():void{
+            if (this.timerCounter == null){
+                this.timerCounter = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
+                this.timerCounter.mouseChildren = false;
+                this.timerCounter.setBold(true);
+                this.timerCounterStringBuilder = new StaticStringBuilder("0:00");
+                this.timerCounter.setStringBuilder(this.timerCounterStringBuilder);
+                this.timerCounter.filters = [EMPTY_FILTER];
+                this.timerCounter.x = 3;
+                this.timerCounter.y = 180;
+                addChild(this.timerCounter);
+            };
+        }
 
     }
 }//package com.company.assembleegameclient.game

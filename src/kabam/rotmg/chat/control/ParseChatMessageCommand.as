@@ -1020,18 +1020,12 @@ public class ParseChatMessageCommand
                         return (true);
                     };
                     _local_7 = this.data.toLowerCase().match("^/timer (\\d+) ?(\\d*)$");
-                    if (_local_7 != null)
-                    {
-                        if (_local_7[2] == "")
-                        {
-                            _local_12.startTimer(_local_7[1], 1000);
-                        }
-                        else
-                        {
-                            _local_12.startTimer(_local_7[1], _local_7[2]);
-                        };
+                    if (_local_7 != null) {
+                        Parameters.timerActive = true;
+                        Parameters.phaseChangeAt = (getTimer() + (_local_7[1] * 1000));
+                        Parameters.phaseName = "";
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/autopot (\\d+)$");
                     if (_local_7 != null)
                     {
@@ -1600,45 +1594,43 @@ public class ParseChatMessageCommand
             return (false);
         }
 
-        public function execute():void
-        {
+        public function execute():void {
             var _local_1:Object;
             var _local_2:uint;
             var _local_3:GameObject;
             var _local_4:String;
             var _local_5:* = undefined;
-            if (this.tellHandle())
-            {
+            var _local_6:Array = this.data.split(" ");
+            var _local_7:String = _local_6[0];
+            if (this.tellHandle()) {
                 return;
-            };
-            if (this.listCommands())
-            {
+            }
+            ;
+            if (this.listCommands()) {
                 return;
-            };
-            if (this.cjCommands(this.data))
-            {
+            }
+            ;
+            if (this.cjCommands(this.data)) {
                 return;
-            };
-            if (this.custMessages())
-            {
+            }
+            ;
+            if (this.custMessages()) {
                 return;
-            };
-            if (this.effCom())
-            {
+            }
+            ;
+            if (this.effCom()) {
                 return;
-            };
-            if (this.fsCommands(this.data))
-            {
+            }
+            ;
+            if (this.fsCommands(this.data)) {
                 return;
-            };
-            if (this.data == "/help")
-            {
+            }
+            ;
+            if (this.data == "/help") {
                 this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, TextKey.HELP_COMMAND));
             }
-            else
-            {
-                if ((((this.data == "/c") || (this.data == "/class")) || (this.data == "/classes")))
-                {
+            else {
+                if ((((this.data == "/c") || (this.data == "/class")) || (this.data == "/classes"))) {
                     _local_1 = null;
                     _local_2 = 0;
                     _local_3 = null;
@@ -1646,27 +1638,27 @@ public class ParseChatMessageCommand
                     _local_5 = undefined;
                     _local_1 = {};
                     _local_2 = 0;
-                    for each (_local_3 in this.hudModel.gameSprite.map.goDict_)
-                    {
-                        if (_local_3.props_.isPlayer_)
-                        {
+                    for each (_local_3 in this.hudModel.gameSprite.map.goDict_) {
+                        if (_local_3.props_.isPlayer_) {
                             _local_1[_local_3.objectType_] = ((_local_1[_local_3.objectType_] != undefined) ? (_local_1[_local_3.objectType_] + 1) : uint(1));
                             _local_2++;
-                        };
-                    };
+                        }
+                        ;
+                    }
+                    ;
                     _local_4 = "";
-                    for (_local_5 in _local_1)
-                    {
+                    for (_local_5 in _local_1) {
                         _local_4 = (_local_4 + (((" " + ObjectLibrary.typeToDisplayId_[_local_5]) + ": ") + _local_1[_local_5]));
-                    };
+                    }
+                    ;
                     this.addTextLine.dispatch(ChatMessage.make("", ((("Classes online (" + _local_2) + "):") + _local_4)));
                 }
                 else {
-                        lastMsg = this.data;
-                        this.hudModel.gameSprite.gsc_.playerText(this.data);
-                    };
-                };
-            };
+                            lastMsg = this.data;
+                            this.hudModel.gameSprite.gsc_.playerText(this.data);
+                        }
+                    }
+                }
 
 
     }

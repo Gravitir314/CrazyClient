@@ -97,7 +97,7 @@ public class TextHandler
             var _local_14:* = (_arg_1.numStars_ == -1);
             var _local_15:Player = this.hudModel.gameSprite.map.player_;
             var _local_16:Array = ["Debauchery", "XP"];
-            var _local_17:Array;
+            var _local_17:int;
             if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
@@ -149,7 +149,7 @@ public class TextHandler
                 if (_local_6.indexOf(_local_4) != -1)
                 {
                     _local_15.levelUpEffect("", true);
-                    SoundEffectLibrary.play("level_up");
+                    SoundEffectLibrary.play("error");
                 }
             }
             if (Parameters.data_.eventnotify)
@@ -367,12 +367,12 @@ public class TextHandler
                     }
                 }
             }
-            if (((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("for 15 seconds") == -1)))) {
-                _local_15.startTimer(15, 1000);
-            }
-            if (((_arg_1.name_ == "#The Forgotten King") && (!(_arg_1.text_.indexOf("DIE! DIE! DIE!!!") == -1)))) {
-                _local_15.startTimer(23, 1000);
-            }
+            _local_17 = Parameters.timerPhaseTimes[_arg_1.text_];
+            if (_local_17 > 0){
+                Parameters.timerActive = true;
+                Parameters.phaseChangeAt = (getTimer() + _local_17);
+                Parameters.phaseName = Parameters.timerPhaseNames[_arg_1.text_];
+            };
             if (((_arg_1.objectId_ >= 0) && ((_arg_1.numStars_ > Parameters.data_.chatStarRequirement) || (_arg_1.numStars_ == -1))))
             {
                 this.showSpeechBaloon(_arg_1, _local_3);
