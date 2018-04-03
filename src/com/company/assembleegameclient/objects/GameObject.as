@@ -1211,16 +1211,16 @@ public class GameObject extends BasicObject
                     if (_local_3.skinId != 32912)
                     {
                         _local_3.setSkin(32912);
-                    };
+                    }
                 }
                 else
                 {
                     if (!_local_3.isDefaultAnimatedChar)
                     {
                         _local_3.setDefaultSkin();
-                    };
-                };
-            };
+                    }
+                }
+            }
             var _local_12:BitmapData = this.texture_;
             var _local_13:int = this.size_;
             if (this.animatedChar_ != null)
@@ -1232,7 +1232,7 @@ public class GameObject extends BasicObject
                     if (!this.props_.dontFaceAttacks_)
                     {
                         this.facing_ = this.attackAngle_;
-                    };
+                    }
                     _local_4 = (((_arg_2 - this.attackStart_) % ATTACK_PERIOD) / ATTACK_PERIOD);
                     _local_5 = AnimatedChar.ATTACK;
                 }
@@ -1250,10 +1250,10 @@ public class GameObject extends BasicObject
                         else
                         {
                             _local_5 = AnimatedChar.STAND;
-                        };
+                        }
                         _local_4 = ((_arg_2 % _local_7) / _local_7);
-                    };
-                };
+                    }
+                }
                 _local_6 = this.animatedChar_.imageFromFacing(this.facing_, _arg_1, _local_5, _local_4);
                 _local_12 = _local_6.image_;
                 _local_11 = _local_6.mask_;
@@ -1266,56 +1266,47 @@ public class GameObject extends BasicObject
                     if (_local_8 != null)
                     {
                         _local_12 = _local_8;
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (((this.props_.drawOnGround_) || (!(this.obj3D_ == null))))
             {
                 return (_local_12);
-            };
+            }
             if (_arg_1.isHallucinating_)
             {
                 _local_9 = ((_local_12 == null) ? 8 : _local_12.width);
                 _local_12 = this.getHallucinatingTexture();
                 _local_11 = null;
                 _local_13 = int((this.size_ * Math.min(1.5, (_local_9 / _local_12.width))));
-            };
-            if (!(this is Pet))
-            {
-                if (((this.isStasis()) || (this.isPetrified())))
-                {
+            }
+            if (!(this is Pet)) {
+                if (((this.isStasis()) || (this.isPetrified()))) {
                     _local_12 = CachingColorTransformer.filterBitmapData(_local_12, PAUSED_FILTER);
                 }
-                else
-                {
-                    if (!this.isCursed())
-                    {
-                    };
-                };
-            };
-            if (((this.tex1Id_ == 0) && (this.tex2Id_ == 0)))
-            {
-                _local_12 = TextureRedrawer.redraw(_local_12, _local_13, false, 0);
             }
-            else
-            {
+            if (((this.tex1Id_ == 0) && (this.tex2Id_ == 0))) {
+                if (((this.isCursed()) && (Parameters.data_.curseIndication))) {
+                    _local_12 = TextureRedrawer.redraw(_local_12, _local_13, false, 0xFF0000);
+                } else {
+                    _local_12 = TextureRedrawer.redraw(_local_12, _local_13, false, 0);
+                }
+            } else {
                 _local_10 = null;
                 if (this.texturingCache_ == null)
                 {
                     this.texturingCache_ = new Dictionary();
-                }
-                else
-                {
+                } else {
                     _local_10 = this.texturingCache_[_local_12];
-                };
+                }
                 if (_local_10 == null)
                 {
                     _local_10 = TextureRedrawer.resize(_local_12, _local_11, _local_13, false, this.tex1Id_, this.tex2Id_);
                     _local_10 = GlowRedrawer.outlineGlow(_local_10, 0);
                     this.texturingCache_[_local_12] = _local_10;
-                };
+                }
                 _local_12 = _local_10;
-            };
+            }
             return (_local_12);
         }
 

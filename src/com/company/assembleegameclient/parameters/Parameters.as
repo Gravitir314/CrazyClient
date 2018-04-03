@@ -453,6 +453,7 @@ public class Parameters
             setDefault("etheriteDisable", true);
             setDefault("cultistStaffDisable", true);
             setDefault("AutoReply", true);
+            setDefault("curseIndication", false);
         }
 
 

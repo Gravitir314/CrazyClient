@@ -1030,6 +1030,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("noAllyDamage", makeOnOffLabels(), [true, false], "Disable Ally Damage Text", "Disable damage above allies.", null));
             this.addOptionAndPosition(new ChoiceOption("forceEXP", makeOnOffLabels(), [true, false], "Always Show EXP", "Show EXP notifications even when level 20.", null));
             this.addOptionAndPosition(new ChoiceOption("showFameGain", makeOnOffLabels(), [true, false], "Show Fame Gain", "Shows notifications for each fame gained.", null));
+            this.addOptionAndPosition(new ChoiceOption("curseIndication", makeOnOffLabels(), [true, false], "Curse Indication", "Makes enemies inflicted by Curse glow red.", null));
             this.addOptionAndPosition(new ChoiceOption("rotateSpeed", this.OneTen(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Rotate Speed", "Change how fast your camera rotates. ( default is 3 )", this.updateRotate));
             this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
             this.addOptionAndPosition(new KeyMapper("Beekey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
