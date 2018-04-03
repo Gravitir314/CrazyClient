@@ -694,7 +694,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("LNRing", this.ZeroSix(), [0, 1, 2, 3, 4, 5, 6], "Min Ring Tier", "Minimum tier at which notifications and auto loot will function for rings.", this.updateWanted));
             this.addOptionAndPosition(new ChoiceOption("showLootNotifs", makeOnOffLabels(), [true, false], "Show Loot Notifications", "Show text notifications that tells the user what's in loot bags.", this.loot_options));
             this.addOptionAndPosition(new ChoiceOption("LNWeap", this.ZeroTwelve(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "Min Weapon Tier", "Minimum tier at which notifications and auto loot will function for weapons.", this.updateWanted));
-            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new ChoiceOption("lootPreview", makeOnOffLabels(), [true, false], "Loot Preview", "Shows previews of equipment over bags", null));
             this.addOptionAndPosition(new ChoiceOption("LNArmor", this.ZeroThirteen(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "Min Armor Tier", "Minimum tier at which notifications and auto loot will function for armor.", this.updateWanted));
             this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new ChoiceOption("potsMajor", makeOnOffLabels(), [true, false], "Loot LIFE/MANA/ATT/DEF", "High value potions.", this.updateWanted));

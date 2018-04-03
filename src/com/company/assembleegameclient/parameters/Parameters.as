@@ -297,7 +297,8 @@ public class Parameters
             setDefault("LNWeap", 12);
             setDefault("LNArmor", 13);
             setDefault("AutoLootOn", true);
-            setDefault("showLootNotifs", true);
+            setDefault("showLootNotifs", false);
+            setDefault("lootPreview", true);
             setDefault("NoLoot", ["common", "tincture", "mark"]);
             setDefault("pots2inv", true);
             setDefault("potsMinor", true);

@@ -11,6 +11,7 @@ import com.company.util.PointUtil;
 
 import flash.display.BitmapData;
 import flash.display.Shader;
+import flash.display.ShaderData;
 import flash.filters.BitmapFilterQuality;
 import flash.filters.GlowFilter;
 import flash.filters.ShaderFilter;
@@ -35,6 +36,7 @@ public class TextureRedrawer
         private static var textureShaderData_:ByteArray = (new textureShaderEmbed_() as ByteArray);
         private static var colorTexture1:BitmapData = new BitmapDataSpy(1, 1, false);
         private static var colorTexture2:BitmapData = new BitmapDataSpy(1, 1, false);
+        private static var shader:Shader = new Shader(textureShaderData_);
 
 
         public static function redraw(_arg_1:BitmapData, _arg_2:int, _arg_3:Boolean, _arg_4:uint, _arg_5:Boolean=true, _arg_6:Number=5):BitmapData
@@ -217,6 +219,24 @@ public class TextureRedrawer
             _local_9.data.texture1Size.value = [((_arg_3 == 0) ? 0 : _local_7.width)];
             _local_9.data.texture2Size.value = [((_arg_4 == 0) ? 0 : _local_8.width)];
             _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, new ShaderFilter(_local_9));
+            return (_local_6);
+        }
+
+        public static function retextureNoSizeChange(_arg_1:BitmapData, _arg_2:BitmapData, _arg_3:int, _arg_4:int):BitmapData{
+            var _local_7:Matrix = new Matrix();
+            _local_7.scale(5, 5);
+            var _local_6:BitmapData = new BitmapData((_arg_1.width * 5), (_arg_1.height * 5), true, 0);
+            _local_6.draw(_arg_1, _local_7);
+            var _local_8:BitmapData = getTexture(((_arg_3 >= 0) ? _arg_3 : 0), colorTexture1);
+            var _local_9:BitmapData = getTexture(((_arg_4 >= 0) ? _arg_4 : 0), colorTexture2);
+            var _local_5:ShaderData = shader.data;
+            _local_5.src.input = _local_6;
+            _local_5.mask.input = _arg_2;
+            _local_5.texture1.input = _local_8;
+            _local_5.texture2.input = _local_9;
+            _local_5.texture1Size.value = [((_arg_3 == 0) ? 0 : _local_8.width)];
+            _local_5.texture2Size.value = [((_arg_4 == 0) ? 0 : _local_9.width)];
+            _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, new ShaderFilter(shader));
             return (_local_6);
         }
 
