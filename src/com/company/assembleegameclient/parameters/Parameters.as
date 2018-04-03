@@ -443,6 +443,7 @@ public class Parameters
             setDefault("coloOffset", 0.225);
             setDefault("etheriteDisable", true);
             setDefault("cultistStaffDisable", true);
+            setDefault("AutoReply", true);
         }
 
 

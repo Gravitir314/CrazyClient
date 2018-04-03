@@ -947,12 +947,6 @@ public class MapUserInput
                 case Parameters.data_.tpto:
                     this.gs_.gsc_.teleport(TextHandler.caller);
                     break;
-                case Parameters.data_.TextPause:
-                    this.gs_.gsc_.playerText("/pause");
-                    break;
-                case Parameters.data_.TextThessal:
-                    this.gs_.gsc_.playerText("He lives and reigns and conquers the world");
-                    break;
                 case Parameters.data_.msg1key:
                     if (Parameters.data_.msg1 == null) break;
                     this.parseChatMessage.dispatch(Parameters.data_.msg1);

@@ -688,7 +688,7 @@ public class ParseChatMessageCommand
             var _local_9:int;
             var _local_10:int;
             var _local_11:int;
-            var _local_12:Player;
+            var _local_12:Player = this.hudModel.gameSprite.map.player_;
             var _local_13:Boolean;
             var _local_14:Array;
             var _local_15:Array;
@@ -704,7 +704,6 @@ public class ParseChatMessageCommand
             var _local_25:GameObject;
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
             var _local_27:Array = _arg_1.match("^/colo (\\d*\\.*\\d+)$");
-            _local_12 = this.hudModel.gameSprite.map.player_;
             if (_local_27 != null) {
                 Parameters.data_.coloOffset = _local_27[1];
                 Parameters.save();

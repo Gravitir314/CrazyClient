@@ -42,7 +42,7 @@ import kabam.rotmg.ui.UIUtils;
 public class Options extends Sprite
     {
 
-        private static const TABS:Vector.<String> = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, AUTOAIM_, ABILMENU_, VISUAL_, DEBUFF_, EXTRA_, LOOT_, RECON_, OTHER_, MISC_, "Experimental", NULL_, DBKEYS_];
+        private static const TABS:Vector.<String> = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, AUTOAIM_, ABILMENU_, VISUAL_, DEBUFF_, EXTRA_, LOOT_, RECON_, OTHER_, MESSAGE_, "Experimental", NULL_, DBKEYS_];
         private static const AUTOAIM_:String = "Auto Aim";
         private static const EXTRA_:String = "Extra";
         private static const DEBUFF_:String = "Debuffs";
@@ -52,7 +52,7 @@ public class Options extends Sprite
         private static const LOOT_:String = "Loot";
         private static const RECON_:String = "Reconnect";
         private static const OTHER_:String = "Other";
-        private static const MISC_:String = "Messages";
+        private static const MESSAGE_:String = "Messages";
         private static const NULL_:String = "";
         public static const Y_POSITION:int = 550;
         public static const CHAT_COMMAND:String = "chatCommand";
@@ -341,8 +341,8 @@ public class Options extends Sprite
                 case RECON_:
                     this.addReconnectOptions();
                     return;
-                case MISC_:
-                    this.addMiscOptions();
+                case MESSAGE_:
+                    this.addMessageOptions();
                     return;
                 case EXTRA_:
                     this.addExtraOptions();
@@ -794,16 +794,15 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("mapHack", makeOnOffLabels(), [true, false], "Map Hack", "Shows entire map when entering a realm. Loading in for the first time will take longer.", null));
         }
 
-        private function addMiscOptions():void
+        private function addMessageOptions():void
         {
             this.addOptionAndPosition(new KeyMapper("msg1key", "Custom Message 1", (('Currently set to "' + Parameters.data_.msg1) + '". Use /setmsg 1 <message> to replace this message.')));
-            this.addOptionAndPosition(new KeyMapper("TextPause", "Pause", "Pauses the game if there are no nearby enemies. Does not work in dungeons."));
-            this.addOptionAndPosition(new KeyMapper("msg2key", "Custom Message 2", (('Currently set to "' + Parameters.data_.msg2) + '". Use /setmsg 2 <message> to replace this message.')));
-            this.addOptionAndPosition(new KeyMapper("TextThessal", "Dying Thessal Response", 'Says "He lives and reigns and conquers the world."'));
-            this.addOptionAndPosition(new KeyMapper("msg3key", "Custom Message 3", (('Currently set to "' + Parameters.data_.msg3) + '". Use /setmsg 3 <message> to replace this message.')));
             this.addOptionAndPosition(new ChoiceOption("wMenu", makeOnOffLabels(), [true, false], "Show Whisper Menu Option", "Makes whisper appear under trade on player menu.", null));
-            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("msg2key", "Custom Message 2", (('Currently set to "' + Parameters.data_.msg2) + '". Use /setmsg 2 <message> to replace this message.')));
             this.addOptionAndPosition(new ChoiceOption("conCom", makeOnOffLabels(), ["/conn", "/con"], "Replace /con with /conn", "Helps proxy users who want to use said proxy's built-in connect command.", null));
+            this.addOptionAndPosition(new KeyMapper("msg3key", "Custom Message 3", (('Currently set to "' + Parameters.data_.msg3) + '". Use /setmsg 3 <message> to replace this message.')));
+            this.addOptionAndPosition(new ChoiceOption("AutoReply", makeOnOffLabels(), [true, false], "Auto Reply", "Automatically replies to monster questions", null));
+            this.addOptionAndPosition(new NullOption());
         }
 
         private function AutoNexusValues():Vector.<StringBuilder>

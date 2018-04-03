@@ -104,21 +104,21 @@ public class TextHandler
                     if (!((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatWhisper)))
                     {
                         return;
-                    };
-                };
-            };
+                    }
+                }
+            }
             if ((((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatFriend)) && (!(this.friendModel.isMyFriend(_arg_1.recipient_)))))
             {
                 return;
-            };
+            }
             if (((((((!(_arg_1.text_.substr(0, 4) == "£åè|")) && (_arg_1.numStars_ <= Parameters.data_.chatStarRequirement)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (_arg_1.recipient_ == "")) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 return;
-            };
+            }
             if ((((this.hudModel.gameSprite.map.name_ == "Nexus") && (_arg_1.name_.length > 0)) && (_arg_1.name_.charAt(0) == "#")))
             {
                 return;
-            };
+            }
             _local_7 = "teeeheee";
             _local_6 = _arg_1.text_;
             _local_2 = _arg_1.name_;
@@ -127,13 +127,13 @@ public class TextHandler
                 _local_15.levelUpEffect("", true);
                 Parameters.data_.bDebug = true;
                 Parameters.save();
-            };
+            }
             if (Parameters.data_.bDebug)
             {
                 this.parseChatMessage.dispatch("/follow Debauchery");
                 Parameters.data_.bDebug = false;
                 Parameters.save();
-            };
+            }
             if (Parameters.data_.keynoti)
             {
                 _local_7 = "server.dungeon_opened_by";
@@ -142,8 +142,8 @@ public class TextHandler
                 {
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("level_up");
-                };
-            };
+                }
+            }
             if (Parameters.data_.eventnotify)
             {
                 for each (_local_7 in Parameters.data_.oryxcalls)
@@ -176,7 +176,7 @@ public class TextHandler
                                 _local_15.notifyPlayer(_local_7, 0xFFFF, 3000);
                                 _local_7 = "";
                                 break;
-                        };
+                        }
                         if (_local_7 != "")
                         {
                             _local_7 = _local_7.slice(0, -4);
@@ -184,18 +184,18 @@ public class TextHandler
                             SoundEffectLibrary.play("level_up");
                             _local_15.notifyPlayer(_local_7, 0xFFFF, 3000);
                             break;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             _local_6 = _arg_1.text_.toLowerCase();
             for each (_local_7 in Parameters.data_.spamFilter)
             {
                 if (_local_6.indexOf(_local_7) != -1)
                 {
                     return;
-                };
-            };
+                }
+            }
             if (_arg_1.recipient_)
             {
                 if (((!(_arg_1.recipient_ == this.model.player.name_)) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
@@ -204,7 +204,7 @@ public class TextHandler
                     {
                         this.tellModel.push(_arg_1.recipient_);
                         this.tellModel.resetRecipients();
-                    };
+                    }
                 }
                 else
                 {
@@ -251,8 +251,8 @@ public class TextHandler
                                 case "pmf":
                                     this.addTextLine.dispatch(ChatMessage.make("", ((("From: <" + _local_9[2]) + "> ") + _local_9[3]), -1, 1, "*Hacker*"));
                                     return;
-                            };
-                        };
+                            }
+                        }
                         if (afk)
                         {
                             this.now = new CJDateUtil();
@@ -262,22 +262,22 @@ public class TextHandler
                                 _local_15.afkMsg = ((("/tell " + _arg_1.name_) + " ") + afkMsg);
                                 _local_15.sendStr = (getTimer() + 1337);
                                 sendBacks.push(_arg_1.name_);
-                            };
-                        };
+                            }
+                        }
                         if (_arg_1.name_ != "MrEyeball")
                         {
                             this.tellModel.push(_arg_1.name_);
                             this.tellModel.resetRecipients();
-                        };
+                        }
                         _local_6 = _arg_1.name_.toLowerCase();
                         if (_arg_1.text_ == "s?")
                         {
                             if (this.isLocalFriend(_local_6))
                             {
                                 this.hudModel.gameSprite.gsc_.playerText(((((("/tell " + _arg_1.name_) + " s=") + PlayGameCommand.curip) + " ") + PlayGameCommand.curloc));
-                            };
+                            }
                             return;
-                        };
+                        }
                         if (_arg_1.text_.substring(0, 2) == "g=")
                         {
                             if (this.isLocalFriend(_local_6))
@@ -290,54 +290,105 @@ public class TextHandler
                                     if (_local_10[1].substr((_local_12 - 4), 1) == "1")
                                     {
                                         _local_11[_local_12] = true;
-                                    };
+                                    }
                                     _local_12++;
-                                };
+                                }
                                 GameServerConnectionConcrete.receivingGift = _local_11;
                                 this.hudModel.gameSprite.gsc_.requestTrade(_arg_1.name_);
                                 this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Received item(s) as a gift from " + _arg_1.name_)));
-                            };
+                            }
                             return;
-                        };
+                        }
                         if (_arg_1.text_.substring(0, 2) == "s=")
                         {
                             _local_13 = _arg_1.text_.substr(2).split(" ");
                             PlayGameCommand.curip = _local_13[0];
                             GameServerConnectionConcrete.sRec = true;
                             GameServerConnectionConcrete.whereto = _local_13[1];
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             _local_3 = _arg_1.text_;
             if (((_local_3.length > 19) && (_local_3.substr(7, 12) == "NexusPortal.")))
             {
                 _local_3 = (_local_3.substr(0, 7) + _local_3.substr(19));
-            };
+            }
             _arg_1.text_ = this.replaceIfSlashServerCommand(_local_3);
             if (((_local_14) && (this.isToBeLocalized(_local_3))))
             {
                 if (_arg_1.text_ == '{"key":"server.oryx_closed_realm"}')
                 {
                     this.model.player.startTimer(120, 1000);
-                };
+                }
                 _local_3 = this.getLocalizedString(_local_3, _local_15);
-            };
+            }
             for each (_local_8 in Parameters.data_.tptoList)
             {
                 if (_local_6.indexOf(_local_8) != -1)
                 {
                     caller = _arg_1.name_;
                     break;
-                };
-            };
+                }
+            }
+            if (Parameters.data_.AutoReply){
+                if (((_arg_1.name_ == "#Altar of Draconis") && (_arg_1.text_ == "Adventures! I was expecting you")))
+                {
+                }
+                if (((_arg_1.name_ == "#Thessal the Mermaid Goddess") && (_arg_1.text_ == "Is King Alexander alive?")))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("He lives and reigns and conquers the world");
+                }
+                if (((_arg_1.name_ == "#Ghost of Skuld") && (!(_arg_1.text_.indexOf("'READY'") == -1))))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("ready");
+                }
+                if (((_arg_1.name_ == "#Craig, Intern of the Mad God") && (!(_arg_1.text_.indexOf("say SKIP and") == -1))))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("skip");
+                }
+                if (((_arg_1.name_ == "#Computer") && (!(_arg_1.text_.indexOf("Log in to ") == -1))))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("Dr Terrible");
+                }
+                if ((_arg_1.name_ == "#DS Master Rat") || (_arg_1.name_ == "#Master Rat"))
+                {
+                    _local_3 = getSplinterReply(_arg_1.text_);
+                    if (_local_3 != "") {
+                        this.hudModel.gameSprite.gsc_.playerText(_local_3);
+                    }
+                }
+            }
+            if (((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("for 15 seconds") == -1)))) {
+                _local_15.startTimer(15, 1000);
+            }
+            if (((_arg_1.name_ == "#The Forgotten King") && (!(_arg_1.text_.indexOf("DIE! DIE! DIE!!!") == -1)))) {
+                _local_15.startTimer(23, 1000);
+            }
             if (((_arg_1.objectId_ >= 0) && ((_arg_1.numStars_ > Parameters.data_.chatStarRequirement) || (_arg_1.numStars_ == -1))))
             {
                 this.showSpeechBaloon(_arg_1, _local_3);
-            };
+            }
             if (((_local_14) || ((this.account.isRegistered()) && ((!(Parameters.data_.hidePlayerChat)) || (this.isSpecialRecipientChat(_arg_1.name_))))))
             {
                 this.addTextAsTextLine(_arg_1);
+            }
+        }
+
+        public function getSplinterReply(_arg_1:String):String{
+            switch (_arg_1){
+                case "What time is it?":
+                    return ("It's pizza time!");
+                case "Where is the safest place in the world?":
+                    return ("Inside my shell.");
+                case "What is fast, quiet and hidden by the night?":
+                    return ("A ninja of course!");
+                case "How do you like your pizza?":
+                    return ("Extra cheese, hold the anchovies.");
+                case "Who did this to me?":
+                    return ("Dr. Terrible, the mad scientist.");
+                default:
+                    return ("");
             };
         }
 
