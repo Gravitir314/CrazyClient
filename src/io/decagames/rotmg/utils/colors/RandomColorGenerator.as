@@ -34,11 +34,11 @@ public class RandomColorGenerator
             if (_local_2 === 0)
             {
                 _local_2 = 1;
-            };
+            }
             if (_local_2 === 360)
             {
                 _local_2 = 359;
-            };
+            }
             _local_2 = (_local_2 / 360);
             var _local_3:Number = (_arg_1[1] / 100);
             var _local_4:Number = (_arg_1[2] / 100);
@@ -81,7 +81,8 @@ public class RandomColorGenerator
                     _local_10 = _local_4;
                     _local_11 = _local_7;
                     _local_12 = _local_8;
-            };
+                    break;
+            }
             return ([Math.floor((_local_10 * 0xFF)), Math.floor((_local_11 * 0xFF)), Math.floor((_local_12 * 0xFF))]);
         }
 
@@ -100,26 +101,27 @@ public class RandomColorGenerator
                     break;
                 case "light":
                     _local_5 = 55;
-            };
+                    break;
+            }
             return (this.randomWithin([_local_4, _local_5]));
         }
 
         private function getColorInfo(_arg_1:int):Object
         {
+            var _local_2:String;
             var _local_3:Object;
-            var _local_2:* = null;
             if (((_arg_1 >= 334) && (_arg_1 <= 360)))
             {
                 _arg_1 = (_arg_1 - 360);
-            };
+            }
             for (_local_2 in this.colorDictionary)
             {
                 _local_3 = this.colorDictionary[_local_2];
                 if ((((_local_3.hueRange) && (_arg_1 >= _local_3.hueRange[0])) && (_arg_1 <= _local_3.hueRange[1])))
                 {
                     return (this.colorDictionary[_local_2]);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -143,34 +145,35 @@ public class RandomColorGenerator
                 case "random":
                     _local_4 = 0;
                     _local_5 = 100;
-            };
+                    break;
+            }
             return (this.randomWithin([_local_4, _local_5]));
         }
 
         internal function getMinimumBrightness(_arg_1:int, _arg_2:int):int
         {
-            var _local_3:int;
-            var _local_4:int;
             var _local_5:int;
             var _local_6:int;
-            var _local_10:int;
-            var _local_7:Number = NaN;
-            var _local_8:Number = NaN;
-            var _local_9:Array = this.getColorInfo(_arg_1).lowerBounds;
-            while (_local_10 < (_local_9.length - 1))
+            var _local_7:int;
+            var _local_8:int;
+            var _local_9:Number;
+            var _local_10:Number;
+            var _local_3:Array = this.getColorInfo(_arg_1).lowerBounds;
+            var _local_4:int;
+            while (_local_4 < (_local_3.length - 1))
             {
-                _local_3 = _local_9[_local_10][0];
-                _local_4 = _local_9[_local_10][1];
-                _local_5 = _local_9[(_local_10 + 1)][0];
-                _local_6 = _local_9[(_local_10 + 1)][1];
-                if (((_arg_2 >= _local_3) && (_arg_2 <= _local_5)))
+                _local_5 = _local_3[_local_4][0];
+                _local_6 = _local_3[_local_4][1];
+                _local_7 = _local_3[(_local_4 + 1)][0];
+                _local_8 = _local_3[(_local_4 + 1)][1];
+                if (((_arg_2 >= _local_5) && (_arg_2 <= _local_7)))
                 {
-                    _local_7 = ((_local_6 - _local_4) / (_local_5 - _local_3));
-                    _local_8 = (_local_4 - (_local_7 * _local_3));
-                    return ((_local_7 * _arg_2) + _local_8);
-                };
-                _local_10++;
-            };
+                    _local_9 = ((_local_8 - _local_6) / (_local_7 - _local_5));
+                    _local_10 = (_local_6 - (_local_9 * _local_5));
+                    return ((_local_9 * _arg_2) + _local_10);
+                }
+                _local_4++;
+            }
             return (0);
         }
 

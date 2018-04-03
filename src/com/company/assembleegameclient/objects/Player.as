@@ -133,6 +133,7 @@ public class Player extends Character
         public var skinId:int;
         public var skin:AnimatedChar;
         public var isShooting:Boolean;
+        public var fameWasChanged:Signal = new Signal();
         public var accountId_:String = "";
         public var credits_:int = 0;
         public var tokens_:int = 0;
@@ -279,6 +280,11 @@ public class Player extends Character
         {
             this.credits_ = _arg_1;
             this.creditsWereChanged.dispatch();
+        }
+
+        public function setFame(_arg_1:int):void{
+            this.fame_ = _arg_1;
+            this.fameWasChanged.dispatch();
         }
 
         public function setTokens(_arg_1:int):void

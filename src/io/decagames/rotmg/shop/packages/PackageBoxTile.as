@@ -101,6 +101,7 @@ public class PackageBoxTile extends GenericBoxTile
             updateTimeEndString();
             this.resizeBackgroundImage();
             updateSaleLabel();
+            updateClickMask(_arg_1);
         }
 
 

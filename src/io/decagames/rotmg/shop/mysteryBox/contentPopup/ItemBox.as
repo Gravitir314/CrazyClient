@@ -16,6 +16,8 @@ import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 import io.decagames.rotmg.ui.gird.UIGridElement;
 import io.decagames.rotmg.ui.labels.UILabel;
 
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
 public class ItemBox extends UIGridElement 
     {
 
@@ -83,7 +85,7 @@ public class ItemBox extends UIGridElement
             this._itemBackground.addChild(this.imageBitmap);
             if (this.showFullName)
             {
-                this.label.text = ((_arg_2 + "x ") + ObjectLibrary.typeToDisplayId_[_arg_1]);
+                this.label.text = ((_arg_2 + "x ") + LineBuilder.getLocalizedStringFromKey(ObjectLibrary.typeToDisplayId_[_arg_1]));
                 this.label.x = 55;
             }
             else
