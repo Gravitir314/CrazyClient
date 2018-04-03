@@ -85,12 +85,12 @@ public class ParseChatMessageCommand
                 Parameters.save();
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
                 return (true);
-            };
+            }
             if (_arg_1 == "/mscale")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Map Scale: " + Parameters.data_.mscale) + " - Usage: /mscale <any decimal number>.")));
                 return (true);
-            };
+            }
             var _local_3:Array = _arg_1.match("^/mscale (\\d*\\.*\\d+)$");
             if (_local_3 != null)
             {
@@ -99,7 +99,7 @@ public class ParseChatMessageCommand
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Map Scale: " + _local_3[1])));
                 return (true);
-            };
+            }
             if (_arg_1 == "/scaleui")
             {
                 Parameters.data_.uiscale = (!(Parameters.data_.uiscale));
@@ -107,7 +107,7 @@ public class ParseChatMessageCommand
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Scale UI: " + Parameters.data_.uiscale)));
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -675,7 +675,7 @@ public class ParseChatMessageCommand
             return (false);
         }
 
-        private function cjCommands():Boolean
+        private function cjCommands(_arg_1:String):Boolean
         {
             var _local_1:String;
             var _local_2:int;
@@ -693,6 +693,7 @@ public class ParseChatMessageCommand
             var _local_14:Array;
             var _local_15:Array;
             var _local_16:int;
+            var _local_17:Number = NaN;
             var _local_18:int;
             var _local_19:Vector.<int>;
             var _local_20:ChatMessage;
@@ -701,9 +702,15 @@ public class ParseChatMessageCommand
             var _local_23:Vector.<Boolean>;
             var _local_24:GameObject;
             var _local_25:GameObject;
-            var _local_17:Number = NaN;
-            _local_12 = this.hudModel.gameSprite.map.player_;
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
+            var _local_27:Array = _arg_1.match("^/colo (\\d*\\.*\\d+)$");
+            _local_12 = this.hudModel.gameSprite.map.player_;
+            if (_local_27 != null) {
+                Parameters.data_.coloOffset = _local_27[1];
+                Parameters.save();
+                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Sword of the Colossus offset: " + Parameters.data_.coloOffset)));
+                return (true);
+            }
             switch (this.data.toLowerCase())
             {
                 case "/dodbot":
@@ -1523,7 +1530,7 @@ public class ParseChatMessageCommand
             {
                 return;
             };
-            if (this.cjCommands())
+            if (this.cjCommands(this.data))
             {
                 return;
             };

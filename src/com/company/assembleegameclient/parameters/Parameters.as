@@ -439,6 +439,10 @@ public class Parameters
             setDefault("teehee", false);
             setDefault("dodBot", false);
             setDefault("autoDecrementHP", true);
+            setDefault("offsetColossus", true);
+            setDefault("coloOffset", 0.225);
+            setDefault("etheriteDisable", true);
+            setDefault("cultistStaffDisable", true);
         }
 
 

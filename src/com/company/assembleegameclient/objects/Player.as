@@ -2538,9 +2538,19 @@ public class Player extends Character
             var _local_15:Number = (_local_14 * (_local_13 - 1));
             var _local_16:Number = (_arg_4 - (_local_15 / 2));
             this.isShooting = _arg_5;
+            if (((_arg_2 == 580) && (Parameters.data_.cultistStaffDisable))){
+                _local_16 = (_local_16 + Math.PI);
+            };
             while (_local_12 < _local_13)
             {
                 _local_6 = getBulletId();
+                if (((_arg_2 == 8608) && (Parameters.data_.etheriteDisable))){
+                    _local_16 = (_local_16 + (((_local_6 % 2) != 0) ? 0.0436332312998582 : -0.0436332312998582));
+                } else {
+                    if (((_arg_2 == 596) && (Parameters.data_.offsetColossus))){
+                        _local_16 = (_local_16 + (((_local_6 % 2) != 0) ? Parameters.data_.coloOffset : -(Parameters.data_.coloOffset)));
+                    }
+                }
                 _local_7 = (FreeList.newObject(Projectile) as Projectile);
                 if (((_arg_5) && (!(this.projectileIdSetOverrideNew == ""))))
                 {
@@ -2549,7 +2559,7 @@ public class Player extends Character
                 else
                 {
                     _local_7.reset(_arg_2, 0, objectId_, _local_6, _local_16, _arg_1);
-                };
+                }
                 _local_8 = int(_local_7.projProps_.minDamage_);
                 _local_9 = int(_local_7.projProps_.maxDamage_);
                 _local_10 = ((_arg_5) ? this.attackMultiplier() : 1);
@@ -2557,17 +2567,17 @@ public class Player extends Character
                 if (_arg_1 > (map_.gs_.moveRecords_.lastClearTime_ + 600))
                 {
                     _local_11 = 0;
-                };
+                }
                 _local_7.setDamage(_local_11);
                 if (((_local_12 == 0) && (!(_local_7.sound_ == null))))
                 {
                     SoundEffectLibrary.play(_local_7.sound_, 0.75, false);
-                };
+                }
                 map_.addObj(_local_7, (x_ + (Math.cos(_arg_4) * 0.3)), (y_ + (Math.sin(_arg_4) * 0.3)));
                 map_.gs_.gsc_.playerShoot(_arg_1, _local_7);
                 _local_16 = (_local_16 + _local_14);
                 _local_12++;
-            };
+            }
         }
 
         public function isHexed():Boolean
