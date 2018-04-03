@@ -706,6 +706,11 @@ public class ParseChatMessageCommand
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
             switch (this.data.toLowerCase())
             {
+                case "/lf":
+                case "/lockfilter":
+                    Parameters.data_.hideLockList = (!(Parameters.data_.hideLockList));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players")));
+                    return (true);
                 case "/serv":
                     _local_26.playerText("/server");
                     return (true);
@@ -1559,21 +1564,12 @@ public class ParseChatMessageCommand
                     };
                     this.addTextLine.dispatch(ChatMessage.make("", ((("Classes online (" + _local_2) + "):") + _local_4)));
                 }
-                else
-                {
-                    if (((this.data == "/lockfilter") || (this.data == "/lf")))
-                    {
-                        Parameters.data_.hideLockList = (!(Parameters.data_.hideLockList));
-                        this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players")));
-                    }
-                    else
-                    {
+                else {
                         lastMsg = this.data;
                         this.hudModel.gameSprite.gsc_.playerText(this.data);
                     };
                 };
             };
-        }
 
 
     }

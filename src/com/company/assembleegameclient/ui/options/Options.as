@@ -42,18 +42,18 @@ import kabam.rotmg.ui.UIUtils;
 public class Options extends Sprite
     {
 
-        private static const TABS:Vector.<String> = new <String>[TextKey.OPTIONS_CONTROLS, OPT_HOT, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, AUTOAIM_, ABILMENU, HPDISP_, DEBUFF_, AUTOABIL_, LOOT_, RECON_, OTHER_, MISC_, "Experimental", DBKEYS_];
-        private static const OPT_HOT:String = "Hotkeys ";
+        private static const TABS:Vector.<String> = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, AUTOAIM_, ABILMENU_, VISUAL_, DEBUFF_, EXTRA_, LOOT_, RECON_, OTHER_, MISC_, "Experimental", NULL_, DBKEYS_];
         private static const AUTOAIM_:String = "Auto Aim";
-        private static const AUTOABIL_:String = "Tomb";
+        private static const EXTRA_:String = "Extra";
         private static const DEBUFF_:String = "Debuffs";
-        private static const DBKEYS_:String = "Hotkeys";
-        private static const HPDISP_:String = "Visual";
-        private static const ABILMENU:String = "Ability";
+        private static const DBKEYS_:String = "DBKeys";
+        private static const VISUAL_:String = "Visual";
+        private static const ABILMENU_:String = "Ability";
         private static const LOOT_:String = "Loot";
         private static const RECON_:String = "Reconnect";
         private static const OTHER_:String = "Other";
         private static const MISC_:String = "Messages";
+        private static const NULL_:String = "";
         public static const Y_POSITION:int = 550;
         public static const CHAT_COMMAND:String = "chatCommand";
         public static const CHAT:String = "chat";
@@ -305,7 +305,7 @@ public class Options extends Sprite
                 case TextKey.OPTIONS_CONTROLS:
                     this.addControlsOptions();
                     return;
-                case OPT_HOT:
+                case TextKey.OPTIONS_HOTKEYS:
                     this.addHotKeysOptions();
                     return;
                 case TextKey.OPTIONS_CHAT:
@@ -321,31 +321,31 @@ public class Options extends Sprite
                     this.addExperimentalOptions();
                     return;
                 case DEBUFF_:
-                    this.nillyDebuffs();
+                    this.addDebuffsOptions();
                     return;
                 case OTHER_:
-                    this.nillyOther();
+                    this.addOtherOptions();
                     return;
                 case AUTOAIM_:
-                    this.aimAssist();
+                    this.addAimOptions();
                     return;
-                case ABILMENU:
-                    this.abilOptions();
+                case ABILMENU_:
+                    this.addAbilityOptions();
                     return;
-                case HPDISP_:
-                    this.hpBars();
+                case VISUAL_:
+                    this.addVisualOptions();
                     return;
                 case LOOT_:
-                    this.lootNotif();
+                    this.addLootOptions();
                     return;
                 case RECON_:
-                    this.recon();
+                    this.addReconnectOptions();
                     return;
                 case MISC_:
-                    this.miscMenu();
+                    this.addMiscOptions();
                     return;
-                case AUTOABIL_:
-                    this.autoAbility();
+                case EXTRA_:
+                    this.addExtraOptions();
                     return;
                 case DBKEYS_:
                     this.dbKeys();
@@ -480,7 +480,7 @@ public class Options extends Sprite
             };
         }
 
-        private function nillyDebuffs():void
+        private function addDebuffsOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("dbArmorBroken", makeOnOffLabels(), [true, false], "Armor Broken", "Red means you will take this status effect. Increases risk of getting disconnected when turned off.", this.updateEffId, ((Parameters.data_.dbArmorBroken) ? 0xFF0000 : 0xFFFFFF), true));
             this.addOptionAndPosition(new ChoiceOption("dbBlind", makeOnOffLabels(), [true, false], "Blind", "Red means you will take this status effect.", null, ((Parameters.data_.dbBlind) ? 0xFF0000 : 0xFFFFFF), true));
@@ -617,7 +617,7 @@ public class Options extends Sprite
             };
         }
 
-        private function aimAssist():void
+        private function addAimOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("AAAddOne", makeOnOffLabels(), [true, false], "+0.5 Search Radius", "Increase the range at which auto aim will lock on and shoot at mobs by half a tile.", null));
             this.addOptionAndPosition(new KeyMapper("AAHotkey", "Auto Aim", "A key that toggles auto aim on and off."));
@@ -629,7 +629,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("tPassCover", "Toggle Projectile No-Clip", "Toggles the hack on and off."));
         }
 
-        private function abilOptions():void
+        private function addAbilityOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("perfectBomb", makeOnOffLabels(), [true, false], "Spell Bomb and Poison Aim", "Targets the mob with highest max health in 15 tile radius from the player.", this.pbOptions));
             this.addOptionAndPosition(new KeyMapper("pbToggle", "Toggle Ability Aim", "Toggles ability aim."));
@@ -687,7 +687,7 @@ public class Options extends Sprite
             };
         }
 
-        private function lootNotif():void
+        private function addLootOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("LNAbility", this.ZeroSix(), [0, 1, 2, 3, 4, 5, 6], "Min Ability Tier", "Minimum tier at which notifications and auto loot will function for ability items.", this.updateWanted));
             this.addOptionAndPosition(new ChoiceOption("AutoLootOn", makeOnOffLabels(), [true, false], "Auto Loot", "Items looted depend on min ability, ring, weapon, and armor tier settings.", this.loot_options));
@@ -736,7 +736,7 @@ public class Options extends Sprite
             Parameters.ALLOW_SCREENSHOT_MODE;
         }
 
-        private function recon():void
+        private function addReconnectOptions():void
         {
             this.addOptionAndPosition(new KeyMapper("ReconRealm", "Recon Realm", "Key that connects the user to the last realm in."));
             this.addOptionAndPosition(new NullOption());
@@ -747,7 +747,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("ReconRandom", "Connect to Random Realm", "Key that connects the user to a random realm on the server."));
         }
 
-        private function hpBars():void
+        private function addVisualOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("stageScale", makeOnOffLabels(), [StageScaleMode.NO_SCALE, StageScaleMode.EXACT_FIT], "Fullscreen v3", "Extends viewing area at a cost of lower fps.", this.fsv3));
             this.addOptionAndPosition(new ChoiceOption("uiscale", makeOnOffLabels(), [true, false], "Scale UI", "Scales the UI to fit the screen.", this.scaleui));
@@ -771,7 +771,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("uiShadow", makeOnOffLabels(), [true, false], "UI Shadow", "tba", null));
         }
 
-        private function nillyOther():void
+        private function addOtherOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("AutoNexus", this.AutoNexusValues(), [0, 15, 20, 25, 30], "Auto Nexus", "Will attempt to Nexus the player when health drops below the given percentage. You can still die with this on.", null));
             this.addOptionAndPosition(new ChoiceOption("autoHealP", this.AutoHealValues(), [0, 50, 55, 60, 65, 70, 75, 80], "Auto Heal", "Heals you once your HP drops low enough on priest or paladin.", null));
@@ -795,7 +795,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("mapHack", makeOnOffLabels(), [true, false], "Map Hack", "Shows entire map when entering a realm. Loading in for the first time will take longer.", null));
         }
 
-        private function miscMenu():void
+        private function addMiscOptions():void
         {
             this.addOptionAndPosition(new KeyMapper("msg1key", "Custom Message 1", (('Currently set to "' + Parameters.data_.msg1) + '". Use /setmsg 1 <message> to replace this message.')));
             this.addOptionAndPosition(new KeyMapper("TextPause", "Pause", "Pauses the game if there are no nearby enemies. Does not work in dungeons."));
@@ -832,7 +832,7 @@ public class Options extends Sprite
             return (new <StringBuilder>[new StaticStringBuilder("Default"), new StaticStringBuilder("USW"), new StaticStringBuilder("USMW"), new StaticStringBuilder("EUW"), new StaticStringBuilder("USE"), new StaticStringBuilder("ASE"), new StaticStringBuilder("USS"), new StaticStringBuilder("USSW"), new StaticStringBuilder("EUE"), new StaticStringBuilder("EUN"), new StaticStringBuilder("EUSW"), new StaticStringBuilder("USE3"), new StaticStringBuilder("USW2"), new StaticStringBuilder("USMW2"), new StaticStringBuilder("USE2"), new StaticStringBuilder("USNW"), new StaticStringBuilder("AE"), new StaticStringBuilder("USS3"), new StaticStringBuilder("EUN2"), new StaticStringBuilder("EUW2"), new StaticStringBuilder("EUS"), new StaticStringBuilder("USS2"), new StaticStringBuilder("USW3")]);
         }
 
-        private function autoAbility():void
+        private function addExtraOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("curBoss", this.bossNames(), [3368, 3366, 3367], "Current Boss", "You will only be able to hit the current boss.", null));
             this.addOptionAndPosition(new ChoiceOption("tombHack", makeOnOffLabels(), [true, false], "Tomb Hack", "Tomb hack allows you to only damage the selected boss, leaving others unharmed even if you shoot them.", this.tombDeactivate));
