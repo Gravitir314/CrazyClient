@@ -516,7 +516,7 @@ public class ParseChatMessageCommand
                 _local_4 = 0;
                 while (_local_4 < Parameters.data_.wordNotiList.length)
                 {
-                    if (Parameters.data_.tptoList[_local_4] == _local_2[1])
+                    if (Parameters.data_.wordNotiList[_local_4] == _local_2[1])
                     {
                         _local_3 = true;
                         Parameters.data_.wordNotiList.splice(_local_4, 1);
@@ -1027,7 +1027,7 @@ public class ParseChatMessageCommand
                     if (_local_7 != null) {
                         Parameters.timerActive = true;
                         Parameters.phaseChangeAt = (getTimer() + (_local_7[1] * 1000));
-                        Parameters.phaseName = "";
+                        Parameters.phaseName = "Custom Timer";
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/autopot (\\d+)$");

@@ -1799,9 +1799,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         private function onNotification(_arg_1:Notification):void
         {
-            if (!Parameters.data_.statusText) {
-                return;
-            }
             if ((((!(Parameters.data_.AntiLag)) || (_arg_1.objectId_ == this.playerId_)) || (!(Parameters.data_.noAllyNotifications))))
             {
                 this.notify_(_arg_1);
@@ -1827,14 +1824,18 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         _local_6 = parseInt(_local_5.substr(0, (_local_5.length - 3)));
                         player.chp = (player.chp + _local_6);
                     };
-                    _local_3 = new CharacterStatusText(_local_7, _arg_1.color_, 1000);
-                    _local_3.setStringBuilder(_local_2);
-                    gs_.map.mapOverlay_.addStatusText(_local_3);
+                        _local_3 = new CharacterStatusText(_local_7, _arg_1.color_, 1000);
+                        _local_3.setStringBuilder(_local_2);
+                    if (Parameters.data_.statusText) {
+                        gs_.map.mapOverlay_.addStatusText(_local_3);
+                    }
                 }
                 else
                 {
-                    _local_4 = new QueuedStatusText(_local_7, _local_2, _arg_1.color_, 2000);
-                    gs_.map.mapOverlay_.addQueuedText(_local_4);
+                        _local_4 = new QueuedStatusText(_local_7, _local_2, _arg_1.color_, 2000);
+                    if (Parameters.data_.statusText) {
+                        gs_.map.mapOverlay_.addQueuedText(_local_4);
+                    }
                     if (((_local_7 == this.player) && (_local_2.key == "server.quest_complete")))
                     {
                         gs_.map.quest_.completed();
