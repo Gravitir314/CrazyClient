@@ -360,7 +360,7 @@ public class Parameters
             setDefault("AntiLag", true);
             setDefault("bestServ", "Default");
             setDefault("showSkins", true);
-            setDefault("showPests", true);
+            setDefault("showPets", true);
             setDefault("sizer", true);
             setDefaultKey("enterPortal", KeyCodes.UNSET);
             setDefault("perfectBomb", true);

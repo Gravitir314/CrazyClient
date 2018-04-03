@@ -754,7 +754,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("STDamage", makeOnOffLabels(), [true, false], "Show Damage", "Show damage done to players and enemies.", null));
             this.addOptionAndPosition(new ChoiceOption("showSkins", makeOnOffLabels(), [true, false], "Show Skins", "Forces default skin to everyone when turned off.", null));
             this.addOptionAndPosition(new ChoiceOption("STHealth", makeOnOffLabels(), [true, false], "Show Health", "Show total health points of players and enemies as they take damage.", null));
-            this.addOptionAndPosition(new ChoiceOption("showPests", makeOnOffLabels(), [true, false], "Show Pets", "Animal abuse.", null));
+            this.addOptionAndPosition(new ChoiceOption("showPets", makeOnOffLabels(), [true, false], "Show Pets", "Animal abuse.", null));
             this.addOptionAndPosition(new ChoiceOption("STColor", makeOnOffLabels(), [true, false], "Dynamic Color", "Changes the status text color based on the percentage of health the player or enemy has.", null));
             this.addOptionAndPosition(new ChoiceOption("showDyes", makeOnOffLabels(), [true, false], "Show Dyes", "Makes every player use the default dye.", null));
             this.addOptionAndPosition(new ChoiceOption("InvViewer", makeOnOffLabels(), [true, false], "Inventory Viewer", "See the inventory items of other players.", null));

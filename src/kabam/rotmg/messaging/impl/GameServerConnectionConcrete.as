@@ -1591,7 +1591,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             {
                 this.shootAck(-1);
                 return;
-            };
+            }
             while (_local_4 < _arg_1.numShots_)
             {
                 _local_2 = (FreeList.newObject(Projectile) as Projectile);
@@ -1600,7 +1600,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 _local_2.setDamage(_arg_1.damage_);
                 gs_.map.addObj(_local_2, _arg_1.startingPos_.x_, _arg_1.startingPos_.y_);
                 _local_4++;
-            };
+            }
             this.shootAck(gs_.lastUpdate_);
             _local_5.setAttack(_local_5.objectType_, (_arg_1.angle_ + (_arg_1.angleInc_ * ((_arg_1.numShots_ - 1) / 2))));
         }
@@ -1610,15 +1610,15 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (!Parameters.data_.chatTrade)
             {
                 return;
-            };
+            }
             if (((Parameters.data_.tradeWithFriends) && (!(this.friendModel.isMyFriend(_arg_1.name_)))))
             {
                 return;
-            };
+            }
             if (((Parameters.data_.showTradePopup) && (receivingGift == null)))
             {
                 gs_.hudView.interactPanel.setOverride(new TradeRequestPanel(gs_, _arg_1.name_));
-            };
+            }
             this.addTextLine.dispatch(ChatMessage.make("", ((((_arg_1.name_ + " wants to ") + 'trade with you.  Type "/trade ') + _arg_1.name_) + '" to trade.')));
         }
 
@@ -1630,11 +1630,11 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 this.acceptTrade(sendingGift, new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false]);
                 sendingGift = null;
                 return;
-            };
+            }
             if (receivingGift == null)
             {
                 gs_.hudView.startTrade(gs_, _arg_1);
-            };
+            }
         }
 
         private function onTradeChanged(_arg_1:TradeChanged):void
@@ -1648,13 +1648,13 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     if (receivingGift[_local_2] != _arg_1.offer_[_local_2])
                     {
                         return;
-                    };
+                    }
                     _local_2++;
-                };
+                }
                 this.acceptTrade(new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false], _arg_1.offer_);
                 receivingGift = null;
                 return;
-            };
+            }
             gs_.hudView.tradeChanged(_arg_1);
         }
 
@@ -1727,47 +1727,33 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (_arg_1.objectType_ == 1825)
             {
                 player.startTimer(120, 1000);
-            };
+            }
             var _local_2:AbstractMap = gs_.map;
             var _local_3:GameObject = ObjectLibrary.getObjectFromType(_arg_1.objectType_);
             if (_local_3 == null)
             {
                 return;
-            };
-            if (((!(Parameters.data_.showPests)) && (_local_3 is Pet)))
-            {
-                switch (player.map_.name_)
-                {
-                    case Map.PET_YARD_1:
-                    case Map.PET_YARD_2:
-                    case Map.PET_YARD_3:
-                    case Map.PET_YARD_4:
-                    case Map.PET_YARD_5:
-                        break;
-                    default:
-                        return;
-                };
-            };
+            }
             var _local_4:ObjectStatusData = _arg_1.status_;
             _local_3.setObjectId(_local_4.objectId_);
             _local_2.addObj(_local_3, _local_4.pos_.x_, _local_4.pos_.y_);
             if ((_local_3 is Player))
             {
                 this.handleNewPlayer((_local_3 as Player), _local_2);
-            };
+            }
             this.processObjectStatus(_local_4, 0, -1);
             if ((((_local_3.props_.static_) && (_local_3.props_.occupySquare_)) && (!(_local_3.props_.noMiniMap_))))
             {
                 this.updateGameObjectTileSignal.dispatch(new UpdateGameObjectTileVO(_local_3.x_, _local_3.y_, _local_3));
-            };
+            }
             if ((_local_3 is Container))
             {
                 if (this.ignoreNext)
                 {
                     ignoredBag = _local_3.objectId_;
                     this.ignoreNext = false;
-                };
-            };
+                }
+            }
             switch (_local_3.objectType_)
             {
                 case 3368:
@@ -1794,7 +1780,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     player.questMob2 = null;
                     player.questMob3 = null;
                     return;
-            };
+            }
         }
 
         private function onNotification(_arg_1:Notification):void
