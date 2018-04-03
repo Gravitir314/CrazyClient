@@ -154,7 +154,7 @@ public class TextHandler
             }
             if (Parameters.data_.eventnotify)
             {
-                for each (_local_7 in Parameters.data_.oryxcalls)
+                for each (_local_7 in Parameters.data_.eventCalls)
                 {
                     if (_local_6.indexOf(_local_7) != -1)
                     {
@@ -173,13 +173,13 @@ public class TextHandler
                                 _local_7 = "";
                                 break;
                             case "LH_Lost_Sentry.new":
-                                _local_7 = "Spooky Boy";
+                                _local_7 = "Lost Sentry";
                                 SoundEffectLibrary.play("level_up");
                                 _local_15.notifyPlayer(_local_7, 0xFFFF, 3000);
                                 _local_7 = "";
                                 break;
                             case "Temple_Encounter.new":
-                                _local_7 = "Statues";
+                                _local_7 = "Temple Statues";
                                 SoundEffectLibrary.play("level_up");
                                 _local_15.notifyPlayer(_local_7, 0xFFFF, 3000);
                                 _local_7 = "";
@@ -325,10 +325,6 @@ public class TextHandler
             _arg_1.text_ = this.replaceIfSlashServerCommand(_local_3);
             if (((_local_14) && (this.isToBeLocalized(_local_3))))
             {
-                if (_arg_1.text_ == '{"key":"server.oryx_closed_realm"}')
-                {
-                    this.model.player.startTimer(120, 1000);
-                }
                 _local_3 = this.getLocalizedString(_local_3, _local_15);
             }
             for each (_local_8 in Parameters.data_.tptoList)
@@ -340,9 +336,6 @@ public class TextHandler
                 }
             }
             if (Parameters.data_.AutoReply){
-                if (((_arg_1.name_ == "#Altar of Draconis") && (_arg_1.text_ == "Adventures! I was expecting you")))
-                {
-                }
                 if (((_arg_1.name_ == "#Thessal the Mermaid Goddess") && (_arg_1.text_ == "Is King Alexander alive?")))
                 {
                     this.model.player.map_.gs_.gsc_.playerText("He lives and reigns and conquers the world");
@@ -366,6 +359,9 @@ public class TextHandler
                         this.hudModel.gameSprite.gsc_.playerText(_local_3);
                     }
                 }
+            }
+            if ((_arg_1.name_ == "#Oryx the Mad God") && ((_arg_1.text_ == ('{"key":"server.oryx_closed_realm"}')) || (_arg_1.text_ == ('{"key":"server.oryx_minions_failed"}')))) {
+                SoundEffectLibrary.play("level_up");
             }
             _local_17 = Parameters.timerPhaseTimes[_arg_1.text_];
             if (_local_17 > 0){

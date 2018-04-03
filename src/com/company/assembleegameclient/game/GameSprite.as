@@ -13,6 +13,7 @@ import com.company.assembleegameclient.objects.Pet;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.Projectile;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
@@ -521,9 +522,9 @@ public class GameSprite extends AGameSprite
                     Parameters.timerActive = false;
                     this.timerCounter.visible = false;
                     this.timerCounter = null;
-                };
+                }
                 gsc_.disconnect();
-            };
+            }
         }
 
         private function onMoneyChanged(_arg_1:Event):void
