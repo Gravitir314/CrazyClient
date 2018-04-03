@@ -25,6 +25,7 @@ public class ObjectProperties
         public var enemyOccupySquare_:Boolean = false;
         public var static_:Boolean = false;
         public var noMiniMap_:Boolean = false;
+        public var healthBar_:int = 0;
         public var protectFromGroundDamage_:Boolean = false;
         public var protectFromSink_:Boolean = false;
         public var z_:Number = 0;
@@ -46,7 +47,6 @@ public class ObjectProperties
         public var projectiles_:Dictionary = new Dictionary();
         public var angleCorrection_:Number = 0;
         public var rotation_:Number = 0;
-        public var noHealthBar_:Boolean = false;
 
         public function ObjectProperties(_arg_1:XML)
         {
@@ -77,8 +77,10 @@ public class ObjectProperties
             this.fullOccupy_ = _arg_1.hasOwnProperty("FullOccupy");
             this.enemyOccupySquare_ = _arg_1.hasOwnProperty("EnemyOccupySquare");
             this.static_ = _arg_1.hasOwnProperty("Static");
-            this.noHealthBar_ = _arg_1.hasOwnProperty("NoHealthBar");
             this.noMiniMap_ = _arg_1.hasOwnProperty("NoMiniMap");
+            if (_arg_1.hasOwnProperty("HealthBar")){
+                this.healthBar_ = _arg_1.HealthBar;
+            };
             this.protectFromGroundDamage_ = _arg_1.hasOwnProperty("ProtectFromGroundDamage");
             this.protectFromSink_ = _arg_1.hasOwnProperty("ProtectFromSink");
             this.flying_ = _arg_1.hasOwnProperty("Flying");
