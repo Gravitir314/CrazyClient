@@ -703,7 +703,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("potsMinor", makeOnOffLabels(), [true, false], "Loot SPD/DEX/VIT/WIS", "Low value potions.", this.updateWanted));
             this.addOptionAndPosition(new ChoiceOption("lootMP", makeOnOffLabels(), [true, false], "Loot MP Potions to Inventory", "Loots magic potions from ground to inventory.", null));
             this.addOptionAndPosition(new ChoiceOption("drinkPot", makeOnOffLabels(), [true, false], "Drink Excess Potions", "Drinks potions when an item is about to be looted on its slot.", null));
-            this.addOptionAndPosition(new ChoiceOption("grandmaMode", makeOnOffLabels(), [true, false], "Large Loot Bags and Chests", "For those of you who are legally blind.", null));
+            this.addOptionAndPosition(new ChoiceOption("bigBag", makeOnOffLabels(), [true, false], "Large Loot Bags and Chests", "For those of you who are legally blind.", null));
             this.loot_options();
         }
 
@@ -765,7 +765,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("showMobInfo", makeOnOffLabels(), [true, false], "Display Mob Info", "Display mob name and id. Useful for finding ids for use with auto aim exception and ignore list.", this.showMobInfo_));
             this.addOptionAndPosition(new ChoiceOption("clientSwap", makeOnOffLabels(), [true, false], "Responsive Inventory", "Prevents items from teleporting out of your inventory or moving back after switching positions.", null));
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
-            this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD on left side", null));
+            this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "tba", this.onToggleUI));
             this.addOptionAndPosition(new ChoiceOption("uiShadow", makeOnOffLabels(), [true, false], "UI Shadow", "tba", null));
         }

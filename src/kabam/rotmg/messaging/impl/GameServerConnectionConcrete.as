@@ -1482,10 +1482,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 this.openDialog.dispatch(new DailyLoginModal());
                 claimkey = "";
             };
-            if (Parameters.data_.spriteId != 0)
-            {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Sprite settings restored"));
-            };
         }
 
         private function onDamage(_arg_1:Damage):void
@@ -2236,7 +2232,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         {
                             _arg_1.size_ = _local_5;
                         };
-                        if ((((((Parameters.data_.grandmaMode) && (!(_arg_1.objectType_ == 1859))) && (!(_arg_1.objectType_ == 0x0505))) && (!(_arg_1.objectType_ == 1860))) && (!(_arg_1.objectType_ == 1284))))
+                        if ((((((Parameters.data_.bigBag) && (!(_arg_1.objectType_ == 1859))) && (!(_arg_1.objectType_ == 0x0505))) && (!(_arg_1.objectType_ == 1860))) && (!(_arg_1.objectType_ == 1284))))
                         {
                             _local_7 = ObjectLibrary.typeToDisplayId_[_arg_1.objectType_];
                             if ((_arg_1 is Container))

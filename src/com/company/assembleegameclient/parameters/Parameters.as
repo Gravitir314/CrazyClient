@@ -420,15 +420,14 @@ public class Parameters
             setDefaultKey("Cam45DegInc", KeyCodes.UNSET);
             setDefaultKey("Cam45DegDec", KeyCodes.UNSET);
             setDefaultKey("cam2quest", KeyCodes.UNSET);
-            setDefault("rclickTp", false);
+            setDefault("rclickTp", true);
             setDefault("autoTp", true);
-            setDefault("spriteId", 0);
             setDefault("questHUD", true);
             setDefault("drinkPot", true);
             setDefault("deactPre", true);
             setDefault("ninjaTap", true);
             setDefault("palaSpam", true);
-            setDefault("grandmaMode", false);
+            setDefault("bigBag", false);
             setDefault("speedy", false);
             setDefault("setTex1", 0);
             setDefault("setTex2", 0);
