@@ -772,15 +772,12 @@ public class ParseChatMessageCommand
             var _local_24:GameObject;
             var _local_25:GameObject;
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
-            var _local_27:Array = _arg_1.match("^/colo (\\d*\\.*\\d+)$");
-            if (_local_27 != null) {
-                Parameters.data_.coloOffset = _local_27[1];
-                Parameters.save();
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Sword of the Colossus offset: " + Parameters.data_.coloOffset)));
-                return (true);
-            }
             switch (this.data.toLowerCase())
             {
+                case "/swmove":
+                    Parameters.data_.SWNoTileMove = (!Parameters.data_.SWNoTileMove);
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
+                    return (true);
                 case "/blocktp":
                     Parameters.data_.blockTP = (!Parameters.data_.blockTP);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockTP) ? "Teleport Blocked" : "Teleport Allowed")));
@@ -981,6 +978,13 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     return (true);
                 default:
+                    _local_7 = this.data.toLowerCase().match("^/colo (\\d*\\.*\\d+)$");
+                    if (_local_7 != null) {
+                        Parameters.data_.coloOffset = _local_7[1];
+                        Parameters.save();
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Sword of the Colossus offset: " + Parameters.data_.coloOffset)));
+                        return (true);
+                    }
                     _local_7 = this.data.toLowerCase().match("^/afk (.+)$");
                     if (_local_7 != null)
                     {

@@ -1153,16 +1153,16 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 else
                 {
                     p = this.player;
-                };
+                }
                 if (((((((((((((itemId == 2591) || (itemId == 5465)) || (itemId == 9064)) || (itemId == 9729)) && (p.attackMax_ == (p.attack_ - p.attackBoost_))) || (((((itemId == 2592) || (itemId == 5466)) || (itemId == 9065)) || (itemId == 9727)) && (p.defenseMax_ == (p.defense_ - p.defenseBoost_)))) || (((((itemId == 2593) || (itemId == 5467)) || (itemId == 9066)) || (itemId == 9726)) && (p.speedMax_ == (p.speed_ - p.speedBoost_)))) || (((((itemId == 2612) || (itemId == 5468)) || (itemId == 9067)) || (itemId == 9724)) && (p.vitalityMax_ == (p.vitality_ - p.vitalityBoost_)))) || (((((itemId == 2613) || (itemId == 5469)) || (itemId == 9068)) || (itemId == 9725)) && (p.wisdomMax_ == (p.wisdom_ - p.wisdomBoost_)))) || (((((itemId == 2636) || (itemId == 5470)) || (itemId == 9069)) || (itemId == 0x2600)) && (p.dexterityMax_ == (p.dexterity_ - p.dexterityBoost_)))) || (((((itemId == 2793) || (itemId == 5471)) || (itemId == 9070)) || (itemId == 9731)) && (p.maxHPMax_ == (p.maxHP_ - p.maxHPBoost_)))) || (((((itemId == 2794) || (itemId == 5472)) || (itemId == 9071)) || (itemId == 9730)) && (p.maxMPMax_ == (p.maxMP_ - p.maxMPBoost_)))))
                 {
                     return (false);
-                };
+                }
             }
             catch(err:Error)
             {
                 logger.error(("PROBLEM IN STAT INC " + err.getStackTrace()));
-            };
+            }
             return (true);
         }
 
@@ -1179,7 +1179,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (_arg_4.hasOwnProperty("Consumable"))
             {
                 _arg_1.equipment_[_arg_2] = -1;
-            };
+            }
         }
 
         override public function setCondition(_arg_1:uint, _arg_2:Number):void
@@ -1197,14 +1197,14 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (record == 1)
             {
                 recorded.push(new Point(_arg_2.x_, _arg_2.y_));
-            };
+            }
             var _local_5:Number = -1;
             var _local_6:Number = -1;
             if (((_arg_2) && (!(_arg_2.isPaused()))))
             {
                 _local_5 = _arg_2.x_;
                 _local_6 = _arg_2.y_;
-            };
+            }
             var _local_7:Move = (this.messages.require(MOVE) as Move);
             _local_7.tickId_ = _arg_1;
             _local_7.time_ = gs_.lastUpdate_;
@@ -1221,8 +1221,8 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     if (gs_.moveRecords_.records_[_local_4].time_ >= (_local_7.time_ - 25)) break;
                     _local_7.records_.push(gs_.moveRecords_.records_[_local_4]);
                     _local_4++;
-                };
-            };
+                }
+            }
             gs_.moveRecords_.clear(_local_7.time_);
             serverConnection.sendMessage(_local_7);
             ((_arg_2) && (_arg_2.onMove()));
@@ -1723,7 +1723,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         private function addObject(_arg_1:ObjectData):void
         {
-            if (_arg_1.objectType_ == 1825)
+            if (_arg_1.objectType_ == 1825) //wc portal
             {
                 player.startTimer(120, 1000);
             }
@@ -1732,6 +1732,14 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (_local_3 == null)
             {
                 return;
+            }
+            if (gs_.map.name_ == "Sprite World" && Parameters.data_.SWPanic && _local_3 is Player) {
+                if (totPlayers == 1) {
+                    addTextLine.dispatch(ChatMessage.make("*Help*", "Another player entered the Sprite World"));
+                    Parameters.data_.SWNoTileMove = false;
+                    Parameters.save();
+                }
+                totPlayers++;
             }
             var _local_4:ObjectStatusData = _arg_1.status_;
             _local_3.setObjectId(_local_4.objectId_);

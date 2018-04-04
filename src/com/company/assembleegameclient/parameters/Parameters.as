@@ -362,7 +362,7 @@ public class Parameters
             setDefault("bestServ", "Default");
             setDefault("showSkins", true);
             setDefault("showPets", true);
-            setDefault("sizer", true);
+            setDefault("sizer", false);
             setDefaultKey("enterPortal", KeyCodes.UNSET);
             setDefault("perfectBomb", true);
             setDefault("perfectQuiv", true);
@@ -479,6 +479,8 @@ public class Parameters
             setDefault("curseIndication", false);
             setDefault("statusText", true);
             setDefault("blockTP", false);
+            setDefault("SWPanic", true);
+            setDefault("SWNoTileMove", true);
         }
 
 

@@ -1659,6 +1659,12 @@ public class Player extends Character
                         };
                     };
                 };
+                if (square_ != null && square_.props_.push_) {
+                    if (!Parameters.data_.SWNoTileMove) {
+                        moveVec_.x = (moveVec_.x - (square_.props_.animate_.dx_ / 1000));
+                        moveVec_.y = (moveVec_.y - (square_.props_.animate_.dy_ / 1000));
+                    }
+                }
                 this.walkTo((x_ + (_arg_2 * moveVec_.x)), (y_ + (_arg_2 * moveVec_.y)));
             }
             else
@@ -1666,8 +1672,8 @@ public class Player extends Character
                 if (!super.update(_arg_1, _arg_2))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             if ((((((map_.player_ == this) && (square_.props_.maxDamage_ > 0)) && ((square_.lastDamage_ + 500) < _arg_1)) && (!(isInvincible()))) && ((square_.obj_ == null) || (!(square_.obj_.props_.protectFromGroundDamage_)))))
             {
                 _local_10 = map_.gs_.gsc_.getNextDamage(square_.props_.minDamage_, square_.props_.maxDamage_);
