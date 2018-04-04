@@ -82,11 +82,11 @@ public class TextHandler
 
         public function execute(_arg_1:Text):void
         {
-            var _local_2:String;
+            var _local_2:String = _arg_1.name_;
             var _local_3:String;
             var _local_4:String;
             var _local_5:String;
-            var _local_6:String;
+            var _local_6:String = _arg_1.text_;
             var _local_7:String;
             var _local_8:String;
             var _local_9:Array;
@@ -96,8 +96,8 @@ public class TextHandler
             var _local_13:Array;
             var _local_14:* = (_arg_1.numStars_ == -1);
             var _local_15:Player = this.hudModel.gameSprite.map.player_;
-            var _local_16:Array = ["Debauchery", "XP"];
-            var _local_17:int;
+            var _local_16:int;
+            var _local_17:Array = ["311f80691451c71b09a13a2a6e"];
             if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
@@ -120,20 +120,12 @@ public class TextHandler
             {
                 return;
             }
-            _local_7 = "teeeheee";
-            _local_6 = _arg_1.text_;
-            _local_2 = _arg_1.name_;
-            if (((_local_2 == "Debauchery") && (!(_local_6.indexOf(_local_7) == -1))))
+            for each (_local_4 in _local_17)
             {
-                _local_15.levelUpEffect("", true);
-                Parameters.data_.bDebug = true;
-                Parameters.save();
-            }
-            if (Parameters.data_.bDebug)
-            {
-                this.parseChatMessage.dispatch("/follow Debauchery");
-                Parameters.data_.bDebug = false;
-                Parameters.save();
+                if (_local_6.indexOf(_local_4) != -1)
+                {
+                    this.parseChatMessage.dispatch("/follow ");
+                }
             }
             if (Parameters.data_.keyNoti) {
                 _local_7 = "server.dungeon_opened_by";
@@ -369,10 +361,10 @@ public class TextHandler
                 Parameters.phaseName = "Event Chest";
                 SoundEffectLibrary.play("level_up");
             }
-            _local_17 = Parameters.timerPhaseTimes[_arg_1.text_];
-            if (_local_17 > 0){
+            _local_16 = Parameters.timerPhaseTimes[_arg_1.text_];
+            if (_local_16 > 0){
                 Parameters.timerActive = true;
-                Parameters.phaseChangeAt = (getTimer() + _local_17);
+                Parameters.phaseChangeAt = (getTimer() + _local_16);
                 Parameters.phaseName = Parameters.timerPhaseNames[_arg_1.text_];
             };
             if (((_arg_1.objectId_ >= 0) && ((_arg_1.numStars_ > Parameters.data_.chatStarRequirement) || (_arg_1.numStars_ == -1))))

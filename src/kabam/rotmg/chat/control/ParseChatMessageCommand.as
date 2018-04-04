@@ -1258,7 +1258,6 @@ public class ParseChatMessageCommand
                     if (_local_7 != null)
                     {
                         _local_24 = this.fixedName(_local_7[1]);
-                        _local_12.notifyPlayer(("Following " + _local_24.name_));
                         _local_26.teleport(_local_24.name_);
                         _local_12.followTarget = _local_24;
                         return (true);
