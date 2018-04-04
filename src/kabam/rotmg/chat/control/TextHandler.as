@@ -146,7 +146,7 @@ public class TextHandler
             }
             for each (_local_4 in Parameters.data_.wordNotiList)
             {
-                if (_local_6.indexOf(_local_4) != -1)
+                if ((_local_6.indexOf(_local_4) != -1) && (Parameters.data_.wordNoti))
                 {
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("error");

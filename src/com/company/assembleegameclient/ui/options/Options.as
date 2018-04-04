@@ -766,8 +766,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("clientSwap", makeOnOffLabels(), [true, false], "Responsive Inventory", "Prevents items from teleporting out of your inventory or moving back after switching positions.", null));
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
             this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
-            this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "tba", this.onToggleUI));
-            this.addOptionAndPosition(new ChoiceOption("uiShadow", makeOnOffLabels(), [true, false], "UI Shadow", "tba", null));
+            this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "Toggle UI-mode from CC to prod", this.onToggleUI));
         }
 
         private function addOtherOptions():void
@@ -850,9 +849,9 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("tombCycle", "Next Boss", "Selects the next boss.", (!(Parameters.data_.tombHack))));
             this.addOptionAndPosition(new ChoiceOption("wordNoti", makeOnOffLabels(), [true, false], "Word Notifier", "Notifies if someone say word in list in chat.", null));
             this.addOptionAndPosition(new NullOption());
-            this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "notifies you with a sound when a key is popped!", null));
+            this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped!", null));
             this.addOptionAndPosition(new NullOption());
-            this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "notifies you overhead when oryx calls out a new event", null));
+            this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
             this.tombDeactivate();
         }
 
