@@ -10,6 +10,7 @@ import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.StatusBar;
+import com.company.assembleegameclient.ui.options.Options;
 
 import flash.display.Sprite;
 import flash.utils.getTimer;
@@ -61,7 +62,7 @@ public class QuestHealthBar extends Sprite
 
         public function update(_arg_1:Player):void
         {
-            if (!Parameters.data_.questHUD)
+            if ((!Parameters.data_.questHUD) || (Options.hidden))
             {
                 this.questBar.visible = false;
                 this.questBar2.visible = false;

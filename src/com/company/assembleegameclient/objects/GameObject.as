@@ -19,6 +19,7 @@ import com.company.assembleegameclient.objects.particles.ParticleEffect;
 import com.company.assembleegameclient.objects.particles.ShockerEffect;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.BloodComposition;
 import com.company.assembleegameclient.util.ConditionEffect;
@@ -272,7 +273,7 @@ public class GameObject extends BasicObject
         {
             var _local_4:int;
             var _local_5:Boolean = Parameters.data_.STDamage;
-            var _local_6:Boolean = Parameters.data_.STHealth;
+            var _local_6:Boolean = ((Parameters.data_.STHealth) && (!Options.hidden));
             var _local_7:int = (_arg_2.hp_ - _arg_1);
             _local_7 = ((_local_7 < 0) ? 0 : _local_7);
             if (_arg_3)
@@ -281,12 +282,9 @@ public class GameObject extends BasicObject
             }
             else
             {
-                if (Parameters.data_.STColor)
-                {
+                if ((Parameters.data_.STColor) && (!Options.hidden)) {
                     _local_4 = int(green2red(((_arg_2.hp_ / _arg_2.maxHP_) * 100)));
-                }
-                else
-                {
+                } else {
                     _local_4 = 0xFF0000;
                 };
             };

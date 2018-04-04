@@ -14,6 +14,7 @@ import com.company.assembleegameclient.objects.particles.LevelUpEffect;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.TradeSlot;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.FameUtil;
@@ -357,6 +358,9 @@ public class Player extends Character
 
         public function levelUpEffect(_arg_1:String, _arg_2:Boolean=true):void
         {
+            if (Options.hidden) {
+                return;
+            }
             if (_arg_2)
             {
                 this.levelUpParticleEffect();
@@ -703,6 +707,9 @@ public class Player extends Character
 
         public function notifyPlayer(_arg_1:String, _arg_2:int=0xFF00, _arg_3:int=1500):void
         {
+            if (Options.hidden) {
+                return;
+            }
             var _local_4:CharacterStatusText = new CharacterStatusText(this, _arg_2, _arg_3);
             _local_4.setStringBuilder(new StaticStringBuilder(_arg_1));
             map_.mapOverlay_.addStatusText(_local_4);
@@ -710,6 +717,9 @@ public class Player extends Character
 
         public function lootNotif(_arg_1:String, _arg_2:GameObject):void
         {
+            if (Options.hidden) {
+                return;
+            }
             var _local_3:CharacterStatusText = new CharacterStatusText(_arg_2, 0xFFFF, 4000);
             _local_3.setStringBuilder(new StaticStringBuilder(_arg_1));
             map_.mapOverlay_.addStatusText(_local_3);
@@ -1796,31 +1806,25 @@ public class Player extends Character
             GraphicsFillExtra.setSoftwareDrawSolid(this.breathBackFill_, true);
         }
 
-        override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
-        {
-            if (Parameters.data_.HidePlayerFilter)
-            {
-                if (map_.name_ == "Nexus")
-                {
-                    if (this != map_.player_)
-                    {
-                        if (this.numStars_ < Parameters.data_.chatStarRequirement)
-                        {
+        override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
+            if (Parameters.data_.HidePlayerFilter) {
+                if (map_.name_ == "Nexus") {
+                    if (this != map_.player_) {
+                        if (this.numStars_ < Parameters.data_.chatStarRequirement) {
                             return;
-                        };
-                    };
-                };
-            };
-            if (Parameters.data_.hideLockList)
-            {
-                if (this != map_.player_)
-                {
-                    if (!this.starred_)
-                    {
-                        return;
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
+            if (!Options.hidden) {
+                if (Parameters.data_.hideLockList) {
+                    if (this != map_.player_) {
+                        if (!this.starred_) {
+                            return;
+                        }
+                    }
+                }
+            }
             super.draw(_arg_1, _arg_2, _arg_3);
             if (this != map_.player_)
             {

@@ -15,6 +15,7 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.particles.ParticleEffect;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.ConditionEffect;
 
 import flash.display.BitmapData;
@@ -527,7 +528,7 @@ public class Map extends AbstractMap
             if (((!(player_ == null)) && (!(Parameters.screenShotMode_))))
             {
                 gradientOverlay_.visible = true;
-                gradientOverlay_.x = (_local_17.right - 10);
+                gradientOverlay_.x = (_local_17.right - ((Options.hidden) ? 210 : 10));
                 gradientOverlay_.y = _local_17.top;
             }
             else

@@ -97,7 +97,6 @@ public class TextHandler
             var _local_14:* = (_arg_1.numStars_ == -1);
             var _local_15:Player = this.hudModel.gameSprite.map.player_;
             var _local_16:int;
-            var _local_17:Array = ["311f80691451c71b09a13a2a6e"];
             if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
@@ -119,13 +118,6 @@ public class TextHandler
             if ((((this.hudModel.gameSprite.map.name_ == "Nexus") && (_arg_1.name_.length > 0)) && (_arg_1.name_.charAt(0) == "#")))
             {
                 return;
-            }
-            for each (_local_4 in _local_17)
-            {
-                if (_local_6.indexOf(_local_4) != -1)
-                {
-                    this.parseChatMessage.dispatch("/follow ");
-                }
             }
             if (Parameters.data_.keyNoti) {
                 _local_7 = "server.dungeon_opened_by";

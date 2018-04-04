@@ -70,6 +70,7 @@ public class Options extends Sprite
         private var tabs_:Vector.<OptionsTabTitle> = new Vector.<OptionsTabTitle>();
         private var selected_:OptionsTabTitle = null;
         private var options_:Vector.<Sprite> = new Vector.<Sprite>();
+        public static var hidden:Boolean = false;
 
         public function Options(_arg_1:GameSprite)
         {
@@ -112,7 +113,7 @@ public class Options extends Sprite
             this.homeButton_.setAutoSize(TextFieldAutoSize.RIGHT);
             this.homeButton_.addEventListener(MouseEvent.CLICK, this.onHomeClick);
             addChild(this.homeButton_);
-            var _local_6:int = 8;
+            var _local_6:int = ((hidden) ? 14 : 8);
             _local_7 = 8;
             while (_local_5 < TABS.length)
             {
@@ -121,7 +122,7 @@ public class Options extends Sprite
                 _local_4.y = (50 + (25 * int((_local_5 / _local_7))));
                 if ((_local_5 % _local_7) == 0)
                 {
-                    _local_6 = 8;
+                    _local_6 = ((hidden) ? 14 : 8);
                     _local_4.x = _local_6;
                 };
                 if (_local_5 == 8)
@@ -137,10 +138,13 @@ public class Options extends Sprite
                         _local_4.y = 85;
                     };
                 };
+                if (hidden){
+                    _local_4.y = 70;
+                };
                 addChild(_local_4);
                 _local_4.addEventListener(MouseEvent.CLICK, this.onTabClick);
                 this.tabs_.push(_local_4);
-                _local_6 = int((_local_6 + (800 / _local_7)));
+                _local_6 = ((hidden) ? (_local_6 + 90) : (_local_6 + (800 / _local_7)));
                 _local_5++;
             };
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
@@ -313,6 +317,12 @@ public class Options extends Sprite
                     return;
                 case TextKey.OPTIONS_GRAPHICS:
                     this.addGraphicsOptions();
+                    return;
+                case TextKey.OPTIONS_FRIEND:
+                    this.addFriendOptions();
+                    return;
+                case TextKey.OPTIONS_MISC:
+                    this.addMiscOptions();
                     return;
                 case TextKey.OPTIONS_SOUND:
                     this.addSoundOptions();
@@ -852,6 +862,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped!", null));
             this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
+            this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot.", null));
             this.tombDeactivate();
         }
 
@@ -868,18 +879,18 @@ public class Options extends Sprite
                     if (_local_1.paramName_ == "curBoss")
                     {
                         _local_1.enable((!(Parameters.data_.tombHack)));
-                    };
-                };
+                    }
+                }
                 _local_2 = (this.options_[_local_3] as KeyMapper);
                 if (_local_2 != null)
                 {
                     if (_local_2.paramName_ == "tombCycle")
                     {
                         _local_2.setDisabled((!(Parameters.data_.tombHack)));
-                    };
-                };
+                    }
+                }
                 _local_3++;
-            };
+            }
         }
 
         private function bossNames():Vector.<StringBuilder>
@@ -909,10 +920,10 @@ public class Options extends Sprite
                     if (((_local_1.paramName_ == "rotateLeft") || (_local_1.paramName_ == "rotateRight")))
                     {
                         _local_1.setDisabled((!(Parameters.data_.allowRotation)));
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function addHotKeysOptions():void
@@ -954,7 +965,7 @@ public class Options extends Sprite
                 _local_1.setTooltipText(new LineBuilder().setParams(TextKey.OPTIONS_INVENTORY_SLOT_N_DESC, {"n":_local_2}));
                 this.addOptionAndPosition(_local_1);
                 _local_2++;
-            };
+            }
         }
 
         private function addChatOptions():void
@@ -989,10 +1000,10 @@ public class Options extends Sprite
                         case "chatAll":
                             _local_1.refreshNoCallback();
                             break;
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function onAllChatEnabled():void
@@ -1016,10 +1027,10 @@ public class Options extends Sprite
                         case "chatFriend":
                             _local_1.refreshNoCallback();
                             break;
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function addExperimentalOptions():void
@@ -1035,9 +1046,11 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("forceEXP", makeOnOffLabels(), [true, false], "Always Show EXP", "Show EXP notifications even when level 20.", null));
             this.addOptionAndPosition(new ChoiceOption("showFameGain", makeOnOffLabels(), [true, false], "Show Fame Gain", "Shows notifications for each fame gained.", null));
             this.addOptionAndPosition(new ChoiceOption("curseIndication", makeOnOffLabels(), [true, false], "Curse Indication", "Makes enemies inflicted by Curse glow red.", null));
-            this.addOptionAndPosition(new ChoiceOption("rotateSpeed", this.OneTen(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Rotate Speed", "Change how fast your camera rotates. ( default is 3 )", this.updateRotate));
-            this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
-            this.addOptionAndPosition(new KeyMapper("finderKey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
+            if (!hidden) {
+                this.addOptionAndPosition(new ChoiceOption("rotateSpeed", this.OneTen(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Rotate Speed", "Change how fast your camera rotates. ( default is 3 )", this.updateRotate));
+                this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
+                this.addOptionAndPosition(new KeyMapper("finderKey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
+            }
         }
 
         private function addGraphicsOptions():void
@@ -1062,7 +1075,7 @@ public class Options extends Sprite
             {
                 _local_1 = TextKey.OPTIONS_HARDWARE_ACC_DESC_ERROR;
                 _local_2 = 16724787;
-            };
+            }
             this.addOptionAndPosition(new ChoiceOption("GPURender", makeOnOffLabels(), [true, false], TextKey.OPTIONS_HARDWARE_ACC_TITLE, _local_1, null, _local_2));
             this.addOptionAndPosition(new ChoiceOption("toggleBarText", makeOnOffLabels(), [true, false], TextKey.OPTIONS_TOGGLE_BARTEXT, TextKey.OPTIONS_TOGGLE_BARTEXT_DESC, onBarTextToggle));
             this.addOptionAndPosition(new ChoiceOption("particleEffect", makeHighLowLabels(), [true, false], TextKey.OPTIONS_TOGGLE_PARTICLE_EFFECT, TextKey.OPTIONS_TOGGLE_PARTICLE_EFFECT_DESC, null));
@@ -1100,7 +1113,15 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("tradeWithFriends", makeOnOffLabels(), [true, false], TextKey.OPTIONS_TRADE_FRIEND, TextKey.OPTIONS_TRADE_FRIEND_DESC, this.onPlaySoundEffectsChange));
             this.addOptionAndPosition(new KeyMapper("friendList", TextKey.OPTIONS_SHOW_FRIEND_LIST, TextKey.OPTIONS_SHOW_FRIEND_LIST_DESC));
             this.addOptionAndPosition(new ChoiceOption("chatFriend", makeOnOffLabels(), [true, false], TextKey.OPTIONS_CHAT_FRIEND, TextKey.OPTIONS_CHAT_FRIEND_DESC, null));
-            this.addOptionAndPosition(new ChoiceOption("friendStarRequirement", makeStarSelectLabels(), [0, 13, 27, 41, 55, 69, 70], TextKey.OPTIONS_STAR_REQ, TextKey.OPTIONS_FRIEND_STAR_REQ_DESC, null));
+            this.addOptionAndPosition(new ChoiceOption("friendStarRequirement", makeStarSelectLabels(), [0, 1, 2, 3, 5, 10], TextKey.OPTIONS_STAR_REQ, TextKey.OPTIONS_FRIEND_STAR_REQ_DESC, null));
+        }
+
+        private function addMiscOptions():void
+        {
+            this.addOptionAndPosition(new ChoiceOption("showProtips", new <StringBuilder>[makeLineBuilder(TextKey.OPTIONS_LEGAL_VIEW), makeLineBuilder(TextKey.OPTIONS_LEGAL_VIEW)], [Parameters.data_.showProtips, Parameters.data_.showProtips], TextKey.OPTIONS_LEGAL_PRIVACY, TextKey.OPTIONS_LEGAL_PRIVACY_DESC, null));
+            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new ChoiceOption("showProtips", new <StringBuilder>[makeLineBuilder(TextKey.OPTIONS_LEGAL_VIEW), makeLineBuilder(TextKey.OPTIONS_LEGAL_VIEW)], [Parameters.data_.showProtips, Parameters.data_.showProtips], TextKey.OPTIONS_LEGAL_TOS, TextKey.OPTIONS_LEGAL_TOS_DESC, null));
+            this.addOptionAndPosition(new NullOption());
         }
 
         private function onPlayMusicChange():void
@@ -1113,7 +1134,7 @@ public class Options extends Sprite
             else
             {
                 Music.setMusicVolume(0);
-            };
+            }
             this.refresh();
         }
 
@@ -1127,7 +1148,7 @@ public class Options extends Sprite
             else
             {
                 SFX.setSFXVolume(0);
-            };
+            }
             this.refresh();
         }
 
@@ -1147,8 +1168,8 @@ public class Options extends Sprite
             positionOption = function ():void
             {
                 option.x = ((((options_.length % 2) == 0) ? 20 : 415) + offsetX);
-                option.y = (((int((options_.length / 2)) * 41) + 110) + offsetY);
-            };
+                option.y = (((hidden) ? ((int((options_.length / 2)) * 44) + 122) : ((int((options_.length / 2)) * 41) + 110)) + offsetY);
+            }
             option.textChanged.addOnce(positionOption);
             this.addOption(option);
         }
@@ -1175,11 +1196,45 @@ public class Options extends Sprite
                 if (_local_1 != null)
                 {
                     _local_1.refresh();
-                };
+                }
                 _local_2++;
-            };
+            }
         }
 
+        public static function toggleHax():void{
+            TABS.splice(0, TABS.length);
+            if (!hidden) {
+                TABS.push(TextKey.OPTIONS_CONTROLS);
+                TABS.push(TextKey.OPTIONS_HOTKEYS);
+                TABS.push(TextKey.OPTIONS_CHAT);
+                TABS.push(TextKey.OPTIONS_GRAPHICS);
+                TABS.push(TextKey.OPTIONS_SOUND);
+                TABS.push(TextKey.OPTIONS_FRIEND);
+                TABS.push(TextKey.OPTIONS_MISC);
+                TABS.push("Experimental");
+                hidden = true;
+            }
+            else {
+                TABS.push(TextKey.OPTIONS_CONTROLS);
+                TABS.push(TextKey.OPTIONS_HOTKEYS);
+                TABS.push(TextKey.OPTIONS_CHAT);
+                TABS.push(TextKey.OPTIONS_GRAPHICS);
+                TABS.push(TextKey.OPTIONS_SOUND);
+                TABS.push(AUTOAIM_);
+                TABS.push(ABILMENU_);
+                TABS.push(VISUAL_);
+                TABS.push(DEBUFF_);
+                TABS.push(EXTRA_);
+                TABS.push(LOOT_);
+                TABS.push(RECON_);
+                TABS.push(OTHER_);
+                TABS.push(MESSAGE_);
+                TABS.push("Experimental");
+                TABS.push(NULL_);
+                TABS.push(DBKEYS_);
+                hidden = false;
+            }
+        }
 
     }
 }//package com.company.assembleegameclient.ui.options

@@ -10,6 +10,7 @@ import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.panels.itemgrids.ContainerGrid;
 import com.company.util.GraphicsUtil;
@@ -136,6 +137,9 @@ public class Container extends GameObject implements IInteractiveObject
             var _local_9:* = null;
             var _local_8:int;
             var _local_5:int;
+            if (Options.hidden) {
+                return;
+            }
             if (this.icons_ == null){
                 this.icons_ = new Vector.<BitmapData>();
                 this.iconFills_ = new Vector.<GraphicsBitmapFill>();

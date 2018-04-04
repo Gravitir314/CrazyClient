@@ -1114,6 +1114,9 @@ public class MapUserInput
                     Parameters.save();
                     _local_21.notifyPlayer(((Parameters.data_.PassesCover) ? "Proj No-Clip: On" : "Proj No-Clip: Off"), 0xFF00, 1500);
                     break;
+                case Parameters.data_.panicKey:
+                    Options.toggleHax();
+                    break;
             };
             this.setPlayerMovement();
         }

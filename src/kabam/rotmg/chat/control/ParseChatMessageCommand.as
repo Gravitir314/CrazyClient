@@ -13,6 +13,7 @@ import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.board.HelpBoard;
 import com.company.assembleegameclient.ui.menu.FindMenu;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.CJDateUtil;
 
@@ -774,6 +775,8 @@ public class ParseChatMessageCommand
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
             switch (this.data.toLowerCase())
             {
+                case "/hidehacks":
+                    Options.toggleHax();
                 case "/swmove":
                     Parameters.data_.SWNoTileMove = (!Parameters.data_.SWNoTileMove);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
@@ -1623,23 +1626,25 @@ public class ParseChatMessageCommand
             var _local_5:* = undefined;
             var _local_6:Array = this.data.split(" ");
             var _local_7:String = _local_6[0];
-            if (this.tellHandle()) {
-                return;
-            }
-            if (this.listCommands()) {
-                return;
-            }
-            if (this.cjCommands(this.data)) {
-                return;
-            }
-            if (this.custMessages()) {
-                return;
-            }
-            if (this.effCom()) {
-                return;
-            }
-            if (this.fsCommands(this.data)) {
-                return;
+            if (!Options.hidden) {
+                if (this.tellHandle()) {
+                    return;
+                }
+                if (this.listCommands()) {
+                    return;
+                }
+                if (this.cjCommands(this.data)) {
+                    return;
+                }
+                if (this.custMessages()) {
+                    return;
+                }
+                if (this.effCom()) {
+                    return;
+                }
+                if (this.fsCommands(this.data)) {
+                    return;
+                }
             }
             if (this.data == "/help") {
                 this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, TextKey.HELP_COMMAND));

@@ -8,6 +8,7 @@ package com.company.assembleegameclient.objects
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
@@ -79,7 +80,7 @@ public class Pet extends GameObject implements IInteractiveObject
         }
 
         override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void{
-            if (Parameters.data_.showPets)
+            if ((Parameters.data_.showPets) || (Options.hidden))
             {
                 super.draw(_arg_1, _arg_2, _arg_3);
             }

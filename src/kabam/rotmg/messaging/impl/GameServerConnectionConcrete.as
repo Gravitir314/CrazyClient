@@ -52,6 +52,7 @@ import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.PicView;
 import com.company.assembleegameclient.ui.dialogs.Dialog;
 import com.company.assembleegameclient.ui.dialogs.NotEnoughFameDialog;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.GuildInvitePanel;
 import com.company.assembleegameclient.ui.panels.TradeRequestPanel;
 import com.company.assembleegameclient.util.AnimatedChars;
@@ -1819,14 +1820,14 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     };
                         _local_3 = new CharacterStatusText(_local_7, _arg_1.color_, 1000);
                         _local_3.setStringBuilder(_local_2);
-                    if (Parameters.data_.statusText) {
+                    if ((Parameters.data_.statusText) || (Options.hidden)) {
                         gs_.map.mapOverlay_.addStatusText(_local_3);
                     }
                 }
                 else
                 {
                         _local_4 = new QueuedStatusText(_local_7, _local_2, _arg_1.color_, 2000);
-                    if (Parameters.data_.statusText) {
+                    if ((Parameters.data_.statusText) || (Options.hidden)) {
                         gs_.map.mapOverlay_.addQueuedText(_local_4);
                     }
                     if (((_local_7 == this.player) && (_local_2.key == "server.quest_complete")))
@@ -2234,7 +2235,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         {
                             _arg_1.size_ = _local_5;
                         };
-                        if ((((((Parameters.data_.bigBag) && (!(_arg_1.objectType_ == 1859))) && (!(_arg_1.objectType_ == 0x0505))) && (!(_arg_1.objectType_ == 1860))) && (!(_arg_1.objectType_ == 1284))))
+                        if ((((((Parameters.data_.bigBag) && (!Options.hidden) && (!(_arg_1.objectType_ == 1859))) && (!(_arg_1.objectType_ == 0x0505))) && (!(_arg_1.objectType_ == 1860))) && (!(_arg_1.objectType_ == 1284))))
                         {
                             _local_7 = ObjectLibrary.typeToDisplayId_[_arg_1.objectType_];
                             if ((_arg_1 is Container))
@@ -2319,7 +2320,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         {
                             if (!Parameters.data_.showDyes)
                             {
-                                _arg_1.setTex1(0);
+                                if (!Options.hidden) {
+                                    _arg_1.setTex1(0);
+                                }
                             }
                             else
                             {
@@ -2336,7 +2339,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         {
                             if (!Parameters.data_.showDyes)
                             {
-                                _arg_1.setTex2(0);
+                                if (!Options.hidden) {
+                                    _arg_1.setTex2(0);
+                                }
                             }
                             else
                             {
@@ -2487,23 +2492,25 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         break;
                     case StatData.TEXTURE_STAT:
                         if (!Parameters.data_.showSkins){
-                            break
-                        };
+                            if (!Options.hidden) {
+                                break
+                            }
+                        }
                         if (_local_9 != null){
                             (((!(_local_9.skinId == _local_5)) && (_local_5 >= 0)) && (this.setPlayerSkinTemplate(_local_9, _local_5)));
-                        };
-                        if (((_local_9 == player) && (!(Parameters.data_.nsetSkin[1] == -1)))) {
+                        }
+                        if (((_local_9 == player) && (!Parameters.data_.nsetSkin[1] == -1) && (!Options.hidden))) {
                             player.skin = AnimatedChars.getAnimatedChar(Parameters.data_.nsetSkin[0], Parameters.data_.nsetSkin[1]);
                         } else if (((_arg_1.objectType_ == 1813) && (_local_5 > 0))){
                             _arg_1.setTexture(_local_5);
-                        };
+                        }
                         break;
                     case StatData.HASBACKPACK_STAT:
                         (_arg_1 as Player).hasBackpack_ = Boolean(_local_5);
                         if (_arg_3)
                         {
                             this.updateBackpackTab.dispatch(Boolean(_local_5));
-                        };
+                        }
                         break;
                     case StatData.BACKPACK_0_STAT:
                     case StatData.BACKPACK_1_STAT:

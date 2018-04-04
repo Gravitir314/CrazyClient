@@ -378,6 +378,7 @@ public class Parameters
             setDefaultKey("maxPrism", KeyCodes.UNSET);
             setDefaultKey("tpto", KeyCodes.UNSET);
             setDefaultKey("pbToggle", KeyCodes.UNSET);
+            setDefaultKey("QuestTeleport", KeyCodes.UNSET);
             setDefault("clientSwap", false);
             setDefault("slideOnIce", true);
             setDefault("autoAbil", false);
@@ -444,6 +445,8 @@ public class Parameters
             setDefaultKey("Cam90DegInc", KeyCodes.UNSET);
             setDefaultKey("Cam90DegDec", KeyCodes.UNSET);
             setDefaultKey("cam2quest", KeyCodes.UNSET);
+            setDefaultKey("keyFinder", KeyCodes.UNSET);
+            setDefaultKey("panicKey", KeyCodes.DELETE);
             setDefault("rclickTp", true);
             setDefault("autoTp", true);
             setDefault("questHUD", true);
@@ -465,7 +468,6 @@ public class Parameters
             setDefault("thunderMove", false);
             setDefault("mapHack", false);
             setDefault("eventnotify", false);
-            setDefaultKey("keyFinder", KeyCodes.UNSET);
             setDefault("keyFinderid", 0);
             setDefault("bDebug", false);
             setDefault("keyNoti", false);
@@ -487,4 +489,3 @@ public class Parameters
 
     }
 }//package com.company.assembleegameclient.parameters
-
