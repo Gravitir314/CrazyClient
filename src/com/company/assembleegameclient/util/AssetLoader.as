@@ -31,10 +31,10 @@ public class AssetLoader
     {
 
         public static var maps:Vector.<BitmapData>;
-        public static var castleMap:BitmapData;
+        /*public static var castleMap:BitmapData;
         public static var chamberMap:BitmapData;
         public static var wcMap:BitmapData;
-        public static var vaultMap:BitmapData;
+        public static var vaultMap:BitmapData;*/
         public static var shattersMap:BitmapData;
         public static var currentXmlIsTesting:Boolean = false;
 
@@ -65,14 +65,14 @@ public class AssetLoader
         private var w12:Class;
         [Embed(source="assetloader_w13.dat", mimeType="application/octet-stream")]
         private var w13:Class;
+        [Embed(source="assetloader_shatters.dat", mimeType="application/octet-stream")]
+        private var shatters:Class;
         [Embed(source="assetloader_castle.dat", mimeType="application/octet-stream")]
         private var castle:Class;
         [Embed(source="assetloader_chamber.dat", mimeType="application/octet-stream")]
         private var chamber:Class;
         [Embed(source="assetloader_wc.dat", mimeType="application/octet-stream")]
         private var wc:Class;
-        [Embed(source="assetloader_shatters.dat", mimeType="application/octet-stream")]
-        private var shatters:Class;
         [Embed(source="assetloader_vault.dat", mimeType="application/octet-stream")]
         private var vault:Class;
 
@@ -91,11 +91,11 @@ public class AssetLoader
             this.w11 = AssetLoader_w11;
             this.w12 = AssetLoader_w12;
             this.w13 = AssetLoader_w13;
-            this.castle = AssetLoader_castle;
+            this.shatters = AssetLoader_shatters;
+            /*this.castle = AssetLoader_castle;
             this.chamber = AssetLoader_chamber;
             this.wc = AssetLoader_wc;
-            this.shatters = AssetLoader_shatters;
-            this.vault = AssetLoader_vault;
+            this.vault = AssetLoader_vault;*/
             super();
         }
 
@@ -132,11 +132,11 @@ public class AssetLoader
             this.loadMap(new this.w3(), 2);
             this.loadMap(new this.w2(), 1);
             this.loadMap(new this.w1(), 0);
-            this.loadMap(new this.castle(), 13);
+            this.loadMap(new this.shatters(), 17);
+            /*this.loadMap(new this.castle(), 13);
             this.loadMap(new this.chamber(), 14);
             this.loadMap(new this.wc(), 15);
-            this.loadMap(new this.vault(), 16);
-            this.loadMap(new this.shatters(), 17);
+            this.loadMap(new this.vault(), 16);*/
         }
 
         private function loadMap(_arg_1:*, _arg_2:int):void
@@ -160,7 +160,7 @@ public class AssetLoader
             {
                 switch (_arg_2)
                 {
-                    case 13:
+                    /*case 13:
                         castleMap = _local_4;
                         return;
                     case 14:
@@ -171,9 +171,10 @@ public class AssetLoader
                         return;
                     case 16:
                         vaultMap = _local_4;
-                        return;
+                        return;*/
                     case 17:
                         shattersMap = _local_4;
+                        return;
                 };
             };
         }

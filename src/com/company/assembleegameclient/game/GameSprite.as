@@ -28,6 +28,7 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.ColorMatrixFilter;
 import flash.filters.DropShadowFilter;
+import flash.system.Capabilities;
 import flash.utils.ByteArray;
 import flash.utils.getTimer;
 
@@ -193,8 +194,7 @@ public class GameSprite extends AGameSprite
             hudView = new HUDView();
             hudView.x = 600;
             addChild(hudView);
-            switch (gsc_.mapName)
-            {
+            /*switch (gsc_.mapName) {
                 case "Vault":
                     hudView.miniMap.miniMapData_ = AssetLoader.vaultMap;
                     return;
@@ -206,7 +206,7 @@ public class GameSprite extends AGameSprite
                     return;
                 case "Wine Cellar":
                     hudView.miniMap.miniMapData_ = AssetLoader.wcMap;
-            };
+            }*/
         }
 
         override public function initialize():void
