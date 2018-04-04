@@ -786,7 +786,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("autoPot", this.AutoPotValues(), [0, 50, 55, 60, 65, 70, 75, 80], "Auto Pot", "Automatically drink a potion if your hp falls below a certain percentage.", null));
             this.addOptionAndPosition(new ChoiceOption("bestServ", this.ServerPrefValues(), ["Default", "USWest", "USMidWest", "EUWest", "USEast", "AsiaSouthEast", "USSouth", "USSouthWest", "EUEast", "EUNorth", "EUSouthWest", "USEast3", "USWest2", "USMidWest2", "USEast2", "USNorthWest", "AsiaEast", "USSouth3", "EUNorth2", "EUWest2", "EUSouth", "USSouth2", "USWest3"], "Best Server", "Select your best server.", null));
             this.addOptionAndPosition(new ChoiceOption("TradeDelay", makeOnOffLabels(), [true, false], "Disable Trade Delay", "Removes trade delay. Indicator still shows.", null));
-            this.addOptionAndPosition(new ChoiceOption("SafeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles.", null));
             this.addOptionAndPosition(new ChoiceOption("slideOnIce", makeOnOffLabels(), [true, false], "Slide on Ice", "Toggles sliding on ice.", null));
             this.addOptionAndPosition(new KeyMapper("incFinder", "Inc Finder", "Goes through everyone's inventory and backpack then reports if they have an incantation."));
             this.addOptionAndPosition(new ChoiceOption("rclickTp", makeOnOffLabels(), [true, false], "Right-click Chat Teleport", "Right click a chat name to teleport. No menu will be shown.", null));
@@ -858,12 +857,13 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("offsetColossus", makeOnOffLabels(), [true, false], "Offset Colossus Sword", "Attempts to shoot straight, try /colo 0.4 and /colo 0.2", null));
             this.addOptionAndPosition(new KeyMapper("tombCycle", "Next Boss", "Selects the next boss.", (!(Parameters.data_.tombHack))));
             this.addOptionAndPosition(new ChoiceOption("wordNoti", makeOnOffLabels(), [true, false], "Word Notifier", "Notifies if someone say word in list in chat.", null));
-            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new ChoiceOption("SafeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles.", null));
             this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped!", null));
-            this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
             this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
             this.tombDeactivate();
+            this.addOptionAndPosition(new NullOption());
         }
 
         private function tombDeactivate():void

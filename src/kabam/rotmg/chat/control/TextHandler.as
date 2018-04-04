@@ -133,7 +133,7 @@ public class TextHandler
                 if ((_local_6.indexOf(_local_4) != -1) && (Parameters.data_.wordNoti))
                 {
                     _local_15.levelUpEffect("", true);
-                    SoundEffectLibrary.play("error");
+                    SoundEffectLibrary.play("level_up");
                 }
             }
             if (Parameters.data_.eventnotify)

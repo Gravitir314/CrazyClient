@@ -424,6 +424,7 @@ public class Parameters
             setDefault("dbPre1", ["Preset 1", 0, false]);
             setDefault("dbPre2", ["Preset 2", 0, false]);
             setDefault("dbPre3", ["Preset 3", 0, false]);
+            setDefaultKey("panicKey", KeyCodes.DELETE);
             setDefaultKey("kdbArmorBroken", KeyCodes.UNSET);
             setDefaultKey("kdbBleeding", KeyCodes.UNSET);
             setDefaultKey("kdbDazed", KeyCodes.UNSET);
@@ -440,13 +441,13 @@ public class Parameters
             setDefaultKey("kdbPre3", KeyCodes.UNSET);
             setDefaultKey("kdbAll", KeyCodes.UNSET);
             setDefaultKey("resetCHP", KeyCodes.UNSET);
-            setDefault("autoCorrCHP", false);
             setDefaultKey("tPassCover", KeyCodes.UNSET);
             setDefaultKey("Cam90DegInc", KeyCodes.UNSET);
             setDefaultKey("Cam90DegDec", KeyCodes.UNSET);
             setDefaultKey("cam2quest", KeyCodes.UNSET);
             setDefaultKey("keyFinder", KeyCodes.UNSET);
-            setDefaultKey("panicKey", KeyCodes.DELETE);
+            setDefaultKey("SafeWalkKey", KeyCodes.UNSET);
+            setDefault("autoCorrCHP", false);
             setDefault("rclickTp", true);
             setDefault("autoTp", true);
             setDefault("questHUD", true);

@@ -1117,6 +1117,11 @@ public class MapUserInput
                 case Parameters.data_.panicKey:
                     Options.toggleHax();
                     break;
+                case Parameters.data_.SafeWalkKey:
+                    Parameters.data_.SafeWalk = (!Parameters.data_.SafeWalk);
+                    Parameters.save();
+                    _local_21.notifyPlayer(((Parameters.data_.SafeWalk) ? "Safe Walk: On" : "Safe Walk: Off"), 0xFF00, 1500);
+                    break;
             };
             this.setPlayerMovement();
         }

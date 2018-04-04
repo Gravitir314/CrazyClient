@@ -98,8 +98,8 @@
       <Explanation>Sets your autopot percentage&#xA;Set to 0 to turn off</Explanation>
    </Article>
    <Article>
-      <Command>/timer &lt;count&gt; &lt;step?&gt;</Command>
-      <Explanation>Starts a timer which will be shown on top of your character&#xA;Count specifies how many timer the timer should tick&#xA;Step is an optional parameter, it specifies how often a tick happens (in milliseconds)&#xA;Step defaults to 1000</Explanation>
+      <Command>/timer &lt;count&gt;</Command>
+      <Explanation>Starts a timer which will be shown on top left of your screen&#xA;Count specifies how many timer the timer should ticks.</Explanation>
    </Article>
    <Article>
       <Command>/nexus</Command>
@@ -199,7 +199,7 @@
    </Article>
    <Article>
       <Command>/colo &lt;decimal value&gt;</Command>
-     <Explanation>Set offset to Colossus sword. set between 0.2 and 0.4. Default: 0.225</Explanation>
+     <Explanation>Set offset to Colossus sword.&#xA;Set between 0.2 and 0.4.&#xA;Default: 0.225</Explanation>
    </Article>
    <Article>
       <Command>/serv</Command>
@@ -207,7 +207,7 @@
    </Article>
    <Article>
       <Command>/recondelay &lt;value&gt;</Command>
-      <Explanation>Set reconnect delay to custom value. Default: 100</Explanation>
+      <Explanation>Set reconnect delay to custom value.&#xA;Set how fast you connect to locations.&#xA;Default: 100</Explanation>
    </Article>
    <Article>
       <Command>/hidehacks</Command>
@@ -223,7 +223,7 @@
    </Article>
    <Article>
       <Command>/dodbot</Command>
-      <Explanation>Activate Doer of Deeds bot. Automatically enter in the tutorial and kill Evil Chicken</Explanation>
+      <Explanation>Activate Doer of Deeds bot.&#xA;Automatically enter in the tutorial and kill Evil Chicken</Explanation>
    </Article>
    <Article>
       <Command>/fs</Command>
