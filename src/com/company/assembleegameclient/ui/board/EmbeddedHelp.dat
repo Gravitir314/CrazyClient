@@ -190,8 +190,36 @@
       <Explanation>Hides you on realmeye</Explanation>
    </Article>
    <Article>
+      <Command>/lf</Command>
+      <Explanation>Hide non locked players from screen</Explanation>
+   </Article>
+   <Article>
+      <Command>/swmove</Command>
+      <Explanation>Toggle tile moving on sprite world</Explanation>
+   </Article>
+   <Article>
+      <Command>/colo &lt;decimal value&gt;</Command>
+     <Explanation>Set offset to Colossus sword. set between 0.2 and 0.4. Default: 0.225</Explanation>
+   </Article>
+   <Article>
       <Command>/serv</Command>
       <Explanation>Shows the server and realm you're on</Explanation>
+   </Article>
+   <Article>
+      <Command>/hidehacks</Command>
+      <Explanation>Toggle visual hacks to take screenshot.</Explanation>
+   </Article>
+   <Article>
+      <Command>/blocktp</Command>
+      <Explanation>Block teleport function to achieve Boots on the Ground.</Explanation>
+   </Article>
+   <Article>
+      <Command>/statustext</Command>
+      <Explanation>Disable all status notifications (pet healing/quest complete/.</Explanation>
+   </Article>
+   <Article>
+      <Command>/dodbot</Command>
+      <Explanation>Activate Doer of Deeds bot. Automatically enter in the tutorial and kill Evil Chicken</Explanation>
    </Article>
    <Article>
       <Command>/fs</Command>
