@@ -478,6 +478,7 @@ public class Parameters
             setDefault("AutoReply", true);
             setDefault("curseIndication", false);
             setDefault("statusText", true);
+            setDefault("blockTP", false);
         }
 
 

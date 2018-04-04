@@ -1230,16 +1230,16 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         override public function teleport(_arg_1:String):void
         {
-            if (oncd)
-            {
-                tptarget = _arg_1;
-                player.notifyPlayer(("Queued " + tptarget), 0xFF00, 1500);
+            if (!Parameters.data_.blockTP) {
+                if (oncd) {
+                    tptarget = _arg_1;
+                    player.notifyPlayer(("Queued " + tptarget), 0xFF00, 1500);
+                }
+                else {
+                    this.playerText(("/teleport " + _arg_1));
+                    this.lasttptime = getTimer();
+                }
             }
-            else
-            {
-                this.playerText(("/teleport " + _arg_1));
-                this.lasttptime = getTimer();
-            };
         }
 
         override public function teleportId(_arg_1:int):void

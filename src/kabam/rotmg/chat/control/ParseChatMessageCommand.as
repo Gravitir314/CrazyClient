@@ -134,8 +134,8 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in exception list.")));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
@@ -146,11 +146,11 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (("No mob has the type " + _local_2[1]) + ".")));
-                    };
-                };
+                    }
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/aig (\\d+)$");
             if (_local_2 != null)
             {
@@ -162,8 +162,8 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in ignore list.")));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
@@ -174,11 +174,11 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (("No mob has the type " + _local_2[1]) + ".")));
-                    };
-                };
+                    }
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/asp (.+)$");
             if (_local_2 != null)
             {
@@ -190,16 +190,16 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already being filtered out.')));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     Parameters.data_.spamFilter.push(_local_2[1]);
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to spamfilter list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/afr (\\w+)$");
             if (_local_2 != null)
             {
@@ -211,16 +211,16 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in friend list.')));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     Parameters.data_.friendList2.push(_local_2[1]);
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to friend list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/atp (\\w+)$");
             if (_local_2 != null)
             {
@@ -232,16 +232,16 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in teleport keyword list.')));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     Parameters.data_.tptoList.push(_local_2[1]);
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to teleport keyword list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/apr (\\d+)$");
             if (_local_2 != null)
             {
@@ -253,8 +253,8 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in auto aim priority list.")));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
@@ -265,11 +265,11 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (("No mob has the type " + _local_2[1]) + ".")));
-                    };
-                };
+                    }
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/ali (.+)$");
             if (_local_2 != null)
             {
@@ -280,8 +280,8 @@ public class ParseChatMessageCommand
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_3 + " (") + ObjectLibrary.getIdFromType(_local_3)) + ") already exists in loot ignore list.")));
                         return (true);
-                    };
-                };
+                    }
+                }
                 if (_local_3 != 2581)
                 {
                     Parameters.data_.lootIgnore.push(_local_3);
@@ -290,10 +290,10 @@ public class ParseChatMessageCommand
                 else
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", "No item matched the query."));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/awn (\\w+)$");
             if (_local_2 != null)
             {
@@ -305,16 +305,16 @@ public class ParseChatMessageCommand
                         _local_4 = true;
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in notifier keyword list.')));
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_4 == false)
                 {
                     Parameters.data_.wordNotiList.push(_local_2[1]);
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to notifier keyword list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -337,9 +337,9 @@ public class ParseChatMessageCommand
                         Parameters.data_.AAIgnore.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from ignore list.")));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
@@ -349,11 +349,11 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (_local_2[1] + " not found in ignore list.")));
-                    };
-                };
+                    }
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rex (\\d+)$");
             if (_local_2 != null)
             {
@@ -367,9 +367,9 @@ public class ParseChatMessageCommand
                         Parameters.data_.AAException.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from exception list.")));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
@@ -379,11 +379,11 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (_local_2[1] + " not found in exception list.")));
-                    };
-                };
+                    }
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rsp (.+)$");
             if (_local_2 != null)
             {
@@ -397,16 +397,16 @@ public class ParseChatMessageCommand
                         Parameters.data_.spamFilter.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from spamfilter list.')));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in spamfilter list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rfr (\\w+)$");
             if (_local_2 != null)
             {
@@ -420,13 +420,13 @@ public class ParseChatMessageCommand
                         Parameters.data_.friendList2.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from friend list.')));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in friend list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
             };
@@ -443,16 +443,16 @@ public class ParseChatMessageCommand
                         Parameters.data_.tptoList.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from teleport keyword list.')));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in teleport keyword list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rpr (\\d+)$");
             if (_local_2 != null)
             {
@@ -466,9 +466,9 @@ public class ParseChatMessageCommand
                         Parameters.data_.AAPriority.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from auto aim priority list.")));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
@@ -478,11 +478,11 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (_local_2[1] + " not found in auto aim priority list.")));
-                    };
-                };
+                    }
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rli (.+)$");
             if (_local_2 != null)
             {
@@ -495,9 +495,9 @@ public class ParseChatMessageCommand
                         Parameters.data_.lootIgnore.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_5 + " (") + ObjectLibrary.getIdFromType(_local_5)) + ") removed from loot ignore list.")));
                         return (true);
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_5 != 2581)
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_5 + " (") + ObjectLibrary.getIdFromType(_local_5)) + ") not found in loot ignore list.")));
@@ -505,10 +505,10 @@ public class ParseChatMessageCommand
                 else
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", "No item matched the query."));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rwn (\\w+)$");
             if (_local_2 != null)
             {
@@ -522,16 +522,16 @@ public class ParseChatMessageCommand
                         Parameters.data_.wordNotiList.splice(_local_4, 1);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from notifier keyword list.')));
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 if (_local_3 == false)
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in notifier keyword list.')));
-                };
+                }
                 Parameters.save();
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -546,9 +546,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.AAException[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAException[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAException[_local_2]].@id : ""))));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/iglist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Auto aim ignore list (" + Parameters.data_.AAIgnore.length) + " mobs):")));
@@ -557,9 +557,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.AAIgnore[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAIgnore[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAIgnore[_local_2]].@id : ""))));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/splist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Spamfilter list (" + Parameters.data_.spamFilter.length) + " filtered words):")));
@@ -568,9 +568,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.spamFilter[_local_2]));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/frlist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Friend list (" + Parameters.data_.friendList2.length) + " friends):")));
@@ -579,9 +579,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.friendList2[_local_2]));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/tplist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Teleport keyword list (" + Parameters.data_.tptoList.length) + " keywords):")));
@@ -590,9 +590,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.tptoList[_local_2]));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/prlist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Auto aim priority list (" + Parameters.data_.AAPriority.length) + " mobs):")));
@@ -601,9 +601,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.AAPriority[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAPriority[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAPriority[_local_2]].@id : ""))));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/lilist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Loot ignore list (" + Parameters.data_.lootIgnore.length) + " items):")));
@@ -612,9 +612,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.lootIgnore[_local_2] + " - ") + ObjectLibrary.getIdFromType(Parameters.data_.lootIgnore[_local_2]))));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             if (_arg_1 == "/wnlist")
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Notifier keyword list (" + Parameters.data_.wordNotiList.length) + " keywords):")));
@@ -623,9 +623,9 @@ public class ParseChatMessageCommand
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.wordNotiList[_local_2]));
                     _local_2++;
-                };
+                }
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -637,56 +637,56 @@ public class ParseChatMessageCommand
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim ignore list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/exclear")
             {
                 Parameters.data_.AAException = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim exception list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/spclear")
             {
                 Parameters.data_.spamFilter = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Spamfilter list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/frclear")
             {
                 Parameters.data_.friendList2 = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Friend list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/tpclear")
             {
                 Parameters.data_.tptoList = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Teleport keyword list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/prclear")
             {
                 Parameters.data_.AAPriority = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim priority list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/liclear")
             {
                 Parameters.data_.lootIgnore = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Loot ignore list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/wnclear")
             {
                 Parameters.data_.wordNotiList = new Array();
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Notifier keyword list cleared."));
                 Parameters.save();
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -698,49 +698,49 @@ public class ParseChatMessageCommand
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default ignore list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/exdefault")
             {
                 Parameters.data_.AAException = [3414, 3417, 3448, 3449, 3472, 3334, 5952, 2354, 2369, 3368, 3366, 3367, 3391, 3389, 3390, 5920, 2314, 3412, 3639, 3634, 2327, 1755, 24582, 24351, 24363, 24135, 24133, 24134, 24132, 24136, 3356, 3357, 3358, 3359, 3360, 3361, 3362, 3363, 3364, 2352, 28780, 28781, 28795, 28942, 28957, 28988, 28938, 29291, 29018, 29517, 24338, 29580, 29712, 6282, 29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default exception list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/spdefault")
             {
                 Parameters.data_.spamFilter = ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org"];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default spamfilter list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/tpdefault")
             {
                 Parameters.data_.tptoList = ["lab", "manor", "sew"];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default teleport keyword list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/prdefault")
             {
                 Parameters.data_.AAPriority = [29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262, 6282, 1646];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default auto aim priority list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/lidefault")
             {
                 Parameters.data_.lootIgnore = [9018, 9019, 9020, 9021, 9022, 9023, 9024, 9025, 3861, 2635];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default loot ignore list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             if (_arg_1 == "/wndefault")
             {
                 Parameters.data_.wordNotiList = ["tp"];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default notifier keyword list restored."));
                 Parameters.save();
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -781,18 +781,22 @@ public class ParseChatMessageCommand
             }
             switch (this.data.toLowerCase())
             {
+                case "/blocktp":
+                    Parameters.data_.blockTP = (!Parameters.data_.blockTP);
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockTP) ? "Teleport Blocked" : "Teleport Allowed")));
+                    return (true);
                 case "/statustext":
-                    Parameters.data_.statusText = (!(Parameters.data_.statusText));
+                    Parameters.data_.statusText = (!Parameters.data_.statusText);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.statusText) ? "Status Text: On" : "Status Text: Off")));
                     return (true);
                 case "/dodbot":
-                    Parameters.data_.dodBot = (!(Parameters.data_.dodBot));
+                    Parameters.data_.dodBot = (!Parameters.data_.dodBot);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Doer of Deeds Bot: On" : "Doer of Deeds Bot: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Use /aex 355 to add walls to aim list. Use /aig 1711 and /aig 1712 to add chickens to ignore list" : "")));
                     return (true);
                 case "/lf":
                 case "/lockfilter":
-                    Parameters.data_.hideLockList = (!(Parameters.data_.hideLockList));
+                    Parameters.data_.hideLockList = (!Parameters.data_.hideLockList);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players")));
                     return (true);
                 case "/serv":
@@ -819,9 +823,9 @@ public class ParseChatMessageCommand
                         {
                             needed = (needed + (((_local_14[_local_10] + " ") + _local_15[_local_10]) + ", "));
                             _local_13 = false;
-                        };
+                        }
                         _local_10++;
-                    };
+                    }
                     needed = ((_local_13) ? "You're maxed" : (needed.substr(0, (needed.length - 2)) + " to be maxed"));
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", needed));
                     return (true);
@@ -860,7 +864,7 @@ public class ParseChatMessageCommand
                     else
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", "Whoa, that was close! Your items almost disappeared."));
-                    };
+                    }
                     return (true);
                 case "/unname":
                 case "/name":
@@ -897,7 +901,7 @@ public class ParseChatMessageCommand
                     {
                         afkStart = new CJDateUtil();
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", "Your messages will be saved, have fun."));
-                    };
+                    }
                     TextHandler.afkMsg = "";
                     return (true);
                 case "/re":
@@ -923,12 +927,12 @@ public class ParseChatMessageCommand
                                 if (_local_9 != 0)
                                 {
                                     _local_9--;
-                                };
-                            };
+                                }
+                            }
                             _local_10++;
-                        };
+                        }
                         _local_9++;
-                    };
+                    }
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", ((("Save completed. Movement data compressed from " + _local_11) + " steps to ") + _local_26.recorded.length)));
                     return (true);
                 case "/play":
@@ -954,9 +958,9 @@ public class ParseChatMessageCommand
                         {
                             _local_19.push(_local_9);
                             if (_local_19.length == 3) break;
-                        };
+                        }
                         _local_9++;
-                    };
+                    }
                     if (_local_19.length == 0)
                     {
                         Parameters.data_.AAIgnore.push(2309);
@@ -971,9 +975,9 @@ public class ParseChatMessageCommand
                         {
                             Parameters.data_.AAIgnore.splice((_local_19[_local_9] - _local_9), 1);
                             _local_9++;
-                        };
+                        }
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", "Constructs removed from ignore list."));
-                    };
+                    }
                     Parameters.save();
                     return (true);
                 default:
@@ -985,27 +989,27 @@ public class ParseChatMessageCommand
                         afkStart = new CJDateUtil();
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", "Your messages will be saved, have fun."));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/load (\\d{1,2})$");
                     if (_local_7 != null)
                     {
                         this.hudModel.gameSprite.hudView.miniMap.miniMapData_ = AssetLoader.maps[(parseInt(_local_7[1]) - 1)];
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", "Loaded from file."));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/player (\\w+)$");
                     if (_local_7 != null)
                     {
                         navigateToURL(new URLRequest(("https://www.realmeye.com/player/" + _local_7[1])), "_blank");
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/sell (\\d{1,2})$");
                     if (_local_7 != null)
                     {
                         _local_21 = (int(_local_7[1]) + 3);
                         navigateToURL(new URLRequest((("https://www.realmeye.com/offers-to/buy/" + _local_12.equipment_[_local_21]) + "/2793")), "_blank");
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/re (\\w+)$");
                     if (_local_7 != null)
                     {
@@ -1014,7 +1018,7 @@ public class ParseChatMessageCommand
                         lastTellTo = _local_7[1];
                         lastMsg = _local_22;
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.match("^/name (.+)$");
                     if (_local_7 != null)
                     {
@@ -1022,7 +1026,7 @@ public class ParseChatMessageCommand
                         Parameters.save();
                         this.hudModel.gameSprite.hudView.characterDetails.setName("");
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/timer (\\d+) ?(\\d*)$");
                     if (_local_7 != null) {
                         Parameters.timerActive = true;
@@ -1037,7 +1041,7 @@ public class ParseChatMessageCommand
                         Parameters.save();
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto pot percentage set to " + _local_7[1])));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/automana (\\d+)$");
                     if (_local_7 != null)
                     {
@@ -1045,7 +1049,7 @@ public class ParseChatMessageCommand
                         Parameters.save();
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto mana percentage set to " + _local_7[1])));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/autonex (\\d+)$");
                     if (_local_7 != null)
                     {
@@ -1053,7 +1057,7 @@ public class ParseChatMessageCommand
                         Parameters.save();
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto nexus percentage set to " + _local_7[1])));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/autoheal (\\d+)$");
                     if (_local_7 != null)
                     {
@@ -1061,7 +1065,7 @@ public class ParseChatMessageCommand
                         Parameters.save();
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto heal percentage set to " + _local_7[1])));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/give (\\w+) (\\d{1,8})$");
                     if (_local_7 != null)
                     {
@@ -1074,18 +1078,18 @@ public class ParseChatMessageCommand
                             if (_local_7[2].substr((_local_9 - 4), 1) == "1")
                             {
                                 _local_23[_local_9] = true;
-                            };
+                            }
                             _local_9++;
-                        };
+                        }
                         GameServerConnectionConcrete.sendingGift = _local_23;
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/find (.+)$");
                     if (_local_7 != null)
                     {
                         this.findItem(this.findMatch2(_local_7[1]));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/setfinder (.+)$");
                     if (_local_7 != null)
                     {
@@ -1093,7 +1097,7 @@ public class ParseChatMessageCommand
                         _local_1 = ObjectLibrary.getIdFromType(Parameters.data_.keyFinderid);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Finder set to " + _local_1)));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/take (.+)$");
                     if (_local_7 != null)
                     {
@@ -1101,17 +1105,17 @@ public class ParseChatMessageCommand
                         {
                             this.addTextLine.dispatch(ChatMessage.make("*Help*", "Use the command in vault and run over the chest you wish to interact with."));
                             return (true);
-                        };
+                        }
                         if (_local_7[1] == "pots")
                         {
                             _local_12.collect = int.MAX_VALUE;
                             this.addTextLine.dispatch(ChatMessage.make("*Help*", "Taking Potion(s) from vault chests"));
                             return (true);
-                        };
+                        }
                         _local_12.collect = this.findMatch2(_local_7[1]);
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Taking " + ObjectLibrary.getIdFromType(_local_12.collect)) + "(s) from vault chests")));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/put (.+)$");
                     if (_local_7 != null)
                     {
@@ -1119,17 +1123,17 @@ public class ParseChatMessageCommand
                         {
                             this.addTextLine.dispatch(ChatMessage.make("*Help*", "Use the command in vault and run over the chest you wish to interact with."));
                             return (true);
-                        };
+                        }
                         if (_local_7[1] == "pots")
                         {
                             _local_12.collect = int.MIN_VALUE;
                             this.addTextLine.dispatch(ChatMessage.make("*Help*", "Putting Potion(s) to vault chests"));
                             return (true);
-                        };
+                        }
                         _local_12.collect = (0 - this.findMatch2(_local_7[1]));
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Putting " + ObjectLibrary.getIdFromType((0 - _local_12.collect))) + "(s) to vault chests")));
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/buy (\\w+) ?(\\w*)$");
                     if (_local_7 != null)
                     {
@@ -1140,9 +1144,9 @@ public class ParseChatMessageCommand
                         else
                         {
                             navigateToURL(new URLRequest(((("https://www.realmeye.com/offers-to/sell/" + this.findMatch2(_local_7[1])) + "/") + this.findMatch2(_local_7[2]))), "_blank");
-                        };
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/sell (\\w+) ?(\\w*)$");
                     if (_local_7 != null)
                     {
@@ -1153,9 +1157,9 @@ public class ParseChatMessageCommand
                         else
                         {
                             navigateToURL(new URLRequest(((("https://www.realmeye.com/offers-to/buy/" + this.findMatch2(_local_7[1])) + "/") + this.findMatch2(_local_7[2]))), "_blank");
-                        };
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/dye1 (.+)$");
                     if (_local_7 != null)
                     {
@@ -1170,9 +1174,9 @@ public class ParseChatMessageCommand
                             Parameters.data_.setTex1 = this.getTex1(this.findMatch2((_local_7[1] + " cloth")));
                             Parameters.save();
                             _local_12.setTex1(Parameters.data_.setTex1);
-                        };
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/dye2 (.+)$");
                     if (_local_7 != null)
                     {
@@ -1187,9 +1191,9 @@ public class ParseChatMessageCommand
                             Parameters.data_.setTex2 = this.getTex1(this.findMatch2((_local_7[1] + " cloth")));
                             Parameters.save();
                             _local_12.setTex2(Parameters.data_.setTex2);
-                        };
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/dye (.+)$");
                     if (_local_7 != null)
                     {
@@ -1209,9 +1213,9 @@ public class ParseChatMessageCommand
                             Parameters.save();
                             _local_12.setTex1(Parameters.data_.setTex1);
                             _local_12.setTex2(Parameters.data_.setTex2);
-                        };
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/skin (.+)$");
                     if (_local_7 != null)
                     {
@@ -1227,15 +1231,25 @@ public class ParseChatMessageCommand
                         {
                             Parameters.data_.nsetSkin = this.findSkinIndex(_local_7[1]);
                             Parameters.save();
-                        };
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/tp (\\w+)$");
                     if (_local_7 != null)
                     {
-                        _local_26.teleport(this.fixedName(_local_7[1]).name_);
+                        if (!Parameters.data_.blockTP) {
+                            _local_26.teleport(this.fixedName(_local_7[1]).name_);
+                        }
                         return (true);
-                    };
+                    }
+                    _local_7 = this.data.toLowerCase().match("^/teleport (\\w+)$");
+                    if (_local_7 != null)
+                    {
+                        if (!Parameters.data_.blockTP) {
+                            _local_26.teleport(this.fixedName(_local_7[1]).name_);
+                        }
+                        return (true);
+                    }
                     _local_7 = this.data.toLowerCase().match("^/follow (\\w+)$");
                     if (_local_7 != null)
                     {
@@ -1244,13 +1258,13 @@ public class ParseChatMessageCommand
                         _local_26.teleport(_local_24.name_);
                         _local_12.followTarget = _local_24;
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/setspd (-?\\d+)$");
                     if (_local_7 != null)
                     {
                         _local_12.speed_ = parseInt(_local_7[1]);
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.match("^/getid (\\w+)");
                     if (_local_7 != null)
                     {
@@ -1261,19 +1275,19 @@ public class ParseChatMessageCommand
                                 if (_local_7[1] == _local_25.name_.toLowerCase())
                                 {
                                     this.addTextLine.dispatch(ChatMessage.make("*Help*", ((_local_25.name_ + " has id ") + _local_25.objectId_)));
-                                };
-                            };
-                        };
+                                }
+                            }
+                        }
                         return (true);
-                    };
+                    }
                     _local_7 = this.data.toLowerCase().match("^/connect ([0-9.]+)$");
                     if (_local_7 != null)
                     {
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Connecting to " + _local_7[1])));
                         this.hudModel.gameSprite.dispatchEvent(new ReconnectEvent(new Server().setName("Custom").setAddress(_local_7[1]).setPort(2050), -2, false, this.hudModel.gameSprite.gsc_.charId_, getTimer(), new ByteArray(), false));
                         return (true);
-                    };
-            };
+                    }
+            }
             return (false);
         }
 
@@ -1325,10 +1339,10 @@ public class ParseChatMessageCommand
                     {
                         _local_5 = _local_2;
                         _local_4 = _local_3;
-                    };
+                    }
                     if (_local_5 == 0) break;
-                };
-            };
+                }
+            }
             return (_local_4);
         }
 
@@ -1346,9 +1360,9 @@ public class ParseChatMessageCommand
                 if (_arg_1 == _local_6[_local_8])
                 {
                     return (_local_7[_local_8]);
-                };
+                }
                 _local_8++;
-            };
+            }
             var _local_9:Array = _arg_1.split(" ");
             var _local_10:int = int.MAX_VALUE;
             for each (_local_3 in ObjectLibrary.itemLib)
@@ -1359,8 +1373,8 @@ public class ParseChatMessageCommand
                 {
                     _local_10 = _local_4;
                     _local_5 = _local_3;
-                };
-            };
+                }
+            }
             return (ObjectLibrary.idToType_[_local_5]);
         }
 
@@ -1400,12 +1414,12 @@ public class ParseChatMessageCommand
                     else
                     {
                         _local_5[_local_6].push(_local_4);
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 _local_5[_local_6][0] = _local_6;
                 _local_6++;
-            };
+            }
             _local_6 = 1;
             while (_local_6 <= _arg_1.length)
             {
@@ -1419,12 +1433,12 @@ public class ParseChatMessageCommand
                     else
                     {
                         _local_3 = 1;
-                    };
+                    }
                     _local_5[_local_6][_local_4] = Math.min((_local_5[(_local_6 - 1)][_local_4] + 1), (_local_5[_local_6][(_local_4 - 1)] + 1), (_local_5[(_local_6 - 1)][(_local_4 - 1)] + _local_3));
                     _local_4++;
-                };
+                }
                 _local_6++;
-            };
+            }
             return (_local_5[_arg_1.length][_arg_2.length]);
         }
 
@@ -1438,7 +1452,7 @@ public class ParseChatMessageCommand
             if (_arg_1 == 2581)
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "No item matched the query"));
-            };
+            }
             var _local_6:Vector.<Player> = new Vector.<Player>(0);
             var _local_7:AbstractMap = this.hudModel.gameSprite.map;
             var _local_9:Player = this.hudModel.gameSprite.map.player_;
@@ -1456,18 +1470,18 @@ public class ParseChatMessageCommand
                             if (_local_2[_local_4] == _arg_1)
                             {
                                 _local_8++;
-                            };
+                            }
                             _local_4++;
-                        };
+                        }
                         if (_local_8 > 0)
                         {
                             _local_6.push(_local_5);
                             _local_5.lastAltAttack_ = _local_8;
                             _local_8 = 0;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_local_6.length > 0)
             {
                 this.openDialog.dispatch(new FindMenu(this.hudModel.gameSprite, _local_6, ObjectLibrary.getIdFromType(_arg_1)));
@@ -1475,7 +1489,7 @@ public class ParseChatMessageCommand
             else
             {
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", ("No one has " + ObjectLibrary.getIdFromType(_arg_1))));
-            };
+            }
         }
 
         private function custMessages():Boolean
@@ -1553,9 +1567,9 @@ public class ParseChatMessageCommand
                         Parameters.data_.dbPre3[0] = _local_1[3];
                         Parameters.data_.dbPre3[1] = parseInt(_local_1[2]);
                         Parameters.data_.dbPre3[2] = false;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.addTextLine.dispatch(ChatMessage.make("*Help*", ("A new preset was created for effect ID " + _local_1[2])));
             Parameters.save();
             return (true);
@@ -1580,9 +1594,9 @@ public class ParseChatMessageCommand
                     if (this.data.substr(0, 9) == "/whisper ")
                     {
                         _local_2 = this.data.substr(9);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (_local_2 != "")
             {
                 _local_1 = _local_2.match("(\\w+) (.+)");
@@ -1593,8 +1607,8 @@ public class ParseChatMessageCommand
                     lastMsg = this.data;
                     this.hudModel.gameSprite.gsc_.playerText(this.data);
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -1609,27 +1623,21 @@ public class ParseChatMessageCommand
             if (this.tellHandle()) {
                 return;
             }
-            ;
             if (this.listCommands()) {
                 return;
             }
-            ;
             if (this.cjCommands(this.data)) {
                 return;
             }
-            ;
             if (this.custMessages()) {
                 return;
             }
-            ;
             if (this.effCom()) {
                 return;
             }
-            ;
             if (this.fsCommands(this.data)) {
                 return;
             }
-            ;
             if (this.data == "/help") {
                 this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, TextKey.HELP_COMMAND));
             }
@@ -1647,22 +1655,19 @@ public class ParseChatMessageCommand
                             _local_1[_local_3.objectType_] = ((_local_1[_local_3.objectType_] != undefined) ? (_local_1[_local_3.objectType_] + 1) : uint(1));
                             _local_2++;
                         }
-                        ;
                     }
-                    ;
                     _local_4 = "";
                     for (_local_5 in _local_1) {
                         _local_4 = (_local_4 + (((" " + ObjectLibrary.typeToDisplayId_[_local_5]) + ": ") + _local_1[_local_5]));
                     }
-                    ;
                     this.addTextLine.dispatch(ChatMessage.make("", ((("Classes online (" + _local_2) + "):") + _local_4)));
                 }
                 else {
-                            lastMsg = this.data;
-                            this.hudModel.gameSprite.gsc_.playerText(this.data);
-                        }
-                    }
+                    lastMsg = this.data;
+                    this.hudModel.gameSprite.gsc_.playerText(this.data);
                 }
+            }
+        }
 
 
     }
