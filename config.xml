@@ -135,7 +135,7 @@
       <keep-generated-actionscript>false</keep-generated-actionscript>
       <!-- compiler.library-path: list of SWC files or directories that contain SWC files-->
       <library-path>
-         <path-element>D:\IDEA\FLEX4.6/frameworks/locale/{locale}</path-element>
+         <path-element>D:/IDEA/FLEX4.6/frameworks/locale/{locale}</path-element>
          <path-element>D:/IDEA/FLEX4.6/frameworks/libs/core.swc</path-element>
          <path-element>D:/IDEA/FLEX4.6/frameworks/libs/osmf.swc</path-element>
          <path-element>D:/IDEA/FLEX4.6/frameworks/libs/textLayout.swc</path-element>

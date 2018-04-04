@@ -862,7 +862,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped!", null));
             this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
-            this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot.", null));
+            this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
             this.tombDeactivate();
         }
 
