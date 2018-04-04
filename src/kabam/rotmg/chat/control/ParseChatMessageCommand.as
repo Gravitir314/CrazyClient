@@ -47,8 +47,6 @@ public class ParseChatMessageCommand
         private static var lastMsg:String = "";
         private static var lastTell:String = "";
         private static var lastTellTo:String = "";
-        private static var slot:int = -1;
-        public static var mmap:BitmapData;
         private static var needed:String;
         public static var switch_:Boolean = false;
         private static var afkStart:CJDateUtil;
@@ -61,8 +59,6 @@ public class ParseChatMessageCommand
         public var addTextLine:AddTextLineSignal;
         [Inject]
         public var openDialog:OpenDialogSignal;
-        private var potionInventoryModel:PotionInventoryModel;
-        private var useBuyPotionSignal:UseBuyPotionSignal;
 
 
         private function fsCommands(_arg_1:String):Boolean
@@ -775,8 +771,6 @@ public class ParseChatMessageCommand
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
             switch (this.data.toLowerCase())
             {
-                case "/hidehacks":
-                    Options.toggleHax();
                 case "/swmove":
                     Parameters.data_.SWNoTileMove = (!Parameters.data_.SWNoTileMove);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
@@ -1631,8 +1625,6 @@ public class ParseChatMessageCommand
             var _local_3:GameObject;
             var _local_4:String;
             var _local_5:* = undefined;
-            var _local_6:Array = this.data.split(" ");
-            var _local_7:String = _local_6[0];
             if (!Options.hidden) {
                 if (this.tellHandle()) {
                     return;
@@ -1678,8 +1670,12 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ((("Classes online (" + _local_2) + "):") + _local_4)));
                 }
                 else {
-                    lastMsg = this.data;
-                    this.hudModel.gameSprite.gsc_.playerText(this.data);
+                    if (this.data == "/hidehacks") {
+                        Options.toggleHax();
+                    } else {
+                        lastMsg = this.data;
+                        this.hudModel.gameSprite.gsc_.playerText(this.data);
+                    }
                 }
             }
         }

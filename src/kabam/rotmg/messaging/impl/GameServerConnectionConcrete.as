@@ -837,7 +837,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         if (_local_5 > 1)
                         {
                             _local_20 = false;
-                        };
+                        }
                         if (_local_16[_local_5].substr(0, 1) == "v")
                         {
                             _local_17 = -5;
@@ -862,9 +862,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
                                             Parameters.save();
                                             _local_20 = false;
                                             break;
-                                        };
+                                        }
                                         _local_4++;
-                                    };
+                                    }
                                 }
                                 else
                                 {
@@ -880,7 +880,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                                             {
                                                 _local_16[_local_5] = _local_7[_local_10];
                                                 break;
-                                            };
+                                            }
                                         }
                                         else
                                         {
@@ -888,10 +888,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
                                             {
                                                 _local_16[_local_5] = _local_7[_local_10];
                                                 break;
-                                            };
-                                        };
+                                            }
+                                        }
                                         _local_10++;
-                                    };
+                                    }
                                     _local_11 = _local_16[_local_5];
                                     if (_local_11 > 0)
                                     {
@@ -899,7 +899,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                                         if (_local_5 == 1)
                                         {
                                             _local_20 = true;
-                                        };
+                                        }
                                     }
                                     else
                                     {
@@ -917,19 +917,19 @@ public class GameServerConnectionConcrete extends GameServerConnection
                                                         _local_17 = 0;
                                                         _local_19 = true;
                                                         break;
-                                                    };
-                                                };
+                                                    }
+                                                }
                                                 break;
-                                            };
+                                            }
                                             _local_4++;
-                                        };
-                                    };
-                                };
-                            };
-                        };
-                    };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     _local_5++;
-                };
+                }
                 if (sRec)
                 {
                     _local_2 = new Server();
@@ -970,12 +970,12 @@ public class GameServerConnectionConcrete extends GameServerConnection
                             _local_2.address = _local_3[0];
                             PlayGameCommand.currealm = _local_3[2];
                             _local_2.port = 2050;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 gs_.dispatchEvent(new ReconnectEvent(_local_2, _local_17, false, _local_18, -1, new ByteArray(), false));
                 return;
-            };
+            }
             serverConnection.sendMessage(_local_15);
         }
 
@@ -988,8 +988,8 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 if (_local_2.name == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -999,15 +999,15 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (!gs_)
             {
                 return (false);
-            };
+            }
             if ((((_arg_3 == 1) && (_arg_2 == _arg_1)) || ((_arg_6 == 1) && (_arg_5 == _arg_1))))
             {
                 if (_arg_1.mapAutoAbil)
                 {
                     _arg_1.mapAutoAbil = false;
                     _arg_1.notifyPlayer("Auto Ability: Disabled", 0xFF00, 1500);
-                };
-            };
+                }
+            }
             var _local_9:InvSwap = (this.messages.require(INVSWAP) as InvSwap);
             _local_9.time_ = gs_.lastUpdate_;
             _local_9.position_.x_ = _arg_1.x_;
@@ -1024,7 +1024,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 _local_8 = _arg_2.equipment_[_arg_3];
                 _arg_2.equipment_[_arg_3] = _arg_5.equipment_[_arg_6];
                 _arg_5.equipment_[_arg_6] = _local_8;
-            };
+            }
             SoundEffectLibrary.play("inventory_move_item");
             return (true);
         }
@@ -1034,7 +1034,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (!gs_)
             {
                 return (false);
-            };
+            }
             var _local_8:InvSwap = (this.messages.require(INVSWAP) as InvSwap);
             _local_8.time_ = gs_.lastUpdate_;
             _local_8.position_.x_ = _arg_1.x_;
@@ -1055,8 +1055,8 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 if (_arg_4 == PotionInventoryModel.MAGIC_POTION_ID)
                 {
                     _arg_1.magicPotionCount_++;
-                };
-            };
+                }
+            }
             serverConnection.sendMessage(_local_8);
             SoundEffectLibrary.play("inventory_move_item");
             return (true);
@@ -1072,7 +1072,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (((!(_arg_2 == PotionInventoryModel.HEALTH_POTION_SLOT)) && (!(_arg_2 == PotionInventoryModel.MAGIC_POTION_SLOT))))
             {
                 _arg_1.equipment_[_arg_2] = ItemConstants.NO_ITEM;
-            };
+            }
             this.ignoreNext = true;
         }
 
@@ -1099,15 +1099,15 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 {
                     this.addTextLine.dispatch(ChatMessage.make("", (_local_4.attribute("id") + " not consumed. Already at max.")));
                     return (false);
-                };
+                }
                 this.applyUseItem(_arg_1, _arg_2, _local_3, _local_4);
                 SoundEffectLibrary.play("use_potion");
                 return (true);
-            };
+            }
             if (this.swapEquip(_arg_1, _arg_2, _local_4))
             {
                 return (true);
-            };
+            }
             SoundEffectLibrary.play("error");
             return (false);
         }
@@ -1129,10 +1129,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     {
                         this.swapItems(_arg_1, _local_6, _arg_2);
                         return (true);
-                    };
+                    }
                     _local_6++;
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -1264,7 +1264,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (((gs_.map) && (gs_.map.name_ == "Davy Jones' Locker")))
             {
                 ShowHideKeyUISignal.instance.dispatch();
-            };
+            }
         }
 
         override public function buy(_arg_1:int, _arg_2:int):void
@@ -1273,16 +1273,16 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (outstandingBuy_ != null)
             {
                 return;
-            };
+            }
             var _local_4:SellableObject = gs_.map.goDict_[_arg_1];
             if (_local_4 == null)
             {
                 return;
-            };
+            }
             if (_local_4.currency_ == Currency.GOLD)
             {
                 _local_3 = (((gs_.model.getConverted()) || (this.player.credits_ > 100)) || (_local_4.price_ > this.player.credits_));
-            };
+            }
             outstandingBuy_ = new OutstandingBuy(_local_4.soldObjectInternalName(), _local_4.price_, _local_4.currency_, _local_3);
             var _local_5:Buy = (this.messages.require(BUY) as Buy);
             _local_5.objectId_ = _arg_1;
@@ -1376,7 +1376,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (this.playerId_ == -1)
             {
                 return;
-            };
+            }
             if (((gs_.map) && (gs_.map.name_ == "Arena")))
             {
                 serverConnection.sendMessage(this.messages.require(ACCEPT_ARENA_DEATH));
@@ -1386,7 +1386,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 reconNexus.charId_ = charId_;
                 serverConnection.sendMessage(this.messages.require(ESCAPE));
                 this.checkDavyKeyRemoval();
-            };
+            }
         }
 
         override public function gotoQuestRoom():void
@@ -1428,19 +1428,19 @@ public class GameServerConnectionConcrete extends GameServerConnection
             _local_2.buildVersion_ = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
             if (claimkey != "")
             {
-                _local_2.gameId_ = -11;
+                _local_2.gameId_ = Parameters.DAILYQUESTROOM_GAMEID;
             }
             else
             {
                 if (vaultSelect)
                 {
-                    _local_2.gameId_ = -5;
+                    _local_2.gameId_ = Parameters.VAULT_GAMEID
                 }
                 else
                 {
                     _local_2.gameId_ = gameId_;
-                };
-            };
+                }
+            }
             _local_2.guid_ = this.rsaEncrypt(_local_1.getUserId());
             _local_2.password_ = this.rsaEncrypt(_local_1.getPassword());
             _local_2.secret_ = this.rsaEncrypt(_local_1.getSecret());

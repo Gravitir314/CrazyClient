@@ -206,6 +206,10 @@
       <Explanation>Shows the server and realm you're on</Explanation>
    </Article>
    <Article>
+      <Command>/recondelay &lt;value&gt;</Command>
+      <Explanation>Set reconnect delay to custom value. Default: 100</Explanation>
+   </Article>
+   <Article>
       <Command>/hidehacks</Command>
       <Explanation>Toggle visual hacks to take screenshot.</Explanation>
    </Article>

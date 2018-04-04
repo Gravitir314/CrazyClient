@@ -912,7 +912,7 @@ public class MapUserInput
                         reconRandom = reconVault;
                         reconRandom.charId_ = this.gs_.gsc_.charId_;
                         reconRandom.server_.name = "Random";
-                        reconRandom.gameId_ = -3;
+                        reconRandom.gameId_ = Parameters.RANDOM_REALM_GAMEID;
                         this.gs_.dispatchEvent(reconRandom);
                     };
                 case Parameters.data_.ReconDung:

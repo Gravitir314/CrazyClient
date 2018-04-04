@@ -20,8 +20,8 @@ public class Parameters
 
         public static const BUILD_VERSION:String = "X24.0";
         public static const MINOR_VERSION:String = "0";
-        public static const CLIENT_VERSION:String = "New notification system";
-        public static const COPYRIGHT_TEXT:String = "0.37";
+        public static const CLIENT_VERSION:String = "";
+        public static const COPYRIGHT_TEXT:String = "";
         public static const ENABLE_ENCRYPTION:Boolean = true;
         public static const PORT:int = 2050;
         public static const ALLOW_SCREENSHOT_MODE:Boolean = true;
