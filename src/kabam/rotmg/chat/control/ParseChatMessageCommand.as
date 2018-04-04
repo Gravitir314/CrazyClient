@@ -715,7 +715,7 @@ public class ParseChatMessageCommand
             }
             if (_arg_1 == "/tpdefault")
             {
-                Parameters.data_.tptoList = ["lab", "manor", "sew"];
+                Parameters.data_.tptoList = ["tp"];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default teleport keyword list restored."));
                 Parameters.save();
                 return (true);

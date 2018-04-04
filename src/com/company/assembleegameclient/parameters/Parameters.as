@@ -414,8 +414,8 @@ public class Parameters
             setDefault("spamFilter", ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org"]);
             setDefault("eventCalls", ["testx", "Skull_Shrine.new", "Pentaract.new", "Cube_God.new", "Ghost_Ship.new", "shtrs_Defense_System.new", "Grand_Sphinx.new", "Hermit_God.new", "Temple_Encounter.new", "Lord_of_the_Lost_Lands.new", "Dragon_Head_Leader.new", "LH_Lost_Sentry.new"]);
             setDefault("friendList2", []);
-            setDefault("tptoList", ["lab", "manor", "sew"]);
-            setDefault("wordNotiList", ["tp"]);
+            setDefault("tptoList", ["tp", "udl", "manor"]);
+            setDefault("wordNotiList", ["tp", "udl", "manor"]);
             setDefault("lootIgnore", [9018, 9019, 9020, 9021, 9022, 9023, 9024, 9025, 3861, 2635, 7718, 7719, 7720, 7722, 7727, 7730]);
             setDefault("wMenu", true);
             setDefault("conCom", "/con");
