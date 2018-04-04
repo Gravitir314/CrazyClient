@@ -1038,7 +1038,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("curseIndication", makeOnOffLabels(), [true, false], "Curse Indication", "Makes enemies inflicted by Curse glow red.", null));
             this.addOptionAndPosition(new ChoiceOption("rotateSpeed", this.OneTen(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Rotate Speed", "Change how fast your camera rotates. ( default is 3 )", this.updateRotate));
             this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
-            this.addOptionAndPosition(new KeyMapper("Beekey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
+            this.addOptionAndPosition(new KeyMapper("finderKey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
         }
 
         private function addGraphicsOptions():void

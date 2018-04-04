@@ -757,7 +757,7 @@ public class MapUserInput
                     };
                     _local_21.notifyPlayer(_local_14, 0xFF00, (1000 + (500 * _local_13)));
                     break;
-                case Parameters.data_.Beekey:
+                case Parameters.data_.finderKey:
                     _local_6 = new Array();
                     for each (_local_2 in this.gs_.map.goDict_)
                     {

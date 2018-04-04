@@ -25,6 +25,7 @@ public class Parameters
         public static const ENABLE_ENCRYPTION:Boolean = true;
         public static const PORT:int = 2050;
         public static const ALLOW_SCREENSHOT_MODE:Boolean = true;
+        public static const USE_NEW_FRIENDS_UI:Boolean = false;
         public static const FELLOW_GUILD_COLOR:uint = 10944349;
         public static const NAME_CHOSEN_COLOR:uint = 0xFCDF00;
         public static var root:DisplayObject;
@@ -373,15 +374,15 @@ public class Parameters
             setDefault("curBoss", 3368);
             setDefaultKey("tombCycle", KeyCodes.UNSET);
             setDefaultKey("incFinder", KeyCodes.UNSET);
-            setDefaultKey("Beekey", KeyCodes.UNSET);
+            setDefaultKey("finderKey", KeyCodes.UNSET);
             setDefaultKey("maxPrism", KeyCodes.UNSET);
             setDefaultKey("tpto", KeyCodes.UNSET);
             setDefaultKey("pbToggle", KeyCodes.UNSET);
-            setDefault("clientSwap", true);
-            setDefault("slideOnIce", false);
+            setDefault("clientSwap", false);
+            setDefault("slideOnIce", true);
             setDefault("autoAbil", false);
-            setDefault("autoHealP", 60);
-            setDefault("autoPot", 60);
+            setDefault("autoHealP", 70);
+            setDefault("autoPot", 35);
             setDefault("autoMana", 0);
             setDefault("servName", null);
             setDefault("servAddr", null);
@@ -450,7 +451,7 @@ public class Parameters
             setDefault("deactPre", true);
             setDefault("ninjaTap", true);
             setDefault("palaSpam", true);
-            setDefault("bigBag", false);
+            setDefault("bigBag", true);
             setDefault("speedy", false);
             setDefault("setTex1", 0);
             setDefault("setTex2", 0);
