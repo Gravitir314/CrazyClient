@@ -981,6 +981,13 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     return (true);
                 default:
+                    _local_7 = this.data.toLowerCase().match("^/recondelay (\\d*\\.*\\d+)$");
+                    if (_local_7 != null) {
+                        Parameters.RECONNECT_DELAY = _local_7[1];
+                        Parameters.save();
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Reconnect delay: " + Parameters.RECONNECT_DELAY)));
+                        return (true);
+                    }
                     _local_7 = this.data.toLowerCase().match("^/colo (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.coloOffset = _local_7[1];
