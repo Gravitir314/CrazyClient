@@ -851,7 +851,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                             }
                             else
                             {
-                                if ((((_local_16[_local_5].length > 2) && (((_local_16[_local_5].substr(0, 2) == "eu") || (_local_16[_local_5].substr(0, 2) == "us")) || (_local_16[_local_5].substr(0, 3) == "ase"))) || ((_local_16[_local_5].length == 2) && (_local_16[_local_5].substr(0, 2) == "ae"))))
+                                if ((((_local_16[_local_5].length > 2) && (((_local_16[_local_5].substr(0, 2) == "eu") || (_local_16[_local_5].substr(0, 2) == "us")) || (_local_16[_local_5].substr(0, 3) == "ase")  || (_local_16[_local_5].substr(0, 3) == "aus"))) || ((_local_16[_local_5].length == 2) && (_local_16[_local_5].substr(0, 2) == "ae"))))
                                 {
                                     _local_4 = 0;
                                     while (_local_4 < this.abbrs.length)

@@ -36,7 +36,6 @@ public class TabStripView extends Sprite
         public var imageFactory:ImageFactory;
         public var tabs:Vector.<TabView> = new Vector.<TabView>();
         public var currentTabIndex:int;
-        public var friendsBtn:IconButton;
         private var _width:Number;
         private var _height:Number;
         private var contents:Vector.<Sprite> = new Vector.<Sprite>();
@@ -50,15 +49,6 @@ public class TabStripView extends Sprite
             this.drawBackground();
             addChild(this.containerSprite);
             this.containerSprite.y = TabConstants.TAB_TOP_OFFSET;
-        }
-
-        public function initFriendList(_arg_1:ImageFactory, _arg_2:IconButtonFactory, _arg_3:Function):void
-        {
-            this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("lofiInterfaceBig", 13), "", TextKey.OPTIONS_FRIEND, "");
-            this.friendsBtn.x = 160;
-            this.friendsBtn.y = 6;
-            this.friendsBtn.addEventListener(MouseEvent.CLICK, _arg_3);
-            addChild(this.friendsBtn);
         }
 
         public function setSelectedTab(_arg_1:uint):void
