@@ -1,0 +1,138 @@
+﻿// Decompiled by AS3 Sorcerer 5.48
+// www.as3sorcerer.com
+
+//io.decagames.rotmg.fame.FameStatsLine
+
+package io.decagames.rotmg.fame
+{
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.AssetLibrary;
+import com.company.util.GraphicsUtil;
+
+import flash.display.Bitmap;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Sprite;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.utils.colors.Tint;
+
+import kabam.rotmg.text.model.FontModel;
+
+public class FameStatsLine extends Sprite
+    {
+
+        public static const TYPE_BONUS:int = 0;
+        public static const TYPE_STAT:int = 1;
+        public static const TYPE_TITLE:int = 2;
+
+        private var backgroundFill_:GraphicsSolidFill = new GraphicsSolidFill(0x222222);
+        private var path_:GraphicsPath = new GraphicsPath(new Vector.<int>(), new Vector.<Number>());
+        private var lineWidth:int = 306;
+        private var _tooltipText:String;
+        private var _lineType:int;
+        private var isLocked:*;
+        private var lock:Bitmap;
+
+        public function FameStatsLine(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:int, _arg_5:Boolean=false)
+        {
+            var _local_9:UILabel;
+            var _local_10:int;
+            super();
+            var _local_6:TextFormat = new TextFormat();
+            _local_6.color = 0x8A8A8A;
+            _local_6.font = FontModel.DEFAULT_FONT_NAME;
+            _local_6.size = 13;
+            _local_6.bold = true;
+            _local_6.align = TextFormatAlign.LEFT;
+            this.isLocked = _arg_5;
+            this._lineType = _arg_4;
+            if (_arg_4 == TYPE_TITLE)
+            {
+                _local_6.size = 15;
+                _local_6.color = 0xFFFFFF;
+            };
+            var _local_7:TextFormat = new TextFormat();
+            if (_arg_4 == TYPE_BONUS)
+            {
+                _local_7.color = 0xFFC800;
+            }
+            else
+            {
+                _local_7.color = 5544494;
+            };
+            _local_7.font = FontModel.DEFAULT_FONT_NAME;
+            _local_7.size = 13;
+            _local_7.bold = true;
+            _local_7.align = TextFormatAlign.LEFT;
+            var _local_8:UILabel = new UILabel();
+            _local_8.defaultTextFormat = _local_6;
+            addChild(_local_8);
+            _local_8.text = _arg_1;
+            if (!_arg_5)
+            {
+                _local_9 = new UILabel();
+                _local_9.defaultTextFormat = _local_7;
+                if (((_arg_2 == "0") || (_arg_2 == "0.00%")))
+                {
+                    _local_9.defaultTextFormat = _local_6;
+                };
+                if (_arg_4 == TYPE_BONUS)
+                {
+                    _local_9.text = ("+" + _arg_2);
+                }
+                else
+                {
+                    _local_9.text = _arg_2;
+                };
+                _local_9.x = ((this.lineWidth - 4) - _local_9.textWidth);
+                addChild(_local_9);
+                _local_9.y = 2;
+            }
+            else
+            {
+                _local_10 = 36;
+                this.lock = new Bitmap(TextureRedrawer.resize(AssetLibrary.getImageFromSet("lofiInterface2", 5), null, _local_10, true, 0, 0));
+                Tint.add(this.lock, 9971490, 1);
+                addChild(this.lock);
+                this.lock.x = ((this.lineWidth - _local_10) + 5);
+                this.lock.y = -8;
+            };
+            _local_8.y = 2;
+            _local_8.x = 2;
+            this._tooltipText = _arg_3;
+        }
+
+        public function clean():void
+        {
+            if (this.lock)
+            {
+                removeChild(this.lock);
+                this.lock.bitmapData.dispose();
+            };
+        }
+
+        public function drawBrightBackground():void
+        {
+            var _local_1:Vector.<IGraphicsData> = new <IGraphicsData>[this.backgroundFill_, this.path_, GraphicsUtil.END_FILL];
+            GraphicsUtil.drawCutEdgeRect(0, 0, this.lineWidth, 20, 5, [1, 1, 1, 1], this.path_);
+            graphics.drawGraphicsData(_local_1);
+        }
+
+        public function get tooltipText():String
+        {
+            return (this._tooltipText);
+        }
+
+        public function get lineType():int
+        {
+            return (this._lineType);
+        }
+
+
+    }
+}//package io.decagames.rotmg.fame
+
