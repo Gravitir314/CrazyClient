@@ -140,13 +140,13 @@ public class Options extends Sprite
                 };
                 if (hidden){
                     _local_4.y = 70;
-                };
+                }
                 addChild(_local_4);
                 _local_4.addEventListener(MouseEvent.CLICK, this.onTabClick);
                 this.tabs_.push(_local_4);
                 _local_6 = ((hidden) ? (_local_6 + 90) : (_local_6 + (800 / _local_7)));
                 _local_5++;
-            };
+            }
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
@@ -372,7 +372,7 @@ public class Options extends Sprite
             this.resetToDefaultsButton_.y = Y_POSITION;
             this.homeButton_.x = 780;
             this.homeButton_.y = Y_POSITION;
-            this.setSelected(this.tabs_[8]);
+            this.setSelected(this.tabs_[0]);
             stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown, false, 1);
             stage.addEventListener(KeyboardEvent.KEY_UP, this.onKeyUp, false, 1);
         }
