@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.dailyQuests.messages.data
 {
-    import flash.utils.IDataInput;
+import flash.utils.IDataInput;
 
-    public class QuestData 
+public class QuestData 
     {
 
         public var id:String;

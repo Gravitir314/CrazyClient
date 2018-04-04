@@ -5,13 +5,15 @@
 
 package io.decagames.rotmg.shop.mysteryBox
 {
-    import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-    import io.decagames.rotmg.ui.gird.UIGrid;
-    import flash.geom.Point;
-    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-    import io.decagames.rotmg.shop.mysteryBox.contentPopup.UIItemContainer;
+import flash.geom.Point;
 
-    public class MysteryBoxTile extends GenericBoxTile 
+import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
+import io.decagames.rotmg.shop.mysteryBox.contentPopup.UIItemContainer;
+import io.decagames.rotmg.ui.gird.UIGrid;
+
+import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+
+public class MysteryBoxTile extends GenericBoxTile
     {
 
         private var displayedItemsGrid:UIGrid;

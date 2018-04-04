@@ -5,12 +5,12 @@
 
 package io.decagames.rotmg.ui.tabs{
 import flash.display.Sprite;
-import __AS3__.vec.Vector;
-import org.osflash.signals.Signal;
 import flash.events.Event;
 import flash.geom.Point;
+
 import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import __AS3__.vec.*;
+
+import org.osflash.signals.Signal;
 
 public class UITabs extends Sprite {
 

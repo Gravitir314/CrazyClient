@@ -5,13 +5,15 @@
 
 package io.decagames.rotmg.dailyQuests.view.list
 {
-    import flash.display.Sprite;
-    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-    import flash.display.Bitmap;
-    import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
+import flash.display.Bitmap;
+import flash.display.Sprite;
 
-    public class DailyQuestListElement extends Sprite 
+import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
+
+import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+
+public class DailyQuestListElement extends Sprite 
     {
 
         private var _id:String;

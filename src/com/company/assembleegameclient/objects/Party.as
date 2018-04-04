@@ -12,10 +12,8 @@ import com.company.util.PointUtil;
 import flash.utils.Dictionary;
 
 import kabam.rotmg.chat.model.ChatMessage;
-
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.game.signals.AddTextLineSignal;
-
 import kabam.rotmg.messaging.impl.incoming.AccountList;
 
 public class Party

@@ -5,14 +5,15 @@
 
 package io.decagames.rotmg.shop
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import flash.text.TextFieldAutoSize;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import flash.display.Sprite;
+import flash.text.TextFieldAutoSize;
 
-    public class ShopBoxTag extends Sprite 
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class ShopBoxTag extends Sprite
     {
 
         public static const BLUE_TAG:String = "shop_blue_tag";

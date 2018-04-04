@@ -5,12 +5,13 @@
 
 package io.decagames.rotmg.ui.scroll
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import robotlegs.bender.framework.api.ILogger;
-    import flash.events.Event;
-    import flash.events.MouseEvent;
+import flash.events.Event;
+import flash.events.MouseEvent;
 
-    public class UIScrollbarMediator extends Mediator 
+import robotlegs.bender.bundles.mvcs.Mediator;
+import robotlegs.bender.framework.api.ILogger;
+
+public class UIScrollbarMediator extends Mediator 
     {
 
         [Inject]

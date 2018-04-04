@@ -5,12 +5,12 @@
 
 package io.decagames.rotmg.ui.sliceScaling
 {
-    import flash.display.Bitmap;
-    import flash.geom.Rectangle;
-    import flash.display.BitmapData;
-    import flash.geom.Point;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 
-    public class SliceScalingBitmap extends Bitmap 
+public class SliceScalingBitmap extends Bitmap
     {
 
         public static var SCALE_TYPE_NONE:String = "none";

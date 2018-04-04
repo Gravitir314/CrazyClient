@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.utils.colors
 {
-    import flash.utils.Dictionary;
+import flash.utils.Dictionary;
 
-    public class RandomColorGenerator 
+public class RandomColorGenerator 
     {
 
         private var colorDictionary:Dictionary;

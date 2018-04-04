@@ -5,17 +5,20 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-    import io.decagames.rotmg.ui.gird.UIGridElement;
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import flash.display.Bitmap;
-    import flash.text.TextFieldAutoSize;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import flash.display.BitmapData;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 
-    public class ItemBox extends UIGridElement 
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.text.TextFieldAutoSize;
+
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.gird.UIGridElement;
+import io.decagames.rotmg.ui.labels.UILabel;
+
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
+public class ItemBox extends UIGridElement
     {
 
         private var _itemId:String;

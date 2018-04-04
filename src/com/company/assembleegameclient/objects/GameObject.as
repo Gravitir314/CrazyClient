@@ -7,7 +7,6 @@ package com.company.assembleegameclient.objects
 {
 import com.company.assembleegameclient.engine3d.Model3D;
 import com.company.assembleegameclient.engine3d.Object3D;
-import com.company.assembleegameclient.game.MapUserInput;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.map.Square;

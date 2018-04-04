@@ -4,32 +4,35 @@
 //io.decagames.rotmg.shop.ShopPopupMediator
 
 package io.decagames.rotmg.shop{
-import robotlegs.bender.bundles.mvcs.Mediator;
-import kabam.rotmg.mysterybox.services.MysteryBoxModel;
-import kabam.rotmg.packages.services.PackageModel;
-import kabam.rotmg.game.model.GameModel;
-import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-import kabam.rotmg.core.signals.ShowTooltipSignal;
-import kabam.rotmg.core.signals.HideTooltipsSignal;
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.gird.UIGrid;
-import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-import kabam.rotmg.tooltips.HoverTooltipDelegate;
-import io.decagames.rotmg.ui.tabs.UITabs;
-import io.decagames.rotmg.ui.tabs.TabButton;
-import kabam.rotmg.packages.model.PackageInfo;
-import io.decagames.rotmg.ui.tabs.UITab;
-import io.decagames.rotmg.shop.packages.PackageBoxTile;
-import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
-import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-import io.decagames.rotmg.ui.texture.TextureParser;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.popups.header.PopupHeader;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+
+import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
+import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
+import io.decagames.rotmg.shop.packages.PackageBoxTile;
 import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.gird.UIGrid;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.tabs.TabButton;
+import io.decagames.rotmg.ui.tabs.UITab;
+import io.decagames.rotmg.ui.tabs.UITabs;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+import kabam.rotmg.core.signals.HideTooltipsSignal;
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.game.model.GameModel;
+import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+import kabam.rotmg.mysterybox.services.MysteryBoxModel;
+import kabam.rotmg.packages.model.PackageInfo;
+import kabam.rotmg.packages.services.PackageModel;
+import kabam.rotmg.tooltips.HoverTooltipDelegate;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
 
 public class ShopPopupMediator extends Mediator {
 

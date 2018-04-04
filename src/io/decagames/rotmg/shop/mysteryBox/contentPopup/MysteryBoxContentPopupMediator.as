@@ -5,18 +5,18 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    
-    import io.decagames.rotmg.ui.gird.UIGrid;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import flash.utils.Dictionary;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    
+import flash.utils.Dictionary;
 
-    public class MysteryBoxContentPopupMediator extends Mediator 
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.gird.UIGrid;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class MysteryBoxContentPopupMediator extends Mediator
     {
 
         [Inject]

@@ -5,10 +5,10 @@
 
 package io.decagames.rotmg.ui.labels
 {
-    import flash.text.TextField;
-    import flash.text.TextFieldAutoSize;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
 
-    public class UILabel extends TextField 
+public class UILabel extends TextField
     {
 
         public static var DEBUG:Boolean = false;

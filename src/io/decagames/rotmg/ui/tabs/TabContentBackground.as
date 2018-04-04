@@ -5,13 +5,14 @@
 
 package io.decagames.rotmg.ui.tabs
 {
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import flash.display.BitmapData;
-    import flash.geom.Rectangle;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import flash.geom.Point;
+import flash.display.BitmapData;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 
-    public class TabContentBackground extends SliceScalingBitmap 
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class TabContentBackground extends SliceScalingBitmap 
     {
 
         private var decorBitmapData:BitmapData;

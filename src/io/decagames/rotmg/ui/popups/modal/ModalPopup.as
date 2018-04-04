@@ -5,20 +5,19 @@
 
 package io.decagames.rotmg.ui.popups.modal
 {
-    import io.decagames.rotmg.ui.popups.BasePopup;
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import io.decagames.rotmg.ui.scroll.UIScrollbar;
-    
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import flash.geom.Rectangle;
-    import flash.display.DisplayObject;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.geom.Rectangle;
 
-    public class ModalPopup extends BasePopup 
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.popups.BasePopup;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.scroll.UIScrollbar;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class ModalPopup extends BasePopup
     {
 
         protected var _contentContainer:Sprite;

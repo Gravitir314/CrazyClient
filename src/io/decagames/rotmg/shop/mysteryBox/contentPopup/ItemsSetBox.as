@@ -5,10 +5,9 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-    import io.decagames.rotmg.ui.gird.UIGridElement;
-    
+import io.decagames.rotmg.ui.gird.UIGridElement;
 
-    public class ItemsSetBox extends UIGridElement 
+public class ItemsSetBox extends UIGridElement
     {
 
         private var items:Vector.<ItemBox>;

@@ -5,21 +5,20 @@
 
 package io.decagames.rotmg.shop.genericBox
 {
-    import io.decagames.rotmg.ui.gird.UIGridElement;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import io.decagames.rotmg.shop.ShopBuyButton;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    
-    import io.decagames.rotmg.shop.ShopBoxTag;
-    import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
-    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    
+import flash.display.Sprite;
 
-    public class GenericBoxTile extends UIGridElement 
+import io.decagames.rotmg.shop.ShopBoxTag;
+import io.decagames.rotmg.shop.ShopBuyButton;
+import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.gird.UIGridElement;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class GenericBoxTile extends UIGridElement
     {
 
         protected var background:SliceScalingBitmap;

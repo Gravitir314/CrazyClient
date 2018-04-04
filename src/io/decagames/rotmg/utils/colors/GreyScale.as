@@ -5,13 +5,13 @@
 
 package io.decagames.rotmg.utils.colors
 {
-    import flash.filters.ColorMatrixFilter;
-    import flash.geom.Rectangle;
-    import flash.geom.Point;
-    import flash.display.BitmapData;
-    import flash.display.DisplayObject;
+import flash.display.BitmapData;
+import flash.display.DisplayObject;
+import flash.filters.ColorMatrixFilter;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 
-    public class GreyScale 
+public class GreyScale 
     {
 
 

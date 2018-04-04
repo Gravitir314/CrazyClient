@@ -5,12 +5,12 @@
 
 package io.decagames.rotmg.utils.display
 {
-    import flash.display.Bitmap;
-    import flash.display.BitmapData;
-    import flash.geom.Rectangle;
-    import flash.geom.Matrix;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
 
-    public class ScaleBitmap extends Bitmap 
+public class ScaleBitmap extends Bitmap 
     {
 
         protected var _originalBitmap:BitmapData;

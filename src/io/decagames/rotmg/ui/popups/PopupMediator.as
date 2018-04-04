@@ -5,15 +5,14 @@
 
 package io.decagames.rotmg.ui.popups
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
-    
-    
+import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
+import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-    public class PopupMediator extends Mediator 
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class PopupMediator extends Mediator
     {
 
         [Inject]

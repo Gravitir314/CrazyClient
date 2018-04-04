@@ -13,7 +13,6 @@ import com.company.assembleegameclient.game.events.NameResultEvent;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.AbstractMap;
 import com.company.assembleegameclient.map.GroundLibrary;
-import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
 import com.company.assembleegameclient.objects.Container;
 import com.company.assembleegameclient.objects.FlashDescription;

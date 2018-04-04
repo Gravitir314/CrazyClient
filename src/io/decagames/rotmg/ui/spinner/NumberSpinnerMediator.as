@@ -5,10 +5,11 @@
 
 package io.decagames.rotmg.ui.spinner
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
 
-    public class NumberSpinnerMediator extends Mediator 
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class NumberSpinnerMediator extends Mediator 
     {
 
         [Inject]

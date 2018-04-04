@@ -4,16 +4,19 @@
 //kabam.rotmg.mysterybox.model.MysteryBoxInfo
 
 package kabam.rotmg.mysterybox.model{
-import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+import com.company.assembleegameclient.util.TimeUtil;
+
 import flash.display.DisplayObject;
-import kabam.display.Loader.LoaderProxy;
-import kabam.display.Loader.LoaderProxyConcrete;
 import flash.events.Event;
 import flash.events.IOErrorEvent;
 import flash.net.URLRequest;
 import flash.utils.Dictionary;
+
+import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+
+import kabam.display.Loader.LoaderProxy;
+import kabam.display.Loader.LoaderProxyConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-import com.company.assembleegameclient.util.TimeUtil;
 
 public class MysteryBoxInfo extends GenericBoxInfo {
 

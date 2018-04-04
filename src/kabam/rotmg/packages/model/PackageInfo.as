@@ -4,13 +4,15 @@
 //kabam.rotmg.packages.model.PackageInfo
 
 package kabam.rotmg.packages.model{
-import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-import org.osflash.signals.Signal;
 import flash.display.Loader;
 import flash.events.Event;
 import flash.events.IOErrorEvent;
 import flash.events.SecurityErrorEvent;
 import flash.net.URLRequest;
+
+import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+
+import org.osflash.signals.Signal;
 
 public class PackageInfo extends GenericBoxInfo {
 

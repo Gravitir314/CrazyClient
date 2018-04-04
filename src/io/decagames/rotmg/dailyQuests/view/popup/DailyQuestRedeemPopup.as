@@ -5,18 +5,20 @@
 
 package io.decagames.rotmg.dailyQuests.view.popup
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
-    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-    import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
-    import flash.text.TextFieldAutoSize;
-    import flash.text.TextFormatAlign;
-    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-    import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
-    import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import flash.display.Sprite;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormatAlign;
 
-    public class DailyQuestRedeemPopup extends Sprite 
+import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
+import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
+import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
+import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
+
+import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+
+public class DailyQuestRedeemPopup extends Sprite 
     {
 
         private var w_:int = 326;

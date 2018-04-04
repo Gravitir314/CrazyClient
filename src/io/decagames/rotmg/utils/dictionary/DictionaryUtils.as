@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.utils.dictionary
 {
-    import flash.utils.Dictionary;
+import flash.utils.Dictionary;
 
-    public class DictionaryUtils 
+public class DictionaryUtils 
     {
 
 

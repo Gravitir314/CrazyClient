@@ -5,22 +5,26 @@
 
 package io.decagames.rotmg.dailyQuests.view
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
-    import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal;
-    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import kabam.rotmg.core.signals.HideTooltipsSignal;
-    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-    import kabam.rotmg.tooltips.HoverTooltipDelegate;
-    import flash.events.MouseEvent;
-    import flash.events.Event;
-    import io.decagames.rotmg.utils.date.TimeSpan;
-    import kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-    public class DailyQuestWindowMediator extends Mediator 
+import flash.events.Event;
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal;
+import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
+import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+import io.decagames.rotmg.utils.date.TimeSpan;
+
+import kabam.rotmg.core.signals.HideTooltipsSignal;
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+import kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse;
+import kabam.rotmg.tooltips.HoverTooltipDelegate;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestWindowMediator extends Mediator 
     {
 
         [Inject]

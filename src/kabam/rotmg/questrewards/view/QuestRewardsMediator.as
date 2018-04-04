@@ -2,7 +2,6 @@
 import com.gskinner.motion.GTween;
 
 import flash.events.MouseEvent;
-import flash.events.TimerEvent;
 
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;

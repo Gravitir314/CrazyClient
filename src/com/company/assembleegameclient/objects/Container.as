@@ -16,9 +16,7 @@ import com.company.util.GraphicsUtil;
 import com.company.util.PointUtil;
 
 import flash.display.BitmapData;
-
 import flash.display.GraphicsBitmapFill;
-
 import flash.display.GraphicsPath;
 import flash.display.IGraphicsData;
 import flash.geom.Matrix;

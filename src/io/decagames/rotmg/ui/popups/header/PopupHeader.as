@@ -5,15 +5,14 @@
 
 package io.decagames.rotmg.ui.popups.header
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    
+import flash.display.Sprite;
 
-    public class PopupHeader extends Sprite 
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class PopupHeader extends Sprite
     {
 
         public static const LEFT_BUTTON:String = "left_button";

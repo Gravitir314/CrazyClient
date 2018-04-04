@@ -4,14 +4,13 @@
 //io.decagames.rotmg.ui.gird.UIGrid
 
 package io.decagames.rotmg.ui.gird{
-import flash.display.Sprite;
-
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.scroll.UIScrollbar;
-import flash.events.Event;
 import flash.display.DisplayObject;
-import io.decagames.rotmg.ui.texture.TextureParser;
+import flash.display.Sprite;
+import flash.events.Event;
 
+import io.decagames.rotmg.ui.scroll.UIScrollbar;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
 
 public class UIGrid extends Sprite {
 

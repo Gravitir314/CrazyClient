@@ -5,18 +5,19 @@
 
 package io.decagames.rotmg.ui.buttons
 {
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import flash.utils.Dictionary;
-    import flash.geom.Point;
-    import io.decagames.rotmg.utils.colors.Tint;
-    import flash.events.MouseEvent;
-    import flash.geom.ColorTransform;
-    import io.decagames.rotmg.utils.colors.GreyScale;
-    import flash.events.Event;
-    import io.decagames.rotmg.ui.texture.TextureParser;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.geom.ColorTransform;
+import flash.geom.Point;
+import flash.utils.Dictionary;
 
-    public class SliceScalingButton extends BaseButton 
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.utils.colors.GreyScale;
+import io.decagames.rotmg.utils.colors.Tint;
+
+public class SliceScalingButton extends BaseButton
     {
 
         private var staticWidth:Boolean;

@@ -6,7 +6,6 @@
 package kabam.rotmg.game.view.components
 {
 import com.company.assembleegameclient.objects.ImageFactory;
-import com.company.assembleegameclient.ui.icons.IconButton;
 import com.company.assembleegameclient.ui.icons.IconButtonFactory;
 import com.company.ui.BaseSimpleText;
 import com.company.util.GraphicsUtil;
@@ -17,8 +16,6 @@ import flash.display.GraphicsSolidFill;
 import flash.display.IGraphicsData;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-
-import kabam.rotmg.text.model.TextKey;
 
 import org.osflash.signals.Signal;
 

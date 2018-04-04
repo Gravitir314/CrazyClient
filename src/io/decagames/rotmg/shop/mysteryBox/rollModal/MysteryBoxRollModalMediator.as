@@ -5,30 +5,34 @@
 
 package io.decagames.rotmg.shop.mysteryBox.rollModal
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.account.core.Account;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import kabam.rotmg.game.model.GameModel;
-    import kabam.rotmg.core.model.PlayerModel;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
-    import flash.utils.Timer;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import flash.events.TimerEvent;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import flash.utils.clearTimeout;
-    import flash.utils.setTimeout;
-    import flash.utils.Dictionary;
-    import com.company.assembleegameclient.objects.Player;
-    import io.decagames.rotmg.utils.dictionary.DictionaryUtils;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-    import io.decagames.rotmg.shop.genericBox.BoxUtils;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
+import com.company.assembleegameclient.objects.Player;
 
-    public class MysteryBoxRollModalMediator extends Mediator 
+import flash.events.TimerEvent;
+import flash.utils.Dictionary;
+import flash.utils.Timer;
+import flash.utils.clearTimeout;
+import flash.utils.setTimeout;
+
+import io.decagames.rotmg.shop.genericBox.BoxUtils;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.utils.dictionary.DictionaryUtils;
+
+import kabam.rotmg.account.core.Account;
+import kabam.rotmg.appengine.api.AppEngineClient;
+import kabam.rotmg.core.model.PlayerModel;
+import kabam.rotmg.game.model.GameModel;
+import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class MysteryBoxRollModalMediator extends Mediator
     {
 
         [Inject]

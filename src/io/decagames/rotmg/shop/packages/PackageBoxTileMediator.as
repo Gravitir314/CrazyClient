@@ -5,25 +5,29 @@
 
 package io.decagames.rotmg.shop.packages
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.game.model.GameModel;
-    import kabam.rotmg.core.model.PlayerModel;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import kabam.rotmg.dialogs.control.OpenDialogSignal;
-    import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.account.core.Account;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.shop.PurchaseInProgressModal;
-    import flash.events.MouseEvent;
-    import io.decagames.rotmg.shop.genericBox.BoxUtils;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    import com.company.assembleegameclient.objects.Player;
-    import kabam.rotmg.packages.model.PackageInfo;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-    import io.decagames.rotmg.shop.packages.contentPopup.PackageBoxContentPopup;
+import com.company.assembleegameclient.objects.Player;
 
-    public class PackageBoxTileMediator extends Mediator 
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.shop.PurchaseInProgressModal;
+import io.decagames.rotmg.shop.genericBox.BoxUtils;
+import io.decagames.rotmg.shop.packages.contentPopup.PackageBoxContentPopup;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+
+import kabam.rotmg.account.core.Account;
+import kabam.rotmg.appengine.api.AppEngineClient;
+import kabam.rotmg.core.model.PlayerModel;
+import kabam.rotmg.dialogs.control.OpenDialogSignal;
+import kabam.rotmg.game.model.GameModel;
+import kabam.rotmg.packages.model.PackageInfo;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class PackageBoxTileMediator extends Mediator
     {
 
         [Inject]

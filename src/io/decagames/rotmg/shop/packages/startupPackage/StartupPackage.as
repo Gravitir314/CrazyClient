@@ -5,15 +5,16 @@
 
 package io.decagames.rotmg.shop.packages.startupPackage
 {
-    import io.decagames.rotmg.ui.popups.BasePopup;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import kabam.rotmg.packages.model.PackageInfo;
-    import io.decagames.rotmg.shop.packages.PackageBoxTile;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.shop.packages.PackageBoxTile;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.popups.BasePopup;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.texture.TextureParser;
 
-    public class StartupPackage extends BasePopup 
+import kabam.rotmg.packages.model.PackageInfo;
+
+public class StartupPackage extends BasePopup 
     {
 
         public var closeButton:SliceScalingButton;

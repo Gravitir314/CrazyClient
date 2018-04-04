@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.dailyQuests.view
 {
-    import mx.core.BitmapAsset;
+import mx.core.BitmapAsset;
 
-    public class DailyQuestWindow_dailyQuestBanner extends BitmapAsset 
+public class DailyQuestWindow_dailyQuestBanner extends BitmapAsset 
     {
 
 

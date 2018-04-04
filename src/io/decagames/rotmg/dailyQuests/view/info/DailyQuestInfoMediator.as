@@ -5,18 +5,22 @@
 
 package io.decagames.rotmg.dailyQuests.view.info
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import kabam.rotmg.ui.model.HUDModel;
-    import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
-    import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-    import flash.events.MouseEvent;
-    import kabam.rotmg.messaging.impl.data.SlotObjectData;
-    import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.objects.Player;
 
-    public class DailyQuestInfoMediator extends Mediator 
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
+import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
+
+import kabam.rotmg.messaging.impl.data.SlotObjectData;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestInfoMediator extends Mediator 
     {
 
         [Inject]

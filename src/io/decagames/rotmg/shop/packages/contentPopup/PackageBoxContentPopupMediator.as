@@ -5,19 +5,20 @@
 
 package io.decagames.rotmg.shop.packages.contentPopup
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import io.decagames.rotmg.ui.gird.UIGrid;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import flash.utils.Dictionary;
-    import io.decagames.rotmg.shop.mysteryBox.contentPopup.ItemBox;
-    import io.decagames.rotmg.shop.mysteryBox.contentPopup.SlotBox;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    import io.decagames.rotmg.shop.mysteryBox.contentPopup.*;
+import flash.utils.Dictionary;
 
-    public class PackageBoxContentPopupMediator extends Mediator 
+import io.decagames.rotmg.shop.mysteryBox.contentPopup.ItemBox;
+import io.decagames.rotmg.shop.mysteryBox.contentPopup.SlotBox;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.gird.UIGrid;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class PackageBoxContentPopupMediator extends Mediator 
     {
 
         [Inject]

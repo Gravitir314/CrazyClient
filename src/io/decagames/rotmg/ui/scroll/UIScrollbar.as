@@ -5,12 +5,13 @@
 
 package io.decagames.rotmg.ui.scroll
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import flash.display.DisplayObject;
-    import io.decagames.rotmg.ui.texture.TextureParser;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
 
-    public class UIScrollbar extends Sprite 
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class UIScrollbar extends Sprite 
     {
 
         public static const SCROLL_SLIDER_MINIMUM_HEIGHT:int = 39;

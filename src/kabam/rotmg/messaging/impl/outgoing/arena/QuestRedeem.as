@@ -4,9 +4,10 @@
 //kabam.rotmg.messaging.impl.outgoing.arena.QuestRedeem
 
 package kabam.rotmg.messaging.impl.outgoing.arena{
-import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
-import kabam.rotmg.messaging.impl.data.SlotObjectData;
 import flash.utils.IDataOutput;
+
+import kabam.rotmg.messaging.impl.data.SlotObjectData;
+import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
 
 public class QuestRedeem extends OutgoingMessage {
 
