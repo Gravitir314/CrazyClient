@@ -4,9 +4,9 @@
 //kabam.rotmg.ui.view.components.ScreenBase_TitleScreenBackground
 
 package kabam.rotmg.ui.view.components{
-    import mx.core.BitmapAsset;
+import mx.core.BitmapAsset;
 
-    public class ScreenBase_TitleScreenBackground extends BitmapAsset {
+public class ScreenBase_TitleScreenBackground extends BitmapAsset {
 
 
     }

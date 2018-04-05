@@ -4,13 +4,15 @@
 //kabam.rotmg.account.securityQuestions.view.SecurityQuestionsInfoDialog
 
 package kabam.rotmg.account.securityQuestions.view{
-    import com.company.assembleegameclient.account.ui.Frame;
-    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-    import kabam.rotmg.text.model.TextKey;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import flash.filters.DropShadowFilter;
+import com.company.assembleegameclient.account.ui.Frame;
 
-    public class SecurityQuestionsInfoDialog extends Frame {
+import flash.filters.DropShadowFilter;
+
+import kabam.rotmg.text.model.TextKey;
+import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
+public class SecurityQuestionsInfoDialog extends Frame {
 
         private var infoText:TextFieldDisplayConcrete;
 

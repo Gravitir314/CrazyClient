@@ -17,7 +17,6 @@ import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.CJDateUtil;
 
-import flash.display.BitmapData;
 import flash.display.DisplayObject;
 import flash.display.StageScaleMode;
 import flash.events.Event;
@@ -32,9 +31,7 @@ import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.friends.view.FriendListView;
 import kabam.rotmg.game.commands.PlayGameCommand;
-import kabam.rotmg.game.model.PotionInventoryModel;
 import kabam.rotmg.game.signals.AddTextLineSignal;
-import kabam.rotmg.game.signals.UseBuyPotionSignal;
 import kabam.rotmg.messaging.impl.GameServerConnection;
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 import kabam.rotmg.servers.api.Server;

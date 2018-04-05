@@ -7,7 +7,6 @@ package com.company.assembleegameclient.game
 {
 import com.company.assembleegameclient.game.events.MoneyChangedEvent;
 import com.company.assembleegameclient.map.Map;
-import com.company.assembleegameclient.objects.Character;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
 import com.company.assembleegameclient.objects.Pet;
@@ -16,9 +15,7 @@ import com.company.assembleegameclient.objects.Projectile;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
-import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
-import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.CachingColorTransformer;
 import com.company.util.MoreColorUtil;
@@ -30,7 +27,6 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.ColorMatrixFilter;
 import flash.filters.DropShadowFilter;
-import flash.system.Capabilities;
 import flash.utils.ByteArray;
 import flash.utils.getTimer;
 

@@ -4,23 +4,27 @@
 //kabam.rotmg.ui.view.CharacterDetailsMediator
 
 package kabam.rotmg.ui.view{
-import robotlegs.bender.bundles.mvcs.Mediator;
-import kabam.rotmg.ui.model.HUDModel;
-import kabam.rotmg.ui.signals.HUDModelInitialized;
-import kabam.rotmg.ui.signals.UpdateHUDSignal;
-import kabam.rotmg.ui.signals.NameChangedSignal;
-import com.company.assembleegameclient.ui.icons.IconButtonFactory;
 import com.company.assembleegameclient.objects.ImageFactory;
-import kabam.rotmg.chat.model.TellModel;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+import com.company.assembleegameclient.ui.options.Options;
+
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.friends.FriendsPopupView;
 import io.decagames.rotmg.friends.model.FriendModel;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+
+import kabam.rotmg.chat.model.TellModel;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import com.company.assembleegameclient.parameters.Parameters;
-import io.decagames.rotmg.friends.FriendsPopupView;
 import kabam.rotmg.friends.view.FriendListView;
-import flash.events.MouseEvent;
-import com.company.assembleegameclient.ui.options.Options;
-import com.company.assembleegameclient.objects.Player;
+import kabam.rotmg.ui.model.HUDModel;
+import kabam.rotmg.ui.signals.HUDModelInitialized;
+import kabam.rotmg.ui.signals.NameChangedSignal;
+import kabam.rotmg.ui.signals.UpdateHUDSignal;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
 
 public class CharacterDetailsMediator extends Mediator {
 

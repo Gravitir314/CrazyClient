@@ -4,9 +4,9 @@
 //kabam.rotmg.account.core.view.PurchaseConfirmationDialog
 
 package kabam.rotmg.account.core.view{
-    import com.company.assembleegameclient.ui.dialogs.Dialog;
+import com.company.assembleegameclient.ui.dialogs.Dialog;
 
-    public class PurchaseConfirmationDialog extends Dialog {
+public class PurchaseConfirmationDialog extends Dialog {
 
         public var confirmedHandler:Function;
 
