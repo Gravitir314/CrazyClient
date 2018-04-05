@@ -862,6 +862,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
             this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
+            this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
             this.tombDeactivate();
             this.addOptionAndPosition(new NullOption());
         }

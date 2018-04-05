@@ -1820,7 +1820,7 @@ public class Player extends Character
                     }
                 }
             }
-            if (Parameters.data_.hideLockList)
+            if (Parameters.data_.hideLockList && !Options.hidden)
             {
                 if (this != map_.player_)
                 {

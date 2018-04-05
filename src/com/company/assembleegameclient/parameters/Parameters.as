@@ -342,7 +342,7 @@ public class Parameters
             setDefault("HidePlayerFilter", false);
             setDefault("hideLockList", false);
             setDefault("TradeDelay", true);
-            setDefault("lockHighlight", true);
+            setDefault("lockHighlight", false);
             setDefault("SafeWalk", false);
             setDefault("InvViewer", true);
             setDefault("StatsViewer", true);
@@ -449,6 +449,7 @@ public class Parameters
             setDefaultKey("cam2quest", KeyCodes.UNSET);
             setDefaultKey("keyFinder", KeyCodes.UNSET);
             setDefaultKey("SafeWalkKey", KeyCodes.UNSET);
+            setDefaultKey("SelfTPHotkey", KeyCodes.UNSET);
             setDefault("autoCorrCHP", false);
             setDefault("rclickTp", true);
             setDefault("autoTp", true);

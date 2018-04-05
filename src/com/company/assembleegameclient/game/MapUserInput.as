@@ -1122,7 +1122,10 @@ public class MapUserInput
                     Parameters.save();
                     _local_21.notifyPlayer(((Parameters.data_.SafeWalk) ? "Safe Walk: On" : "Safe Walk: Off"), 0xFF00, 1500);
                     break;
-            };
+                case Parameters.data_.SelfTPHotkey:
+                    this.gs_.gsc_.teleportId(_local_21.objectId_);
+                    break;
+            }
             this.setPlayerMovement();
         }
 
