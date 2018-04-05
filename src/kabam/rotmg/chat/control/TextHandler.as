@@ -144,8 +144,12 @@ public class TextHandler
             {
                 if ((_local_6.indexOf(_local_4) != -1) && (Parameters.data_.wordNoti))
                 {
-                    _local_15.levelUpEffect("", true);
-                    SoundEffectLibrary.play("error");
+                    if (_local_6.indexOf("call") != -1) {
+                        break;
+                    } else {
+                        _local_15.levelUpEffect("", true);
+                        SoundEffectLibrary.play("error");
+                    }
                 }
             }
             if (Parameters.data_.eventnotify)

@@ -1490,7 +1490,7 @@ public class GameObject extends BasicObject
                     hasShadow_ = false;
                 }
             }
-            if (((!(this.dead_)) && (Parameters.data_.showDamageOnEnemy))){
+            if (((!(this.dead_)) && (Parameters.data_.showDamageOnEnemy) && (!Options.hidden))){
                 if (this.footer_){
                     _local_11 = Parameters.dmgCounter[this.objectId_];
                     if (_local_11 != this.lastPercent_){
