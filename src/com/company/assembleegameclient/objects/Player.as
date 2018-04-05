@@ -1772,7 +1772,7 @@ public class Player extends Character
                 this.breathBackPath_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
                 this.breathFill_ = new GraphicsSolidFill(2542335);
                 this.breathPath_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
-            };
+            }
             if (this.breath_ <= Parameters.BREATH_THRESH)
             {
                 _local_3 = ((Parameters.BREATH_THRESH - this.breath_) / Parameters.BREATH_THRESH);
@@ -1781,7 +1781,7 @@ public class Player extends Character
             else
             {
                 this.breathBackFill_.color = 0x545454;
-            };
+            }
             var _local_5:int = 20;
             var _local_6:int = 8;
             var _local_7:int = 6;
@@ -1807,39 +1807,41 @@ public class Player extends Character
         }
 
         override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
-            if (Parameters.data_.HidePlayerFilter) {
-                if (map_.name_ == "Nexus") {
-                    if (this != map_.player_) {
-                        if (this.numStars_ < Parameters.data_.chatStarRequirement) {
+            if (Parameters.data_.HidePlayerFilter)
+            {
+                if (map_.name_ == "Nexus")
+                {
+                    if (this != map_.player_)
+                    {
+                        if (this.numStars_ < Parameters.data_.chatStarRequirement)
+                        {
                             return;
                         }
                     }
                 }
             }
-            if (!Options.hidden) {
-                if (Parameters.data_.hideLockList) {
-                    if (this != map_.player_) {
-                        if (!this.starred_) {
-                            return;
-                        }
+            if (Parameters.data_.hideLockList)
+            {
+                if (this != map_.player_)
+                {
+                    if (!this.starred_)
+                    {
+                        return;
                     }
                 }
             }
             super.draw(_arg_1, _arg_2, _arg_3);
-            if (this != map_.player_)
-            {
+            if (this != map_.player_) {
                 if (!Parameters.screenShotMode_)
                 {
                     drawName(_arg_1, _arg_2);
-                };
-            }
-            else
-            {
+                }
+            } else {
                 if (this.breath_ >= 0)
                 {
                     this.drawBreathBar(_arg_1, _arg_3);
-                };
-            };
+                }
+            }
         }
 
         private function getMoveSpeed():Number
