@@ -1265,9 +1265,11 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         override public function teleportId(_arg_1:int):void
         {
-            var _local_2:Teleport = (this.messages.require(TELEPORT) as Teleport);
-            _local_2.objectId_ = _arg_1;
-            serverConnection.sendMessage(_local_2);
+            var _local_1:Teleport = (this.messages.require(TELEPORT) as Teleport);
+            _local_1.objectId_ = _arg_1;
+            if (!Parameters.data_.blockTP) {
+                serverConnection.sendMessage(_local_1);
+            }
         }
 
         override public function usePortal(_arg_1:int):void

@@ -301,7 +301,7 @@ public class GameObject extends BasicObject
             if (_arg_1 > 50)
             {
                 return (0xFF00 + (327680 * int((100 - _arg_1))));
-            };
+            }
             return (0xFFFF00 - (0x0500 * int((50 - _arg_1))));
         }
 
@@ -319,8 +319,8 @@ public class GameObject extends BasicObject
                 if (this.object3d_ != null)
                 {
                     this.object3d_.setBitMapData(this.texture_);
-                };
-            };
+                }
+            }
         }
 
         public function setTexture(_arg_1:int):void{
@@ -344,8 +344,8 @@ public class GameObject extends BasicObject
                 if (_local_2 == null)
                 {
                     return;
-                };
-            };
+                }
+            }
             this.texture_ = _local_2.texture_;
             this.mask_ = _local_2.mask_;
             this.animatedChar_ = _local_2.animatedChar_;
@@ -353,15 +353,15 @@ public class GameObject extends BasicObject
             {
                 map_.removeObj(this.effect_.objectId_);
                 this.effect_ = null;
-            };
+            }
             if (((!(_local_2.effectProps_ == null)) && (!(Parameters.data_.noParticlesMaster))))
             {
                 this.effect_ = ParticleEffect.fromProps(_local_2.effectProps_, this);
                 if (map_ != null)
                 {
                     map_.addObj(this.effect_, x_, y_);
-                };
-            };
+                }
+            }
         }
 
         public function setTex1(_arg_1:int):void
@@ -404,7 +404,7 @@ public class GameObject extends BasicObject
             {
                 this.portrait_.dispose();
                 this.portrait_ = null;
-            };
+            }
             if (this.texturingCache_ != null)
             {
                 for each (_local_1 in this.texturingCache_)
@@ -423,29 +423,29 @@ public class GameObject extends BasicObject
                             if (_local_5 != null)
                             {
                                 _local_5.dispose();
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 this.texturingCache_ = null;
-            };
+            }
             if (this.obj3D_ != null)
             {
                 this.obj3D_.dispose();
                 this.obj3D_ = null;
-            };
+            }
             if (this.object3d_ != null)
             {
                 this.object3d_.dispose();
                 this.object3d_ = null;
-            };
+            }
             this.slotTypes_ = null;
             this.equipment_ = null;
             if (this.nameBitmapData_ != null)
             {
                 this.nameBitmapData_.dispose();
                 this.nameBitmapData_ = null;
-            };
+            }
             this.nameFill_ = null;
             this.namePath_ = null;
             this.bitmapFill_ = null;
@@ -502,7 +502,7 @@ public class GameObject extends BasicObject
             if (Parameters.data_["dbBlind"] != true)
             {
                 return (false);
-            };
+            }
             return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BLIND_BIT) == 0));
         }
 
@@ -511,7 +511,7 @@ public class GameObject extends BasicObject
             if (Parameters.data_["dbDrunk"] != true)
             {
                 return (false);
-            };
+            }
             return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DRUNK_BIT) == 0));
         }
 
@@ -520,7 +520,7 @@ public class GameObject extends BasicObject
             if (Parameters.data_["dbConfused"] != true)
             {
                 return (false);
-            };
+            }
             return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.CONFUSED_BIT) == 0));
         }
 
@@ -554,7 +554,7 @@ public class GameObject extends BasicObject
             if (Parameters.data_["dbHallucinating"] != true)
             {
                 return (false);
-            };
+            }
             return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HALLUCINATING_BIT) == 0));
         }
 
@@ -628,7 +628,7 @@ public class GameObject extends BasicObject
             if (Parameters.data_["dbUnstable"] != true)
             {
                 return (false);
-            };
+            }
             return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.UNSTABLE_BIT) == 0));
         }
 
@@ -642,7 +642,7 @@ public class GameObject extends BasicObject
             if (Parameters.data_["dbDarkness"] != true)
             {
                 return (false);
-            };
+            }
             return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DARKNESS_BIT) == 0));
         }
 
@@ -700,9 +700,9 @@ public class GameObject extends BasicObject
                     if (((_local_3 < _arg_1) && (_local_4 < _arg_1)))
                     {
                         return (false);
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (true);
         }
 
@@ -716,7 +716,7 @@ public class GameObject extends BasicObject
             if (this.props_.color_ != -1)
             {
                 return (this.props_.color_);
-            };
+            }
             return (BitmapUtil.mostCommonColor(this.texture_));
         }
 
@@ -744,7 +744,7 @@ public class GameObject extends BasicObject
             {
                 this.isShocked = false;
                 this.isShockedTransformSet = false;
-            };
+            }
         }
 
         public function toggleChargingEffect(_arg_1:Boolean):void
@@ -757,7 +757,7 @@ public class GameObject extends BasicObject
             {
                 this.isCharging = false;
                 this.isChargingTransformSet = false;
-            };
+            }
         }
 
         override public function addTo(_arg_1:Map, _arg_2:Number, _arg_3:Number):Boolean
@@ -769,11 +769,11 @@ public class GameObject extends BasicObject
             {
                 map_ = null;
                 return (false);
-            };
+            }
             if (this.effect_ != null)
             {
                 map_.addObj(this.effect_, _arg_2, _arg_3);
-            };
+            }
             return (true);
         }
 
@@ -784,13 +784,13 @@ public class GameObject extends BasicObject
                 if (square_.obj_ == this)
                 {
                     square_.obj_ = null;
-                };
+                }
                 square_ = null;
-            };
+            }
             if (this.effect_ != null)
             {
                 map_.removeObj(this.effect_.objectId_);
-            };
+            }
             super.removeFromMap();
             this.dispose();
         }
@@ -801,7 +801,7 @@ public class GameObject extends BasicObject
             if (_local_3 == null)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             if (this.props_.static_)
@@ -809,18 +809,18 @@ public class GameObject extends BasicObject
                 if (square_ != null)
                 {
                     square_.obj_ = null;
-                };
+                }
                 _local_3.obj_ = this;
-            };
+            }
             square_ = _local_3;
             if (this.obj3D_ != null)
             {
                 this.obj3D_.setPosition(x_, y_, 0, this.props_.rotation_);
-            };
+            }
             if (this.object3d_ != null)
             {
                 this.object3d_.setPosition(x_, y_, 0, this.props_.rotation_);
-            };
+            }
             return (true);
         }
 
