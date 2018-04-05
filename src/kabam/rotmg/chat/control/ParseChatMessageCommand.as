@@ -771,9 +771,30 @@ public class ParseChatMessageCommand
             var _local_26:GameServerConnection = this.hudModel.gameSprite.gsc_;
             switch (this.data.toLowerCase())
             {
+                case "/status":
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockPots) ? "Thirsty: On" : "Thirsty: Off")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockAbil) ? "Ability Blocked" : "Ability Allowed")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockTP) ? "Teleport Blocked" : "Teleport Allowed")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.statusText) ? "Status Text: On" : "Status Text: Off")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Doer of Deeds Bot: On" : "Doer of Deeds Bot: Off")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ("Reconnect delay set to: " + Parameters.RECONNECT_DELAY)));
+                    this.addTextLine.dispatch(ChatMessage.make("", ("Auto nexus percentage set to " + Parameters.data_.AutoNexus)));
+                    this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
+                    this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
+                    return (true);
                 case "/swmove":
                     Parameters.data_.SWNoTileMove = (!Parameters.data_.SWNoTileMove);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
+                    return (true);
+                case "/blockpots":
+                    Parameters.data_.blockPots = (!Parameters.data_.blockPots);
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockPots) ? "Thirsty: On" : "Thirsty: Off")));
+                    return (true);
+                case "/blockabil":
+                    Parameters.data_.blockAbil = (!Parameters.data_.blockAbil);
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockAbil) ? "Ability Blocked" : "Ability Allowed")));
                     return (true);
                 case "/blocktp":
                     Parameters.data_.blockTP = (!Parameters.data_.blockTP);
@@ -979,7 +1000,7 @@ public class ParseChatMessageCommand
                     if (_local_7 != null) {
                         Parameters.RECONNECT_DELAY = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Reconnect delay: " + Parameters.RECONNECT_DELAY)));
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Reconnect delay set to: " + Parameters.RECONNECT_DELAY)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/colo (\\d*\\.*\\d+)$");
@@ -1047,7 +1068,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.autoPot = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto pot percentage set to " + _local_7[1])));
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/automana (\\d+)$");
@@ -1055,7 +1076,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.autoMana = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto mana percentage set to " + _local_7[1])));
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/autonex (\\d+)$");
@@ -1063,7 +1084,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.AutoNexus = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto nexus percentage set to " + _local_7[1])));
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto nexus percentage set to " + Parameters.data_.AutoNexus)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/autoheal (\\d+)$");
@@ -1071,7 +1092,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.autoHealP = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto heal percentage set to " + _local_7[1])));
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto heal percentage set to " + Parameters.data_.autoHealP)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/give (\\w+) (\\d{1,8})$");

@@ -44,14 +44,14 @@ public class FriendActionCommand {
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void{
-            if (this.vo.callback){
-                this.vo.callback(_arg_1, _arg_2, this.vo.target);
+            if (this.vo.callback()){
+                this.vo.callback()(_arg_1, _arg_2, this.vo.target);
             } else {
                 if (!_arg_1){
                     this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(_arg_2)));
                     this.removeFade.dispatch();
-                };
-            };
+                }
+            }
         }
 
 

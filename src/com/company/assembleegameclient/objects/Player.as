@@ -1429,7 +1429,7 @@ public class Player extends Character
                     };
                     this.timerCount++;
                 };
-                if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer())))
+                if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil))))
                 {
                     _local_23 = 0;
                     _local_24 = (1 + (this.wisdom_ / 150));
@@ -2036,7 +2036,7 @@ public class Player extends Character
             var _local_9:int;
             var _local_10:Point;
             var _local_11:Number;
-            if (((map_ == null) || (isPaused())))
+            if (((map_ == null) || (isPaused()) || (Parameters.data_.blockAbil)))
             {
                 return (false);
             };

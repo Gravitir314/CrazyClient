@@ -101,11 +101,10 @@ public class SliceScalingButton extends BaseButton
         override public function set disabled(_arg_1:Boolean):void
         {
             super.disabled = _arg_1;
-            var _local_2:Function = this.stateFactories[ButtonStates.DISABLED];
-            if (_local_2)
+            if (this.stateFactories[ButtonStates.DISABLED])
             {
-                (_local_2(this._label));
-            };
+                (this.stateFactories[ButtonStates.DISABLED](this._label));
+            }
             if (this._interactionEffects)
             {
                 if (_arg_1)
@@ -115,18 +114,18 @@ public class SliceScalingButton extends BaseButton
                 else
                 {
                     GreyScale.clear(this.bitmap.bitmapData);
-                };
-            };
+                }
+            }
             this.render();
         }
 
-        public function setLabel(_arg_1:String, _arg_2:Function=null, _arg_3:String="idle"):void
+        public function setLabel(_arg_1:String, _arg_2:Function, _arg_3:String="idle"):void
         {
             if (_arg_3 == ButtonStates.IDLE)
             {
-                if (_arg_2)
+                if (_arg_2())
                 {
-                    (_arg_2(this._label));
+                    (_arg_2()(this._label));
                 };
                 this._label.text = _arg_1;
                 addChild(this._label);

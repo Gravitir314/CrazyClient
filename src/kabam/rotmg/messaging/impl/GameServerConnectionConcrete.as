@@ -1078,6 +1078,16 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         override public function useItem(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:Number, _arg_6:Number, _arg_7:int):void
         {
+            var _local_1:* = null;
+            if ((((Parameters.data_.blockAbil) && (_arg_2 == this.playerId_)) && (_arg_3 == 1))){
+                return;
+            }
+            if ((((Parameters.data_.blockPots) && (_arg_2 == this.playerId_)) && (_arg_3 > 3))){
+                _local_1 = ObjectLibrary.propsLibrary_[this.player.equipment_[_arg_3]];
+                if (((_local_1) && (_local_1.isPotion_))){
+                    return;
+                }
+            }
             var _local_8:UseItem = (this.messages.require(USEITEM) as UseItem);
             _local_8.time_ = _arg_1;
             _local_8.slotObject_.objectId_ = _arg_2;
@@ -1091,6 +1101,16 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         override public function useItem_new(_arg_1:GameObject, _arg_2:int):Boolean
         {
+            var _local_1:* = null;
+            if ((((Parameters.data_.blockAbil) && (_arg_1.objectId_ == this.playerId_)) && (_arg_2 == 1))){
+                return (false);
+            }
+            if ((((Parameters.data_.blockPots) && (_arg_1.objectId_ == this.playerId_)) && (_arg_2 > 3))) {
+                _local_1 = ObjectLibrary.propsLibrary_[_arg_1.equipment_[_arg_2]];
+                if (((_local_1) && (_local_1.isPotion_))) {
+                    return (false);
+                }
+            }
             var _local_3:int = _arg_1.equipment_[_arg_2];
             var _local_4:XML = ObjectLibrary.xmlLibrary_[_local_3];
             if ((((_local_4) && (!(_arg_1.isPaused()))) && ((_local_4.hasOwnProperty("Consumable")) || (_local_4.hasOwnProperty("InvUse")))))
@@ -1726,7 +1746,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
         {
             if (_arg_1.objectType_ == 1825) //wc portal
             {
-                player.startTimer(120, 1000);
+                Parameters.timerActive = true;
+                Parameters.phaseChangeAt = (getTimer() + (120 * 1000));
+                Parameters.phaseName = "Wine Cellar";
             }
             var _local_2:AbstractMap = gs_.map;
             var _local_3:GameObject = ObjectLibrary.getObjectFromType(_arg_1.objectType_);

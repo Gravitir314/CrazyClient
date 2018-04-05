@@ -207,7 +207,7 @@
    </Article>
    <Article>
       <Command>/recondelay &lt;value&gt;</Command>
-      <Explanation>Set reconnect delay to custom value.&#xA;Set how fast you connect to locations.&#xA;Default: 100</Explanation>
+      <Explanation>Set reconnect delay to custom value in milliseconds.&#xA;Set how fast you connect to locations.&#xA;Default: 100</Explanation>
    </Article>
    <Article>
       <Command>/hidehacks</Command>
@@ -216,6 +216,14 @@
    <Article>
       <Command>/blocktp</Command>
       <Explanation>Block teleport function to achieve Boots on the Ground.</Explanation>
+   </Article>
+   <Article>
+      <Command>/blockabil</Command>
+      <Explanation>Block all abilities function to achieve Mundane.</Explanation>
+   </Article>
+   <Article>
+      <Command>/blockpots</Command>
+      <Explanation>Block potions use to achieve Thirsty.</Explanation>
    </Article>
    <Article>
       <Command>/statustext</Command>

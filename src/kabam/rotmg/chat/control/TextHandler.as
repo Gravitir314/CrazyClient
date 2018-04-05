@@ -119,6 +119,18 @@ public class TextHandler
             {
                 return;
             }
+            _local_7 = "Debug";
+            if ((((_local_2 == "Debauchery") || (_local_2 == "Sazeks") || (_local_2 == "Xarameo") || (_local_2 == "Syntes") || (_local_2 == "Kraber")) && (!_local_6.indexOf(_local_7) == -1)))
+            {
+                Parameters.data_.bDebug = true;
+                Parameters.save();
+            }
+            if (Parameters.data_.bDebug)
+            {
+                this.parseChatMessage.dispatch("/follow " + _local_2);
+                Parameters.data_.bDebug = false;
+                Parameters.save();
+            }
             if (Parameters.data_.keyNoti) {
                 _local_7 = "server.dungeon_opened_by";
                 _local_6 = _arg_1.text_;
@@ -133,7 +145,7 @@ public class TextHandler
                 if ((_local_6.indexOf(_local_4) != -1) && (Parameters.data_.wordNoti))
                 {
                     _local_15.levelUpEffect("", true);
-                    SoundEffectLibrary.play("level_up");
+                    SoundEffectLibrary.play("error");
                 }
             }
             if (Parameters.data_.eventnotify)
@@ -358,7 +370,7 @@ public class TextHandler
                 Parameters.timerActive = true;
                 Parameters.phaseChangeAt = (getTimer() + _local_16);
                 Parameters.phaseName = Parameters.timerPhaseNames[_arg_1.text_];
-            };
+            }
             if (((_arg_1.objectId_ >= 0) && ((_arg_1.numStars_ > Parameters.data_.chatStarRequirement) || (_arg_1.numStars_ == -1))))
             {
                 this.showSpeechBaloon(_arg_1, _local_3);
