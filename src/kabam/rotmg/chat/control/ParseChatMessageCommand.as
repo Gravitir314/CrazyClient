@@ -772,6 +772,8 @@ public class ParseChatMessageCommand
             switch (this.data.toLowerCase())
             {
                 case "/status":
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Only Gods: On" : "Only Gods: Off")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockCubes) ? "Cubes Blocked" : "Cubes Allowed")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockPots) ? "Thirsty: On" : "Thirsty: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockAbil) ? "Ability Blocked" : "Ability Allowed")));
@@ -783,6 +785,14 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto nexus percentage set to " + Parameters.data_.AutoNexus)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
+                    return (true);
+                case "/onlygods":
+                    Parameters.data_.onlyGods = (!Parameters.data_.onlyGods);
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Only Gods: On" : "Only Gods: Off")));
+                    return (true);
+                case "/blockcubes":
+                    Parameters.data_.onlyGods = (!Parameters.data_.blockCubes);
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockCubes) ? "Cubes Blocked" : "Cubes Allowed")));
                     return (true);
                 case "/swmove":
                     Parameters.data_.SWNoTileMove = (!Parameters.data_.SWNoTileMove);

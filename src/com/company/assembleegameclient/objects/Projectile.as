@@ -326,14 +326,17 @@ public class Projectile extends BasicObject
                             if (((!(this.damageIgnored(_local_13))) || (((_local_13.isInvulnerable()) && (!(this.isStun()))) && (Parameters.data_.PassesCover))))
                             {
                                 return (true);
-                            };
+                            }
                             if (((Parameters.data_.tombHack) && (((_local_13.objectType_ >= 3366) && (_local_13.objectType_ <= 3368)) || ((_local_13.objectType_ >= 32692) && (_local_13.objectType_ <= 32694)))))
                             {
                                 if (((!(_local_13.objectType_ == Parameters.data_.curBoss)) && (!(_local_13.objectType_ == (Parameters.data_.curBoss + 29326)))))
                                 {
                                     return (true);
-                                };
-                            };
+                                }
+                            }
+                            if ((((_local_13.props_.isCube_) && (Parameters.data_.blockCubes)) || ((!(_local_13.props_.isGod_)) && (Parameters.data_.onlyGods)))){
+                                return (true);
+                            }
                             map_.gs_.gsc_.enemyHit(_arg_1, this.bulletId_, _local_13.objectId_, _local_9);
                             _local_13.damage(true, _local_8, this.projProps_.effects_, _local_9, this);
                         }
@@ -508,14 +511,13 @@ public class Projectile extends BasicObject
             var _local_6:Number;
             var _local_7:GameObject;
             var _local_8:Number = Number.MAX_VALUE;
-            for each (_local_3 in map_.goDict_)
-            {
-                if (((!(_local_3.isInvincible())) && (!(_local_3.isStasis()))))
-                {
-                    if ((((this.damagesEnemies_) && (_local_3.props_.isEnemy_)) || ((this.damagesPlayers_) && (_local_3.props_.isPlayer_))))
-                    {
-                        if (!((_local_3.dead_) || (_local_3.isPaused())))
-                        {
+            for each (_local_3 in map_.goDict_) {
+                if (((!(_local_3.isInvincible())) && (!(_local_3.isStasis())))) {
+                    if ((((this.damagesEnemies_) && (_local_3.props_.isEnemy_)) || ((this.damagesPlayers_) && (_local_3.props_.isPlayer_)))) {
+                        if (!((_local_3.dead_) || (_local_3.isPaused()))) {
+                            if (this.damagesEnemies_){
+                                if ((((_local_3.props_.isCube_) && (Parameters.data_.blockCubes)) || ((!(_local_3.props_.isGod_)) && (Parameters.data_.onlyGods)))) continue;
+                            }
                             _local_4 = ((_local_3.x_ > _arg_1) ? (_local_3.x_ - _arg_1) : (_arg_1 - _local_3.x_));
                             _local_5 = ((_local_3.y_ > _arg_2) ? (_local_3.y_ - _arg_2) : (_arg_2 - _local_3.y_));
                             if (!((_local_4 > 0.5) || (_local_5 > 0.5)))

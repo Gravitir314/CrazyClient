@@ -222,6 +222,14 @@
       <Explanation>Block all abilities function to achieve Mundane.</Explanation>
    </Article>
    <Article>
+      <Command>/blockcubes</Command>
+      <Explanation>Block cubes to achieve Friend of the Cubes.</Explanation>
+   </Article>
+   <Article>
+      <Command>/onlygods</Command>
+      <Explanation>Allow damaging only on gods enemies to achieve Slayer of the Gods.</Explanation>
+   </Article>
+   <Article>
       <Command>/blockpots</Command>
       <Explanation>Block potions use to achieve Thirsty.</Explanation>
    </Article>

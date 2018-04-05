@@ -486,6 +486,8 @@ public class Parameters
             setDefault("blockTP", false);
             setDefault("blockAbil", false);
             setDefault("blockPots", false);
+            setDefault("blockCubes", false);
+            setDefault("onlyGods", false);
             setDefault("SWPanic", true);
             setDefault("SWNoTileMove", true);
         }
