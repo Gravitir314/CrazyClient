@@ -97,7 +97,7 @@ public class TradeButton extends BackgroundFilledText
                         this.statusBar_.visible = true;
                         graphicsData_[0] = enabledFill_;
                         this.setText("Trade");
-                    };
+                    }
                     if (_local_1 >= this.WAIT_TIME)
                     {
                         this.state = 1;
@@ -105,7 +105,7 @@ public class TradeButton extends BackgroundFilledText
                     else
                     {
                         this.drawCountDown((_local_1 / this.WAIT_TIME));
-                    };
+                    }
                     break;
                 case 1:
                     if (this.lastState != 1)
@@ -113,7 +113,7 @@ public class TradeButton extends BackgroundFilledText
                         this.statusBar_.visible = false;
                         graphicsData_[0] = enabledFill_;
                         this.setText("Trade");
-                    };
+                    }
                     break;
                 case 2:
                     if (this.lastState != 2)
@@ -121,7 +121,7 @@ public class TradeButton extends BackgroundFilledText
                         this.statusBar_.visible = false;
                         graphicsData_[0] = disabledFill_;
                         this.setText("Waiting");
-                    };
+                    }
                     break;
                 case 3:
                     if (this.lastState != 2)
@@ -129,9 +129,9 @@ public class TradeButton extends BackgroundFilledText
                         this.statusBar_.visible = false;
                         graphicsData_[0] = disabledFill_;
                         this.setText("Trade");
-                    };
+                    }
                     break;
-            };
+            }
             this.lastState = this.state;
             graphics.clear();
             graphics.drawGraphicsData(graphicsData_);

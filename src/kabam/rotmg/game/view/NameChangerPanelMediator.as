@@ -50,7 +50,7 @@ public class NameChangerPanelMediator extends Mediator
             else
             {
                 this.openDialog.dispatch(new RegisterPromptDialog(TextKey.NAME_CHANGER_PANEL_MEDIATOR_TEXT));
-            };
+            }
         }
 
         private function onNameChanged(_arg_1:String):void
@@ -58,7 +58,7 @@ public class NameChangerPanelMediator extends Mediator
             if ((this.account is WebAccount))
             {
                 WebAccount(this.account).userDisplayName = _arg_1;
-            };
+            }
             this.view.updateName(_arg_1);
         }
 

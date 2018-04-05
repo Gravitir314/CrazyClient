@@ -44,7 +44,7 @@ public class TransitionFromGameToMenuCommand
             else
             {
                 this.showCurrentCharacterScreen();
-            };
+            }
         }
 
         private function showDeathView():void

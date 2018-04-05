@@ -42,7 +42,7 @@ public class SparkerParticle extends Particle
             if (this.timeLeft_ <= 0)
             {
                 return (false);
-            };
+            }
             this.pathX_ = (this.pathX_ + (this.dx_ * _arg_2));
             this.pathY_ = (this.pathY_ + (this.dy_ * _arg_2));
             moveTo(this.pathX_, this.pathY_);

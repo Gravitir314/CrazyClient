@@ -22,7 +22,7 @@ public class SetupDomainSecurityCommand
             if (this.client.isWeb())
             {
                 this.domains.applyDomainSecurity();
-            };
+            }
         }
 
 

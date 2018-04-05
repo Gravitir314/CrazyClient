@@ -76,7 +76,7 @@ public class PetFormView extends PetInteractionView implements DialogCloser
                 _arg_1[_local_3].initComplete.add(this.onSkinGroupInit);
                 this.reskinContainer.addChild(_arg_1[_local_3]);
                 _local_3++;
-            };
+            }
         }
 
         public function onSkinGroupInit():void
@@ -86,7 +86,7 @@ public class PetFormView extends PetInteractionView implements DialogCloser
             {
                 this.positionSkinGroups();
                 this.skinGroupsInitialized.dispatch();
-            };
+            }
         }
 
         private function positionSkinGroups():void
@@ -99,7 +99,7 @@ public class PetFormView extends PetInteractionView implements DialogCloser
                 this.skinGroups[_local_1].y = this.posY;
                 this.posY = (this.posY + this.skinGroups[_local_1].height);
                 _local_1++;
-            };
+            }
             this.reskinButton.y = (this.posY + 10);
             this.background.height = (this.posY + 50);
         }
@@ -170,7 +170,7 @@ public class PetFormView extends PetInteractionView implements DialogCloser
                 if (contains(this.reskinContainer))
                 {
                     removeChild(this.reskinContainer);
-                };
+                }
             }
             else
             {
@@ -180,9 +180,9 @@ public class PetFormView extends PetInteractionView implements DialogCloser
                     if (contains(this.petPickerContainer))
                     {
                         removeChild(this.petPickerContainer);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
 

@@ -39,10 +39,10 @@ public class HTMLUtil
                     if (_local_3.indexOf("www.kabam") != -1)
                     {
                         _local_3 = "http://www.realmofthemadgod.com";
-                    };
+                    }
                     ExternalInterface.call("window.location.assign", _local_3);
-                };
-            };
+                }
+            }
         }
 
 

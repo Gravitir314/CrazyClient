@@ -66,12 +66,12 @@ public class CharacterRectList extends Sprite
                 else
                 {
                     _local_5.setIcon(this.getIcon(_local_1, 100));
-                };
+                }
                 _local_5.x = ((_local_10 % 2) * (CharacterRect.WIDTH + 5));
                 _local_5.y = (int((_local_10 / 2)) * (CharacterRect.HEIGHT + 4));
                 addChild(_local_5);
                 _local_10++;
-            };
+            }
             if (this.model.hasAvailableCharSlot())
             {
                 _local_6 = 0;
@@ -84,8 +84,8 @@ public class CharacterRectList extends Sprite
                     addChild(_local_7);
                     _local_10++;
                     _local_6++;
-                };
-            };
+                }
+            }
             _local_2 = new BuyCharacterRect(this.model);
             _local_2.addEventListener(MouseEvent.MOUSE_DOWN, this.onBuyCharSlot);
             _local_2.x = ((_local_10 % 2) * (CharacterRect.WIDTH + 5));

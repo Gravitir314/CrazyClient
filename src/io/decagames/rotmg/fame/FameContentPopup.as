@@ -129,7 +129,7 @@ public class FameContentPopup extends ModalPopup
             if ((this.statsLinesPosition % 2) == 0)
             {
                 _arg_1.drawBrightBackground();
-            };
+            }
             this.statsLinesPosition++;
         }
 

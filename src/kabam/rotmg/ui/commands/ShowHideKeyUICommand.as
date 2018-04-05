@@ -34,7 +34,7 @@ public class ShowHideKeyUICommand
                 this.contextView.removeChild(view);
                 view = null;
                 show = true;
-            };
+            }
         }
 
 

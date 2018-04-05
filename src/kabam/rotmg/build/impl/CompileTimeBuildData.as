@@ -64,13 +64,13 @@ public class CompileTimeBuildData implements BuildData
                     if (_local_2.domain == ROTMG_TESTING2)
                     {
                         this.environment = BuildEnvironment.TESTING2;
-                    };
-                };
+                    }
+                }
             }
             else
             {
                 this.environment = this.environments.getEnvironment(_arg_1);
-            };
+            }
         }
 
         private function conditionsRequireTesting(_arg_1:String):Boolean

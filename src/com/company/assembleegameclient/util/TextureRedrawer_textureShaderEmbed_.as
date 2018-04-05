@@ -8,7 +8,7 @@ import mx.core.*;
 		public function TextureRedrawer_textureShaderEmbed_()
 		{
 			super();
-			return;
+
 		}
 	}
 }

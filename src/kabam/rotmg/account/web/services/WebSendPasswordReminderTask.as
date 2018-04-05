@@ -33,7 +33,7 @@ public class WebSendPasswordReminderTask extends BaseTask implements SendPasswor
             else
             {
                 this.onForgotError(_arg_2);
-            };
+            }
         }
 
         private function onForgotDone():void

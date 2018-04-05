@@ -42,7 +42,7 @@ public class WebChangePasswordDialogForced extends Frame
             if (!_local_1)
             {
                 this.password_.setError(TextKey.WEB_CHANGE_PASSWORD_INCORRECT);
-            };
+            }
             return (_local_1);
         }
 
@@ -65,10 +65,10 @@ public class WebChangePasswordDialogForced extends Frame
                     {
                         this.newPassword_.setError(TextKey.LINK_WEB_ACCOUNT_SHORT);
                         _local_3 = false;
-                    };
+                    }
                     _local_2++;
-                };
-            };
+                }
+            }
             return (_local_3);
         }
 
@@ -78,7 +78,7 @@ public class WebChangePasswordDialogForced extends Frame
             if (!_local_1)
             {
                 this.retypeNewPassword_.setError(TextKey.PASSWORD_DOES_NOT_MATCH);
-            };
+            }
             return (_local_1);
         }
 

@@ -96,7 +96,7 @@ package kabam.rotmg.constants
                     return ("EquipmentType.Shuriken");
                 case EGG_TYPE:
                     return ("EquipmentType.Any");
-            };
+            }
             return ("EquipmentType.InvalidType");
         }
 

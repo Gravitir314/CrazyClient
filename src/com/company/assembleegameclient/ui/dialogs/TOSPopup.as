@@ -37,7 +37,7 @@ import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.ui.view.SignalWaiter;
 
-public class TOSPopup extends Sprite 
+public class TOSPopup extends Sprite
     {
 
         public static const LEFT_BUTTON:String = "dialogLeftButton";
@@ -96,7 +96,7 @@ public class TOSPopup extends Sprite
                 this.addTextFieldDisplay(this.textText_);
                 this.initText2();
                 this.addTextFieldDisplay(this.textText2_);
-            };
+            }
         }
 
         protected function initText():void
@@ -186,7 +186,7 @@ public class TOSPopup extends Sprite
             if (this.box_.contains(this.rect_))
             {
                 this.box_.removeChild(this.rect_);
-            };
+            }
             this.removeButtonsIfAlreadyAdded();
             this.addButtonsAndLayout();
             this.drawBackground();
@@ -221,7 +221,7 @@ public class TOSPopup extends Sprite
             if (((this.buttonAccept) && (this.box_.contains(this.buttonAccept))))
             {
                 this.box_.removeChild(this.buttonAccept);
-            };
+            }
         }
 
         protected function onLeftButtonClick(_arg_1:MouseEvent):void

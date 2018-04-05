@@ -49,22 +49,22 @@ public class CharacterStatusText extends Sprite implements IMapOverlayElement
             if (this.startTime_ == 0)
             {
                 this.startTime_ = (_arg_2 + this.offsetTime_);
-            };
+            }
             if (_arg_2 < this.startTime_)
             {
                 visible = false;
                 return (true);
-            };
+            }
             var _local_3:int = (_arg_2 - this.startTime_);
             if (((_local_3 > this.lifetime_) || ((!(this.go_ == null)) && (this.go_.map_ == null))))
             {
                 return (false);
-            };
+            }
             if (((this.go_ == null) || (!(this.go_.drawn_))))
             {
                 visible = false;
                 return (true);
-            };
+            }
             visible = true;
             x = (((this.go_ != null) ? this.go_.posS_[0] : 0) + ((this.offset_ != null) ? this.offset_.x : 0));
             var _local_4:Number = ((_local_3 / this.lifetime_) * this.MAX_DRIFT);

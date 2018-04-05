@@ -28,7 +28,7 @@ public class ImageFactory
             {
                 _local_3 = ((_arg_2 - TextureRedrawer.minSize) / _local_5.width);
                 return (ObjectLibrary.getRedrawnTextureFromType(_arg_1, 100, true, false, _local_3));
-            };
+            }
             return (new BitmapDataSpy(_arg_2, _arg_2));
         }
 

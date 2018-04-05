@@ -35,15 +35,15 @@ public class PetPickerMediator extends Mediator
             if (_local_1)
             {
                 this.view.filterFusible(_local_1);
-            };
+            }
             if (((this.petSlotsState.rightSlotPetVO) && (this.view.doDisableUsed)))
             {
                 this.view.filterUsedPetVO(this.petSlotsState.rightSlotPetVO);
-            };
+            }
             if (((this.petSlotsState.leftSlotPetVO) && (this.view.doDisableUsed)))
             {
                 this.view.filterUsedPetVO(this.petSlotsState.leftSlotPetVO);
-            };
+            }
             this.view.petPicked.addOnce(this.onPetPicked);
         }
 
@@ -56,11 +56,11 @@ public class PetPickerMediator extends Mediator
             else
             {
                 this.petSlotsState.rightSlotPetVO = _arg_1;
-            };
+            }
             if (this.petSlotsState.caller)
             {
                 this.openDialog.dispatch(new this.petSlotsState.caller());
-            };
+            }
         }
 
 

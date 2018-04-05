@@ -66,7 +66,7 @@ public class YardUpgraderPanel extends Panel
             if (_arg_1)
             {
                 this.handleUpgradeYardButton();
-            };
+            }
         }
 
         private function handleIcon():void
@@ -89,7 +89,7 @@ public class YardUpgraderPanel extends Panel
             {
                 this.infoButton.x = ((WIDTH - this.infoButton.width) / 2);
                 this.infoButton.y = ((HEIGHT - this.infoButton.height) - 4);
-            };
+            }
         }
 
 

@@ -29,7 +29,7 @@ public class Quest
             {
                 this.questAvailableAt_ = getTimer();
                 this.questOldAt_ = this.questAvailableAt_;
-            };
+            }
             this.objectId_ = _arg_1;
         }
 

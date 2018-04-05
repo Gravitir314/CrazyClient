@@ -68,7 +68,7 @@ public class FameMediator extends Mediator
             if (((this.death) && (this.death.background)))
             {
                 this.view.setBackground(this.death.background);
-            };
+            }
         }
 
         private function requestFameData():void
@@ -93,7 +93,7 @@ public class FameMediator extends Mediator
             if (((this.isFreshDeath) && (this.death.isZombie)))
             {
                 return (this.makeZombieTexture());
-            };
+            }
             return (this.makeNormalTexture());
         }
 
@@ -119,7 +119,7 @@ public class FameMediator extends Mediator
             else
             {
                 this.gotoPrevious.dispatch();
-            };
+            }
         }
 
 

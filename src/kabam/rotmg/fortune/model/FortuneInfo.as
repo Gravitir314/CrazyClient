@@ -236,11 +236,11 @@ public class FortuneInfo
                     {
                         _local_6[int(_local_4)] = true;
                         this._rollsWithContentsUnique.push(int(_local_4));
-                    };
+                    }
                     _local_2.push(int(_local_4));
-                };
+                }
                 this._rollsWithContents.push(_local_2);
-            };
+            }
         }
 
         public function get infoImage():DisplayObject

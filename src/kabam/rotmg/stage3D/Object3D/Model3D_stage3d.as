@@ -34,13 +34,13 @@ public class Model3D_stage3d
             for each (_local_1 in this.groups)
             {
                 _local_1.dispose();
-            };
+            }
             this.groups.length = 0;
             if (this.vertexBuffer !== null)
             {
                 this.vertexBuffer.dispose();
                 this.vertexBuffer = null;
-            };
+            }
             this._vertices.length = 0;
             this._tupleIndex = 0;
             this._tupleIndices = new Dictionary();
@@ -56,8 +56,8 @@ public class Model3D_stage3d
                     _local_2.indexBuffer = _arg_1.createIndexBuffer(_local_2._indices.length);
                     _local_2.indexBuffer.uploadFromVector(_local_2._indices, 0, _local_2._indices.length);
                     _local_2._faces = null;
-                };
-            };
+                }
+            }
             this.vertexBuffer = _arg_1.createVertexBuffer((this._vertices.length / 8), 8);
             this.vertexBuffer.uploadFromVector(this._vertices, 0, (this._vertices.length / 8));
         }
@@ -101,12 +101,12 @@ public class Model3D_stage3d
                             for each (_local_6 in _local_5.slice(1))
                             {
                                 _local_2.push(_local_6);
-                            };
+                            }
                             if (_local_3 === null)
                             {
                                 _local_3 = new OBJGroup(null, _local_9);
                                 this.groups.push(_local_3);
-                            };
+                            }
                             _local_3._faces.push(_local_2);
                             break;
                         case "g":
@@ -123,11 +123,11 @@ public class Model3D_stage3d
                             if (_local_3 !== null)
                             {
                                 _local_3.materialName = _local_9;
-                            };
+                            }
                             break;
-                    };
-                };
-            };
+                    }
+                }
+            }
             for each (_local_3 in this.groups)
             {
                 _local_3._indices.length = 0;
@@ -141,10 +141,10 @@ public class Model3D_stage3d
                         _local_3._indices.push(this.mergeTuple(_local_2[0], _local_10, _local_11, _local_12));
                         _local_3._indices.push(this.mergeTuple(_local_2[(_local_8 + 1)], _local_10, _local_11, _local_12));
                         _local_8++;
-                    };
-                };
+                    }
+                }
                 _local_3._faces = null;
-            };
+            }
             this._tupleIndex = 0;
             this._tupleIndices = null;
         }
@@ -156,7 +156,7 @@ public class Model3D_stage3d
             if (this._tupleIndices[_arg_1] !== undefined)
             {
                 return (this._tupleIndices[_arg_1]);
-            };
+            }
             _local_5 = _arg_1.split("/");
             _local_6 = (parseInt(_local_5[0], 10) - 1);
             this._vertices.push(_arg_2[((_local_6 * 3) + 0)], _arg_2[((_local_6 * 3) + 1)], _arg_2[((_local_6 * 3) + 2)]);
@@ -168,7 +168,7 @@ public class Model3D_stage3d
             else
             {
                 this._vertices.push(0, 0, 0);
-            };
+            }
             if (((_local_5.length > 1) && (_local_5[1].length > 0)))
             {
                 _local_6 = (parseInt(_local_5[1], 10) - 1);
@@ -177,7 +177,7 @@ public class Model3D_stage3d
             else
             {
                 this._vertices.push(0, 0);
-            };
+            }
             return (this._tupleIndices[_arg_1] = this._tupleIndex++);
         }
 

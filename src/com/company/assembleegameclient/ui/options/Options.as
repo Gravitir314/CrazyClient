@@ -124,7 +124,7 @@ public class Options extends Sprite
                 {
                     _local_6 = ((hidden) ? 14 : 8);
                     _local_4.x = _local_6;
-                };
+                }
                 if (_local_5 == 8)
                 {
                     _local_4.x = 8;
@@ -136,8 +136,8 @@ public class Options extends Sprite
                     {
                         _local_4.x = 8;
                         _local_4.y = 85;
-                    };
-                };
+                    }
+                }
                 if (hidden){
                     _local_4.y = 70;
                 }
@@ -210,7 +210,7 @@ public class Options extends Sprite
                 _local_1.data = _local_2;
                 Mouse.registerCursor(Parameters.data_.cursorSelect, _local_1);
                 registeredCursors.push(Parameters.data_.cursorSelect);
-            };
+            }
             Mouse.cursor = Parameters.data_.cursorSelect;
         }
 
@@ -271,9 +271,9 @@ public class Options extends Sprite
                 if (_local_2 != null)
                 {
                     delete Parameters.data_[_local_2.paramName_];
-                };
+                }
                 _local_3++;
-            };
+            }
             Parameters.setDefaults();
             Parameters.save();
             this.refresh();
@@ -296,11 +296,11 @@ public class Options extends Sprite
             if (_arg_1 == this.selected_)
             {
                 return;
-            };
+            }
             if (this.selected_ != null)
             {
                 this.selected_.setSelected(false);
-            };
+            }
             this.selected_ = _arg_1;
             this.selected_.setSelected(true);
             this.removeOptions();
@@ -360,7 +360,7 @@ public class Options extends Sprite
                 case DBKEYS_:
                     this.dbKeys();
                     return;
-            };
+            }
         }
 
         private function onAddedToStage(_arg_1:Event):void
@@ -389,7 +389,7 @@ public class Options extends Sprite
             if (_arg_1.keyCode == Parameters.data_.options)
             {
                 this.close();
-            };
+            }
             _arg_1.stopImmediatePropagation();
         }
 
@@ -410,7 +410,7 @@ public class Options extends Sprite
             for each (_local_1 in this.options_)
             {
                 removeChild(_local_1);
-            };
+            }
             this.options_.length = 0;
         }
 
@@ -444,7 +444,7 @@ public class Options extends Sprite
             if (((!(Parameters.data_.showMobInfo)) && (!(this.gs_.map.mapOverlay_ == null))))
             {
                 this.gs_.map.mapOverlay_.removeChildren(0);
-            };
+            }
         }
 
         private function scaleui():void
@@ -468,8 +468,8 @@ public class Options extends Sprite
                 if (_local_1.paramName_ == "uiscale")
                 {
                     _local_1.enable((Parameters.data_.stageScale == StageScaleMode.EXACT_FIT));
-                };
-            };
+                }
+            }
         }
 
         private function updateEffId():void
@@ -484,10 +484,10 @@ public class Options extends Sprite
                     if (_local_1.paramName_ == "noOption")
                     {
                         _local_1.setDescription(new StaticStringBuilder(("Current Effect ID: " + this.calcEffId())));
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function addDebuffsOptions():void
@@ -546,47 +546,47 @@ public class Options extends Sprite
             if (Parameters.data_.dbArmorBroken)
             {
                 _local_1 = (_local_1 + 1);
-            };
+            }
             if (Parameters.data_.dbBleeding)
             {
                 _local_1 = (_local_1 + 2);
-            };
+            }
             if (Parameters.data_.dbDazed)
             {
                 _local_1 = (_local_1 + 4);
-            };
+            }
             if (Parameters.data_.dbParalyzed)
             {
                 _local_1 = (_local_1 + 8);
-            };
+            }
             if (Parameters.data_.dbSick)
             {
                 _local_1 = (_local_1 + 16);
-            };
+            }
             if (Parameters.data_.dbSlowed)
             {
                 _local_1 = (_local_1 + 32);
-            };
+            }
             if (Parameters.data_.dbStunned)
             {
                 _local_1 = (_local_1 + 64);
-            };
+            }
             if (Parameters.data_.dbWeak)
             {
                 _local_1 = (_local_1 + 128);
-            };
+            }
             if (Parameters.data_.dbQuiet)
             {
                 _local_1 = (_local_1 + 0x0100);
-            };
+            }
             if (Parameters.data_.dbPetStasis)
             {
                 _local_1 = (_local_1 + 0x0200);
-            };
+            }
             if (Parameters.data_.dbPetrify)
             {
                 _local_1 = (_local_1 + 0x0400);
-            };
+            }
             return (_local_1);
         }
 
@@ -603,10 +603,10 @@ public class Options extends Sprite
                     if (_local_1.paramName_ == "dbQuietCastle")
                     {
                         _local_1.enable(Parameters.data_.dbQuiet);
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function unstableAbil_options():void
@@ -621,10 +621,10 @@ public class Options extends Sprite
                     if (_local_1.paramName_ == "dbUnstableAbil")
                     {
                         _local_1.enable((!(Parameters.data_.dbUnstable)));
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function addAimOptions():void
@@ -689,13 +689,13 @@ public class Options extends Sprite
                                 if (_local_1.paramName_ == "pbToggle")
                                 {
                                     _local_1.enable((!(Parameters.data_.perfectBomb)));
-                                };
-                            };
-                        };
-                    };
-                };
+                                }
+                            }
+                        }
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function addLootOptions():void
@@ -735,10 +735,10 @@ public class Options extends Sprite
                     if (((((((_local_1.paramName_ == "LNAbility") || (_local_1.paramName_ == "LNRing")) || (_local_1.paramName_ == "LNWeap")) || (_local_1.paramName_ == "LNArmor")) || (_local_1.paramName_ == "potsMajor")) || (_local_1.paramName_ == "potsMinor")))
                     {
                         _local_1.enable(((Parameters.data_.AutoLootOn == false) && (Parameters.data_.showLootNotifs == false)));
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function updateRotate():void
@@ -1094,7 +1094,7 @@ public class Options extends Sprite
             if (((((!(this.gs_ == null)) && (!(this.gs_.map == null))) && (!(this.gs_.map.partyOverlay_ == null))) && (!(this.gs_.map.partyOverlay_.questArrow_ == null))))
             {
                 this.gs_.map.partyOverlay_.questArrow_.refreshToolTip();
-            };
+            }
         }
 
         private function onFullscreenChange():void
@@ -1172,7 +1172,7 @@ public class Options extends Sprite
             {
                 option.x = ((((options_.length % 2) == 0) ? 20 : 415) + offsetX);
                 option.y = (((hidden) ? ((int((options_.length / 2)) * 44) + 122) : ((int((options_.length / 2)) * 41) + 110)) + offsetY);
-            }
+            };
             option.textChanged.addOnce(positionOption);
             this.addOption(option);
         }

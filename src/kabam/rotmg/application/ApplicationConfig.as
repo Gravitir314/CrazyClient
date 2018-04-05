@@ -65,7 +65,7 @@ public class ApplicationConfig implements IConfig
                     return (new Testing2Setup());
                 default:
                     return (new ProductionSetup());
-            };
+            }
         }
 
         private function makeFixedIPSetup():FixedIPSetup

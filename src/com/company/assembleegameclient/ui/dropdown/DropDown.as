@@ -38,7 +38,7 @@ public class DropDown extends Sprite
                 this.labelText_.updateMetrics();
                 addChild(this.labelText_);
                 this.xOffset_ = (this.labelText_.width + 5);
-            };
+            }
             this.setIndex(_arg_5);
         }
 
@@ -61,9 +61,9 @@ public class DropDown extends Sprite
                 {
                     this.setIndex(_local_2);
                     return (true);
-                };
+                }
                 _local_2++;
-            };
+            }
             return (false);
         }
 
@@ -72,7 +72,7 @@ public class DropDown extends Sprite
             if (_arg_1 >= this.strings_.length)
             {
                 _arg_1 = 0;
-            };
+            }
             this.setSelected(this.strings_[_arg_1]);
         }
 
@@ -84,9 +84,9 @@ public class DropDown extends Sprite
                 if (this.selected_.getValue() == this.strings_[_local_1])
                 {
                     return (_local_1);
-                };
+                }
                 _local_1++;
-            };
+            }
             return (-1);
         }
 
@@ -101,7 +101,7 @@ public class DropDown extends Sprite
             if (_arg_1 != _local_2)
             {
                 dispatchEvent(new Event(Event.CHANGE));
-            };
+            }
         }
 
         private function onClick(_arg_1:MouseEvent):void
@@ -111,7 +111,7 @@ public class DropDown extends Sprite
             if (contains(this.selected_))
             {
                 removeChild(this.selected_);
-            };
+            }
             this.showAll();
         }
 
@@ -133,7 +133,7 @@ public class DropDown extends Sprite
                 _local_3 = (this.xOffset_ - (this.w_ * _local_6));
                 this.listItems(_local_1, _local_2, _local_3);
                 _local_6++;
-            };
+            }
             this.all_.addEventListener(MouseEvent.ROLL_OUT, this.onOut);
             stage.addChild(this.all_);
         }
@@ -153,7 +153,7 @@ public class DropDown extends Sprite
                 this.all_.addChild(_local_5);
                 _local_4 = (_local_4 + _local_5.h_);
                 _local_6++;
-            };
+            }
         }
 
         private function hideAll():void

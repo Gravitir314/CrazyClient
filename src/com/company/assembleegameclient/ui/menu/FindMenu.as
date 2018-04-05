@@ -90,7 +90,7 @@ public class FindMenu extends Frame
             for each (_local_1 in this.p_)
             {
                 this.gs_.gsc_.requestTrade(_local_1.name_);
-            };
+            }
             this.closeDialogs.dispatch();
         }
 
@@ -100,7 +100,7 @@ public class FindMenu extends Frame
             for each (_local_1 in this.p_)
             {
                 this.gs_.map.party_.lockPlayer(_local_1);
-            };
+            }
             this.closeDialogs.dispatch();
         }
 

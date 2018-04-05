@@ -30,7 +30,7 @@ public class KongregateOpenAccountInfoCommand
             else
             {
                 this.api.showRegistrationDialog();
-            };
+            }
         }
 
 

@@ -151,7 +151,7 @@ public class LegendsView extends Sprite
             {
                 this.makeTab(_local_1[_local_3], _local_3);
                 _local_3++;
-            };
+            }
         }
 
         private function makeTab(_arg_1:Timespan, _arg_2:int):LegendsTab
@@ -171,7 +171,7 @@ public class LegendsView extends Sprite
             if (this.selectedTab != _arg_1)
             {
                 this.updateTabAndSelectTimespan(_arg_1);
-            };
+            }
         }
 
         private function updateTabAndSelectTimespan(_arg_1:LegendsTab):void
@@ -216,7 +216,7 @@ public class LegendsView extends Sprite
             for each (_local_1 in this.items)
             {
                 _local_1.selected.remove(this.onItemSelected);
-            };
+            }
             this.items.length = 0;
             this.mainContainer.removeChild(this.listContainer);
             this.listContainer = null;
@@ -243,7 +243,7 @@ public class LegendsView extends Sprite
             {
                 this.items[_local_1] = this.makeItemFromLegend(_local_1);
                 _local_1++;
-            };
+            }
         }
 
         private function makeItemFromLegend(_arg_1:int):LegendListItem
@@ -269,7 +269,7 @@ public class LegendsView extends Sprite
             {
                 this.scrollBar.removeEventListener(Event.CHANGE, this.onScrollBarChange);
                 this.scrollBar.visible = false;
-            };
+            }
         }
 
         private function positionScrollbarToDisplayFocussedLegend():void
@@ -282,7 +282,7 @@ public class LegendsView extends Sprite
                 _local_1 = this.legends.indexOf(_local_3);
                 _local_2 = ((_local_1 + 0.5) * LegendListItem.HEIGHT);
                 this.scrollBar.setPos(((_local_2 - 200) / (this.listContainer.height - 400)));
-            };
+            }
         }
 
         private function getLegendFocus():Legend
@@ -295,8 +295,8 @@ public class LegendsView extends Sprite
                 {
                     _local_1 = _local_2;
                     break;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

@@ -34,11 +34,11 @@ public class VortexEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_8:int = int((this.lastUpdate_ / 50));
@@ -53,7 +53,7 @@ public class VortexEffect extends ParticleEffect
                 map_.addObj(_local_4, (x_ + _local_6), (y_ + _local_7));
                 _local_4.restart(_local_3, _arg_1, x_, y_);
                 _local_8++;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }
@@ -114,7 +114,7 @@ class VortexParticle extends Particle
         if (this.mSize > size_)
         {
             this.fSize = (this.fSize + (_arg_2 * 0.01));
-        };
+        }
         size_ = this.fSize;
         moveTo((x_ + (((_local_5 + this.initAccelX) * _arg_2) * 0.0006)), (y_ + (((_local_6 + this.initAccelY) * _arg_2) * 0.0006)));
         z_ = (z_ + ((-0.5 * _arg_2) * 0.0006));

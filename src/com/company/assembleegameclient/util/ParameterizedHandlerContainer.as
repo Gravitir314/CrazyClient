@@ -48,7 +48,7 @@ public class ParameterizedHandlerContainer
             {
                 _local_3.dispatcher.removeEventListener(_arg_2.type, _local_3.handler);
                 delete this._handlers[_arg_1];
-            };
+            }
         }
 
 

@@ -49,7 +49,7 @@ public class ImminentWaveCountdownClockMediator extends Mediator
             else
             {
                 this.view.show();
-            };
+            }
         }
 
         private function removeView():void
@@ -80,7 +80,7 @@ public class ImminentWaveCountdownClockMediator extends Mediator
             if (this.layers.mouseDisabledTop.contains(this.view))
             {
                 this.layers.mouseDisabledTop.removeChild(this.view);
-            };
+            }
         }
 
 

@@ -58,7 +58,7 @@ public class TagsInputField extends Sprite
             if (this.inputText_.text == "")
             {
                 addChild(this.instructionsText_);
-            };
+            }
         }
 
         public function text():String
@@ -71,7 +71,7 @@ public class TagsInputField extends Sprite
             if (contains(this.instructionsText_))
             {
                 removeChild(this.instructionsText_);
-            };
+            }
         }
 
         private function onFocusOut(_arg_1:FocusEvent):void
@@ -79,7 +79,7 @@ public class TagsInputField extends Sprite
             if (((!(contains(this.instructionsText_))) && (this.inputText_.text == "")))
             {
                 addChild(this.instructionsText_);
-            };
+            }
         }
 
 

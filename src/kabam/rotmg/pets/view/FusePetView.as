@@ -59,7 +59,7 @@ public class FusePetView extends PetInteractionView implements DialogCloser
             {
                 this.buttonBar.setGoldPrice(FeedFuseCostModel.getFuseGoldCost(PetRarityEnum.selectByValue(_arg_1.leftSlotPetVO.getRarity())));
                 this.buttonBar.setFamePrice(FeedFuseCostModel.getFuseFameCost(PetRarityEnum.selectByValue(_arg_1.leftSlotPetVO.getRarity())));
-            };
+            }
             this.closeButton.clicked.add(this.onClose);
             this.waitForTextChanged();
             this.addChildren();

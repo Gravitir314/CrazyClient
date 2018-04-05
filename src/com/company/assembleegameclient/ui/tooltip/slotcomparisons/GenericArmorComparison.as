@@ -30,7 +30,7 @@ public class GenericArmorComparison extends SlotComparison
             {
                 defense = int(this.defTags.@amount);
                 otherDefense = int(this.otherDefTags.@amount);
-            };
+            }
         }
 
         private function compareDefense(_arg_1:int, _arg_2:int):String

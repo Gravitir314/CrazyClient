@@ -66,7 +66,7 @@ public final class ConsoleOutputView extends Sprite implements Resizable
             {
                 delete this.watchMap[_arg_1];
                 this.watched.splice(this.watched.indexOf(_local_2), 1);
-            };
+            }
         }
 
         private function makeWatch(_arg_1:String):Watch
@@ -91,7 +91,7 @@ public final class ConsoleOutputView extends Sprite implements Resizable
             for (_local_1 in this.watchMap)
             {
                 delete this.watchMap[_local_1];
-            };
+            }
         }
 
         public function resize(_arg_1:Rectangle):void

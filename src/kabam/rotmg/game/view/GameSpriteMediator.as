@@ -151,7 +151,7 @@ public class GameSpriteMediator extends Mediator
             else
             {
                 this.flushQueueSignal.dispatch();
-            };
+            }
         }
 
         override public function destroy():void
@@ -181,7 +181,7 @@ public class GameSpriteMediator extends Mediator
             if (!this.view.isEditor)
             {
                 this.gameClosed.dispatch();
-            };
+            }
             this.closeDialogs.dispatch();
             this.closeAllPopups.dispatch();
             var _local_1:HideMapLoadingSignal = StaticInjectorContext.getInjector().getInstance(HideMapLoadingSignal);
@@ -194,7 +194,7 @@ public class GameSpriteMediator extends Mediator
             if (this.view.isEditor)
             {
                 return;
-            };
+            }
             var _local_2:GameInitData = new GameInitData();
             _local_2.server = _arg_1.server_;
             _local_2.gameId = _arg_1.gameId_;

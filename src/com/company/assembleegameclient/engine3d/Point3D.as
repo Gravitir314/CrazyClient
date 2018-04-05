@@ -53,7 +53,7 @@ public class Point3D
             if (this.posS_.w < 0)
             {
                 return;
-            };
+            }
             var _local_11:Number = (this.posS_.w * Math.sin(((_arg_5.pp_.fieldOfView / 2) * Trig.toRadians)));
             var _local_12:Number = (this.size_ / _local_11);
             this.data_.length = 0;
@@ -66,7 +66,7 @@ public class Point3D
                 _local_8 = Math.cos(_arg_3);
                 _local_9 = Math.sin(_arg_3);
                 this.data_.push((this.posS_.x + ((_local_8 * -(_local_12)) + (_local_9 * -(_local_12)))), (this.posS_.y + ((_local_9 * -(_local_12)) - (_local_8 * -(_local_12)))), (this.posS_.x + ((_local_8 * _local_12) + (_local_9 * -(_local_12)))), (this.posS_.y + ((_local_9 * _local_12) - (_local_8 * -(_local_12)))), (this.posS_.x + ((_local_8 * _local_12) + (_local_9 * _local_12))), (this.posS_.y + ((_local_9 * _local_12) - (_local_8 * _local_12))), (this.posS_.x + ((_local_8 * -(_local_12)) + (_local_9 * _local_12))), (this.posS_.y + ((_local_9 * -(_local_12)) - (_local_8 * _local_12))));
-            };
+            }
             if (_arg_6 != null)
             {
                 this.bitmapFill_.bitmapData = _arg_6;
@@ -82,7 +82,7 @@ public class Point3D
             {
                 this.solidFill_.color = _arg_7;
                 _arg_1.push(this.solidFill_);
-            };
+            }
             _arg_1.push(this.path_);
             _arg_1.push(END_FILL);
         }

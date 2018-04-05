@@ -39,13 +39,13 @@ public class GroundChooser extends Chooser
             if (!_arg_3)
             {
                 removeElements();
-            };
+            }
             this.lastSearch = _arg_1;
             var _local_9:Vector.<String> = new Vector.<String>();
             if (_arg_1 != "")
             {
                 _local_8 = new RegExp(_arg_1, "gix");
-            };
+            }
             var _local_10:Dictionary = GroupDivider.GROUPS["Ground"];
             for each (_local_5 in _local_10)
             {
@@ -55,9 +55,9 @@ public class GroundChooser extends Chooser
                     if (((_local_8 == null) || (_local_4.search(_local_8) >= 0)))
                     {
                         _local_9.push(_local_4);
-                    };
-                };
-            };
+                    }
+                }
+            }
             _local_9.sort(MoreStringUtil.cmp);
             for each (_local_4 in _local_9)
             {
@@ -71,9 +71,9 @@ public class GroundChooser extends Chooser
                 else
                 {
                     _local_7 = this.cache[_local_6];
-                };
+                }
                 addElement(_local_7);
-            };
+            }
             scrollBar_.setIndicatorSize(HEIGHT, elementSprite_.height, true);
         }
 
@@ -91,7 +91,7 @@ public class GroundChooser extends Chooser
                     return ((!(_arg_1.hasOwnProperty("Speed"))) || (Number(_arg_1.elements("Speed")) >= 1));
                 default:
                     return (true);
-            };
+            }
         }
 
 

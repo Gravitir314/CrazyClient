@@ -31,7 +31,7 @@ public class InventoryGrid extends ItemGrid
                 addToGrid(_local_5, 2, _local_6);
                 this._tiles[_local_6] = _local_5;
                 _local_6++;
-            };
+            }
         }
 
         public function getItemById(_arg_1:int):InventoryTile
@@ -42,8 +42,8 @@ public class InventoryGrid extends ItemGrid
                 if (_local_2.getItemId() == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -64,22 +64,22 @@ public class InventoryGrid extends ItemGrid
                         if (this._tiles[_local_5].setItem(_arg_1[(_local_5 + indexOffset)]))
                         {
                             _local_3 = true;
-                        };
+                        }
                     }
                     else
                     {
                         if (this._tiles[_local_5].setItem(-1))
                         {
                             _local_3 = true;
-                        };
-                    };
+                        }
+                    }
                     _local_5++;
-                };
+                }
                 if (_local_3)
                 {
                     refreshTooltip();
-                };
-            };
+                }
+            }
         }
 
         public function get tiles():Vector.<InventoryTile>

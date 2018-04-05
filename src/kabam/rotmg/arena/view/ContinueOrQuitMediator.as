@@ -76,7 +76,7 @@ public class ContinueOrQuitMediator extends Mediator
             {
                 this.view.setProcessing(true);
                 this.openMoneyWindow.dispatch();
-            };
+            }
         }
 
         private function onQuit():void

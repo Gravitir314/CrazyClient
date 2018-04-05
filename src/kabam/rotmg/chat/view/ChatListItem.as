@@ -77,7 +77,7 @@ public class ChatListItem extends Sprite
                     if (((!(_local_2 == null)) && (_local_2 is Player)))
                     {
                         this.model.gameSprite.gsc_.teleport(_local_2.name_);
-                    };
+                    }
                 }
                 else
                 {
@@ -99,12 +99,12 @@ public class ChatListItem extends Sprite
                                 if (this.isTrade)
                                 {
                                     this.model.gameSprite.addChatPlayerMenu(null, _arg_1.stageX, _arg_1.stageY, this.playerName, false, true);
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         public function isTimedOut():Boolean
@@ -135,11 +135,11 @@ public class ChatListItem extends Sprite
                     {
                         this.list[_local_4].y = (this.list[_local_4].y - this.layoutHeight);
                         _local_4++;
-                    };
-                };
+                    }
+                }
                 _local_1 = (_local_1 + _local_3.width);
                 _local_5++;
-            };
+            }
         }
 
         private function addItems():void
@@ -148,7 +148,7 @@ public class ChatListItem extends Sprite
             for each (_local_1 in this.list)
             {
                 addChild(_local_1);
-            };
+            }
         }
 
 

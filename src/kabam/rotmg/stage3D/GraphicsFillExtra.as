@@ -42,11 +42,11 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             if (colorTransforms[_arg_1] == null)
             {
                 colorTransformsSize++;
-            };
+            }
             colorTransforms[_arg_1] = _arg_2;
         }
 
@@ -63,7 +63,7 @@ public class GraphicsFillExtra
                 _local_2 = new ColorTransform();
                 colorTransforms[_arg_1] = _local_2;
                 colorTransformsSize++;
-            };
+            }
             return (_local_2);
         }
 
@@ -72,7 +72,7 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             testOffsetUV(_arg_1);
             textureOffsets[_arg_1][0] = _arg_2;
             textureOffsets[_arg_1][1] = _arg_3;
@@ -83,7 +83,7 @@ public class GraphicsFillExtra
             if (textureOffsets[_arg_1] != null)
             {
                 return (textureOffsets[_arg_1]);
-            };
+            }
             return (DEFAULT_OFFSET);
         }
 
@@ -92,12 +92,12 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             if (textureOffsets[_arg_1] == null)
             {
                 textureOffsetsSize++;
                 textureOffsets[_arg_1] = Vector.<Number>([0, 0, 0, 0]);
-            };
+            }
         }
 
         public static function setSinkLevel(_arg_1:GraphicsBitmapFill, _arg_2:Number):void
@@ -105,11 +105,11 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             if (waterSinks[_arg_1] == null)
             {
                 waterSinksSize++;
-            };
+            }
             waterSinks[_arg_1] = _arg_2;
         }
 
@@ -118,7 +118,7 @@ public class GraphicsFillExtra
             if (((!(waterSinks[_arg_1] == null)) && (waterSinks[_arg_1] is Number)))
             {
                 return (waterSinks[_arg_1]);
-            };
+            }
             return (0);
         }
 
@@ -127,7 +127,7 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             var _local_3:Context3DProxy = StaticInjectorContext.getInjector().getInstance(Context3DProxy);
             var _local_4:VertexBuffer3D = _local_3.GetContext3D().createVertexBuffer(4, 5);
             _local_4.uploadFromVector(_arg_2, 0, 4);
@@ -136,7 +136,7 @@ public class GraphicsFillExtra
             if (vertexBuffers[_arg_1] == null)
             {
                 vertexBuffersSize++;
-            };
+            }
             vertexBuffers[_arg_1] = _local_4;
         }
 
@@ -145,7 +145,7 @@ public class GraphicsFillExtra
             if (((!(vertexBuffers[_arg_1] == null)) && (vertexBuffers[_arg_1] is VertexBuffer3D)))
             {
                 return (vertexBuffers[_arg_1]);
-            };
+            }
             return (null);
         }
 
@@ -154,12 +154,12 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             if (waterSinks[_arg_1] != null)
             {
                 waterSinksSize--;
                 delete waterSinks[_arg_1];
-            };
+            }
         }
 
         public static function setSoftwareDraw(_arg_1:GraphicsBitmapFill, _arg_2:Boolean):void
@@ -167,11 +167,11 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             if (softwareDraw[_arg_1] == null)
             {
                 softwareDrawSize++;
-            };
+            }
             softwareDraw[_arg_1] = _arg_2;
         }
 
@@ -180,7 +180,7 @@ public class GraphicsFillExtra
             if (((!(softwareDraw[_arg_1] == null)) && (softwareDraw[_arg_1] is Boolean)))
             {
                 return (softwareDraw[_arg_1]);
-            };
+            }
             return (false);
         }
 
@@ -189,11 +189,11 @@ public class GraphicsFillExtra
             if (!Parameters.isGpuRender())
             {
                 return;
-            };
+            }
             if (softwareDrawSolid[_arg_1] == null)
             {
                 softwareDrawSolidSize++;
-            };
+            }
             softwareDrawSolid[_arg_1] = _arg_2;
         }
 
@@ -202,7 +202,7 @@ public class GraphicsFillExtra
             if (((!(softwareDrawSolid[_arg_1] == null)) && (softwareDrawSolid[_arg_1] is Boolean)))
             {
                 return (softwareDrawSolid[_arg_1]);
-            };
+            }
             return (false);
         }
 
@@ -228,7 +228,7 @@ public class GraphicsFillExtra
             for each (_local_1 in vertexBuffers)
             {
                 _local_1.dispose();
-            };
+            }
             vertexBuffers = new Dictionary();
         }
 
@@ -238,32 +238,32 @@ public class GraphicsFillExtra
             {
                 colorTransforms = new Dictionary();
                 colorTransformsSize = 0;
-            };
+            }
             if (textureOffsetsSize > 2000)
             {
                 textureOffsets = new Dictionary();
                 textureOffsetsSize = 0;
-            };
+            }
             if (waterSinksSize > 2000)
             {
                 waterSinks = new Dictionary();
                 waterSinksSize = 0;
-            };
+            }
             if (vertexBuffersSize > 1000)
             {
                 disposeVertexBuffers();
                 vertexBuffersSize = 0;
-            };
+            }
             if (softwareDrawSize > 2000)
             {
                 softwareDraw = new Dictionary();
                 softwareDrawSize = 0;
-            };
+            }
             if (softwareDrawSolidSize > 2000)
             {
                 softwareDrawSolid = new Dictionary();
                 softwareDrawSolidSize = 0;
-            };
+            }
         }
 
 

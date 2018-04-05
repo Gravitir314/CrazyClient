@@ -39,7 +39,7 @@ public class AppendingLineBuilder implements StringBuilder
             for each (_local_1 in this.data)
             {
                 _local_2.push(_local_1.getString(this.provider));
-            };
+            }
             return (_local_2.join(this.delimiter));
         }
 
@@ -105,7 +105,7 @@ class LineData
         if (_local_2 == null)
         {
             _local_2 = this.key;
-        };
+        }
         _local_6 = _local_6.concat(_local_2);
         for (_local_3 in this.tokens)
         {
@@ -121,10 +121,10 @@ class LineData
                 if ((((_local_5.length > 0) && (_local_5.charAt(0) == "{")) && (_local_5.charAt((_local_5.length - 1)) == "}")))
                 {
                     _local_5 = _arg_1.getValue(_local_5.substr(1, (_local_5.length - 2)));
-                };
+                }
                 _local_6 = _local_6.replace((("{" + _local_3) + "}"), _local_5);
-            };
-        };
+            }
+        }
         _local_6 = _local_6.replace(/\\n/g, "\n");
         return (_local_6.concat(this.closingHTMLTags));
     }

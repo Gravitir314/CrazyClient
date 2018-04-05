@@ -125,7 +125,7 @@ public class EditBoard extends Sprite
             if (this.scrollBar_ == null)
             {
                 return;
-            };
+            }
             this.scrollBar_.setIndicatorSize(TEXT_HEIGHT, this.boardText_.textHeight, false);
             if (this.boardText_.maxScrollV == 1)
             {
@@ -134,7 +134,7 @@ public class EditBoard extends Sprite
             else
             {
                 this.scrollBar_.setPos(((this.boardText_.scrollV - 1) / (this.boardText_.maxScrollV - 1)));
-            };
+            }
         }
 
 

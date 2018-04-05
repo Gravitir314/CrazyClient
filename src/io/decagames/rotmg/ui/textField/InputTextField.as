@@ -42,7 +42,7 @@ public class InputTextField extends UILabel {
             if (!this._wasModified){
                 this._wasModified = true;
                 this.text = "";
-            };
+            }
         }
 
         public function get wasModified():Boolean{

@@ -29,7 +29,7 @@ public class DomainModel
             for each (_local_1 in this.WHITELIST)
             {
                 Security.allowDomain(_local_1);
-            };
+            }
         }
 
         public function isLocalDomainValid():Boolean
@@ -51,7 +51,7 @@ public class DomainModel
             for each (_local_1 in this.WHITELIST)
             {
                 _local_3 = ((_local_3) || (_local_2 == _local_1));
-            };
+            }
             return (_local_3);
         }
 

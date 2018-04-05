@@ -73,7 +73,7 @@ public class SecurityQuestionsMediator extends Mediator {
                 this.securityQuestionsModel.securityQuestionsAnswers = this.view.getAnswers();
                 this.closeDialogs.dispatch();
                 this.openDialog.dispatch(new SecurityQuestionsConfirmDialog(this.securityQuestionsModel.securityQuestionsList, this.securityQuestionsModel.securityQuestionsAnswers));
-            };
+            }
         }
 
         private function onBackClick(_arg_1:MouseEvent):void{
@@ -94,7 +94,7 @@ public class SecurityQuestionsMediator extends Mediator {
             _local_2.answers = [];
             for each (_local_3 in this.securityQuestionsModel.securityQuestionsAnswers) {
                 _local_2.answers.push(Base64.encode(_local_3));
-            };
+            }
             this.saveQuestions.dispatch(_local_2);
         }
 

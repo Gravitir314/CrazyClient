@@ -60,7 +60,7 @@ public class CalendarDayBoxMediator extends Mediator
                 this.socketServer.sendMessage(_local_2);
                 this.view.markAsClaimed();
                 this.model.markAsClaimed(this.view.getDay().dayNumber, this.view.getDay().calendarType);
-            };
+            }
         }
 
 

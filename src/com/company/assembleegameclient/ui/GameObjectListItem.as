@@ -51,7 +51,7 @@ public class GameObjectListItem extends Sprite
             if (!_arg_2)
             {
                 this.text.setTextWidth(66).setTextHeight(20).setBold(true);
-            };
+            }
             this.text.x = 32;
             this.text.y = 6;
             this.text.filters = [new DropShadowFilter(0, 0, 0)];
@@ -70,7 +70,7 @@ public class GameObjectListItem extends Sprite
             {
                 this.redraw();
                 transform.colorTransform = ((_arg_2) || (MoreColorUtil.identity));
-            };
+            }
         }
 
         public function clear():void
@@ -124,13 +124,13 @@ public class GameObjectListItem extends Sprite
                     else
                     {
                         this.builder.setTemplate(this.objname);
-                    };
+                    }
                 }
                 else
                 {
                     this.builder.setTemplate(ObjectLibrary.typeToDisplayId_[this.type]);
-                };
-            };
+                }
+            }
             return (this.builder);
         }
 
@@ -147,7 +147,7 @@ public class GameObjectListItem extends Sprite
                 else
                 {
                     _local_1 = "<b>{name}</b> ({type}{level})";
-                };
+                }
                 _local_2.name = this.go.name_;
                 _local_2.type = ObjectLibrary.typeToDisplayId_[this.type];
                 _local_2.level = ((this.level < 1) ? "" : (" " + this.level));
@@ -156,7 +156,7 @@ public class GameObjectListItem extends Sprite
             {
                 _local_1 = "<b>{name}</b>";
                 _local_2.name = ObjectLibrary.typeToDisplayId_[this.type];
-            };
+            }
             this.builder.setTemplate(_local_1, _local_2);
         }
 
@@ -171,19 +171,19 @@ public class GameObjectListItem extends Sprite
             if (_local_1 == null)
             {
                 return (this.color);
-            };
+            }
             if (_local_1.isFellowGuild_)
             {
                 return (Parameters.FELLOW_GUILD_COLOR);
-            };
+            }
             if (((Parameters.data_.lockHighlight) && (_local_1.starred_)))
             {
                 return (4240365);
-            };
+            }
             if (_local_1.nameChosen_)
             {
                 return (Parameters.NAME_CHOSEN_COLOR);
-            };
+            }
             return (this.color);
         }
 

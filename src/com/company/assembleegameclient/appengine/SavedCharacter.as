@@ -51,7 +51,7 @@ public class SavedCharacter
                 _local_5 = StaticInjectorContext.getInjector().getInstance(PetsModel).getPetVO(_local_4);
                 _local_5.apply(_local_3);
                 this.setPetVO(_local_5);
-            };
+            }
         }
 
         public static function getImage(_arg_1:SavedCharacter, _arg_2:XML, _arg_3:int, _arg_4:int, _arg_5:Number, _arg_6:Boolean, _arg_7:Boolean):BitmapData
@@ -71,8 +71,8 @@ public class SavedCharacter
                 if (!_arg_7)
                 {
                     _local_12 = CachingColorTransformer.transformBitmapData(_local_12, new ColorTransform(0.75, 0.75, 0.75, 1, 0, 0, 0, 0));
-                };
-            };
+                }
+            }
             return (_local_12);
         }
 
@@ -83,7 +83,7 @@ public class SavedCharacter
             if (_local_3 != _local_4)
             {
                 return (_local_4 - _local_3);
-            };
+            }
             return (_arg_2.xp() - _arg_1.xp());
         }
 
@@ -111,11 +111,11 @@ public class SavedCharacter
                         if (((!(_local_2 == null)) && (_local_2.hasOwnProperty("FameBonus"))))
                         {
                             _local_4 = (_local_4 + int(_local_2.FameBonus));
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_5++;
-            };
+            }
             return (_local_4);
         }
 
@@ -220,7 +220,7 @@ public class SavedCharacter
             if (!this.charXML_.hasOwnProperty("CreationDate"))
             {
                 return ("Unknown");
-            };
+            }
             return (this.charXML_.CreationDate);
         }
 

@@ -68,10 +68,10 @@ public class PopupWindowBackground extends Sprite
                             graphics.beginFill(0);
                             _local_5.drawBevelRect(0, 0, _local_4, graphics);
                             graphics.endFill();
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
         }
 
         public function divide(_arg_1:String, _arg_2:int):void
@@ -85,8 +85,8 @@ public class PopupWindowBackground extends Sprite
                 if (_arg_1 == VERTICAL_DIVISION)
                 {
                     this.divideVertically(_arg_2);
-                };
-            };
+                }
+            }
         }
 
         private function divideHorizontally(_arg_1:int):void

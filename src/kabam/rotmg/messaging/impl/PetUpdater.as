@@ -32,14 +32,14 @@ public class PetUpdater
             if (_local_6 == null)
             {
                 return;
-            };
+            }
             for each (_local_3 in _arg_2)
             {
                 _local_5 = _local_3.statValue_;
                 if (_local_3.statType_ == StatData.TEXTURE_STAT)
                 {
                     _local_6.setSkin(_local_5);
-                };
+                }
                 switch (_local_3.statType_)
                 {
                     case StatData.PET_INSTANCEID_STAT:
@@ -95,12 +95,12 @@ public class PetUpdater
                         _local_4 = _local_6.abilityList[2];
                         _local_4.type = _local_5;
                         break;
-                };
+                }
                 if (_local_4)
                 {
                     _local_4.updated.dispatch(_local_4);
-                };
-            };
+                }
+            }
         }
 
         private function createPetVO(_arg_1:Pet, _arg_2:Vector.<StatData>):PetVO
@@ -114,8 +114,8 @@ public class PetUpdater
                     _local_4 = this.petsModel.getCachedVOOnly(_local_3.statValue_);
                     _arg_1.vo = ((_local_4) ? _local_4 : ((this.gameSprite.map.isPetYard) ? this.petsModel.getPetVO(_local_3.statValue_) : new PetVO(_local_3.statValue_)));
                     return (_arg_1.vo);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -129,16 +129,16 @@ public class PetUpdater
                 if (_local_3.statType_ == StatData.TEXTURE_STAT)
                 {
                     _arg_1.setSkin(_local_4);
-                };
+                }
                 if (_local_3.statType_ == StatData.SIZE_STAT)
                 {
                     _arg_1.size_ = _local_4;
-                };
+                }
                 if (_local_3.statType_ == StatData.CONDITION_STAT)
                 {
                     _arg_1.condition_[ConditionEffect.CE_FIRST_BATCH] = _local_4;
-                };
-            };
+                }
+            }
         }
 
 

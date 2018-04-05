@@ -65,7 +65,7 @@ public class StatsView extends Sprite
                 this.containerSprite.addChild(_local_1);
                 _local_2 = (_local_2 + (_local_3 % 2));
                 _local_3++;
-            };
+            }
         }
 
         private function createStat(_arg_1:int, _arg_2:int):StatView
@@ -84,7 +84,7 @@ public class StatsView extends Sprite
             {
                 this.setBackgroundVisibility();
                 this.drawStats(_arg_1);
-            };
+            }
             this.containerSprite.x = ((this.WIDTH - this.containerSprite.width) / 2);
         }
 
@@ -130,8 +130,8 @@ public class StatsView extends Sprite
                 if (this.currentState == STATE_DOCKED)
                 {
                     this.background.alpha = 0;
-                };
-            };
+                }
+            }
         }
 
 

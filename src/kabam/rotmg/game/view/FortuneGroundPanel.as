@@ -86,7 +86,7 @@ public class FortuneGroundPanel extends Panel
             {
                 this.infoButton_ = new DeprecatedTextButton(16, _local_6);
                 addChild(this.infoButton_);
-            };
+            }
             this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_7));
             this.bitmap_.bitmapData = ArenaViewAssetFactory.returnHostBitmap(_arg_2).bitmapData;
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
@@ -99,7 +99,7 @@ public class FortuneGroundPanel extends Panel
             else
             {
                 FortuneModal.closed.add(this.enableInteract);
-            };
+            }
         }
 
         private function enableInteract():void
@@ -121,8 +121,8 @@ public class FortuneGroundPanel extends Panel
                 if (this.onHoverPanel != null)
                 {
                     addChild(this.onHoverPanel);
-                };
-            };
+                }
+            }
         }
 
         private function onHoverExit(_arg_1:MouseEvent):void
@@ -131,7 +131,7 @@ public class FortuneGroundPanel extends Panel
             {
                 removeChild(this.onHoverPanel);
                 this.onHoverPanel = null;
-            };
+            }
         }
 
         public function setOwner(_arg_1:SellableObject):void
@@ -139,7 +139,7 @@ public class FortuneGroundPanel extends Panel
             if (_arg_1 == this.owner_)
             {
                 return;
-            };
+            }
             this.owner_ = _arg_1;
             this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
             var _local_2:String = this.owner_.soldObjectName();
@@ -171,7 +171,7 @@ public class FortuneGroundPanel extends Panel
             if (FortuneModal.modalIsOpen)
             {
                 return;
-            };
+            }
             var _local_1:Injector = StaticInjectorContext.getInjector();
             var _local_2:FortuneModel = _local_1.getInstance(FortuneModel);
             var _local_3:Account = _local_1.getInstance(Account);
@@ -188,8 +188,8 @@ public class FortuneGroundPanel extends Panel
                 if (!_local_3.isRegistered())
                 {
                     _local_4.dispatch(new RegisterPromptDialog("SellableObjectPanelMediator.text", {"type":Currency.typeToName(Currency.GOLD)}));
-                };
-            };
+                }
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -197,7 +197,7 @@ public class FortuneGroundPanel extends Panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.onInfoButton();
-            };
+            }
         }
 
         override public function draw():void
@@ -208,7 +208,7 @@ public class FortuneGroundPanel extends Panel
             if (!contains(this.infoButton_))
             {
                 addChild(this.infoButton_);
-            };
+            }
         }
 
 

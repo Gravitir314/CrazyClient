@@ -39,11 +39,11 @@ public class ParticleModalMap extends Map
             if (_arg_1 == MODE_SNOW)
             {
                 addEventListener(Event.ENTER_FRAME, this.activateModeSnow);
-            };
+            }
             if (_arg_1 == MODE_AUTO_UPDATE)
             {
                 addEventListener(Event.ENTER_FRAME, this.updater);
-            };
+            }
         }
 
         public static function getLocalPos(_arg_1:Number):Number
@@ -63,7 +63,7 @@ public class ParticleModalMap extends Map
             else
             {
                 this.internalAddObj(_arg_1);
-            };
+            }
         }
 
         override public function internalAddObj(_arg_1:BasicObject):void
@@ -72,7 +72,7 @@ public class ParticleModalMap extends Map
             if (_local_2[_arg_1.objectId_] != null)
             {
                 return;
-            };
+            }
             _arg_1.map_ = this;
             _local_2[_arg_1.objectId_] = _arg_1;
         }
@@ -84,7 +84,7 @@ public class ParticleModalMap extends Map
             if (_local_3 == null)
             {
                 return;
-            };
+            }
             _local_3.removeFromMap();
             delete _local_2[_arg_1];
         }
@@ -99,18 +99,18 @@ public class ParticleModalMap extends Map
                 if (!_local_3.update(_arg_1, _arg_2))
                 {
                     this.idsToRemove_.push(_local_3.objectId_);
-                };
-            };
+                }
+            }
             this.inUpdate_ = false;
             for each (_local_3 in this.objsToAdd_)
             {
                 this.internalAddObj(_local_3);
-            };
+            }
             this.objsToAdd_.length = 0;
             for each (_local_4 in this.idsToRemove_)
             {
                 this.internalRemoveObj(_local_4);
-            };
+            }
             this.idsToRemove_.length = 0;
         }
 
@@ -124,12 +124,12 @@ public class ParticleModalMap extends Map
                 _local_4++;
                 _local_3.computeSortValNoCamera(PSCALE);
                 _local_3.draw(this.graphicsData_, _arg_1, _arg_2);
-            };
+            }
             graphics.clear();
             if (this.graphicsData_.length > 0)
             {
                 graphics.drawGraphicsData(this.graphicsData_);
-            };
+            }
         }
 
         private function activateModeSnow(_arg_1:Event):void
@@ -139,14 +139,14 @@ public class ParticleModalMap extends Map
             if (this.time != 0)
             {
                 this.dt = (getTimer() - this.time);
-            };
+            }
             this.dtBuildup = (this.dtBuildup + this.dt);
             this.time = getTimer();
             if (this.dtBuildup > 500)
             {
                 this.dtBuildup = 0;
                 this.doSnow((Math.random() * 600), -100);
-            };
+            }
             this.update(this.time, this.dt);
             this.draw(null, this.time);
         }
@@ -156,7 +156,7 @@ public class ParticleModalMap extends Map
             if (this.time != 0)
             {
                 this.dt = (getTimer() - this.time);
-            };
+            }
             this.time = getTimer();
             this.update(this.time, this.dt);
             this.draw(null, this.time);

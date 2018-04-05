@@ -17,7 +17,7 @@ package com.company.assembleegameclient.mapeditor
             {
                 _local_2 = new RegionElement(_local_1);
                 addElement(_local_2);
-            };
+            }
         }
 
     }

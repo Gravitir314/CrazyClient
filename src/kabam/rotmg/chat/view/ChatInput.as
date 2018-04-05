@@ -54,7 +54,7 @@ public class ChatInput extends Sprite
             else
             {
                 this.input.text = this.oldText;
-            };
+            }
             var _local_3:int = ((_arg_1) ? _arg_1.length : 0);
             this.input.setSelection(_local_3, _local_3);
             if (_arg_2)
@@ -64,7 +64,7 @@ public class ChatInput extends Sprite
             else
             {
                 this.activateDisabled();
-            };
+            }
             visible = true;
         }
 
@@ -134,9 +134,9 @@ public class ChatInput extends Sprite
                 else
                 {
                     this.close.dispatch();
-                };
+                }
                 _arg_1.stopImmediatePropagation();
-            };
+            }
         }
 
 

@@ -51,7 +51,7 @@ public class DailyQuestCompleteButton extends Sprite
             if (((_arg_1) && (_arg_1.parent)))
             {
                 removeChild(_arg_1);
-            };
+            }
         }
 
         public function draw():void
@@ -64,7 +64,7 @@ public class DailyQuestCompleteButton extends Sprite
                 _local_1 = ((this._enabled) ? DailyQuestAssets.DailyQuestsCompleteButtonOn : DailyQuestAssets.DailyQuestsCompleteButtonOff);
                 this.background = new (_local_1)();
                 addChildAt(this.background, 0);
-            };
+            }
             this.createLabel();
         }
 

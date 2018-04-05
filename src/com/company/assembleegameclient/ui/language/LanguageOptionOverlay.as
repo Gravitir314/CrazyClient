@@ -125,7 +125,7 @@ public class LanguageOptionOverlay extends ScreenBase
             if (((this.languageDropDown) && (contains(this.languageDropDown))))
             {
                 removeChild(this.languageDropDown);
-            };
+            }
         }
 
 

@@ -28,35 +28,35 @@ public class TimerCallback
             if (_arg_3 != null)
             {
                 this.data1 = _arg_3;
-            };
+            }
             if (_arg_4 != null)
             {
                 this.data2 = _arg_4;
-            };
+            }
             if (_arg_5 != null)
             {
                 this.data3 = _arg_5;
-            };
+            }
             if (_arg_6 != null)
             {
                 this.data4 = _arg_6;
-            };
+            }
             if (_arg_7 != null)
             {
                 this.data5 = _arg_7;
-            };
+            }
             if (_arg_8 != null)
             {
                 this.data6 = _arg_8;
-            };
+            }
             if (_arg_9 != null)
             {
                 this.data7 = _arg_9;
-            };
+            }
             if (_arg_10 != null)
             {
                 this.data8 = _arg_10;
-            };
+            }
             this.tbo = new Timer((_arg_1 * 1000), 1);
             this.tbo.addEventListener(TimerEvent.TIMER_COMPLETE, this.callbackWrapper);
             this.tbo.start();
@@ -114,14 +114,14 @@ public class TimerCallback
                                         else
                                         {
                                             this.f();
-                                        };
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
 

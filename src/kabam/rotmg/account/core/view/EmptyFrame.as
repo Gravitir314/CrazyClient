@@ -45,18 +45,18 @@ public class EmptyFrame extends Sprite
             if (_arg_3 != "")
             {
                 this.setTitle(_arg_3, true);
-            };
+            }
             if (this.background == null)
             {
                 this.backgroundContainer = new Sprite();
                 this.background = this.makeModalBackground();
                 this.backgroundContainer.addChild(this.background);
                 addChild(this.backgroundContainer);
-            };
+            }
             if (_arg_3 != "")
             {
                 this.setTitle(_arg_3, true);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -65,7 +65,7 @@ public class EmptyFrame extends Sprite
             if (this.closeButton != null)
             {
                 this.closeButton.removeEventListener(MouseEvent.CLICK, this.onCloseClick);
-            };
+            }
         }
 
         public function setWidth(_arg_1:Number):void
@@ -87,7 +87,7 @@ public class EmptyFrame extends Sprite
             if (((!(this.title == null)) && (!(this.title.parent == null))))
             {
                 removeChild(this.title);
-            };
+            }
             if (_arg_1 != null)
             {
                 this.title = this.getText(_arg_1, TEXT_MARGIN, 5, _arg_2);
@@ -96,7 +96,7 @@ public class EmptyFrame extends Sprite
             else
             {
                 this.title = null;
-            };
+            }
         }
 
         public function setDesc(_arg_1:String, _arg_2:Boolean):void
@@ -106,10 +106,10 @@ public class EmptyFrame extends Sprite
                 if (((!(this.desc == null)) && (!(this.desc.parent == null))))
                 {
                     removeChild(this.desc);
-                };
+                }
                 this.desc = this.getText(_arg_1, TEXT_MARGIN, 50, _arg_2);
                 addChild(this.desc);
-            };
+            }
         }
 
         public function setCloseButton(_arg_1:Boolean):void
@@ -127,8 +127,8 @@ public class EmptyFrame extends Sprite
                 {
                     removeChild(this.closeButton);
                     this.closeButton = null;
-                };
-            };
+                }
+            }
         }
 
         protected function getText(_arg_1:String, _arg_2:int, _arg_3:int, _arg_4:Boolean):TextFieldDisplayConcrete
@@ -143,7 +143,7 @@ public class EmptyFrame extends Sprite
             else
             {
                 _local_5.setStringBuilder(new LineBuilder().setParams(_arg_1));
-            };
+            }
             _local_5.setWordWrap(true);
             _local_5.setMultiLine(true);
             _local_5.setAutoSize(TextFieldAutoSize.CENTER);
@@ -163,7 +163,7 @@ public class EmptyFrame extends Sprite
             if (this.title != null)
             {
                 _local_1.divide(PopupWindowBackground.HORIZONTAL_DIVISION, 30);
-            };
+            }
             return (_local_1);
         }
 

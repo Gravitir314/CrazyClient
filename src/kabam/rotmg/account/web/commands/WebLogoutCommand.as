@@ -54,7 +54,7 @@ public class WebLogoutCommand
             if (this.screenModel.getCurrentScreenType() == FameView)
             {
                 return (new CharacterSelectionAndNewsScreen());
-            };
+            }
             return (new (((this.screenModel.getCurrentScreenType()) || (CharacterSelectionAndNewsScreen)))());
         }
 

@@ -28,11 +28,11 @@ public class FountainSnowyEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_5:int = int((this.lastUpdate_ / 50));
@@ -44,7 +44,7 @@ public class FountainSnowyEffect extends ParticleEffect
                 _local_4.restart(_local_3, _arg_1);
                 map_.addObj(_local_4, x_, y_);
                 _local_5 = (_local_5 + 2);
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }

@@ -71,7 +71,7 @@ public class MapLoadingView extends Sprite
             {
                 this.indicators[(_local_2 - 1)] = this.diffRow.getChildByName(("indicator_" + _local_2));
                 _local_2++;
-            };
+            }
             addChild(this.screen);
             this.setValues();
         }
@@ -103,9 +103,9 @@ public class MapLoadingView extends Sprite
                     {
                         this.indicators[_local_1].visible = (_local_1 < this.difficulty);
                         _local_1++;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function showAnimation(_arg_1:Animation):void
@@ -154,10 +154,10 @@ public class MapLoadingView extends Sprite
                         {
                             StaticInjectorContext.getInjector().getInstance(OpenDialogSignal).dispatch(new WebRegisterDialog());
                             TitleView.queueRegistrationPrompt = false;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             var _local_1:GTween = new GTween(this, FADE_OUT_TIME, {"alpha":0});
             _local_1.onComplete = this.onFadeOutComplete;
             mouseEnabled = false;

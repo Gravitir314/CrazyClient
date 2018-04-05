@@ -25,12 +25,12 @@ public class TextToolTip extends ToolTip
             {
                 this.titleText_ = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
                 this.configureTextFieldDisplayAndAddChild(this.titleText_, _arg_5, _arg_3);
-            };
+            }
             if (_arg_4 != null)
             {
                 this.tipText_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xB3B3B3);
                 this.configureTextFieldDisplayAndAddChild(this.tipText_, _arg_5, _arg_4, _arg_6);
-            };
+            }
         }
 
         override protected function alignUI():void

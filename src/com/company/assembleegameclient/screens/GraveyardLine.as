@@ -95,7 +95,7 @@ public class GraveyardLine extends Sprite
                 case "https":
                 default:
                     navigateToURL(new URLRequest(this.link), "_blank");
-            };
+            }
         }
 
         private function getTimeDiff(_arg_1:int):String
@@ -105,19 +105,19 @@ public class GraveyardLine extends Sprite
             if (_local_3 <= 0)
             {
                 return ("now");
-            };
+            }
             if (_local_3 < 60)
             {
                 return (_local_3 + " secs");
-            };
+            }
             if (_local_3 < (60 * 60))
             {
                 return (int((_local_3 / 60)) + " mins");
-            };
+            }
             if (_local_3 < ((60 * 60) * 24))
             {
                 return (int((_local_3 / (60 * 60))) + " hours");
-            };
+            }
             return (int((_local_3 / ((60 * 60) * 24))) + " days");
         }
 

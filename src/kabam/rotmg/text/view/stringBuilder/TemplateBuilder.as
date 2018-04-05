@@ -52,9 +52,9 @@ public class TemplateBuilder implements StringBuilder
                 if (((_local_2.charAt(0) == "{") && (_local_2.charAt((_local_2.length - 1)) == "}")))
                 {
                     _local_2 = this.provider.getValue(_local_2.substr(1, (_local_2.length - 2)));
-                };
+                }
                 _local_3 = _local_3.replace((("{" + _local_1) + "}"), _local_2);
-            };
+            }
             _local_3 = _local_3.replace(/\\n/g, "\n");
             return ((this.prefix + _local_3) + this.postfix);
         }

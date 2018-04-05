@@ -40,13 +40,13 @@ public class DungeonChooser extends Chooser
             if (!_arg_3)
             {
                 removeElements();
-            };
+            }
             this.lastSearch = _arg_2;
             var _local_9:Vector.<String> = new Vector.<String>();
             if (_arg_2 != "")
             {
                 _local_8 = new RegExp(_arg_2, "gix");
-            };
+            }
             var _local_10:Dictionary = GroupDivider.getDungeonsXML(this.currentDungon);
             for each (_local_5 in _local_10)
             {
@@ -54,8 +54,8 @@ public class DungeonChooser extends Chooser
                 if (((_local_8 == null) || (_local_4.search(_local_8) >= 0)))
                 {
                     _local_9.push(_local_4);
-                };
-            };
+                }
+            }
             _local_9.sort(MoreStringUtil.cmp);
             for each (_local_4 in _local_9)
             {
@@ -69,9 +69,9 @@ public class DungeonChooser extends Chooser
                 else
                 {
                     _local_7 = this.cache[_local_6];
-                };
+                }
                 addElement(_local_7);
-            };
+            }
             scrollBar_.setIndicatorSize(HEIGHT, elementSprite_.height, true);
         }
 

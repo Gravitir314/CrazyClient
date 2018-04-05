@@ -35,67 +35,67 @@ public class ObjectTypeToolTip extends ToolTip
             if (_arg_1.hasOwnProperty("Group"))
             {
                 _local_3 = (_local_3 + (("Group: " + _arg_1.Group) + "\n"));
-            };
+            }
             if (_arg_1.hasOwnProperty("Static"))
             {
                 _local_3 = (_local_3 + "Static\n");
-            };
+            }
             if (_arg_1.hasOwnProperty("Enemy"))
             {
                 _local_3 = (_local_3 + "Enemy\n");
                 if (_arg_1.hasOwnProperty("MaxHitPoints"))
                 {
                     _local_3 = (_local_3 + (("MaxHitPoints: " + _arg_1.MaxHitPoints) + "\n"));
-                };
+                }
                 if (_arg_1.hasOwnProperty("Defense"))
                 {
                     _local_3 = (_local_3 + (("Defense: " + _arg_1.Defense) + "\n"));
-                };
-            };
+                }
+            }
             if (_arg_1.hasOwnProperty("God"))
             {
                 _local_3 = (_local_3 + "God\n");
-            };
+            }
             if (_arg_1.hasOwnProperty("Quest"))
             {
                 _local_3 = (_local_3 + "Quest\n");
-            };
+            }
             if (_arg_1.hasOwnProperty("Hero"))
             {
                 _local_3 = (_local_3 + "Hero\n");
-            };
+            }
             if (_arg_1.hasOwnProperty("Encounter"))
             {
                 _local_3 = (_local_3 + "Encounter\n");
-            };
+            }
             if (_arg_1.hasOwnProperty("Level"))
             {
                 _local_3 = (_local_3 + (("Level: " + _arg_1.Level) + "\n"));
-            };
+            }
             if (_arg_1.hasOwnProperty("Terrain"))
             {
                 _local_3 = (_local_3 + (("Terrain: " + _arg_1.Terrain) + "\n"));
-            };
+            }
             for each (_local_2 in _arg_1.Projectile)
             {
                 _local_3 = (_local_3 + (((((((((("Projectile " + _local_2.@id) + ": ") + _local_2.ObjectId) + "\n") + "\tDamage: ") + _local_2.Damage) + "\n") + "\tSpeed: ") + _local_2.Speed) + "\n"));
                 if (_local_2.hasOwnProperty("PassesCover"))
                 {
                     _local_3 = (_local_3 + "\tPassesCover\n");
-                };
+                }
                 if (_local_2.hasOwnProperty("MultiHit"))
                 {
                     _local_3 = (_local_3 + "\tMultiHit\n");
-                };
+                }
                 if (_local_2.hasOwnProperty("ConditionEffect"))
                 {
                     _local_3 = (_local_3 + (((("\t" + _local_2.ConditionEffect) + " for ") + _local_2.ConditionEffect.@duration) + " secs\n"));
-                };
+                }
                 if (_local_2.hasOwnProperty("Parametric"))
                 {
                     _local_3 = (_local_3 + "\tParametric\n");
-                };
-            };
+                }
+            }
             this.descText_ = new BaseSimpleText(14, 0xB3B3B3, false, MAX_WIDTH, 0);
             this.descText_.wordWrap = true;
             this.descText_.text = String(_local_3);

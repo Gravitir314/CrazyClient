@@ -34,8 +34,8 @@ public class ObjectElement extends Element
                 if (_local_4 != null)
                 {
                     _local_5 = _local_4;
-                };
-            };
+                }
+            }
             _local_3 = new Bitmap(_local_5);
             var _local_7:Number = ((WIDTH - 4) / Math.max(_local_3.width, _local_3.height));
             _local_3.scaleX = (_local_3.scaleY = _local_7);

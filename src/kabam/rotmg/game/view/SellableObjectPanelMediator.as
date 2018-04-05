@@ -53,12 +53,12 @@ public class SellableObjectPanelMediator extends Mediator
                 else
                 {
                     this.view.gs_.gsc_.buy(_arg_1.objectId_, _arg_1.getQuantity());
-                };
+                }
             }
             else
             {
                 this.openDialog.dispatch(this.makeRegisterDialog(_arg_1));
-            };
+            }
         }
 
         private function makeRegisterDialog(_arg_1:SellableObject):RegisterPromptDialog

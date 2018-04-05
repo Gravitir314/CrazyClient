@@ -56,11 +56,11 @@ public class PackageBoxTileMediator extends Mediator
             if (this.view.infoButton)
             {
                 this.view.infoButton.clickSignal.add(this.onInfoClick);
-            };
+            }
             if (this.view.clickMask)
             {
                 this.view.clickMask.addEventListener(MouseEvent.CLICK, this.onBoxClickHandler);
-            };
+            }
         }
 
         private function onBoxClickHandler(_arg_1:MouseEvent):void
@@ -77,7 +77,7 @@ public class PackageBoxTileMediator extends Mediator
             else
             {
                 this.view.buyButton.price = (_arg_1 * int(this.view.boxInfo.priceAmount));
-            };
+            }
         }
 
         private function onBuyHandler(_arg_1:BaseButton):void
@@ -88,7 +88,7 @@ public class PackageBoxTileMediator extends Mediator
                 this.inProgressModal = new PurchaseInProgressModal();
                 this.showPopupSignal.dispatch(this.inProgressModal);
                 this.sendPurchaseRequest();
-            };
+            }
         }
 
         private function sendPurchaseRequest():void
@@ -106,7 +106,7 @@ public class PackageBoxTileMediator extends Mediator
                 _local_1.quantity = this.view.spinner.value;
                 _local_1.price = this.view.boxInfo.priceAmount;
                 _local_1.currency = this.view.boxInfo.priceCurrency;
-            };
+            }
             this.client.sendRequest("/account/purchasePackage", _local_1);
             this.client.complete.addOnce(this.onRollRequestComplete);
         }
@@ -127,7 +127,7 @@ public class PackageBoxTileMediator extends Mediator
                 if (((_local_3.hasOwnProperty("Left")) && (!(this.view.boxInfo.unitsLeft == -1))))
                 {
                     this.view.boxInfo.unitsLeft = int(_local_3.Left);
-                };
+                }
                 _local_4 = this.gameModel.player;
                 if (_local_4 != null)
                 {
@@ -140,8 +140,8 @@ public class PackageBoxTileMediator extends Mediator
                         if (_local_3.hasOwnProperty("Fame"))
                         {
                             _local_4.setFame(int(_local_3.Fame));
-                        };
-                    };
+                        }
+                    }
                 }
                 else
                 {
@@ -156,10 +156,10 @@ public class PackageBoxTileMediator extends Mediator
                             if (_local_3.hasOwnProperty("Fame"))
                             {
                                 this.playerModel.setFame(int(_local_3.Fame));
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 this.closePopupSignal.dispatch(this.inProgressModal);
                 this.showPopupSignal.dispatch(new PurchaseCompleteModal(PackageInfo(this.view.boxInfo).purchaseType));
             }
@@ -169,7 +169,7 @@ public class PackageBoxTileMediator extends Mediator
                 if (LineBuilder.getLocalizedStringFromKey(_arg_2) != "")
                 {
                     _local_5 = _arg_2;
-                };
+                }
                 if (_arg_2.indexOf("MysteryBoxError.soldOut") >= 0)
                 {
                     _local_6 = _arg_2.split("|");
@@ -186,9 +186,9 @@ public class PackageBoxTileMediator extends Mediator
                                 "left":this.view.boxInfo.unitsLeft,
                                 "box":((this.view.boxInfo.unitsLeft == 1) ? LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box") : LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes"))
                             });
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_arg_2.indexOf("MysteryBoxError.maxPurchase") >= 0)
                 {
                     _local_8 = _arg_2.split("|");
@@ -202,19 +202,19 @@ public class PackageBoxTileMediator extends Mediator
                         else
                         {
                             _local_5 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.maxPurchaseLeft", {"left":_local_9});
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_arg_2.indexOf("blockedForUser") >= 0)
                 {
                     _local_10 = _arg_2.split("|");
                     if (_local_10.length == 2)
                     {
                         _local_5 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.blockedForUser", {"date":_local_10[1]});
-                    };
-                };
+                    }
+                }
                 this.showErrorMessage(_local_5);
-            };
+            }
         }
 
         private function showErrorMessage(_arg_1:String):void
@@ -235,11 +235,11 @@ public class PackageBoxTileMediator extends Mediator
             if (this.view.infoButton)
             {
                 this.view.infoButton.clickSignal.remove(this.onInfoClick);
-            };
+            }
             if (this.view.clickMask)
             {
                 this.view.clickMask.removeEventListener(MouseEvent.CLICK, this.onBoxClickHandler);
-            };
+            }
         }
 
 

@@ -32,7 +32,7 @@ public class PlayerGroupToolTip extends ToolTip
             if (!_arg_2)
             {
                 filters = [];
-            };
+            }
             waiter.push(this.clickMessage_.textChanged);
         }
 
@@ -46,7 +46,7 @@ public class PlayerGroupToolTip extends ToolTip
             if (((this.players_ == null) || (this.players_.length == 0)))
             {
                 return;
-            };
+            }
             for each (_local_2 in _arg_1)
             {
                 _local_3 = new GameObjectListItem(0xB3B3B3, true, _local_2);
@@ -56,7 +56,7 @@ public class PlayerGroupToolTip extends ToolTip
                 this.playerPanels_.push(_local_3);
                 _local_3.textReady.addOnce(this.onTextChanged);
                 _local_4 = (_local_4 + 32);
-            };
+            }
             this.clickMessage_.x = ((width / 2) - (this.clickMessage_.width / 2));
             this.clickMessage_.y = _local_4;
             draw();
@@ -70,7 +70,7 @@ public class PlayerGroupToolTip extends ToolTip
             for each (_local_1 in this.playerPanels_)
             {
                 _local_1.textReady.remove(this.onTextChanged);
-            };
+            }
         }
 
         private function clear():void
@@ -80,7 +80,7 @@ public class PlayerGroupToolTip extends ToolTip
             for each (_local_1 in this.playerPanels_)
             {
                 removeChild(_local_1);
-            };
+            }
             this.playerPanels_.length = 0;
         }
 

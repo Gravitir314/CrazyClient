@@ -55,7 +55,7 @@ public class ItemGrid extends Panel
             if (((_arg_1 == _arg_2) || (_local_4)))
             {
                 this.interactive = true;
-            };
+            }
         }
 
         public function hideTooltip():void
@@ -65,7 +65,7 @@ public class ItemGrid extends Panel
                 this.tooltip.detachFromTarget();
                 this.tooltip = null;
                 this.tooltipFocusTile = null;
-            };
+            }
         }
 
         public function refreshTooltip():void
@@ -73,13 +73,13 @@ public class ItemGrid extends Panel
             if ((((!(stage)) || (!(this.tooltip))) || (!(this.tooltip.stage))))
             {
                 return;
-            };
+            }
             if (this.tooltipFocusTile)
             {
                 this.tooltip.detachFromTarget();
                 this.tooltip = null;
                 this.addToolTipToTile(this.tooltipFocusTile);
-            };
+            }
         }
 
         private function onTileHover(_arg_1:MouseEvent):void
@@ -87,7 +87,7 @@ public class ItemGrid extends Panel
             if (!stage)
             {
                 return;
-            };
+            }
             var _local_2:ItemTile = (_arg_1.currentTarget as ItemTile);
             this.addToolTipToTile(_local_2);
             this.tooltipFocusTile = _local_2;
@@ -109,9 +109,9 @@ public class ItemGrid extends Panel
                 else
                 {
                     _local_2 = TextKey.ITEM;
-                };
+                }
                 this.tooltip = new TextToolTip(0x363636, 0x9B9B9B, null, TextKey.ITEM_EMPTY_SLOT, 200, {"itemType":TextKey.wrapForTokenResolution(_local_2)});
-            };
+            }
             this.tooltip.attachToTarget(_arg_1);
             this.addToolTip.dispatch(this.tooltip);
         }
@@ -121,11 +121,11 @@ public class ItemGrid extends Panel
             if (this.owner == this.curPlayer)
             {
                 return (InventoryOwnerTypes.CURRENT_PLAYER);
-            };
+            }
             if ((this.owner is Player))
             {
                 return (InventoryOwnerTypes.OTHER_PLAYER);
-            };
+            }
             return (InventoryOwnerTypes.NPC);
         }
 

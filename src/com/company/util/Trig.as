@@ -27,7 +27,7 @@ package com.company.util
                 else
                 {
                     _local_4 = ((_arg_1 * (1 - _arg_3)) + (_arg_2 * _arg_3));
-                };
+                }
             }
             else
             {
@@ -38,12 +38,12 @@ package com.company.util
                 else
                 {
                     _local_4 = ((_arg_1 * (1 - _arg_3)) + (_arg_2 * _arg_3));
-                };
-            };
+                }
+            }
             if (((_local_4 < -(Math.PI)) || (_local_4 > Math.PI)))
             {
                 _local_4 = boundToPI(_local_4);
-            };
+            }
             return (_local_4);
         }
 
@@ -54,13 +54,13 @@ package com.company.util
                 if ((_arg_1 - _arg_2) > Math.PI)
                 {
                     return ((_arg_2 + (2 * Math.PI)) - _arg_1);
-                };
+                }
                 return (_arg_1 - _arg_2);
-            };
+            }
             if ((_arg_2 - _arg_1) > Math.PI)
             {
                 return ((_arg_1 + (2 * Math.PI)) - _arg_2);
-            };
+            }
             return (_arg_2 - _arg_1);
         }
 
@@ -70,7 +70,7 @@ package com.company.util
             if (((_arg_1 < -(Math.PI)) || (_arg_1 > Math.PI)))
             {
                 _arg_1 = boundToPI(_arg_1);
-            };
+            }
             if (_arg_1 < 0)
             {
                 _local_2 = ((1.27323954 * _arg_1) + ((0.405284735 * _arg_1) * _arg_1));
@@ -81,7 +81,7 @@ package com.company.util
                 else
                 {
                     _local_2 = ((0.225 * ((_local_2 * _local_2) - _local_2)) + _local_2);
-                };
+                }
             }
             else
             {
@@ -93,8 +93,8 @@ package com.company.util
                 else
                 {
                     _local_2 = ((0.225 * ((_local_2 * _local_2) - _local_2)) + _local_2);
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -111,21 +111,21 @@ package com.company.util
                 if (_arg_1 < 0)
                 {
                     return (-(Math.PI) / 2);
-                };
+                }
                 if (_arg_1 > 0)
                 {
                     return (Math.PI / 2);
-                };
+                }
                 return (undefined);
-            };
+            }
             if (_arg_1 == 0)
             {
                 if (_arg_2 < 0)
                 {
                     return (Math.PI);
-                };
+                }
                 return (0);
-            };
+            }
             if (((_arg_2 > 0) ? _arg_2 : -(_arg_2)) > ((_arg_1 > 0) ? _arg_1 : -(_arg_1)))
             {
                 _local_3 = (((_arg_2 < 0) ? -(Math.PI) : 0) + atan2Helper(_arg_1, _arg_2));
@@ -133,11 +133,11 @@ package com.company.util
             else
             {
                 _local_3 = (((_arg_1 > 0) ? (Math.PI / 2) : (-(Math.PI) / 2)) - atan2Helper(_arg_2, _arg_1));
-            };
+            }
             if (((_local_3 < -(Math.PI)) || (_local_3 > Math.PI)))
             {
                 _local_3 = boundToPI(_local_3);
-            };
+            }
             return (_local_3);
         }
 
@@ -172,8 +172,8 @@ package com.company.util
                 {
                     _local_2 = int(((int((_arg_1 / Math.PI)) + 1) / 2));
                     _arg_1 = (_arg_1 - ((_local_2 * 2) * Math.PI));
-                };
-            };
+                }
+            }
             return (_arg_1);
         }
 
@@ -191,8 +191,8 @@ package com.company.util
                 {
                     _local_2 = int(((int((_arg_1 / 180)) + 1) / 2));
                     _arg_1 = (_arg_1 - (_local_2 * 360));
-                };
-            };
+                }
+            }
             return (_arg_1);
         }
 
@@ -201,7 +201,7 @@ package com.company.util
             var _local_1:Boolean = (((testFunc1(Math.sin, sin)) && (testFunc1(Math.cos, cos))) && (testFunc2(Math.atan2, atan2)));
             if (!_local_1)
             {
-            };
+            }
             return (_local_1);
         }
 
@@ -218,9 +218,9 @@ package com.company.util
                 if (_local_4 > 0.1)
                 {
                     return (false);
-                };
+                }
                 _local_5++;
-            };
+            }
             return (true);
         }
 
@@ -239,9 +239,9 @@ package com.company.util
                 if (_local_5 > 0.1)
                 {
                     return (false);
-                };
+                }
                 _local_6++;
-            };
+            }
             return (true);
         }
 

@@ -99,9 +99,9 @@ public class AccountConfig implements IConfig
                     else
                     {
                         this.context.configure(WebAccountConfig);
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.context.configure(TransferAccountConfig);
         }
 

@@ -17,7 +17,7 @@ public class AnimationsData
             for each (_local_2 in _arg_1.Animation)
             {
                 this.animations.push(new AnimationData(_local_2));
-            };
+            }
         }
 
     }

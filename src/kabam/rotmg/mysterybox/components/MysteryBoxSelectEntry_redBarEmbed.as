@@ -8,7 +8,7 @@ import mx.core.*;
 		public function MysteryBoxSelectEntry_redBarEmbed()
 		{
 			super();
-			return;
+
 		}
 	}
 }

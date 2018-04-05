@@ -87,7 +87,7 @@ public class MoneyFrame extends Sprite
             for each (_local_1 in PaymentMethod.PAYMENT_METHODS)
             {
                 _local_2.push(_local_1.label_);
-            };
+            }
             return (_local_2);
         }
 
@@ -127,7 +127,7 @@ public class MoneyFrame extends Sprite
                 this.cancelButton.y = (((600 / 2) + (this.frame.h_ / 2)) - 52);
                 this.cancelButton.setAutoSize(TextFieldAutoSize.RIGHT);
                 addChild(this.cancelButton);
-            };
+            }
         }
 
         protected function onBuyNowClick(_arg_1:MouseEvent):void

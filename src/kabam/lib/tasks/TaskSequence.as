@@ -44,7 +44,7 @@ public class TaskSequence extends BaseTask
             for each (_local_1 in this.tasks)
             {
                 _local_1.reset();
-            };
+            }
         }
 
         private function doNextTaskOrComplete():void
@@ -56,7 +56,7 @@ public class TaskSequence extends BaseTask
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         private function isAnotherTask():Boolean
@@ -80,7 +80,7 @@ public class TaskSequence extends BaseTask
             else
             {
                 completeTask(false, _arg_3);
-            };
+            }
         }
 
 

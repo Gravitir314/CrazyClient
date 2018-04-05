@@ -43,7 +43,7 @@ public class RingEffect extends ParticleEffect
                 _local_6 = new SparkerParticle(_local_7, this.color_, _local_10, _local_5, _local_4);
                 map_.addObj(_local_6, x_, y_);
                 _local_8++;
-            };
+            }
             return (false);
         }
 
@@ -67,7 +67,7 @@ public class RingEffect extends ParticleEffect
                 _local_6 = new SparkerParticle(_local_7, this.color_, _local_10, _local_5, _local_4);
                 map_.addObj(_local_6, x_, y_);
                 _local_8++;
-            };
+            }
             return (false);
         }
 

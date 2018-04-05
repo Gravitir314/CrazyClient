@@ -63,7 +63,7 @@ public class PetsTabContentView extends Sprite
                 _local_2.y = (72 + (17 * _local_1));
                 this.petsContent.addChild(_local_2);
                 _local_1++;
-            };
+            }
         }
 
         private function getNumAbilities():uint
@@ -72,7 +72,7 @@ public class PetsTabContentView extends Sprite
             if (_local_1)
             {
                 return (2);
-            };
+            }
             return (3);
         }
 

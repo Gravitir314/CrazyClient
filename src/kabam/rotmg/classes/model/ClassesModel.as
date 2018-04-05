@@ -50,7 +50,7 @@ public class ClassesModel
                 ((this.selectedChar) && (this.selectedChar.setIsSelected(false)));
                 this.selectedChar = _arg_1;
                 this.selected.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getSelected():CharacterClass
@@ -66,7 +66,7 @@ public class ClassesModel
             {
                 _local_2 = _local_3.skins.getSkin(_arg_1);
                 if (_local_2 != _local_3.skins.getDefaultSkin()) break;
-            };
+            }
             return (_local_2);
         }
 

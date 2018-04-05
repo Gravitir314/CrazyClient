@@ -25,7 +25,7 @@ public class ChangeTrade extends OutgoingMessage
             {
                 _arg_1.writeBoolean(this.offer_[_local_2]);
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

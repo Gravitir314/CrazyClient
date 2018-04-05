@@ -35,25 +35,25 @@ public class CalendarTabsViewMediator extends Mediator
             {
                 _local_2 = CalendarTypes.NON_CONSECUTIVE;
                 this.tabs.push(this.view.addCalendar("Login Calendar", CalendarTypes.NON_CONSECUTIVE, "Unlock rewards the more days you login. Logins do not need to be in consecutive days. You must claim all rewards before the end of the event."));
-            };
+            }
             if (this.model.hasCalendar(CalendarTypes.CONSECUTIVE))
             {
                 if (_local_2 == "")
                 {
                     _local_2 = CalendarTypes.CONSECUTIVE;
-                };
+                }
                 this.tabs.push(this.view.addCalendar("Login Streak", CalendarTypes.CONSECUTIVE, "Login on consecutive days to keep your streak alive. The more consecutive days you login, the more rewards you can unlock. If you miss a day, you start over. All rewards must be claimed by the end of the event."));
-            };
+            }
             for each (_local_1 in this.tabs)
             {
                 _local_1.addEventListener(MouseEvent.CLICK, this.onTabChange);
-            };
+            }
             this.view.drawTabs();
             if (_local_2 != "")
             {
                 this.model.currentDisplayedCaledar = _local_2;
                 this.view.selectTab(_local_2);
-            };
+            }
         }
 
         private function onTabChange(_arg_1:MouseEvent):void
@@ -65,7 +65,7 @@ public class CalendarTabsViewMediator extends Mediator
             {
                 this.model.currentDisplayedCaledar = _local_2.calendarType;
                 this.view.selectTab(_local_2.calendarType);
-            };
+            }
         }
 
         override public function destroy():void
@@ -74,7 +74,7 @@ public class CalendarTabsViewMediator extends Mediator
             for each (_local_1 in this.tabs)
             {
                 _local_1.removeEventListener(MouseEvent.CLICK, this.onTabChange);
-            };
+            }
             this.tabs = new Vector.<CalendarTabButton>();
             super.destroy();
         }

@@ -76,7 +76,7 @@ public class Camera
             if (_arg_1)
             {
                 return (new Rectangle(-((_local_3 - _local_5) / 2), -((_local_4 * 13) / 24), _local_3, _local_4));
-            };
+            }
             return (new Rectangle(-((_local_3 - _local_5) / 2), -((_local_4 * 3) / 4), _local_3, _local_4));
         }
 
@@ -94,8 +94,8 @@ public class Camera
                 if (this.jitter_ > this.MAX_JITTER)
                 {
                     this.jitter_ = this.MAX_JITTER;
-                };
-            };
+                }
+            }
         }
 
         public function configure(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:Rectangle):void
@@ -104,7 +104,7 @@ public class Camera
             {
                 _arg_1 = (_arg_1 + RandomUtil.plusMinus(this.jitter_));
                 _arg_2 = (_arg_2 + RandomUtil.plusMinus(this.jitter_));
-            };
+            }
             this.x_ = _arg_1;
             this.y_ = _arg_2;
             this.z_ = _arg_3;

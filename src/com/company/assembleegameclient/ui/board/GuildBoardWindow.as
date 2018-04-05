@@ -61,7 +61,7 @@ public class GuildBoardWindow extends Sprite
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function showGuildBoard(_arg_1:String):void
@@ -131,7 +131,7 @@ public class GuildBoardWindow extends Sprite
             else
             {
                 this.onSaveError(_arg_2);
-            };
+            }
         }
 
         private function onSaveDone(_arg_1:String):void

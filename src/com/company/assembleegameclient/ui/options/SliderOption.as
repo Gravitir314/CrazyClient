@@ -44,7 +44,7 @@ public class SliderOption extends BaseOption
             if (this.callbackFunc != null)
             {
                 this.callbackFunc(this.sliderBar.currentVolume);
-            };
+            }
             Parameters.save();
         }
 

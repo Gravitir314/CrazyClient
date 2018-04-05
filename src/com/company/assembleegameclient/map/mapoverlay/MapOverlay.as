@@ -31,7 +31,7 @@ public class MapOverlay extends Sprite
             if (((_local_3) && (contains(_local_3))))
             {
                 removeChild(_local_3);
-            };
+            }
             this.speechBalloons[_local_2] = _arg_1;
             addChild(_arg_1);
         }
@@ -67,8 +67,8 @@ public class MapOverlay extends Sprite
                 else
                 {
                     _local_3.dispose();
-                };
-            };
+                }
+            }
         }
 
 

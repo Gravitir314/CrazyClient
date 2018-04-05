@@ -49,7 +49,7 @@ public class GetMysteryBoxesTask extends BaseTask {
             _local_1 = DynamicSettings.getSettingValue("MysteryBoxRefresh");
         } else {
             _local_1 = TEN_MINUTES;
-        };
+        }
         if (((this.lastRan == 0) || ((this.lastRan + _local_1) < (getTimer() / 1000)))){
             this.lastRan = (getTimer() / 1000);
             completeTask(true);
@@ -61,7 +61,7 @@ public class GetMysteryBoxesTask extends BaseTask {
         } else {
             completeTask(true);
             reset();
-        };
+        }
     }
 
     public function clearLastRanBlock():void{
@@ -75,7 +75,7 @@ public class GetMysteryBoxesTask extends BaseTask {
         } else {
             this.logger.warn("GetMysteryBox.onComplete: Request failed.");
             completeTask(false);
-        };
+        }
     }
 
     private function handleOkay(_arg_1:*):void{
@@ -84,7 +84,7 @@ public class GetMysteryBoxesTask extends BaseTask {
         if (this.hasNoBoxes(_arg_1)){
             if (this.mysteryBoxModel.isInitialized()){
                 return;
-            };
+            }
             this.mysteryBoxModel.setInitialized(false);
         } else {
             version = XML(_arg_1).attribute("version").toString();
@@ -93,8 +93,8 @@ public class GetMysteryBoxesTask extends BaseTask {
             _local_3 = XML(_arg_1).child("FortuneGame");
             if (_local_3.length() > 0){
                 this.parseFortune(_local_3);
-            };
-        };
+            }
+        }
         completeTask(true);
     }
 
@@ -139,40 +139,40 @@ public class GetMysteryBoxesTask extends BaseTask {
                 _local_5.saleAmount = _local_4.Sale.attribute("price").toString();
                 _local_5.saleCurrency = _local_4.Sale.attribute("currency").toString();
                 _local_5.saleEnd = TimeUtil.parseUTCDate(_local_4.Sale.End.toString());
-            };
+            }
             if (_local_4.hasOwnProperty("Left")){
                 _local_5.unitsLeft = _local_4.Left;
-            };
+            }
             if (_local_4.hasOwnProperty("Total")){
                 _local_5.totalUnits = _local_4.Total;
-            };
+            }
             if (_local_4.hasOwnProperty("Slot")){
                 _local_5.slot = _local_4.Slot;
-            };
+            }
             if (_local_4.hasOwnProperty("Jackpots")){
                 _local_5.jackpots = _local_4.Jackpots;
-            };
+            }
             if (_local_4.hasOwnProperty("DisplayedItems")){
                 _local_5.displayedItems = _local_4.DisplayedItems;
-            };
+            }
             if (_local_4.hasOwnProperty("Rolls")){
                 _local_5.rolls = int(_local_4.Rolls);
-            };
+            }
             if (_local_4.hasOwnProperty("Tags")){
                 _local_5.tags = _local_4.Tags;
-            };
+            }
             _local_5.iconImageUrl = _local_4.Icon.toString();
             _local_5.infoImageUrl = _local_4.Image.toString();
             _local_5.startTime = TimeUtil.parseUTCDate(_local_4.StartTime.toString());
             if (_local_4.EndTime.toString()){
                 _local_5.endTime = TimeUtil.parseUTCDate(_local_4.EndTime.toString());
-            };
+            }
             _local_5.parseContents();
             if (((!(_local_3)) && ((_local_5.isNew()) || (_local_5.isOnSale())))){
                 _local_3 = true;
-            };
+            }
             _local_2.push(_local_5);
-        };
+        }
         this.mysteryBoxModel.setMysetryBoxes(_local_2);
         this.mysteryBoxModel.isNew = _local_3;
     }

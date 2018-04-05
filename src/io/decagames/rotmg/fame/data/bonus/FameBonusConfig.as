@@ -16,7 +16,7 @@ package io.decagames.rotmg.fame.data.bonus
             if (_arg_1 > CONFIG.length)
             {
                 return (null);
-            };
+            }
             return (new FameBonus(_arg_1, CONFIG[_arg_1][0], CONFIG[_arg_1][1], CONFIG[_arg_1][2], CONFIG[_arg_1][3], CONFIG[_arg_1][4]));
         }
 

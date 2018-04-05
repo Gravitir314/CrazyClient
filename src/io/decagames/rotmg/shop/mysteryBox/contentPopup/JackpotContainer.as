@@ -36,14 +36,14 @@ public class JackpotContainer extends Sprite {
             this.background.height = 125;
         } else {
             this.background.height = 80;
-        };
+        }
         this.grid = _arg_1;
         _arg_1.y = 30;
         if (_arg_1.numberOfElements <= 5){
             _arg_1.x = Math.round(((this.background.width - ((_arg_1.numberOfElements * 40) + ((_arg_1.numberOfElements - 1) * 4))) / 2));
         } else {
             _arg_1.x = Math.round(((this.background.width - ((5 * 40) + (4 * 4))) / 2));
-        };
+        }
         addChild(_arg_1);
     }
 

@@ -62,24 +62,24 @@ public class PackageBoxContentPopupMediator extends Mediator
                     else
                     {
                         _local_7[_local_8] = 1;
-                    };
-                };
+                    }
+                }
                 for (_local_9 in _local_7)
                 {
                     _local_10 = new ItemBox(_local_9, _local_7[_local_9], true, "", false);
                     this.contentGrids.addGridElement(_local_10);
-                };
-            };
+                }
+            }
             if (_arg_2 > 0)
             {
                 _local_11 = new SlotBox(SlotBox.CHAR_SLOT, _arg_2, true, "", false);
                 this.contentGrids.addGridElement(_local_11);
-            };
+            }
             if (_arg_3 > 0)
             {
                 _local_12 = new SlotBox(SlotBox.VAULT_SLOT, _arg_3, true, "", false);
                 this.contentGrids.addGridElement(_local_12);
-            };
+            }
             this.contentGrids.y = 20;
             this.contentGrids.x = 10;
             this.view.addChild(this.contentGrids);

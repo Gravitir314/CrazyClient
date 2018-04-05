@@ -56,22 +56,22 @@ public class TextureDataConcrete extends TextureData
                         else
                         {
                             this.parse(_arg_1);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             for each (_local_2 in _arg_1.AltTexture)
             {
                 this.parse(_local_2);
-            };
+            }
             if (_arg_1.hasOwnProperty("Mask"))
             {
                 this.parse(XML(_arg_1.Mask));
-            };
+            }
             if (_arg_1.hasOwnProperty("Effect"))
             {
                 this.parse(XML(_arg_1.Effect));
-            };
+            }
         }
 
         override public function getTexture(_arg_1:int=0):BitmapData
@@ -79,7 +79,7 @@ public class TextureDataConcrete extends TextureData
             if (randomTextureData_ == null)
             {
                 return (texture_);
-            };
+            }
             var _local_2:TextureData = randomTextureData_[(_arg_1 % randomTextureData_.length)];
             return (_local_2.getTexture(_arg_1));
         }
@@ -89,7 +89,7 @@ public class TextureDataConcrete extends TextureData
             if (altTextures_ == null)
             {
                 return (null);
-            };
+            }
             return (altTextures_[_arg_1]);
         }
 
@@ -130,8 +130,8 @@ public class TextureDataConcrete extends TextureData
                         if (!AssetLoader.currentXmlIsTesting)
                         {
                             remoteTexturesUsed = true;
-                        };
-                    };
+                        }
+                    }
                     remoteTextureDir_ = ((_arg_1.hasOwnProperty("Right")) ? AnimatedChar.RIGHT : AnimatedChar.DOWN);
                     return;
                 case "RandomTexture":
@@ -139,16 +139,16 @@ public class TextureDataConcrete extends TextureData
                     for each (_local_4 in _arg_1.children())
                     {
                         randomTextureData_.push(new TextureDataConcrete(_local_4));
-                    };
+                    }
                     return;
                 case "AltTexture":
                     if (altTextures_ == null)
                     {
                         altTextures_ = new Dictionary();
-                    };
+                    }
                     altTextures_[int(_arg_1.@id)] = new TextureDataConcrete(_arg_1);
                     return;
-            };
+            }
         }
 
         private function onRemoteTexture(_arg_1:BitmapData):void
@@ -162,7 +162,7 @@ public class TextureDataConcrete extends TextureData
             else
             {
                 texture_ = _arg_1;
-            };
+            }
         }
 
 

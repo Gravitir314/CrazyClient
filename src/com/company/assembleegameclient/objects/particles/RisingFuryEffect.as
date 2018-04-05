@@ -50,7 +50,7 @@ public class RisingFuryEffect extends ParticleEffect
             {
                 this.timer.stop();
                 this.particleField.destroy();
-            };
+            }
         }
 
         private function onChargingComplete(_arg_1:TimerEvent):void

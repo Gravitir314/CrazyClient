@@ -55,7 +55,7 @@ public class NewCharacterScreen extends Sprite
             if (this.isInitialized)
             {
                 return;
-            };
+            }
             this.isInitialized = true;
             this.backButton_ = new TitleMenuOption(ScreenTypes.BACK, 36, false);
             this.backButton_.addEventListener(MouseEvent.CLICK, this.onBackClick);
@@ -84,11 +84,11 @@ public class NewCharacterScreen extends Sprite
                     if (((_local_4 == 784) && (!(_local_7.available_))))
                     {
                         _local_7.setSale(75);
-                    };
+                    }
                     addChild(_local_7);
-                };
+                }
                 _local_2++;
-            };
+            }
             this.backButton_.x = ((stage.stageWidth / 2) - (this.backButton_.width / 2));
             this.backButton_.y = 550;
             this.creditDisplay_.x = stage.stageWidth;
@@ -121,7 +121,7 @@ public class NewCharacterScreen extends Sprite
             if (!_local_2.available_)
             {
                 return;
-            };
+            }
             var _local_3:int = _local_2.objectType();
             var _local_4:String = ObjectLibrary.typeToDisplayId_[_local_3];
             this.selected.dispatch(_local_3);
@@ -155,11 +155,11 @@ public class NewCharacterScreen extends Sprite
                         if (((_local_5) || (_arg_1.isLevelRequirementsMet(_local_3))))
                         {
                             _local_6.unlock();
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_7++;
-            };
+            }
         }
 
         private function onBuyClicked(_arg_1:MouseEvent):void
@@ -171,7 +171,7 @@ public class NewCharacterScreen extends Sprite
                 _local_2 = int(_local_3.playerXML_.@type);
                 _local_3.setIsBuyButtonEnabled(false);
                 this.buy.dispatch(_local_2);
-            };
+            }
         }
 
 

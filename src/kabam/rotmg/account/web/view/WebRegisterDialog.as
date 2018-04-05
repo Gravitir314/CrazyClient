@@ -123,7 +123,7 @@ public class WebRegisterDialog extends Frame
             if (_local_2)
             {
                 this.sendData();
-            };
+            }
         }
 
         private function areInputsValid():Boolean
@@ -145,7 +145,7 @@ public class WebRegisterDialog extends Frame
             if (!_local_2)
             {
                 this.errors.push(TextKey.INELIGIBLE_AGE);
-            };
+            }
             return (_local_2);
         }
 
@@ -156,7 +156,7 @@ public class WebRegisterDialog extends Frame
             if (!_local_1)
             {
                 this.errors.push(TextKey.INVALID_BIRTHDATE);
-            };
+            }
             return (_local_1);
         }
 
@@ -167,7 +167,7 @@ public class WebRegisterDialog extends Frame
             if (!_local_1)
             {
                 this.errors.push(TextKey.INVALID_EMAIL_ADDRESS);
-            };
+            }
             return (_local_1);
         }
 
@@ -178,7 +178,7 @@ public class WebRegisterDialog extends Frame
             if (!_local_1)
             {
                 this.errors.push(TextKey.PASSWORD_TOO_SHORT);
-            };
+            }
             return (_local_1);
         }
 
@@ -189,7 +189,7 @@ public class WebRegisterDialog extends Frame
             if (!_local_1)
             {
                 this.errors.push(TextKey.PASSWORDS_DONT_MATCH);
-            };
+            }
             return (_local_1);
         }
 
@@ -202,7 +202,7 @@ public class WebRegisterDialog extends Frame
             else
             {
                 this.displayErrorText(((this.errors.length == 1) ? this.errors[0] : TextKey.MULTIPLE_ERRORS_MESSAGE));
-            };
+            }
         }
 
         public function displayServerError(_arg_1:String):void

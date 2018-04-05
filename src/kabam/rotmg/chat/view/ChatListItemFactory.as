@@ -94,10 +94,10 @@ public class ChatListItemFactory
                     if (_arg_1.text.charAt(_local_5) == '"') break;
                     _local_4 = (_local_4 + _arg_1.text.charAt(_local_5));
                     _local_5++;
-                };
+                }
                 _local_8 = _local_4;
                 _local_6 = true;
-            };
+            }
             _local_4 = "";
             if (((_arg_1.recipient.length > 0) && (!(_arg_1.recipient.charAt(0) == "*"))))
             {
@@ -108,8 +108,8 @@ public class ChatListItemFactory
                 else
                 {
                     _local_4 = _arg_1.recipient;
-                };
-            };
+                }
+            }
             return (new ChatListItem(this.buffer, this.model.bounds.width, this.model.lineHeight, _arg_2, _arg_1.objectId, _local_8, (_arg_1.recipient == GUILD), _local_6, _local_4));
         }
 
@@ -119,7 +119,7 @@ public class ChatListItemFactory
             if (_local_1 >= 0)
             {
                 this.buffer.push(FameUtil.numStarsToIcon(_local_1));
-            };
+            }
         }
 
         private function makeWhisperText():void
@@ -131,7 +131,7 @@ public class ChatListItemFactory
                 _local_1 = new StaticStringBuilder("To: ");
                 _local_2 = this.getBitmapData(_local_1, 61695);
                 this.buffer.push(new Bitmap(_local_2));
-            };
+            }
         }
 
         private function makeNameText():void
@@ -139,7 +139,7 @@ public class ChatListItemFactory
             if (!this.isSpecialMessageType())
             {
                 this.bufferNameText();
-            };
+            }
         }
 
         private function isSpecialMessageType():Boolean
@@ -161,7 +161,7 @@ public class ChatListItemFactory
             if (((_local_1.charAt(0) == "#") || (_local_1.charAt(0) == "@")))
             {
                 _local_1 = _local_1.substr(1);
-            };
+            }
             return (("<" + _local_1) + ">");
         }
 
@@ -177,8 +177,8 @@ public class ChatListItemFactory
                 {
                     this.makeNewLineFreeMessageText(_local_2[_local_1], false);
                     _local_1++;
-                };
-            };
+                }
+            }
         }
 
         private function makeNewLineFreeMessageText(_arg_1:String, _arg_2:Boolean):void
@@ -197,21 +197,21 @@ public class ChatListItemFactory
                 for each (_local_3 in this.buffer)
                 {
                     _local_8 = (_local_8 + _local_3.width);
-                };
+                }
                 _local_9 = _local_10.length;
                 testField.text = _local_10;
                 while (testField.textWidth >= (this.model.bounds.width - _local_8))
                 {
                     _local_9 = (_local_9 - 10);
                     testField.text = _local_10.substr(0, _local_9);
-                };
+                }
                 if (_local_9 < _local_10.length)
                 {
                     _local_4 = _local_10.substr(0, _local_9).lastIndexOf(" ");
                     _local_9 = (((_local_4 == 0) || (_local_4 == -1)) ? _local_9 : _local_4);
-                };
+                }
                 this.makeMessageLine(_local_10.substr(0, _local_9));
-            };
+            }
             var _local_12:int = _local_10.length;
             if (_local_12 > _local_9)
             {
@@ -224,17 +224,17 @@ public class ChatListItemFactory
                     {
                         _local_5 = (_local_5 - 5);
                         testField.text = _local_10.substr(_local_6, _local_5);
-                    };
+                    }
                     _local_7 = _local_5;
                     if (_local_10.length > (_local_6 + _local_5))
                     {
                         _local_7 = _local_10.substr(_local_6, _local_5).lastIndexOf(" ");
                         _local_7 = (((_local_7 == 0) || (_local_7 == -1)) ? _local_5 : _local_7);
-                    };
+                    }
                     this.makeMessageLine(_local_10.substr(_local_6, _local_7));
                     _local_6 = (_local_6 + _local_7);
-                };
-            };
+                }
+            }
         }
 
         private function makeMessageLine(_arg_1:String):void
@@ -249,23 +249,23 @@ public class ChatListItemFactory
             if (this.message.recipient == HACKER)
             {
                 return (29695);
-            };
+            }
             if (this.message.name.charAt(0) == "#")
             {
                 return (0xFFA800);
-            };
+            }
             if (this.message.name.charAt(0) == "@")
             {
                 return (0xFFFF00);
-            };
+            }
             if (this.message.recipient == GUILD)
             {
                 return (10944349);
-            };
+            }
             if (this.message.recipient != "")
             {
                 return (61695);
-            };
+            }
             return (0xFF00);
         }
 
@@ -275,35 +275,35 @@ public class ChatListItemFactory
             if (this.message.recipient == HACKER)
             {
                 return (9017309);
-            };
+            }
             if (_local_1 == SERVER)
             {
                 return (0xFFFF00);
-            };
+            }
             if (_local_1 == CLIENT)
             {
                 return (0xFF);
-            };
+            }
             if (_local_1 == HELP)
             {
                 return (16734981);
-            };
+            }
             if (_local_1 == ERROR)
             {
                 return (0xFF0000);
-            };
+            }
             if (_local_1.charAt(0) == "@")
             {
                 return (0xFFFF00);
-            };
+            }
             if (this.message.recipient == GUILD)
             {
                 return (10944349);
-            };
+            }
             if (this.message.recipient != "")
             {
                 return (61695);
-            };
+            }
             return (0xFFFFFF);
         }
 

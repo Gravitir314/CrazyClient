@@ -8,7 +8,7 @@ import mx.core.*;
 		public function TitleView_TitleScreenGraphic()
 		{
 			super();
-			return;
+
 		}
 	}
 }

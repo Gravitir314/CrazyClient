@@ -64,7 +64,7 @@ public class AccountScreenMediator extends Mediator
                 case SteamAccount.NETWORK_NAME:
                     _local_1 = new SteamAccountInfoView();
                     break;
-            };
+            }
             return (_local_1);
         }
 

@@ -25,7 +25,7 @@ import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-public class GuildPlayerList extends Sprite 
+public class GuildPlayerList extends Sprite
     {
 
         private var num_:int;
@@ -78,7 +78,7 @@ public class GuildPlayerList extends Sprite
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
         }
 
         private function onGenericData(_arg_1:String):void
@@ -147,7 +147,7 @@ public class GuildPlayerList extends Sprite
                 _local_7.y = (_local_8 * MemberListLine.HEIGHT);
                 this.listSprite_.addChild(_local_7);
                 _local_8++;
-            };
+            }
             _local_4 = (GuildUtil.MAX_MEMBERS - (this.offset_ + _local_8));
             this.openSlotsText_ = new TextFieldDisplayConcrete().setSize(22).setColor(0xB3B3B3);
             this.openSlotsText_.setStringBuilder(new LineBuilder().setParams(TextKey.GUILD_PLAYER_LIST_OPENSLOTS, {"openSlots":_local_4}));
@@ -165,7 +165,7 @@ public class GuildPlayerList extends Sprite
                 this.scrollBar_.setIndicatorSize(400, this.listSprite_.height);
                 this.scrollBar_.addEventListener(Event.CHANGE, this.onScrollBarChange);
                 addChild(this.scrollBar_);
-            };
+            }
         }
 
         private function onScrollBarChange(_arg_1:Event):void

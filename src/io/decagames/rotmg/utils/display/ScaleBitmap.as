@@ -30,13 +30,13 @@ public class ScaleBitmap extends Bitmap
                 if (!this.validGrid(this._scale9Grid))
                 {
                     this._scale9Grid = null;
-                };
+                }
                 this.setSize(_arg_1.width, _arg_1.height);
             }
             else
             {
                 this.assignBitmapData(this._originalBitmap.clone());
-            };
+            }
         }
 
         override public function set width(_arg_1:Number):void
@@ -44,7 +44,7 @@ public class ScaleBitmap extends Bitmap
             if (_arg_1 != width)
             {
                 this.setSize(_arg_1, height);
-            };
+            }
         }
 
         override public function set height(_arg_1:Number):void
@@ -52,7 +52,7 @@ public class ScaleBitmap extends Bitmap
             if (_arg_1 != height)
             {
                 this.setSize(width, _arg_1);
-            };
+            }
         }
 
         override public function set scale9Grid(_arg_1:Rectangle):void
@@ -74,13 +74,13 @@ public class ScaleBitmap extends Bitmap
                     if (!this.validGrid(_arg_1))
                     {
                         throw (new Error("#001 - The _scale9Grid does not match the original BitmapData"));
-                    };
+                    }
                     this._scale9Grid = _arg_1.clone();
                     this.resizeBitmap(width, height);
                     scaleX = 1;
                     scaleY = 1;
-                };
-            };
+                }
+            }
         }
 
         private function assignBitmapData(_arg_1:BitmapData):void
@@ -111,7 +111,7 @@ public class ScaleBitmap extends Bitmap
                 _arg_1 = Math.max(_arg_1, (this._originalBitmap.width - this._scale9Grid.width));
                 _arg_2 = Math.max(_arg_2, (this._originalBitmap.height - this._scale9Grid.height));
                 this.resizeBitmap(_arg_1, _arg_2);
-            };
+            }
         }
 
         public function getOriginalBitmapData():BitmapData
@@ -145,9 +145,9 @@ public class ScaleBitmap extends Bitmap
                     _local_10.ty = (_local_9.y - (_local_8.y * _local_10.d));
                     _local_3.draw(this._originalBitmap, _local_10, null, null, _local_9, smoothing);
                     _local_12++;
-                };
+                }
                 _local_11++;
-            };
+            }
             this.assignBitmapData(_local_3);
         }
 

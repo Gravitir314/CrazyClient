@@ -89,7 +89,7 @@ public class ImminentWaveCountdownClock extends Sprite
                 this.waveStartTimer.addEventListener(TimerEvent.TIMER, this.cleanup);
                 this.waveStartTimer.start();
                 this.center();
-            };
+            }
         }
 
         private function cleanup(_arg_1:TimerEvent):void

@@ -42,7 +42,7 @@ public class Particle extends BasicObject
             if (_local_3 == null)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;

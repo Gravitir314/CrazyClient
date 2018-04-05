@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_largeMonument3Embed_()
         {
             super();
-            return;
+
         }
     }
 }

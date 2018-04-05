@@ -64,14 +64,14 @@ public class CreateGuildFrame extends Frame
                 if (_local_2 != null)
                 {
                     _local_2.fame_ = (_local_2.fame_ - Parameters.GUILD_CREATION_PRICE);
-                };
+                }
                 this.close.dispatch();
             }
             else
             {
                 this.name_.setError(_arg_1.errorKey, _arg_1.errorTokens);
                 enable();
-            };
+            }
         }
 
 

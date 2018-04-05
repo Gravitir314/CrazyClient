@@ -8,7 +8,7 @@ import mx.core.*;
 		public function QuestRewardsView_questCompleteBanner()
 		{
 			super();
-			return;
+
 		}
 	}
 }

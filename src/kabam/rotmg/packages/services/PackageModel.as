@@ -28,8 +28,8 @@ public class PackageModel
                 if (_local_1.slot != 0)
                 {
                     _local_2[(_local_1.slot - 1)] = _local_1;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -41,8 +41,8 @@ public class PackageModel
                 if (_local_1.popupImage != "")
                 {
                     return (_local_1);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -68,7 +68,7 @@ public class PackageModel
             for each (_local_2 in _arg_1)
             {
                 this.models[_local_2.id] = _local_2;
-            };
+            }
             this.initialized = true;
             this.dataChanged.dispatch();
         }
@@ -94,7 +94,7 @@ public class PackageModel
             for each (_local_1 in this.models)
             {
                 return (true);
-            };
+            }
             return (false);
         }
 

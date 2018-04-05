@@ -85,7 +85,7 @@ public class FameView extends Sprite
             if (this.isDataPopulated)
             {
                 this.makeContinueButton();
-            };
+            }
         }
 
         public function setCharacterInfo(_arg_1:String, _arg_2:int, _arg_3:int):void
@@ -120,7 +120,7 @@ public class FameView extends Sprite
             else
             {
                 _local_3.setParams(TextKey.DEATH_INFO_SHORT, {"date":_arg_1});
-            };
+            }
             this.date.setStringBuilder(_local_3);
             this.date.x = (stage.stageWidth / 2);
             this.date.y = 272;
@@ -158,7 +158,7 @@ public class FameView extends Sprite
                     case "pure evil":
                         _local_4 = "Pure Evil";
                         break;
-                };
+                }
             }
             else
             {
@@ -166,7 +166,7 @@ public class FameView extends Sprite
                 _local_4 = _local_4.replace(/_/g, " ");
                 _local_4 = _local_4.replace(/APOS/g, "'");
                 _local_4 = _local_4.replace(/BANG/g, "!");
-            };
+            }
             if (ObjectLibrary.getPropsFromId(_local_4) != null)
             {
                 _local_4 = ObjectLibrary.getPropsFromId(_local_4).displayId_;
@@ -176,8 +176,8 @@ public class FameView extends Sprite
                 if (GroundLibrary.getPropsFromId(_local_4) != null)
                 {
                     _local_4 = GroundLibrary.getPropsFromId(_local_4).displayId_;
-                };
-            };
+                }
+            }
             return (_local_4);
         }
 
@@ -215,7 +215,7 @@ public class FameView extends Sprite
             if (((!(this.isAnimation)) || (this.isFadeComplete)))
             {
                 this.makeContinueButton();
-            };
+            }
         }
 
         private function makeContinueButton():void
@@ -231,7 +231,7 @@ public class FameView extends Sprite
             else
             {
                 this.scoringBox.showScore();
-            };
+            }
         }
 
 

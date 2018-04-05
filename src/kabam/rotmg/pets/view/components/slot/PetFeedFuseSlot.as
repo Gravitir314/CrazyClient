@@ -41,7 +41,7 @@ public class PetFeedFuseSlot extends FeedFuseSlot
             if (((!(icon)) || (contains(icon))))
             {
                 setTitle(TextKey.PETORFOODSLOT_FUSE_PET_TITLE, {});
-            };
+            }
         }
 
         private function onOpenPetPicker(_arg_1:MouseEvent):void
@@ -49,7 +49,7 @@ public class PetFeedFuseSlot extends FeedFuseSlot
             if (!this.processing)
             {
                 this.openPetPicker.dispatch();
-            };
+            }
         }
 
         public function setPetIcon(_arg_1:PetVO):void
@@ -69,7 +69,7 @@ public class PetFeedFuseSlot extends FeedFuseSlot
                 _local_2.pushParams(_arg_1.getRarity());
                 ((this.showFamily) && (_local_2.pushParams(PetFamilyKeys.getTranslationKey(_arg_1.getFamily()))));
                 setSubtitle(TextKey.BLANK, {"data":_local_2});
-            };
+            }
         }
 
         public function setProcessing(_arg_1:Boolean):void
@@ -81,7 +81,7 @@ public class PetFeedFuseSlot extends FeedFuseSlot
                 icon.filters = ((_arg_1) ? [this.grayscaleMatrix] : []);
                 _local_2 = ((_arg_1) ? MoreColorUtil.darkCT : new ColorTransform());
                 icon.transform.colorTransform = _local_2;
-            };
+            }
         }
 
 

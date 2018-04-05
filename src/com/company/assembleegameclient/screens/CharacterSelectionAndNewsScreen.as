@@ -85,7 +85,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             if (this.isInitialized)
             {
                 return;
-            };
+            }
             this.isInitialized = true;
             this.model = _arg_1;
             this.createDisplayAssets(_arg_1);
@@ -105,13 +105,13 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             {
                 this.openCharactersText.setColor(TAB_SELECTED);
                 this.createOpenGraveyardText();
-            };
+            }
             this.createCharacterListChar();
             this.makeMenuOptionsBar();
             if (!_arg_1.isNameChosen())
             {
                 this.createChooseNameLink();
-            };
+            }
         }
 
         private function createPotionDisplay():void
@@ -181,7 +181,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             if (this.model.getMaxCharacters() > 15)
             {
                 this.createScrollbar();
-            };
+            }
             addChild(this.characterList);
         }
 
@@ -195,7 +195,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             if (this.characterListHeight > this.SCROLLBAR_REQUIREMENT_HEIGHT)
             {
                 this.createScrollbar();
-            };
+            }
             addChild(this.characterList);
         }
 
@@ -205,12 +205,12 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             {
                 removeChild(this.characterList);
                 this.characterList = null;
-            };
+            }
             if (this.scrollBar != null)
             {
                 removeChild(this.scrollBar);
                 this.scrollBar = null;
-            };
+            }
         }
 
         private function createOpenCharactersText():void
@@ -233,7 +233,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
                 this.openCharactersText.setColor(TAB_SELECTED);
                 this.openGraveyardText.setColor(TAB_UNSELECTED);
                 this.createCharacterListChar();
-            };
+            }
         }
 
         private function createOpenGraveyardText():void
@@ -256,7 +256,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
                 this.openCharactersText.setColor(TAB_UNSELECTED);
                 this.openGraveyardText.setColor(TAB_SELECTED);
                 this.createCharacterListGrave();
-            };
+            }
         }
 
         private function createChooseNameLink():void
@@ -286,7 +286,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             if (stage)
             {
                 _local_1 = new Rectangle(0, 0, stage.stageWidth, stage.stageHeight);
-            };
+            }
             return (_local_1);
         }
 
@@ -313,7 +313,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             if (this.characterList != null)
             {
                 this.characterList.setPos((-(this.scrollBar.pos()) * (this.characterListHeight - 400)));
-            };
+            }
         }
 
         public function showBeginnersOfferButton():void
@@ -340,7 +340,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             if (((_arg_1) && (contains(_arg_1))))
             {
                 removeChild(_arg_1);
-            };
+            }
         }
 
         private function onPlayClick():void
@@ -352,7 +352,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             else
             {
                 this.playGame.dispatch();
-            };
+            }
         }
 
         public function setName(_arg_1:String):void
@@ -363,7 +363,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             {
                 removeChild(this.nameChooseLink_);
                 this.nameChooseLink_ = null;
-            };
+            }
         }
 
 

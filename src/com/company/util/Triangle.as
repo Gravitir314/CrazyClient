@@ -52,11 +52,11 @@ public class Triangle
             if (((((((_arg_7 > _arg_1) && (_arg_7 > _arg_3)) && (_arg_7 > _arg_5)) || (((_arg_9 < _arg_1) && (_arg_9 < _arg_3)) && (_arg_9 < _arg_5))) || (((_arg_8 > _arg_2) && (_arg_8 > _arg_4)) && (_arg_8 > _arg_6))) || (((_arg_10 < _arg_2) && (_arg_10 < _arg_4)) && (_arg_10 < _arg_6))))
             {
                 return (false);
-            };
+            }
             if (((((((_arg_7 < _arg_1) && (_arg_1 < _arg_9)) && (_arg_8 < _arg_2)) && (_arg_2 < _arg_10)) || ((((_arg_7 < _arg_3) && (_arg_3 < _arg_9)) && (_arg_8 < _arg_4)) && (_arg_4 < _arg_10))) || ((((_arg_7 < _arg_5) && (_arg_5 < _arg_9)) && (_arg_8 < _arg_6)) && (_arg_6 < _arg_10))))
             {
                 return (true);
-            };
+            }
             return (((lineRectIntersect(_arg_1, _arg_2, _arg_3, _arg_4, _arg_7, _arg_8, _arg_9, _arg_10)) || (lineRectIntersect(_arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10))) || (lineRectIntersect(_arg_5, _arg_6, _arg_1, _arg_2, _arg_7, _arg_8, _arg_9, _arg_10)));
         }
 
@@ -77,7 +77,7 @@ public class Triangle
             {
                 _local_9 = ((_local_13 * _arg_7) + _local_14);
                 _local_10 = ((_local_13 * _arg_5) + _local_14);
-            };
+            }
             if (_arg_2 < _arg_4)
             {
                 _local_11 = _arg_2;
@@ -87,7 +87,7 @@ public class Triangle
             {
                 _local_11 = _arg_4;
                 _local_12 = _arg_2;
-            };
+            }
             var _local_15:Number = ((_local_9 > _local_11) ? _local_9 : _local_11);
             var _local_16:Number = ((_local_10 < _local_12) ? _local_10 : _local_12);
             return ((_local_15 < _local_16) && (!((_local_16 < _arg_6) || (_local_15 > _arg_8))));
@@ -129,7 +129,7 @@ public class Triangle
             if (this.contains(_arg_1, _arg_2))
             {
                 return (0);
-            };
+            }
             return (Math.min(LineSegmentUtil.pointDistance(_arg_1, _arg_2, this.x0_, this.y0_, this.x1_, this.y1_), LineSegmentUtil.pointDistance(_arg_1, _arg_2, this.x1_, this.y1_, this.x2_, this.y2_), LineSegmentUtil.pointDistance(_arg_1, _arg_2, this.x0_, this.y0_, this.x2_, this.y2_)));
         }
 

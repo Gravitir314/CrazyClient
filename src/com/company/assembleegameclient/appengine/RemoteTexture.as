@@ -62,7 +62,7 @@ public class RemoteTexture
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         public function makeTexture(_arg_1:ByteArray):void

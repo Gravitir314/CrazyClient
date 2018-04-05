@@ -56,7 +56,7 @@ public class SteamMakePaymentTask extends BaseTask implements MakePaymentTask
             else
             {
                 this.onPurchaseOfferError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseOfferComplete():void
@@ -86,7 +86,7 @@ public class SteamMakePaymentTask extends BaseTask implements MakePaymentTask
             else
             {
                 this.onPurchaseFinalizeError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseFinalizeComplete():void

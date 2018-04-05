@@ -35,7 +35,7 @@ public class WebLoadAccountTask extends BaseTask implements LoadAccountTask
             else
             {
                 this.setGuestPasswordAndComplete();
-            };
+            }
         }
 
         private function getAccountData():void
@@ -51,13 +51,13 @@ public class WebLoadAccountTask extends BaseTask implements LoadAccountTask
                 if (rotmg.data.hasOwnProperty("Name"))
                 {
                     this.data.name = rotmg.data["Name"];
-                };
+                }
             }
             catch(error:Error)
             {
                 data.username = null;
                 data.password = null;
-            };
+            }
         }
 
         private function setAccountDataThenComplete():void

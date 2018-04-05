@@ -66,14 +66,14 @@ public class BeginnersPackageModel
             if (!this.model.offers)
             {
                 return (null);
-            };
+            }
             for each (_local_1 in this.model.offers.offerList)
             {
                 if (_local_1.realmGold_ == REALM_GOLD_FOR_BEGINNERS_PKG)
                 {
                     return (_local_1);
-                };
-            };
+                }
+            }
             return (null);
         }
 

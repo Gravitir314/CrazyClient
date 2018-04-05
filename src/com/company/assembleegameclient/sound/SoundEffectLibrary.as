@@ -52,7 +52,7 @@ public class SoundEffectLibrary
             catch(error:Error)
             {
                 base = "localhost";
-            };
+            }
             return (base);
         }
 
@@ -80,7 +80,7 @@ public class SoundEffectLibrary
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         private static function onSoundComplete(_arg_1:Event):void
@@ -99,7 +99,7 @@ public class SoundEffectLibrary
                 _local_3 = _local_2.soundTransform;
                 _local_3.volume = ((Parameters.data_.playSFX) ? activeSfxList_[_local_2] : 0);
                 _local_2.soundTransform = _local_3;
-            };
+            }
         }
 
         public static function updateTransform():void
@@ -111,7 +111,7 @@ public class SoundEffectLibrary
                 _local_2 = _local_1.soundTransform;
                 _local_2.volume = ((Parameters.data_.playSFX) ? activeSfxList_[_local_1] : 0);
                 _local_1.soundTransform = _local_2;
-            };
+            }
         }
 
         public static function onIOError(_arg_1:IOErrorEvent):void

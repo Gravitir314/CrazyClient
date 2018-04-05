@@ -25,7 +25,7 @@ public class RegionLibrary
                 _local_3 = int(_local_2.@type);
                 xmlLibrary_[_local_3] = _local_2;
                 idToType_[String(_local_2.@id)] = _local_3;
-            };
+            }
         }
 
         public static function getIdFromType(_arg_1:int):String
@@ -34,7 +34,7 @@ public class RegionLibrary
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (String(_local_2.@id));
         }
 
@@ -44,7 +44,7 @@ public class RegionLibrary
             if (_local_2 == null)
             {
                 return (0);
-            };
+            }
             return (uint(_local_2.Color));
         }
 

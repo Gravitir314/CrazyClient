@@ -43,7 +43,7 @@ public class FontModel
             if (_arg_5)
             {
                 _local_6.align = "center";
-            };
+            }
             _arg_1.defaultTextFormat = _local_6;
             _arg_1.setTextFormat(_local_6);
             return (_local_6);

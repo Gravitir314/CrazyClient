@@ -48,7 +48,7 @@ public final class BuildEnvironments
                     return (BuildEnvironment.PRODTEST);
                 case PRODUCTION:
                     return (BuildEnvironment.PRODUCTION);
-            };
+            }
             return (null);
         }
 

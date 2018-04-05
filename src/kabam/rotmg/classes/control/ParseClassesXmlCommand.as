@@ -30,7 +30,7 @@ public class ParseClassesXmlCommand
             for each (_local_1 in _local_2)
             {
                 this.parseCharacterClass(_local_1);
-            };
+            }
         }
 
         private function parseCharacterClass(_arg_1:XML):void
@@ -63,7 +63,7 @@ public class ParseClassesXmlCommand
             for each (_local_3 in _arg_2.UnlockLevel)
             {
                 _arg_1.unlocks.push(this.parseUnlock(_local_3));
-            };
+            }
             _arg_1.skins.addSkin(this.makeDefaultSkin(_arg_2), true);
         }
 
@@ -99,8 +99,8 @@ public class ParseClassesXmlCommand
                 if (_local_4.text() == _arg_2)
                 {
                     _local_3 = _local_4;
-                };
-            };
+                }
+            }
             _local_5 = new CharacterClassStat();
             _local_5.initial = int(_local_6.toString());
             _local_5.max = _local_6.@max;
@@ -119,7 +119,7 @@ public class ParseClassesXmlCommand
             {
                 _local_5[_local_2] = int(_local_3[_local_2]);
                 _local_2++;
-            };
+            }
             return (_local_5);
         }
 

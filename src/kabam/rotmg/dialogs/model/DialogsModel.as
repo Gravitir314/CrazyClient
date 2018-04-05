@@ -22,7 +22,7 @@ public class DialogsModel
             {
                 this.queue.push(new PopupQueueEntry(_arg_1, _arg_2, _arg_3, _arg_4));
                 this.sortQueue();
-            };
+            }
         }
 
         private function sortQueue():void
@@ -34,7 +34,7 @@ public class DialogsModel
                 if (_local_3 < _local_4)
                 {
                     return (-1);
-                };
+                }
                 return (1);
             });
         }
@@ -44,7 +44,7 @@ public class DialogsModel
             if (this.queue.length == 0)
             {
                 return (null);
-            };
+            }
             var _local_1:PopupQueueEntry = this.queue.shift();
             Parameters.data_[_local_1.name] = new Date().time;
             return (_local_1);
@@ -57,7 +57,7 @@ public class DialogsModel
             if (!Parameters.data_[_arg_1])
             {
                 return (true);
-            };
+            }
             _local_2 = int(Math.floor((Number(Parameters.data_[_arg_1]) / 86400000)));
             _local_3 = int(Math.floor((new Date().time / 86400000)));
             return (_local_3 > _local_2);
@@ -69,7 +69,7 @@ public class DialogsModel
             if (_local_2 < 0)
             {
                 _local_2 = int.MAX_VALUE;
-            };
+            }
             return (_local_2);
         }
 

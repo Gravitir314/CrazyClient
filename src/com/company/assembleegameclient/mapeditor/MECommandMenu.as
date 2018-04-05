@@ -36,7 +36,7 @@ public class MECommandMenu extends CommandMenu
             if (((!(_local_1 == null)) && (_local_1.isAdmin())))
             {
                 addCommandMenuItem("S(A)mple", KeyCodes.A, this.select, SAMPLE_COMMAND);
-            };
+            }
             addCommandMenuItem("(P)ick Up", KeyCodes.P, this.select, PICK_UP_COMMAND);
             addCommandMenuItem("Drop", -1, this.select, DROP_COMMAND);
             addCommandMenuItem("(U)ndo", KeyCodes.U, this.onUndo, NONE_COMMAND);
@@ -55,7 +55,7 @@ public class MECommandMenu extends CommandMenu
             else
             {
                 addBreak();
-            };
+            }
         }
 
         private function select(_arg_1:CommandMenuItem):void

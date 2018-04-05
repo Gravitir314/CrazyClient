@@ -41,10 +41,10 @@ public class CommandMenu extends Sprite
                     {
                         this.setSelected(_local_2);
                         return;
-                    };
-                };
+                    }
+                }
                 _local_3++;
-            };
+            }
         }
 
         protected function setSelected(_arg_1:CommandMenuItem):void
@@ -52,7 +52,7 @@ public class CommandMenu extends Sprite
             if (this.selected_ != null)
             {
                 this.selected_.setSelected(false);
-            };
+            }
             this.selected_ = _arg_1;
             this.selected_.setSelected(true);
         }
@@ -72,12 +72,12 @@ public class CommandMenu extends Sprite
             if (stage.focus != null)
             {
                 return;
-            };
+            }
             var _local_2:CommandMenuItem = this.keyCodeDict_[_arg_1.keyCode];
             if (_local_2 == null)
             {
                 return;
-            };
+            }
             _local_2.callback_(_local_2);
         }
 
@@ -89,11 +89,11 @@ public class CommandMenu extends Sprite
             if (_arg_2 != -1)
             {
                 this.keyCodeDict_[_arg_2] = _local_5;
-            };
+            }
             if (this.selected_ == null)
             {
                 this.setSelected(_local_5);
-            };
+            }
             this.yOffset_ = (this.yOffset_ + 30);
         }
 

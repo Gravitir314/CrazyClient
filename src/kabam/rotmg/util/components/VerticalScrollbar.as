@@ -56,8 +56,8 @@ public class VerticalScrollbar extends Sprite implements Scrollbar
                 else
                 {
                     this.removeMouseListeners();
-                };
-            };
+                }
+            }
         }
 
         private function addMouseListeners():void
@@ -115,8 +115,8 @@ public class VerticalScrollbar extends Sprite implements Scrollbar
                 if (_arg_1 > 1)
                 {
                     _arg_1 = 1;
-                };
-            };
+                }
+            }
             this.position = _arg_1;
             this.bar.y = (PADDING + (this.range * this.position));
             ((this._positionChanged) && (this._positionChanged.dispatch(this.position)));

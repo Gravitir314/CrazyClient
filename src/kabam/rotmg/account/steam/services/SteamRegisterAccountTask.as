@@ -46,7 +46,7 @@ public class SteamRegisterAccountTask extends BaseTask implements RegisterAccoun
             else
             {
                 this.onRegisterError(_arg_2);
-            };
+            }
         }
 
         private function makeDataPacket():Object

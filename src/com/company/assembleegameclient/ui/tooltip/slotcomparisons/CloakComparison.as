@@ -30,7 +30,7 @@ public class CloakComparison extends SlotComparison
                 _local_6 = Number(_local_4.@duration);
                 this.appendDurationText(_local_5, _local_6);
                 processedTags[_local_3.toXMLString()] = true;
-            };
+            }
             this.handleExceptions(_arg_1);
         }
 
@@ -42,7 +42,7 @@ public class CloakComparison extends SlotComparison
                 comparisonStringBuilder.pushParams(TextKey.TELEPORT_TO_TARGET, {}, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                 teleportTag = XML(itemXML.Activate.(text() == ActivationType.TELEPORT))[0];
                 processedTags[teleportTag.toXMLString()] = true;
-            };
+            }
         }
 
         private function getInvisibleTag(xml:XML):XML
@@ -55,8 +55,8 @@ public class CloakComparison extends SlotComparison
                 if (conditionTag.(@effect == "Invisible"))
                 {
                     return (conditionTag);
-                };
-            };
+                }
+            }
             return (null);
         }
 

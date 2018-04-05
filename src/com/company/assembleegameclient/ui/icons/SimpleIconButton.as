@@ -53,7 +53,7 @@ public class SimpleIconButton extends Sprite
             if (_arg_1 == this.ct_)
             {
                 return;
-            };
+            }
             this.ct_ = _arg_1;
             if (this.ct_ == null)
             {
@@ -62,7 +62,7 @@ public class SimpleIconButton extends Sprite
             else
             {
                 transform.colorTransform = this.ct_;
-            };
+            }
         }
 
         protected function onMouseOver(_arg_1:MouseEvent):void

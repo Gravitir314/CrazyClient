@@ -20,7 +20,7 @@ public class AnimatedChars
             if (((_local_3 == null) || (_arg_2 >= _local_3.length)))
             {
                 return (null);
-            };
+            }
             return (_local_3[_arg_2]);
         }
 
@@ -33,7 +33,7 @@ public class AnimatedChars
             for each (_local_9 in _local_11.images_)
             {
                 _local_10.push(new AnimatedChar(_local_9, _arg_4, _arg_5, _arg_8));
-            };
+            }
             nameMap_[_arg_1] = _local_10;
         }
 

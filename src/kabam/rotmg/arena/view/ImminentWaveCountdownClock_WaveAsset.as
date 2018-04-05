@@ -8,7 +8,7 @@ import mx.core.*;
 		public function ImminentWaveCountdownClock_WaveAsset()
 		{
 			super();
-			return;
+
 		}
 	}
 }

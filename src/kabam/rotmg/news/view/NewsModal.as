@@ -92,7 +92,7 @@ public class NewsModal extends EmptyFrame
             else
             {
                 _local_5.setStringBuilder(new LineBuilder().setParams(_arg_1));
-            };
+            }
             _local_5.setWordWrap(true);
             _local_5.setMultiLine(true);
             _local_5.setAutoSize(TextFieldAutoSize.CENTER);
@@ -145,14 +145,14 @@ public class NewsModal extends EmptyFrame
                     if ((this.currentPageNumber + 1) <= this.newsModel.numberOfNews)
                     {
                         this.setPage((this.currentPageNumber + 1));
-                    };
+                    }
                     return;
                 case this.leftNavSprite:
                     if ((this.currentPageNumber - 1) >= 1)
                     {
                         this.setPage((this.currentPageNumber - 1));
-                    };
-            };
+                    }
+            }
         }
 
         private function destroy(_arg_1:Event):void
@@ -174,7 +174,7 @@ public class NewsModal extends EmptyFrame
             if (((this.currentPage) && (this.currentPage.parent)))
             {
                 removeChild(this.currentPage);
-            };
+            }
             this.currentPage = this.newsModel.getModalPage(_arg_1);
             addChild(this.currentPage);
             this.updateIndicator();
@@ -213,7 +213,7 @@ public class NewsModal extends EmptyFrame
                 if ((this.currentPageNumber + 1) <= this.newsModel.numberOfNews)
                 {
                     this.setPage((this.currentPageNumber + 1));
-                };
+                }
             }
             else
             {
@@ -222,9 +222,9 @@ public class NewsModal extends EmptyFrame
                     if ((this.currentPageNumber - 1) >= 1)
                     {
                         this.setPage((this.currentPageNumber - 1));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function makeLeftNav():Sprite

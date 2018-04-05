@@ -26,7 +26,7 @@ public class Program3DFactory
             if (_arg_1 != "yoThisIsInternal")
             {
                 throw (new Error("Program3DFactory is a singleton. Use Program3DFactory.getInstance()"));
-            };
+            }
         }
 
         public static function getInstance():Program3DFactory
@@ -34,7 +34,7 @@ public class Program3DFactory
             if (instance == null)
             {
                 instance = new Program3DFactory("yoThisIsInternal");
-            };
+            }
             return (instance);
         }
 
@@ -44,11 +44,11 @@ public class Program3DFactory
             if (this.repeatProgram != null)
             {
                 this.repeatProgram.getProgram3D().dispose();
-            };
+            }
             if (this.noRepeatProgram != null)
             {
                 this.noRepeatProgram.getProgram3D().dispose();
-            };
+            }
             instance = null;
         }
 
@@ -62,7 +62,7 @@ public class Program3DFactory
                     {
                         this.repeatProgram = _arg_1.createProgram();
                         this.repeatProgram.upload(new VertextShader().getVertexProgram(), new FragmentShaderRepeat().getVertexProgram());
-                    };
+                    }
                     _local_3 = this.repeatProgram;
                     break;
                 case TYPE_REPEAT_OFF:
@@ -70,7 +70,7 @@ public class Program3DFactory
                     {
                         this.noRepeatProgram = _arg_1.createProgram();
                         this.noRepeatProgram.upload(new VertextShader().getVertexProgram(), new FragmentShader().getVertexProgram());
-                    };
+                    }
                     _local_3 = this.noRepeatProgram;
                     break;
                 default:
@@ -78,9 +78,9 @@ public class Program3DFactory
                     {
                         this.repeatProgram = _arg_1.createProgram();
                         this.repeatProgram.upload(new VertextShader().getVertexProgram(), new FragmentShaderRepeat().getVertexProgram());
-                    };
+                    }
                     _local_3 = this.repeatProgram;
-            };
+            }
             return (_local_3);
         }
 

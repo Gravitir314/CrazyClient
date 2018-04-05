@@ -80,11 +80,11 @@ public class ChatInputMediator extends Mediator
             else
             {
                 this.view.deactivate();
-            };
+            }
             if (!_arg_1)
             {
                 this.tellModel.resetRecipients();
-            };
+            }
         }
 
         private function makeTextfield():TextField
@@ -99,7 +99,7 @@ public class ChatInputMediator extends Mediator
             if (((this.view.visible) && (((_arg_1.keyCode == this.chatShortcutModel.getTellShortcut()) || (this.stage.focus == null)) || (this.viewDoesntHaveFocus()))))
             {
                 this.processKeyUp(_arg_1);
-            };
+            }
         }
 
         private function viewDoesntHaveFocus():Boolean
@@ -124,7 +124,7 @@ public class ChatInputMediator extends Mediator
                 case this.chatShortcutModel.getTellShortcut():
                     this.handleTell();
                     return;
-            };
+            }
         }
 
         private function handleTell():void
@@ -132,7 +132,7 @@ public class ChatInputMediator extends Mediator
             if (!this.view.hasEnteredText())
             {
                 this.view.activate((("/tell " + this.tellModel.getNext()) + " "), true);
-            };
+            }
         }
 
 

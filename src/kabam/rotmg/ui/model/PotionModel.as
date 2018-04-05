@@ -40,7 +40,7 @@ public class PotionModel
             if (((!(_arg_1 == null)) && (_arg_1.length > 0)))
             {
                 this.costIndex = 0;
-            };
+            }
         }
 
         public function get costs():Array
@@ -76,9 +76,9 @@ public class PotionModel
                 if (this.costIndex < (this.costs.length - 1))
                 {
                     this.costIndex++;
-                };
+                }
                 this.update.dispatch(this.position);
-            };
+            }
         }
 
         private function coolDownPurchase(_arg_1:TimerEvent):void
@@ -86,7 +86,7 @@ public class PotionModel
             if (this.costIndex == 0)
             {
                 this.purchaseCoolDownTimer.stop();
-            };
+            }
             this.available = true;
             this.update.dispatch(this.position);
         }
@@ -97,7 +97,7 @@ public class PotionModel
             if (this.costIndex == 0)
             {
                 this.costCoolDownTimer.stop();
-            };
+            }
             this.update.dispatch(this.position);
         }
 
@@ -107,7 +107,7 @@ public class PotionModel
             if (_arg_1 <= 0)
             {
                 _local_2 = this.costs[this.costIndex];
-            };
+            }
             return (_local_2);
         }
 

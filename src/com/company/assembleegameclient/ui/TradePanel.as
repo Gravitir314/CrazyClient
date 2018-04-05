@@ -57,7 +57,7 @@ public class TradePanel extends Sprite
             if (((this.tradeButton_.state == 1) || (Parameters.data_.TradeDelay)))
             {
                 this.accept();
-            };
+            }
         }
 
         private function onRightClick(_arg_1:MouseEvent):void
@@ -90,7 +90,7 @@ public class TradePanel extends Sprite
             if (((this.myInv_.isOffer(_arg_1)) && (this.yourInv_.isOffer(_arg_2))))
             {
                 this.yourInv_.setMessage(TradeInventory.TRADEACCEPTED_MESSAGE);
-            };
+            }
         }
 
         private function onMyInvChange(_arg_1:Event):void
@@ -120,7 +120,7 @@ public class TradePanel extends Sprite
             else
             {
                 this.myInv_.setMessage(TradeInventory.CLICKITEMS_MESSAGE);
-            };
+            }
             if (((_local_1 - _local_3) - _local_4) > 0)
             {
                 this.yourInv_.setMessage(TradeInventory.NOTENOUGHSPACE_MESSAGE);
@@ -129,7 +129,7 @@ public class TradePanel extends Sprite
             else
             {
                 this.yourInv_.setMessage(TradeInventory.TRADEWAITING_MESSAGE);
-            };
+            }
             if (_local_5)
             {
                 this.tradeButton_.setState(0);
@@ -137,7 +137,7 @@ public class TradePanel extends Sprite
             else
             {
                 this.tradeButton_.setState(3);
-            };
+            }
         }
 
 

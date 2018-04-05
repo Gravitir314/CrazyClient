@@ -58,7 +58,7 @@ public class TutorialMessage extends Sprite
                 this.nextButton_.addEventListener(MouseEvent.CLICK, this.onNextButton);
                 this.nextButton_.x = ((this.rect_.width - this.nextButton_.width) - 20);
                 this.nextButton_.y = ((this.rect_.height - this.nextButton_.height) - 10);
-            };
+            }
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
@@ -72,9 +72,9 @@ public class TutorialMessage extends Sprite
                 if (this.nextButton_ != null)
                 {
                     addChild(this.nextButton_);
-                };
+                }
                 removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
             var _local_2:Rectangle = this.rect_.clone();
             _local_2.inflate(((-(1 - _local_1) * this.rect_.width) / 2), ((-(1 - _local_1) * this.rect_.height) / 2));
             GraphicsUtil.clearPath(this.path_);

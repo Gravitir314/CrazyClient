@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedData_parasiteDenGroundCXML()
         {
             super();
-            return;
+
         }
     }
 }

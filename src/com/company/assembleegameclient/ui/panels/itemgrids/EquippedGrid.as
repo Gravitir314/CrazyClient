@@ -31,7 +31,7 @@ public class EquippedGrid extends ItemGrid
             {
                 _local_8 = ((_arg_3.hasBackpack_) ? 4 : 3);
                 _local_9 = ((_arg_3.hasBackpack_) ? 20 : 12);
-            };
+            }
             super(_arg_1, _arg_3, _arg_4);
             this.tiles = new Vector.<EquipmentTile>(_local_9);
             while (_local_7 < _local_9)
@@ -41,7 +41,7 @@ public class EquippedGrid extends ItemGrid
                 _local_6.setType(_arg_2[_local_7]);
                 this.tiles[_local_7] = _local_6;
                 _local_7++;
-            };
+            }
         }
 
         public function createInteractiveItemTileIterator():IIterator
@@ -66,11 +66,11 @@ public class EquippedGrid extends ItemGrid
                     else
                     {
                         this.tiles[_local_4].setItem(-1);
-                    };
+                    }
                     this.tiles[_local_4].updateDim(curPlayer);
                     _local_4++;
-                };
-            };
+                }
+            }
         }
 
 

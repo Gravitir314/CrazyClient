@@ -76,7 +76,7 @@ public class FriendListItem extends Sprite {
             if (this.isLocked){
                 DefaultLabelFormat.defaultSmallPopupTitle(this.listLabel);
                 return;
-            };
+            }
             switch (this._state){
                 case FriendItemState.ONLINE:
                     DefaultLabelFormat.friendsItemLabel(this.listLabel, this.ONLINE_COLOR);
@@ -86,7 +86,7 @@ public class FriendListItem extends Sprite {
                     return;
                 default:
                     DefaultLabelFormat.defaultSmallPopupTitle(this.listLabel);
-            };
+            }
         }
 
         private function createListPortrait():void{
@@ -95,7 +95,7 @@ public class FriendListItem extends Sprite {
             this.listPortrait.y = (-(Math.round((this.listPortrait.height / 2))) + 20);
             if (this.listPortrait){
                 addChild(this.listPortrait);
-            };
+            }
         }
 
         private function setState():void{
@@ -111,7 +111,7 @@ public class FriendListItem extends Sprite {
                     if (_local_2 != _local_1){
                         _local_3 = (("Your friend is playing on server: " + _local_1) + ". Clicking this will take you to this server.");
                         this.teleportButton = this.addButton("lofiInterface2", 3, 230, 12, TextKey.FRIEND_TELEPORT_TITLE, _local_3);
-                    };
+                    }
                     this.messageButton = this.addButton("lofiInterfaceBig", 21, 0xFF, 12, TextKey.PLAYERMENU_PM);
                     this.removeButton = this.addButton("lofiInterfaceBig", 12, 280, 12, TextKey.FRIEND_REMOVE_BUTTON);
                     break;
@@ -127,7 +127,7 @@ public class FriendListItem extends Sprite {
                     this.rejectButton = this.addButton("lofiInterfaceBig", 12, 0xFF, 12, TextKey.GUILD_REJECTION);
                     this.blockButton = this.addButton("lofiInterfaceBig", 8, 280, 12, TextKey.FRIEND_BLOCK_BUTTON, TextKey.FRIEND_BLOCK_BUTTON_DESC);
                     break;
-            };
+            }
             this.listBackground.height = 40;
             this.listBackground.width = 310;
         }

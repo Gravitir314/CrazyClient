@@ -61,7 +61,7 @@ public class WebRegisterAccountTask extends BaseTask implements RegisterAccountT
             else
             {
                 this.account.updateUser(this.data.username, this.data.password, "");
-            };
+            }
         }
 
 

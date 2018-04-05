@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_Hanami8x8charsEmbed_()
         {
             super();
-            return;
+
         }
     }
 }

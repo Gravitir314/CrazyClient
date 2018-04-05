@@ -26,7 +26,7 @@ public class DeprecatedTextButton extends TextButtonBase
             else
             {
                 text_.setStringBuilder(new LineBuilder().setParams(_arg_2));
-            };
+            }
             text_.textChanged.addOnce(this.onTextChanged);
         }
 

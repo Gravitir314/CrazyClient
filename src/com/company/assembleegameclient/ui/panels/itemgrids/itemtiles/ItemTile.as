@@ -69,11 +69,11 @@ public class ItemTile extends Sprite
             if (_arg_1 == this.itemSprite.itemId)
             {
                 return (false);
-            };
+            }
             if (this.blockingItemUpdates)
             {
                 return (true);
-            };
+            }
             this.itemSprite.setType(_arg_1);
             this.updateUseability(this.ownerGrid.curPlayer);
             return (true);
@@ -93,7 +93,7 @@ public class ItemTile extends Sprite
             if (((_local_2 >= 0x9000) && (_local_2 < 0xF000)))
             {
                 _local_2 = 36863;
-            };
+            }
             if (this.itemSprite.itemId != ItemConstants.NO_ITEM)
             {
                 this.restrictedUseIndicator.visible = (!(ObjectLibrary.isUsableByPlayer(_local_2, _arg_1)));
@@ -101,7 +101,7 @@ public class ItemTile extends Sprite
             else
             {
                 this.restrictedUseIndicator.visible = false;
-            };
+            }
         }
 
         public function canHoldItem(_arg_1:int):Boolean
@@ -119,7 +119,7 @@ public class ItemTile extends Sprite
             if (((this.itemSprite.itemId >= 0x9000) && (this.itemSprite.itemId < 0xF000)))
             {
                 return (36863);
-            };
+            }
             return (this.itemSprite.itemId);
         }
 

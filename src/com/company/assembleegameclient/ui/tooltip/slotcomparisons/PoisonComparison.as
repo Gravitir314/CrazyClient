@@ -48,7 +48,7 @@ public class PoisonComparison extends SlotComparison
                 }).setPrefix(TooltipHelper.getOpenTag(getTextColor((avg - otherAvg)))).setPostfix(TooltipHelper.getCloseTag());
                 comparisonStringBuilder.pushParams(TextKey.POISON_GRENADE, {"data":dataLineBuilder});
                 processedTags[activate[0].toXMLString()] = true;
-            };
+            }
         }
 
 

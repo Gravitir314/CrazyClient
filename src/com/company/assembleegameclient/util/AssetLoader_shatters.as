@@ -8,7 +8,7 @@ import mx.core.*;
 		public function AssetLoader_shatters()
 		{
 			super();
-			return;
+
 		}
 	}
 }

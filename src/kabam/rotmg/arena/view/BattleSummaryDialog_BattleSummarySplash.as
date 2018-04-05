@@ -8,7 +8,7 @@ import mx.core.*;
 		public function BattleSummaryDialog_BattleSummarySplash()
 		{
 			super();
-			return;
+
 		}
 	}
 }

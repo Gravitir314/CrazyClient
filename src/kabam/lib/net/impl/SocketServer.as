@@ -73,7 +73,7 @@ public class SocketServer
             else
             {
                 this.socket.connect(_arg_1, _arg_2);
-            };
+            }
         }
 
         private function addListeners():void
@@ -134,13 +134,13 @@ public class SocketServer
                 {
                     this.outgoingCipher.encrypt(this.data);
                     this.data.position = 0;
-                };
+                }
                 this.socket.writeInt((this.data.bytesAvailable + 5));
                 this.socket.writeByte(_local_2.id);
                 this.socket.writeBytes(this.data);
                 _local_2.consume();
                 _local_2 = _local_2.next;
-            };
+            }
             this.socket.flush();
             this.unsentPlaceholder.next = null;
             this.unsentPlaceholder.prev = null;
@@ -168,7 +168,7 @@ public class SocketServer
             else
             {
                 _local_2 = this.parseString("Socket-Server IO Error: {0}", [_arg_1.text]);
-            };
+            }
             this.error.dispatch(_local_2);
             this.closed.dispatch();
         }
@@ -202,8 +202,8 @@ public class SocketServer
                         error.dispatch(errorMessage);
                         messageLen = -1;
                         return;
-                    };
-                };
+                    }
+                }
                 if (this.socket.bytesAvailable < (this.messageLen - MESSAGE_LENGTH_SIZE_IN_BYTES)) break;
                 messageId = this.socket.readUnsignedByte();
                 message = this.messages.require(messageId);
@@ -211,19 +211,19 @@ public class SocketServer
                 if ((this.messageLen - 5) > 0)
                 {
                     this.socket.readBytes(data, 0, (this.messageLen - 5));
-                };
+                }
                 data.position = 0;
                 if (this.incomingCipher != null)
                 {
                     this.incomingCipher.decrypt(data);
                     data.position = 0;
-                };
+                }
                 this.messageLen = -1;
                 if (message == null)
                 {
                     this.logErrorAndClose("Socket-Server Protocol Error: Unknown message");
                     return;
-                };
+                }
                 try
                 {
                     message.parseFromInput(data);
@@ -232,9 +232,9 @@ public class SocketServer
                 {
                     logErrorAndClose(("Socket-Server Protocol Error: {0} on packet " + messageId), [error.toString()]);
                     return;
-                };
+                }
                 message.consume();
-            };
+            }
         }
 
         private function logErrorAndClose(_arg_1:String, _arg_2:Array=null):void
@@ -251,7 +251,7 @@ public class SocketServer
             {
                 _arg_1 = _arg_1.replace((("{" + _local_3) + "}"), _arg_2[_local_3]);
                 _local_3++;
-            };
+            }
             return (_arg_1);
         }
 

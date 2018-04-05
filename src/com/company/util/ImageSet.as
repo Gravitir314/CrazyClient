@@ -40,9 +40,9 @@ public class ImageSet
                 {
                     this.images_.push(BitmapUtil.cropToBitmapData(_arg_1, (_local_4 * _arg_2), (_local_5 * _arg_3), _arg_2, _arg_3));
                     _local_4++;
-                };
+                }
                 _local_5++;
-            };
+            }
         }
 
 

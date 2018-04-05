@@ -58,7 +58,7 @@ public class BitmapTextFactory
             else
             {
                 ((_arg_1) && (_local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, this.glowFilter)));
-            };
+            }
             return (_local_6);
         }
 

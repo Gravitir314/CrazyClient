@@ -43,7 +43,7 @@ public class CaretakerQueryDialogCategoryList extends LayoutList
             {
                 _local_3.push(this.makeItem(_arg_1[_local_2]));
                 _local_2++;
-            };
+            }
             return (_local_3);
         }
 

@@ -35,7 +35,7 @@ public class DialogCloseButton extends Sprite
                 addChild(new CloseButtonLargeAsset());
                 scaleX = (scaleX * _arg_1);
                 scaleY = (scaleY * _arg_1);
-            };
+            }
             buttonMode = true;
             addEventListener(MouseEvent.CLICK, this.onClicked);
         }
@@ -50,7 +50,7 @@ public class DialogCloseButton extends Sprite
             else
             {
                 addEventListener(MouseEvent.CLICK, this.onClicked);
-            };
+            }
         }
 
         public function disableLegacyCloseBehavior():void
@@ -65,7 +65,7 @@ public class DialogCloseButton extends Sprite
             {
                 this.clicked.dispatch();
                 removeEventListener(MouseEvent.CLICK, this.onClicked);
-            };
+            }
         }
 
 

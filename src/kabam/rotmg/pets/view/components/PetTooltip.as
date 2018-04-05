@@ -81,7 +81,7 @@ public class PetTooltip extends ToolTip
                 _local_3.y = (86 + (17 * _local_1));
                 this.petsContent.addChild(_local_3);
                 _local_1++;
-            };
+            }
         }
 
         private function getNumAbilities():uint
@@ -90,7 +90,7 @@ public class PetTooltip extends ToolTip
             if (_local_1)
             {
                 return (2);
-            };
+            }
             return (3);
         }
 

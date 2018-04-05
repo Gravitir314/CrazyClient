@@ -84,7 +84,7 @@ public class WebMain extends Sprite
             else
             {
                 addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            };
+            }
         }
 
         public function onStageResize(_arg_1:Event):void
@@ -102,7 +102,7 @@ public class WebMain extends Sprite
                 this.scaleY = 1;
                 this.x = 0;
                 this.y = 0;
-            };
+            }
             sWidth = stage.stageWidth;
             sHeight = stage.stageHeight;
         }

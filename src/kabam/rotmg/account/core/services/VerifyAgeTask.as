@@ -30,7 +30,7 @@ public class VerifyAgeTask extends BaseTask
             else
             {
                 this.verifyUserAge();
-            };
+            }
         }
 
         private function sendVerifyToServer():void

@@ -37,7 +37,7 @@ public class VerticalLayout implements Layout
                 _local_3.y = _local_5;
                 _local_5 = (_local_5 + (_local_3.height + this.padding));
                 _local_4++;
-            };
+            }
         }
 
 

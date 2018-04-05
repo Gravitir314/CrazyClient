@@ -39,7 +39,7 @@ public class AppEngineConfig implements IConfig
             else
             {
                 this.configureForSimplicity();
-            };
+            }
         }
 
         private function configureCoreDependencies():void

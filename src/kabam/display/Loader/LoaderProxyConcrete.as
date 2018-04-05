@@ -31,7 +31,7 @@ public class LoaderProxyConcrete extends LoaderProxy
             {
                 this._contentLoaderInfo = new LoaderInfoProxyConcrete();
                 this._contentLoaderInfo.loaderInfo = this.loader.contentLoaderInfo;
-            };
+            }
             return (this._contentLoaderInfo);
         }
 

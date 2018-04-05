@@ -70,7 +70,7 @@ public class FriendListMediator extends Mediator
             else
             {
                 this.reportError(this.model.errorStr);
-            };
+            }
         }
 
         private function reportError(_arg_1:String):void
@@ -88,7 +88,7 @@ public class FriendListMediator extends Mediator
                 case FriendConstant.INVITE_TAB:
                     this.view.updateInvitationTab(this.model.getAllInvitations());
                     return;
-            };
+            }
         }
 
         private function onFriendActed(_arg_1:String, _arg_2:String):void
@@ -108,15 +108,15 @@ public class FriendListMediator extends Mediator
                         if (_arg_2 == "")
                         {
                             this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
-                        };
-                    };
+                        }
+                    }
                     return;
                 case FriendConstant.INVITE:
                     if (this.model.ifReachMax())
                     {
                         this.view.updateInput(TextKey.FRIEND_REACH_CAPACITY);
                         return;
-                    };
+                    }
                     _local_5.callback = this.inviteFriendCallback;
                     break;
                 case FriendConstant.REMOVE:
@@ -143,7 +143,7 @@ public class FriendListMediator extends Mediator
                 case FriendConstant.JUMP:
                     this.jumpCallback(_arg_2);
                     return;
-            };
+            }
             this.actionSignal.dispatch(_local_5);
         }
 
@@ -162,8 +162,8 @@ public class FriendListMediator extends Mediator
                 else
                 {
                     this.view.updateInput(_arg_2);
-                };
-            };
+                }
+            }
         }
 
         private function removeFriendCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void
@@ -175,7 +175,7 @@ public class FriendListMediator extends Mediator
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function acceptInvitationCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void
@@ -186,12 +186,12 @@ public class FriendListMediator extends Mediator
                 if (this.model.removeInvitation(_arg_3))
                 {
                     this.view.updateInvitationTab(this.model.getAllInvitations());
-                };
+                }
             }
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function rejectInvitationCallback(_arg_1:Boolean, _arg_2:String, _arg_3:String):void
@@ -201,12 +201,12 @@ public class FriendListMediator extends Mediator
                 if (this.model.removeInvitation(_arg_3))
                 {
                     this.view.updateInvitationTab(this.model.getAllInvitations());
-                };
+                }
             }
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function blockInvitationCallback(_arg_1:String):void

@@ -80,8 +80,8 @@ public class LegendsTab extends Sprite
                 else
                 {
                     this.label.setColor(OUT_COLOR);
-                };
-            };
+                }
+            }
         }
 
         public function setIsSelected(_arg_1:Boolean):void

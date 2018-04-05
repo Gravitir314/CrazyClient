@@ -65,18 +65,18 @@ public class ScoreTextLine extends Sprite implements TooltipAble
                 this.numberText_.x = 450;
                 this.numberText_.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
                 addChild(this.numberText_);
-            };
+            }
             if (_arg_10 != null)
             {
                 this.unitIcon_ = _arg_10;
                 this.nameText_.textChanged.addOnce(this.onTextChanged);
                 addChild(this.unitIcon_);
-            };
+            }
             this.hoverTooltipDelegate.setDisplayObject(this);
             if (_arg_5)
             {
                 this.hoverTooltipDelegate.tooltip = textTooltip_;
-            };
+            }
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
@@ -92,7 +92,7 @@ public class ScoreTextLine extends Sprite implements TooltipAble
             {
                 this.unitIcon_.x = 450;
                 this.unitIcon_.y = (((this.nameText_.height / 2) - (this.unitIcon_.height / 2)) + 2);
-            };
+            }
         }
 
         public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void
@@ -125,7 +125,7 @@ public class ScoreTextLine extends Sprite implements TooltipAble
             if (this.startTime_ == 0)
             {
                 this.startTime_ = getTimer();
-            };
+            }
             addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
             addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
         }
@@ -148,12 +148,12 @@ public class ScoreTextLine extends Sprite implements TooltipAble
                 {
                     this.unitIcon_.x = ((this.numberText_.x + this.numberText_.width) - 4);
                     this.unitIcon_.y = (((this.numberText_.height / 2) - (this.unitIcon_.height / 2)) + 2);
-                };
-            };
+                }
+            }
             if (_local_3 == 1)
             {
                 removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         public function onMouseOver(_arg_1:Event):void
@@ -162,7 +162,7 @@ public class ScoreTextLine extends Sprite implements TooltipAble
             {
                 textTooltip_.setText(this.makeDescription());
                 stage.addChild(textTooltip_);
-            };
+            }
         }
 
         private function makeDescription():StringBuilder
@@ -175,7 +175,7 @@ public class ScoreTextLine extends Sprite implements TooltipAble
                 _local_1.pushParams(TextKey.BLANK, {"data":" ("});
                 _local_1.pushParams("FameBonus.LevelRequirement", {"level":this.level});
                 _local_1.pushParams(TextKey.BLANK, {"data":")"});
-            };
+            }
             return (_local_1);
         }
 

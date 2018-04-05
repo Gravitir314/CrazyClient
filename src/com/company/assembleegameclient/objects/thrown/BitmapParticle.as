@@ -43,7 +43,7 @@ public class BitmapParticle extends BasicObject
             if (!_local_3)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;
@@ -72,7 +72,7 @@ public class BitmapParticle extends BasicObject
                 if (((!(w)) || (!(h))))
                 {
                     return;
-                };
+                }
                 this.vS_.length = 0;
                 this.vS_.push((posS_[3] - (w / 2)), (posS_[4] - (h / 2)), (posS_[3] + (w / 2)), (posS_[4] - (h / 2)), (posS_[3] + (w / 2)), (posS_[4] + (h / 2)), (posS_[3] - (w / 2)), (posS_[4] + (h / 2)));
                 this.path_.data = this.vS_;
@@ -83,11 +83,11 @@ public class BitmapParticle extends BasicObject
                     if (this._rotationDelta)
                     {
                         this._rotation = (this._rotation + this._rotationDelta);
-                    };
+                    }
                     this.fillMatrix_.translate((-(w) / 2), (-(h) / 2));
                     this.fillMatrix_.rotate(this._rotation);
                     this.fillMatrix_.translate((w / 2), (h / 2));
-                };
+                }
                 this.fillMatrix_.translate(this.vS_[0], this.vS_[1]);
                 this.bitmapFill_.matrix = this.fillMatrix_;
                 graphicsData.push(this.bitmapFill_);
@@ -98,7 +98,7 @@ public class BitmapParticle extends BasicObject
             catch(error:Error)
             {
                 return;
-            };
+            }
         }
 
 

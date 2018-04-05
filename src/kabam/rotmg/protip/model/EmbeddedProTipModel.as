@@ -37,7 +37,7 @@ public class EmbeddedProTipModel implements IProTipModel
             for each (_local_1 in _local_2.Protip)
             {
                 this.tips.push(_local_1.toString());
-            };
+            }
             this.count = this.tips.length;
         }
 
@@ -49,12 +49,12 @@ public class EmbeddedProTipModel implements IProTipModel
             {
                 _local_2.push(_local_1);
                 _local_1++;
-            };
+            }
             this.indices = new Vector.<int>(0);
             while (_local_1 > 0)
             {
                 this.indices.push(_local_2.splice(Math.floor((Math.random() * _local_1--)), 1)[0]);
-            };
+            }
             this.indices.fixed = true;
         }
 

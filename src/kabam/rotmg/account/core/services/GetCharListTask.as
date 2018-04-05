@@ -79,7 +79,7 @@ public class GetCharListTask extends BaseTask
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
         }
 
         public function makeRequestData():Object
@@ -105,7 +105,7 @@ public class GetCharListTask extends BaseTask
                 if (_local_2 == 5)
                 {
                     this.sendRequest();
-                };
+                }
                 _local_3 = new MigrationDialog(this.account, _local_2);
                 this.fromMigration = true;
                 _local_3.done.addOnce(this.sendRequest);
@@ -123,16 +123,16 @@ public class GetCharListTask extends BaseTask
                         if (_local_5.Account[0].hasOwnProperty("PaymentData"))
                         {
                             WebAccount(this.account).paymentData = _local_5.Account[0].PaymentData;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 this.charListData.dispatch(XML(_arg_1));
                 completeTask(true);
-            };
+            }
             if (this.retryTimer != null)
             {
                 this.stopRetryTimer();
-            };
+            }
         }
 
         private function onTextError(_arg_1:String):void
@@ -147,7 +147,7 @@ public class GetCharListTask extends BaseTask
                     _local_2.setError(TextKey.WEB_LOGIN_DIALOG_PASSWORD_INVALID);
                     _local_2.setEmail(this.account.getUserId());
                     StaticInjectorContext.getInjector().getInstance(OpenDialogSignal).dispatch(_local_2);
-                };
+                }
                 this.clearAccountAndReloadCharacters();
             }
             else
@@ -160,8 +160,8 @@ public class GetCharListTask extends BaseTask
                 else
                 {
                     this.waitForASecondThenRetryRequest();
-                };
-            };
+                }
+            }
         }
 
         private function clearAccountAndReloadCharacters():void
@@ -200,7 +200,7 @@ public class GetCharListTask extends BaseTask
             {
                 this.clearAccountAndReloadCharacters();
                 this.setLoadingMessage.dispatch("LoginError.tooManyFails");
-            };
+            }
         }
 
 

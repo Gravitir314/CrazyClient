@@ -43,7 +43,7 @@ public class EnemyShoot extends IncomingMessage
             {
                 this.numShots_ = 1;
                 this.angleInc_ = 0;
-            };
+            }
         }
 
         override public function toString():String

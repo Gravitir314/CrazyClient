@@ -39,7 +39,7 @@ public class ClassHandlerProxy implements MessageHandlerProxy
             if (!this.handlerType)
             {
                 return (null);
-            };
+            }
             this.handler = this.injector.getInstance(this.handlerType);
             return (this.handler.execute);
         }

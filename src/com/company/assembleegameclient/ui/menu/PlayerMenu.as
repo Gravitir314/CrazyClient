@@ -47,7 +47,7 @@ public class PlayerMenu extends Menu
                 _local_5 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 21), 0xFFFFFF, TextKey.PLAYERMENU_PM);
                 _local_5.addEventListener(MouseEvent.CLICK, this.onPrivateMessage);
                 addOption(_local_5);
-            };
+            }
         }
 
         public function init(_arg_1:AGameSprite, _arg_2:Player):void
@@ -64,13 +64,13 @@ public class PlayerMenu extends Menu
                 _local_3 = new TeleportMenuOption(this.gs_.map.player_);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onTeleport);
                 addOption(_local_3);
-            };
+            }
             if (((this.gs_.map.player_.guildRank_ >= GuildUtil.OFFICER) && ((_arg_2.guildName_ == null) || (_arg_2.guildName_.length == 0))))
             {
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 10), 0xFFFFFF, TextKey.PLAYERMENU_INVITE);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onInvite);
                 addOption(_local_3);
-            };
+            }
             if (!this.player_.starred_)
             {
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterface2", 5), 0xFFFFFF, TextKey.PLAYERMENU_LOCK);
@@ -82,7 +82,7 @@ public class PlayerMenu extends Menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterface2", 6), 0xFFFFFF, TextKey.PLAYERMENU_UNLOCK);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onUnlock);
                 addOption(_local_3);
-            };
+            }
             _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 7), 0xFFFFFF, TextKey.PLAYERMENU_TRADE);
             _local_3.addEventListener(MouseEvent.CLICK, this.onTrade);
             addOption(_local_3);
@@ -91,7 +91,7 @@ public class PlayerMenu extends Menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 21), 0xFFFFFF, TextKey.PLAYERMENU_PM);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onPrivateMessage);
                 addOption(_local_3);
-            };
+            }
             if (!this.player_.ignored_)
             {
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 8), 0xFFFFFF, TextKey.FRIEND_BLOCK_BUTTON);
@@ -103,7 +103,7 @@ public class PlayerMenu extends Menu
                 _local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 9), 0xFFFFFF, TextKey.PLAYERMENU_UNIGNORE);
                 _local_3.addEventListener(MouseEvent.CLICK, this.onUnignore);
                 addOption(_local_3);
-            };
+            }
         }
 
         private function onPrivateMessage(_arg_1:Event):void

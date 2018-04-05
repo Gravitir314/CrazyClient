@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_squatty3Side_()
         {
             super();
-            return;
+
         }
     }
 }

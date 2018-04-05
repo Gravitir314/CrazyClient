@@ -6,7 +6,7 @@ import mx.core.*;
 public class BaseSimpleText_MyriadPro extends FontAsset {
     public function BaseSimpleText_MyriadPro() {
         super();
-        return;
+
     }
 }
 }//package com.company.ui

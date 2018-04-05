@@ -30,8 +30,8 @@ public class MysteryBoxModel
                 if (_local_1.slot != 0)
                 {
                     _local_2[(_local_1.slot - 1)] = _local_1;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -42,7 +42,7 @@ public class MysteryBoxModel
             for each (_local_2 in _arg_1)
             {
                 this.models[_local_2.id] = _local_2;
-            };
+            }
             this.initialized = true;
         }
 

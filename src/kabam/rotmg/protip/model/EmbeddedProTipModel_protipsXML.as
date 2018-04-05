@@ -8,7 +8,7 @@ import mx.core.*;
 		public function EmbeddedProTipModel_protipsXML()
 		{
 			super();
-			return;
+
 		}
 	}
 }

@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_candyDoughnut3Embed_()
         {
             super();
-            return;
+
         }
     }
 }

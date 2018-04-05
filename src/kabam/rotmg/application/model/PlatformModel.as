@@ -41,15 +41,15 @@ public class PlatformModel
             if (this.isKongregate(_local_1))
             {
                 return (PlatformType.KONGREGATE);
-            };
+            }
             if (this.isSteam(_local_1))
             {
                 return (PlatformType.STEAM);
-            };
+            }
             if (this.isKabam(_local_1))
             {
                 return (PlatformType.KABAM);
-            };
+            }
             return (PlatformType.WEB);
         }
 

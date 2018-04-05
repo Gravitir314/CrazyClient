@@ -50,14 +50,14 @@ public class Face3D
                 _local_6 = new Vector3D();
                 Plane3D.computeNormalVec(_arg_2, _local_6);
                 this.shade_ = Lighting3D.shadeValue(_local_6, 0.75);
-            };
+            }
             this.path_.commands.push(GraphicsPathCommand.MOVE_TO);
             var _local_7:int = 3;
             while (_local_7 < this.vin_.length)
             {
                 this.path_.commands.push(GraphicsPathCommand.LINE_TO);
                 _local_7 = (_local_7 + 3);
-            };
+            }
             this.path_.data = this.vout_;
         }
 
@@ -79,7 +79,7 @@ public class Face3D
             if (this.origTexture_ == _arg_1)
             {
                 return;
-            };
+            }
             this.origTexture_ = _arg_1;
             this.needGen_ = true;
         }
@@ -100,9 +100,9 @@ public class Face3D
                 if (this.vout_[(_local_1 + 1)] > _local_2)
                 {
                     _local_2 = this.vout_[(_local_1 + 1)];
-                };
+                }
                 _local_1 = (_local_1 + 2);
-            };
+            }
             return (_local_2);
         }
 
@@ -118,7 +118,7 @@ public class Face3D
             if (MapUserInput.skipRender == true)
             {
                 return (false);
-            };
+            }
             Utils3D.projectVectors(_arg_2.wToS_, this.vin_, this.vout_, this.uvt_);
             if (this.backfaceCull_)
             {
@@ -130,8 +130,8 @@ public class Face3D
                 if (((_local_4 * _local_7) - (_local_5 * _local_6)) > 0)
                 {
                     return (false);
-                };
-            };
+                }
+            }
             var _local_10:Number = (_arg_2.clipRect_.x - 10);
             var _local_11:Number = (_arg_2.clipRect_.y - 10);
             var _local_12:Number = (_arg_2.clipRect_.right + 10);
@@ -145,24 +145,24 @@ public class Face3D
                 {
                     _local_14 = false;
                     break;
-                };
+                }
                 _local_9 = (_local_9 + 2);
-            };
+            }
             if (_local_14)
             {
                 return (false);
-            };
+            }
             if (this.blackOut_)
             {
                 _arg_1.push(blackOutFill_);
                 _arg_1.push(this.path_);
                 _arg_1.push(GraphicsUtil.END_FILL);
                 return (true);
-            };
+            }
             if (this.needGen_)
             {
                 this.generateTextureMatrix();
-            };
+            }
             this.textureMatrix_.calculateTextureMatrix(this.vout_);
             this.bitmapFill_.bitmapData = this.textureMatrix_.texture_;
             this.bitmapFill_.matrix = this.textureMatrix_.tToS_;
@@ -177,11 +177,11 @@ public class Face3D
             if (Triangle.containsXY(this.vout_[0], this.vout_[1], this.vout_[2], this.vout_[3], this.vout_[4], this.vout_[5], _arg_1, _arg_2))
             {
                 return (true);
-            };
+            }
             if (((this.vout_.length == 8) && (Triangle.containsXY(this.vout_[0], this.vout_[1], this.vout_[4], this.vout_[5], this.vout_[6], this.vout_[7], _arg_1, _arg_2))))
             {
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -196,7 +196,7 @@ public class Face3D
             {
                 this.textureMatrix_.texture_ = _local_1;
                 this.textureMatrix_.calculateUVMatrix(this.uvt_);
-            };
+            }
             this.needGen_ = false;
         }
 

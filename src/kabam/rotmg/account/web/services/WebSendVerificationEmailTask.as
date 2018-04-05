@@ -34,7 +34,7 @@ public class WebSendVerificationEmailTask extends BaseTask implements SendConfir
             else
             {
                 this.onError(_arg_2);
-            };
+            }
         }
 
         private function onSent():void

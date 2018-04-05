@@ -61,7 +61,7 @@ public class PicView extends Sprite
             if (parent != null)
             {
                 parent.removeChild(this);
-            };
+            }
         }
 
 

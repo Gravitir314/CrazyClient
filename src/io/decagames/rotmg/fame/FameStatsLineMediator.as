@@ -36,7 +36,7 @@ public class FameStatsLineMediator extends Mediator
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            };
+            }
         }
 
         override public function destroy():void
@@ -45,7 +45,7 @@ public class FameStatsLineMediator extends Mediator
             {
                 this.hoverTooltipDelegate = null;
                 this.toolTip = null;
-            };
+            }
             this.view.clean();
         }
 

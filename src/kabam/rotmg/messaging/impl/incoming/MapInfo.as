@@ -59,7 +59,7 @@ public class MapInfo extends IncomingMessage
                 _local_4 = _arg_1.readInt();
                 this.clientXML_.push(_arg_1.readUTFBytes(_local_4));
                 _local_3++;
-            };
+            }
             _local_2 = _arg_1.readShort();
             this.extraXML_.length = 0;
             _local_3 = 0;
@@ -68,7 +68,7 @@ public class MapInfo extends IncomingMessage
                 _local_4 = _arg_1.readInt();
                 this.extraXML_.push(_arg_1.readUTFBytes(_local_4));
                 _local_3++;
-            };
+            }
         }
 
         override public function toString():String

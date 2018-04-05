@@ -38,13 +38,13 @@ public class ObjectChooser extends Chooser
             if (!_arg_2)
             {
                 removeElements();
-            };
+            }
             this.lastSearch = _arg_1;
             var _local_8:Vector.<String> = new Vector.<String>();
             if (_arg_1 != "")
             {
                 _local_3 = new RegExp(_arg_1, "gix");
-            };
+            }
             var _local_9:Dictionary = GroupDivider.GROUPS["Basic Objects"];
             for each (_local_5 in _local_9)
             {
@@ -52,8 +52,8 @@ public class ObjectChooser extends Chooser
                 if (((_local_3 == null) || (_local_4.search(_local_3) >= 0)))
                 {
                     _local_8.push(_local_4);
-                };
-            };
+                }
+            }
             _local_8.sort(MoreStringUtil.cmp);
             for each (_local_4 in _local_8)
             {
@@ -67,9 +67,9 @@ public class ObjectChooser extends Chooser
                 else
                 {
                     _local_7 = this.cache[_local_6];
-                };
+                }
                 addElement(_local_7);
-            };
+            }
             scrollBar_.setIndicatorSize(HEIGHT, elementSprite_.height, true);
         }
 

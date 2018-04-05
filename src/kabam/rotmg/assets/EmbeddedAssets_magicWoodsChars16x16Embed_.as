@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_magicWoodsChars16x16Embed_()
         {
             super();
-            return;
+
         }
     }
 }

@@ -30,7 +30,7 @@ public class LevelUpEffect extends ParticleEffect
                 _local_4 = new LevelUpParticle(_arg_2, 100);
                 this.parts2_.push(_local_4);
                 _local_5++;
-            };
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -39,19 +39,19 @@ public class LevelUpEffect extends ParticleEffect
             {
                 this.endEffect();
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             if (this.startTime_ < 0)
             {
                 this.startTime_ = _arg_1;
-            };
+            }
             var _local_3:Number = ((_arg_1 - this.startTime_) / LIFETIME);
             if (_local_3 >= 1)
             {
                 this.endEffect();
                 return (false);
-            };
+            }
             this.updateSwirl(this.parts1_, 1, 0, _local_3);
             this.updateSwirl(this.parts2_, 1, Math.PI, _local_3);
             return (true);
@@ -63,11 +63,11 @@ public class LevelUpEffect extends ParticleEffect
             for each (_local_1 in this.parts1_)
             {
                 _local_1.alive_ = false;
-            };
+            }
             for each (_local_1 in this.parts2_)
             {
                 _local_1.alive_ = false;
-            };
+            }
         }
 
         public function updateSwirl(_arg_1:Vector.<LevelUpParticle>, _arg_2:Number, _arg_3:Number, _arg_4:Number):void
@@ -100,11 +100,11 @@ public class LevelUpEffect extends ParticleEffect
                         else
                         {
                             _local_6.moveTo(_local_8, _local_9);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_5++;
-            };
+            }
         }
 
 

@@ -101,7 +101,7 @@ public class PlayerModel
             {
                 this.charList.credits_ = _arg_1;
                 this.creditsChanged.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getFame():int
@@ -115,7 +115,7 @@ public class PlayerModel
             {
                 this.charList.fame_ = _arg_1;
                 this.fameChanged.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getTokens():int
@@ -129,7 +129,7 @@ public class PlayerModel
             {
                 this.charList.tokens_ = _arg_1;
                 this.tokensChanged.dispatch(_arg_1);
-            };
+            }
         }
 
         public function getCharacterCount():int
@@ -150,7 +150,7 @@ public class PlayerModel
             {
                 this.charList.savedChars_.splice(_local_3, 1);
                 this.charList.numChars_--;
-            };
+            }
         }
 
         public function getAccountId():String
@@ -201,8 +201,8 @@ public class PlayerModel
                 if (_local_2.charId() == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -312,7 +312,7 @@ public class PlayerModel
             if (((this.charList) && (!(this.charList.isFirstTimeLogin()))))
             {
                 return (false);
-            };
+            }
             return (true);
         }
 

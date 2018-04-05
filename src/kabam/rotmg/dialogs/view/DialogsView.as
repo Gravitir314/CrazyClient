@@ -83,7 +83,7 @@ public class DialogsView extends Sprite
             {
                 this.background.visible = false;
                 this.current = null;
-            };
+            }
         }
 
         private function removeCurrentDialog():void
@@ -93,7 +93,7 @@ public class DialogsView extends Sprite
                 this.current.removeEventListener(Event.REMOVED, this.onRemoved);
                 this.container.removeChild(this.current);
                 this.background.visible = false;
-            };
+            }
         }
 
 

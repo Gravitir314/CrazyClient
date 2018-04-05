@@ -31,7 +31,7 @@ public class SignalWaiter
             for each (_local_2 in _args)
             {
                 this.push(_local_2);
-            };
+            }
             return (this);
         }
 
@@ -51,7 +51,7 @@ public class SignalWaiter
             if (this.isEmpty())
             {
                 this.complete.dispatch();
-            };
+            }
         }
 
         public function isEmpty():Boolean

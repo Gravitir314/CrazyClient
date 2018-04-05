@@ -95,7 +95,7 @@ public class Filter extends Sprite
             if (this._minInput.text() == "")
             {
                 return (0);
-            };
+            }
             return (Number(this._minInput.text()));
         }
 
@@ -104,7 +104,7 @@ public class Filter extends Sprite
             if (this._maxInput.text() == "")
             {
                 return (-1);
-            };
+            }
             return (Number(this._maxInput.text()));
         }
 
@@ -170,7 +170,7 @@ public class Filter extends Sprite
                     return;
                 case this._minInput:
                     this._minPrompt.visible = false;
-            };
+            }
         }
 
         private function onFocusOut(_arg_1:FocusEvent):void
@@ -181,20 +181,20 @@ public class Filter extends Sprite
                     if (this._search.text() == "")
                     {
                         this._searchPrompt.visible = this._isSearchEnabled;
-                    };
+                    }
                     return;
                 case this._maxInput:
                     if (this._maxInput.text() == "")
                     {
                         this._maxPrompt.visible = this._isValueFilterEnabled;
-                    };
+                    }
                     return;
                 case this._minInput:
                     if (this._minInput.text() == "")
                     {
                         this._minPrompt.visible = this._isValueFilterEnabled;
-                    };
-            };
+                    }
+            }
         }
 
 

@@ -113,7 +113,7 @@ public class DailyQuestWindowMediator extends Mediator
                 this.view.hideFade();
                 this.view.showFade(0x151515, (this.dailyQuestsModel.numberOfCompletedQuests == this.dailyQuestsModel.numberOfActiveQuests));
                 this.showRewardsPopup(_local_2);
-            };
+            }
         }
 
         private function onLockScreen():void

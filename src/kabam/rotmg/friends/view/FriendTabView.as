@@ -62,7 +62,7 @@ public class FriendTabView extends Sprite
             while (numChildren > 0)
             {
                 this.removeChildAt((numChildren - 1));
-            };
+            }
             this.tabSprite.removeEventListener(MouseEvent.CLICK, this.onTabClicked);
             this.tabs = null;
             this.contents = null;
@@ -86,7 +86,7 @@ public class FriendTabView extends Sprite
                 _local_4.setSelected(true);
                 this.showContent(0);
                 this.tabSelected.dispatch(_arg_2.name);
-            };
+            }
         }
 
         public function clearTabs():void
@@ -100,7 +100,7 @@ public class FriendTabView extends Sprite
                 this.tabSprite.removeChild(this.tabs[_local_1]);
                 this.containerSprite.removeChild(this.contents[_local_1]);
                 _local_1++;
-            };
+            }
             this.tabs = new Vector.<TabView>();
             this.contents = new Vector.<Sprite>();
         }
@@ -137,8 +137,8 @@ public class FriendTabView extends Sprite
                     _arg_1.setSelected(true);
                     this.showContent(_arg_1.index);
                     this.tabSelected.dispatch(this.contents[_arg_1.index].name);
-                };
-            };
+                }
+            }
         }
 
         private function showContent(_arg_1:int):void
@@ -152,7 +152,7 @@ public class FriendTabView extends Sprite
                 _local_2.visible = false;
                 _local_3.visible = true;
                 this.currentTabIndex = _arg_1;
-            };
+            }
         }
 
         private function drawBackground():void

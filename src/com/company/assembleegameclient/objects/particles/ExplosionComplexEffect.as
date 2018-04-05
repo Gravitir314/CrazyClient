@@ -54,7 +54,7 @@ public class ExplosionComplexEffect extends ParticleEffect
                 _local_10 = new ExplosionComplexParticle(this.color_, 0.2, size_, this.maxLife_, _local_6, _local_7, _local_9);
                 map_.addObj(_local_10, x_, y_);
                 _local_11++;
-            };
+            }
             return (false);
         }
 
@@ -105,9 +105,9 @@ class ExplosionComplexParticle extends Particle
             {
                 total_--;
                 this.deleted = true;
-            };
+            }
             return (false);
-        };
+        }
         x_ = (x_ + ((this.moveVec_.x * _arg_2) * 0.008));
         y_ = (y_ + ((this.moveVec_.y * _arg_2) * 0.008));
         z_ = (z_ + ((this.moveVec_.z * _arg_2) * 0.008));

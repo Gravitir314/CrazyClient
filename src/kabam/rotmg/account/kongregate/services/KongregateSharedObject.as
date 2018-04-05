@@ -30,11 +30,11 @@ public class KongregateSharedObject
                 if (_local_2.data.hasOwnProperty("GuestGUID"))
                 {
                     _local_1 = _local_2.data["GuestGUID"];
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
             if (_local_1 == null)
             {
                 _local_1 = GUID.create();
@@ -46,8 +46,8 @@ public class KongregateSharedObject
                 }
                 catch(error:Error)
                 {
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

@@ -279,7 +279,7 @@ public class UIConfig implements IConfig
             else
             {
                 this.injector.map(NoServersDialogFactory).toSingleton(TestingNoServersDialogFactory);
-            };
+            }
         }
 
         private function setupCharacterWindow():void

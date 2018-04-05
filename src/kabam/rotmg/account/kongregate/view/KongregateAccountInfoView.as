@@ -71,7 +71,7 @@ public class KongregateAccountInfoView extends Sprite implements AccountInfoView
             else
             {
                 this.refreshUnregisteredAccount();
-            };
+            }
         }
 
         private function removeUIElements():void
@@ -79,7 +79,7 @@ public class KongregateAccountInfoView extends Sprite implements AccountInfoView
             while (numChildren)
             {
                 removeChildAt(0);
-            };
+            }
         }
 
         public function get register():Signal
@@ -108,7 +108,7 @@ public class KongregateAccountInfoView extends Sprite implements AccountInfoView
             {
                 _local_2 = _args[_local_3];
                 addChild(_local_2);
-            };
+            }
         }
 
 

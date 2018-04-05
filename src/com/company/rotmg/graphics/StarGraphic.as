@@ -12,7 +12,7 @@ import flash.display.MovieClip;
     {
     	public function StarGraphic() {
         	super();
-        	return;
+
     	}
     }
 }//package com.company.rotmg.graphics

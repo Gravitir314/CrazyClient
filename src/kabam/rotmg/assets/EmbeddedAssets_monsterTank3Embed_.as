@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_monsterTank3Embed_()
         {
             super();
-            return;
+
         }
     }
 }

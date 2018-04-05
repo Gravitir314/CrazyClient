@@ -59,7 +59,7 @@ public class FameOrGoldBuyButtons extends Sprite
                 this.disabled = _arg_1;
                 this.goldButton.setEnabled((!(this.disabled)));
                 this.fameButton.setEnabled((!(this.disabled)));
-            };
+            }
         }
 
         public function isDisabled():Boolean
@@ -96,7 +96,7 @@ public class FameOrGoldBuyButtons extends Sprite
             if (contains(this.goldButton))
             {
                 this.goldButton.x = (this.prefix.width + this.spacing);
-            };
+            }
             if (contains(this.fameButton))
             {
                 if (contains(this.goldButton))
@@ -109,8 +109,8 @@ public class FameOrGoldBuyButtons extends Sprite
                 else
                 {
                     this.fameButton.x = (this.prefix.width + this.spacing);
-                };
-            };
+                }
+            }
             this.positioned.dispatch();
         }
 
@@ -141,7 +141,7 @@ public class FameOrGoldBuyButtons extends Sprite
             {
                 this.fameButtonClicked.dispatch(this.fameButton.price);
                 this.clicked.dispatch();
-            };
+            }
             this.setDisabled(true);
         }
 
@@ -151,7 +151,7 @@ public class FameOrGoldBuyButtons extends Sprite
             {
                 this.goldButtonClicked.dispatch(this.goldButton.price);
                 this.clicked.dispatch();
-            };
+            }
             this.setDisabled(true);
         }
 

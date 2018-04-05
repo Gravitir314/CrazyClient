@@ -10,13 +10,13 @@ import flash.utils.IDataInput;
 public class Text extends IncomingMessage
     {
 
-        public var name_:String = new String();
+        public var name_:String;
         public var objectId_:int;
         public var numStars_:int;
         public var bubbleTime_:uint;
         public var recipient_:String;
-        public var text_:String = new String();
-        public var cleanText_:String = new String();
+        public var text_:String;
+        public var cleanText_:String;
 
         public function Text(_arg_1:uint, _arg_2:Function)
         {

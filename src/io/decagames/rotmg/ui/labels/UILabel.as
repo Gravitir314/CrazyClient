@@ -20,11 +20,11 @@ public class UILabel extends TextField
             if (DEBUG)
             {
                 this.debugDraw();
-            };
+            }
             if (WebMain.USER_AGENT == "Chrome")
             {
                 super.y = this.chromeFixMargin;
-            };
+            }
             this.embedFonts = true;
             this.selectable = false;
             this.autoSize = TextFieldAutoSize.LEFT;
@@ -45,7 +45,7 @@ public class UILabel extends TextField
             else
             {
                 super.y = _arg_1;
-            };
+            }
         }
 
         override public function get textWidth():Number

@@ -40,7 +40,7 @@ public class NewsTicker extends Sprite
             {
                 this.activateNewScrollText(NewsTicker.pendingScrollText);
                 NewsTicker.pendingScrollText = "";
-            };
+            }
         }
 
         public static function setPendingScrollText(_arg_1:String):void
@@ -58,7 +58,7 @@ public class NewsTicker extends Sprite
             else
             {
                 return;
-            };
+            }
             this.scrollText.text = ((this.SCROLL_PREPEND + _arg_1) + this.SCROLL_APPEND);
             this.timer.addEventListener(TimerEvent.TIMER, this.scrollAnimation);
             this.currentRepeat = 1;
@@ -90,8 +90,8 @@ public class NewsTicker extends Sprite
                     this.scrollText.scrollH = 0;
                     this.timer.removeEventListener(TimerEvent.TIMER, this.scrollAnimation);
                     this.visible = false;
-                };
-            };
+                }
+            }
         }
 
         private function align():void

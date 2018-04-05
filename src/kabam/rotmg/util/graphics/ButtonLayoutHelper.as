@@ -26,7 +26,7 @@ public class ButtonLayoutHelper
                     return;
                 default:
                     throw (new IllegalOperationError("Currently unable to layout more than 2 buttons"));
-            };
+            }
         }
 
         private function centerButton(_arg_1:int, _arg_2:DisplayObject):void

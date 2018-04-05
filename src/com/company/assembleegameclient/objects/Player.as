@@ -202,7 +202,7 @@ public class Player extends Character
         public var thunderTime:int;
         public var recordPointer:int;
         public var autohealtimer:int = 0;
-        private var bools:Array = new Array(false, false, false, false, false, false, false, false);
+        private var bools:Array = [false, false, false, false, false, false, false, false];
         public var remBuff:Vector.<int> = new Vector.<int>(0);
         public var creditsWereChanged:Signal = new Signal();
         private var ip_:IntPoint = new IntPoint();
@@ -264,7 +264,7 @@ public class Player extends Character
             if (this.relMoveVec_ == null)
             {
                 this.relMoveVec_ = new Point();
-            };
+            }
             this.rotate_ = _arg_1;
             this.relMoveVec_.x = _arg_2;
             this.relMoveVec_.y = _arg_3;
@@ -274,7 +274,7 @@ public class Player extends Character
                 this.relMoveVec_.x = -(this.relMoveVec_.y);
                 this.relMoveVec_.y = -(_local_4);
                 this.rotate_ = -(this.rotate_);
-            };
+            }
         }
 
         public function setCredits(_arg_1:int):void
@@ -308,8 +308,8 @@ public class Player extends Character
                     if (((!(_local_3 == null)) && (!(_local_3 == this))))
                     {
                         _local_3.setGuildName(_local_3.guildName_);
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -318,8 +318,8 @@ public class Player extends Character
                 {
                     this.isFellowGuild_ = _local_4;
                     nameBitmapData_ = null;
-                };
-            };
+                }
+            }
         }
 
         public function isTeleportEligible(_arg_1:Player):Boolean
@@ -339,7 +339,7 @@ public class Player extends Character
             {
                 this.addTextLine.dispatch(makeErrorMessage(TextKey.PLAYER_NOTELEPORTWHILEPAUSED));
                 return (false);
-            };
+            }
             if (!this.isTeleportEligible(_arg_1))
             {
                 if (_arg_1.isInvisible())
@@ -349,9 +349,9 @@ public class Player extends Character
                 else
                 {
                     this.addTextLine.dispatch(makeErrorMessage(TextKey.PLAYER_TELEPORT_TO_PLAYER, {"player":_arg_1.name_}));
-                };
+                }
                 return (false);
-            };
+            }
             map_.gs_.gsc_.teleport(_arg_1.name_);
             return (true);
         }
@@ -364,7 +364,7 @@ public class Player extends Character
             if (_arg_2)
             {
                 this.levelUpParticleEffect();
-            };
+            }
             var _local_3:CharacterStatusText = new CharacterStatusText(this, 0xFF00, 2000);
             _local_3.setStringBuilder(new LineBuilder().setParams(_arg_1));
             map_.mapOverlay_.addStatusText(_local_3);
@@ -391,15 +391,15 @@ public class Player extends Character
             else
             {
                 this.levelUpEffect(TextKey.PLAYER_LEVELUP);
-            };
+            }
             if (objectId_ == map_.player_.objectId_)
             {
                 this.chp = maxHP_;
                 _local_2 = ObjectLibrary.xmlLibrary_[objectType_];
-                _local_3 = new Array();
+                _local_3 = [];
                 _local_4 = "You rolled ";
-                _local_5 = new Array("HP", "MP", "ATT", "DEF", "SPD", "DEX", "VIT", "WIS");
-                _local_6 = new Array(((maxHP_ - this.maxHPBoost_) - _local_2.MaxHitPoints), ((this.maxMP_ - this.maxMPBoost_) - _local_2.MaxMagicPoints), ((this.attack_ - this.attackBoost_) - _local_2.Attack), ((defense_ - this.defenseBoost_) - _local_2.Defense), ((this.speed_ - this.speedBoost_) - _local_2.Speed), ((this.dexterity_ - this.dexterityBoost_) - _local_2.Dexterity), ((this.vitality_ - this.vitalityBoost_) - _local_2.HpRegen), ((this.wisdom_ - this.wisdomBoost_) - _local_2.MpRegen));
+                _local_5 = ["HP", "MP", "ATT", "DEF", "SPD", "DEX", "VIT", "WIS"];
+                _local_6 = [((maxHP_ - this.maxHPBoost_) - _local_2.MaxHitPoints), ((this.maxMP_ - this.maxMPBoost_) - _local_2.MaxMagicPoints), ((this.attack_ - this.attackBoost_) - _local_2.Attack), ((defense_ - this.defenseBoost_) - _local_2.Defense), ((this.speed_ - this.speedBoost_) - _local_2.Speed), ((this.dexterity_ - this.dexterityBoost_) - _local_2.Dexterity), ((this.vitality_ - this.vitalityBoost_) - _local_2.HpRegen), ((this.wisdom_ - this.wisdomBoost_) - _local_2.MpRegen)];
                 _local_7 = 0;
                 for each (_local_8 in _local_2.LevelIncrease)
                 {
@@ -407,7 +407,7 @@ public class Player extends Character
                     _local_11 = (_local_6[_local_7] - ((level_ - 1) * _local_10));
                     _local_3.push(_local_11);
                     _local_7++;
-                };
+                }
                 _local_9 = 0;
                 while (_local_9 < 8)
                 {
@@ -418,11 +418,11 @@ public class Player extends Character
                     else
                     {
                         _local_4 = (_local_4 + (((_local_3[_local_9] + " ") + _local_5[_local_9]) + ", "));
-                    };
+                    }
                     _local_9++;
-                };
+                }
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", _local_4.substr(0, (_local_4.length - 2))));
-            };
+            }
         }
 
         public function levelUpParticleEffect(_arg_1:uint=0xFF00FF00):void
@@ -435,11 +435,11 @@ public class Player extends Character
             if (((level_ == 20) && (!(Parameters.data_.forceEXP))))
             {
                 return;
-            };
+            }
             if (((Parameters.data_.AntiLag) && (!(this.objectId_ == map_.player_.objectId_))))
             {
                 return;
-            };
+            }
             var _local_2:CharacterStatusText = new CharacterStatusText(this, 0xFF00, 1000);
             _local_2.setStringBuilder(new LineBuilder().setParams(TextKey.PLAYER_EXP, {"exp":_arg_1}));
             map_.mapOverlay_.addStatusText(_local_2);
@@ -459,8 +459,8 @@ public class Player extends Character
                 if (_local_2 != null)
                 {
                     return ((PointUtil.distanceSquaredXY(_local_2.x_, _local_2.y_, x_, y_) < 1) ? _local_2 : null);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -476,7 +476,7 @@ public class Player extends Character
             if (map_.gs_.evalIsNotInCombatMapArea())
             {
                 this.nearestMerchant_ = this.getNearbyMerchant();
-            };
+            }
             return (_local_3);
         }
 
@@ -488,14 +488,14 @@ public class Player extends Character
                 _arg_3.x = x_;
                 _arg_3.y = y_;
                 return;
-            };
+            }
             var _local_5:Number = (_arg_1 - x_);
             var _local_6:Number = (_arg_2 - y_);
             if (((((_local_5 < MOVE_THRESHOLD) && (_local_5 > -(MOVE_THRESHOLD))) && (_local_6 < MOVE_THRESHOLD)) && (_local_6 > -(MOVE_THRESHOLD))))
             {
                 this.modifyStep(_arg_1, _arg_2, _arg_3);
                 return;
-            };
+            }
             var _local_7:Number = (MOVE_THRESHOLD / Math.max(Math.abs(_local_5), Math.abs(_local_6)));
             var _local_8:Number = 0;
             _arg_3.x = x_;
@@ -506,10 +506,10 @@ public class Player extends Character
                 {
                     _local_7 = (1 - _local_8);
                     _local_4 = true;
-                };
+                }
                 this.modifyStep((_arg_3.x + (_local_5 * _local_7)), (_arg_3.y + (_local_6 * _local_7)), _arg_3);
                 _local_8 = (_local_8 + _local_7);
-            };
+            }
         }
 
         public function modifyStep(_arg_1:Number, _arg_2:Number, _arg_3:Point):void
@@ -523,23 +523,23 @@ public class Player extends Character
                 _arg_3.x = _arg_1;
                 _arg_3.y = _arg_2;
                 return;
-            };
+            }
             if (_local_6)
             {
                 _local_4 = ((_arg_1 > x_) ? (int((_arg_1 * 2)) / 2) : (int((x_ * 2)) / 2));
                 if (int(_local_4) > int(x_))
                 {
                     _local_4 = (_local_4 - 0.01);
-                };
-            };
+                }
+            }
             if (_local_7)
             {
                 _local_5 = ((_arg_2 > y_) ? (int((_arg_2 * 2)) / 2) : (int((y_ * 2)) / 2));
                 if (int(_local_5) > int(y_))
                 {
                     _local_5 = (_local_5 - 0.01);
-                };
-            };
+                }
+            }
             if (!_local_6)
             {
                 _arg_3.x = _arg_1;
@@ -547,9 +547,9 @@ public class Player extends Character
                 if (((!(square_ == null)) && (!(square_.props_.slideAmount_ == 0))))
                 {
                     this.resetMoveVector(false);
-                };
+                }
                 return;
-            };
+            }
             if (!_local_7)
             {
                 _arg_3.x = _local_4;
@@ -557,9 +557,9 @@ public class Player extends Character
                 if (((!(square_ == null)) && (!(square_.props_.slideAmount_ == 0))))
                 {
                     this.resetMoveVector(true);
-                };
+                }
                 return;
-            };
+            }
             var _local_8:Number = ((_arg_1 > x_) ? (_arg_1 - _local_4) : (_local_4 - _arg_1));
             var _local_9:Number = ((_arg_2 > y_) ? (_arg_2 - _local_5) : (_local_5 - _arg_2));
             if (_local_8 > _local_9)
@@ -569,13 +569,13 @@ public class Player extends Character
                     _arg_3.x = _arg_1;
                     _arg_3.y = _local_5;
                     return;
-                };
+                }
                 if (this.isValidPosition(_local_4, _arg_2))
                 {
                     _arg_3.x = _local_4;
                     _arg_3.y = _arg_2;
                     return;
-                };
+                }
             }
             else
             {
@@ -584,14 +584,14 @@ public class Player extends Character
                     _arg_3.x = _local_4;
                     _arg_3.y = _arg_2;
                     return;
-                };
+                }
                 if (this.isValidPosition(_arg_1, _local_5))
                 {
                     _arg_3.x = _arg_1;
                     _arg_3.y = _local_5;
                     return;
-                };
-            };
+                }
+            }
             _arg_3.x = _local_4;
             _arg_3.y = _local_5;
         }
@@ -606,7 +606,7 @@ public class Player extends Character
             else
             {
                 moveVec_.x = (moveVec_.x * -1);
-            };
+            }
         }
 
         public function isValidPosition(_arg_1:Number, _arg_2:Number):Boolean
@@ -617,12 +617,12 @@ public class Player extends Character
                 if ((((!(map_.gs_.mui_.mouseDown_ == true)) && (!(_local_3.props_.maxDamage_ == 0))) && (_local_3.obj_ == null)))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             if (((!(square_ == _local_3)) && ((_local_3 == null) || (!(_local_3.isWalkable())))))
             {
                 return (false);
-            };
+            }
             var _local_4:Number = (_arg_1 - int(_arg_1));
             var _local_5:Number = (_arg_2 - int(_arg_2));
             if (_local_4 < 0.5)
@@ -630,13 +630,13 @@ public class Player extends Character
                 if (this.isFullOccupy((_arg_1 - 1), _arg_2))
                 {
                     return (false);
-                };
+                }
                 if (_local_5 < 0.5)
                 {
                     if (((this.isFullOccupy(_arg_1, (_arg_2 - 1))) || (this.isFullOccupy((_arg_1 - 1), (_arg_2 - 1)))))
                     {
                         return (false);
-                    };
+                    }
                 }
                 else
                 {
@@ -645,9 +645,9 @@ public class Player extends Character
                         if (((this.isFullOccupy(_arg_1, (_arg_2 + 1))) || (this.isFullOccupy((_arg_1 - 1), (_arg_2 + 1)))))
                         {
                             return (false);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
             }
             else
             {
@@ -656,13 +656,13 @@ public class Player extends Character
                     if (this.isFullOccupy((_arg_1 + 1), _arg_2))
                     {
                         return (false);
-                    };
+                    }
                     if (_local_5 < 0.5)
                     {
                         if (((this.isFullOccupy(_arg_1, (_arg_2 - 1))) || (this.isFullOccupy((_arg_1 + 1), (_arg_2 - 1)))))
                         {
                             return (false);
-                        };
+                        }
                     }
                     else
                     {
@@ -671,9 +671,9 @@ public class Player extends Character
                             if (((this.isFullOccupy(_arg_1, (_arg_2 + 1))) || (this.isFullOccupy((_arg_1 + 1), (_arg_2 + 1)))))
                             {
                                 return (false);
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                 }
                 else
                 {
@@ -682,7 +682,7 @@ public class Player extends Character
                         if (this.isFullOccupy(_arg_1, (_arg_2 - 1)))
                         {
                             return (false);
-                        };
+                        }
                     }
                     else
                     {
@@ -691,11 +691,11 @@ public class Player extends Character
                             if (this.isFullOccupy(_arg_1, (_arg_2 + 1)))
                             {
                                 return (false);
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             return (true);
         }
 
@@ -735,8 +735,8 @@ public class Player extends Character
                 if (String(_arg_1.@id).toLowerCase().search(_local_4) != -1)
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -770,7 +770,7 @@ public class Player extends Character
                                             if (Parameters.data_.potsMajor)
                                             {
                                                 _local_4.push(ObjectLibrary.idToType_[String(_local_1.@id)]);
-                                            };
+                                            }
                                             break;
                                         case 22:
                                         case 26:
@@ -779,12 +779,12 @@ public class Player extends Character
                                             if (Parameters.data_.potsMinor)
                                             {
                                                 _local_4.push(ObjectLibrary.idToType_[String(_local_1.@id)]);
-                                            };
+                                            }
                                             break;
-                                    };
-                                };
-                            };
-                        };
+                                    }
+                                }
+                            }
+                        }
                         if (!_local_1.hasOwnProperty("Tier"))
                         {
                             _local_4.push(ObjectLibrary.idToType_[String(_local_1.@id)]);
@@ -812,14 +812,14 @@ public class Player extends Character
                                         if (((!(_local_1.hasOwnProperty("Usable"))) && (_local_1.Tier >= Parameters.data_.LNArmor)))
                                         {
                                             _local_4.push(ObjectLibrary.idToType_[String(_local_1.@id)]);
-                                        };
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             return (_local_4);
         }
 
@@ -839,8 +839,8 @@ public class Player extends Character
                 if (this.bagDist(map_.player_, _local_3) <= _arg_2)
                 {
                     _local_4.push(_local_3);
-                };
-            };
+                }
+            }
             return (_local_4);
         }
 
@@ -853,8 +853,8 @@ public class Player extends Character
                 if ((((_local_1 is Container) && (!(_local_1.objectType_ == VAULT_CHEST))) && (!(_local_1.objectType_ == 1860))))
                 {
                     _local_2.push(_local_1);
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -866,7 +866,7 @@ public class Player extends Character
             {
                 lastSearchTime = _local_1;
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -878,15 +878,15 @@ public class Player extends Character
                 if (_arg_1 == _local_2)
                 {
                     return (false);
-                };
-            };
+                }
+            }
             for each (_local_2 in wantedList)
             {
                 if (_arg_1 == _local_2)
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -905,7 +905,7 @@ public class Player extends Character
                     if ((((_arg_4 == 2594) && (!(Parameters.data_.lootHP))) || ((_arg_4 == 2595) && (!(Parameters.data_.lootMP)))))
                     {
                         return;
-                    };
+                    }
                     map_.gs_.gsc_.invSwap(this, this, _arg_1, nextLootSlot, _arg_2, _arg_3, _arg_4);
                 }
                 else
@@ -926,11 +926,11 @@ public class Player extends Character
                             else
                             {
                                 map_.gs_.gsc_.invSwap(this, _arg_2, _arg_3, _arg_4, this, _arg_1, equipment_[_arg_1]);
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             lastLootTime = getTimer();
         }
 
@@ -944,9 +944,9 @@ public class Player extends Character
                 {
                     nextLootSlot = equipment_[_local_2];
                     return (_local_2);
-                };
+                }
                 _local_2++;
-            };
+            }
             _local_2 = 4;
             while (_local_2 < _local_1)
             {
@@ -954,9 +954,9 @@ public class Player extends Character
                 {
                     nextLootSlot = equipment_[_local_2];
                     return (_local_2);
-                };
+                }
                 _local_2++;
-            };
+            }
             return (-1);
         }
 
@@ -967,11 +967,11 @@ public class Player extends Character
             if (_local_3 < LOOT_EVERY_MS)
             {
                 return (false);
-            };
+            }
             if ((((!(this.nextAvailableInventorySlotMod() == -1)) || ((_arg_1 == HEALTH_POT) && (this.healthPotionCount_ < 6))) || ((_arg_1 == MAGIC_POT) && (this.magicPotionCount_ < 6))))
             {
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -993,12 +993,12 @@ public class Player extends Character
                         if (_local_1.objectId_ != GameServerConnectionConcrete.ignoredBag)
                         {
                             this.lootItem(this.nextAvailableInventorySlotMod(), _local_1, _local_4, _local_2);
-                        };
+                        }
                         return;
-                    };
+                    }
                     _local_4 = (_local_4 + 1);
-                };
-            };
+                }
+            }
         }
 
         public function vault_():void
@@ -1017,12 +1017,12 @@ public class Player extends Character
                 {
                     _local_6 = _local_1;
                     break;
-                };
+                }
                 if (((this.collect < 0) && (equipment_[_local_1] == (0 - this.collect))))
                 {
                     _local_6 = _local_1;
                     break;
-                };
+                }
                 if (this.collect == int.MIN_VALUE)
                 {
                     switch (equipment_[_local_1])
@@ -1037,16 +1037,16 @@ public class Player extends Character
                         case 2794:
                             _local_6 = _local_1;
                             break;
-                    };
-                };
+                    }
+                }
                 _local_1++;
-            };
+            }
             if (_local_6 == 0)
             {
                 this.collect = 0;
                 this.notifyPlayer("Stopping", 0xFF0000, 1500);
                 return;
-            };
+            }
             for each (_local_2 in map_.goDict_)
             {
                 if (_local_2.objectType_ == VAULT_CHEST)
@@ -1063,18 +1063,18 @@ public class Player extends Character
                         {
                             _local_3 = _local_4;
                             _local_5 = (_local_2 as Container);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_local_5 == null)
             {
                 return;
-            };
+            }
             if (_local_3 > MAX_LOOT_DIST)
             {
                 return;
-            };
+            }
             _local_1 = 0;
             while (_local_1 < _local_5.equipment_.length)
             {
@@ -1083,13 +1083,13 @@ public class Player extends Character
                     map_.gs_.gsc_.invSwap(this, _local_5, _local_1, _local_5.equipment_[_local_1], this, _local_6, equipment_[_local_6]);
                     lastLootTime = getTimer();
                     return;
-                };
+                }
                 if (((_local_5.equipment_[_local_1] == -1) && (this.collect < 0)))
                 {
                     map_.gs_.gsc_.invSwap(this, this, _local_6, equipment_[_local_6], _local_5, _local_1, _local_5.equipment_[_local_1]);
                     lastLootTime = getTimer();
                     return;
-                };
+                }
                 if (this.collect == int.MAX_VALUE)
                 {
                     switch (_local_5.equipment_[_local_1])
@@ -1105,10 +1105,10 @@ public class Player extends Character
                             map_.gs_.gsc_.invSwap(this, _local_5, _local_1, _local_5.equipment_[_local_1], this, _local_6, equipment_[_local_6]);
                             lastLootTime = getTimer();
                             return;
-                    };
-                };
+                    }
+                }
                 _local_1++;
-            };
+            }
             this.collect = 0;
             this.notifyPlayer("Stopping", 0xFF0000, 1500);
         }
@@ -1120,7 +1120,7 @@ public class Player extends Character
                 map_.gs_.gsc_.invSwap(this, this, (_arg_1 + 4), equipment_[(_arg_1 + 4)], this, (_arg_1 + 12), equipment_[(_arg_1 + 12)]);
                 this.bools[_arg_1] = false;
                 this.nextSwap = (getTimer() + 600);
-            };
+            }
         }
 
         private function selectSlot(_arg_1:TradeSlot):void
@@ -1134,7 +1134,7 @@ public class Player extends Character
             {
                 _local_3[_local_2] = map_.gs_.hudView.tradePanel.myInv_.slots_[_local_2].included_;
                 _local_2++;
-            };
+            }
             map_.gs_.gsc_.changeTrade(_local_3);
             map_.gs_.hudView.tradePanel.tradeButton_.setState(0);
         }
@@ -1155,9 +1155,9 @@ public class Player extends Character
                 if (_local_1.equipment_[(_local_2 + 4)] != _local_1.equipment_[(_local_2 + 12)])
                 {
                     this.bools[_local_2] = true;
-                };
+                }
                 _local_2++;
-            };
+            }
         }
 
         public function startTimer(_arg_1:int, _arg_2:int=500):void
@@ -1186,7 +1186,7 @@ public class Player extends Character
             {
                 this.chp = (this.chp - _arg_1);
                 this.checkOPAuto();
-            };
+            }
         }
 
         private function checkOPAuto():void
@@ -1199,9 +1199,9 @@ public class Player extends Character
                 {
                     this.addTextLine.dispatch(ChatMessage.make("*Error*", "Unable to find Nexus, disconnecting"));
                     map_.gs_.closed.dispatch();
-                };
+                }
                 this.opFailed = true;
-            };
+            }
         }
 
         public function getItemHp():int
@@ -1222,12 +1222,12 @@ public class Player extends Character
                             if (_local_2.@stat == 0)
                             {
                                 _local_3 = (_local_3 + _local_2.@amount);
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 _local_4++;
-            };
+            }
             return (_local_3);
         }
 
@@ -1238,16 +1238,16 @@ public class Player extends Character
                 if (((hp_ / maxHP_) * 100) <= Parameters.data_.AutoNexus)
                 {
                     map_.gs_.gsc_.escape();
-                };
+                }
                 if (((((hp_ / maxHP_) * 100) <= Parameters.data_.autoPot) && (!(isSick()))))
                 {
                     if (((this.potionInventoryModel.getPotionModel(PotionInventoryModel.HEALTH_POTION_ID).available) && ((this.lastPotionUse + 500) <= getTimer())))
                     {
                         this.useBuyPotionSignal.dispatch(new UseBuyPotionVO(PotionInventoryModel.HEALTH_POTION_ID, UseBuyPotionVO.CONTEXTBUY));
                         this.lastPotionUse = getTimer();
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -1287,7 +1287,7 @@ public class Player extends Character
                 {
                     this.thunderTime = getTimer();
                     map_.gs_.gsc_.thunderMove(this);
-                };
+                }
                 if (((!(this.vitTime == -1)) && (!(isPaused()))))
                 {
                     if (isBleeding())
@@ -1305,26 +1305,26 @@ public class Player extends Character
                             else
                             {
                                 this.chp = (this.chp + ((getTimer() - this.vitTime) * Number(((1 + (0.12 * this.vitality_)) / 1000))));
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     if (this.breath_ == 0)
                     {
                         this.chp = (this.chp - ((getTimer() - this.vitTime) * 0.094));
-                    };
+                    }
                     this.checkOPAuto();
                     if (this.chp > maxHP_)
                     {
                         this.chp = maxHP_;
-                    };
-                };
+                    }
+                }
                 this.vitTime = getTimer();
                 _local_12 = -1;
                 if (map_.quest_.getObject(1) != null)
                 {
                     _local_14 = map_.quest_.getObject(1);
                     _local_12 = _local_14.objectType_;
-                };
+                }
                 if ((((!(_local_12 == 3366)) && (!(_local_12 == 3367))) && (!(_local_12 == 3368))))
                 {
                     this.questMob = _local_14;
@@ -1332,11 +1332,11 @@ public class Player extends Character
                 else
                 {
                     this.questMob = null;
-                };
+                }
                 if (((map_.gs_.gsc_.oncd) && (getTimer() >= this.nextTeleportAt_)))
                 {
                     map_.gs_.gsc_.retryTeleport();
-                };
+                }
                 if (((this.remBuff.length > 0) && (getTimer() >= this.remBuff[(this.remBuff.length - 1)])))
                 {
                     _local_15 = this.getItemHp();
@@ -1344,31 +1344,31 @@ public class Player extends Character
                     {
                         this.cmaxhp = (this.cmaxhp - (this.cmaxhpboost - _local_15));
                         this.cmaxhpboost = _local_15;
-                    };
+                    }
                     this.remBuff.pop();
-                };
+                }
                 if (this.vitTime >= this.sendStr)
                 {
                     map_.gs_.gsc_.playerText(this.afkMsg);
                     this.sendStr = int.MAX_VALUE;
-                };
+                }
                 if (wantedList == null)
                 {
                     wantedList = this.genWantedList();
-                };
+                }
                 if (((Parameters.data_.AutoLootOn) && (this.lookForLoot())))
                 {
                     this.autoloot_();
-                };
+                }
                 if ((((!(this.collect == 0)) && (map_.name_ == "Vault")) && ((lastLootTime + 550) < getTimer())))
                 {
                     this.vault_();
-                };
+                }
                 if (ParseChatMessageCommand.switch_)
                 {
                     this.findSlots();
                     ParseChatMessageCommand.switch_ = false;
-                };
+                }
                 if (((!(this.select_ == -1)) && (getTimer() >= this.nextSelect)))
                 {
                     _local_4 = this.loopStart;
@@ -1380,15 +1380,15 @@ public class Player extends Character
                             this.selectSlot(_local_16);
                             this.loopStart = (_local_4 + 1);
                             if (_local_4 != 11) break;
-                        };
+                        }
                         if (_local_4 == 11)
                         {
                             this.select_ = -1;
                             this.loopStart = 4;
-                        };
+                        }
                         _local_4++;
-                    };
-                };
+                    }
+                }
                 _local_4 = 0;
                 while (_local_4 < 8)
                 {
@@ -1396,9 +1396,9 @@ public class Player extends Character
                     {
                         this.swapInvBp(_local_4);
                         break;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 _local_13 = map_.player_;
                 if ((lastLootTime + 550) < getTimer())
                 {
@@ -1409,9 +1409,9 @@ public class Player extends Character
                         {
                             map_.gs_.gsc_.invSwapPotion(_local_13, _local_13, _local_17, 2594, _local_13, 254, -1);
                             lastLootTime = getTimer();
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (((this.timerCount <= this.endCount) && ((this.startTime + (this.timerStep * this.timerCount)) <= getTimer())))
                 {
                     _local_18 = (this.endCount * this.timerStep);
@@ -1426,9 +1426,9 @@ public class Player extends Character
                     else
                     {
                         this.notifyPlayer(_local_20.toFixed(((this.timerStep < 1000) ? 1 : 0)), GameObject.green2red((100 - ((_local_19 / _local_18) * 100))));
-                    };
+                    }
                     this.timerCount++;
-                };
+                }
                 if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil))))
                 {
                     _local_23 = 0;
@@ -1460,7 +1460,7 @@ public class Player extends Character
                             else
                             {
                                 _local_23 = ((4000 * _local_24) - 200);
-                            };
+                            }
                             break;
                         case eItems.Seal_of_the_Initiate:
                         case eItems.Seal_of_the_Pilgrim:
@@ -1475,7 +1475,7 @@ public class Player extends Character
                             if (Parameters.data_.palaSpam)
                             {
                                 _local_23 = 500;
-                            };
+                            }
                             break;
                         case eItems.Tome_of_Holy_Protection:
                         case eItems.Tome_of_Frigid_Protection:
@@ -1486,18 +1486,18 @@ public class Player extends Character
                             else
                             {
                                 _local_23 = ((4000 * _local_24) - 200);
-                            };
+                            }
                             break;
-                    };
+                    }
                     if (_local_23 > 0)
                     {
                         this.useAltWeapon(x_, y_, UseType.START_USE, _local_23);
-                    };
-                };
+                    }
+                }
                 if (this.lastManaUse <= getTimer())
                 {
                     this.handleAutoMana();
-                };
+                }
                 if (this.autohealtimer <= getTimer())
                 {
                     _local_23 = 0;
@@ -1530,44 +1530,44 @@ public class Player extends Character
                         case eItems.Tome_of_Rejuvenation:
                             _local_23 = 500;
                             break;
-                    };
+                    }
                     if (_local_23 > 0)
                     {
                         this.handleAutoH(_local_23);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (((this.tierBoost) && (!(isPaused()))))
             {
                 this.tierBoost = (this.tierBoost - _arg_2);
                 if (this.tierBoost < 0)
                 {
                     this.tierBoost = 0;
-                };
-            };
+                }
+            }
             if (((this.dropBoost) && (!(isPaused()))))
             {
                 this.dropBoost = (this.dropBoost - _arg_2);
                 if (this.dropBoost < 0)
                 {
                     this.dropBoost = 0;
-                };
-            };
+                }
+            }
             if (((this.xpTimer) && (!(isPaused()))))
             {
                 this.xpTimer = (this.xpTimer - _arg_2);
                 if (this.xpTimer < 0)
                 {
                     this.xpTimer = 0;
-                };
-            };
+                }
+            }
             if (((isHealing()) && (!(isPaused()))))
             {
                 if ((((!(Parameters.data_.AntiLag)) && (this.healingEffect_ == null)) || ((this.healingEffect_ == null) && (!(Parameters.data_.noParticlesMaster)))))
                 {
                     this.healingEffect_ = new HealingEffect(this);
                     map_.addObj(this.healingEffect_, x_, y_);
-                };
+                }
             }
             else
             {
@@ -1575,12 +1575,12 @@ public class Player extends Character
                 {
                     map_.removeObj(this.healingEffect_.objectId_);
                     this.healingEffect_ = null;
-                };
-            };
+                }
+            }
             if (((map_.player_ == this) && (isPaused())))
             {
                 return (true);
-            };
+            }
             if (this.relMoveVec_ != null)
             {
                 _local_5 = Parameters.data_.cameraAngle;
@@ -1588,7 +1588,7 @@ public class Player extends Character
                 {
                     _local_5 = (_local_5 + ((_arg_2 * Parameters.PLAYER_ROTATE_SPEED) * this.rotate_));
                     Parameters.data_.cameraAngle = _local_5;
-                };
+                }
                 _local_6 = this.getMoveSpeed();
                 if (map_.gs_.gsc_.record == 2)
                 {
@@ -1601,9 +1601,9 @@ public class Player extends Character
                         if (this.recordPointer >= _local_25.length)
                         {
                             this.recordPointer = 0;
-                        };
+                        }
                         _local_26 = _local_25[this.recordPointer];
-                    };
+                    }
                     _local_7 = Math.atan2((_local_26.y - y_), (_local_26.x - x_));
                     moveVec_.x = (_local_6 * Math.cos(_local_7));
                     moveVec_.y = (_local_6 * Math.sin(_local_7));
@@ -1624,11 +1624,11 @@ public class Player extends Character
                             {
                                 _local_3.teleport(this.followTarget.name_);
                                 this.lastteleport = (getTimer() + 10000);
-                            };
+                            }
                             _local_7 = Math.atan2((this.followTarget.y_ - y_), (this.followTarget.x_ - x_));
                             moveVec_.x = (_local_6 * Math.cos(_local_7));
                             moveVec_.y = (_local_6 * Math.sin(_local_7));
-                        };
+                        }
                     }
                     else
                     {
@@ -1647,13 +1647,13 @@ public class Player extends Character
                                 if (moveVec_.length < _local_9)
                                 {
                                     moveVec_ = moveVec_.add(_local_8);
-                                };
+                                }
                             }
                             else
                             {
                                 moveVec_.x = (_local_6 * Math.cos((_local_5 + _local_7)));
                                 moveVec_.y = (_local_6 * Math.sin((_local_5 + _local_7)));
-                            };
+                            }
                         }
                         else
                         {
@@ -1665,10 +1665,10 @@ public class Player extends Character
                             {
                                 moveVec_.x = 0;
                                 moveVec_.y = 0;
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 if (square_ != null && square_.props_.push_) {
                     if (!Parameters.data_.SWNoTileMove) {
                         moveVec_.x = (moveVec_.x - (square_.props_.animate_.dx_ / 1000));
@@ -1692,7 +1692,7 @@ public class Player extends Character
                 this.damage(true, _local_10, _local_11, (hp_ < _local_10), null);
                 map_.gs_.gsc_.groundDamage(_arg_1, x_, y_);
                 square_.lastDamage_ = _arg_1;
-            };
+            }
             if (Parameters.data_.autoRecon){
                 if (this.lastreconnect <= getTimer()){
                     if (((map_.player_ == this) && (map_.name_ == "Nexus"))){
@@ -1708,12 +1708,12 @@ public class Player extends Character
                                 _local_27.setPort(2050);
                                 _local_28 = new ReconnectEvent(_local_27, Parameters.data_.reconGID, false, map_.gs_.gsc_.charId_, Parameters.data_.reconTime, Parameters.data_.reconKey, false);
                                 map_.gs_.dispatchEvent(_local_28);
-                            };
+                            }
                             this.lastreconnect = (getTimer() + 2000);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             return (true);
         }
 
@@ -1722,7 +1722,7 @@ public class Player extends Character
             if (map_ == null)
             {
                 return;
-            };
+            }
             var _local_1:Square = map_.getSquare(x_, y_);
             if (_local_1.props_.sinking_)
             {
@@ -1733,7 +1733,7 @@ public class Player extends Character
             {
                 sinkLevel_ = 0;
                 this.moveMultiplier_ = _local_1.props_.speed_;
-            };
+            }
         }
 
         override protected function makeNameBitmapData():BitmapData
@@ -1750,15 +1750,15 @@ public class Player extends Character
             if (this.isFellowGuild_)
             {
                 return (Parameters.FELLOW_GUILD_COLOR);
-            };
+            }
             if (((Parameters.data_.lockHighlight) && (this.starred_)))
             {
                 return (4240365);
-            };
+            }
             if (this.nameChosen_)
             {
                 return (Parameters.NAME_CHOSEN_COLOR);
-            };
+            }
             return (0xFFFFFF);
         }
 
@@ -1801,7 +1801,7 @@ public class Player extends Character
                 _arg_1.push(this.breathFill_);
                 _arg_1.push(this.breathPath_);
                 _arg_1.push(GraphicsUtil.END_FILL);
-            };
+            }
             GraphicsFillExtra.setSoftwareDrawSolid(this.breathFill_, true);
             GraphicsFillExtra.setSoftwareDrawSolid(this.breathBackFill_, true);
         }
@@ -1849,12 +1849,12 @@ public class Player extends Character
             if (isSlowed())
             {
                 return (MIN_MOVE_SPEED * this.moveMultiplier_);
-            };
+            }
             var _local_1:Number = (MIN_MOVE_SPEED + ((this.speed_ / 75) * (MAX_MOVE_SPEED - MIN_MOVE_SPEED)));
             if (((!(Parameters.data_.speedy)) && ((isSpeedy()) || (isNinjaSpeedy()))))
             {
                 _local_1 = (_local_1 * 1.5);
-            };
+            }
             return (_local_1 * this.moveMultiplier_);
         }
 
@@ -1863,12 +1863,12 @@ public class Player extends Character
             if (isDazed())
             {
                 return (MIN_ATTACK_FREQ);
-            };
+            }
             var _local_1:Number = (MIN_ATTACK_FREQ + ((this.dexterity_ / 75) * (MAX_ATTACK_FREQ - MIN_ATTACK_FREQ)));
             if (isBerserk())
             {
                 _local_1 = (_local_1 * 1.5);
-            };
+            }
             return (_local_1);
         }
 
@@ -1877,12 +1877,12 @@ public class Player extends Character
             if (isWeak())
             {
                 return (MIN_ATTACK_MULT);
-            };
+            }
             var _local_1:Number = (MIN_ATTACK_MULT + ((this.attack_ / 75) * (MAX_ATTACK_MULT - MIN_ATTACK_MULT)));
             if (isDamaging())
             {
                 _local_1 = (_local_1 * 1.5);
-            };
+            }
             return (_local_1);
         }
 
@@ -1932,11 +1932,11 @@ public class Player extends Character
                     if (((!(moveVec_.y == 0)) || (!(moveVec_.x == 0))))
                     {
                         facing_ = Math.atan2(moveVec_.y, moveVec_.x);
-                    };
+                    }
                     _local_10 = ((_arg_2 % _local_4) / _local_4);
                     _local_11 = AnimatedChar.WALK;
-                };
-            };
+                }
+            }
             if (this.isHexed())
             {
                 ((this.isDefaultAnimatedChar) && (this.setToRandomAnimatedCharacter()));
@@ -1946,8 +1946,8 @@ public class Player extends Character
                 if (!this.isDefaultAnimatedChar)
                 {
                     this.makeSkinTexture();
-                };
-            };
+                }
+            }
             if (_arg_1.isHallucinating_)
             {
                 _local_3 = new MaskedImage(getHallucinatingTexture(), null);
@@ -1955,7 +1955,7 @@ public class Player extends Character
             else
             {
                 _local_3 = animatedChar_.imageFromFacing(facing_, _arg_1, _local_11, _local_10);
-            };
+            }
             var _local_12:int = tex1Id_;
             var _local_13:int = tex2Id_;
             if (this.nearestMerchant_)
@@ -1968,14 +1968,14 @@ public class Player extends Character
                 else
                 {
                     _local_9 = _local_5[_local_3];
-                };
+                }
                 _local_12 = this.nearestMerchant_.getTex1Id(tex1Id_);
                 _local_13 = this.nearestMerchant_.getTex2Id(tex2Id_);
             }
             else
             {
                 _local_9 = texturingCache_[_local_3];
-            };
+            }
             if (_local_9 == null)
             {
                 _local_9 = TextureRedrawer.resize(_local_3.image_, _local_3.mask_, size_, false, _local_12, _local_13);
@@ -1986,21 +1986,21 @@ public class Player extends Character
                 else
                 {
                     texturingCache_[_local_3] = _local_9;
-                };
-            };
+                }
+            }
             if (hp_ < (maxHP_ * 0.2))
             {
                 _local_6 = (int((Math.abs(Math.sin((_arg_2 / 200))) * 10)) / 10);
                 _local_7 = 128;
                 _local_8 = new ColorTransform(1, 1, 1, 1, (_local_6 * _local_7), (-(_local_6) * _local_7), (-(_local_6) * _local_7));
                 _local_9 = CachingColorTransformer.transformBitmapData(_local_9, _local_8);
-            };
+            }
             var _local_14:BitmapData = texturingCache_[_local_9];
             if (_local_14 == null)
             {
                 _local_14 = GlowRedrawer.outlineGlow(_local_9, ((this.legendaryRank_ == -1) ? 0 : 0xFF0000));
                 texturingCache_[_local_9] = _local_14;
-            };
+            }
             if ((((isPaused()) || (isStasis())) || (isPetrified())))
             {
                 _local_14 = CachingColorTransformer.filterBitmapData(_local_14, PAUSED_FILTER);
@@ -2010,8 +2010,8 @@ public class Player extends Character
                 if (isInvisible())
                 {
                     _local_14 = CachingColorTransformer.alphaBitmapData(_local_14, 0.4);
-                };
-            };
+                }
+            }
             return (_local_14);
         }
 
@@ -2025,7 +2025,7 @@ public class Player extends Character
                 _local_2 = int(((4 / _local_1.image_.width) * 100));
                 portrait_ = TextureRedrawer.resize(_local_1.image_, _local_1.mask_, _local_2, true, tex1Id_, tex2Id_);
                 portrait_ = GlowRedrawer.outlineGlow(portrait_, 0);
-            };
+            }
             return (portrait_);
         }
 
@@ -2041,17 +2041,17 @@ public class Player extends Character
             if (((map_ == null) || (isPaused()) || (Parameters.data_.blockAbil)))
             {
                 return (false);
-            };
+            }
             var _local_12:int = equipment_[1];
             if (_local_12 == -1)
             {
                 return (false);
-            };
+            }
             var _local_13:XML = ObjectLibrary.xmlLibrary_[_local_12];
             if (int(_local_13.MpCost) > this.mp_)
             {
                 return (false);
-            };
+            }
             if (Parameters.data_.inaccurate)
             {
                 _local_10 = this.pSTopW(_arg_1, _arg_2);
@@ -2059,17 +2059,17 @@ public class Player extends Character
             else
             {
                 _local_10 = this.sToW(_arg_1, _arg_2);
-            };
+            }
             if (_local_10 == null)
             {
                 SoundEffectLibrary.play("error");
                 return (false);
-            };
+            }
             if (isSilenced())
             {
                 SoundEffectLibrary.play("error");
                 return (false);
-            };
+            }
             for each (_local_5 in _local_13.Activate)
             {
                 if (((_local_5.toString() == ActivationType.TELEPORT) && (!(Parameters.data_.spellVoid))))
@@ -2078,9 +2078,9 @@ public class Player extends Character
                     {
                         SoundEffectLibrary.play("error");
                         return (false);
-                    };
-                };
-            };
+                    }
+                }
+            }
             _local_6 = getTimer();
             if (_arg_3 == UseType.START_USE)
             {
@@ -2088,16 +2088,16 @@ public class Player extends Character
                 {
                     SoundEffectLibrary.play("error");
                     return (false);
-                };
+                }
                 if (_arg_4 > 0)
                 {
                     this.nextAutoAbil = (getTimer() + _arg_4);
-                };
+                }
                 _local_9 = 500;
                 if (_local_13.hasOwnProperty("Cooldown"))
                 {
                     _local_9 = (Number(_local_13.Cooldown) * 1000);
-                };
+                }
                 this.nextAltAttack_ = (_local_6 + _local_9);
                 this.lastAltAttack_ = _local_6;
                 map_.gs_.gsc_.useItem(_local_6, objectId_, 1, _local_12, _local_10.x, _local_10.y, _arg_3);
@@ -2105,7 +2105,7 @@ public class Player extends Character
                 {
                     _local_7 = Math.atan2(_arg_2, _arg_1);
                     this.doShoot(_local_6, _local_12, _local_13, (Parameters.data_.cameraAngle + _local_7), false);
-                };
+                }
                 if (Parameters.data_.abilTimer)
                 {
                     _local_11 = (1 + (this.wisdom_ / 150));
@@ -2137,8 +2137,8 @@ public class Player extends Character
                         case 5854:
                             this.startTimer(int((8 * _local_11)));
                             break;
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -2150,9 +2150,9 @@ public class Player extends Character
                     {
                         _local_7 = Math.atan2(_arg_2, _arg_1);
                         this.doShoot(_local_6, _local_12, _local_13, (Parameters.data_.cameraAngle + _local_7), false);
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (true);
         }
 
@@ -2166,28 +2166,28 @@ public class Player extends Character
             if (((map_ == null) || (isPaused())))
             {
                 return (false);
-            };
+            }
             var _local_10:int = equipment_[1];
             if (_local_10 == -1)
             {
                 return (false);
-            };
+            }
             var _local_11:XML = ObjectLibrary.xmlLibrary_[_local_10];
             if (((_local_11 == null) || (!(_local_11.hasOwnProperty("Usable")))))
             {
                 return (false);
-            };
+            }
             if (isSilenced())
             {
                 SoundEffectLibrary.play("error");
                 return (false);
-            };
+            }
             var _local_12:Point = ((_arg_4) ? new Point(_arg_1, _arg_2) : this.sToW(_arg_1, _arg_2));
             if (_local_12 == null)
             {
                 SoundEffectLibrary.play("error");
                 return (false);
-            };
+            }
             for each (_local_5 in _local_11.Activate)
             {
                 if (_local_5.toString() == ActivationType.TELEPORT)
@@ -2196,9 +2196,9 @@ public class Player extends Character
                     {
                         SoundEffectLibrary.play("error");
                         return (false);
-                    };
-                };
-            };
+                    }
+                }
+            }
             _local_6 = getTimer();
             if (_arg_3 == UseType.START_USE)
             {
@@ -2206,18 +2206,18 @@ public class Player extends Character
                 {
                     SoundEffectLibrary.play("error");
                     return (false);
-                };
+                }
                 _local_8 = int(_local_11.MpCost);
                 if (_local_8 > this.mp_)
                 {
                     SoundEffectLibrary.play("no_mana");
                     return (false);
-                };
+                }
                 _local_9 = 500;
                 if (_local_11.hasOwnProperty("Cooldown"))
                 {
                     _local_9 = (Number(_local_11.Cooldown) * 1000);
-                };
+                }
                 this.nextAltAttack_ = (_local_6 + _local_9);
                 map_.gs_.gsc_.useItem(_local_6, objectId_, 1, _local_10, _local_12.x, _local_12.y, _arg_3);
                 if (_local_11.Activate == ActivationType.SHOOT)
@@ -2225,7 +2225,7 @@ public class Player extends Character
                     _local_7 = Math.atan2(((_arg_4) ? Number((_arg_2 - this.y_)) : Number(_arg_2)), ((_arg_4) ? Number((_arg_1 - this.x_)) : Number(_arg_1)));
                     this.doShoot(_local_6, _local_10, _local_11, (((_arg_4) ? 0 : Parameters.data_.cameraAngle) + _local_7), false);
                     this.isShooting = false;
-                };
+                }
             }
             else
             {
@@ -2238,9 +2238,9 @@ public class Player extends Character
                         _local_7 = Math.atan2(((_arg_4) ? Number((_arg_2 - this.y_)) : Number(_arg_2)), ((_arg_4) ? Number((_arg_1 - this.x_)) : Number(_arg_1)));
                         this.doShoot(_local_6, _local_10, _local_11, (((_arg_4) ? 0 : Parameters.data_.cameraAngle) + _local_7), false);
                         this.isShooting = false;
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (true);
         }
 
@@ -2279,12 +2279,12 @@ public class Player extends Character
                         {
                             _local_10 = true;
                             break;
-                        };
-                    };
+                        }
+                    }
                     if ((((!(Parameters.data_.tombHack)) && (_local_5.props_.type_ >= 3366)) && (_local_5.props_.type_ <= 3368)))
                     {
                         _local_10 = false;
-                    };
+                    }
                     if (((_local_10) || (_local_5 is Character)))
                     {
                         if (!((!(_local_10)) && (((_local_5.isStasis()) || (_local_5.isInvulnerable())) || (_local_5.isInvincible()))))
@@ -2296,8 +2296,8 @@ public class Player extends Character
                                 {
                                     _local_12 = true;
                                     break;
-                                };
-                            };
+                                }
+                            }
                             if (!_local_12)
                             {
                                 if ((((_local_5.jittery) || (!(Parameters.data_.AATargetLead))) || (_local_5.objectType_ == 3334)))
@@ -2307,7 +2307,7 @@ public class Player extends Character
                                 else
                                 {
                                     _local_6 = this.leadPos(_arg_1, new Vector3D(_local_5.x_, _local_5.y_), new Vector3D(_local_5.moveVec_.x, _local_5.moveVec_.y), _local_15);
-                                };
+                                }
                                 if (_local_6 != null)
                                 {
                                     _local_13 = this.getDist(_arg_1.x, _arg_1.y, _local_6.x, _local_6.y);
@@ -2324,18 +2324,18 @@ public class Player extends Character
                                                     _local_8 = 7500;
                                                 case 3371:
                                                     _local_8 = 8000;
-                                            };
+                                            }
                                             for each (_local_9 in Parameters.data_.AAPriority)
                                             {
                                                 if (_local_9 == _local_5.objectType_)
                                                 {
                                                     _local_8 = int.MAX_VALUE;
-                                                };
-                                            };
+                                                }
+                                            }
                                             if (((Parameters.data_.tombHack) && (((_local_5.objectType_ >= 3366) && (_local_5.objectType_ <= 3368)) || ((_local_5.objectType_ >= 32692) && (_local_5.objectType_ <= 32694)))))
                                             {
                                                 if (((!(_local_5.objectType_ == Parameters.data_.curBoss)) && (!(_local_5.objectType_ == (Parameters.data_.curBoss + 29326))))) continue;
-                                            };
+                                            }
                                             if (_local_8 >= _local_17)
                                             {
                                                 if (_local_8 == _local_17)
@@ -2354,8 +2354,8 @@ public class Player extends Character
                                                     _local_17 = _local_8;
                                                     _local_19 = _local_13;
                                                     aimAssistTarget = _local_5;
-                                                };
-                                            };
+                                                }
+                                            }
                                         }
                                         else
                                         {
@@ -2368,7 +2368,7 @@ public class Player extends Character
                                                     _local_17 = _local_5.maxHP_;
                                                     _local_19 = _local_13;
                                                     aimAssistTarget = _local_5;
-                                                };
+                                                }
                                             }
                                             else
                                             {
@@ -2383,17 +2383,17 @@ public class Player extends Character
                                                         _local_17 = _local_5.maxHP_;
                                                         _local_19 = _local_13;
                                                         aimAssistTarget = _local_5;
-                                                    };
-                                                };
-                                            };
-                                        };
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             return (_local_4);
         }
 
@@ -2425,8 +2425,8 @@ public class Player extends Character
                 else
                 {
                     return (null);
-                };
-            };
+                }
+            }
             return (_arg_2.add(_arg_3));
         }
 
@@ -2441,7 +2441,7 @@ public class Player extends Character
             if (_local_3 == null)
             {
                 _local_3 = new Point(x_, y_);
-            };
+            }
             _local_2 = new Vector3D(_local_3.x, _local_3.y);
             _local_1 = new Vector3D(x_, y_);
             _local_4 = ObjectLibrary.propsLibrary_[equipment_[0]].projectiles_[0];
@@ -2449,7 +2449,7 @@ public class Player extends Character
             if (aimAssistPoint != null)
             {
                 return (Math.atan2((aimAssistPoint.y - y_), (aimAssistPoint.x - x_)));
-            };
+            }
             return (Number.MAX_VALUE);
         }
 
@@ -2487,12 +2487,12 @@ public class Player extends Character
                     this.shoot(_local_2);
                     this.isShooting = false;
                     return;
-                };
+                }
                 if (!_local_4)
                 {
                     return;
-                };
-            };
+                }
+            }
             this.shoot((Parameters.data_.cameraAngle + _arg_1));
         }
 
@@ -2502,7 +2502,7 @@ public class Player extends Character
             if (_local_1 == -1)
             {
                 return (false);
-            };
+            }
             return (true);
         }
 
@@ -2512,7 +2512,7 @@ public class Player extends Character
             if (((_local_3 == null) || (!(_local_3.hasOwnProperty("RateOfFire")))))
             {
                 return;
-            };
+            }
             var _local_4:Number = Number(_local_3.RateOfFire);
             this.attackPeriod_ = ((1 / this.attackFrequency()) * (1 / _local_4));
             super.setAttack(_arg_1, _arg_2);
@@ -2523,12 +2523,12 @@ public class Player extends Character
             if (((((map_ == null) || (isStunned())) || (isPaused())) || (isPetrified())))
             {
                 return;
-            };
+            }
             var _local_2:int = equipment_[0];
             if (_local_2 == -1)
             {
                 return;
-            };
+            }
             var _local_3:XML = ObjectLibrary.xmlLibrary_[_local_2];
             var _local_4:int = getTimer();
             var _local_5:Number = Number(_local_3.RateOfFire);
@@ -2536,7 +2536,7 @@ public class Player extends Character
             if (_local_4 < (attackStart_ + this.attackPeriod_))
             {
                 return;
-            };
+            }
             attackAngle_ = _arg_1;
             attackStart_ = _local_4;
             this.doShoot(attackStart_, _local_2, _local_3, attackAngle_, true);
@@ -2558,7 +2558,7 @@ public class Player extends Character
             this.isShooting = _arg_5;
             if (((_arg_2 == 580) && (Parameters.data_.cultistStaffDisable))){
                 _local_16 = (_local_16 + Math.PI);
-            };
+            }
             while (_local_12 < _local_13)
             {
                 _local_6 = getBulletId();
@@ -2608,7 +2608,7 @@ public class Player extends Character
             if (equipment_ == null)
             {
                 return (false);
-            };
+            }
             var _local_1:int = equipment_.length;
             var _local_2:uint = 4;
             while (_local_2 < _local_1)
@@ -2616,9 +2616,9 @@ public class Player extends Character
                 if (equipment_[_local_2] <= 0)
                 {
                     return (false);
-                };
+                }
                 _local_2++;
-            };
+            }
             return (true);
         }
 
@@ -2631,9 +2631,9 @@ public class Player extends Character
                 if (equipment_[_local_2] <= 0)
                 {
                     return (_local_2);
-                };
+                }
                 _local_2++;
-            };
+            }
             return (-1);
         }
 
@@ -2646,9 +2646,9 @@ public class Player extends Character
                 if (equipment_[_local_3] == _arg_1)
                 {
                     return (_local_3);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (-1);
         }
 
@@ -2661,9 +2661,9 @@ public class Player extends Character
                 if (equipment_[_local_3] == _arg_1)
                 {
                     return (_local_3);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (-1);
         }
 
@@ -2677,9 +2677,9 @@ public class Player extends Character
                 if (equipment_[_local_3] <= 0)
                 {
                     _local_1++;
-                };
+                }
                 _local_3++;
-            };
+            }
             return (_local_1);
         }
 
@@ -2690,7 +2690,7 @@ public class Player extends Character
             if (!this.hasBackpack_)
             {
                 return (-1);
-            };
+            }
             if (_arg_1 > 11)
             {
                 _local_2 = GeneralConstants.NUM_EQUIPMENT_SLOTS;
@@ -2700,16 +2700,16 @@ public class Player extends Character
             {
                 _local_2 = (GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS);
                 _local_3 = equipment_.length;
-            };
+            }
             var _local_4:uint = _local_2;
             while (_local_4 < _local_3)
             {
                 if (equipment_[_local_4] <= 0)
                 {
                     return (_local_4);
-                };
+                }
                 _local_4++;
-            };
+            }
             return (-1);
         }
 
@@ -2721,7 +2721,7 @@ public class Player extends Character
                     return (this.healthPotionCount_);
                 case PotionInventoryModel.MAGIC_POTION_ID:
                     return (this.magicPotionCount_);
-            };
+            }
             return (0);
         }
 
@@ -2745,9 +2745,9 @@ public class Player extends Character
                     {
                         this.useAltWeapon(0, 0, UseType.START_USE);
                         this.autohealtimer = (getTimer() + _arg_1);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function handleAutoMana():void
@@ -2760,9 +2760,9 @@ public class Player extends Character
                     {
                         this.useBuyPotionSignal.dispatch(new UseBuyPotionVO(PotionInventoryModel.MAGIC_POTION_ID, UseBuyPotionVO.CONTEXTBUY));
                         this.lastManaUse = (getTimer() + 500);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function hasSeal():Boolean
@@ -2783,7 +2783,7 @@ public class Player extends Character
                 case eItems.Seal_of_the_Blessed_Champion:
                     _local_1 = true;
                     break;
-            };
+            }
             return (_local_1);
         }
 
@@ -2803,7 +2803,7 @@ public class Player extends Character
                 case eItems.Seal_of_the_Blessed_Champion:
                     _local_1 = true;
                     break;
-            };
+            }
             return (_local_1);
         }
 
@@ -2826,7 +2826,7 @@ public class Player extends Character
                 case eItems.Tome_of_Renewing:
                     _local_1 = true;
                     break;
-            };
+            }
             return (_local_1);
         }
 
@@ -2842,15 +2842,15 @@ public class Player extends Character
             if (_local_8 == -1)
             {
                 return;
-            };
+            }
             var _local_9:XML = ObjectLibrary.xmlLibrary_[_local_8];
             for each (_local_10 in _local_9.Activate)
             {
                 if (_local_10.toString() == ActivationType.TELEPORT)
                 {
                     this.useAltWeapon(_arg_1, _arg_2, 1, 0);
-                };
-            };
+                }
+            }
             _local_3 = this.sToW(_arg_1, _arg_2);
             _local_4 = null;
             _local_5 = Number.MAX_VALUE;
@@ -2866,10 +2866,10 @@ public class Player extends Character
                         {
                             _local_5 = _local_7;
                             _local_6 = _local_4;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_local_5 <= 25)
             {
                 this.useAltWeapon(_local_6.x_, _local_6.y_, 1, 1);
@@ -2877,7 +2877,7 @@ public class Player extends Character
             else
             {
                 this.useAltWeapon(_arg_1, _arg_2, 1, 0);
-            };
+            }
         }
 
         public function getPSpeed():Number{

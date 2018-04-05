@@ -34,8 +34,8 @@ public class Character extends GameObject
                 if (((_arg_5) || (_arg_2 > 0)))
                 {
                     SoundEffectLibrary.play(this.hurtSound_);
-                };
-            };
+                }
+            }
         }
 
 

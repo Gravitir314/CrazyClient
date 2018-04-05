@@ -38,7 +38,7 @@ public class StatMetersMediator extends Mediator
             if (this.view.myPlayer == false)
             {
                 return;
-            };
+            }
             this.view.update(_arg_1);
         }
 

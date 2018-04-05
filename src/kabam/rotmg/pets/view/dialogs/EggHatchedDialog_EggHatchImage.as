@@ -8,7 +8,7 @@ import mx.core.*;
 		public function EggHatchedDialog_EggHatchImage()
 		{
 			super();
-			return;
+
 		}
 	}
 }

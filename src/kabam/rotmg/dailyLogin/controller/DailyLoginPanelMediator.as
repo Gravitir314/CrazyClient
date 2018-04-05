@@ -43,7 +43,7 @@ public class DailyLoginPanelMediator extends Mediator
             else
             {
                 this.view.showNoCalendarButton();
-            };
+            }
         }
 
         private function showCalendarModal(_arg_1:MouseEvent):void
@@ -63,7 +63,7 @@ public class DailyLoginPanelMediator extends Mediator
             if (((_arg_1.keyCode == Parameters.data_.interact) && (WebMain.STAGE.focus == null)))
             {
                 this.showCalendarModal(null);
-            };
+            }
         }
 
 

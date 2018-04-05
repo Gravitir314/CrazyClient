@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_playersEmbed_()
         {
             super();
-            return;
+
         }
     }
 }

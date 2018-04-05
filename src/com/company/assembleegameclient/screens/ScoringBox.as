@@ -50,7 +50,7 @@ public class ScoringBox extends Sprite
             if (int(_arg_2.Shots) != 0)
             {
                 this.addLine(TextKey.FAMEVIEW_ACCURACY, null, 0, ((100 * Number(_arg_2.ShotsThatDamage)) / Number(_arg_2.Shots)), true, 5746018, "", "%");
-            };
+            }
             this.addLine(TextKey.FAMEVIEW_TILES_SEEN, null, 0, _arg_2.TilesUncovered, false, 5746018);
             this.addLine(TextKey.FAMEVIEW_MONSTERKILLS, null, 0, _arg_2.MonsterKills, false, 5746018);
             this.addLine(TextKey.FAMEVIEW_GODKILLS, null, 0, _arg_2.GodKills, false, 5746018);
@@ -64,7 +64,7 @@ public class ScoringBox extends Sprite
             for each (_local_3 in _arg_2.Bonus)
             {
                 this.addLine(_local_3.@id, _local_3.@desc, _local_3.@level, int(_local_3), true, 0xFFC800, "+", "", new Bitmap(_local_4));
-            };
+            }
         }
 
         public function showScore():void
@@ -75,7 +75,7 @@ public class ScoringBox extends Sprite
             for each (_local_1 in this.scoreTextLines_)
             {
                 _local_1.skip();
-            };
+            }
         }
 
         public function animateScore():void
@@ -95,7 +95,7 @@ public class ScoringBox extends Sprite
             if (((_arg_4 == 0) && (!(_arg_5))))
             {
                 return;
-            };
+            }
             this.scoreTextLines_.push(new ScoreTextLine(20, 0xB3B3B3, _arg_6, _arg_1, _arg_2, _arg_3, _arg_4, _arg_7, _arg_8, _arg_9));
         }
 
@@ -113,14 +113,14 @@ public class ScoringBox extends Sprite
                 _local_3.y = (28 * _local_4);
                 this.linesSprite_.addChild(_local_3);
                 _local_4++;
-            };
+            }
             this.linesSprite_.y = ((this.rect_.height - this.linesSprite_.height) - 10);
             if (_local_2 > (_local_5 + 1000))
             {
                 this.addScrollbar();
                 dispatchEvent(new Event(Event.COMPLETE));
                 removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function addScrollbar():void

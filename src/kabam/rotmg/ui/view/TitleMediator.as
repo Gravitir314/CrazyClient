@@ -81,7 +81,7 @@ public class TitleMediator extends Mediator
             if (this.playerModel.isNewToEditing())
             {
                 this.view.putNoticeTagToOption(ButtonFactory.getEditorButton(), "new");
-            };
+            }
         }
 
         private function openSupportPage():void
@@ -106,8 +106,8 @@ public class TitleMediator extends Mediator
                 if (((_local_3.hasOwnProperty("mp")) && (_local_3.hasOwnProperty("sg"))))
                 {
                     this.toSupportPage(_local_3.mp, _local_3.sg);
-                };
-            };
+                }
+            }
         }
 
         private function toSupportPage(_arg_1:String, _arg_2:String):void
@@ -120,7 +120,7 @@ public class TitleMediator extends Mediator
             if (((DynamicSettings.settingExists("SalesforceMobile")) && (DynamicSettings.getSettingValue("SalesforceMobile") == 1)))
             {
                 _local_5 = true;
-            };
+            }
             var _local_6:String = this.playerModel.getSalesForceData();
             if (((_local_6 == "unavailable") || (!(_local_5))))
             {
@@ -141,7 +141,7 @@ public class TitleMediator extends Mediator
                     else
                     {
                         ExternalInterface.call("reopenSalesForce");
-                    };
+                    }
                 }
                 else
                 {
@@ -150,8 +150,8 @@ public class TitleMediator extends Mediator
                     _local_4.method = URLRequestMethod.GET;
                     _local_4.data = _local_3;
                     navigateToURL(_local_4, "_blank");
-                };
-            };
+                }
+            }
         }
 
         private function onOptionalButtonsAdded():void

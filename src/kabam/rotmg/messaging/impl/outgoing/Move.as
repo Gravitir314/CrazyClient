@@ -34,7 +34,7 @@ public class Move extends OutgoingMessage
             {
                 this.records_[_local_2].writeToOutput(_arg_1);
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

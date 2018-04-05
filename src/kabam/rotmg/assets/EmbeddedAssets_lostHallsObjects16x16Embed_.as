@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_lostHallsObjects16x16Embed_()
         {
             super();
-            return;
+
         }
     }
 }

@@ -200,7 +200,7 @@ public class PetsViewAssetFactory
             if (_local_3.hasOwnProperty("ScaleValue"))
             {
                 _local_4 = _local_3.ScaleValue;
-            };
+            }
             var _local_5:BitmapData = ObjectLibrary.getRedrawnTextureFromType(_arg_1, 80, true, true, _local_4);
             _local_5 = BitmapUtil.cropToBitmapData(_local_5, 4, 4, (_local_5.width - 8), (_local_5.height - 8));
             return (new Bitmap(_local_5));

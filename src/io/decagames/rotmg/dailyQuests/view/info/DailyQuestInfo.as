@@ -74,8 +74,8 @@ public class DailyQuestInfo extends Sprite
                 if (_local_4 >= 0)
                 {
                     _local_5.splice(_local_4, 1);
-                };
-            };
+                }
+            }
             return (_local_5.length == 0);
         }
 
@@ -86,7 +86,7 @@ public class DailyQuestInfo extends Sprite
             for each (_local_1 in this.slots)
             {
                 _local_1.parent.removeChild(_local_1);
-            };
+            }
             this.slots = new Vector.<DailyQuestItemSlot>();
         }
 

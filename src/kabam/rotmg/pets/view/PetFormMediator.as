@@ -59,7 +59,7 @@ public class PetFormMediator extends Mediator
             {
                 this.createPetSkinGroup(_local_1);
                 _local_1++;
-            };
+            }
         }
 
         private function createPetSkinGroup(_arg_1:uint):void

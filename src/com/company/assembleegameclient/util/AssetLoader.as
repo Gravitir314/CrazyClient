@@ -175,8 +175,8 @@ public class AssetLoader
                     case 17:
                         shattersMap = _local_4;
                         return;
-                };
-            };
+                }
+            }
         }
 
         private function addImages():void{
@@ -333,7 +333,7 @@ public class AssetLoader
                 _local_3 = _local_2.readUTFBytes(_local_2.length);
                 Model3D.parse3DOBJ(_local_1, _local_2);
                 Model3D.parseFromOBJ(_local_1, _local_3);
-            };
+            }
         }
 
         private function parseParticleEffects():void
@@ -348,7 +348,7 @@ public class AssetLoader
             for each (_local_1 in EmbeddedData.groundFiles)
             {
                 GroundLibrary.parseFromXML(XML(_local_1));
-            };
+            }
         }
 
         private function parseObjectFiles():void
@@ -359,12 +359,12 @@ public class AssetLoader
                 currentXmlIsTesting = this.checkIsTestingXML(EmbeddedData.objectFiles[_local_1]);
                 ObjectLibrary.parseFromXML(XML(EmbeddedData.objectFiles[_local_1]));
                 _local_1++;
-            };
+            }
             while (_local_1 < EmbeddedData.objectFiles.length)
             {
                 ObjectLibrary.parseDungeonXML(getQualifiedClassName(EmbeddedData.objectFiles[_local_1]), XML(EmbeddedData.objectFiles[_local_1]));
                 _local_1++;
-            };
+            }
             currentXmlIsTesting = false;
         }
 
@@ -374,7 +374,7 @@ public class AssetLoader
             for each (_local_1 in EmbeddedData.regionFiles)
             {
                 RegionLibrary.parseFromXML(XML(_local_1));
-            };
+            }
         }
 
         private function checkIsTestingXML(_arg_1:*):Boolean

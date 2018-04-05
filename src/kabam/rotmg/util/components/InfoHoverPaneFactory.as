@@ -20,7 +20,7 @@ public class InfoHoverPaneFactory extends Sprite
             if (_arg_1 == null)
             {
                 return (null);
-            };
+            }
             var _local_3:Sprite = new Sprite();
             var _local_4:int = 8;
             _arg_1.width = (291 - _local_4);

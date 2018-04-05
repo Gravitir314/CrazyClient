@@ -19,7 +19,7 @@ public class ArenaLeaderboardModel
             for each (_local_1 in FILTERS)
             {
                 _local_1.clearEntries();
-            };
+            }
         }
 
 

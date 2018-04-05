@@ -80,7 +80,7 @@ public class MiniMapImp extends MiniMap
             if (!objectTypeColorDict_.hasOwnProperty(_local_2))
             {
                 objectTypeColorDict_[_local_2] = _arg_1.getColor();
-            };
+            }
             return (objectTypeColorDict_[_local_2]);
         }
 
@@ -113,7 +113,7 @@ public class MiniMapImp extends MiniMap
                     _local_7 = this.maps[_local_4].getPixel32(_arg_1, _arg_2);
                     this.scores[_local_4] = (this.scores[_local_4] + ((this.abs((_local_8 - (_local_7 & 0xFF))) + this.abs((_local_9 - ((_local_7 >> 8) & 0xFF)))) + this.abs((_local_10 - ((_local_7 >> 8) & 0xFF)))));
                     _local_4++;
-                };
+                }
                 this.score++;
                 if (this.score >= 50)
                 {
@@ -124,14 +124,14 @@ public class MiniMapImp extends MiniMap
                         {
                             _local_6 = _local_4;
                             _local_5 = this.scores[_local_4];
-                        };
+                        }
                         _local_4++;
-                    };
+                    }
                     this.miniMapData_ = this.maps[_local_6];
                     map.gs_.gsc_.addTextLine2("*Help*", (((("World " + ++_local_6) + " (") + _local_5) + " uncertainty)"));
                     map.gs_.gsc_.needsMap = false;
-                };
-            };
+                }
+            }
         }
 
         override public function setMap(_arg_1:AbstractMap):void
@@ -156,14 +156,14 @@ public class MiniMapImp extends MiniMap
             else
             {
                 this.miniMapData_ = nextMap.clone();
-            };
+            }
             var _local_1:Number = Math.max((this._width / this.maxWH_.x), (this._height / this.maxWH_.y));
             var _local_2:Number = 4;
             while (_local_2 > _local_1)
             {
                 this.zoomLevels.push(_local_2);
                 _local_2 = (_local_2 / 2);
-            };
+            }
             this.zoomLevels.push(_local_1);
             ((this.zoomButtons) && (this.zoomButtons.setZoomLevels(this.zoomLevels.length)));
         }
@@ -244,8 +244,8 @@ public class MiniMapImp extends MiniMap
                 else
                 {
                     this.players_[0].map_.gs_.gsc_.teleportId(this.players_[0].objectId_);
-                };
-            };
+                }
+            }
         }
 
         private function onMapMidClick(_arg_1:MouseEvent):void
@@ -253,7 +253,7 @@ public class MiniMapImp extends MiniMap
             if (this.players_.length != 0)
             {
                 this.players_[0].map_.gs_.gsc_.teleportId(this.players_[0].objectId_);
-            };
+            }
         }
 
         private function onMapClick(_arg_1:MouseEvent):void
@@ -261,7 +261,7 @@ public class MiniMapImp extends MiniMap
             if (((((this.tooltip == null) || (this.tooltip.parent == null)) || (this.tooltip.players_ == null)) || (this.tooltip.players_.length == 0)))
             {
                 return;
-            };
+            }
             this.removeMenu();
             this.addMenu();
             this.removeTooltip();
@@ -294,9 +294,9 @@ public class MiniMapImp extends MiniMap
                 if (this.tooltip.parent != null)
                 {
                     this.tooltip.parent.removeChild(this.tooltip);
-                };
+                }
                 this.tooltip = null;
-            };
+            }
         }
 
         private function removeMenu():void
@@ -306,9 +306,9 @@ public class MiniMapImp extends MiniMap
                 if (this.menu.parent != null)
                 {
                     this.menu.parent.removeChild(this.menu);
-                };
+                }
                 this.menu = null;
-            };
+            }
         }
 
         override public function draw():void
@@ -533,15 +533,15 @@ public class MiniMapImp extends MiniMap
             if (_local_4 != _arg_2.length)
             {
                 return (false);
-            };
+            }
             while (_local_3 < _local_4)
             {
                 if (_arg_1[_local_3] != _arg_2[_local_3])
                 {
                     return (false);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (true);
         }
 

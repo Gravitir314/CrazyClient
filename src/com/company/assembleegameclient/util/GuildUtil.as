@@ -36,7 +36,7 @@ public class GuildUtil
                     return (wrapInBraces(TextKey.GUILD_RANK_LEADER));
                 case FOUNDER:
                     return (wrapInBraces(TextKey.GUILD_RANK_FOUNDER));
-            };
+            }
             return (wrapInBraces(TextKey.GUILD_RANK_UNKNOWN));
         }
 
@@ -65,7 +65,7 @@ public class GuildUtil
                 case FOUNDER:
                     _local_3 = AssetLibrary.getImageFromSet("lofiInterfaceBig", 16);
                     break;
-            };
+            }
             return (TextureRedrawer.redraw(_local_3, _arg_2, true, 0, true));
         }
 
@@ -80,19 +80,19 @@ public class GuildUtil
             if (_arg_2 == _arg_3)
             {
                 return (false);
-            };
+            }
             if ((((_arg_1 == FOUNDER) && (_arg_2 < FOUNDER)) && (_arg_3 < FOUNDER)))
             {
                 return (true);
-            };
+            }
             if ((((_arg_1 == LEADER) && (_arg_2 < LEADER)) && (_arg_3 <= LEADER)))
             {
                 return (true);
-            };
+            }
             if ((((_arg_1 == OFFICER) && (_arg_2 < OFFICER)) && (_arg_3 < OFFICER)))
             {
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -106,7 +106,7 @@ public class GuildUtil
                     return (OFFICER);
                 case OFFICER:
                     return (LEADER);
-            };
+            }
             return (FOUNDER);
         }
 
@@ -126,7 +126,7 @@ public class GuildUtil
                     return (OFFICER);
                 case FOUNDER:
                     return (LEADER);
-            };
+            }
             return (INITIATE);
         }
 

@@ -50,7 +50,7 @@ public class Music
             if (!Parameters.data_.playMusic)
             {
                 return;
-            };
+            }
             if (musicVolumeTransform != null)
             {
                 musicVolumeTransform.volume = _arg_1;
@@ -58,7 +58,7 @@ public class Music
             else
             {
                 musicVolumeTransform = new SoundTransform(_arg_1);
-            };
+            }
             musicChannel_.soundTransform = musicVolumeTransform;
         }
 

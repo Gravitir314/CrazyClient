@@ -8,7 +8,7 @@ import mx.core.*;
 		public function MysteryBoxInfo_chestImageEmbed()
 		{
 			super();
-			return;
+
 		}
 	}
 }

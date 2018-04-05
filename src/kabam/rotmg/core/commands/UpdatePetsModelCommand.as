@@ -27,11 +27,11 @@ public class UpdatePetsModelCommand extends Command
             if (this.data.Account.hasOwnProperty("PetYardType"))
             {
                 this.model.setPetYardType(this.parseYardFromXML());
-            };
+            }
             if (this.data.hasOwnProperty("Pet"))
             {
                 this.model.setActivePet(this.parsePetFromXML());
-            };
+            }
         }
 
         private function parseYardFromXML():int

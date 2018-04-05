@@ -43,7 +43,7 @@ public class UIItemContainerMediator extends Mediator
             {
                 this.tooltip.attachToTarget(this.view);
                 this.showTooltipSignal.dispatch(this.tooltip);
-            };
+            }
         }
 
         override public function destroy():void

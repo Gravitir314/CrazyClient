@@ -64,7 +64,7 @@ public class CalendarDayBox extends Sprite
                 else
                 {
                     this.boxCuts = [1, 0, 0, 0];
-                };
+                }
             }
             else
             {
@@ -77,7 +77,7 @@ public class CalendarDayBox extends Sprite
                     else
                     {
                         this.boxCuts = [0, 0, 1, 0];
-                    };
+                    }
                 }
                 else
                 {
@@ -94,10 +94,10 @@ public class CalendarDayBox extends Sprite
                         else
                         {
                             this.boxCuts = [0, 0, 0, 0];
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             this.drawBackground(this.boxCuts, _arg_3);
             if (((_arg_1.gold == 0) && (_arg_1.itemID > 0)))
             {
@@ -105,7 +105,7 @@ public class CalendarDayBox extends Sprite
                 addChild(_local_4);
                 _local_4.x = Math.round((CalendarSettings.BOX_WIDTH / 2));
                 _local_4.y = Math.round((CalendarSettings.BOX_HEIGHT / 2));
-            };
+            }
             if (_arg_1.gold > 0)
             {
                 _local_5 = new Bitmap();
@@ -113,7 +113,7 @@ public class CalendarDayBox extends Sprite
                 addChild(_local_5);
                 _local_5.x = Math.round(((CalendarSettings.BOX_WIDTH / 2) - (_local_5.width / 2)));
                 _local_5.y = Math.round(((CalendarSettings.BOX_HEIGHT / 2) - (_local_5.height / 2)));
-            };
+            }
             this.displayDayNumber(_arg_1.dayNumber);
             if (_arg_1.claimKey != "")
             {
@@ -124,7 +124,7 @@ public class CalendarDayBox extends Sprite
                 this.redDot.x = ((CalendarSettings.BOX_WIDTH - Math.round((this.redDot.width / 2))) - 10);
                 this.redDot.y = (-(Math.round((this.redDot.width / 2))) + 10);
                 addChild(this.redDot);
-            };
+            }
             if (((_arg_1.quantity > 1) || (_arg_1.gold > 0)))
             {
                 _local_7 = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF).setTextWidth(CalendarSettings.BOX_WIDTH).setAutoSize(TextFieldAutoSize.RIGHT);
@@ -132,11 +132,11 @@ public class CalendarDayBox extends Sprite
                 _local_7.y = (CalendarSettings.BOX_HEIGHT - 18);
                 _local_7.x = -2;
                 addChild(_local_7);
-            };
+            }
             if (_arg_1.isClaimed)
             {
                 this.markAsClaimed();
-            };
+            }
         }
 
         public static function drawRectangleWithCuts(_arg_1:Array, _arg_2:int, _arg_3:int, _arg_4:uint, _arg_5:Number, _arg_6:Vector.<IGraphicsData>, _arg_7:GraphicsPath):Sprite
@@ -172,7 +172,7 @@ public class CalendarDayBox extends Sprite
             if (((this.redDot) && (this.redDot.parent)))
             {
                 removeChild(this.redDot);
-            };
+            }
             var _local_2:BitmapData = AssetLibrary.getImageFromSet("lofiInterfaceBig", 11);
             _local_2 = TextureRedrawer.redraw(_local_2, 60, true, 2997032);
             _local_1 = new Bitmap(_local_2);

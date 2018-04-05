@@ -17,7 +17,7 @@ package com.company.assembleegameclient.objects.particles
             for each (_local_2 in _arg_1.Particle)
             {
                 propsLibrary_[_local_2.@id] = new ParticleProperties(_local_2);
-            };
+            }
         }
 
 

@@ -30,7 +30,7 @@ public class AOEEffect extends ParticleEffect
             if (this.color_ == -1)
             {
                 return (false);
-            };
+            }
             x_ = this.start_.x;
             y_ = this.start_.y;
             var _local_7:int = 40;
@@ -43,7 +43,7 @@ public class AOEEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_7, this.color_, _local_8, this.start_, _local_4);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -56,7 +56,7 @@ public class AOEEffect extends ParticleEffect
             if (this.color_ == -1)
             {
                 return (false);
-            };
+            }
             x_ = this.start_.x;
             y_ = this.start_.y;
             var _local_7:* = 200;
@@ -69,7 +69,7 @@ public class AOEEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_7, this.color_, _local_8, this.start_, _local_4);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 

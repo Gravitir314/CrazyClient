@@ -60,7 +60,7 @@ public class Spinner extends Sprite
             if (this.previousSeconds)
             {
                 this.secondsElapsed = (this.secondsElapsed + (_local_1 - this.previousSeconds));
-            };
+            }
             this.previousSeconds = _local_1;
         }
 

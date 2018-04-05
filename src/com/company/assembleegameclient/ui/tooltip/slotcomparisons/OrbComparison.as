@@ -33,7 +33,7 @@ public class OrbComparison extends SlotComparison
                 comparisonStringBuilder.pushParams(TextKey.STASIS_GROUP, {"stasis":new LineBuilder().setParams(TextKey.SEC_COUNT, {"duration":_local_5}).setPrefix(TooltipHelper.getOpenTag(_local_7)).setPostfix(TooltipHelper.getCloseTag())});
                 processedTags[_local_3.toXMLString()] = true;
                 this.handleExceptions(_arg_1);
-            };
+            }
         }
 
         private function getStasisBlastTag(orbXML:XML):XML
@@ -65,7 +65,7 @@ public class OrbComparison extends SlotComparison
                 }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                 processedTags[speedy.toXMLString()] = true;
                 processedTags[damaging.toXMLString()] = true;
-            };
+            }
         }
 
 

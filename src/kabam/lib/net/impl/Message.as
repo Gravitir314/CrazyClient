@@ -46,7 +46,7 @@ public class Message
             {
                 _local_4 = (_local_4 + ((((" " + _args[_local_3]) + '="') + this[_args[_local_3]]) + '"'));
                 _local_3++;
-            };
+            }
             return (_local_4 + "]");
         }
 

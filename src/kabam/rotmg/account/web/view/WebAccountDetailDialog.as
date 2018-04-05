@@ -51,7 +51,7 @@ public class WebAccountDetailDialog extends Frame
             if (!_arg_2)
             {
                 this.makeVerifyEmailText();
-            };
+            }
             this.makeChangeText();
             this.makeLogoutText();
         }
@@ -61,7 +61,7 @@ public class WebAccountDetailDialog extends Frame
             if (this.verifyEmail != null)
             {
                 removeChild(this.verifyEmail);
-            };
+            }
             this.verifyEmail = new DeprecatedClickableText(12, false, "WebAccountDetailDialog.verify");
             addNavigationText(this.verifyEmail);
             this.verifyEmail.addEventListener(MouseEvent.CLICK, this.onVerifyEmail);
@@ -72,7 +72,7 @@ public class WebAccountDetailDialog extends Frame
             if (this.changeText != null)
             {
                 removeChild(this.changeText);
-            };
+            }
             this.changeText = new DeprecatedClickableText(12, false, "WebAccountDetailDialog.changePassword");
             this.changeText.addEventListener(MouseEvent.CLICK, this.onChange);
             addNavigationText(this.changeText);
@@ -88,7 +88,7 @@ public class WebAccountDetailDialog extends Frame
             if (this.logoutText != null)
             {
                 removeChild(this.logoutText);
-            };
+            }
             this.logoutText = new DeprecatedClickableText(12, false, "WebAccountDetailDialog.logout");
             this.logoutText.addEventListener(MouseEvent.CLICK, this.onLogout);
             addNavigationText(this.logoutText);

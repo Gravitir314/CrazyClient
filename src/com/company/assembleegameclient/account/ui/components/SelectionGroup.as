@@ -25,8 +25,8 @@ public class SelectionGroup
                 {
                     this.replaceSelected(_local_2);
                     return;
-                };
-            };
+                }
+            }
         }
 
         public function getSelected():Selectable
@@ -39,7 +39,7 @@ public class SelectionGroup
             if (this.selected != null)
             {
                 this.selected.setSelected(false);
-            };
+            }
             this.selected = _arg_1;
             this.selected.setSelected(true);
         }

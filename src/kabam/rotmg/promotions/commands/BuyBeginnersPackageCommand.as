@@ -45,7 +45,7 @@ public class BuyBeginnersPackageCommand
             else
             {
                 this.promptUserToRegisterAndAbort();
-            };
+            }
         }
 
         private function openAccountSpecificPaymentScreen():void
@@ -57,7 +57,7 @@ public class BuyBeginnersPackageCommand
             else
             {
                 this.makePaymentImmediately();
-            };
+            }
         }
 
         private function makePaymentImmediately():void

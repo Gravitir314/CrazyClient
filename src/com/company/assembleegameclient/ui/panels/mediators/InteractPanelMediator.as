@@ -41,11 +41,11 @@ public class InteractPanelMediator extends Mediator
             if (!this.isMapNameYardName())
             {
                 return (this.mapModel.currentInteractiveTarget);
-            };
+            }
             if (this.doesNewPanelOverrideOld())
             {
                 this.currentInteractive = this.mapModel.currentInteractiveTarget;
-            };
+            }
             return (this.currentInteractive);
         }
 
@@ -59,11 +59,11 @@ public class InteractPanelMediator extends Mediator
             if (((!(this.currentInteractive)) && (this.isMapNameYardName())))
             {
                 return (true);
-            };
+            }
             if ((((this.currentInteractive is Pet) && (this.isMapNameYardName())) && (!(Pet(this.mapModel.currentInteractiveTarget).vo.getID() == Pet(this.currentInteractive).vo.getID()))))
             {
                 return (true);
-            };
+            }
             return (false);
         }
 

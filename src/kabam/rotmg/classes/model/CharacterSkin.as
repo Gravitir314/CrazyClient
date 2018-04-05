@@ -38,7 +38,7 @@ public class CharacterSkin
             {
                 this.isSelected = _arg_1;
                 this.changed.dispatch(this);
-            };
+            }
         }
 
         public function getState():CharacterSkinState
@@ -52,7 +52,7 @@ public class CharacterSkin
             {
                 this.state = _arg_1;
                 this.changed.dispatch(this);
-            };
+            }
         }
 
 

@@ -35,7 +35,7 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
             if (_local_6)
             {
                 this.starred = _local_6.starred_;
-            };
+            }
             this.hover = _arg_4;
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -47,7 +47,7 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
             {
                 addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
                 this.hoverTooltipDelegate.setDisplayObject(this);
-            };
+            }
             addEventListener(MouseEvent.RIGHT_CLICK, this.onRClick);
         }
 
@@ -56,7 +56,7 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
             if (this.hover)
             {
                 removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
-            };
+            }
             removeEventListener(MouseEvent.RIGHT_CLICK, this.onRClick);
             removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -71,7 +71,7 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
             else
             {
                 go.map_.gs_.gsc_.teleport(go.name_);
-            };
+            }
         }
 
         private function onMouseOver(_arg_1:MouseEvent):void
@@ -88,8 +88,8 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
                 if (!this.enabled)
                 {
                     this.hoverTooltipDelegate.getShowToolTip().dispatch(this.hoverTooltipDelegate.tooltip);
-                };
-            };
+                }
+            }
         }
 
         override public function draw(_arg_1:GameObject, _arg_2:ColorTransform=null):void
@@ -99,7 +99,7 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
             {
                 transform.colorTransform = ((_arg_2) || (MoreColorUtil.identity));
                 this.starred = _local_3.starred_;
-            };
+            }
             super.draw(_arg_1, _arg_2);
         }
 

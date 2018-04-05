@@ -33,17 +33,17 @@ public class CharactersMetricsTracker
             if (!this.charactersStats)
             {
                 this.charactersStats = new Dictionary();
-            };
+            }
             if (!this.charactersStats[_arg_1])
             {
                 this.charactersStats[_arg_1] = new CharacterMetricsData();
-            };
+            }
             while (_arg_2.bytesAvailable >= STATS_SIZE)
             {
                 _local_3 = _arg_2.readByte();
                 _local_4 = _arg_2.readInt();
                 this.charactersStats[_arg_1].setStat(_local_3, _local_4);
-            };
+            }
             this._lastUpdate = new Date();
         }
 
@@ -57,11 +57,11 @@ public class CharactersMetricsTracker
             if (!this.charactersStats)
             {
                 this.charactersStats = new Dictionary();
-            };
+            }
             if (!this.charactersStats[_arg_1])
             {
                 return (0);
-            };
+            }
             return (this.charactersStats[_arg_1].getStat(_arg_2));
         }
 
@@ -71,7 +71,7 @@ public class CharactersMetricsTracker
             for each (_local_2 in _arg_1.Char)
             {
                 this.setBinaryStringData(int(_local_2.@id), _local_2.PCStats);
-            };
+            }
         }
 
 

@@ -47,7 +47,7 @@ public class DailyQuestListElement extends Sprite
             if (((this.questNameTextfield) && (this.questNameTextfield.parent)))
             {
                 removeChild(this.questNameTextfield);
-            };
+            }
             this.questNameTextfield = new TextFieldDisplayConcrete().setSize(14).setColor((((this._completed) || (this._isSelected)) ? uint(0xFFFFFF) : uint(0xCFCFCF))).setBold(true);
             this.questNameTextfield.alpha = (((this._completed) || (this._isSelected)) ? Number(1) : Number(0.5));
             this.questNameTextfield.setStringBuilder(new StaticStringBuilder(this._questName));
@@ -68,7 +68,7 @@ public class DailyQuestListElement extends Sprite
             if (this.background.parent)
             {
                 removeChild(this.background);
-            };
+            }
             this.background = new Sprite();
             if (this._completed)
             {
@@ -83,8 +83,8 @@ public class DailyQuestListElement extends Sprite
                 else
                 {
                     _local_1 = new DailyQuestAssets.DailyQuestsListAvailableIcon();
-                };
-            };
+                }
+            }
             _local_1.x = 5;
             _local_1.y = 5;
             if (this._isSelected)
@@ -100,8 +100,8 @@ public class DailyQuestListElement extends Sprite
                 else
                 {
                     this.background.addChild(new DailyQuestAssets.DailyQuestsListElementGrey());
-                };
-            };
+                }
+            }
             addChild(this.background);
             addChild(_local_1);
         }

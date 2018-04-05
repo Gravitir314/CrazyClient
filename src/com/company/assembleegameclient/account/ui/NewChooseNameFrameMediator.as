@@ -58,7 +58,7 @@ public class NewChooseNameFrameMediator extends Mediator
             else
             {
                 this.sendNameToServer();
-            };
+            }
         }
 
         private function sendNameToServer():void
@@ -79,7 +79,7 @@ public class NewChooseNameFrameMediator extends Mediator
             else
             {
                 this.onNameChoseError(_arg_2);
-            };
+            }
         }
 
         private function onNameChoseDone():void
@@ -87,7 +87,7 @@ public class NewChooseNameFrameMediator extends Mediator
             if (this.playerModel != null)
             {
                 this.playerModel.setName(this.name);
-            };
+            }
             this.nameChanged.dispatch(this.name);
             this.closeDialogs.dispatch();
         }

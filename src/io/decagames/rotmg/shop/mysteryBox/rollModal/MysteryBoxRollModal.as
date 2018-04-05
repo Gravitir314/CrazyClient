@@ -97,11 +97,11 @@ public class MysteryBoxRollModal extends ModalPopup
             if ((_local_2 * _arg_1.x) > this.maxResultWidth)
             {
                 _local_2 = int(Math.floor((this.maxResultWidth / _arg_1.x)));
-            };
+            }
             if ((_local_2 * _arg_1.y) > this.maxResultHeight)
             {
                 return (-1);
-            };
+            }
             return (_local_2);
         }
 
@@ -114,7 +114,7 @@ public class MysteryBoxRollModal extends ModalPopup
             if (_arg_1 >= (_local_2.x * _local_2.y))
             {
                 return (_local_2);
-            };
+            }
             var _local_4:int = 11;
             while (_local_4 >= 1)
             {
@@ -139,15 +139,15 @@ public class MysteryBoxRollModal extends ModalPopup
                                     {
                                         _local_3 = _local_6;
                                         _local_2 = new Point(_local_4, _local_5);
-                                    };
-                                };
-                            };
-                        };
-                    };
+                                    }
+                                }
+                            }
+                        }
+                    }
                     _local_5--;
-                };
+                }
                 _local_4--;
-            };
+            }
             return (_local_2);
         }
 
@@ -193,7 +193,7 @@ public class MysteryBoxRollModal extends ModalPopup
             else
             {
                 this.buyButton = new ShopBuyButton(this.info.priceAmount, this.info.priceCurrency);
-            };
+            }
             this.buyButton.width = 95;
             this.buyButtonBackground = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", (this.buyButton.width + 60));
             this.buySectionContainer.addChild(this.buyButtonBackground);
@@ -218,7 +218,7 @@ public class MysteryBoxRollModal extends ModalPopup
             if (element.quantity > 1)
             {
                 resultGridElement.showQuantityLabel(element.quantity);
-            };
+            }
             resultGridElement.showTooltip = false;
             this.resultGrid.addGridElement(resultGridElement);
             var scale:Number = (this.resultElementWidth / this.iconSize);
@@ -240,7 +240,7 @@ public class MysteryBoxRollModal extends ModalPopup
                 if (triggerEventOnEnd)
                 {
                     finishedShowingResult.dispatch();
-                };
+                }
             };
             timeout = setTimeout(function ():*
             {
@@ -268,7 +268,7 @@ public class MysteryBoxRollModal extends ModalPopup
                 {
                     _local_2 = elements.indexOf(_local_1);
                     animateGridElement(_local_1, (_local_2 * movingDelay), (_local_2 == (elements.length - 1)));
-                };
+                }
             };
             var blinkTween:GTween = new GTween(this.rollGrid, this.exposeDuration, {
                 "x":(this.rollGrid.x - ((this.rollGrid.width * (this.exposeScale - 1)) / 2)),
@@ -295,17 +295,17 @@ public class MysteryBoxRollModal extends ModalPopup
                     if (_local_6 > 1)
                     {
                         _local_5.showQuantityLabel(_local_6);
-                    };
+                    }
                     _local_5.showTooltip = false;
                     _local_2.push(_local_5);
                     this.rollGrid.addGridElement(_local_5);
-                };
-            };
+                }
+            }
             this.rollGrid.render();
             if (!this.rollGrid.parent)
             {
                 addChild(this.rollGrid);
-            };
+            }
             this.rollGrid.x = (this.spinnersContainer.x - (this.rollGrid.width / 2));
             this.rollGrid.y = (this.spinnersContainer.y - (this.rollGrid.height / 2));
             return (_local_2);
@@ -333,7 +333,7 @@ public class MysteryBoxRollModal extends ModalPopup
             if (this.resultGrid)
             {
                 this.resultGrid.dispose();
-            };
+            }
             this.buyButtonBackground.dispose();
             this.buyButton.dispose();
             this.spinner.dispose();

@@ -70,7 +70,7 @@ public class Frame extends Sprite
                 this.leftButton_.buttonMode = true;
                 this.leftButton_.x = 109;
                 addChild(this.leftButton_);
-            };
+            }
         }
 
         private function makeAndAddRightButton(_arg_1:String):void
@@ -82,7 +82,7 @@ public class Frame extends Sprite
                 this.rightButton_.x = ((this.w_ - this.rightButton_.width) - 26);
                 this.rightButton_.setAutoSize(TextFieldAutoSize.RIGHT);
                 addChild(this.rightButton_);
-            };
+            }
         }
 
         public function addLabeledField(_arg_1:LabeledField):void
@@ -181,7 +181,7 @@ public class Frame extends Sprite
             for each (_local_1 in this.navigationLinks_)
             {
                 _local_1.setDefaultColor(0xB3B3B3);
-            };
+            }
             this.leftButton_.setDefaultColor(0xB3B3B3);
             this.rightButton_.setDefaultColor(0xB3B3B3);
         }
@@ -194,7 +194,7 @@ public class Frame extends Sprite
             for each (_local_1 in this.navigationLinks_)
             {
                 _local_1.setDefaultColor(0xFFFFFF);
-            };
+            }
             this.leftButton_.setDefaultColor(0xFFFFFF);
             this.rightButton_.setDefaultColor(0xFFFFFF);
         }
@@ -207,7 +207,7 @@ public class Frame extends Sprite
             if (this.textInputFields_.length > 0)
             {
                 stage.focus = this.textInputFields_[0].inputText_;
-            };
+            }
         }
 
         protected function draw():void

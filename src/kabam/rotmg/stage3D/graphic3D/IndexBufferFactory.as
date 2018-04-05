@@ -27,7 +27,7 @@ public class IndexBufferFactory implements DependencyProvider
             {
                 this.indexBuffer = _arg_1.createIndexBuffer(numVertices);
                 this.indexBuffer.uploadFromVector(_local_2, 0, numVertices);
-            };
+            }
         }
 
         public function apply(_arg_1:Class, _arg_2:Injector, _arg_3:Dictionary):Object

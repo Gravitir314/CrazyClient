@@ -36,7 +36,7 @@ public class OpenPackageCommand extends Command
             else
             {
                 this.alreadyBoughtPackage.dispatch();
-            };
+            }
         }
 
 

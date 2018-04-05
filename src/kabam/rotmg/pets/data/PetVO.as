@@ -62,7 +62,7 @@ public class PetVO
             for each (_local_1 in this.abilityList)
             {
                 _local_1.updated.add(this.onAbilityUpdate);
-            };
+            }
         }
 
         public function maxedAllAbilities():Boolean
@@ -74,8 +74,8 @@ public class PetVO
                 if (_local_1.level == 100)
                 {
                     _local_2++;
-                };
-            };
+                }
+            }
             return (_local_2 == this.abilityList.length);
         }
 
@@ -115,7 +115,7 @@ public class PetVO
                 _local_3.level = _arg_1.Abilities.Ability[_local_2].@power;
                 _local_3.points = _arg_1.Abilities.Ability[_local_2].@points;
                 _local_2++;
-            };
+            }
         }
 
         public function getFamily():String
@@ -169,7 +169,7 @@ public class PetVO
             if (((this.name == null) || (this.name == "")))
             {
                 this.name = ObjectLibrary.typeToDisplayId_[this.getType()];
-            };
+            }
             this.updated.dispatch();
         }
 

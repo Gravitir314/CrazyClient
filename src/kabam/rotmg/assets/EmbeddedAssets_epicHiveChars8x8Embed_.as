@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_epicHiveChars8x8Embed_()
         {
             super();
-            return;
+
         }
     }
 }

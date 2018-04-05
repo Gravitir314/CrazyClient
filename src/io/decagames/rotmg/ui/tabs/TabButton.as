@@ -45,7 +45,7 @@ public class TabButton extends SliceScalingButton {
             case BORDERLESS:
                 this.defaultBitmap = "tab_button_borderless_idle";
                 this.selectedBitmap = "tab_button_borderless";
-        };
+        }
         this.defaultBitmap = this.defaultBitmap;
         this.selectedBitmap = this.selectedBitmap;
         var _local_2:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", this.defaultBitmap);
@@ -63,7 +63,7 @@ public class TabButton extends SliceScalingButton {
         if (_arg_1){
             if (!this.indicator){
                 this.indicator = new Sprite();
-            };
+            }
             this.indicator.graphics.clear();
             this.indicator.graphics.beginFill(823807);
             this.indicator.graphics.drawCircle(0, 0, 4);
@@ -73,15 +73,15 @@ public class TabButton extends SliceScalingButton {
         } else {
             if (((this.indicator) && (this.indicator.parent))){
                 removeChild(this.indicator);
-            };
-        };
+            }
+        }
     }
 
     private function updateIndicatorPosition():void{
         if (this.indicator){
             this.indicator.x = ((this.label.x + this.label.width) + 7);
             this.indicator.y = (this.label.y + 8);
-        };
+        }
     }
 
     public function set selected(_arg_1:Boolean):void{
@@ -96,7 +96,7 @@ public class TabButton extends SliceScalingButton {
             DefaultLabelFormat.defaultActiveTab(this.label);
             changeBitmap(this.selectedBitmap, new Point(0, ((this.buttonType == BORDERLESS) ? 0 : SELECTED_MARGIN)));
             bitmap.alpha = 1;
-        };
+        }
         this.updateIndicatorPosition();
     }
 
@@ -104,7 +104,7 @@ public class TabButton extends SliceScalingButton {
         super.onClickHandler(_arg_1);
         if (!this._selected){
             this.selected = (!(this._selected));
-        };
+        }
     }
 
     public function get selected():Boolean{

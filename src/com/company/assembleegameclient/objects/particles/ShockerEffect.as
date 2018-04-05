@@ -45,7 +45,7 @@ public class ShockerEffect extends ParticleEffect
                 this.innerRadius = 0.7;
                 this.outerRadius = 2;
                 this.particleScale = 40;
-            };
+            }
         }
 
         private function parseBitmapDataFromImageSet():void
@@ -59,7 +59,7 @@ public class ShockerEffect extends ParticleEffect
             {
                 images.push(TextureRedrawer.redraw(_local_2.images_[_local_1], this.particleScale, true, 0, true));
                 _local_1++;
-            };
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -67,11 +67,11 @@ public class ShockerEffect extends ParticleEffect
             if (this.isDestroyed)
             {
                 return (false);
-            };
+            }
             if (!this.timer)
             {
                 this.initialize();
-            };
+            }
             x_ = this.go.x_;
             y_ = this.go.y_;
             return (true);
@@ -94,7 +94,7 @@ public class ShockerEffect extends ParticleEffect
                 this.start_ = new Point((this.go.x_ + (Math.sin(this.radians) * this.innerRadius)), (this.go.y_ + (Math.cos(this.radians) * this.innerRadius)));
                 this.end_ = new Point((this.go.x_ + (Math.sin(this.radians) * this.outerRadius)), (this.go.y_ + (Math.cos(this.radians) * this.outerRadius)));
                 map_.addObj(new ShockParticle(this.objectId, 25, this.particleScale, this.start_, this.end_, this.radians, this.go, images), this.start_.x, this.start_.y);
-            };
+            }
         }
 
         private function onTimerComplete(_arg_1:TimerEvent):void
@@ -110,7 +110,7 @@ public class ShockerEffect extends ParticleEffect
                 this.timer.removeEventListener(TimerEvent.TIMER, this.onTimerComplete);
                 this.timer.stop();
                 this.timer = null;
-            };
+            }
             this.go = null;
             this.isDestroyed = true;
         }

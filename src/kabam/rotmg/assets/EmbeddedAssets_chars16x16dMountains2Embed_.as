@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_chars16x16dMountains2Embed_()
         {
             super();
-            return;
+
         }
     }
 }

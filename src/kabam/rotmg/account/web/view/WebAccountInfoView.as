@@ -136,7 +136,7 @@ public class WebAccountInfoView extends Sprite implements AccountInfoView
             else
             {
                 this.showUIForGuestAccount();
-            };
+            }
         }
 
         private function removeUIElements():void
@@ -144,7 +144,7 @@ public class WebAccountInfoView extends Sprite implements AccountInfoView
             while (numChildren)
             {
                 removeChildAt(0);
-            };
+            }
         }
 
         private function showUIForRegisteredAccount():void
@@ -159,7 +159,7 @@ public class WebAccountInfoView extends Sprite implements AccountInfoView
             else
             {
                 this.addAndAlignHorizontally(this.accountText, this.loginButton);
-            };
+            }
         }
 
         private function showUIForGuestAccount():void
@@ -179,7 +179,7 @@ public class WebAccountInfoView extends Sprite implements AccountInfoView
             for each (_local_2 in _args)
             {
                 addChild(_local_2);
-            };
+            }
             _local_3 = 0;
             _local_4 = _args.length;
             while (_local_4--)
@@ -187,7 +187,7 @@ public class WebAccountInfoView extends Sprite implements AccountInfoView
                 _local_5 = _args[_local_4];
                 _local_5.x = _local_3;
                 _local_3 = (_local_3 - _local_5.width);
-            };
+            }
         }
 
 

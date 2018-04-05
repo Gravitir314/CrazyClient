@@ -46,7 +46,7 @@ public class UIUtils
             if (WebMain.STAGE != null)
             {
                 WebMain.STAGE.quality = ((_arg_1) ? StageQuality.HIGH : StageQuality.LOW);
-            };
+            }
         }
 
 

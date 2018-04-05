@@ -74,7 +74,7 @@ public class MapDecoder
                         {
                             _local_9 = GroundLibrary.idToType_[_local_7["ground"]];
                             _arg_2.setGroundTile(_local_6, _local_5, _local_9);
-                        };
+                        }
                         _local_8 = _local_7["objs"];
                         if (_local_8 != null)
                         {
@@ -83,13 +83,13 @@ public class MapDecoder
                                 _local_11 = getGameObject(_local_10);
                                 _local_11.objectId_ = BasicObject.getNextFakeObjectId();
                                 _arg_2.addObj(_local_11, (_local_6 + 0.5), (_local_5 + 0.5));
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     _local_6++;
-                };
+                }
                 _local_5++;
-            };
+            }
         }
 
         public static function getGameObject(_arg_1:Object):GameObject

@@ -36,7 +36,7 @@ public class ErrorMediator extends Mediator
             if (this.canCatchGlobalErrors())
             {
                 this.addGlobalErrorListener();
-            };
+            }
         }
 
         override public function destroy():void
@@ -44,7 +44,7 @@ public class ErrorMediator extends Mediator
             if (this.canCatchGlobalErrors())
             {
                 this.removeGlobalErrorListener();
-            };
+            }
         }
 
         private function canCatchGlobalErrors():Boolean

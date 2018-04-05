@@ -50,7 +50,7 @@ public class MoneyChangerPanel extends ButtonPanel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.triggered.dispatch();
-            };
+            }
         }
 
 

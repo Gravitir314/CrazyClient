@@ -44,7 +44,7 @@ public class CollapseEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_8, this.color_, _local_9, _local_4, this.center_);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -67,7 +67,7 @@ public class CollapseEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_8, this.color_, _local_9, _local_4, this.center_);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 

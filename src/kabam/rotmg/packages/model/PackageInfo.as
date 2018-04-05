@@ -39,9 +39,9 @@ public class PackageInfo extends GenericBoxInfo {
         if (contents != ""){
             if (((this._charSlot > 0) || (this._vaultSlot > 0))){
                 return (PURCHASE_TYPE_MIXED);
-            };
+            }
             return (PURCHASE_TYPE_CONTENTS_ONLY);
-        };
+        }
         return (PURCHASE_TYPE_SLOTS_ONLY);
     }
 
@@ -58,7 +58,7 @@ public class PackageInfo extends GenericBoxInfo {
         try {
             _arg_2.load(new URLRequest(_arg_1));
         } catch(error:SecurityError) {
-        };
+        }
     }
 
     private function unbindLoaderEvents(_arg_1:Loader, _arg_2:Function):void{
@@ -66,7 +66,7 @@ public class PackageInfo extends GenericBoxInfo {
             _arg_1.contentLoaderInfo.removeEventListener(Event.COMPLETE, _arg_2);
             _arg_1.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
             _arg_1.contentLoaderInfo.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onSecurityEventError);
-        };
+        }
     }
 
     private function onIOError(_arg_1:IOErrorEvent):void{

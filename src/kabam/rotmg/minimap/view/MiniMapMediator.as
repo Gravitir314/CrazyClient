@@ -85,15 +85,15 @@ public class MiniMapMediator implements IMediator
             if (_arg_1 == "")
             {
                 return (this.view.map.player_);
-            };
+            }
             var _local_3:Dictionary = this.view.map.goDict_;
             for each (_local_2 in _local_3)
             {
                 if (_local_2.name_ == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (this.view.map.player_);
         }
 
@@ -118,8 +118,8 @@ public class MiniMapMediator implements IMediator
                 if (_arg_1 == MiniMapZoomSignal.OUT)
                 {
                     this.view.zoomOut();
-                };
-            };
+                }
+            }
         }
 
         private function onUpdateHUD(_arg_1:Player):void

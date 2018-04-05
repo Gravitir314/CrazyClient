@@ -33,7 +33,7 @@ public class LegacyCharacterModel implements CharacterModel
             if (this.selected.charId() == _arg_1)
             {
                 this.selected = null;
-            };
+            }
         }
 
         public function select(_arg_1:SavedCharacter):void

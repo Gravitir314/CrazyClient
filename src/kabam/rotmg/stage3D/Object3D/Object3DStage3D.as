@@ -54,7 +54,7 @@ public class Object3DStage3D
             {
                 this.texture_.dispose();
                 this.texture_ = null;
-            };
+            }
             this.bitmapData = null;
             this.modelMatrix_ = null;
             this.modelView_ = null;
@@ -94,16 +94,16 @@ public class Object3DStage3D
                     this.bitmapData = missingTextureBitmap;
                     this.texture_ = _arg_1.createTexture(this.bitmapData.width, this.bitmapData.height, Context3DTextureFormat.BGRA, false);
                     this.texture_.uploadFromBitmapData(this.bitmapData);
-                };
-            };
+                }
+            }
             _arg_1.setTextureAt(0, this.texture_);
             for each (_local_2 in this.model_.groups)
             {
                 if (_local_2.indexBuffer != null)
                 {
                     _arg_1.drawTriangles(_local_2.indexBuffer);
-                };
-            };
+                }
+            }
         }
 
 

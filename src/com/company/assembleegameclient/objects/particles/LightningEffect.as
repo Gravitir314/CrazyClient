@@ -47,7 +47,7 @@ public class LightningEffect extends ParticleEffect
                 _local_5 = Math.min(_local_6, (_local_8 - _local_6));
                 map_.addObj(_local_4, (_local_3.x + RandomUtil.plusMinus(((_local_7 / 200) * _local_5))), (_local_3.y + RandomUtil.plusMinus(((_local_7 / 200) * _local_5))));
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -69,7 +69,7 @@ public class LightningEffect extends ParticleEffect
                 _local_5 = Math.min(_local_6, (_local_8 - _local_6));
                 map_.addObj(_local_4, (_local_3.x + RandomUtil.plusMinus(((_local_7 / 200) * _local_5))), (_local_3.y + RandomUtil.plusMinus(((_local_7 / 200) * _local_5))));
                 _local_6++;
-            };
+            }
             return (false);
         }
 

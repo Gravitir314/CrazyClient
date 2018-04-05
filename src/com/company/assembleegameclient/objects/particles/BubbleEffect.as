@@ -42,12 +42,12 @@ public class BubbleEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (!this.lastUpdate_)
             {
                 this.lastUpdate_ = _arg_1;
                 return (true);
-            };
+            }
             _local_3 = int(int((this.lastUpdate_ / this.rate_)));
             var _local_11:int = int(int((_arg_1 / this.rate_)));
             var _local_12:Number = this.go_.x_;
@@ -55,7 +55,7 @@ public class BubbleEffect extends ParticleEffect
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - PERIOD_MAX));
-            };
+            }
             x_ = _local_12;
             y_ = _local_4;
             var _local_13:int = _local_3;
@@ -70,7 +70,7 @@ public class BubbleEffect extends ParticleEffect
                 _local_10 = (_local_4 + (_local_7 * Math.sin(_local_6)));
                 map_.addObj(_local_8, _local_9, _local_10);
                 _local_13++;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }

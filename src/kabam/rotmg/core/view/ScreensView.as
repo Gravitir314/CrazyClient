@@ -19,7 +19,7 @@ public class ScreensView extends Sprite
             if (this.current == _arg_1)
             {
                 return;
-            };
+            }
             this.removePrevious();
             this.current = _arg_1;
             addChild(_arg_1);
@@ -31,7 +31,7 @@ public class ScreensView extends Sprite
             {
                 this.previous = this.current;
                 removeChild(this.current);
-            };
+            }
         }
 
         public function getPrevious():Sprite

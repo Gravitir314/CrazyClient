@@ -62,7 +62,7 @@ public class ItemTileSprite extends Sprite
                 if (((_local_4 >= 0x9000) && (_local_4 < 0xF000)))
                 {
                     _local_4 = 36863;
-                };
+                }
                 _local_1 = ObjectLibrary.getRedrawnTextureFromType(_local_4, 80, true);
                 _local_2 = ObjectLibrary.xmlLibrary_[_local_4];
                 if ((((_local_2) && (_local_2.hasOwnProperty("Doses"))) && (this.bitmapFactory)))
@@ -70,13 +70,13 @@ public class ItemTileSprite extends Sprite
                     _local_1 = _local_1.clone();
                     _local_3 = this.bitmapFactory.make(new StaticStringBuilder(String(_local_2.Doses)), 12, 0xFFFFFF, false, IDENTITY_MATRIX, false);
                     _local_1.draw(_local_3, DOSE_MATRIX);
-                };
+                }
                 if ((((_local_2) && (_local_2.hasOwnProperty("Quantity"))) && (this.bitmapFactory)))
                 {
                     _local_1 = _local_1.clone();
                     _local_3 = this.bitmapFactory.make(new StaticStringBuilder(String(_local_2.Quantity)), 12, 0xFFFFFF, false, IDENTITY_MATRIX, false);
                     _local_1.draw(_local_3, DOSE_MATRIX);
-                };
+                }
                 this.itemBitmap.bitmapData = _local_1;
                 this.itemBitmap.x = (-(_local_1.width) / 2);
                 this.itemBitmap.y = (-(_local_1.height) / 2);
@@ -85,7 +85,7 @@ public class ItemTileSprite extends Sprite
             else
             {
                 visible = false;
-            };
+            }
         }
 
         public function setBitmapFactory(_arg_1:BitmapTextFactory):void

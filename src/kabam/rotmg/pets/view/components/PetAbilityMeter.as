@@ -73,7 +73,7 @@ public class PetAbilityMeter extends Sprite implements TooltipAble
                 _local_3 = PetsAbilityLevelHelper.getAbilityPointsforLevel(_arg_1.level);
                 _local_2 = ((_arg_1.level >= this.max) ? _local_3 : _local_2);
                 this.setAbilityBar(_local_2, _local_3);
-            };
+            }
             _arg_1.updated.add(this.updateData);
         }
 
@@ -96,8 +96,8 @@ public class PetAbilityMeter extends Sprite implements TooltipAble
                 else
                 {
                     this.setAbilityBar(this.pointsLeftToAdd, _local_2);
-                };
-            };
+                }
+            }
         }
 
         private function onChainedFill():void
@@ -124,8 +124,8 @@ public class PetAbilityMeter extends Sprite implements TooltipAble
                 {
                     this.abilityBar.reset();
                     this.setAbilityBar(this.pointsLeftToAdd, _local_1);
-                };
-            };
+                }
+            }
         }
 
         public function setAbilityLabel(_arg_1:String):void
@@ -159,7 +159,7 @@ public class PetAbilityMeter extends Sprite implements TooltipAble
                 this.levelTextfield.setColor(_local_2);
                 this.levelTextfield.filters = _local_3;
                 this.labelTextfield.visible = _arg_1;
-            };
+            }
         }
 
         private function addChildren():void
@@ -196,7 +196,7 @@ public class PetAbilityMeter extends Sprite implements TooltipAble
             if (((!(_arg_1)) && (this.levelShown >= 100)))
             {
                 this.abilityBar.setBarColor(PetsConstants.COLOR_GREEN_TEXT_HIGHLIGHT);
-            };
+            }
             this.animating.dispatch(this, _arg_1);
         }
 

@@ -32,14 +32,14 @@ public class QuestData
             {
                 this.requirements.push(_arg_1.readInt());
                 _local_3++;
-            };
+            }
             _local_2 = _arg_1.readShort();
             _local_3 = 0;
             while (_local_3 < _local_2)
             {
                 this.rewards.push(_arg_1.readInt());
                 _local_3++;
-            };
+            }
             this.completed = _arg_1.readBoolean();
             this.itemOfChoice = _arg_1.readBoolean();
         }

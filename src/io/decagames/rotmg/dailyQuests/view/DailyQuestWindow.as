@@ -89,7 +89,7 @@ public class DailyQuestWindow extends Sprite
             {
                 this.completedCounter.setColor(3971635);
                 this.completedTxt.setColor(3971635);
-            };
+            }
             this.completedCounter.setStringBuilder(new StaticStringBuilder(((_arg_1 + "/") + _arg_2)));
         }
 
@@ -103,7 +103,7 @@ public class DailyQuestWindow extends Sprite
             if (((this.questInfo) && (this.questInfo.parent)))
             {
                 removeChild(this.questInfo);
-            };
+            }
             this.questInfo = new DailyQuestInfo();
             this.questInfo.x = 0x0100;
             this.questInfo.y = 121;
@@ -115,7 +115,7 @@ public class DailyQuestWindow extends Sprite
             if (((this.questList) && (this.questList.parent)))
             {
                 removeChild(this.questList);
-            };
+            }
             this.questList = new DailyQuestsList();
             this.questList.x = 18;
             this.questList.y = 134;
@@ -133,7 +133,7 @@ public class DailyQuestWindow extends Sprite
             {
                 this.particleLayer = new ParticleModalMap(1);
                 addChild(this.particleLayer);
-            };
+            }
         }
 
         public function hideFade():void
@@ -141,11 +141,11 @@ public class DailyQuestWindow extends Sprite
             if (((this.fade) && (this.fade.parent)))
             {
                 removeChild(this.fade);
-            };
+            }
             if (((this.particleLayer) && (this.particleLayer.parent)))
             {
                 removeChild(this.particleLayer);
-            };
+            }
         }
 
         public function hideRewardsPopup():void
@@ -153,7 +153,7 @@ public class DailyQuestWindow extends Sprite
             if (((this.rewardPopup) && (this.rewardPopup.parent)))
             {
                 removeChild(this.rewardPopup);
-            };
+            }
         }
 
         public function showRewardsPopup(_arg_1:DailyQuest):DailyQuestRedeemPopup

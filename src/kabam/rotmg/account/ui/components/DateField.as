@@ -136,7 +136,7 @@ public class DateField extends Sprite
             if (((!(_local_2 == "0")) && (!(this.validator.isValidMonth(_local_3)))))
             {
                 _arg_1.preventDefault();
-            };
+            }
         }
 
         private function onMonthFocusOut(_arg_1:FocusEvent):void
@@ -145,7 +145,7 @@ public class DateField extends Sprite
             if (((_local_2 < 10) && (!(this.days.text == ""))))
             {
                 this.months.text = ("0" + _local_2.toString());
-            };
+            }
         }
 
         private function onEditMonth(_arg_1:Event):void
@@ -160,7 +160,7 @@ public class DateField extends Sprite
             if (((!(_local_2 == "0")) && (!(this.validator.isValidDay(_local_3)))))
             {
                 _arg_1.preventDefault();
-            };
+            }
         }
 
         private function onDayFocusOut(_arg_1:FocusEvent):void
@@ -169,7 +169,7 @@ public class DateField extends Sprite
             if (((_local_2 < 10) && (!(this.days.text == ""))))
             {
                 this.days.text = ("0" + _local_2.toString());
-            };
+            }
         }
 
         private function onEditDay(_arg_1:Event):void
@@ -184,7 +184,7 @@ public class DateField extends Sprite
             if (_local_3 > this.thisYear)
             {
                 _arg_1.preventDefault();
-            };
+            }
         }
 
         private function getEarliestYear(_arg_1:String):int
@@ -192,7 +192,7 @@ public class DateField extends Sprite
             while (_arg_1.length < 4)
             {
                 _arg_1 = (_arg_1 + "0");
-            };
+            }
             return (int(_arg_1));
         }
 
@@ -222,7 +222,7 @@ public class DateField extends Sprite
             while (_arg_1.length < _arg_2)
             {
                 _arg_1 = ("0" + _arg_1);
-            };
+            }
             return (_arg_1);
         }
 

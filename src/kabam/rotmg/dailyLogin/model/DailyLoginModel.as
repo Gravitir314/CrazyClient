@@ -25,11 +25,11 @@ public class DailyLoginModel
             if (_arg_1.dayNumber < _arg_2.dayNumber)
             {
                 return (-1);
-            };
+            }
             if (_arg_1.dayNumber > _arg_2.dayNumber)
             {
                 return (1);
-            };
+            }
             return (0);
         };
 
@@ -108,10 +108,10 @@ public class DailyLoginModel
                 if (_local_6 == this.userDayConfig[_arg_1])
                 {
                     _local_2.isCurrent = true;
-                };
+                }
                 _local_5.push(_local_2);
                 _local_6++;
-            };
+            }
             this.daysConfig[_arg_1] = _local_5;
         }
 
@@ -123,8 +123,8 @@ public class DailyLoginModel
                 if (_local_3.dayNumber == _arg_2)
                 {
                     return (_local_3);
-                };
-            };
+                }
+            }
             return (new CalendarDayModel(_arg_2, -1, 0, 0, false, _arg_1));
         }
 
@@ -147,8 +147,8 @@ public class DailyLoginModel
                 if (_local_1 > _local_2)
                 {
                     _local_2 = _local_1;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 

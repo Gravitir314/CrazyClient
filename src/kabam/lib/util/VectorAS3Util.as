@@ -16,7 +16,7 @@ package kabam.lib.util
             for each (_local_2 in _arg_1)
             {
                 _local_3.push(_local_2);
-            };
+            }
             return (_local_3);
         }
 

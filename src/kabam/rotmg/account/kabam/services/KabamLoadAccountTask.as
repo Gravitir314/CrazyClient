@@ -41,7 +41,7 @@ public class KabamLoadAccountTask extends BaseTask implements LoadAccountTask
             else
             {
                 this.sendRequest();
-            };
+            }
         }
 
         private function sendRequest():void

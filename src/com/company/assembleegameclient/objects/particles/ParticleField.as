@@ -67,7 +67,7 @@ public class ParticleField extends BitmapParticle
             if (this.doDestroy)
             {
                 return (false);
-            };
+            }
             var _local_4:uint = this.squares.length;
             _local_3 = 0;
             while (_local_3 < _local_4)
@@ -75,9 +75,9 @@ public class ParticleField extends BitmapParticle
                 if (this.squares[_local_3])
                 {
                     this.squares[_local_3].move();
-                };
+                }
                 _local_3++;
-            };
+            }
             _bitmapData = new BitmapData(this.width, this.height, true, 0);
             _bitmapData.draw(this.spriteSource);
             return (true);
@@ -129,7 +129,7 @@ public class ParticleField extends BitmapParticle
                 this.timer.removeEventListener(TimerEvent.TIMER, this.onTimer);
                 this.timer.stop();
                 this.timer = null;
-            };
+            }
             this.spriteSource = null;
             this.squares = [];
             this.doDestroy = true;
@@ -181,7 +181,7 @@ class Square extends Shape
         if (!this.lifespan)
         {
             this.complete.dispatch(this);
-        };
+        }
     }
 
 

@@ -88,12 +88,12 @@ public class FeedPetView extends PetInteractionView
                 {
                     this.buttonBar.clearFameAndGold();
                     this.buttonBar.setPrefix(TextKey.PET_FULLY_MAXED);
-                };
+                }
             }
             else
             {
                 this.buttonBar.setPrefix(TextKey.PET_SELECT_PET);
-            };
+            }
         }
 
         private function onClosed():void
@@ -112,7 +112,7 @@ public class FeedPetView extends PetInteractionView
             for each (_local_1 in this.abilityMeters)
             {
                 _local_1.animating.remove(this.onAnimating);
-            };
+            }
             this.buttonBar.positioned.remove(this.positionButtonBar);
         }
 
@@ -127,8 +127,8 @@ public class FeedPetView extends PetInteractionView
                 for each (_local_4 in this.abilityMeters)
                 {
                     _local_4.visible = false;
-                };
-            };
+                }
+            }
             for each (_local_3 in _arg_1)
             {
                 if (_local_6 < this.abilityMeters.length)
@@ -140,8 +140,8 @@ public class FeedPetView extends PetInteractionView
                     _local_5.initializeData(_local_3);
                     _local_5.animating.add(this.onAnimating);
                     _local_6++;
-                };
-            };
+                }
+            }
         }
 
         private function onAnimating(_arg_1:PetAbilityMeter, _arg_2:Boolean):void
@@ -163,8 +163,8 @@ public class FeedPetView extends PetInteractionView
                 {
                     _local_2 = true;
                     break;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -181,7 +181,7 @@ public class FeedPetView extends PetInteractionView
             {
                 _local_1.visible = false;
                 addChild(_local_1);
-            };
+            }
         }
 
         private function positionAssets():void
@@ -204,7 +204,7 @@ public class FeedPetView extends PetInteractionView
             for each (_local_1 in this.abilityMeters)
             {
                 _local_2.push(_local_1.positioned);
-            };
+            }
             _local_2.complete.addOnce(this.positionMeters);
             this.buttonBar.positioned.add(this.positionButtonBar);
         }
@@ -225,7 +225,7 @@ public class FeedPetView extends PetInteractionView
                 _local_1.x = ((PetsConstants.WINDOW_BACKGROUND_WIDTH - 227) * 0.5);
                 _local_1.y = _local_2;
                 _local_2 = (_local_2 + (_local_1.height + 10));
-            };
+            }
         }
 
         private function positionLinebreak():void

@@ -38,7 +38,7 @@ public class PetIconFactory
                 _local_3 = ((_arg_2 - TextureRedrawer.minSize) / _local_5.width);
                 _local_4 = TextureRedrawer.resize(_local_5, _arg_1.getSkinMaskedImage().mask_, 100, true, 0, 0, _local_3);
                 return (GlowRedrawer.outlineGlow(_local_4, 0, this.outlineSize));
-            };
+            }
             return (new BitmapDataSpy(_arg_2, _arg_2));
         }
 

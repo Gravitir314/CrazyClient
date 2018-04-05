@@ -30,7 +30,7 @@ public class ChatModel
             if (this.chatMessages.length > this.storedItemCount)
             {
                 this.chatMessages.shift();
-            };
+            }
         }
 
 

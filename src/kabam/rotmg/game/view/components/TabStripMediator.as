@@ -108,12 +108,12 @@ public class TabStripMediator extends Mediator
             if (!_arg_1)
             {
                 return;
-            };
+            }
             this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.INVENTORY_ICON_ID), new InventoryTabContent(_arg_1));
             if (this.doShowStats)
             {
                 this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.STATS_ICON_ID), new StatsTabContent(this.view.HEIGHT));
-            };
+            }
             if (_arg_1.hasBackpack_)
             {
                 this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.BACKPACK_ICON_ID), new BackpackTabContent(_arg_1));
@@ -121,11 +121,11 @@ public class TabStripMediator extends Mediator
             else
             {
                 this.updateBackpack.add(this.onUpdateBackPack);
-            };
+            }
             if (this.petModel.getActivePet())
             {
                 this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.PETS_ICON_ID), new PetsTabContentView());
-            };
+            }
         }
 
         private function clearTabs():void
@@ -146,7 +146,7 @@ public class TabStripMediator extends Mediator
                 _local_2 = this.hudModel.gameSprite.map.player_;
                 this.view.addTab(this.iconFactory.makeIconBitmap(TabConstants.BACKPACK_ICON_ID), new BackpackTabContent(_local_2));
                 this.updateBackpack.remove(this.onUpdateBackPack);
-            };
+            }
         }
 
         private function onNotifyActivePetUpdated():void

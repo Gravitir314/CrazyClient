@@ -49,7 +49,7 @@ public class PlayerGroupMenu extends Menu
                 this.playerPanels_.push(_local_1);
                 _local_1.textReady.addOnce(this.onTextChanged);
                 this.posY = (this.posY + 32);
-            };
+            }
         }
 
         private function onTextChanged():void
@@ -59,7 +59,7 @@ public class PlayerGroupMenu extends Menu
             for each (_local_1 in this.playerPanels_)
             {
                 _local_1.textReady.remove(this.onTextChanged);
-            };
+            }
         }
 
         private function createHeader():void
@@ -76,7 +76,7 @@ public class PlayerGroupMenu extends Menu
                 this.lineBreakDesign_.y = 40;
                 addChild(this.lineBreakDesign_);
                 this.posY = 52;
-            };
+            }
         }
 
         private function onTeleport(_arg_1:Event):void
@@ -96,9 +96,9 @@ public class PlayerGroupMenu extends Menu
                     else
                     {
                         break;
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (_local_4 != null)
             {
                 _local_3.teleportTo(_local_4);
@@ -106,7 +106,7 @@ public class PlayerGroupMenu extends Menu
             else
             {
                 this.unableToTeleport.dispatch();
-            };
+            }
             remove();
         }
 

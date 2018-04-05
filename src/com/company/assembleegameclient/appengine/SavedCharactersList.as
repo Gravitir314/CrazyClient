@@ -85,12 +85,12 @@ public class SavedCharactersList extends Event
                 _local_3.reportIntStat("BestFame", this.bestOverallFame());
                 _local_3.reportIntStat("NumStars", this.numStars_);
                 _local_3.verify(_local_4.hasOwnProperty("VerifiedEmail"));
-            };
-            this.classAvailability = new Object();
+            }
+            this.classAvailability = {};
             for each (_local_2 in this.charsXML_.ClassAvailabilityList.ClassAvailability)
             {
                 this.classAvailability[_local_2.@id.toString()] = _local_2.toString();
-            };
+            }
         }
 
         public function getCharById(_arg_1:int):SavedCharacter
@@ -101,8 +101,8 @@ public class SavedCharactersList extends Event
                 if (_local_2.charId() == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -135,7 +135,7 @@ public class SavedCharactersList extends Event
                 _local_2 = _arg_1.BeginnerPackageTimeLeft;
                 _local_3 = this.getBeginnerModel();
                 _local_3.setBeginnersOfferSecondsLeft(_local_2);
-            };
+            }
         }
 
         private function getBeginnerModel():BeginnersPackageModel
@@ -152,7 +152,7 @@ public class SavedCharactersList extends Event
                 _local_2 = XML(_arg_1.Guild);
                 this.guildName_ = _local_2.Name;
                 this.guildRank_ = int(_local_2.Rank);
-            };
+            }
         }
 
         private function parseCharacterData():void
@@ -164,7 +164,7 @@ public class SavedCharactersList extends Event
             {
                 this.savedChars_.push(new SavedCharacter(_local_1, this.name_));
                 this.numChars_++;
-            };
+            }
             this.savedChars_.sort(SavedCharacter.compare);
         }
 
@@ -180,7 +180,7 @@ public class SavedCharactersList extends Event
                 _local_3 = new CharacterStats(_local_1);
                 this.numStars_ = (this.numStars_ + _local_3.numStars());
                 this.charStats_[_local_2] = _local_3;
-            };
+            }
         }
 
         private function parseNewsData():void
@@ -190,7 +190,7 @@ public class SavedCharactersList extends Event
             for each (_local_1 in _local_2.Item)
             {
                 this.news_.push(new SavedNewsItem(_local_1.Icon, _local_1.Title, _local_1.TagLine, _local_1.Link, int(_local_1.Date)));
-            };
+            }
         }
 
         private function parseGeoPositioningData():void
@@ -202,7 +202,7 @@ public class SavedCharactersList extends Event
             else
             {
                 this.myPos_ = DEFAULT_LATLONG;
-            };
+            }
         }
 
         private function parseSalesForceData():void
@@ -210,7 +210,7 @@ public class SavedCharactersList extends Event
             if (((this.charsXML_.hasOwnProperty("SalesForce")) && (this.charsXML_.hasOwnProperty("SalesForce"))))
             {
                 this.salesForceData_ = String(this.charsXML_.SalesForce);
-            };
+            }
         }
 
         private function parseTOSPopup():void
@@ -218,7 +218,7 @@ public class SavedCharactersList extends Event
             if (this.charsXML_.hasOwnProperty("TOSPopup"))
             {
                 StaticInjectorContext.getInjector().getInstance(OpenDialogSignal).dispatch(new TOSPopup());
-            };
+            }
         }
 
         public function isFirstTimeLogin():Boolean
@@ -241,8 +241,8 @@ public class SavedCharactersList extends Event
                 if (_local_1.bestLevel() > _local_2)
                 {
                     _local_2 = _local_1.bestLevel();
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -261,8 +261,8 @@ public class SavedCharactersList extends Event
                 if (_local_1.bestFame() > _local_2)
                 {
                     _local_2 = _local_1.bestFame();
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -277,8 +277,8 @@ public class SavedCharactersList extends Event
                 if (this.bestLevel(_local_3) < int(_local_2.@level))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -302,7 +302,7 @@ public class SavedCharactersList extends Event
             var _local_8:int;
             var _local_9:int;
             var _local_11:int;
-            var _local_10:Array = new Array();
+            var _local_10:Array = [];
             while (_local_11 < ObjectLibrary.playerChars_.length)
             {
                 _local_3 = ObjectLibrary.playerChars_[_local_11];
@@ -321,17 +321,17 @@ public class SavedCharactersList extends Event
                             {
                                 _local_5 = false;
                                 break;
-                            };
+                            }
                             _local_6 = true;
-                        };
-                    };
+                        }
+                    }
                     if (((_local_5) && (_local_6)))
                     {
                         _local_10.push(_local_4);
-                    };
-                };
+                    }
+                }
                 _local_11++;
-            };
+            }
             return (_local_10);
         }
 
@@ -352,7 +352,7 @@ public class SavedCharactersList extends Event
             {
                 this.account = _local_1.getInstance(Account);
                 ((this.account) && (this.updateAccount()));
-            };
+            }
         }
 
         private function updateAccount():void
@@ -369,9 +369,9 @@ public class SavedCharactersList extends Event
                 {
                     this.account.reportIntStat((_local_1.@id + "Unlocked"), 1);
                     _local_3++;
-                };
+                }
                 _local_4++;
-            };
+            }
             this.account.reportIntStat("ClassesUnlocked", _local_3);
         }
 

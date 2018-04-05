@@ -49,7 +49,7 @@ public class OfferRadioButtons extends Sprite
             {
                 this.choices[_local_1] = this.makeGoldChoice(this.offers.offerList[_local_1]);
                 _local_1++;
-            };
+            }
         }
 
         private function makeGoldChoice(_arg_1:Offer):OfferRadioButton
@@ -83,7 +83,7 @@ public class OfferRadioButtons extends Sprite
             {
                 _local_3[_local_1] = this.choices[_local_1];
                 _local_1++;
-            };
+            }
             return (_local_3);
         }
 
@@ -103,7 +103,7 @@ public class OfferRadioButtons extends Sprite
             {
                 _local_3[_local_1] = this.choices[_local_1];
                 _local_1++;
-            };
+            }
             return (_local_3);
         }
 
@@ -113,7 +113,7 @@ public class OfferRadioButtons extends Sprite
             while (_local_2--)
             {
                 this.choices[_local_2].showBonus(_arg_1);
-            };
+            }
         }
 
 

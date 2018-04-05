@@ -53,16 +53,16 @@ public class CurrentCharacterRect extends CharacterRect
             this.charType = _arg_2;
             this.char = _arg_3;
             this.charStats = _arg_4;
-            var _local_5:Array = new Array(this.charType.hp.max, this.charType.mp.max, this.charType.attack.max, this.charType.defense.max, this.charType.speed.max, this.charType.dexterity.max, this.charType.hpRegeneration.max, this.charType.mpRegeneration.max);
-            var _local_6:Array = new Array(this.char.charXML_.MaxHitPoints, this.char.charXML_.MaxMagicPoints, this.char.charXML_.Attack, this.char.charXML_.Defense, this.char.charXML_.Speed, this.char.charXML_.Dexterity, this.char.charXML_.HpRegen, this.char.charXML_.MpRegen);
+            var _local_5:Array = [this.charType.hp.max, this.charType.mp.max, this.charType.attack.max, this.charType.defense.max, this.charType.speed.max, this.charType.dexterity.max, this.charType.hpRegeneration.max, this.charType.mpRegeneration.max];
+            var _local_6:Array = [this.char.charXML_.MaxHitPoints, this.char.charXML_.MaxMagicPoints, this.char.charXML_.Attack, this.char.charXML_.Defense, this.char.charXML_.Speed, this.char.charXML_.Dexterity, this.char.charXML_.HpRegen, this.char.charXML_.MpRegen];
             while (_local_8 < _local_6.length)
             {
                 if (_local_6[_local_8] == _local_5[_local_8])
                 {
                     _local_7++;
-                };
+                }
                 _local_8++;
-            };
+            }
             var _local_9:String = _arg_2.name;
             var _local_10:* = (_local_7 + "/8");
             super.className = new LineBuilder().setParams(TextKey.CURRENT_CHARACTER_DESCRIPTION, {
@@ -86,11 +86,11 @@ public class CurrentCharacterRect extends CharacterRect
                 if (this.petIcon == null)
                 {
                     return;
-                };
+                }
                 this.petIcon.x = -3;
                 this.petIcon.y = 12;
                 selectContainer.addChild(this.petIcon);
-            };
+            }
         }
 
         public function setIcon(_arg_1:DisplayObject):void
@@ -122,11 +122,11 @@ public class CurrentCharacterRect extends CharacterRect
                         charnames.push(_arg_1);
                         charids.push(charids[_local_3]);
                         charids[_local_3] = _arg_2;
-                    };
+                    }
                     return;
-                };
+                }
                 _local_3++;
-            };
+            }
             charnames.push(_arg_1);
             charids.push(_arg_2);
         }
@@ -166,7 +166,7 @@ public class CurrentCharacterRect extends CharacterRect
             else
             {
                 super.makeTaglineText(new LineBuilder().setParams((this.char.fame() + " Fame")));
-            };
+            }
         }
 
         private function getNextStarFame():int

@@ -50,9 +50,9 @@ public class PetFormModel
                 if (this.petIsInFamilyTree(_local_2))
                 {
                     this.addPetToAppropriateRarityList(_local_2);
-                };
+                }
                 _local_1++;
-            };
+            }
         }
 
         private function addPetToAppropriateRarityList(_arg_1:XML):void
@@ -66,7 +66,7 @@ public class PetFormModel
             else
             {
                 this.branches[_local_2] = [_local_3];
-            };
+            }
         }
 
         public function setSelectedPet(_arg_1:PetVO):void
@@ -99,10 +99,10 @@ public class PetFormModel
                     if (_local_4 == _arg_1)
                     {
                         return (int(_local_3.@type));
-                    };
-                };
+                    }
+                }
                 _local_2++;
-            };
+            }
             return (-1);
         }
 
@@ -158,9 +158,9 @@ public class PetFormModel
                 if (_local_4 == _arg_1)
                 {
                     return (this.fetchPetTypeBySkinID(_local_3.@id));
-                };
+                }
                 _local_2++;
-            };
+            }
             return (-1);
         }
 
@@ -178,9 +178,9 @@ public class PetFormModel
                 if (_local_4 == _arg_1)
                 {
                     return (_local_3.@type);
-                };
+                }
                 _local_2++;
-            };
+            }
             return (-1);
         }
 

@@ -44,7 +44,7 @@ public class SliceScalingBitmap extends Bitmap
             else
             {
                 this.bitmapData = _arg_1;
-            };
+            }
         }
 
         public function clone():SliceScalingBitmap
@@ -59,7 +59,7 @@ public class SliceScalingBitmap extends Bitmap
             if (((!(_local_2 == this.currentWidth)) || (this._forceRenderInNextFrame)))
             {
                 this.render();
-            };
+            }
         }
 
         override public function set height(_arg_1:Number):void
@@ -69,7 +69,7 @@ public class SliceScalingBitmap extends Bitmap
             if (_local_2 != this.currentHeight)
             {
                 this.render();
-            };
+            }
         }
 
         override public function get width():Number
@@ -87,23 +87,23 @@ public class SliceScalingBitmap extends Bitmap
             if (this._scaleType == SCALE_TYPE_NONE)
             {
                 return;
-            };
+            }
             if (this.bitmapData)
             {
                 this.bitmapData.dispose();
-            };
+            }
             if (this._scaleType == SCALE_TYPE_3)
             {
                 this.prepare3grid();
-            };
+            }
             if (this._scaleType == SCALE_TYPE_9)
             {
                 this.prepare9grid();
-            };
+            }
             if (this._forceRenderInNextFrame)
             {
                 this._forceRenderInNextFrame = false;
-            };
+            }
         }
 
         private function prepare3grid():void
@@ -122,7 +122,7 @@ public class SliceScalingBitmap extends Bitmap
                 {
                     this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(this.scaleGrid.x, 0, this.scaleGrid.width, this.bitmapDataToSlice.height), new Point(((this.scaleGrid.x + _local_2) + this.margin.x), this.margin.y));
                     _local_2++;
-                };
+                }
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle((this.scaleGrid.x + this.scaleGrid.width), 0, (this.bitmapDataToSlice.width - (this.scaleGrid.x + this.scaleGrid.width)), this.bitmapDataToSlice.height), new Point(((this.scaleGrid.x + _local_1) + this.margin.x), this.margin.y));
             }
             else
@@ -135,9 +135,9 @@ public class SliceScalingBitmap extends Bitmap
                 {
                     this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(0, this.scaleGrid.y, this.scaleGrid.width, this.bitmapDataToSlice.height), new Point(this.margin.x, ((this.margin.y + this.scaleGrid.y) + _local_4)));
                     _local_4++;
-                };
+                }
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(0, (this.scaleGrid.y + this.scaleGrid.height), this.bitmapDataToSlice.width, (this.bitmapDataToSlice.height - (this.scaleGrid.y + this.scaleGrid.height))), new Point(this.margin.x, ((this.margin.y + this.scaleGrid.y) + _local_3)));
-            };
+            }
         }
 
         private function prepare9grid():void
@@ -154,26 +154,26 @@ public class SliceScalingBitmap extends Bitmap
             {
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(this.scaleGrid.x, 0, this.scaleGrid.width, this.scaleGrid.y), new Point(((this.scaleGrid.x + _local_2) + this.margin.x), this.margin.y));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < _local_1)
             {
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(this.scaleGrid.x, (this.scaleGrid.y + this.scaleGrid.height), this.scaleGrid.width, this.scaleGrid.y), new Point(((this.scaleGrid.x + _local_2) + this.margin.x), ((this.currentHeight - this.scaleGrid.y) + this.margin.y)));
                 _local_2++;
-            };
+            }
             var _local_3:int = (this.currentHeight - (this.scaleGrid.y * 2));
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(0, this.scaleGrid.y, this.scaleGrid.x, this.scaleGrid.height), new Point(this.margin.x, ((this.scaleGrid.y + _local_2) + this.margin.y)));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle((this.scaleGrid.x + this.scaleGrid.width), this.scaleGrid.y, this.scaleGrid.x, this.scaleGrid.height), new Point(((this.currentWidth - this.scaleGrid.x) + this.margin.x), ((this.scaleGrid.y + _local_2) + this.margin.y)));
                 _local_2++;
-            };
+            }
             var _local_4:uint = this.bitmapDataToSlice.getPixel32((this.scaleGrid.x + this.scaleGrid.width), (this.scaleGrid.y + this.scaleGrid.height));
             this.bitmapData.lock();
             _local_2 = this.scaleGrid.x;
@@ -184,9 +184,9 @@ public class SliceScalingBitmap extends Bitmap
                 {
                     this.bitmapData.setPixel32((_local_2 + this.margin.x), (_local_5 + this.margin.y), _local_4);
                     _local_5++;
-                };
+                }
                 _local_2++;
-            };
+            }
             this.bitmapData.unlock();
         }
 

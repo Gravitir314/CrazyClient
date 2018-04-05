@@ -63,7 +63,7 @@ public class LiveKongregateApi extends Sprite implements KongregateApi
             {
                 this.logger.info("kongregate guest detected - listening for external login");
                 this.api.services.addEventListener("login", this.onExternalLogin);
-            };
+            }
         }
 
         private function onExternalLogin(_arg_1:Event):void

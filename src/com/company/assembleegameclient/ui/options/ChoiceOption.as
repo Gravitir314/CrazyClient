@@ -56,12 +56,12 @@ public class ChoiceOption extends BaseOption
             {
                 this.color = ((this.color == 0xFFFFFF) ? 0xFF0000 : 0xFFFFFF);
                 desc_.setColor(this.color);
-            };
+            }
             Parameters.data_[paramName_] = this.choiceBox_.value();
             if (this.callback_ != null)
             {
                 this.callback_();
-            };
+            }
             Parameters.save();
         }
 

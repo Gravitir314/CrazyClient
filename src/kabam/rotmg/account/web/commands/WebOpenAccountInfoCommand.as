@@ -28,7 +28,7 @@ public class WebOpenAccountInfoCommand
             else
             {
                 this.openDialog.dispatch(new WebRegisterDialog());
-            };
+            }
         }
 
 

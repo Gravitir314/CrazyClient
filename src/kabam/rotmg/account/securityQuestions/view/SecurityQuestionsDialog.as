@@ -26,7 +26,7 @@ public class SecurityQuestionsDialog extends Frame {
             this.createAssets();
             if (_arg_1.length == _arg_2.length){
                 this.updateAnswers(_arg_2);
-            };
+            }
         }
 
         public function updateAnswers(_arg_1:Array):*{
@@ -35,7 +35,7 @@ public class SecurityQuestionsDialog extends Frame {
             for each (_local_3 in this.fields) {
                 _local_3.inputText_.text = _arg_1[(_local_2 - 1)];
                 _local_2++;
-            };
+            }
         }
 
         private function createAssets():void{
@@ -51,7 +51,7 @@ public class SecurityQuestionsDialog extends Frame {
                 _local_3.inputText_.maxChars = this.maxQuestionLength;
                 _local_1++;
                 this.fields.push(_local_3);
-            };
+            }
             rightButton_.tabIndex = (_local_1 + 1);
             rightButton_.tabEnabled = true;
         }
@@ -63,7 +63,7 @@ public class SecurityQuestionsDialog extends Frame {
             this.errors = [];
             for each (_local_1 in this.fields) {
                 _local_1.setErrorHighlight(false);
-            };
+            }
         }
 
         public function areQuestionsValid():Boolean{
@@ -73,13 +73,13 @@ public class SecurityQuestionsDialog extends Frame {
                     this.errors.push(TextKey.SECURITY_QUESTIONS_TOO_SHORT);
                     _local_1.setErrorHighlight(true);
                     return (false);
-                };
+                }
                 if (_local_1.inputText_.length > this.maxQuestionLength){
                     this.errors.push(TextKey.SECURITY_QUESTIONS_TOO_LONG);
                     _local_1.setErrorHighlight(true);
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -99,7 +99,7 @@ public class SecurityQuestionsDialog extends Frame {
             var _local_1:Array = [];
             for each (_local_2 in this.fields) {
                 _local_1.push(_local_2.inputText_.text);
-            };
+            }
             return (_local_1);
         }
 

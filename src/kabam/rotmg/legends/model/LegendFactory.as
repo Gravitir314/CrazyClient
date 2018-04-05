@@ -47,8 +47,8 @@ public class LegendFactory
                     _local_4.isOwnLegend = (_local_3.@accountId == this.ownAccountId);
                     _local_4.isFocus = _arg_2;
                     this.legends.push(_local_4);
-                };
-            };
+                }
+            }
         }
 
         private function legendsContains(_arg_1:XML):Boolean
@@ -59,8 +59,8 @@ public class LegendFactory
                 if (((_local_2.accountId == _arg_1.@accountId) && (_local_2.charId == _arg_1.@charId)))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 

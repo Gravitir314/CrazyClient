@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_d2LofiObjBigEmbed_()
         {
             super();
-            return;
+
         }
     }
 }

@@ -31,12 +31,12 @@ public class SquareFace
             if (((!(this.xOffset_ == 0)) || (!(this.yOffset_ == 0))))
             {
                 this.face_.bitmapFill_.repeat = true;
-            };
+            }
             this.animate_ = _arg_5;
             if (this.animate_ != AnimateProperties.NO_ANIMATE)
             {
                 this.face_.bitmapFill_.repeat = true;
-            };
+            }
             this.animateDx_ = _arg_6;
             this.animateDy_ = _arg_7;
         }
@@ -63,19 +63,19 @@ public class SquareFace
                         _local_4 = (this.xOffset_ + ((this.animateDx_ * _arg_3) / 1000));
                         _local_5 = (this.yOffset_ + ((this.animateDy_ * _arg_3) / 1000));
                         break;
-                };
+                }
             }
             else
             {
                 _local_4 = this.xOffset_;
                 _local_5 = this.yOffset_;
-            };
+            }
             if (Parameters.isGpuRender())
             {
                 GraphicsFillExtra.setOffsetUV(this.face_.bitmapFill_, _local_4, _local_5);
                 _local_5 = 0;
                 _local_4 = _local_5;
-            };
+            }
             this.face_.uvt_.length = 0;
             this.face_.uvt_.push((0 + _local_4), (0 + _local_5), 0, (1 + _local_4), (0 + _local_5), 0, (1 + _local_4), (1 + _local_5), 0, (0 + _local_4), (1 + _local_5), 0);
             this.face_.setUVT(this.face_.uvt_);

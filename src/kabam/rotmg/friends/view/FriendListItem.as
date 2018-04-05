@@ -89,12 +89,12 @@ public class FriendListItem extends FListItem
                 this._nameText.x = (this._portrait.width + 8);
                 this._nameText.setStringBuilder(new StaticStringBuilder(this._senderName));
                 this._serverText.y = (this._nameText.y + 16);
-            };
+            }
             if (_arg_1.getServerName() != this._serverName)
             {
                 this._serverName = _arg_1.getServerName();
                 this._serverText.setStringBuilder(new StaticStringBuilder(this._serverName));
-            };
+            }
             this._isOnline = _arg_1.isOnline;
             this._nameText.setColor(((this._isOnline) ? this.ONLINE_COLOR : this.NORMAL_COLOR));
             this._whisperButton.visible = this._isOnline;
@@ -108,7 +108,7 @@ public class FriendListItem extends FListItem
             while (numChildren > 0)
             {
                 this.removeChildAt((numChildren - 1));
-            };
+            }
             this._portrait = null;
             this._nameText = null;
             this._serverText = null;

@@ -69,7 +69,7 @@ public class WebLoginMediatorForced extends Mediator
             {
                 this.view.email.setError(TextKey.WEBLOGINDIALOG_EMAIL_MATCH_ERROR);
                 this.view.enable();
-            };
+            }
         }
 
         private function onRegister():void
@@ -91,7 +91,7 @@ public class WebLoginMediatorForced extends Mediator
             else
             {
                 this.openDialog.dispatch(new WebChangePasswordDialogForced());
-            };
+            }
         }
 
         private function onLoginError(_arg_1:String):void

@@ -82,7 +82,7 @@ public class TradeRequestPanel extends Panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 dispatchEvent(new Event(Event.COMPLETE));
-            };
+            }
         }
 
         private function onTimer(_arg_1:TimerEvent):void

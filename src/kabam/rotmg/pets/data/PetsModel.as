@@ -32,7 +32,7 @@ public class PetsModel
             if (this.hash[_arg_1] != null)
             {
                 return (this.hash[_arg_1]);
-            };
+            }
             _local_2 = new PetVO(_arg_1);
             this.pets.push(_local_2);
             this.hash[_arg_1] = _local_2;
@@ -61,7 +61,7 @@ public class PetsModel
             if (_local_2)
             {
                 _local_2.setPetVO(this.activePet);
-            };
+            }
             this.notifyActivePetUpdated.dispatch();
         }
 
@@ -76,7 +76,7 @@ public class PetsModel
             if (_local_1)
             {
                 _local_1.setPetVO(null);
-            };
+            }
             this.activePet = null;
             this.notifyActivePetUpdated.dispatch();
         }
@@ -87,7 +87,7 @@ public class PetsModel
             if (_local_2 == -1)
             {
                 return (null);
-            };
+            }
             return (this.pets[_local_2]);
         }
 
@@ -101,9 +101,9 @@ public class PetsModel
                 if (_local_2.getID() == _arg_1)
                 {
                     return (_local_3);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (-1);
         }
 

@@ -34,7 +34,7 @@ public class HealParticle extends Particle
             if (this.timeLeft_ <= 0)
             {
                 return (false);
-            };
+            }
             x_ = (this.go_.x_ + (this.dist_ * Math.cos(this.angle_)));
             y_ = (this.go_.y_ + (this.dist_ * Math.sin(this.angle_)));
             z_ = (z_ + ((this.moveVec_.z * _arg_2) * 0.008));

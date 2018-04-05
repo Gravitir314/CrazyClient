@@ -57,9 +57,9 @@ public class DailyQuestListScrollbar extends Sprite
                 if (_local_1 < SCROLL_SLIDER_MINIMUM_HEIGHT)
                 {
                     _local_1 = SCROLL_SLIDER_MINIMUM_HEIGHT;
-                };
+                }
                 this._slider.height = _local_1;
-            };
+            }
         }
 
         public function updatePosition(_arg_1:Number):void
@@ -68,12 +68,12 @@ public class DailyQuestListScrollbar extends Sprite
             if (this._slider.y < 0)
             {
                 this._slider.y = 0;
-            };
+            }
             var _local_2:int = (SCROLL_BAR_HEIGHT - this._slider.height);
             if (this._slider.y > _local_2)
             {
                 this._slider.y = _local_2;
-            };
+            }
             this._content.y = -(Math.round((((this._content.height - this.contentHeight) * this._slider.y) / _local_2)));
         }
 

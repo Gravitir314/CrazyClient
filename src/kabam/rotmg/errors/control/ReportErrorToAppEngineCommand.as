@@ -49,15 +49,15 @@ public class ReportErrorToAppEngineCommand
             if ((this.error is Error))
             {
                 return (this.error.message);
-            };
+            }
             if (this.event != null)
             {
                 return (this.event.text);
-            };
+            }
             if (this.error != null)
             {
                 return (this.error.toString());
-            };
+            }
             return ("(empty)");
         }
 

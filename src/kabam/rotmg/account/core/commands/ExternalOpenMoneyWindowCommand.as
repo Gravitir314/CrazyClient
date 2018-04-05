@@ -63,7 +63,7 @@ public class ExternalOpenMoneyWindowCommand
             else
             {
                 this.handleInvalidMoneyWindowRequest();
-            };
+            }
         }
 
         private function handleInvalidMoneyWindowRequest():void
@@ -77,8 +77,8 @@ public class ExternalOpenMoneyWindowCommand
                 if (!this.account.isRegistered())
                 {
                     this.openDialogSignal.dispatch(new ErrorDialog(this.REGISTRATION_ERROR_MESSAGE));
-                };
-            };
+                }
+            }
         }
 
         private function handleValidMoneyWindowRequest():void
@@ -92,7 +92,7 @@ public class ExternalOpenMoneyWindowCommand
                 catch(e:Error)
                 {
                     openPaymentwallMoneyWindowFromStandalonePlayer(WebAccount(account).paymentData);
-                };
+                }
             }
             else
             {
@@ -103,8 +103,8 @@ public class ExternalOpenMoneyWindowCommand
                 catch(e:Error)
                 {
                     openKabamMoneyWindowFromStandalonePlayer();
-                };
-            };
+                }
+            }
         }
 
         private function openKabamMoneyWindowFromStandalonePlayer():void
@@ -121,7 +121,7 @@ public class ExternalOpenMoneyWindowCommand
             else
             {
                 _local_2.createdat = 0;
-            };
+            }
             _local_3.url = (_local_1 + "/credits/kabamadd");
             _local_3.method = URLRequestMethod.POST;
             _local_3.data = _local_2;
@@ -154,10 +154,10 @@ public class ExternalOpenMoneyWindowCommand
                 else
                 {
                     _local_1 = 0;
-                };
+                }
                 ExternalInterface.call(this.moneyConfig.jsInitializeFunction(), this.account.getMoneyUserId(), this.account.getMoneyAccessToken(), _local_1);
                 this.moneyWindowModel.isInitialized = true;
-            };
+            }
         }
 
         private function openKabamMoneyWindowFromBrowser():void

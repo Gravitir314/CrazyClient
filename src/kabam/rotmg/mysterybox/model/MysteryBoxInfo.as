@@ -118,13 +118,13 @@ public class MysteryBoxInfo extends GenericBoxInfo {
                 if (_local_2[int(_local_7)] == null){
                     _local_2[int(_local_7)] = true;
                     this._rollsWithContentsUnique.push(int(_local_7));
-                };
+                }
                 _local_5.push(int(_local_7));
-            };
+            }
             this._rollsWithContents.push(_local_5);
             this._rollsContents[_local_3] = _local_5;
             _local_3++;
-        };
+        }
     }
 
     public function getSaleTimeLeftStringBuilder():LineBuilder{
@@ -139,8 +139,8 @@ public class MysteryBoxInfo extends GenericBoxInfo {
                 _local_4.setParams("MysteryBoxInfo.saleEndStringHours", {"amount":String(Math.ceil(TimeUtil.secondsToHours(_local_3)))});
             } else {
                 _local_4.setParams("MysteryBoxInfo.saleEndStringMinutes", {"amount":String(Math.ceil(TimeUtil.secondsToMins(_local_3)))});
-            };
-        };
+            }
+        }
         return (_local_4);
     }
 
@@ -150,7 +150,7 @@ public class MysteryBoxInfo extends GenericBoxInfo {
                 return (LineBuilder.getLocalizedStringFromKey("Currency.gold").toLowerCase());
             case "1":
                 return (LineBuilder.getLocalizedStringFromKey("Currency.fame").toLowerCase());
-        };
+        }
         return ("");
     }
 

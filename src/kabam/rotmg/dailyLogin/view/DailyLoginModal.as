@@ -54,7 +54,7 @@ public class DailyLoginModal extends Sprite
             if (this.daysLeft < CalendarSettings.CLAIM_WARNING_BEFORE_DAYS)
             {
                 this.tabs.y = (this.tabs.y + 20);
-            };
+            }
             this.centerModal();
         }
 
@@ -105,7 +105,7 @@ public class DailyLoginModal extends Sprite
             else
             {
                 _local_4.x = CalendarSettings.DAILY_LOGIN_MODAL_PADDING;
-            };
+            }
             addChild(_local_4);
         }
 
@@ -115,7 +115,7 @@ public class DailyLoginModal extends Sprite
             this.claimButton.y = ((this.modalRectangle.height - this.claimButton.height) - CalendarSettings.DAILY_LOGIN_MODAL_PADDING);
             if (this.daysLeft < CalendarSettings.CLAIM_WARNING_BEFORE_DAYS)
             {
-            };
+            }
         }
 
         private function createModalBox():*
@@ -172,7 +172,7 @@ public class DailyLoginModal extends Sprite
             {
                 this.calendarView.y = 70;
                 this.serverTimeTxt.y = 40;
-            };
+            }
             addChild(this.serverTimeTxt);
         }
 
@@ -187,7 +187,7 @@ public class DailyLoginModal extends Sprite
             else
             {
                 _local_5.setStringBuilder(new LineBuilder().setParams(_arg_1));
-            };
+            }
             _local_5.setWordWrap(true);
             _local_5.setMultiLine(true);
             _local_5.setAutoSize(TextFieldAutoSize.CENTER);

@@ -45,13 +45,13 @@ public class TextureRedrawer
             if (((_arg_5) && (isCached(_arg_1, _local_7))))
             {
                 return (redrawCaches[_arg_1][_local_7]);
-            };
+            }
             var _local_8:BitmapData = resize(_arg_1, null, _arg_2, _arg_3, 0, 0, _arg_6);
             _local_8 = GlowRedrawer.outlineGlow(_local_8, _arg_4, 1.4, _arg_5);
             if (_arg_5)
             {
                 cache(_arg_1, _local_7, _local_8);
-            };
+            }
             return (_local_8);
         }
 
@@ -65,7 +65,7 @@ public class TextureRedrawer
             if (!(_arg_1 in redrawCaches))
             {
                 redrawCaches[_arg_1] = {};
-            };
+            }
             redrawCaches[_arg_1][_arg_2] = _arg_3;
         }
 
@@ -76,8 +76,8 @@ public class TextureRedrawer
                 if ((_arg_2 in redrawCaches[_arg_1]))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -87,7 +87,7 @@ public class TextureRedrawer
             {
                 _arg_1 = retexture(_arg_1, _arg_2, _arg_5, _arg_6);
                 _arg_3 = int((_arg_3 / 5));
-            };
+            }
             var _local_8:int = int(((_arg_7 * (_arg_3 / 100)) * _arg_1.width));
             var _local_9:int = int(((_arg_7 * (_arg_3 / 100)) * _arg_1.height));
             var _local_10:Matrix = new Matrix();
@@ -105,12 +105,12 @@ public class TextureRedrawer
             {
                 _local_3 = new Dictionary();
                 cache_[_arg_2] = _local_3;
-            };
+            }
             var _local_4:BitmapData = _local_3[_arg_1];
             if (_local_4 != null)
             {
                 return (_local_4);
-            };
+            }
             _local_4 = new BitmapDataSpy(((_arg_2 + 4) + 4), ((_arg_2 + 4) + 4), true, 0);
             _local_4.fillRect(new Rectangle(4, 4, _arg_2, _arg_2), (0xFF000000 | _arg_1));
             _local_4.applyFilter(_local_4, _local_4.rect, PointUtil.ORIGIN, OUTLINE_FILTER);
@@ -128,16 +128,16 @@ public class TextureRedrawer
                 for each (_local_1 in _local_2)
                 {
                     _local_1.dispose();
-                };
-            };
+                }
+            }
             cache_ = new Dictionary();
             for each (_local_3 in faceCache_)
             {
                 for each (_local_1 in _local_3)
                 {
                     _local_1.dispose();
-                };
-            };
+                }
+            }
             faceCache_ = new Dictionary();
         }
 
@@ -146,22 +146,22 @@ public class TextureRedrawer
             if (_arg_2 == 1)
             {
                 return (_arg_1);
-            };
+            }
             if (_arg_1 == null)
             {
                 return (new BitmapData(1, 1, true, 0xFF000000));
-            };
+            }
             var _local_3:Dictionary = faceCache_[_arg_2];
             if (_local_3 == null)
             {
                 _local_3 = new Dictionary();
                 faceCache_[_arg_2] = _local_3;
-            };
+            }
             var _local_4:BitmapData = _local_3[_arg_1];
             if (_local_4 != null)
             {
                 return (_local_4);
-            };
+            }
             _local_4 = _arg_1.clone();
             _local_4.colorTransform(_local_4.rect, new ColorTransform(_arg_2, _arg_2, _arg_2));
             _local_3[_arg_1] = _local_4;
@@ -199,7 +199,7 @@ public class TextureRedrawer
                     break;
                 default:
                     _local_3 = _arg_2;
-            };
+            }
             return (_local_3);
         }
 

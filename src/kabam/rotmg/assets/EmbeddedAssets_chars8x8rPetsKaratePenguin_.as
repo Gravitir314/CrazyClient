@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_chars8x8rPetsKaratePenguin_()
         {
             super();
-            return;
+
         }
     }
 }

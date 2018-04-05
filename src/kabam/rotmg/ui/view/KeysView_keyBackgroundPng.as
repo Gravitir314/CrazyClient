@@ -8,7 +8,7 @@ import mx.core.*;
 		public function KeysView_keyBackgroundPng()
 		{
 			super();
-			return;
+
 		}
 	}
 }

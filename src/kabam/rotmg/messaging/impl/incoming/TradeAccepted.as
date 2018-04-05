@@ -28,7 +28,7 @@ public class TradeAccepted extends IncomingMessage
             {
                 this.myOffer_.push(_arg_1.readBoolean());
                 _local_2++;
-            };
+            }
             this.yourOffer_.length = 0;
             _local_3 = _arg_1.readShort();
             _local_2 = 0;
@@ -36,7 +36,7 @@ public class TradeAccepted extends IncomingMessage
             {
                 this.yourOffer_.push(_arg_1.readBoolean());
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

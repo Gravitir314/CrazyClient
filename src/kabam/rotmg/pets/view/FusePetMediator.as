@@ -70,7 +70,7 @@ public class FusePetMediator extends Mediator
             else
             {
                 this.openDialog.dispatch(new ErrorDialog(this.ERROR_DIALOG_STRING));
-            };
+            }
         }
 
         private function onGoldPurchase(_arg_1:int):void
@@ -85,7 +85,7 @@ public class FusePetMediator extends Mediator
             else
             {
                 this.openDialog.dispatch(new ErrorDialog(this.ERROR_DIALOG_STRING));
-            };
+            }
         }
 
         private function onClosed():void

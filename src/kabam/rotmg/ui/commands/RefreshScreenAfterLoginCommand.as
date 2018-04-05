@@ -41,7 +41,7 @@ public class RefreshScreenAfterLoginCommand
             if (((_local_1 == null) || (_local_1 == GameSprite)))
             {
                 _local_1 = CharacterSelectionAndNewsScreen;
-            };
+            }
             return (new (_local_1)());
         }
 

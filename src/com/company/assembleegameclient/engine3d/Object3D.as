@@ -36,13 +36,13 @@ public class Object3D
                 for each (_local_2 in this.model_.faces_)
                 {
                     this.faces_.push(new ObjectFace3D(this, _local_2.indicies_, _local_2.useTexture_));
-                };
+                }
             }
             else
             {
                 this.vL_ = new Vector.<Number>();
                 this.uvts_ = new Vector.<Number>();
-            };
+            }
             this.setPosition(0, 0, 0, 0);
         }
 
@@ -61,7 +61,7 @@ public class Object3D
             for each (_local_1 in this.faces_)
             {
                 _local_1.dispose();
-            };
+            }
             this.faces_.length = 0;
             this.faces_ = null;
             this.vS_ = null;
@@ -79,7 +79,7 @@ public class Object3D
             for each (_local_5 in this.faces_)
             {
                 _local_5.computeLighting();
-            };
+            }
         }
 
         public function getVecW(_arg_1:int):Vector3D
@@ -88,7 +88,7 @@ public class Object3D
             if (_local_2 >= this.vW_.length)
             {
                 return (null);
-            };
+            }
             return (new Vector3D(this.vW_[_local_2], this.vW_[(_local_2 + 1)], this.vW_[(_local_2 + 2)]));
         }
 
@@ -99,7 +99,7 @@ public class Object3D
             for each (_local_5 in this.faces_)
             {
                 _local_5.draw(_arg_1, _arg_3, _arg_4);
-            };
+            }
         }
 
 

@@ -66,7 +66,7 @@ public class SimpleAppEngineClient implements AppEngineClient
             else
             {
                 _arg_2.gameClientVersion = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
-            };
+            }
             if (_arg_2.guid)
             {
                 this.loader.sendRequest(this.makeURL(((_arg_1 + "?g=") + escape(_arg_2.guid))), _arg_2);
@@ -74,7 +74,7 @@ public class SimpleAppEngineClient implements AppEngineClient
             else
             {
                 this.loader.sendRequest(this.makeURL(_arg_1), _arg_2);
-            };
+            }
         }
 
         private function makeURL(_arg_1:String):String
@@ -82,7 +82,7 @@ public class SimpleAppEngineClient implements AppEngineClient
             if (_arg_1.charAt(0) != "/")
             {
                 _arg_1 = ("/" + _arg_1);
-            };
+            }
             return (this.setup.getAppEngineUrl() + _arg_1);
         }
 

@@ -34,7 +34,7 @@ public class GroundLibrary
                 xmlLibrary_[_local_3] = _local_2;
                 typeToTextureData_[_local_3] = new TextureDataConcrete(_local_2);
                 idToType_[String(_local_2.@id)] = _local_3;
-            };
+            }
             defaultProps_ = propsLibrary_[0xFF];
         }
 
@@ -44,7 +44,7 @@ public class GroundLibrary
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (_local_2.id_);
         }
 
@@ -74,9 +74,9 @@ public class GroundLibrary
                 {
                     _local_4 = getBitmapData(_arg_1);
                     _local_3 = BitmapUtil.mostCommonColor(_local_4);
-                };
+                }
                 tileTypeColorDict_[_arg_1] = _local_3;
-            };
+            }
             return (tileTypeColorDict_[_arg_1]);
         }
 

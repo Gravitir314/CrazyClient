@@ -32,7 +32,7 @@ public class NewsModalMediator extends Mediator
             if (firstRun)
             {
                 firstRun = false;
-            };
+            }
         }
 
         override public function destroy():void

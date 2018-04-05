@@ -80,7 +80,7 @@ public class CrystalSmall extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0xFFFFFF, true);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 3)
             {
@@ -88,7 +88,7 @@ public class CrystalSmall extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0xFFFFFF, true);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 7)
             {
@@ -96,7 +96,7 @@ public class CrystalSmall extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0xFFFFFF, true);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 7)
             {
@@ -104,7 +104,7 @@ public class CrystalSmall extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0xFFFFFF, true);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 5)
             {
@@ -112,7 +112,7 @@ public class CrystalSmall extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0xFFFFFF, true);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 8)
             {
@@ -120,7 +120,7 @@ public class CrystalSmall extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0xFFFFFF, true);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_1 = AssetLibrary.getImageFromSet("lofiCharBig", 0x0100);
             _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, 0, true);
             this.crystal = new Bitmap(_local_1);
@@ -194,7 +194,7 @@ public class CrystalSmall extends Sprite
             if (this.glowState == GLOW_STATE_PULSE)
             {
                 this.glowFilter.alpha = 1;
-            };
+            }
         }
 
         public function doItemReveal(_arg_1:int):void
@@ -202,7 +202,7 @@ public class CrystalSmall extends Sprite
             if (((this.parent == null) || (this.parent.parent == null)))
             {
                 return;
-            };
+            }
             this.removeItemReveal();
             this.item = new ItemWithTooltip(_arg_1);
             this.item.itemBitmap.alpha = 1;
@@ -224,11 +224,11 @@ public class CrystalSmall extends Sprite
             if (((!(this.item == null)) && (this.item.parent)))
             {
                 parent.removeChild(this.item);
-            };
+            }
             if (((!(this.itemNameField == null)) && (this.itemNameField.parent)))
             {
                 parent.removeChild(this.itemNameField);
-            };
+            }
         }
 
         public function doItemShow(_arg_1:int):void
@@ -236,7 +236,7 @@ public class CrystalSmall extends Sprite
             if (((this.parent == null) || (this.parent.parent == null)))
             {
                 return;
-            };
+            }
             this.removeItemReveal();
             var _local_2:TextFormat = new TextFormat();
             _local_2.size = 18;
@@ -310,7 +310,7 @@ public class CrystalSmall extends Sprite
                 this.crystalGrey.alpha = 1;
                 this.setAnimation(0, 3);
                 this.setAnimationDuration(100);
-            };
+            }
             this.active = true;
         }
 
@@ -325,12 +325,12 @@ public class CrystalSmall extends Sprite
                 if (this.crystal != null)
                 {
                     this.crystal.alpha = 1;
-                };
+                }
                 if (this.crystalGrey != null)
                 {
                     this.crystalGrey.alpha = 0;
-                };
-            };
+                }
+            }
             this.active = false;
         }
 
@@ -349,7 +349,7 @@ public class CrystalSmall extends Sprite
                 {
                     this.crystalGrey.alpha = 0;
                     this.crystal.alpha = 1;
-                };
+                }
             }
             else
             {
@@ -362,8 +362,8 @@ public class CrystalSmall extends Sprite
                 {
                     this.crystalGrey.alpha = 1;
                     this.crystal.alpha = 0;
-                };
-            };
+                }
+            }
             if (this.glowState == GLOW_STATE_FADE)
             {
                 this.glowFilter.alpha = (this.glowFilter.alpha - 0.07);
@@ -371,7 +371,7 @@ public class CrystalSmall extends Sprite
                 if (this.glowFilter.alpha <= 0.03)
                 {
                     this.filters = [];
-                };
+                }
             }
             else
             {
@@ -386,13 +386,13 @@ public class CrystalSmall extends Sprite
                         if (((this.glowFilter.alpha <= 0.5) && (!(this.pulsePolarity))))
                         {
                             this.pulsePolarity = true;
-                        };
-                    };
+                        }
+                    }
                     _local_3 = ((this.pulsePolarity) ? 1 : -1);
                     this.glowFilter.alpha = (this.glowFilter.alpha + (0.01 * _local_3));
                     this.filters = [this.glowFilter];
-                };
-            };
+                }
+            }
             if (this.isTrackingMouse_)
             {
                 _local_4 = this.squareDistanceTo(FortuneModal.fMouseX, FortuneModal.fMouseY);
@@ -401,7 +401,7 @@ public class CrystalSmall extends Sprite
                     if (this.currentAnimation != ANIM_HOVER)
                     {
                         this.setAnimationHover();
-                    };
+                    }
                     this.animationDuration_ = Math.max((_local_4 / 8), 70);
                     this.animationDuration_ = Math.min(this.animationDuration_, 170);
                 }
@@ -410,9 +410,9 @@ public class CrystalSmall extends Sprite
                     if (this.currentAnimation != ANIM_PULSE)
                     {
                         this.setAnimationPulse();
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (this.shake)
             {
                 this.setXPos((this.originX + ((Math.random() * 6) - 3)));
@@ -422,8 +422,8 @@ public class CrystalSmall extends Sprite
                 {
                     this.shake = false;
                     this.shakeCount = 0;
-                };
-            };
+                }
+            }
             this.drawAnimation(_arg_1, _arg_2);
         }
 
@@ -448,8 +448,8 @@ public class CrystalSmall extends Sprite
                     if (this.frameOffset_ > this.numFramesofLoop_)
                     {
                         this.frameOffset_ = 0;
-                    };
-                };
+                    }
+                }
                 this.crystal = this.crystalFrames[(this.startFrame_ + this.frameOffset_)];
                 if (this.currentAnimation == ANIM_CLICKED)
                 {
@@ -464,10 +464,10 @@ public class CrystalSmall extends Sprite
                     {
                         this.scaleX = 0.01;
                         this.scaleY = 0.01;
-                    };
-                };
+                    }
+                }
                 addChild(this.crystal);
-            };
+            }
         }
 
         public function setAnimationDuration(_arg_1:Number):void

@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_newGateEntry2Embed_()
         {
             super();
-            return;
+
         }
     }
 }

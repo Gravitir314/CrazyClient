@@ -84,7 +84,7 @@ public class Scrollbar extends Sprite
             if (_arg_3)
             {
                 this.setPos(0);
-            };
+            }
         }
 
         public function setPos(_arg_1:Number):void
@@ -92,7 +92,7 @@ public class Scrollbar extends Sprite
             if (((_arg_1 == Number.POSITIVE_INFINITY) || (_arg_1 == Number.NEGATIVE_INFINITY)))
             {
                 return;
-            };
+            }
             _arg_1 = Math.max(0, Math.min(1, _arg_1));
             this.posIndicator_.y = ((_arg_1 * (this.indicatorRect_.height - this.posIndicator_.height)) + this.indicatorRect_.y);
             this.sendPos();
@@ -138,7 +138,7 @@ public class Scrollbar extends Sprite
             else
             {
                 this.jumpDown();
-            };
+            }
         }
 
         protected function onAddedToStage(_arg_1:Event):void
@@ -156,8 +156,8 @@ public class Scrollbar extends Sprite
                 else
                 {
                     WebMain.STAGE.addEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-                };
-            };
+                }
+            }
         }
 
         protected function onRemovedFromStage(_arg_1:Event):void
@@ -175,8 +175,8 @@ public class Scrollbar extends Sprite
                 else
                 {
                     WebMain.STAGE.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-                };
-            };
+                }
+            }
             removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
@@ -194,8 +194,8 @@ public class Scrollbar extends Sprite
                 if (_arg_1.delta < 0)
                 {
                     this.jumpDown();
-                };
-            };
+                }
+            }
         }
 
         private function onUpArrowDown(_arg_1:MouseEvent):void

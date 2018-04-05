@@ -50,7 +50,7 @@ public class PetFeeder extends Sprite
             if (_arg_1)
             {
                 this.petLoaded.dispatch(_arg_1);
-            };
+            }
         }
 
         public function clearFood():void
@@ -100,7 +100,7 @@ public class PetFeeder extends Sprite
                 this.rightSlot.highlight((this.state.rightSlotItemId == -1));
                 this.leftSlot.highlight((this.state.leftSlotPetVO == null));
                 this.arrow.highlight(false);
-            };
+            }
         }
 
         public function setProcessing(_arg_1:Boolean):void
@@ -116,7 +116,7 @@ public class PetFeeder extends Sprite
             else
             {
                 this.update();
-            };
+            }
         }
 
 

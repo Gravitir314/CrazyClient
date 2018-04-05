@@ -36,7 +36,7 @@ public class WebLoginTask extends BaseTask implements LoginTask
             if (_arg_1)
             {
                 this.updateUser(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 

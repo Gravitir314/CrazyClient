@@ -72,8 +72,8 @@ public class ShopPopupMediator extends Mediator {
         for each (_local_2 in _local_1) {
             if (((!(_local_2 == null)) && ((!(_local_2.endTime)) || (_local_2.getSecondsToEnd() > 0)))){
                 this.packageBoxesGrid.addGridElement(this.createBoxTile(_local_2, PackageBoxTile));
-            };
-        };
+            }
+        }
         _local_3 = new UITab("Packages");
         _local_3.addContent(this.packageBoxesGrid);
         return (_local_3);
@@ -89,8 +89,8 @@ public class ShopPopupMediator extends Mediator {
         for each (_local_3 in _local_2) {
             if (((!(_local_3 == null)) && ((!(_local_3.endTime)) || (_local_3.getSecondsToEnd() > 0)))){
                 this.mysteryBoxesGrid.addGridElement(this.createBoxTile(_local_3, MysteryBoxTile));
-            };
-        };
+            }
+        }
         _local_1.addContent(this.mysteryBoxesGrid);
         return (_local_1);
     }
@@ -124,14 +124,14 @@ public class ShopPopupMediator extends Mediator {
             if (((!(_local_4 == null)) && ((!(_local_4.endTime)) || (_local_4.getSecondsToEnd() > 0)))){
                 if (((_local_4.isNew()) && ((_local_4.startTime.getTime() > _local_2.getTime()) || (!(Parameters.data_["packages_indicator"]))))){
                     _local_3 = true;
-                };
-            };
-        };
+                }
+            }
+        }
         this.packageTab = this.tabs.getTabButtonByLabel("Packages");
         if (this.packageTab){
             this.packageTab.showIndicator = _local_3;
             this.packageTab.clickSignal.add(this.onPackageClick);
-        };
+        }
         this.gameModel.player.creditsWereChanged.add(this.refreshCoins);
         this.gameModel.player.fameWasChanged.add(this.refreshFame);
         this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Buy Gold", "Click to buy more Realm Gold!", 200);
@@ -146,7 +146,7 @@ public class ShopPopupMediator extends Mediator {
         if (TabButton(_arg_1).hasIndicator){
             Parameters.data_["packages_indicator"] = new Date().getTime();
             TabButton(_arg_1).showIndicator = false;
-        };
+        }
     }
 
     override public function destroy():void{
@@ -163,7 +163,7 @@ public class ShopPopupMediator extends Mediator {
         this.hoverTooltipDelegate = null;
         if (this.packageTab){
             this.packageTab.clickSignal.remove(this.onPackageClick);
-        };
+        }
     }
 
     private function refreshCoins():void{

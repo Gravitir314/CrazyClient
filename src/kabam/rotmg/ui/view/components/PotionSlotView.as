@@ -118,7 +118,7 @@ public class PotionSlotView extends Sprite
                 if (this.potionIcon != null)
                 {
                     removeChild(this.potionIcon);
-                };
+                }
                 _local_6 = ObjectLibrary.getRedrawnTextureFromType(_arg_4, 55, false);
                 this.potionIcon = new Bitmap(_local_6);
                 this.potionIcon.y = -11;
@@ -128,7 +128,7 @@ public class PotionSlotView extends Sprite
                 _local_7.x = (_local_7.x - 30);
                 _local_7.y = (_local_7.y - 30);
                 this.potionIconDraggableSprite.addChild(_local_7);
-            };
+            }
             var _local_8:* = (_arg_1 > 0);
             if (_local_8)
             {
@@ -146,11 +146,11 @@ public class PotionSlotView extends Sprite
                 this.bg.graphics.drawGraphicsData(this.buyOuterGraphicsData);
                 this.bg.graphics.drawGraphicsData(this.buyInnerGraphicsData);
                 this.text.x = ((this.costIcon.x - this.text.width) + 6);
-            };
+            }
             if (this.potionIcon)
             {
                 this.potionIcon.x = _local_5;
-            };
+            }
             if (!_local_8)
             {
                 if (Parameters.data_.contextualPotionBuy)
@@ -164,14 +164,14 @@ public class PotionSlotView extends Sprite
                     this.text.setColor(0xAAAAAA);
                     this.costIcon.filters = [this.grayscaleMatrix];
                     this.costIcon.visible = true;
-                };
+                }
             }
             else
             {
                 this.text.setColor(0xFFFFFF);
                 this.costIcon.filters = [];
                 this.costIcon.visible = false;
-            };
+            }
         }
 
         public function setTextString(_arg_1:String):void
@@ -189,7 +189,7 @@ public class PotionSlotView extends Sprite
             if (this.isDragging)
             {
                 return;
-            };
+            }
             if (_arg_1.shiftKey)
             {
                 this.setPendingDoubleClick(false);
@@ -205,8 +205,8 @@ public class PotionSlotView extends Sprite
                 {
                     this.setPendingDoubleClick(false);
                     this.buyUse.dispatch();
-                };
-            };
+                }
+            }
         }
 
         private function onMouseDown(_arg_1:MouseEvent):void
@@ -214,7 +214,7 @@ public class PotionSlotView extends Sprite
             if (!this.costIcon.visible)
             {
                 this.beginDragCheck(_arg_1);
-            };
+            }
         }
 
         private function setPendingDoubleClick(_arg_1:Boolean):void
@@ -228,7 +228,7 @@ public class PotionSlotView extends Sprite
             else
             {
                 this.doubleClickTimer.stop();
-            };
+            }
         }
 
         private function beginDragCheck(_arg_1:MouseEvent):void
@@ -256,7 +256,7 @@ public class PotionSlotView extends Sprite
                 this.cancelDragCheck(null);
                 this.setPendingDoubleClick(false);
                 this.beginDrag();
-            };
+            }
         }
 
         private function onDoubleClickTimerComplete(_arg_1:TimerEvent):void
@@ -290,7 +290,7 @@ public class PotionSlotView extends Sprite
             if (this.isDragging)
             {
                 this.potionIconDraggableSprite.stopDrag();
-            };
+            }
         }
 
 

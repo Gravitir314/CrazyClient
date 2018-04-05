@@ -78,7 +78,7 @@ public class NewsModalButton extends Sprite
             {
                 showsHasUpdate = false;
                 addChild(this.background2);
-            };
+            }
             addChild(this.bitmap);
         }
 

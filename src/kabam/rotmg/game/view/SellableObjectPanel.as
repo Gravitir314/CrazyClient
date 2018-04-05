@@ -115,7 +115,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
             if (_arg_1 == this.owner_)
             {
                 return;
-            };
+            }
             this.owner_ = _arg_1;
             this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
             var _local_2:String = this.owner_.soldObjectName();
@@ -142,7 +142,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
             if ((((!(parent == null)) && (!(this.confirmBuyModal == null))) && (this.confirmBuyModal.open)))
             {
                 parent.removeChild(this.confirmBuyModal);
-            };
+            }
         }
 
         private function onBuyButtonClick(_arg_1:MouseEvent):void
@@ -150,7 +150,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
             if (ConfirmBuyModal.free)
             {
                 this.buyEvent();
-            };
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -158,7 +158,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
             if ((((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)) && (ConfirmBuyModal.free)))
             {
                 this.buyEvent();
-            };
+            }
         }
 
         private function buyEvent():void
@@ -172,7 +172,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
             else
             {
                 this.buyItem.dispatch(this.owner_);
-            };
+            }
         }
 
         override public function draw():void
@@ -185,14 +185,14 @@ public class SellableObjectPanel extends Panel implements TooltipAble
                 if (contains(this.buyButton_))
                 {
                     removeChild(this.buyButton_);
-                };
+                }
                 if (((this.rankReqText_ == null) || (!(contains(this.rankReqText_)))))
                 {
                     this.rankReqText_ = createRankReqText(_local_2);
                     this.rankReqText_.x = ((WIDTH / 2) - (this.rankReqText_.width / 2));
                     this.rankReqText_.y = ((HEIGHT - (this.rankReqText_.height / 2)) - 20);
                     addChild(this.rankReqText_);
-                };
+                }
             }
             else
             {
@@ -201,14 +201,14 @@ public class SellableObjectPanel extends Panel implements TooltipAble
                     if (contains(this.buyButton_))
                     {
                         removeChild(this.buyButton_);
-                    };
+                    }
                     if (((this.guildRankReqText_ == null) || (!(contains(this.guildRankReqText_)))))
                     {
                         this.guildRankReqText_ = createGuildRankReqText(this.owner_.guildRankReq_);
                         this.guildRankReqText_.x = ((WIDTH / 2) - (this.guildRankReqText_.width / 2));
                         this.guildRankReqText_.y = ((HEIGHT - (this.guildRankReqText_.height / 2)) - 20);
                         addChild(this.guildRankReqText_);
-                    };
+                    }
                 }
                 else
                 {
@@ -219,13 +219,13 @@ public class SellableObjectPanel extends Panel implements TooltipAble
                     if (!contains(this.buyButton_))
                     {
                         addChild(this.buyButton_);
-                    };
+                    }
                     if (((!(this.rankReqText_ == null)) && (contains(this.rankReqText_))))
                     {
                         removeChild(this.rankReqText_);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void

@@ -22,7 +22,7 @@ public class BloodComposition
             if (_local_6 != null)
             {
                 return (_local_6);
-            };
+            }
             _local_6 = new Vector.<uint>();
             var _local_7:Vector.<uint> = getColors(_arg_2);
             while (_local_5 < _local_7.length)
@@ -34,9 +34,9 @@ public class BloodComposition
                 else
                 {
                     _local_6.push(_local_7[int((_local_7.length * Math.random()))]);
-                };
+                }
                 _local_5++;
-            };
+            }
             return (_local_6);
         }
 
@@ -47,7 +47,7 @@ public class BloodComposition
             {
                 _local_2 = buildColors(_arg_1);
                 imageDict_[_arg_1] = _local_2;
-            };
+            }
             return (_local_2);
         }
 
@@ -66,11 +66,11 @@ public class BloodComposition
                     if ((_local_3 & 0xFF000000) != 0)
                     {
                         _local_5.push(_local_3);
-                    };
+                    }
                     _local_2++;
-                };
+                }
                 _local_4++;
-            };
+            }
             return (_local_5);
         }
 

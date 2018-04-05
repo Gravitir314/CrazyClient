@@ -20,7 +20,7 @@ public class PortalNameParser
             if (_local_2 == null)
             {
                 return (this.wrapNameWithBracesIfRequired(_arg_1));
-            };
+            }
             return (this.makePatternFromParts(_local_2));
         }
 
@@ -29,7 +29,7 @@ public class PortalNameParser
             if (((_arg_1.charAt(0) == "{") && (_arg_1.charAt((_arg_1.length - 1)) == "}")))
             {
                 return (_arg_1);
-            };
+            }
             return (("{" + _arg_1) + "}");
         }
 
@@ -39,7 +39,7 @@ public class PortalNameParser
             if (_arg_1.length > 1)
             {
                 _local_2 = (_local_2 + ((" (" + _arg_1[2]) + ")"));
-            };
+            }
             return (_local_2);
         }
 

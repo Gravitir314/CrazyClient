@@ -32,7 +32,7 @@ public class FriendRemoveButton extends Sprite implements TooltipAble
             if (_arg_1 != "")
             {
                 this.setToolTipTitle(_arg_1, _arg_2, _arg_3);
-            };
+            }
         }
 
         public function destroy():void
@@ -40,7 +40,7 @@ public class FriendRemoveButton extends Sprite implements TooltipAble
             while (numChildren > 0)
             {
                 this.removeChildAt((numChildren - 1));
-            };
+            }
             this.toolTip_ = null;
             this.hoverTooltipDelegate.removeDisplayObject();
             this.hoverTooltipDelegate = null;

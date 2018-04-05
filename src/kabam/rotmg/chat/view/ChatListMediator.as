@@ -42,7 +42,7 @@ public class ChatListMediator extends Mediator
             for each (_local_1 in this.model.chatMessages)
             {
                 this.view.addMessage(this.itemFactory.make(_local_1, true));
-            };
+            }
             this.view.scrollToCurrent();
             this.showChatInput.add(this.onShowChatInput);
             this.scrollList.add(this.onScrollList);
@@ -73,8 +73,8 @@ public class ChatListMediator extends Mediator
                 if (_arg_1 < 0)
                 {
                     this.view.pageUp();
-                };
-            };
+                }
+            }
         }
 
         private function onAddChat(_arg_1:ChatMessage):void

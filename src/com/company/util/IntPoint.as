@@ -134,76 +134,76 @@ class UnitTest
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == 1000)) || (!(_local_2.y() == 1000))))
         {
-        };
+        }
         _local_1 = new IntPoint(500, 400);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == 1000)) || (!(_local_2.y() == 0))))
         {
-        };
+        }
         _local_1 = new IntPoint(-400, -500);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
-        };
+        }
         _local_1 = new IntPoint(-501, -999);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == -1000)) || (!(_local_2.y() == -1000))))
         {
-        };
+        }
         _local_1 = new IntPoint(-1000, -1001);
         _local_2 = _local_1.round1000();
         if (((!(_local_2.x() == -1000)) || (!(_local_2.y() == -1000))))
         {
-        };
+        }
         _local_1 = new IntPoint(999, 1001);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 1000))))
         {
-        };
+        }
         _local_1 = new IntPoint(500, 400);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
-        };
+        }
         _local_1 = new IntPoint(-400, -500);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
-        };
+        }
         _local_1 = new IntPoint(-501, -999);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == 0)) || (!(_local_2.y() == 0))))
         {
-        };
+        }
         _local_1 = new IntPoint(-1000, -1001);
         _local_2 = _local_1.trunc1000();
         if (((!(_local_2.x() == -1000)) || (!(_local_2.y() == -1000))))
         {
-        };
+        }
         _local_3 = 0.9999998;
         if (int(_local_3) != 0)
         {
-        };
+        }
         _local_3 = 0.5;
         if (int(_local_3) != 0)
         {
-        };
+        }
         _local_3 = 0.499999;
         if (int(_local_3) != 0)
         {
-        };
+        }
         _local_3 = -0.499999;
         if (int(_local_3) != 0)
         {
-        };
+        }
         _local_3 = -0.5;
         if (int(_local_3) != 0)
         {
-        };
+        }
         _local_3 = -0.99999;
         if (int(_local_3) != 0)
         {
-        };
+        }
     }
 
 }

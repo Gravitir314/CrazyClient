@@ -29,7 +29,7 @@ public class PetFuserMediator extends Mediator
             if (!this.petSlotsState.leftSlotPetVO)
             {
                 this.petSlotsState.leftSlotPetVO = this.petsModel.getActivePet();
-            };
+            }
             this.view.initialize(this.petSlotsState);
         }
 

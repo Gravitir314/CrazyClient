@@ -8,7 +8,7 @@ import mx.core.*;
 		public function MEMap_transbackgroundEmbed_()
 		{
 			super();
-			return;
+
 		}
 	}
 }

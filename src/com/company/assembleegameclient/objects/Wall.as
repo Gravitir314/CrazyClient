@@ -53,11 +53,11 @@ public class Wall extends GameObject
             if (texture_ == null)
             {
                 return;
-            };
+            }
             if (this.faces_.length == 0)
             {
                 this.rebuild3D();
-            };
+            }
             var _local_8:BitmapData = texture_;
             if (animations_ != null)
             {
@@ -65,8 +65,8 @@ public class Wall extends GameObject
                 if (_local_4 != null)
                 {
                     _local_8 = _local_4;
-                };
-            };
+                }
+            }
             while (_local_7 < this.faces_.length)
             {
                 _local_5 = this.faces_[_local_7];
@@ -81,11 +81,11 @@ public class Wall extends GameObject
                     if (animations_ != null)
                     {
                         _local_5.setTexture(_local_8);
-                    };
-                };
+                    }
+                }
                 _local_5.draw(_arg_1, _arg_2);
                 _local_7++;
-            };
+            }
             this.topFace_.draw(_arg_1, _arg_2);
         }
 

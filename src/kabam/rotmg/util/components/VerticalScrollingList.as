@@ -53,7 +53,7 @@ public class VerticalScrollingList extends Sprite implements List
             if (this.isScrollbarVisible())
             {
                 _arg_1 = new Size((_arg_1.width - SCROLLBAR_GUTTER), _arg_1.height);
-            };
+            }
             this.list.setSize(_arg_1);
             this.refreshScrollbar();
         }

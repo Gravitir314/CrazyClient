@@ -25,7 +25,7 @@ public final class ConsoleView extends Sprite
             if (((_arg_1) && (stage)))
             {
                 stage.focus = this.input;
-            };
+            }
         }
 
 

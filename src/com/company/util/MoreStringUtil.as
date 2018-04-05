@@ -19,7 +19,7 @@ public class MoreStringUtil
             {
                 _local_3.writeByte(parseInt(_arg_1.substr(_local_2, 2), 16));
                 _local_2 = (_local_2 + 2);
-            };
+            }
             return (_local_3);
         }
 

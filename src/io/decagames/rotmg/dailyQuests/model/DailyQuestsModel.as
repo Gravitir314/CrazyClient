@@ -38,8 +38,8 @@ public class DailyQuestsModel
                 if (_local_2.id == _arg_1)
                 {
                     _local_2.completed = true;
-                };
-            };
+                }
+            }
         }
 
         public function get playerItemsFromInventory():Vector.<int>
@@ -66,8 +66,8 @@ public class DailyQuestsModel
                 if (_local_1.completed)
                 {
                     _local_2++;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -82,7 +82,7 @@ public class DailyQuestsModel
             if (_arg_1.name > _arg_2.name)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -93,11 +93,11 @@ public class DailyQuestsModel
             if (((_local_3) && (!(_local_4))))
             {
                 return (-1);
-            };
+            }
             if (((_local_3) && (_local_4)))
             {
                 return (this.questsNameSort(_arg_1, _arg_2));
-            };
+            }
             return (1);
         }
 
@@ -106,15 +106,15 @@ public class DailyQuestsModel
             if (((_arg_1.completed) && (!(_arg_2.completed))))
             {
                 return (1);
-            };
+            }
             if (((_arg_1.completed) && (_arg_2.completed)))
             {
                 return (this.questsReadySort(_arg_1, _arg_2));
-            };
+            }
             if (((!(_arg_1.completed)) && (!(_arg_2.completed))))
             {
                 return (this.questsReadySort(_arg_1, _arg_2));
-            };
+            }
             return (-1);
         }
 
@@ -126,8 +126,8 @@ public class DailyQuestsModel
                 if (_local_2.id == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -136,7 +136,7 @@ public class DailyQuestsModel
             if (this._questsList.length > 0)
             {
                 return (this.questsList[0]);
-            };
+            }
             return (null);
         }
 

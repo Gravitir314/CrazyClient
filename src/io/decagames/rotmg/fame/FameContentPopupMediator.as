@@ -88,7 +88,7 @@ public class FameContentPopupMediator extends Mediator
             else
             {
                 _local_1 = this.player.getCharacterById(this.characterID).bornOn();
-            };
+            }
             this.showInfo();
             this.view.fameOnDeath = this.totalFame.currentFame;
             if (this.view.characterId == -1)
@@ -100,7 +100,7 @@ public class FameContentPopupMediator extends Mediator
             {
                 _local_4 = this.player.getCharacterById(this.characterID);
                 this.view.setCharacterData(this.totalFame.baseFame, _local_4.name(), _local_4.level(), ObjectLibrary.typeToDisplayId_[_local_4.objectType()], _local_1, _local_4.getIcon(100));
-            };
+            }
             this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Fame calculation", "Refreshes when returning to the Nexus or main menu.", 230);
             this.hoverTooltipDelegate = new HoverTooltipDelegate();
             this.hoverTooltipDelegate.setShowToolTipSignal(this.showTooltipSignal);
@@ -117,7 +117,7 @@ public class FameContentPopupMediator extends Mediator
             if ((((this.fameTracker.metrics.lastUpdate) && (_local_2 is LineBuilder)) && (LineBuilder(_local_2).key == "Fame calculation")))
             {
                 _arg_1.setTitle(new StaticStringBuilder((("Updated " + TimeSpan.distanceOfTimeInWords(this.fameTracker.metrics.lastUpdate, new Date(), true)) + ".")));
-            };
+            }
         }
 
         override public function destroy():void
@@ -141,7 +141,7 @@ public class FameContentPopupMediator extends Mediator
             {
                 _local_1 = (_local_1 + this.metrics.getCharacterStat(this.characterID, _local_2));
                 _local_2++;
-            };
+            }
             return ((((((this.metrics.getCharacterStat(this.characterID, MetricsID.PIRATE_CAVES_COMPLETED) + this.metrics.getCharacterStat(this.characterID, MetricsID.UNDEAD_LAIRS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.ABYSS_OF_DEMONS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.SNAKE_PITS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.SPIDER_DENS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.SPRITE_WORLDS_COMPLETED)) + _local_1);
         }
 
@@ -150,7 +150,7 @@ public class FameContentPopupMediator extends Mediator
             if (!this.totalFame.bonuses[_arg_1])
             {
                 return (0);
-            };
+            }
             return (this.totalFame.bonuses[_arg_1].fameAdded);
         }
 
@@ -165,7 +165,7 @@ public class FameContentPopupMediator extends Mediator
             if (((this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS_THAT_DAMAGE) > 0) && (this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS) > 0)))
             {
                 _local_1 = ((this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS_THAT_DAMAGE) / this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS)) * 100);
-            };
+            }
             this.view.addStatLine(new FameStatsLine("Statistics:", "", "", FameStatsLine.TYPE_TITLE));
             this.view.addStatLine(new FameStatsLine("Number of Shots", this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS).toString(), "The total number of shots fired by this character.", FameStatsLine.TYPE_STAT));
             this.view.addStatLine(new FameStatsLine("Potions Drunk", this.metrics.getCharacterStat(this.characterID, MetricsID.POTIONS_DRUNK).toString(), "The number of potions this character has consumed.", FameStatsLine.TYPE_STAT));
@@ -187,7 +187,7 @@ public class FameContentPopupMediator extends Mediator
             if (_arg_1.level > _arg_2.level)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -196,7 +196,7 @@ public class FameContentPopupMediator extends Mediator
             if (_arg_1.fameAdded > _arg_2.fameAdded)
             {
                 return (-1);
-            };
+            }
             return (1);
         }
 
@@ -216,9 +216,9 @@ public class FameContentPopupMediator extends Mediator
                 else
                 {
                     this.bonusesList.push(bonusConfig);
-                };
+                }
                 i = (i + 1);
-            };
+            }
             bonusConfig = this.totalFame.bonuses[16];
             if (bonusConfig == null)
             {
@@ -227,7 +227,7 @@ public class FameContentPopupMediator extends Mediator
             else
             {
                 this.bonusesList.push(bonusConfig);
-            };
+            }
             i = 18;
             while (i <= 22)
             {
@@ -239,9 +239,9 @@ public class FameContentPopupMediator extends Mediator
                 else
                 {
                     this.bonusesList.push(bonusConfig);
-                };
+                }
                 i = (i + 1);
-            };
+            }
             if (this.view.characterId == -1)
             {
                 level = this.hudModel.gameSprite.map.player_.level_;
@@ -249,7 +249,7 @@ public class FameContentPopupMediator extends Mediator
             else
             {
                 level = this.player.getCharacterById(this.characterID).level();
-            };
+            }
             this.bonusesList = this.bonusesList.sort(this.sortBonusesByLevel);
             var unlocked:Vector.<FameBonus> = this.bonusesList.filter(function (_arg_1:FameBonus, _arg_2:int, _arg_3:Vector.<FameBonus>):Boolean
             {
@@ -265,7 +265,7 @@ public class FameContentPopupMediator extends Mediator
             for each (bonus in this.bonusesList)
             {
                 this.view.addStatLine(new FameStatsLine(LineBuilder.getLocalizedStringFromKey(("FameBonus." + bonus.name)), bonus.fameAdded.toString(), ((LineBuilder.getLocalizedStringFromKey((("FameBonus." + bonus.name) + "Description")) + "\n") + LineBuilder.getLocalizedStringFromKey("FameBonus.LevelRequirement", {"level":bonus.level})), FameStatsLine.TYPE_BONUS, (level < bonus.level)));
-            };
+            }
         }
 
         private function showInfo():void

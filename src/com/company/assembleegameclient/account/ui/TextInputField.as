@@ -46,14 +46,14 @@ public class TextInputField extends Sprite
             else
             {
                 this.inputText_.y = 0;
-            };
+            }
             if (this.textInputFieldWidth != 0)
             {
                 this.nameText_.setTextWidth(this.textInputFieldWidth);
                 this.nameText_.setMultiLine(true);
                 this.nameText_.setWordWrap(true);
                 this.nameText_.textChanged.add(this.textFieldWasCreatedHandler);
-            };
+            }
             this.nameText_.setBold(true);
             this.nameText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
             this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
@@ -68,7 +68,7 @@ public class TextInputField extends Sprite
             if (_arg_6 > 1)
             {
                 this.inputText_.maxChars = _arg_6;
-            };
+            }
             addChild(this.inputText_);
             graphics.lineStyle(2, 0x454545, 1, false, LineScaleMode.NORMAL, CapsStyle.ROUND, JointStyle.ROUND);
             graphics.beginFill(0x333333, 1);
@@ -121,7 +121,7 @@ public class TextInputField extends Sprite
             {
                 this.inputText_.y = (this.nameText_.getTextHeight() + 8);
                 this.drawInputBorders(false);
-            };
+            }
         }
 
         public function onInputChange(_arg_1:Event):void

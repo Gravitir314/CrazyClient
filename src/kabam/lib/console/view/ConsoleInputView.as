@@ -62,7 +62,7 @@ public final class ConsoleInputView extends TextField implements Resizable
                 case Keyboard.DOWN:
                     dispatchEvent(new ConsoleEvent(ConsoleEvent.GET_NEXT));
                     return;
-            };
+            }
         }
 
         public function resize(_arg_1:Rectangle):void
@@ -71,7 +71,7 @@ public final class ConsoleInputView extends TextField implements Resizable
             if (_local_2 > HEIGHT)
             {
                 _local_2 = HEIGHT;
-            };
+            }
             width = _arg_1.width;
             height = _local_2;
             x = _arg_1.x;

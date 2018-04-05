@@ -62,7 +62,7 @@ public class ArenaLeaderboardMediator extends Mediator
                 _local_2 = this.injector.getInstance(GetArenaLeaderboardTask);
                 _local_2.filter = _arg_1;
                 _local_2.start();
-            };
+            }
         }
 
         private function requestComplete():void

@@ -27,13 +27,13 @@ public class MaskedImageSet
                 _local_5.addFromBitmapData(_arg_2, _arg_3, _arg_4);
                 if (_local_6.images_.length > _local_6.images_.length)
                 {
-                };
-            };
+                }
+            }
             while (_local_7 < _local_6.images_.length)
             {
                 this.images_.push(new MaskedImage(_local_6.images_[_local_7], ((_local_5 == null) ? null : ((_local_7 >= _local_5.images_.length) ? null : _local_5.images_[_local_7]))));
                 _local_7++;
-            };
+            }
         }
 
         public function addFromMaskedImage(_arg_1:MaskedImage, _arg_2:int, _arg_3:int):void

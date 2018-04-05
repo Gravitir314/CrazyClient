@@ -26,7 +26,7 @@ public class QuestRedeem extends OutgoingMessage {
         _arg_1.writeShort(this.slots.length);
         for each (_local_2 in this.slots) {
             _local_2.writeToOutput(_arg_1);
-        };
+        }
     }
 
 

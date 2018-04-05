@@ -62,7 +62,7 @@ public class WebChangePasswordMediatorForced extends Mediator
                 _local_2.guid = this.account.getUserId();
                 _local_1.sendRequest("/account/changePassword", _local_2);
                 _local_1.complete.addOnce(this.onComplete);
-            };
+            }
         }
 
         private function isCurrentPasswordValid():Boolean
@@ -71,7 +71,7 @@ public class WebChangePasswordMediatorForced extends Mediator
             if (!_local_1)
             {
                 this.view.password_.setError(TextKey.WEB_CHANGE_PASSWORD_INCORRECT);
-            };
+            }
             return (_local_1);
         }
 
@@ -81,7 +81,7 @@ public class WebChangePasswordMediatorForced extends Mediator
             if (!_local_1)
             {
                 this.view.newPassword_.setError(TextKey.REGISTER_WEB_SHORT_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -91,7 +91,7 @@ public class WebChangePasswordMediatorForced extends Mediator
             if (!_local_1)
             {
                 this.view.retypeNewPassword_.setError(TextKey.REGISTER_WEB_MATCH_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -105,7 +105,7 @@ public class WebChangePasswordMediatorForced extends Mediator
             {
                 this.account.updateUser(this.account.getUserId(), this.newPassword, this.account.getToken());
                 this.closeDialogs.dispatch();
-            };
+            }
         }
 
         private function onError(_arg_1:String):void

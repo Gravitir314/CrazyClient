@@ -34,7 +34,7 @@ public class CharacterSkinMediator extends Mediator
             if (_local_1)
             {
                 this.view.play.addOnce(this.onPlay);
-            };
+            }
             this.view.back.addOnce(this.onBack);
         }
 

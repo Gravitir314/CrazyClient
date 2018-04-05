@@ -35,7 +35,7 @@ public class FriendActionCommand {
         public function execute():void{
             if (this.vo.request == FriendsActions.INVITE){
                 this.addTextLine.dispatch(ChatMessage.make("", "Friend request sent"));
-            };
+            }
             var _local_1:String = FriendsActions.getURL(this.vo.request);
             var _local_2:Object = this.account.getCredentials();
             _local_2["targetName"] = this.vo.target;

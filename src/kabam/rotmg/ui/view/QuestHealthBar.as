@@ -54,9 +54,9 @@ public class QuestHealthBar extends Sprite
                     {
                         _local_5 = _local_4;
                         _local_3 = _local_2;
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (((" - " + _local_3.name_) + ": ") + _local_5);
         }
 
@@ -80,23 +80,23 @@ public class QuestHealthBar extends Sprite
                 if (_local_3 == 3368)
                 {
                     _local_4 = ((((Parameters.data_.tombHack) && (Parameters.data_.curBoss == 3368)) && (_local_2 == _arg_1.questMob1)) ? ": Active" : "");
-                };
+                }
                 if (!(_arg_1.questMob == null))
                 {
                     if (this.nextUpdate <= getTimer())
                     {
                         this.showstr = this.genClosest(_arg_1);
                         this.nextUpdate = (getTimer() + 1000);
-                    };
+                    }
                     _local_4 = this.showstr;
-                };
+                }
                 this.questBar.setLabelText((ObjectLibrary.typeToDisplayId_[_local_2.objectType_] + _local_4));
                 this.questBar.visible = true;
             }
             else
             {
                 this.questBar.visible = false;
-            };
+            }
             if (_arg_1.questMob2 != null)
             {
                 this.questBar2.draw(_arg_1.questMob2.hp_, _arg_1.questMob2.maxHP_, 0);
@@ -107,7 +107,7 @@ public class QuestHealthBar extends Sprite
             else
             {
                 this.questBar2.visible = false;
-            };
+            }
             if (_arg_1.questMob3 != null)
             {
                 this.questBar3.draw(_arg_1.questMob3.hp_, _arg_1.questMob3.maxHP_, 0);
@@ -118,7 +118,7 @@ public class QuestHealthBar extends Sprite
             else
             {
                 this.questBar3.visible = false;
-            };
+            }
         }
 
 

@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedData_SpriteWorldCXML()
         {
             super();
-            return;
+
         }
     }
 }

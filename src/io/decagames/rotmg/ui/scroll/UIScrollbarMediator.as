@@ -54,7 +54,7 @@ public class UIScrollbarMediator extends Mediator
             if (this.view.scrollObject)
             {
                 this.view.scrollObject.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-            };
+            }
             WebMain.STAGE.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             this.view.dispose();
         }
@@ -64,12 +64,12 @@ public class UIScrollbarMediator extends Mediator
             if (((this.view.scrollObject) && (!(this.view.scrollObject.hasEventListener(MouseEvent.MOUSE_WHEEL)))))
             {
                 this.view.scrollObject.addEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-            };
+            }
             if (this.startDragging)
             {
                 this.view.updatePosition((WebMain.STAGE.mouseY - this.startY));
                 this.startY = WebMain.STAGE.mouseY;
-            };
+            }
             this.view.update();
         }
 

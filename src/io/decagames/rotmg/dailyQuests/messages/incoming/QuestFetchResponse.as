@@ -30,7 +30,7 @@ public class QuestFetchResponse extends IncomingMessage
                 this.quests[_local_3] = new QuestData();
                 this.quests[_local_3].parseFromInput(_arg_1);
                 _local_3++;
-            };
+            }
         }
 
         override public function toString():String

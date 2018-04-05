@@ -76,9 +76,9 @@ public class GameObjectArrow extends Sprite
                 if (menu_.parent != null)
                 {
                     menu_.parent.removeChild(menu_);
-                };
+                }
                 menu_ = null;
-            };
+            }
         }
 
 
@@ -105,16 +105,16 @@ public class GameObjectArrow extends Sprite
                         {
                             _local_2 = _local_5;
                             _local_3 = _local_4.name_;
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_local_3 == this.go_.map_.player_.name_)
                 {
                     this.go_.map_.player_.notifyPlayer("You are the closest!", 0xFF00, 1500);
                     return;
-                };
+                }
                 this.go_.map_.gs_.gsc_.teleport(_local_3);
-            };
+            }
         }
 
         protected function onMouseOver(_arg_1:MouseEvent):void
@@ -142,7 +142,7 @@ public class GameObjectArrow extends Sprite
             {
                 addChild(this.tooltip_);
                 this.positionTooltip(this.tooltip_);
-            };
+            }
         }
 
         protected function removeTooltip():void
@@ -152,9 +152,9 @@ public class GameObjectArrow extends Sprite
                 if (this.tooltip_.parent != null)
                 {
                     this.tooltip_.parent.removeChild(this.tooltip_);
-                };
+                }
                 this.tooltip_ = null;
-            };
+            }
         }
 
         protected function setMenu(_arg_1:Menu):void
@@ -169,12 +169,12 @@ public class GameObjectArrow extends Sprite
             if (this.go_ != _arg_1)
             {
                 this.go_ = _arg_1;
-            };
+            }
             this.extraGOs_.length = 0;
             if (this.go_ == null)
             {
                 visible = false;
-            };
+            }
         }
 
         public function addGameObject(_arg_1:GameObject):void
@@ -193,7 +193,7 @@ public class GameObjectArrow extends Sprite
             {
                 this.scaleX = 1;
                 this.scaleY = 1;
-            };
+            }
             _local_2.right = (_local_2.right - ((((800 - this.go_.map_.gs_.hudView.x) * stage.stageWidth) / Parameters.data_.mscale) / 800));
             return (_local_2);
         }
@@ -207,7 +207,7 @@ public class GameObjectArrow extends Sprite
             {
                 visible = false;
                 return;
-            };
+            }
             this.go_.computeSortVal(_arg_2);
             _local_3 = this.correctQuestNote(_arg_2.clipRect_);
             _local_4 = this.go_.posS_[0];
@@ -217,7 +217,7 @@ public class GameObjectArrow extends Sprite
                 this.go_ = null;
                 visible = false;
                 return;
-            };
+            }
             x = this.tempPoint.x;
             y = this.tempPoint.y;
             var _local_6:Number = Trig.boundTo180((270 - (Trig.toDegrees * Math.atan2(_local_4, _local_5))));
@@ -226,11 +226,11 @@ public class GameObjectArrow extends Sprite
                 if (_local_6 > 45)
                 {
                     _local_6 = 45;
-                };
+                }
                 if (_local_6 < -45)
                 {
                     _local_6 = -45;
-                };
+                }
             }
             else
             {
@@ -241,27 +241,27 @@ public class GameObjectArrow extends Sprite
                         if (_local_6 < 135)
                         {
                             _local_6 = 135;
-                        };
+                        }
                     }
                     else
                     {
                         if (_local_6 > -135)
                         {
                             _local_6 = -135;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (this.tempPoint.y < (_local_3.top + 5))
             {
                 if (_local_6 < 45)
                 {
                     _local_6 = 45;
-                };
+                }
                 if (_local_6 > 135)
                 {
                     _local_6 = 135;
-                };
+                }
             }
             else
             {
@@ -270,18 +270,18 @@ public class GameObjectArrow extends Sprite
                     if (_local_6 > -45)
                     {
                         _local_6 = -45;
-                    };
+                    }
                     if (_local_6 < -135)
                     {
                         _local_6 = -135;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.arrow_.rotation = _local_6;
             if (this.tooltip_ != null)
             {
                 this.positionTooltip(this.tooltip_);
-            };
+            }
             visible = true;
         }
 
@@ -323,9 +323,9 @@ public class GameObjectArrow extends Sprite
                         _arg_1.x = (_local_7 - _local_8);
                         _local_4 = (_local_2 - (_local_9 * Math.tan((_local_5 * Trig.toRadians))));
                         _arg_1.y = (((_local_2 + _local_4) / 2) - (_local_9 / 2));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function drawArrow():void

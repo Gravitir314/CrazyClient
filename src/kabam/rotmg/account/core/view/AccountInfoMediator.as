@@ -38,8 +38,8 @@ public class AccountInfoMediator extends Mediator
                 if ((((!(_local_1 == null)) && (!(_local_1.userDisplayName == null))) && (_local_1.userDisplayName.length > 0)))
                 {
                     this.view.setInfo(_local_1.userDisplayName, this.account.isRegistered());
-                };
-            };
+                }
+            }
         }
 
         override public function destroy():void

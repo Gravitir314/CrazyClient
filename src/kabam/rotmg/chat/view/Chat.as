@@ -37,7 +37,7 @@ public class Chat extends Sprite
             else
             {
                 y = (300 + (300 * (1 - (600 / WebMain.sHeight))));
-            };
+            }
             this.list.y = _arg_1.bounds.height;
             if (_arg_2)
             {
@@ -46,7 +46,7 @@ public class Chat extends Sprite
             else
             {
                 this.addInputNotAllowed();
-            };
+            }
         }
 
         private function addChatInput():void
@@ -67,11 +67,11 @@ public class Chat extends Sprite
             if (((!(this.notAllowed == null)) && (contains(this.notAllowed))))
             {
                 removeChild(this.notAllowed);
-            };
+            }
             if (((this.input == null) || (!(contains(this.input)))))
             {
                 this.addChatInput();
-            };
+            }
         }
 
 

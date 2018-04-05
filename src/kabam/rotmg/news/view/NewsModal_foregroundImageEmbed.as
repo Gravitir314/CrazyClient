@@ -8,7 +8,7 @@ import mx.core.*;
 		public function NewsModal_foregroundImageEmbed()
 		{
 			super();
-			return;
+
 		}
 	}
 }

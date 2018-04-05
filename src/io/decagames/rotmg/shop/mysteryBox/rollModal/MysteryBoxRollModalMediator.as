@@ -110,7 +110,7 @@ public class MysteryBoxRollModalMediator extends Mediator
                 _local_1.quantity = this.quantity;
                 _local_1.price = this.view.info.priceAmount;
                 _local_1.currency = this.view.info.priceCurrency;
-            };
+            }
             this.client.sendRequest("/account/purchaseMysteryBox", _local_1);
             this.client.complete.addOnce(this.onRollRequestComplete);
             this.timeout = setTimeout(this.showRewards, this.totalRollDelay);
@@ -131,9 +131,9 @@ public class MysteryBoxRollModalMediator extends Mediator
                 if (this.rollNumber == 0)
                 {
                     this.view.prepareResultGrid(this.totalRewards);
-                };
+                }
                 this.view.displayResult([_local_1]);
-            };
+            }
         }
 
         private function onRollRequestComplete(_arg_1:Boolean, _arg_2:*):void
@@ -160,11 +160,11 @@ public class MysteryBoxRollModalMediator extends Mediator
                     _local_7 = this.convertItemsToAmountDictionary(_local_6);
                     this.totalRewards = (this.totalRewards + DictionaryUtils.countKeys(_local_7));
                     this.rewardsList.push(_local_7);
-                };
+                }
                 if (((_local_3.hasOwnProperty("Left")) && (!(this.view.info.unitsLeft == -1))))
                 {
                     this.view.info.unitsLeft = int(_local_3.Left);
-                };
+                }
                 _local_5 = this.gameModel.player;
                 if (_local_5 != null)
                 {
@@ -177,8 +177,8 @@ public class MysteryBoxRollModalMediator extends Mediator
                         if (_local_3.hasOwnProperty("Fame"))
                         {
                             _local_5.setFame(int(_local_3.Fame));
-                        };
-                    };
+                        }
+                    }
                 }
                 else
                 {
@@ -193,14 +193,14 @@ public class MysteryBoxRollModalMediator extends Mediator
                             if (_local_3.hasOwnProperty("Fame"))
                             {
                                 this.playerModel.setFame(int(_local_3.Fame));
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 if (this.timerComplete)
                 {
                     this.showRewards();
-                };
+                }
             }
             else
             {
@@ -209,7 +209,7 @@ public class MysteryBoxRollModalMediator extends Mediator
                 if (LineBuilder.getLocalizedStringFromKey(_arg_2) != "")
                 {
                     _local_8 = _arg_2;
-                };
+                }
                 if (_arg_2.indexOf("MysteryBoxError.soldOut") >= 0)
                 {
                     _local_9 = _arg_2.split("|");
@@ -226,9 +226,9 @@ public class MysteryBoxRollModalMediator extends Mediator
                                 "left":this.view.info.unitsLeft,
                                 "box":((this.view.info.unitsLeft == 1) ? LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box") : LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes"))
                             });
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_arg_2.indexOf("MysteryBoxError.maxPurchase") >= 0)
                 {
                     _local_11 = _arg_2.split("|");
@@ -242,19 +242,19 @@ public class MysteryBoxRollModalMediator extends Mediator
                         else
                         {
                             _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.maxPurchaseLeft", {"left":_local_12});
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_arg_2.indexOf("blockedForUser") >= 0)
                 {
                     _local_13 = _arg_2.split("|");
                     if (_local_13.length == 2)
                     {
                         _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.blockedForUser", {"date":_local_13[1]});
-                    };
-                };
+                    }
+                }
                 this.showErrorMessage(_local_8);
-            };
+            }
         }
 
         private function showErrorMessage(_arg_1:String):void
@@ -270,7 +270,7 @@ public class MysteryBoxRollModalMediator extends Mediator
             if (this.view.info.quantity > 1)
             {
                 this.totalRollDelay = 1000;
-            };
+            }
         }
 
         private function convertItemsToAmountDictionary(_arg_1:Array):Dictionary
@@ -286,8 +286,8 @@ public class MysteryBoxRollModalMediator extends Mediator
                 else
                 {
                     _local_2[_local_3] = 1;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -307,10 +307,10 @@ public class MysteryBoxRollModalMediator extends Mediator
                 for each (_local_7 in _local_6)
                 {
                     _local_5.push(this.convertItemsToAmountDictionary(_local_7.split(",")));
-                };
+                }
                 _local_2[_local_3] = _local_5;
                 _local_3++;
-            };
+            }
             this.totalRolls = _local_3;
             return (_local_2);
         }
@@ -330,7 +330,7 @@ public class MysteryBoxRollModalMediator extends Mediator
                 this.view.spinner.value = this.view.quantity;
                 this.view.showBuyButton();
                 this.view.buyButton.clickSignal.add(this.buyMore);
-            };
+            }
         }
 
         private function changeAmountHandler(_arg_1:int):void
@@ -342,7 +342,7 @@ public class MysteryBoxRollModalMediator extends Mediator
             else
             {
                 this.view.buyButton.price = (_arg_1 * int(this.view.info.priceAmount));
-            };
+            }
         }
 
         private function buyMore(_arg_1:BaseButton):void
@@ -357,7 +357,7 @@ public class MysteryBoxRollModalMediator extends Mediator
                 this.quantity = this.view.quantity;
                 this.playRollAnimation();
                 this.sendRollRequest();
-            };
+            }
         }
 
         private function playRollAnimation():void
@@ -377,7 +377,7 @@ public class MysteryBoxRollModalMediator extends Mediator
             {
                 _local_4 = int(Math.floor((Math.random() * _local_3.length)));
                 _local_2.push(_local_3[_local_4]);
-            };
+            }
             this.view.displayItems(_local_2);
         }
 

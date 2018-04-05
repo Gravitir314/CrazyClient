@@ -68,7 +68,7 @@ public class FriendListContainer extends Sprite
             if (_local_2 != null)
             {
                 this._currentY = (this._currentY - (_local_2.height + this.GAP_Y));
-            };
+            }
             return (this._itemContainer.removeChildAt(_arg_1) as Sprite);
         }
 
@@ -77,7 +77,7 @@ public class FriendListContainer extends Sprite
             while (this._itemContainer.numChildren > 0)
             {
                 this._itemContainer.removeChildAt((this._itemContainer.numChildren - 1));
-            };
+            }
             this._currentY = 0;
         }
 
@@ -87,7 +87,7 @@ public class FriendListContainer extends Sprite
             if (_arg_1)
             {
                 this._scrollbar.setIndicatorSize(this._height, this._currentY);
-            };
+            }
         }
 
         private function onScrollBarChange(_arg_1:Event):void

@@ -54,7 +54,7 @@ public class GetPackagesTask extends BaseTask
             {
                 this.logger.warn("GetPackageTask.onComplete: Request failed.");
                 completeTask(true);
-            };
+            }
         }
 
         private function handleOkay(_arg_1:*):void
@@ -69,7 +69,7 @@ public class GetPackagesTask extends BaseTask
             else
             {
                 this.parse(XML(_arg_1).child("Package"));
-            };
+            }
             completeTask(true);
         }
 
@@ -99,35 +99,35 @@ public class GetPackagesTask extends BaseTask
                     _local_3.saleAmount = int(_local_2.Sale.attribute("price").toString());
                     _local_3.saleCurrency = int(_local_2.Sale.attribute("currency").toString());
                     _local_3.saleEnd = TimeUtil.parseUTCDate(_local_2.Sale.End.toString());
-                };
+                }
                 if (_local_2.hasOwnProperty("Left"))
                 {
                     _local_3.unitsLeft = _local_2.Left;
-                };
+                }
                 if (_local_2.hasOwnProperty("Total"))
                 {
                     _local_3.totalUnits = _local_2.Total;
-                };
+                }
                 if (_local_2.hasOwnProperty("Slot"))
                 {
                     _local_3.slot = _local_2.Slot;
-                };
+                }
                 if (_local_2.hasOwnProperty("Tags"))
                 {
                     _local_3.tags = _local_2.Tags;
-                };
+                }
                 _local_3.startTime = TimeUtil.parseUTCDate(_local_2.StartTime.toString());
                 if (_local_2.EndTime.toString())
                 {
                     _local_3.endTime = TimeUtil.parseUTCDate(_local_2.EndTime.toString());
-                };
+                }
                 _local_3.image = _local_2.Image.toString();
                 if (_local_2.PopupImage.toString() != "")
                 {
                     _local_3.popupImage = _local_2.PopupImage.toString();
-                };
+                }
                 _local_4.push(_local_3);
-            };
+            }
             this.packageModel.setPackages(_local_4);
         }
 
@@ -144,8 +144,8 @@ public class GetPackagesTask extends BaseTask
                 if (packageHistory)
                 {
                     numPurchased = int(packageHistory.Count);
-                };
-            };
+                }
+            }
             return (numPurchased);
         }
 

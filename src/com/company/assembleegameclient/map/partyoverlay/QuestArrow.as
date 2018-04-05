@@ -47,11 +47,11 @@ public class QuestArrow extends GameObjectArrow
             if (((_arg_1 == null) || (_arg_1.texture_ == null)))
             {
                 return (null);
-            };
+            }
             if (Parameters.data_.showQuestPortraits)
             {
                 return (new PortraitToolTip(_arg_1));
-            };
+            }
             return (null);
         }
 
@@ -80,9 +80,9 @@ public class QuestArrow extends GameObjectArrow
                     if (_local_3 != _local_4)
                     {
                         setToolTip(this.getToolTip(_local_5, _arg_1));
-                    };
-                };
-            };
+                    }
+                }
+            }
             super.draw(_arg_1, _arg_2);
         }
 

@@ -43,7 +43,7 @@ public class SetScreenWithValidDataCommand
             else
             {
                 this.setScreen.dispatch(this.view);
-            };
+            }
         }
 
         private function reloadDataThenSetScreen():void

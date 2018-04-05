@@ -28,7 +28,7 @@ public class IsPackageAffordableGuard implements IGuard
             if (!_local_1)
             {
                 this.openMoneyWindow.dispatch();
-            };
+            }
             return (_local_1);
         }
 

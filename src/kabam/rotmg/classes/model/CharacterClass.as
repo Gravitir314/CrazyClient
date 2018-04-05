@@ -46,7 +46,7 @@ public class CharacterClass
             {
                 this.isSelected = _arg_1;
                 ((this.isSelected) && (this.selected.dispatch(this)));
-            };
+            }
         }
 
         public function getMaxLevelAchieved():int

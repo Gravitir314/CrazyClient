@@ -60,7 +60,7 @@ public class SteamLoadApiTask extends BaseTask
             else
             {
                 this.showErrorDialog();
-            };
+            }
         }
 
         private function showErrorDialog():void

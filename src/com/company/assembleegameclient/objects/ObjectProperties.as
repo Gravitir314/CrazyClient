@@ -195,7 +195,7 @@ class WhileMovingProperties
         if (_arg_1.hasOwnProperty("Z"))
         {
             this.z_ = Number(_arg_1.Z);
-        };
+        }
         this.flying_ = _arg_1.hasOwnProperty("Flying");
     }
 

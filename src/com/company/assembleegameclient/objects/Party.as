@@ -51,23 +51,22 @@ public class Party
                     debugEnd = false;
                     addTextLine.dispatch(ChatMessage.make("Counter", (COUNT + " tutorials done on this session.")));
                     player.map_.gs_.gsc_.playerText("/tutorial");
-                };
-            };
+                }
+            }
             if (player.map_.name_ == "Nexus") {
                 PATH_IDX = 0;
                 player.map_.gs_.gsc_.playerText("/tutorial");
-            };
-        };
-
+            }
+        }
         public static function moveTo(dx:Number, dy:Number, player:Player):void{
             if (((int(player.x_) == dx) && (int(player.y_) == dy))){
                 if (PATH_IDX == (DOD_PATH_X.length - 1)){
                     debugEnd = true;
                 } else {
                     PATH_IDX++;
-                };
+                }
                 return;
-            };
+            }
             var speed:Number = (player.getPSpeed() * 10);
             var xDir:Boolean = (player.x_ > dx);
             var yDir:Boolean = (player.y_ > dy);
@@ -81,9 +80,9 @@ public class Party
                 } else {
                     if (xMove){
                         player.walkTo(player.x_, ((!(!(yDir))) ? (player.y_ - speed) : (player.y_ + speed)));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function update(_arg_1:int, _arg_2:int):void
@@ -93,14 +92,14 @@ public class Party
             if (_arg_1 < (this.lastUpdate_ + 500))
             {
                 return;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             this.members_.length = 0;
             var _local_5:Player = this.map_.player_;
             if (_local_5 == null)
             {
                 return;
-            };
+            }
             for each (_local_3 in this.map_.goDict_)
             {
                 _local_4 = (_local_3 as Player);
@@ -114,15 +113,15 @@ public class Party
                         if (!(((this.map_.name_ == "Nexus") && (Parameters.data_.HidePlayerFilter)) && (_local_4.numStars_ <= Parameters.data_.chatStarRequirement)))
                         {
                             this.members_.push(_local_4);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             this.members_.sortOn(SORT_ON_FIELDS, SORT_ON_PARAMS);
             if (this.members_.length > NUM_MEMBERS)
             {
                 this.members_.length = NUM_MEMBERS;
-            };
+            }
         }
 
         public function lockPlayer(_arg_1:Player):void
@@ -150,7 +149,7 @@ public class Party
                 this.starred_[_local_2] = 1;
                 this.lastUpdate_ = int.MIN_VALUE;
                 _local_3++;
-            };
+            }
         }
 
         public function removeStars(_arg_1:AccountList):void
@@ -163,7 +162,7 @@ public class Party
                 delete this.starred_[_local_2];
                 this.lastUpdate_ = int.MIN_VALUE;
                 _local_3++;
-            };
+            }
         }
 
         public function ignorePlayer(_arg_1:Player):void
@@ -192,7 +191,7 @@ public class Party
                 this.ignored_[_local_2] = 1;
                 this.lastUpdate_ = int.MIN_VALUE;
                 _local_3++;
-            };
+            }
         }
 
 

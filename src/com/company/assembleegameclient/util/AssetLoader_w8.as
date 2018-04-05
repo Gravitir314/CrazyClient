@@ -8,7 +8,7 @@ import mx.core.*;
 		public function AssetLoader_w8()
 		{
 			super();
-			return;
+
 		}
 	}
 }

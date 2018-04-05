@@ -75,7 +75,7 @@ public class PetAbilityDisplay extends Sprite
             if (this.vo.getUnlocked())
             {
                 this.makeValueTextField();
-            };
+            }
         }
 
         private function makeValueTextField():void
@@ -92,7 +92,7 @@ public class PetAbilityDisplay extends Sprite
             if (this.valueTextField)
             {
                 this.valueTextField.setStringBuilder(new LineBuilder().setParams(this.getLevelKey(this.vo), {"level":this.vo.level}));
-            };
+            }
         }
 
         private function makeLabelTextfield():void

@@ -91,7 +91,7 @@ public class RegisterWebAccountDialog extends Frame
                 _local_2.username = this.emailInput.text();
                 _local_2.password = this.passwordInput.text();
                 this.register.dispatch(_local_2);
-            };
+            }
         }
 
         private function isCheckboxChecked():Boolean
@@ -100,7 +100,7 @@ public class RegisterWebAccountDialog extends Frame
             if (!_local_1)
             {
                 this.checkbox.setError(TextKey.REGISTER_WEB_ACCOUNT_CHECK_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -110,7 +110,7 @@ public class RegisterWebAccountDialog extends Frame
             if (!_local_1)
             {
                 this.emailInput.setError(TextKey.INVALID_EMAIL_ADDRESS);
-            };
+            }
             return (_local_1);
         }
 
@@ -120,7 +120,7 @@ public class RegisterWebAccountDialog extends Frame
             if (!_local_1)
             {
                 this.passwordInput.setError(TextKey.REGISTER_WEB_SHORT_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -130,7 +130,7 @@ public class RegisterWebAccountDialog extends Frame
             if (!_local_1)
             {
                 this.retypePasswordInput.setError(TextKey.REGISTER_WEB_MATCH_ERROR);
-            };
+            }
             return (_local_1);
         }
 

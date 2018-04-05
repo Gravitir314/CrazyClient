@@ -112,7 +112,7 @@ public class Projectile extends BasicObject
             else
             {
                 _local_9 = ObjectLibrary.getSizeFromType(this.containerType_);
-            };
+            }
             this.p_.setSize((8 * (_local_9 / 100)));
             this.damage_ = 0;
         }
@@ -130,7 +130,7 @@ public class Projectile extends BasicObject
             if (!super.addTo(_arg_1, _arg_2, _arg_3))
             {
                 return (false);
-            };
+            }
             if (((!(this.containerProps_.flying_)) && (square_.sink_)))
             {
                 z_ = 0.1;
@@ -141,8 +141,8 @@ public class Projectile extends BasicObject
                 if (((!(_local_4 == null)) && (_local_4.sinkLevel_ > 0)))
                 {
                     z_ = (0.5 - (0.4 * (_local_4.sinkLevel_ / Parameters.MAX_SINK_LEVEL)));
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -153,7 +153,7 @@ public class Projectile extends BasicObject
             if (_local_3 == null)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;
@@ -212,8 +212,8 @@ public class Projectile extends BasicObject
                         if (_local_13 > _local_11)
                         {
                             _local_13 = (_local_11 - (_local_13 - _local_11));
-                        };
-                    };
+                        }
+                    }
                     _arg_2.x = (_arg_2.x + (_local_13 * Math.cos(this.angle_)));
                     _arg_2.y = (_arg_2.y + (_local_13 * Math.sin(this.angle_)));
                     if (this.projProps_.amplitude_ != 0)
@@ -221,9 +221,9 @@ public class Projectile extends BasicObject
                         _local_12 = (this.projProps_.amplitude_ * Math.sin((_local_14 + ((((_arg_1 / this.projProps_.lifetime_) * this.projProps_.frequency_) * 2) * Math.PI))));
                         _arg_2.x = (_arg_2.x + (_local_12 * Math.cos((this.angle_ + (Math.PI / 2)))));
                         _arg_2.y = (_arg_2.y + (_local_12 * Math.sin((this.angle_ + (Math.PI / 2)))));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -240,7 +240,7 @@ public class Projectile extends BasicObject
             if (_local_11 > this.projProps_.lifetime_)
             {
                 return (false);
-            };
+            }
             var _local_12:Point = this.staticPoint_;
             this.positionAt(_local_11, _local_12);
             if (((!(this.moveTo(_local_12.x, _local_12.y))) || (square_.tileType_ == 0xFFFF)))
@@ -257,11 +257,11 @@ public class Projectile extends BasicObject
                         {
                             _local_3 = BloodComposition.getColors(this.texture_);
                             map_.addObj(new HitEffect(_local_3, 100, 3, this.angle_, this.projProps_.speed_), _local_12.x, _local_12.y);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 return (false);
-            };
+            }
             if ((((!(square_.obj_ == null)) && ((!(square_.obj_.props_.isEnemy_)) || (!(this.damagesEnemies_)))) && ((square_.obj_.props_.enemyOccupySquare_) || ((!(this.projProps_.passesCover_)) && (square_.obj_.props_.occupySquare_)))))
             {
                 if (this.damagesPlayers_)
@@ -274,13 +274,13 @@ public class Projectile extends BasicObject
                     {
                         _local_3 = BloodComposition.getColors(this.texture_);
                         map_.addObj(new HitEffect(_local_3, 100, 3, this.angle_, this.projProps_.speed_), _local_12.x, _local_12.y);
-                    };
-                };
+                    }
+                }
                 if (!((Parameters.data_.PassesCover) && (this.ownerId_ == map_.player_.objectId_)))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             var _local_13:GameObject = this.getHit(_local_12.x, _local_12.y);
             if (_local_13 != null)
             {
@@ -295,7 +295,7 @@ public class Projectile extends BasicObject
                     if (_local_13.hp_ < _local_8)
                     {
                         _local_9 = true;
-                    };
+                    }
                     if (_local_13 == _local_4)
                     {
                         _local_10 = this.statEffHit(this.projProps_.effects_);
@@ -303,7 +303,7 @@ public class Projectile extends BasicObject
                         {
                             _local_4.notifyPlayer(_local_10, 0xFF00, 1500);
                             _local_10 = "";
-                        };
+                        }
                         if (_local_10 == "")
                         {
                             _local_13.damage(true, _local_8, this.projProps_.effects_, false, this);
@@ -315,9 +315,9 @@ public class Projectile extends BasicObject
                             if (_local_8 > 0)
                             {
                                 _local_4.damageWithoutAck(_local_8);
-                            };
+                            }
                             return (false);
-                        };
+                        }
                     }
                     else
                     {
@@ -349,10 +349,10 @@ public class Projectile extends BasicObject
                             if (!this.projProps_.multiHit_)
                             {
                                 map_.gs_.gsc_.otherHit(_arg_1, this.bulletId_, this.ownerId_, _local_13.objectId_);
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 if (this.projProps_.multiHit_)
                 {
                     this.multiHitDict_[_local_13] = true;
@@ -360,8 +360,8 @@ public class Projectile extends BasicObject
                 else
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -378,15 +378,15 @@ public class Projectile extends BasicObject
                             if (((map_.name_ == "Oryx's Castle") && (Parameters.data_.dbQuietCastle)))
                             {
                                 return ("");
-                            };
+                            }
                             return ("Quiet");
-                        };
+                        }
                         break;
                     case 3:
                         if (!Parameters.data_.dbWeak)
                         {
                             return ("Weak");
-                        };
+                        }
                         break;
                     case 4:
                         if (!Parameters.data_.dbSlowed)
@@ -394,57 +394,57 @@ public class Projectile extends BasicObject
                             if (map_.name_ == "Oryx's Castle")
                             {
                                 return ("");
-                            };
+                            }
                             return ("Slowed");
-                        };
+                        }
                         break;
                     case 5:
                         if (!Parameters.data_.dbSick)
                         {
                             return ("Sick");
-                        };
+                        }
                         break;
                     case 6:
                         if (!Parameters.data_.dbDazed)
                         {
                             return ("Dazed");
-                        };
+                        }
                         break;
                     case 7:
                         if (!Parameters.data_.dbStunned)
                         {
                             return ("Stunned");
-                        };
+                        }
                         break;
                     case 14:
                         if (!Parameters.data_.dbParalyzed)
                         {
                             return ("Paralyzed");
-                        };
+                        }
                         break;
                     case 16:
                         if (!Parameters.data_.dbBleeding)
                         {
                             return ("Bleeding");
-                        };
+                        }
                         break;
                     case 22:
                         if (!Parameters.data_.dbPetStasis)
                         {
                             return ("Pet Stasis");
-                        };
+                        }
                         break;
                     case 27:
                         if (!Parameters.data_.dbArmorBroken)
                         {
                             return ("Armor Broken");
-                        };
+                        }
                         break;
                     case 35:
                         if (!Parameters.data_.dbPetrify)
                         {
                             return ("Petrify");
-                        };
+                        }
                         break;
                     case 8:
                     case 9:
@@ -455,8 +455,8 @@ public class Projectile extends BasicObject
                         break;
                     default:
                         return ("Unknown: " + _local_2);
-                };
-            };
+                }
+            }
             return ("");
         }
 
@@ -465,11 +465,11 @@ public class Projectile extends BasicObject
             if (((this.containerType_ > 2567) && (this.containerType_ < 2573)))
             {
                 return (true);
-            };
+            }
             if (((this.containerType_ > 2656) && (this.containerType_ < 2662)))
             {
                 return (true);
-            };
+            }
             switch (this.containerType_)
             {
                 case 2767:
@@ -483,7 +483,7 @@ public class Projectile extends BasicObject
                 case 2782:
                 case 2326:
                     return (true);
-            };
+            }
             return (false);
         }
 
@@ -499,11 +499,11 @@ public class Projectile extends BasicObject
                         if (!Parameters.data_.damageIgnored)
                         {
                             return (false);
-                        };
+                        }
                         break;
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (true);
         }
 
@@ -531,19 +531,19 @@ public class Projectile extends BasicObject
                                     if (_local_3 == map_.player_)
                                     {
                                         return (_local_3);
-                                    };
+                                    }
                                     _local_6 = ((_local_4 * _local_4) + (_local_5 * _local_5));
                                     if (_local_6 < _local_8)
                                     {
                                         _local_8 = _local_6;
                                         _local_7 = _local_3;
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             return (_local_7);
         }
 
@@ -556,11 +556,11 @@ public class Projectile extends BasicObject
             if (MapUserInput.skipRender == true)
             {
                 return;
-            };
+            }
             if (!Parameters.drawProj_)
             {
                 return;
-            };
+            }
             var _local_8:BitmapData = this.texture_;
             if (Parameters.projColorType_ != 0)
             {
@@ -590,9 +590,9 @@ public class Projectile extends BasicObject
                         _local_4 = 0;
                         _local_5 = 0;
                         break;
-                };
+                }
                 _local_8 = TextureRedrawer.redraw(_local_8, 120, true, _local_5);
-            };
+            }
             var _local_9:Number = ((this.props_.rotation_ == 0) ? 0 : (_arg_3 / this.props_.rotation_));
             this.staticVector3D_.x = x_;
             this.staticVector3D_.y = y_;
@@ -607,10 +607,10 @@ public class Projectile extends BasicObject
                     if (((!((!(map_ == null)) && (!(map_.player_.objectId_ == this.ownerId_)))) || (!((this.projProps_.particleTrailIntensity_ == -1) && ((Math.random() * 100) > this.projProps_.particleTrailIntensity_)))))
                     {
                         map_.addObj(new SparkParticle(100, this.projProps_.particleTrailColor_, _local_6, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
-                    };
+                    }
                     _local_7++;
-                };
-            };
+                }
+            }
         }
 
         override public function drawShadow(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
@@ -618,7 +618,7 @@ public class Projectile extends BasicObject
             if (!Parameters.drawProj_)
             {
                 return;
-            };
+            }
             var _local_4:Number = (this.props_.shadowSize_ / 400);
             var _local_5:Number = (30 * _local_4);
             var _local_6:Number = (15 * _local_4);

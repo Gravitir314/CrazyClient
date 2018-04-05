@@ -76,7 +76,7 @@ public class CharacterBox extends Sprite
             else
             {
                 this.graphic_ = new FullCharBoxGraphic();
-            };
+            }
             this.graphicContainer_ = new Sprite();
             addChild(this.graphicContainer_);
             this.graphicContainer_.addChild(this.graphic_);
@@ -110,7 +110,7 @@ public class CharacterBox extends Sprite
                 addChild(this.lock_);
                 addChild(this.statusText_);
                 this.classNameText_.y = 78;
-            };
+            }
         }
 
         public function objectType():int
@@ -134,23 +134,23 @@ public class CharacterBox extends Sprite
                 if (contains(this.statusText_))
                 {
                     removeChild(this.statusText_);
-                };
+                }
                 if (contains(this.buyButton_))
                 {
                     removeChild(this.buyButton_);
-                };
+                }
                 if (((this.lock_) && (contains(this.lock_))))
                 {
                     removeChild(this.lock_);
-                };
+                }
                 if (((this.saleTag_) && (contains(this.saleTag_))))
                 {
                     removeChild(this.saleTag_);
-                };
+                }
                 if (((this.saleText_) && (contains(this.saleText_))))
                 {
                     removeChild(this.saleText_);
-                };
+                }
                 _local_1 = this.getStars(FameUtil.numStars(this.model.getBestFame(this.objectType())), FameUtil.STARS.length);
                 _local_1.y = 60;
                 _local_1.x = ((this.graphic_.width / 2) - (_local_1.width / 2));
@@ -160,14 +160,14 @@ public class CharacterBox extends Sprite
                 if (!this.unlockedText_)
                 {
                     this.getCharacterUnlockText();
-                };
+                }
                 addChild(this.unlockedText_);
                 _local_2 = new GTween(this.unlockedText_, 2.5, {
                     "alpha":0,
                     "y":-30
                 });
                 _local_2.onComplete = this.removeUnlockText;
-            };
+            }
         }
 
         private function removeUnlockText(_arg_1:GTween):void
@@ -185,7 +185,7 @@ public class CharacterBox extends Sprite
             if (!this.available_)
             {
                 return;
-            };
+            }
             if (_arg_1)
             {
                 transform.colorTransform = new ColorTransform(1.2, 1.2, 1.2);
@@ -193,7 +193,7 @@ public class CharacterBox extends Sprite
             else
             {
                 transform.colorTransform = new ColorTransform(1, 1, 1);
-            };
+            }
         }
 
         private function setImage(_arg_1:int, _arg_2:int, _arg_3:Number):void
@@ -216,7 +216,7 @@ public class CharacterBox extends Sprite
                 _local_6.addChild(_local_3);
                 _local_5 = (_local_5 + _local_3.width);
                 _local_4++;
-            };
+            }
             while (_local_4 < _arg_2)
             {
                 _local_3 = new StarGraphic();
@@ -225,7 +225,7 @@ public class CharacterBox extends Sprite
                 _local_6.addChild(_local_3);
                 _local_5 = (_local_5 + _local_3.width);
                 _local_4++;
-            };
+            }
             return (_local_6);
         }
 
@@ -237,12 +237,12 @@ public class CharacterBox extends Sprite
                 this.saleTag_.x = 38;
                 this.saleTag_.y = 8;
                 addChild(this.saleTag_);
-            };
+            }
             if (!this.saleText_)
             {
                 this.setSaleText();
                 addChild(this.saleText_);
-            };
+            }
             this.saleText_.setStringBuilder(new LineBuilder().setParams(TextKey.PERCENT_OFF, {"percent":String(_arg_1)}));
         }
 

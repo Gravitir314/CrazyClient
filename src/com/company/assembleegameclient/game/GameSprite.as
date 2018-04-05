@@ -121,7 +121,7 @@ public class GameSprite extends AGameSprite
             if (this.chatPlayerMenu != null)
             {
                 this.removeChatPlayerMenu();
-            };
+            }
             mui_.onMouseDown(_arg_1);
         }
 
@@ -164,10 +164,10 @@ public class GameSprite extends AGameSprite
                     if (((_arg_4.length > 0) && (((_arg_4.charAt(0) == "#") || (_arg_4.charAt(0) == "*")) || (_arg_4.charAt(0) == "@"))))
                     {
                         return;
-                    };
+                    }
                     this.chatPlayerMenu.initDifferentServer(this, _arg_4, _arg_5);
-                };
-            };
+                }
+            }
             addChild(this.chatPlayerMenu);
             this.chatMenuPositionFixed();
         }
@@ -178,7 +178,7 @@ public class GameSprite extends AGameSprite
             {
                 removeChild(this.chatPlayerMenu);
                 this.chatPlayerMenu = null;
-            };
+            }
         }
 
         override public function applyMapInfo(_arg_1:MapInfo):void
@@ -216,16 +216,16 @@ public class GameSprite extends AGameSprite
             if (this.evalIsNotInCombatMapArea())
             {
                 this.showSafeAreaDisplays();
-            };
+            }
             if (map.name_ == "Arena")
             {
                 this.showTimer();
                 this.showWaveCounter();
-            };
+            }
             if (map.name_ == Map.DAILY_QUEST_ROOM)
             {
                 gsc_.questFetch();
-            };
+            }
             _local_1 = StaticInjectorContext.getInjector().getInstance(Account);
             this.questBar = new QuestHealthBar();
             this.questBar.x = 4;
@@ -246,7 +246,7 @@ public class GameSprite extends AGameSprite
                     this.creditDisplay_.x = 594;
                     this.creditDisplay_.y = 0;
                     addChild(this.creditDisplay_);
-            };
+            }
             var _local_3:AppEngineClient = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
             var _local_4:Object = {
                 "game_net_user_id":_local_1.gameNetworkUserId(),
@@ -276,7 +276,7 @@ public class GameSprite extends AGameSprite
                 this.newsModalButton.x = 8;
                 this.newsModalButton.y = 34;
                 addChild(this.newsModalButton);
-            };
+            }
         }
 
         private function showTimer():void
@@ -328,7 +328,7 @@ public class GameSprite extends AGameSprite
             if (((!(map)) || (!(map.player_))))
             {
                 return;
-            };
+            }
             var _local_5:Player = map.player_;
             var _local_6:Number = GeneralConstants.MAXIMUM_INTERACTION_DISTANCE;
             var _local_7:Number = _local_5.x_;
@@ -345,10 +345,10 @@ public class GameSprite extends AGameSprite
                         {
                             _local_6 = _local_1;
                             _local_4 = _local_3;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             this.mapModel.currentInteractiveTarget = _local_4;
         }
 
@@ -367,7 +367,7 @@ public class GameSprite extends AGameSprite
             {
                 this.map.scaleX = (_local_3 * Parameters.data_.mscale);
                 this.map.scaleY = (_local_4 * Parameters.data_.mscale);
-            };
+            }
             if (this.hudView != null)
             {
                 if (_local_2)
@@ -381,18 +381,18 @@ public class GameSprite extends AGameSprite
                     this.hudView.scaleX = _local_3;
                     this.hudView.scaleY = _local_4;
                     this.hudView.y = (300 * (1 - _local_4));
-                };
+                }
                 this.hudView.x = (800 - (200 * this.hudView.scaleX));
                 if (this.creditDisplay_ != null)
                 {
                     this.creditDisplay_.x = (this.hudView.x - (6 * this.creditDisplay_.scaleX));
-                };
-            };
+                }
+            }
             if (this.questBar != null)
             {
                 this.questBar.scaleX = _local_5;
                 this.questBar.scaleY = 1;
-            };
+            }
             if (this.chatBox_ != null)
             {
                 if (_local_2)
@@ -404,9 +404,9 @@ public class GameSprite extends AGameSprite
                 {
                     this.chatBox_.scaleX = _local_3;
                     this.chatBox_.scaleY = _local_4;
-                };
+                }
                 this.chatBox_.y = (300 + (300 * (1 - this.chatBox_.scaleY)));
-            };
+            }
             if (this.rankText_ != null)
             {
                 if (_local_2)
@@ -418,10 +418,10 @@ public class GameSprite extends AGameSprite
                 {
                     this.rankText_.scaleX = _local_3;
                     this.rankText_.scaleY = _local_4;
-                };
+                }
                 this.rankText_.x = (8 * this.rankText_.scaleX);
                 this.rankText_.y = (4 * this.rankText_.scaleY);
-            };
+            }
             if (this.newsModalButton != null)
             {
                 if (_local_2)
@@ -433,10 +433,10 @@ public class GameSprite extends AGameSprite
                 {
                     this.newsModalButton.scaleX = _local_3;
                     this.newsModalButton.scaleY = _local_4;
-                };
+                }
                 this.newsModalButton.x = (6 * this.newsModalButton.scaleX);
                 this.newsModalButton.y = (34 * this.newsModalButton.scaleY);
-            };
+            }
             if (this.guildText_ != null)
             {
                 if (_local_2)
@@ -448,10 +448,10 @@ public class GameSprite extends AGameSprite
                 {
                     this.guildText_.scaleX = _local_3;
                     this.guildText_.scaleY = _local_4;
-                };
+                }
                 this.guildText_.x = (64 * this.guildText_.scaleX);
                 this.guildText_.y = (6 * this.guildText_.scaleY);
-            };
+            }
             if (this.creditDisplay_ != null)
             {
                 if (_local_2)
@@ -463,8 +463,8 @@ public class GameSprite extends AGameSprite
                 {
                     this.creditDisplay_.scaleX = _local_3;
                     this.creditDisplay_.scaleY = _local_4;
-                };
-            };
+                }
+            }
         }
 
         public function connect():void
@@ -481,21 +481,21 @@ public class GameSprite extends AGameSprite
                 if (Parameters.data_.mscale == undefined)
                 {
                     Parameters.data_.mscale = "1.0";
-                };
+                }
                 if (Parameters.data_.stageScale == undefined)
                 {
                     Parameters.data_.stageScale = StageScaleMode.NO_SCALE;
-                };
+                }
                 if (Parameters.data_.uiscale == undefined)
                 {
                     Parameters.data_.uiscale = true;
-                };
+                }
                 Parameters.save();
                 stage.scaleMode = Parameters.data_.stageScale;
                 stage.addEventListener(Event.RESIZE, this.onScreenResize);
                 stage.dispatchEvent(new Event(Event.RESIZE));
                 LoopedProcess.addProcess(new LoopedCallback(100, this.updateNearestInteractive));
-            };
+            }
         }
 
         public function disconnect():void
@@ -547,7 +547,7 @@ public class GameSprite extends AGameSprite
                 _local_2 = int(Math.round(((1000 * this.frameTimeCount_) / this.frameTimeSum_)));
                 this.frameTimeCount_ = 0;
                 this.frameTimeSum_ = 0;
-            };
+            }
             var _local_5:int = getTimer();
             map.update(_local_3, _local_4);
             this.monitor.dispatch("Map.update", (getTimer() - _local_5));
@@ -569,19 +569,19 @@ public class GameSprite extends AGameSprite
             {
                 camera_.configureCamera(this.focus, ((_local_6) ? Boolean(_local_6.isHallucinating()) : false));
                 map.draw(camera_, _local_3);
-            };
+            }
             if (_local_6 != null)
             {
                 if (this.creditDisplay_ != null)
                 {
                     this.creditDisplay_.draw(_local_6.credits_, _local_6.fame_, _local_6.tokens_);
-                };
+                }
                 this.drawCharacterWindow.dispatch(_local_6);
                 if (this.evalIsNotInCombatMapArea())
                 {
                     this.rankText_.draw(_local_6.numStars_);
                     this.guildText_.draw(_local_6.guildName_, _local_6.guildRank_);
-                };
+                }
                 if (_local_6.isPaused())
                 {
                     map.filters = [PAUSED_FILTER];
@@ -601,10 +601,10 @@ public class GameSprite extends AGameSprite
                         map.mouseChildren = true;
                         hudView.mouseEnabled = true;
                         hudView.mouseChildren = true;
-                    };
-                };
+                    }
+                }
                 moveRecords_.addRecord(_local_3, _local_6.x_, _local_6.y_);
-            };
+            }
             lastUpdate_ = _local_3;
             var _local_7:int = (getTimer() - _local_3);
             this.monitor.dispatch("GameSprite.loop", _local_7);
@@ -618,14 +618,14 @@ public class GameSprite extends AGameSprite
             this.timerCounter.visible = true;
             if (_arg_1 < 3000){
                 this.timerCounter.setColor(this.fadeRed(((Parameters.phaseChangeAt - _arg_1) * 0.00033333333)));
-            };
+            }
             this.timerCounter.setText(((Parameters.phaseName + "\n") + toTimeCode((Parameters.phaseChangeAt - _arg_1))));
         }
 
         private function fadeRed(_arg_1:Number):uint{
             if (_arg_1 > 100){
                 _arg_1 = 100;
-            };
+            }
             var _local_5:int = (0xFF * _arg_1);
             var _local_2:* = 0xFF0000;
             var _local_4:* = (_local_5 << 8);

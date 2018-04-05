@@ -30,7 +30,7 @@ public class AccountList extends IncomingMessage
             {
                 this.accountIds_.push(_arg_1.readUTF());
                 _local_2++;
-            };
+            }
             this.lockAction_ = _arg_1.readInt();
         }
 

@@ -56,7 +56,7 @@ public class WebLoginMediator extends Mediator
             if ((this.account is WebAccount))
             {
                 WebAccount(this.account).rememberMe = this.view.isRememberMeSelected();
-            };
+            }
             this.view.disable();
             this.login.dispatch(_arg_1);
         }

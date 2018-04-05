@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_lofiEnvironment2Embed_()
         {
             super();
-            return;
+
         }
     }
 }

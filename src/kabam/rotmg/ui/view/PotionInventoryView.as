@@ -29,7 +29,7 @@ public class PotionInventoryView extends Sprite
                 _local_1.x = (_local_2 * (PotionSlotView.BUTTON_WIDTH + BUTTON_SPACE));
                 addChild(_local_1);
                 _local_2++;
-            };
+            }
         }
 
     }

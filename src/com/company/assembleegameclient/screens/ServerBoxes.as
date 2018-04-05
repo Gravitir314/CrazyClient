@@ -40,7 +40,7 @@ public class ServerBoxes extends Sprite
                     if (_local_4.name == Parameters.data_.preferredServer)
                     {
                         this.setSelected(_local_2);
-                    };
+                    }
                     _local_2.x = (((ServerBox.WIDTH / 2) * 3) + 5);
                     _local_2.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
                     addChild(_local_2);
@@ -52,15 +52,15 @@ public class ServerBoxes extends Sprite
                     if (_local_4.name == Parameters.data_.preferredServer)
                     {
                         this.setSelected(_local_2);
-                    };
+                    }
                     _local_2.x = ((_local_3 % 3) * (ServerBox.WIDTH + 4));
                     _local_2.y = (int((_local_3 / 3)) * (ServerBox.HEIGHT + 4));
                     _local_2.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
                     addChild(_local_2);
                     this.boxes_.push(_local_2);
                     _local_3++;
-                };
-            };
+                }
+            }
         }
 
         private function onMouseDown(_arg_1:MouseEvent):void
@@ -69,7 +69,7 @@ public class ServerBoxes extends Sprite
             if (_local_2 == null)
             {
                 return;
-            };
+            }
             this.setSelected(_local_2);
             Parameters.data_.preferredServer = _local_2.value_;
             Parameters.save();
@@ -81,7 +81,7 @@ public class ServerBoxes extends Sprite
             for each (_local_2 in this.boxes_)
             {
                 _local_2.setSelected(false);
-            };
+            }
             _arg_1.setSelected(true);
         }
 

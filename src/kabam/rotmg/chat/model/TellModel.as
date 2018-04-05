@@ -18,7 +18,7 @@ public class TellModel
             if (_local_2 != -1)
             {
                 this.pastRecipients.splice(_local_2, 1);
-            };
+            }
             this.pastRecipients.unshift(_arg_1);
         }
 
@@ -28,7 +28,7 @@ public class TellModel
             {
                 this.index = ((this.index + 1) % this.pastRecipients.length);
                 return (this.pastRecipients[this.index]);
-            };
+            }
             return ("");
         }
 

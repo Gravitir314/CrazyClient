@@ -8,7 +8,7 @@ import mx.core.*;
 		public function CharacterSkinLimitedBanner_LimitedBanner()
 		{
 			super();
-			return;
+
 		}
 	}
 }

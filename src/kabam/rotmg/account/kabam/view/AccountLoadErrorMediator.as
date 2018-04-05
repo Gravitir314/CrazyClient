@@ -42,11 +42,11 @@ public class AccountLoadErrorMediator extends Mediator
                 if (((_local_1) && (_local_1.length)))
                 {
                     _local_2 = _local_1;
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
             return (_local_2);
         }
 

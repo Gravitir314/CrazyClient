@@ -48,7 +48,7 @@ public class WebChangePasswordDialog extends Frame
                 _local_2.currentPassword = this.password_.text();
                 _local_2.newPassword = this.newPassword_.text();
                 this.change.dispatch(_local_2);
-            };
+            }
         }
 
         private function isCurrentPasswordValid():Boolean
@@ -57,7 +57,7 @@ public class WebChangePasswordDialog extends Frame
             if (!_local_1)
             {
                 this.password_.setError(TextKey.WEB_CHANGE_PASSWORD_INCORRECT);
-            };
+            }
             return (_local_1);
         }
 
@@ -67,7 +67,7 @@ public class WebChangePasswordDialog extends Frame
             if (!_local_1)
             {
                 this.newPassword_.setError(TextKey.LINK_WEB_ACCOUNT_SHORT);
-            };
+            }
             return (_local_1);
         }
 
@@ -77,7 +77,7 @@ public class WebChangePasswordDialog extends Frame
             if (!_local_1)
             {
                 this.retypeNewPassword_.setError(TextKey.PASSWORD_DOES_NOT_MATCH);
-            };
+            }
             return (_local_1);
         }
 

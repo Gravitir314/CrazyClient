@@ -8,7 +8,7 @@ import mx.core.*;
 		public function DailyQuestAssets_DailyQuestsCloseButton()
 		{
 			super();
-			return;
+
 		}
 	}
 }

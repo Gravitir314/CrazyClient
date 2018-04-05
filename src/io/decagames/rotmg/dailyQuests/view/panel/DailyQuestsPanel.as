@@ -51,7 +51,7 @@ public class DailyQuestsPanel extends Panel
             else
             {
                 this.addCheckBackLaterButton();
-            };
+            }
         }
 
         public function addSeeOffersButton():void

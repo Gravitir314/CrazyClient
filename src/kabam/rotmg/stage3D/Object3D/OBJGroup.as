@@ -30,7 +30,7 @@ public class OBJGroup
             {
                 this.indexBuffer.dispose();
                 this.indexBuffer = null;
-            };
+            }
             this._faces.length = 0;
             this._indices.length = 0;
         }

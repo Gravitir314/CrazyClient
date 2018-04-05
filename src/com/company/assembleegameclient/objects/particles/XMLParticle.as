@@ -43,7 +43,7 @@ public class XMLParticle extends BasicObject
             if (_arg_1.animationsData_ != null)
             {
                 this.animations_ = new Animations(_arg_1.animationsData_);
-            };
+            }
             this.moveVec_ = new Vector3D();
             var _local_2:Number = ((Math.PI * 2) * Math.random());
             this.moveVec_.x = ((Math.cos(_local_2) * 0.1) * 5);
@@ -56,7 +56,7 @@ public class XMLParticle extends BasicObject
             if (_local_3 == null)
             {
                 return (false);
-            };
+            }
             x_ = _arg_1;
             y_ = _arg_2;
             square_ = _local_3;
@@ -71,7 +71,7 @@ public class XMLParticle extends BasicObject
             if (this.durationLeft_ <= 0)
             {
                 return (false);
-            };
+            }
             x_ = (x_ + (this.moveVec_.x * _local_3));
             y_ = (y_ + (this.moveVec_.y * _local_3));
             return (true);
@@ -87,8 +87,8 @@ public class XMLParticle extends BasicObject
                 if (_local_4 != null)
                 {
                     _local_5 = _local_4;
-                };
-            };
+                }
+            }
             _local_5 = TextureRedrawer.redraw(_local_5, this.size_, true, 0);
             var _local_6:int = _local_5.width;
             var _local_7:int = _local_5.height;

@@ -56,7 +56,7 @@ public class MenuOptionsBar extends Sprite
                     this.rightObjects.push(_arg_1);
                     _arg_1.changed.add(this.layoutRightButtons);
                     return;
-            };
+            }
         }
 
         private function layoutLeftButtons():void
@@ -66,7 +66,7 @@ public class MenuOptionsBar extends Sprite
             {
                 this.layoutToLeftOf(this.leftObjects[(_local_1 - 1)], this.leftObjects[_local_1]);
                 _local_1++;
-            };
+            }
         }
 
         private function layoutToLeftOf(_arg_1:TitleMenuOption, _arg_2:TitleMenuOption):void
@@ -84,7 +84,7 @@ public class MenuOptionsBar extends Sprite
             {
                 this.layoutToRightOf(this.rightObjects[(_local_1 - 1)], this.rightObjects[_local_1]);
                 _local_1++;
-            };
+            }
         }
 
         private function layoutToRightOf(_arg_1:TitleMenuOption, _arg_2:TitleMenuOption):void

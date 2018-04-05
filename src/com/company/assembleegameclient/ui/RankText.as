@@ -36,7 +36,7 @@ public class RankText extends Sprite
                 this.prefix_.filters = [new DropShadowFilter(0, 0, 0)];
                 this.prefix_.textChanged.addOnce(this.position);
                 addChild(this.prefix_);
-            };
+            }
             mouseEnabled = false;
             mouseChildren = false;
             this.draw(_arg_1);
@@ -71,16 +71,16 @@ public class RankText extends Sprite
             if (numStars == this.numStars_)
             {
                 return;
-            };
+            }
             this.numStars_ = numStars;
             if (((!(this.background == null)) && (contains(this.background))))
             {
                 removeChild(this.background);
-            };
+            }
             if (this.numStars_ < 0)
             {
                 return;
-            };
+            }
             this.background = new Sprite();
             text = this.makeText();
             text.setVerticalAlign(TextFieldDisplayConcrete.BOTTOM);
@@ -94,7 +94,7 @@ public class RankText extends Sprite
             if (this.prefix_ != null)
             {
                 this.positionWhenTextIsReady();
-            };
+            }
         }
 
         private function positionWhenTextIsReady():void
@@ -106,7 +106,7 @@ public class RankText extends Sprite
             else
             {
                 this.waiter.complete.addOnce(this.position);
-            };
+            }
         }
 
         private function position():void
@@ -115,7 +115,7 @@ public class RankText extends Sprite
             {
                 this.background.x = this.prefix_.width;
                 this.prefix_.y = (this.icon.y - 3);
-            };
+            }
         }
 
 

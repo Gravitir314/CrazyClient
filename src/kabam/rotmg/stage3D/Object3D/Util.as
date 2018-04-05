@@ -39,10 +39,10 @@ public class Util
                 {
                     _arg_1.position = (_arg_1.position + Math.max(0, (_arg_2 - (_local_4 + 1))));
                     break;
-                };
+                }
                 _local_5 = (_local_5 + String.fromCharCode(_local_3));
                 _local_4++;
-            };
+            }
             return (_local_5);
         }
 

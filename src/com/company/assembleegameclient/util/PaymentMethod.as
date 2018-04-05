@@ -41,8 +41,8 @@ public class PaymentMethod
                 if (_local_2.label_ == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -66,7 +66,7 @@ public class PaymentMethod
                     _local_6["price"] = _arg_3.price_.toString();
                     _local_6["paymentid"] = this.paymentid_;
                     break;
-            };
+            }
             return ((_local_5.getAppEngineUrl(true) + "/credits/add?") + _local_6.toString());
         }
 

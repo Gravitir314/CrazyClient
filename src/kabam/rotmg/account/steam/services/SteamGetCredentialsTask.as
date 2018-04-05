@@ -45,7 +45,7 @@ public class SteamGetCredentialsTask extends BaseTask
             else
             {
                 this.onGetCredentialsError(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 

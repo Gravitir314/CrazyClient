@@ -25,7 +25,7 @@ public class ResetClassDataCommand
             {
                 this.resetClass(this.classes.getClassAtIndex(_local_1));
                 _local_1++;
-            };
+            }
         }
 
         private function resetClass(_arg_1:CharacterClass):void
@@ -46,9 +46,9 @@ public class ResetClassDataCommand
                 if (_local_2 != _local_4)
                 {
                     this.resetSkin(_arg_1.skins.getSkinAt(_local_3));
-                };
+                }
                 _local_3++;
-            };
+            }
         }
 
         private function resetSkin(_arg_1:CharacterSkin):void

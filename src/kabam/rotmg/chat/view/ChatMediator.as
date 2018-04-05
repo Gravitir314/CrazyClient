@@ -91,7 +91,7 @@ public class ChatMediator extends Mediator
             {
                 this.addListeners();
                 this.stage.focus = null;
-            };
+            }
         }
 
         private function onRegister(_arg_1:AccountData):void
@@ -99,7 +99,7 @@ public class ChatMediator extends Mediator
             if (_arg_1.error == null)
             {
                 this.view.removeRegisterBlock();
-            };
+            }
         }
 
         override public function destroy():void
@@ -119,7 +119,7 @@ public class ChatMediator extends Mediator
                 this.stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
                 this.stage.addEventListener(KeyboardEvent.KEY_UP, this.onKeyUp);
                 this.listenersAdded = true;
-            };
+            }
         }
 
         private function removeListeners():void
@@ -130,7 +130,7 @@ public class ChatMediator extends Mediator
                 this.stage.removeEventListener(KeyboardEvent.KEY_UP, this.onKeyUp);
                 this.stage.removeEventListener(Event.ENTER_FRAME, this.iterate);
                 this.listenersAdded = false;
-            };
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -144,8 +144,8 @@ public class ChatMediator extends Mediator
                 if (_arg_1.keyCode == this.shortcuts.getScrollDown())
                 {
                     this.setupScroll(1);
-                };
-            };
+                }
+            }
         }
 
         private function setupScroll(_arg_1:int):void
@@ -161,7 +161,7 @@ public class ChatMediator extends Mediator
             if (this.scrollBuffer++ >= SCROLL_BUFFER_SIZE)
             {
                 this.scrollList.dispatch(this.scrollDirection);
-            };
+            }
         }
 
         private function onKeyUp(_arg_1:KeyboardEvent):void
@@ -169,11 +169,11 @@ public class ChatMediator extends Mediator
             if (this.listenersAdded)
             {
                 this.checkForInputTrigger(_arg_1.keyCode);
-            };
+            }
             if (((_arg_1.keyCode == this.shortcuts.getScrollUp()) || (_arg_1.keyCode == this.shortcuts.getScrollDown())))
             {
                 this.view.removeEventListener(Event.ENTER_FRAME, this.iterate);
-            };
+            }
         }
 
         private function checkForInputTrigger(_arg_1:uint):void
@@ -201,11 +201,11 @@ public class ChatMediator extends Mediator
                             if (_arg_1 == this.shortcuts.getTellShortcut())
                             {
                                 this.triggerOrPromptRegistration((("/tell " + this.tellModel.getNext()) + " "));
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private function triggerOrPromptRegistration(_arg_1:String):void

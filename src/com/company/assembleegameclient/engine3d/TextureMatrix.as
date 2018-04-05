@@ -57,7 +57,7 @@ public class TextureMatrix
             {
                 this.uvMatrix_ = null;
                 return;
-            };
+            }
             var _local_2:int = (_arg_1.length - 3);
             var _local_3:Number = (_arg_1[0] * this.texture_.width);
             var _local_4:Number = (_arg_1[1] * this.texture_.height);

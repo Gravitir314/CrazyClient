@@ -64,13 +64,13 @@ public class Square
             for each (_local_1 in this.faces_)
             {
                 _local_1.dispose();
-            };
+            }
             this.faces_.length = 0;
             if (this.topFace_ != null)
             {
                 this.topFace_.dispose();
                 this.topFace_ = null;
-            };
+            }
             this.faces_ = null;
             this.baseTexMatrix_ = null;
         }
@@ -95,15 +95,15 @@ public class Square
             if (MapUserInput.skipRender == true)
             {
                 return;
-            };
+            }
             if (this.texture_ == null)
             {
                 return;
-            };
+            }
             if (this.faces_.length == 0)
             {
                 this.rebuild3D();
-            };
+            }
             for each (_local_4 in this.faces_)
             {
                 if (!_local_4.draw(_arg_1, _arg_2, _arg_3))
@@ -111,10 +111,10 @@ public class Square
                     if (_local_4.face_.vout_[1] < _arg_2.clipRect_.bottom)
                     {
                         this.lastVisible_ = 0;
-                    };
+                    }
                     return;
-                };
-            };
+                }
+            }
         }
 
         public function drawTop(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
@@ -139,7 +139,7 @@ public class Square
                 if (_local_6 != null)
                 {
                     this.faces_.push(new SquareFace(_local_6, this.vin_, 0, 0, AnimateProperties.NO_ANIMATE, 0, 0));
-                };
+                }
             }
             else
             {
@@ -157,10 +157,10 @@ public class Square
                     {
                         _local_1 = this.props_.xOffset_;
                         _local_2 = this.props_.yOffset_;
-                    };
-                };
+                    }
+                }
                 this.faces_.push(new SquareFace(((_local_6 != null) ? _local_6 : this.texture_), this.vin_, _local_1, _local_2, AnimateProperties.NO_ANIMATE, 0, 0));
-            };
+            }
             if (this.props_.sink_)
             {
                 this.sink_ = ((_local_6 == null) ? 12 : 6);
@@ -168,7 +168,7 @@ public class Square
             else
             {
                 this.sink_ = 0;
-            };
+            }
             if (this.props_.topTD_)
             {
                 _local_3 = this.props_.topTD_.getTexture();
@@ -178,9 +178,9 @@ public class Square
                 {
                     _local_4[_local_5] = 1;
                     _local_5 = (_local_5 + 3);
-                };
+                }
                 this.topFace_ = new SquareFace(_local_3, _local_4, 0, 0, this.props_.topAnimate_.type_, this.props_.topAnimate_.dx_, this.props_.topAnimate_.dy_);
-            };
+            }
         }
 
 

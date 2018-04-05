@@ -27,7 +27,7 @@ import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-public class MemberListLine extends Sprite 
+public class MemberListLine extends Sprite
     {
 
         public static const WIDTH:int = 756;
@@ -56,7 +56,7 @@ public class MemberListLine extends Sprite
             if (_arg_5)
             {
                 _local_7 = 16564761;
-            };
+            }
             this.placeText_ = new TextFieldDisplayConcrete().setSize(22).setColor(_local_7);
             this.placeText_.setStringBuilder(new StaticStringBuilder((_arg_1.toString() + ".")));
             this.placeText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
@@ -99,7 +99,7 @@ public class MemberListLine extends Sprite
                 this.promoteButton_.x = (670 + 6);
                 this.promoteButton_.y = (HEIGHT / 2);
                 addChild(this.promoteButton_);
-            };
+            }
             if (GuildUtil.canDemote(_arg_6, _arg_3))
             {
                 this.demoteButton_ = this.createArrow(false);
@@ -108,7 +108,7 @@ public class MemberListLine extends Sprite
                 this.demoteButton_.x = (700 + 6);
                 this.demoteButton_.y = (HEIGHT / 2);
                 addChild(this.demoteButton_);
-            };
+            }
             if (GuildUtil.canRemove(_arg_6, _arg_3))
             {
                 this.removeButton_ = new DeleteXGraphic();
@@ -117,7 +117,7 @@ public class MemberListLine extends Sprite
                 this.removeButton_.x = 730;
                 this.removeButton_.y = ((HEIGHT / 2) - (this.removeButton_.height / 2));
                 addChild(this.removeButton_);
-            };
+            }
         }
 
         private function createArrow(_arg_1:Boolean):Sprite
@@ -132,7 +132,7 @@ public class MemberListLine extends Sprite
             if (_arg_1)
             {
                 _local_2.rotation = 180;
-            };
+            }
             return (_local_2);
         }
 

@@ -75,8 +75,8 @@ public class Chooser extends Sprite
                 {
                     this.setSelected(_local_2);
                     return;
-                };
-            };
+                }
+            }
         }
 
         protected function addElement(_arg_1:Element):void
@@ -89,7 +89,7 @@ public class Chooser extends Sprite
             if (_local_2 == 0)
             {
                 this.setSelected(_arg_1);
-            };
+            }
             _arg_1.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             this.elements_.push(_arg_1);
         }
@@ -120,7 +120,7 @@ public class Chooser extends Sprite
             if (this.selected_ != null)
             {
                 this.selected_.setSelected(false);
-            };
+            }
             this.selected_ = _arg_1;
             this.selected_.setSelected(true);
         }

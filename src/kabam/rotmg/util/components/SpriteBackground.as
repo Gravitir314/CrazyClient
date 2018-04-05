@@ -73,7 +73,7 @@ public class SpriteBackground extends Sprite
                 mouseEnabled = _arg_1;
                 filters = ((_arg_1) ? [] : [grayfilter]);
                 this.draw();
-            };
+            }
         }
 
         private function updateUI():void

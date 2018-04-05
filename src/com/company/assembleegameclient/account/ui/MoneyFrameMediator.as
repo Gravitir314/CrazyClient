@@ -68,7 +68,7 @@ public class MoneyFrameMediator extends Mediator
             else
             {
                 this.requestOffersData();
-            };
+            }
         }
 
         private function requestOffersData():void
@@ -86,7 +86,7 @@ public class MoneyFrameMediator extends Mediator
             else
             {
                 this.openDialog.dispatch(new ErrorDialog("Unable to get gold offer information"));
-            };
+            }
         }
 
         override public function destroy():void
@@ -94,7 +94,7 @@ public class MoneyFrameMediator extends Mediator
             if (this.hudModel.gameSprite.map.name_ == "Arena")
             {
                 this.openDialog.dispatch(new ContinueOrQuitDialog(this.currentArenaRun.costOfContinue, true));
-            };
+            }
             this.view.buyNow.add(this.onBuyNow);
             this.view.cancel.add(this.onCancel);
         }

@@ -46,7 +46,7 @@ public class HandleNormalDeathCommand
             else
             {
                 this.showFame.dispatch(this.fameVO);
-            };
+            }
         }
 
         private function gotoFameViewOnceDataIsLoaded():void

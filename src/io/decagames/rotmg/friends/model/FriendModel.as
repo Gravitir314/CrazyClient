@@ -67,7 +67,7 @@ public class FriendModel {
         public function loadData():void{
             if (((this._friendsLoadInProcess) || (this._invitationsLoadInProgress))){
                 return;
-            };
+            }
             this._friendsLoadInProcess = true;
             this._invitationsLoadInProgress = true;
             this.loadList(this.friendsDataRequest, FriendsActions.getURL(FriendsActions.FRIEND_LIST), this.onFriendListResponse);
@@ -82,7 +82,7 @@ public class FriendModel {
         private function onFriendListResponse(_arg_1:FriendDataRequestTask, _arg_2:Boolean, _arg_3:String=""):void{
             if (_arg_2){
                 this.seedFriends(_arg_1.xml);
-            };
+            }
             this._isFriDataOK = _arg_2;
             this.errorStr = _arg_3;
             _arg_1.reset();
@@ -94,7 +94,7 @@ public class FriendModel {
         private function onInvitationListResponse(_arg_1:FriendDataRequestTask, _arg_2:Boolean, _arg_3:String=""):void{
             if (_arg_2){
                 this.seedInvitations(_arg_1.xml);
-            };
+            }
             this._isInvDataOK = _arg_2;
             this.errorStr = _arg_3;
             _arg_1.reset();
@@ -105,7 +105,7 @@ public class FriendModel {
         private function reportTasksComplete():void{
             if (((this._friendsLoadInProcess == false) && (this._invitationsLoadInProgress == false))){
                 this.dataSignal.dispatch(((this._isFriDataOK) && (this._isInvDataOK)));
-            };
+            }
         }
 
         public function seedFriends(_arg_1:XML):void{
@@ -135,8 +135,8 @@ public class FriendModel {
                         "vo":_local_5,
                         "list":this._offlineFriends
                     };
-                };
-            };
+                }
+            }
             this._onlineFriends.sort(this.sortFriend);
             this._offlineFriends.sort(this.sortFriend);
             this._friendTotal = (this._onlineFriends.length + this._offlineFriends.length);
@@ -154,8 +154,8 @@ public class FriendModel {
                     _local_4 = Player.fromPlayerXML(_local_2, _local_3.Character[0]);
                     this._invitations[_local_2] = new FriendVO(_local_4);
                     this._invitationTotal++;
-                };
-            };
+                }
+            }
         }
 
         public function isMyFriend(_arg_1:String):Boolean{
@@ -169,7 +169,7 @@ public class FriendModel {
                 _local_3 = this._friends[_arg_1];
                 _local_4 = (_local_3.vo as FriendVO);
                 _local_4.updatePlayer(_arg_2);
-            };
+            }
         }
 
         public function getFilterFriends(_arg_1:String):Vector.<FriendVO>{
@@ -181,17 +181,17 @@ public class FriendModel {
                 _local_3 = this._onlineFriends[_local_5];
                 if (_local_3.getName().search(_local_2) >= 0){
                     _local_4.push(_local_3);
-                };
+                }
                 _local_5++;
-            };
+            }
             _local_5 = 0;
             while (_local_5 < this._offlineFriends.length) {
                 _local_3 = this._offlineFriends[_local_5];
                 if (_local_3.getName().search(_local_2) >= 0){
                     _local_4.push(_local_3);
-                };
+                }
                 _local_5++;
-            };
+            }
             return (_local_4);
         }
 
@@ -212,7 +212,7 @@ public class FriendModel {
             var _local_1:* = new Vector.<FriendVO>();
             for each (_local_2 in this._invitations) {
                 _local_1.push(_local_2);
-            };
+            }
             _local_1.sort(this.sortFriend);
             return (_local_1);
         }
@@ -223,14 +223,14 @@ public class FriendModel {
                 if (_local_2.getName() == _arg_1){
                     this._onlineFriends.splice(this._onlineFriends.indexOf(_local_2), 1);
                     break;
-                };
-            };
+                }
+            }
             for each (_local_2 in this._offlineFriends) {
                 if (_local_2.getName() == _arg_1){
                     this._offlineFriends.splice(this._offlineFriends.indexOf(_local_2), 1);
                     break;
-                };
-            };
+                }
+            }
         }
 
         public function removeFriend(_arg_1:String):Boolean{
@@ -241,7 +241,7 @@ public class FriendModel {
                 this._friends[_arg_1] = null;
                 delete this._friends[_arg_1];
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -252,9 +252,9 @@ public class FriendModel {
                 this._invitationTotal--;
                 if (this._invitationTotal == 0){
                     this.noInvitationSignal.dispatch();
-                };
+                }
                 return (true);
-            };
+            }
             return (false);
         }
 
@@ -266,18 +266,18 @@ public class FriendModel {
                 if (_local_3.getName() == _arg_2){
                     _arg_1.slice(_local_4, 1);
                     return;
-                };
+                }
                 _local_4++;
-            };
+            }
         }
 
         private function sortFriend(_arg_1:FriendVO, _arg_2:FriendVO):Number{
             if (_arg_1.getName() < _arg_2.getName()){
                 return (-1);
-            };
+            }
             if (_arg_1.getName() > _arg_2.getName()){
                 return (1);
-            };
+            }
             return (0);
         }
 
@@ -285,12 +285,12 @@ public class FriendModel {
             var _local_2:Server;
             if (this._serverDict){
                 return (this._serverDict);
-            };
+            }
             var _local_1:Vector.<Server> = this.serverModel.getServers();
             this._serverDict = new Dictionary(true);
             for each (_local_2 in _local_1) {
                 this._serverDict[_local_2.address] = _local_2.name;
-            };
+            }
             return (this._serverDict);
         }
 

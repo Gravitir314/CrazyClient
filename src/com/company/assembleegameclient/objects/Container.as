@@ -67,14 +67,14 @@ public class Container extends GameObject implements IInteractiveObject
                         else
                         {
                             _local_3 = ((_local_3 + "\n") + ObjectLibrary.getIdFromType(_local_2));
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_local_3 != null)
                 {
                     map_.player_.lootNotif(_local_3, this);
-                };
-            };
+                }
+            }
         }
 
         public function isBoundToCurrentAccount():Boolean
@@ -87,16 +87,16 @@ public class Container extends GameObject implements IInteractiveObject
             if (!super.addTo(_arg_1, _arg_2, _arg_3))
             {
                 return (false);
-            };
+            }
             if (map_.player_ == null)
             {
                 return (true);
-            };
+            }
             var _local_4:Number = PointUtil.distanceXY(map_.player_.x_, map_.player_.y_, _arg_2, _arg_3);
             if (((this.isLoot_) && (_local_4 < 10)))
             {
                 SoundEffectLibrary.play("loot_appears");
-            };
+            }
             return (true);
         }
 
@@ -110,7 +110,7 @@ public class Container extends GameObject implements IInteractiveObject
             super.draw(_arg_1, _arg_2, _arg_3);
             if (Parameters.data_.lootPreview){
                 drawItems(_arg_1, _arg_2, _arg_3);
-            };
+            }
         }
 
         public function updateItemSprites(_arg_1:Vector.<BitmapData>):void{
@@ -124,7 +124,7 @@ public class Container extends GameObject implements IInteractiveObject
                 _local_2 = ObjectLibrary.getItemIcon(_local_3);
                 _arg_1.push(_local_2);
                 _local_5++;
-            };
+            }
         }
 
         public function drawItems(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void{
@@ -152,8 +152,8 @@ public class Container extends GameObject implements IInteractiveObject
                     this.icons_.length = 0;
                     lastEquips = _local_9;
                     updateItemSprites(this.icons_);
-                };
-            };
+                }
+            }
             var _local_6:Number = posS_[3];
             var _local_4:Number = this.vS_[1];
             _local_8 = 0;
@@ -162,7 +162,7 @@ public class Container extends GameObject implements IInteractiveObject
                 if (_local_8 >= this.iconFills_.length){
                     this.iconFills_.push(new GraphicsBitmapFill(null, new Matrix(), false, false));
                     this.iconPaths_.push(new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>()));
-                };
+                }
                 _local_10 = this.iconFills_[_local_8];
                 _local_12 = this.iconPaths_[_local_8];
                 _local_10.bitmapData = _local_7;
@@ -178,7 +178,7 @@ public class Container extends GameObject implements IInteractiveObject
                 _arg_1.push(_local_12);
                 _arg_1.push(GraphicsUtil.END_FILL);
                 _local_8++;
-            };
+            }
         }
 
 

@@ -45,7 +45,7 @@ public class WebLoginDialogForced extends Frame
                 addChild(this.getText("Attention!", -165, -85).setColor(0xFF0000));
                 addChild(this.getText("A new password was sent to your Sign In Email Address.", -165, -65));
                 addChild(this.getText("Please use the new password to Sign In.", -165, -45));
-            };
+            }
             this.forgot = new NativeMappedSignal(this.forgotText, MouseEvent.CLICK);
             this.register = new NativeMappedSignal(this.registerText, MouseEvent.CLICK);
             this.signInForced = new Signal(AccountData);
@@ -77,7 +77,7 @@ public class WebLoginDialogForced extends Frame
             if (_arg_1.keyCode == KeyCodes.ENTER)
             {
                 this.onSignInSub();
-            };
+            }
         }
 
         private function onSignIn(_arg_1:MouseEvent):void
@@ -94,7 +94,7 @@ public class WebLoginDialogForced extends Frame
                 _local_1.username = this.email.text();
                 _local_1.password = this.password.text();
                 this.signInForced.dispatch(_local_1);
-            };
+            }
         }
 
         private function isPasswordValid():Boolean
@@ -103,7 +103,7 @@ public class WebLoginDialogForced extends Frame
             if (!_local_1)
             {
                 this.password.setError(TextKey.WEB_LOGIN_DIALOG_PASSWORD_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -113,7 +113,7 @@ public class WebLoginDialogForced extends Frame
             if (!_local_1)
             {
                 this.email.setError(TextKey.WEBLOGINDIALOG_EMAIL_ERROR);
-            };
+            }
             return (_local_1);
         }
 

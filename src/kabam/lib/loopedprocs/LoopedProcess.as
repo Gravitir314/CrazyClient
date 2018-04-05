@@ -29,7 +29,7 @@ public class LoopedProcess
             if (loopProcs[_arg_1.id] == _arg_1)
             {
                 return (_arg_1.id);
-            };
+            }
             var _local_2:int = ++maxId;
             loopProcs[_local_2] = _arg_1;
             _arg_1.lastRun = getTimer();
@@ -49,9 +49,9 @@ public class LoopedProcess
                     {
                         _local_2.lastRun = _arg_1;
                         _local_2.run();
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public static function destroyProcess(_arg_1:LoopedProcess):void
@@ -66,7 +66,7 @@ public class LoopedProcess
             for each (_local_1 in loopProcs)
             {
                 _local_1.destroy();
-            };
+            }
             loopProcs = new Dictionary();
         }
 

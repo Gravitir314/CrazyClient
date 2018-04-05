@@ -87,7 +87,7 @@ public class OfferRadioButton extends Sprite implements Selectable
             if (this.bonusText)
             {
                 this.bonusText.visible = _arg_1;
-            };
+            }
         }
 
         private function makeBackgroundBox():void
@@ -145,7 +145,7 @@ public class OfferRadioButton extends Sprite implements Selectable
             if (!this.hasBonus())
             {
                 return;
-            };
+            }
             this.bonusText = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setBold(true);
             this.bonusText.setStringBuilder(new LineBuilder().setParams(TextKey.PAYMENTS_GOLD_BONUS, {"percent":this.offer.bonus}));
             this.bonusText.filters = [new DropShadowFilter(0, 0, 0)];
@@ -158,7 +158,7 @@ public class OfferRadioButton extends Sprite implements Selectable
             if (this.hasTagline())
             {
                 this.makeTaglineText();
-            };
+            }
         }
 
         private function makeTaglineText():void
@@ -190,12 +190,12 @@ public class OfferRadioButton extends Sprite implements Selectable
             {
                 this.bonusText.x = 280;
                 this.bonusText.y = ((this.coinBitmap.height / 2) - (this.bonusText.height / 2));
-            };
+            }
             if (((this.hasTagline()) && (!(this.taglineText == null))))
             {
                 this.taglineText.x = 400;
                 this.taglineText.y = ((this.coinBitmap.height / 2) - (this.taglineText.height / 2));
-            };
+            }
         }
 
         private function updateBackgroundColor():void

@@ -26,7 +26,7 @@ public class TabTextView extends TabView
             if (_arg_3)
             {
                 this.initTabText(_arg_3);
-            };
+            }
         }
 
         public function setBadge(_arg_1:int):void
@@ -38,7 +38,7 @@ public class TabTextView extends TabView
                 this.badgeIcon.x = (this.x - 26);
                 this.badgeIcon.y = 4;
                 addChild(this.badgeIcon);
-            };
+            }
             this.badgeIcon.visible = (_arg_1 > 0);
         }
 

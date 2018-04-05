@@ -33,7 +33,7 @@ public class KongregateGetCredentialsTask extends BaseTask
             else
             {
                 this.verifyCredentials();
-            };
+            }
         }
 
         private function verifyCredentials():void

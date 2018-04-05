@@ -33,7 +33,7 @@ public class BuyCharacterSkinCommand
             if (this.isSkinPurchasable())
             {
                 this.enterPurchaseFlow();
-            };
+            }
         }
 
         private function enterPurchaseFlow():void
@@ -45,7 +45,7 @@ public class BuyCharacterSkinCommand
             else
             {
                 this.enterGetCreditsFlow();
-            };
+            }
         }
 
         private function isSkinPurchasable():Boolean

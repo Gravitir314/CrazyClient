@@ -25,7 +25,7 @@ public class Plane3D
                 this.normal_ = new Vector3D();
                 computeNormal(_arg_1, _arg_2, _arg_3, this.normal_);
                 this.d_ = -(this.normal_.dotProduct(_arg_1));
-            };
+            }
         }
 
         public static function computeNormal(_arg_1:Vector3D, _arg_2:Vector3D, _arg_3:Vector3D, _arg_4:Vector3D):void
@@ -63,11 +63,11 @@ public class Plane3D
             if (_local_2 > 0.001)
             {
                 return (POSITIVE);
-            };
+            }
             if (_local_2 < -0.001)
             {
                 return (NEGATIVE);
-            };
+            }
             return (EQUAL);
         }
 
@@ -78,7 +78,7 @@ public class Plane3D
             if (_local_3 == 0)
             {
                 return (NaN);
-            };
+            }
             return (_local_2 / _local_3);
         }
 

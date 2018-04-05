@@ -72,7 +72,7 @@ public class TeleportMenuOption extends MenuOption
                     addChild(this.barText_);
                     addChild(this.barMask);
                     this.barText_.mask = this.barMask;
-                };
+                }
                 _local_3 = (this.barTextOrigWidth_ * (1 - (_local_4 / _local_2)));
                 this.barMask.width = _local_3;
                 setColorTransform(inactiveCT);
@@ -82,7 +82,7 @@ public class TeleportMenuOption extends MenuOption
                 if (contains(this.barText_))
                 {
                     removeChild(this.barText_);
-                };
+                }
                 if (this.mouseOver_)
                 {
                     setColorTransform(mouseOverCT);
@@ -90,8 +90,8 @@ public class TeleportMenuOption extends MenuOption
                 else
                 {
                     setColorTransform(null);
-                };
-            };
+                }
+            }
         }
 
         override protected function onMouseOver(_arg_1:MouseEvent):void

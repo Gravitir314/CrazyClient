@@ -26,7 +26,7 @@ public class WebSetPaymentDataCommand
                 _local_1 = XML(this.characterListData.KabamPaymentInfo);
                 _local_2.signedRequest = _local_1.signedRequest;
                 _local_2.kabamId = _local_1.naid;
-            };
+            }
         }
 
 

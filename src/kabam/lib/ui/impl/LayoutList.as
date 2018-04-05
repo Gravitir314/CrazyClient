@@ -108,7 +108,7 @@ public class LayoutList extends Sprite implements List
             while (_local_1--)
             {
                 this.container.removeChild(this.list[_local_1]);
-            };
+            }
             this.list.length = 0;
         }
 
@@ -118,7 +118,7 @@ public class LayoutList extends Sprite implements List
             for each (_local_2 in _arg_1)
             {
                 this.addToListAndContainer(_local_2);
-            };
+            }
         }
 
         private function addToListAndContainer(_arg_1:DisplayObject):void

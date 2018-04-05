@@ -30,7 +30,7 @@ public class GiftStatusDisplayMediator
             else
             {
                 this.view.drawAsClosed();
-            };
+            }
         }
 
         private function onGiftChestUpdate():void
@@ -42,7 +42,7 @@ public class GiftStatusDisplayMediator
             else
             {
                 this.view.drawAsClosed();
-            };
+            }
         }
 
 

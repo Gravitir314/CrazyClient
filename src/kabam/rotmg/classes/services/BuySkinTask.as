@@ -54,7 +54,7 @@ public class BuySkinTask extends BaseTask
             else
             {
                 this.abandonPurchase(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 

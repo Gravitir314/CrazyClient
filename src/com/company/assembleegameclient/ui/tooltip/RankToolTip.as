@@ -74,7 +74,7 @@ public class RankToolTip extends ToolTip
                 addChild(_local_1);
                 _local_2 = (_local_2 + _local_1.height);
                 _local_3++;
-            };
+            }
             _local_1 = new LegendLine(FameUtil.maxStars(), FameUtil.maxStars(), new ColorTransform());
             _local_1.x = PADDING_LEFT;
             _local_1.y = _local_2;

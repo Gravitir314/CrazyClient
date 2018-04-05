@@ -144,7 +144,7 @@ public class StatData
                     return (TextKey.STAT_MODEL_WISDOM_LONG);
                 case DEXTERITY_STAT:
                     return (TextKey.STAT_MODEL_DEXTERITY_LONG);
-            };
+            }
             return (TextKey.STAT_DATA_UNKNOWN_STAT);
         }
 
@@ -159,7 +159,7 @@ public class StatData
                 case ACCOUNT_ID_STAT:
                 case OWNER_ACCOUNT_ID_STAT:
                     return (true);
-            };
+            }
             return (false);
         }
 
@@ -173,7 +173,7 @@ public class StatData
             else
             {
                 this.strStatValue_ = _arg_1.readUTF();
-            };
+            }
         }
 
         public function writeToOutput(_arg_1:IDataOutput):void
@@ -186,7 +186,7 @@ public class StatData
             else
             {
                 _arg_1.writeUTF(this.strStatValue_);
-            };
+            }
         }
 
         public function toString():String
@@ -194,7 +194,7 @@ public class StatData
             if (!this.isStringStat())
             {
                 return (((("[" + this.statType_) + ": ") + this.statValue_) + "]");
-            };
+            }
             return (((("[" + this.statType_) + ': "') + this.strStatValue_) + '"]');
         }
 

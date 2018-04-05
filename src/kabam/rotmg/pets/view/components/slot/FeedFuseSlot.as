@@ -76,7 +76,7 @@ public class FeedFuseSlot extends Sprite
                 _local_4 = this.outerSlot.transform.colorTransform;
                 _local_4.color = ((_arg_3) ? _arg_2 : 0x545454);
                 this.outerSlot.transform.colorTransform = _local_4;
-            };
+            }
         }
 
         protected function alignBitmapInBox():void

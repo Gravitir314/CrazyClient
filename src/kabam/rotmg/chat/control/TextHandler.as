@@ -395,7 +395,7 @@ public class TextHandler
                     return ("Dr. Terrible, the mad scientist.");
                 default:
                     return ("");
-            };
+            }
         }
 
         private function newSender(_arg_1:String):Boolean
@@ -406,8 +406,8 @@ public class TextHandler
                 if (_local_2 == _arg_1)
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -419,8 +419,8 @@ public class TextHandler
                 if (_arg_1 == _local_2)
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -454,7 +454,7 @@ public class TextHandler
             catch(error:Error)
             {
                 message.text = text.text_;
-            };
+            }
         }
 
         private function replaceIfSlashServerCommand(_arg_1:String):String
@@ -466,8 +466,8 @@ public class TextHandler
                 if (((_local_2) && (_local_2.getServer())))
                 {
                     return (_arg_1.replace("74026S9", (_local_2.getServer().name + ", ")));
-                };
-            };
+                }
+            }
             return (_arg_1);
         }
 
@@ -497,7 +497,7 @@ public class TextHandler
                 _local_5 = ChatListItemFactory.isGuildMessage(_arg_1.name_);
                 _local_6 = new AddSpeechBalloonVO(_local_7, _arg_2, _arg_1.name_, _local_4, _local_5, _local_3.back, 1, _local_3.outline, 1, _local_3.text, _arg_1.bubbleTime_, false, true);
                 this.addSpeechBalloon.dispatch(_local_6);
-            };
+            }
         }
 
         private function getColors(_arg_1:Text, _arg_2:GameObject):TextColors
@@ -505,15 +505,15 @@ public class TextHandler
             if (_arg_2.props_.isEnemy_)
             {
                 return (this.ENEMY_SPEECH_COLORS);
-            };
+            }
             if (_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME)
             {
                 return (this.GUILD_SPEECH_COLORS);
-            };
+            }
             if (_arg_1.recipient_ != "")
             {
                 return (this.TELL_SPEECH_COLORS);
-            };
+            }
             return (this.NORMAL_SPEECH_COLORS);
         }
 

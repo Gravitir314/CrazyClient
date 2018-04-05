@@ -46,12 +46,12 @@ public class PlayerArrow extends GameObjectArrow
             if (((_local_1 == null) || (_local_1.map_ == null)))
             {
                 return (null);
-            };
+            }
             var _local_2:Player = _local_1.map_.player_;
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (new PlayerGroupMenu(_local_1.map_, this.getFullPlayerVec()));
         }
 
@@ -62,7 +62,7 @@ public class PlayerArrow extends GameObjectArrow
             for each (_local_1 in extraGOs_)
             {
                 _local_2.push((_local_1 as Player));
-            };
+            }
             return (_local_2);
         }
 

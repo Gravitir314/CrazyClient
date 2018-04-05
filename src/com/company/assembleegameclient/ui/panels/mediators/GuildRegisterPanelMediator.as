@@ -56,7 +56,7 @@ public class GuildRegisterPanelMediator extends Mediator
             if (((_local_1.map == null) || (_local_1.map.player_ == null)))
             {
                 return;
-            };
+            }
             var _local_2:Player = _local_1.map.player_;
             var _local_3:Dialog = new Dialog(TextKey.RENOUNCE_DIALOG_SUBTITLE, TextKey.RENOUNCE_DIALOG_TITLE, TextKey.RENOUNCE_DIALOG_CANCEL, TextKey.RENOUNCE_DIALOG_ACCEPT, "/renounceGuild");
             _local_3.setTextParams(TextKey.RENOUNCE_DIALOG_TITLE, {"guildName":_local_2.guildName_});
@@ -76,7 +76,7 @@ public class GuildRegisterPanelMediator extends Mediator
             if (((_local_2.map == null) || (_local_2.map.player_ == null)))
             {
                 return;
-            };
+            }
             var _local_3:Player = _local_2.map.player_;
             _local_2.gsc_.guildRemove(_local_3.name_);
             this.closeDialog.dispatch();

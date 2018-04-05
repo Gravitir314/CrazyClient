@@ -41,7 +41,7 @@ public class WebAccount implements Account
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function getUserName():String
@@ -92,11 +92,11 @@ public class WebAccount implements Account
                     _local_4.data["Token"] = _arg_3;
                     _local_4.data["Password"] = _arg_2;
                     _local_4.flush();
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function clear():void

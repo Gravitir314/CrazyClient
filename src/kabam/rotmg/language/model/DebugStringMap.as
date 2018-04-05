@@ -27,7 +27,7 @@ public class DebugStringMap implements StringMap
             if (((!(_arg_1 == "")) && (this.isInvalid(_arg_1))))
             {
                 return (_arg_1);
-            };
+            }
             return (this.delegate.getValue(_arg_1));
         }
 

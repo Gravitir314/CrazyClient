@@ -63,7 +63,7 @@ public class CharacterDetailsMediator extends Mediator {
         if (Parameters.USE_NEW_FRIENDS_UI){
             this.friendsModel.noInvitationSignal.add(this.clearFriendsIndicator);
             this.friendsModel.dataSignal.add(this.onFriendsData);
-        };
+        }
         this.view.initFriendList(this.imageFactory, this.iconButtonFactory, this.onFriendsBtnClicked, ((Parameters.USE_NEW_FRIENDS_UI) && (this.friendsModel.hasInvitations)));
     }
 
@@ -76,7 +76,7 @@ public class CharacterDetailsMediator extends Mediator {
             this.showPopupSignal.dispatch(new FriendsPopupView(this.friendsModel.hasInvitations));
         } else {
             this.openDialog.dispatch(new FriendListView());
-        };
+        }
     }
 
     private function onFriendsData(_arg_1:Boolean):void{
@@ -85,8 +85,8 @@ public class CharacterDetailsMediator extends Mediator {
                 this.view.addInvitationIndicator();
             } else {
                 this.view.clearInvitationIndicator();
-            };
-        };
+            }
+        }
     }
 
     private function injectFactories():void{
@@ -103,7 +103,7 @@ public class CharacterDetailsMediator extends Mediator {
         if (Parameters.USE_NEW_FRIENDS_UI){
             this.friendsModel.noInvitationSignal.remove(this.clearFriendsIndicator);
             this.friendsModel.dataSignal.remove(this.onFriendsData);
-        };
+        }
     }
 
     private function onGotoNexus():void{

@@ -43,7 +43,7 @@ public class BurstEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_8, this.color_, (100 + (Math.random() * 200)), this.center_, _local_4);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -65,7 +65,7 @@ public class BurstEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_8, this.color_, (50 + (Math.random() * 20)), this.center_, _local_4);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 

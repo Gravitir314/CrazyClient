@@ -54,7 +54,7 @@ public class FameStatsLine extends Sprite
             {
                 _local_6.size = 15;
                 _local_6.color = 0xFFFFFF;
-            };
+            }
             var _local_7:TextFormat = new TextFormat();
             if (_arg_4 == TYPE_BONUS)
             {
@@ -63,7 +63,7 @@ public class FameStatsLine extends Sprite
             else
             {
                 _local_7.color = 5544494;
-            };
+            }
             _local_7.font = FontModel.DEFAULT_FONT_NAME;
             _local_7.size = 13;
             _local_7.bold = true;
@@ -79,7 +79,7 @@ public class FameStatsLine extends Sprite
                 if (((_arg_2 == "0") || (_arg_2 == "0.00%")))
                 {
                     _local_9.defaultTextFormat = _local_6;
-                };
+                }
                 if (_arg_4 == TYPE_BONUS)
                 {
                     _local_9.text = ("+" + _arg_2);
@@ -87,7 +87,7 @@ public class FameStatsLine extends Sprite
                 else
                 {
                     _local_9.text = _arg_2;
-                };
+                }
                 _local_9.x = ((this.lineWidth - 4) - _local_9.textWidth);
                 addChild(_local_9);
                 _local_9.y = 2;
@@ -100,7 +100,7 @@ public class FameStatsLine extends Sprite
                 addChild(this.lock);
                 this.lock.x = ((this.lineWidth - _local_10) + 5);
                 this.lock.y = -8;
-            };
+            }
             _local_8.y = 2;
             _local_8.x = 2;
             this._tooltipText = _arg_3;
@@ -112,7 +112,7 @@ public class FameStatsLine extends Sprite
             {
                 removeChild(this.lock);
                 this.lock.bitmapData.dispose();
-            };
+            }
         }
 
         public function drawBrightBackground():void

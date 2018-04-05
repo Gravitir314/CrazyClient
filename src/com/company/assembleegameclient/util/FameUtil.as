@@ -37,7 +37,7 @@ public class FameUtil
             while (((_local_2 < STARS.length) && (_arg_1 >= STARS[_local_2])))
             {
                 _local_2++;
-            };
+            }
             return (_local_2);
         }
 
@@ -50,9 +50,9 @@ public class FameUtil
                 if (STARS[_local_3] > _local_4)
                 {
                     return (STARS[_local_3]);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (-1);
         }
 
@@ -70,8 +70,8 @@ public class FameUtil
                 else
                 {
                     _local_5 = (_local_5 + FameUtil.numStars(_local_4.BestFame));
-                };
-            };
+                }
+            }
             return (_local_5 + FameUtil.numStars(Math.max(_local_6, _arg_2)));
         }
 
@@ -115,11 +115,11 @@ public class FameUtil
                             if (_arg_1 < (ObjectLibrary.playerChars_.length * 5))
                             {
                                 _local_2.transform.colorTransform = yellowCT;
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             return (_local_2);
         }
 

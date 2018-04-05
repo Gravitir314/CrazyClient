@@ -53,7 +53,7 @@ public class DailyLoginModalMediator extends Mediator
             {
                 this.view.claimButton.addEventListener(MouseEvent.CLICK, this.onClaimClickHandler);
                 this.view.addEventListener(MouseEvent.CLICK, this.onPopupClickHandler);
-            };
+            }
             Parameters.data_.calendarShowOnDay = this.dailyLoginModel.getTimestampDay();
             Parameters.save();
             this.dailyLoginModel.shouldDisplayCalendarAtStartup = false;
@@ -72,7 +72,7 @@ public class DailyLoginModalMediator extends Mediator
             {
                 this.view.claimButton.removeEventListener(MouseEvent.CLICK, this.onClaimClickHandler);
                 this.view.removeEventListener(MouseEvent.CLICK, this.onPopupClickHandler);
-            };
+            }
             this.view.closeButton.clicked.remove(this.onCloseButtonClicked);
             super.destroy();
         }
@@ -93,7 +93,7 @@ public class DailyLoginModalMediator extends Mediator
             if (_arg_1.target != DialogCloseButton)
             {
                 this.enterPortal();
-            };
+            }
         }
 
 

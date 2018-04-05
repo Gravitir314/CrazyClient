@@ -75,7 +75,7 @@ public class ParseChatMessageCommand
                     _local_2.stage.scaleMode = StageScaleMode.EXACT_FIT;
                     Parameters.data_.stageScale = StageScaleMode.EXACT_FIT;
                     this.addTextLine.dispatch(ChatMessage.make("*Help*", "Fullscreen: Off"));
-                };
+                }
                 Parameters.save();
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
                 return (true);
@@ -423,7 +423,7 @@ public class ParseChatMessageCommand
                 }
                 Parameters.save();
                 return (true);
-            };
+            }
             _local_2 = _arg_1.match("^/rtp (\\w+)$");
             if (_local_2 != null)
             {
@@ -627,56 +627,56 @@ public class ParseChatMessageCommand
         {
             if (_arg_1 == "/igclear")
             {
-                Parameters.data_.AAIgnore = new Array();
+                Parameters.data_.AAIgnore = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim ignore list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/exclear")
             {
-                Parameters.data_.AAException = new Array();
+                Parameters.data_.AAException = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim exception list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/spclear")
             {
-                Parameters.data_.spamFilter = new Array();
+                Parameters.data_.spamFilter = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Spamfilter list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/frclear")
             {
-                Parameters.data_.friendList2 = new Array();
+                Parameters.data_.friendList2 = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Friend list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/tpclear")
             {
-                Parameters.data_.tptoList = new Array();
+                Parameters.data_.tptoList = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Teleport keyword list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/prclear")
             {
-                Parameters.data_.AAPriority = new Array();
+                Parameters.data_.AAPriority = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim priority list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/liclear")
             {
-                Parameters.data_.lootIgnore = new Array();
+                Parameters.data_.lootIgnore = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Loot ignore list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/wnclear")
             {
-                Parameters.data_.wordNotiList = new Array();
+                Parameters.data_.wordNotiList = [];
                 this.addTextLine.dispatch(ChatMessage.make("*Help*", "Notifier keyword list cleared."));
                 Parameters.save();
                 return (true);
@@ -836,8 +836,8 @@ public class ParseChatMessageCommand
                 case "/lefttomax":
                     needed = "You need ";
                     _local_13 = true;
-                    _local_14 = new Array(int(((((_local_12.maxHPMax_ - _local_12.maxHP_) + _local_12.maxHPBoost_) / 5) + (((((_local_12.maxHPMax_ - _local_12.maxHP_) + _local_12.maxHPBoost_) % 5) > 0) ? 1 : 0))), int(((((_local_12.maxMPMax_ - _local_12.maxMP_) + _local_12.maxMPBoost_) / 5) + (((((_local_12.maxMPMax_ - _local_12.maxMP_) + _local_12.maxMPBoost_) % 5) > 0) ? 1 : 0))), ((_local_12.attackMax_ - _local_12.attack_) + _local_12.attackBoost_), ((_local_12.defenseMax_ - _local_12.defense_) + _local_12.defenseBoost_), ((_local_12.speedMax_ - _local_12.speed_) + _local_12.speedBoost_), ((_local_12.dexterityMax_ - _local_12.dexterity_) + _local_12.dexterityBoost_), ((_local_12.vitalityMax_ - _local_12.vitality_) + _local_12.vitalityBoost_), ((_local_12.wisdomMax_ - _local_12.wisdom_) + _local_12.wisdomBoost_));
-                    _local_15 = new Array("Life", "Mana", "ATT", "DEF", "SPD", "DEX", "VIT", "WIS");
+                    _local_14 = [int(((((_local_12.maxHPMax_ - _local_12.maxHP_) + _local_12.maxHPBoost_) / 5) + (((((_local_12.maxHPMax_ - _local_12.maxHP_) + _local_12.maxHPBoost_) % 5) > 0) ? 1 : 0))), int(((((_local_12.maxMPMax_ - _local_12.maxMP_) + _local_12.maxMPBoost_) / 5) + (((((_local_12.maxMPMax_ - _local_12.maxMP_) + _local_12.maxMPBoost_) % 5) > 0) ? 1 : 0))), ((_local_12.attackMax_ - _local_12.attack_) + _local_12.attackBoost_), ((_local_12.defenseMax_ - _local_12.defense_) + _local_12.defenseBoost_), ((_local_12.speedMax_ - _local_12.speed_) + _local_12.speedBoost_), ((_local_12.dexterityMax_ - _local_12.dexterity_) + _local_12.dexterityBoost_), ((_local_12.vitalityMax_ - _local_12.vitality_) + _local_12.vitalityBoost_), ((_local_12.wisdomMax_ - _local_12.wisdom_) + _local_12.wisdomBoost_)];
+                    _local_15 = ["Life", "Mana", "ATT", "DEF", "SPD", "DEX", "VIT", "WIS"];
                     _local_10 = 0;
                     while (_local_10 < _local_14.length)
                     {
@@ -915,7 +915,7 @@ public class ParseChatMessageCommand
                         for each (_local_20 in TextHandler.afkTells)
                         {
                             this.addTextLine.dispatch(_local_20);
-                        };
+                        }
                         TextHandler.afkTells.length = 0;
                         TextHandler.sendBacks.length = 0;
                     }
@@ -1350,7 +1350,7 @@ public class ParseChatMessageCommand
                     _local_6 = _local_3.AnimatedTexture.Index;
                 }
             }
-            return (new Array(_local_5, _local_6));
+            return ([_local_5, _local_6]);
         }
 
         private function getTex1(_arg_1:int):uint
@@ -1424,9 +1424,9 @@ public class ParseChatMessageCommand
                     if (_local_4.substr(0, _local_5.length) == _local_5)
                     {
                         _arg_1 = (_arg_1 - (_local_5.length * 10));
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (_arg_1);
         }
 
@@ -1435,10 +1435,10 @@ public class ParseChatMessageCommand
             var _local_3:int;
             var _local_4:int;
             var _local_6:int;
-            var _local_5:Array = new Array();
+            var _local_5:Array = [];
             while (_local_6 <= _arg_1.length)
             {
-                _local_5[_local_6] = new Array();
+                _local_5[_local_6] = [];
                 _local_4 = 0;
                 while (_local_4 <= _arg_2.length)
                 {

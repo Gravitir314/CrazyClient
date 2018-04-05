@@ -57,7 +57,7 @@ public class IconButton extends Sprite implements TooltipAble
                 this.label_.x = ((this.icon_.x + this.icon_.width) - 8);
                 this.label_.y = 0;
                 addChild(this.label_);
-            };
+            }
             addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
             addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
             this.setToolTipTitle(_arg_3);
@@ -65,7 +65,7 @@ public class IconButton extends Sprite implements TooltipAble
             if (this.hotkeyName_ != "")
             {
                 this.setToolTipText(TextKey.ICON_BUTTON_HOT_KEY, {"hotkey":KeyCodes.CharCodeStrings[Parameters.data_[this.hotkeyName_]]});
-            };
+            }
         }
 
         private function getCroppedBitmapData(_arg_1:BitmapData, _arg_2:int):BitmapData
@@ -73,7 +73,7 @@ public class IconButton extends Sprite implements TooltipAble
             if (!_arg_2)
             {
                 return (_arg_1);
-            };
+            }
             var _local_3:Rectangle = new Rectangle(0, _arg_2, _arg_1.width, (_arg_1.height - _arg_2));
             var _local_4:BitmapData = new BitmapData(_arg_1.width, (_arg_1.height - _arg_2));
             _local_4.copyPixels(_arg_1, _local_3, new Point(0, 0));
@@ -103,9 +103,9 @@ public class IconButton extends Sprite implements TooltipAble
                     this.toolTip_ = new TextToolTip(0x363636, 0x9B9B9B, "", "", 200);
                     this.hoverTooltipDelegate.setDisplayObject(this);
                     this.hoverTooltipDelegate.tooltip = this.toolTip_;
-                };
+                }
                 this.toolTip_.setTitle(new LineBuilder().setParams(_arg_1, _arg_2));
-            };
+            }
         }
 
         public function setToolTipText(_arg_1:String, _arg_2:Object=null):void
@@ -117,9 +117,9 @@ public class IconButton extends Sprite implements TooltipAble
                     this.toolTip_ = new TextToolTip(0x363636, 0x9B9B9B, "", "", 200);
                     this.hoverTooltipDelegate.setDisplayObject(this);
                     this.hoverTooltipDelegate.tooltip = this.toolTip_;
-                };
+                }
                 this.toolTip_.setText(new LineBuilder().setParams(_arg_1, _arg_2));
-            };
+            }
         }
 
         public function setColorTransform(_arg_1:ColorTransform):void
@@ -127,7 +127,7 @@ public class IconButton extends Sprite implements TooltipAble
             if (_arg_1 == this.ct_)
             {
                 return;
-            };
+            }
             this.ct_ = _arg_1;
             if (this.ct_ == null)
             {
@@ -136,7 +136,7 @@ public class IconButton extends Sprite implements TooltipAble
             else
             {
                 transform.colorTransform = this.ct_;
-            };
+            }
         }
 
         public function set enabled(_arg_1:Boolean):void
@@ -154,7 +154,7 @@ public class IconButton extends Sprite implements TooltipAble
                 removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
                 this.setColorTransform(disableCT);
                 mouseEnabled = (mouseChildren = false);
-            };
+            }
         }
 
         protected function onMouseOver(_arg_1:MouseEvent):void

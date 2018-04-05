@@ -45,13 +45,13 @@ public class StatMetersView extends Sprite
                 this.hpBar_.y = 24;
                 this.mpBar_.y = 48;
                 this.chpBar_.visible = false;
-            };
+            }
             if (!_arg_1)
             {
                 this.hpBar_.y = 22;
                 this.mpBar_.y = 44;
                 this.chpBar_.visible = false;
-            };
+            }
             addChild(this.chpBar_);
             addChild(this.expBar_);
             addChild(this.fameBar_);
@@ -74,12 +74,12 @@ public class StatMetersView extends Sprite
                 if (this.expTimer)
                 {
                     this.expTimer.update(_arg_1.xpTimer);
-                };
+                }
                 if (!this.expBar_.visible)
                 {
                     this.expBar_.visible = true;
                     this.fameBar_.visible = false;
-                };
+                }
                 this.expBar_.draw(_arg_1.exp_, _arg_1.nextLevelExp_, 0);
                 if (this.curXPBoost != _arg_1.xpBoost_)
                 {
@@ -91,8 +91,8 @@ public class StatMetersView extends Sprite
                     else
                     {
                         this.expBar_.hideMultiplierText();
-                    };
-                };
+                    }
+                }
                 if (_arg_1.xpTimer)
                 {
                     if (!this.areTempXpListenersAdded)
@@ -100,7 +100,7 @@ public class StatMetersView extends Sprite
                         this.expBar_.addEventListener("MULTIPLIER_OVER", this.onExpBarOver);
                         this.expBar_.addEventListener("MULTIPLIER_OUT", this.onExpBarOut);
                         this.areTempXpListenersAdded = true;
-                    };
+                    }
                 }
                 else
                 {
@@ -109,13 +109,13 @@ public class StatMetersView extends Sprite
                         this.expBar_.removeEventListener("MULTIPLIER_OVER", this.onExpBarOver);
                         this.expBar_.removeEventListener("MULTIPLIER_OUT", this.onExpBarOut);
                         this.areTempXpListenersAdded = false;
-                    };
+                    }
                     if (((this.expTimer) && (this.expTimer.parent)))
                     {
                         removeChild(this.expTimer);
                         this.expTimer = null;
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -123,15 +123,15 @@ public class StatMetersView extends Sprite
                 {
                     this.fameBar_.visible = true;
                     this.expBar_.visible = false;
-                };
+                }
                 this.fameBar_.draw(_arg_1.currFame_, _arg_1.nextClassQuestFame_, 0);
-            };
+            }
             this.hpBar_.draw(_arg_1.hp_, _arg_1.maxHP_, _arg_1.maxHPBoost_, _arg_1.maxHPMax_);
             this.mpBar_.draw(_arg_1.mp_, _arg_1.maxMP_, _arg_1.maxMPBoost_, _arg_1.maxMPMax_);
             if (this.chpBar_ != null)
             {
                 this.chpBar_.draw(int(_arg_1.chp), _arg_1.cmaxhp, _arg_1.cmaxhpboost, _arg_1.maxHPMax_);
-            };
+            }
         }
 
         private function onExpBarOver(_arg_1:Event):void
@@ -145,7 +145,7 @@ public class StatMetersView extends Sprite
             {
                 removeChild(this.expTimer);
                 this.expTimer = null;
-            };
+            }
         }
 
 

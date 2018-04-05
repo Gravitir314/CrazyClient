@@ -8,7 +8,7 @@ import mx.core.*;
 		public function DialogCloseButton_CloseButtonLargeAsset()
 		{
 			super();
-			return;
+
 		}
 	}
 }

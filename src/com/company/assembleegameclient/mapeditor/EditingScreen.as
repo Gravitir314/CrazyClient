@@ -111,7 +111,7 @@ public class EditingScreen extends Sprite
             {
                 _local_2.push(((_local_3 + "x") + _local_3));
                 _local_3 = (_local_3 / 2);
-            };
+            }
             this.mapSizeDropDown_ = new DropDown(_local_2, Chooser.WIDTH, 26);
             this.mapSizeDropDown_.setValue(((MEMap.NUM_SQUARES + "x") + MEMap.NUM_SQUARES));
             this.mapSizeDropDown_.x = ((this.chooserDropDown_.x - this.chooserDropDown_.width) - 4);
@@ -174,7 +174,7 @@ public class EditingScreen extends Sprite
         private function createCheckboxes():void
         {
             var _local_1:CheckBoxField;
-            this.checkBoxArray = new Array();
+            this.checkBoxArray = [];
             var _local_2:DeprecatedClickableText = new DeprecatedClickableText(14, true, "(Show All)");
             _local_2.buttonMode = true;
             _local_2.x = (this.mapSizeDropDown_.x - 380);
@@ -240,7 +240,7 @@ public class EditingScreen extends Sprite
                     return;
                 case this.dungeonChooser_:
                     this.dungeonChooser_.reloadObjects(this.filter.dungeon, this.filter.searchStr);
-            };
+            }
         }
 
         private function onCheckBoxUpdated(_arg_1:MouseEvent):void
@@ -269,7 +269,7 @@ public class EditingScreen extends Sprite
                     this.meMap_.ifShowRegionLayer = false;
                     (this.checkBoxArray[Layer.OBJECT] as CheckBoxField).setUnchecked();
                     (this.checkBoxArray[Layer.REGION] as CheckBoxField).setUnchecked();
-            };
+            }
             this.meMap_.draw();
         }
 
@@ -298,7 +298,7 @@ public class EditingScreen extends Sprite
                     if (_local_4 == -1)
                     {
                         return;
-                    };
+                    }
                     _local_5 = GroupDivider.getCategoryByType(_local_4, this.chooser_.layer_);
                     if (_local_5 == "") break;
                     this.chooser_ = this.choosers_[_local_5];
@@ -321,10 +321,10 @@ public class EditingScreen extends Sprite
                         if (_local_3 != null)
                         {
                             _local_3 = _local_3.clone();
-                        };
+                        }
                         this.tilesBackup.push(_local_3);
                         _local_8.push(null);
-                    };
+                    }
                     this.addPasteCommandList(_arg_1.tiles_, _local_8);
                     this.meMap_.freezeSelect();
                     this.commandMenu_.setCommand(MECommandMenu.PASTE_COMMAND);
@@ -337,9 +337,9 @@ public class EditingScreen extends Sprite
                         if (_local_3 != null)
                         {
                             _local_3 = _local_3.clone();
-                        };
+                        }
                         this.tilesBackup.push(_local_3);
-                    };
+                    }
                     this.meMap_.freezeSelect();
                     this.commandMenu_.setCommand(MECommandMenu.PASTE_COMMAND);
                     break;
@@ -357,7 +357,7 @@ public class EditingScreen extends Sprite
                         this.pickObjHolder.name = String(_local_3.types_[Layer.OBJECT]);
                         this.addModifyCommandList(_arg_1.tiles_, Layer.OBJECT, -1);
                         this.commandMenu_.setCommand(MECommandMenu.DROP_COMMAND);
-                    };
+                    }
                     break;
                 case MECommandMenu.DROP_COMMAND:
                     if (this.pickObjHolder != null)
@@ -368,8 +368,8 @@ public class EditingScreen extends Sprite
                         this.pickObjHolder.removeChildAt(0);
                         this.pickObjHolder = null;
                         this.commandMenu_.setCommand(MECommandMenu.PICK_UP_COMMAND);
-                    };
-            };
+                    }
+            }
             this.meMap_.draw();
         }
 
@@ -390,12 +390,12 @@ public class EditingScreen extends Sprite
                 if (_local_5 != _arg_3)
                 {
                     _local_6.addCommand(new MEModifyCommand(this.meMap_, _local_4.x_, _local_4.y_, _arg_2, _local_5, _arg_3));
-                };
-            };
+                }
+            }
             if (_local_6.empty())
             {
                 return;
-            };
+            }
             this.commandQueue_.addCommandList(_local_6);
         }
 
@@ -411,11 +411,11 @@ public class EditingScreen extends Sprite
                 _local_4 = this.meMap_.getTile(_local_3.x_, _local_3.y_);
                 _local_5.addCommand(new MEReplaceCommand(this.meMap_, _local_3.x_, _local_3.y_, _local_4, _arg_2[_local_6]));
                 _local_6++;
-            };
+            }
             if (_local_5.empty())
             {
                 return;
-            };
+            }
             this.commandQueue_.addCommandList(_local_5);
         }
 
@@ -430,12 +430,12 @@ public class EditingScreen extends Sprite
                 if (_local_4 != _arg_2)
                 {
                     _local_5.addCommand(new MEObjectNameCommand(this.meMap_, _local_3.x_, _local_3.y_, _local_4, _arg_2));
-                };
-            };
+                }
+            }
             if (_local_5.empty())
             {
                 return;
-            };
+            }
             this.commandQueue_.addCommandList(_local_5);
         }
 
@@ -527,7 +527,7 @@ public class EditingScreen extends Sprite
                     this.filter.enableDropDownFilter(false);
                     this.filter.enableValueFilter(false);
                     this.filter.enableDungeonFilter(true);
-            };
+            }
         }
 
         private function onDropDownSizeChange(_arg_1:Event):void
@@ -549,7 +549,7 @@ public class EditingScreen extends Sprite
                     break;
                 case "1024x1024":
                     _local_2 = 0x0400;
-            };
+            }
             this.meMap_.resize(_local_2);
             this.meMap_.draw();
         }
@@ -578,12 +578,12 @@ public class EditingScreen extends Sprite
                 if (_local_3 != null)
                 {
                     _local_5.addCommand(new MEClearCommand(this.meMap_, _local_2.x_, _local_2.y_, _local_3));
-                };
-            };
+                }
+            }
             if (_local_5.empty())
             {
                 return;
-            };
+            }
             this.commandQueue_.addCommandList(_local_5);
             this.meMap_.draw();
             this.filename_ = null;
@@ -600,7 +600,7 @@ public class EditingScreen extends Sprite
             if (_local_6 == null)
             {
                 return (null);
-            };
+            }
             var _local_7:Object = {};
             _local_7["width"] = int(_local_6.width);
             _local_7["height"] = int(_local_6.height);
@@ -625,12 +625,12 @@ public class EditingScreen extends Sprite
                     else
                     {
                         _local_5 = _local_8[_local_4];
-                    };
+                    }
                     _local_10.writeShort(_local_5);
                     _local_1++;
-                };
+                }
                 _local_11++;
-            };
+            }
             _local_7["dict"] = _local_9;
             _local_10.compress();
             _local_7["data"] = Base64.encodeByteArray(_local_10);
@@ -643,7 +643,7 @@ public class EditingScreen extends Sprite
             if (_local_2 == null)
             {
                 return;
-            };
+            }
             new FileReference().save(_local_2, ((this.filename_ == null) ? "map.jm" : this.filename_));
         }
 
@@ -653,7 +653,7 @@ public class EditingScreen extends Sprite
             if (_local_2 == null)
             {
                 return;
-            };
+            }
             this.meMap_.setMinZoom();
             this.meMap_.draw();
             dispatchEvent(new SubmitJMEvent(_local_2, this.meMap_.getMapStatistics()));
@@ -672,7 +672,7 @@ public class EditingScreen extends Sprite
                 {
                     _local_3 = GroundLibrary.getIdFromType(_local_2[Layer.GROUND]);
                     _local_5["ground"] = _local_3;
-                };
+                }
                 if (_local_2[Layer.OBJECT] != -1)
                 {
                     _local_3 = ObjectLibrary.getIdFromType(_local_2[Layer.OBJECT]);
@@ -680,15 +680,15 @@ public class EditingScreen extends Sprite
                     if (_arg_1.objName_ != null)
                     {
                         _local_4["name"] = _arg_1.objName_;
-                    };
+                    }
                     _local_5["objs"] = [_local_4];
-                };
+                }
                 if (_local_2[Layer.REGION] != -1)
                 {
                     _local_3 = RegionLibrary.getIdFromType(_local_2[Layer.REGION]);
                     _local_5["regions"] = [{"id":_local_3}];
-                };
-            };
+                }
+            }
             return (_local_5);
         }
 
@@ -711,7 +711,7 @@ public class EditingScreen extends Sprite
             }
             catch(e:Error)
             {
-            };
+            }
         }
 
         private function onFileLoadComplete(_arg_1:Event):void
@@ -733,15 +733,15 @@ public class EditingScreen extends Sprite
             while (((_local_14 < _local_11["width"]) || (_local_14 < _local_11["height"])))
             {
                 _local_14 = (_local_14 * 2);
-            };
+            }
             if (MEMap.NUM_SQUARES != _local_14)
             {
                 _local_2 = ((_local_14 + "x") + _local_14);
                 if (!this.mapSizeDropDown_.setValue(_local_2))
                 {
                     this.mapSizeDropDown_.setValue("512x512");
-                };
-            };
+                }
+            }
             var _local_15:Rectangle = new Rectangle(int(((MEMap.NUM_SQUARES / 2) - (_local_12 / 2))), int(((MEMap.NUM_SQUARES / 2) - (_local_13 / 2))), _local_12, _local_13);
             this.meMap_.clear();
             this.commandQueue_.clear();
@@ -759,7 +759,7 @@ public class EditingScreen extends Sprite
                     {
                         _local_3 = GroundLibrary.idToType_[_local_5["ground"]];
                         this.meMap_.modifyTile(_local_4, _local_18, Layer.GROUND, _local_3);
-                    };
+                    }
                     _local_6 = _local_5["objs"];
                     if (_local_6 != null)
                     {
@@ -772,10 +772,10 @@ public class EditingScreen extends Sprite
                                 if (_local_8.hasOwnProperty("name"))
                                 {
                                     this.meMap_.modifyObjectName(_local_4, _local_18, _local_8["name"]);
-                                };
-                            };
-                        };
-                    };
+                                }
+                            }
+                        }
+                    }
                     _local_7 = _local_5["regions"];
                     if (_local_7 != null)
                     {
@@ -783,12 +783,12 @@ public class EditingScreen extends Sprite
                         {
                             _local_3 = RegionLibrary.idToType_[_local_9["id"]];
                             this.meMap_.modifyTile(_local_4, _local_18, Layer.REGION, _local_3);
-                        };
-                    };
+                        }
+                    }
                     _local_4++;
-                };
+                }
                 _local_18++;
-            };
+            }
             this.meMap_.draw();
         }
 
@@ -816,7 +816,7 @@ public class EditingScreen extends Sprite
             if (this.meMap_ != null)
             {
                 this.meMap_.clearSelect();
-            };
+            }
         }
 
 

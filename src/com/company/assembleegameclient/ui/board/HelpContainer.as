@@ -32,7 +32,7 @@ public class HelpContainer extends Sprite
                 addChild(_local_3);
                 _local_4 = (_local_4 + (42 + (_local_2 * 12)));
                 _local_1++;
-            };
+            }
         }
 
         private function count(_arg_1:String, _arg_2:String):int

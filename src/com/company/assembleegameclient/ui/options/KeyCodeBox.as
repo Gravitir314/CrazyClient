@@ -59,7 +59,7 @@ public class KeyCodeBox extends Sprite
             if (_arg_1 == this.keyCode_)
             {
                 return;
-            };
+            }
             this.keyCode_ = _arg_1;
             this.setTextToKey();
             dispatchEvent(new Event(Event.CHANGE, true));
@@ -109,7 +109,7 @@ public class KeyCodeBox extends Sprite
             {
                 removeEventListener(KeyboardEvent.KEY_DOWN, this.onInputKeyDown);
                 stage.removeEventListener(MouseEvent.MOUSE_DOWN, this.onInputMouseDown, true);
-            };
+            }
             this.setTextToKey();
             addEventListener(MouseEvent.CLICK, this.onNormalClick);
         }
@@ -119,7 +119,7 @@ public class KeyCodeBox extends Sprite
             if (stage == null)
             {
                 return;
-            };
+            }
             stage.stageFocusRect = false;
             stage.focus = this;
             this.inputMode_ = true;
@@ -145,7 +145,7 @@ public class KeyCodeBox extends Sprite
             else
             {
                 this.setText(new LineBuilder().setParams(TextKey.KEYCODEBOX_HITKEY));
-            };
+            }
         }
 
         private function onInputKeyDown(_arg_1:KeyboardEvent):void

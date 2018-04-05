@@ -65,7 +65,7 @@ public class MigrationDialog extends EmptyFrame
                 _local_1 = this.account.getCredentials();
                 this.client.complete.addOnce(this.onMigrateStartComplete);
                 this.client.sendRequest("/migrate/doMigration", _local_1);
-            };
+            }
         }
 
         private function startPercentLoop():void
@@ -74,7 +74,7 @@ public class MigrationDialog extends EmptyFrame
             if (this.progressCheckClient == null)
             {
                 this.progressCheckClient = StaticInjectorContext.getInjector().getInstance(SimpleAppEngineClient);
-            };
+            }
             this.timerProgressCheck.start();
             this.updatePercent(0);
         }
@@ -104,7 +104,7 @@ public class MigrationDialog extends EmptyFrame
                 if (this.isClosed == true)
                 {
                     return;
-                };
+                }
                 _local_3 = new XML(_arg_2);
                 if (_local_3.hasOwnProperty("Percent"))
                 {
@@ -117,15 +117,15 @@ public class MigrationDialog extends EmptyFrame
                             this.stopPercentLoop();
                             this.updatePercent(_local_5);
                             this.done.dispatch();
-                        };
+                        }
                     }
                     else
                     {
                         if (_local_5 != this.lastPercent)
                         {
                             this.updatePercent(_local_5);
-                        };
-                    };
+                        }
+                    }
                 }
                 else
                 {
@@ -136,10 +136,10 @@ public class MigrationDialog extends EmptyFrame
                         {
                             this.stopPercentLoop();
                             this.reset();
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
         }
 
         private function updatePercent(_arg_1:Number):void
@@ -156,7 +156,7 @@ public class MigrationDialog extends EmptyFrame
             if (this.isClosed)
             {
                 return;
-            };
+            }
             if (_arg_1)
             {
                 _local_3 = new XML(_arg_2);
@@ -180,15 +180,15 @@ public class MigrationDialog extends EmptyFrame
                         {
                             this.stopPercentLoop();
                             this.reset();
-                        };
-                    };
-                };
+                        }
+                    }
+                }
             }
             else
             {
                 this.stopPercentLoop();
                 this.reset();
-            };
+            }
         }
 
         private function reset():void
@@ -219,7 +219,7 @@ public class MigrationDialog extends EmptyFrame
             if (((!(this.progBar == null)) && (!(this.progBar.parent == null))))
             {
                 removeChild(this.progBar);
-            };
+            }
         }
 
         private function removeMigrateCallback():void
@@ -243,7 +243,7 @@ public class MigrationDialog extends EmptyFrame
                 addChild(this.leftButton_);
                 this.leftButton_.x = (((modalWidth / 2) - 100) - this.leftButton_.width);
                 this.leftButton_.y = (modalHeight - 50);
-            };
+            }
         }
 
         private function makeAndAddRightButton(_arg_1:String):void
@@ -257,7 +257,7 @@ public class MigrationDialog extends EmptyFrame
                 addChild(this.rightButton_);
                 this.rightButton_.x = ((modalWidth / 2) + 100);
                 this.rightButton_.y = (modalHeight - 50);
-            };
+            }
         }
 
 

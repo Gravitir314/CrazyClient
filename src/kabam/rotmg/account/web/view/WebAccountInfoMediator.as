@@ -66,7 +66,7 @@ public class WebAccountInfoMediator extends Mediator
             else
             {
                 this.openDialog.dispatch(new WebLoginDialog());
-            };
+            }
         }
 
         private function onLogOut():void
@@ -84,7 +84,7 @@ public class WebAccountInfoMediator extends Mediator
                 _local_3.username = this.email;
                 _local_3.password = this.pass;
                 this.login.dispatch(_local_3);
-            };
+            }
         }
 
         private function onResetPhase1():void

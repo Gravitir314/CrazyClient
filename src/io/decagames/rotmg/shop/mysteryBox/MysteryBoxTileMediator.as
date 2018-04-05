@@ -60,7 +60,7 @@ public class MysteryBoxTileMediator extends Mediator
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view.clickMask);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            };
+            }
         }
 
         private function changeAmountHandler(_arg_1:int):void
@@ -72,7 +72,7 @@ public class MysteryBoxTileMediator extends Mediator
             else
             {
                 this.view.buyButton.price = (_arg_1 * int(this.view.boxInfo.priceAmount));
-            };
+            }
         }
 
         private function onBuyHandler(_arg_1:BaseButton):void
@@ -81,7 +81,7 @@ public class MysteryBoxTileMediator extends Mediator
             if (_local_2)
             {
                 this.showPopupSignal.dispatch(new MysteryBoxRollModal(MysteryBoxInfo(this.view.boxInfo), this.view.spinner.value));
-            };
+            }
         }
 
         private function onBoxClickHandler(_arg_1:MouseEvent):void
@@ -105,7 +105,7 @@ public class MysteryBoxTileMediator extends Mediator
                 this.toolTip = null;
                 this.hoverTooltipDelegate.removeDisplayObject();
                 this.hoverTooltipDelegate = null;
-            };
+            }
         }
 
 

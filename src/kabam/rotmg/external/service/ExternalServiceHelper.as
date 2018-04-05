@@ -21,7 +21,7 @@ public class ExternalServiceHelper
             if (ExternalInterface.available)
             {
                 ExternalInterface.addCallback("updatePlayerCredits", this.updatePlayerCredits);
-            };
+            }
         }
 
         private function updatePlayerCredits():void

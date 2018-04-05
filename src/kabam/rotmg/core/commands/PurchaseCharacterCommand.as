@@ -66,8 +66,8 @@ public class PurchaseCharacterCommand
                 else
                 {
                     this.showNotEnoughGoldDialog();
-                };
-            };
+                }
+            }
         }
 
         private function showPromptToRegister():void

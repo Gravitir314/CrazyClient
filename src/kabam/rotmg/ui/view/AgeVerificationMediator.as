@@ -40,7 +40,7 @@ public class AgeVerificationMediator extends Mediator
             else
             {
                 this.handleRejected();
-            };
+            }
         }
 
         private function handleAccepted():void

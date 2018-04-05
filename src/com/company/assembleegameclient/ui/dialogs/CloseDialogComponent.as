@@ -31,7 +31,7 @@ public class CloseDialogComponent
             for each (_local_2 in this.types)
             {
                 this.dialog.removeEventListener(_local_2, this.onButtonType);
-            };
+            }
             this.dialog.getCloseSignal().dispatch();
         }
 

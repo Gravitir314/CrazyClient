@@ -47,11 +47,11 @@ public class GenericBoxTile extends UIGridElement
             {
                 this.backgroundTitle = TextureParser.instance.getSliceScalingBitmap("UI", "shop_title_background", 10);
                 this._infoButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "tab_info_button"));
-            };
+            }
             if (this.buyButtonBitmapBackground)
             {
                 this.backgroundButton = TextureParser.instance.getSliceScalingBitmap("UI", this.buyButtonBitmapBackground, 10);
-            };
+            }
             this._spinner = new FixedNumbersSpinner(TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow"), 0, new <int>[1, 2, 3, 5, 10], "x");
             this._spinner.y = 131;
             this._spinner.x = 43;
@@ -65,19 +65,19 @@ public class GenericBoxTile extends UIGridElement
             else
             {
                 this._buyButton = new ShopBuyButton(_arg_1.priceAmount, _arg_1.priceCurrency);
-            };
+            }
             this._buyButton.width = 95;
             if (_arg_1.unitsLeft == 0)
             {
                 this._buyButton.disabled = true;
-            };
+            }
             this.tags = new Vector.<ShopBoxTag>(0);
             addChild(this.background);
             this.createBoxBackground();
             if (this.backgroundTitle)
             {
                 addChild(this.backgroundTitle);
-            };
+            }
             this._clickMask = new Sprite();
             this._clickMask.graphics.beginFill(0xFF0000, this.clickMaskAlpha);
             this._clickMask.graphics.drawRect(0, 0, 95, this.boxHeight);
@@ -86,23 +86,23 @@ public class GenericBoxTile extends UIGridElement
             if (this.backgroundButton)
             {
                 addChild(this.backgroundButton);
-            };
+            }
             addChild(this.titleLabel);
             if (_arg_1.isOnSale())
             {
                 this.originalPriceLabel = new SalePriceTag(_arg_1.priceAmount, _arg_1.priceCurrency);
                 addChild(this.originalPriceLabel);
-            };
+            }
             addChild(this._buyButton);
             addChild(this._spinner);
             if (!_arg_2)
             {
                 addChild(this._infoButton);
-            };
+            }
             if (_arg_1.isNew())
             {
                 this.addTag(new ShopBoxTag(ShopBoxTag.BLUE_TAG, "NEW"));
-            };
+            }
             this._endTimeLabel = new UILabel();
             this._endTimeLabel.y = 28;
             addChild(this._endTimeLabel);
@@ -121,7 +121,7 @@ public class GenericBoxTile extends UIGridElement
             {
                 this._endTimeLabel.text = _local_1;
                 this._endTimeLabel.x = ((this.background.width - this._endTimeLabel.width) / 2);
-            };
+            }
         }
 
         override public function get height():Number
@@ -148,12 +148,12 @@ public class GenericBoxTile extends UIGridElement
             {
                 this._buyButton.y = 137;
                 this._buyButton.x = (_arg_1 - 110);
-            };
+            }
             if (this._infoButton)
             {
                 this._infoButton.x = 130;
                 this._infoButton.y = 45;
-            };
+            }
             this.updateTimeEndString();
             this.updateSaleLabel();
             this.updateClickMask(_arg_1);
@@ -167,11 +167,11 @@ public class GenericBoxTile extends UIGridElement
                 this.backgroundTitle = TextureParser.instance.getSliceScalingBitmap("UI", "shop_title_background", 10);
                 _local_2 = ((this.backgroundTitle.y + this.backgroundTitle.height) + 2);
                 this._clickMask.y = _local_2;
-            };
+            }
             if (this.backgroundButton)
             {
                 this.boxHeight = (this.boxHeight - ((this.boxHeight - this.backgroundButton.y) + 4));
-            };
+            }
             this._clickMask.graphics.clear();
             this._clickMask.graphics.beginFill(0xFF0000, this.clickMaskAlpha);
             this._clickMask.graphics.drawRect(0, 0, _arg_1, (this.boxHeight - _local_2));
@@ -184,7 +184,7 @@ public class GenericBoxTile extends UIGridElement
             {
                 this.originalPriceLabel.y = (this._buyButton.y - 23);
                 this.originalPriceLabel.x = (((this._buyButton.x + this._buyButton.width) - this.originalPriceLabel.width) - 13);
-            };
+            }
         }
 
         override public function update():void
@@ -222,22 +222,22 @@ public class GenericBoxTile extends UIGridElement
             if (this.backgroundTitle)
             {
                 this.backgroundTitle.dispose();
-            };
+            }
             this.backgroundButton.dispose();
             this._buyButton.dispose();
             if (this._infoButton)
             {
                 this._infoButton.dispose();
-            };
+            }
             this._spinner.dispose();
             if (this.originalPriceLabel)
             {
                 this.originalPriceLabel.dispose();
-            };
+            }
             for each (_local_1 in this.tags)
             {
                 _local_1.dispose();
-            };
+            }
             this.tags = null;
             super.dispose();
         }

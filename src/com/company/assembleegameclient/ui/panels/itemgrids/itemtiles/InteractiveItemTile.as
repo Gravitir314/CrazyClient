@@ -56,7 +56,7 @@ public class InteractiveItemTile extends ItemTile
                 removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
                 removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
                 removeEventListener(MouseEvent.RIGHT_CLICK, this.startCollect);
-            };
+            }
         }
 
         public function startCollect(_arg_1:MouseEvent):void
@@ -68,7 +68,7 @@ public class InteractiveItemTile extends ItemTile
             else
             {
                 this.player.collect = itemSprite.itemId;
-            };
+            }
         }
 
         public function getDropTarget():DisplayObject
@@ -94,7 +94,7 @@ public class InteractiveItemTile extends ItemTile
             if (this.isDragging)
             {
                 return;
-            };
+            }
             if (_arg_1.shiftKey)
             {
                 this.setPendingDoubleClick(false);
@@ -117,9 +117,9 @@ public class InteractiveItemTile extends ItemTile
                     {
                         this.setPendingDoubleClick(false);
                         dispatchEvent(new ItemTileEvent(ItemTileEvent.ITEM_DOUBLE_CLICK, this));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function onMouseDown(_arg_1:MouseEvent):void
@@ -138,7 +138,7 @@ public class InteractiveItemTile extends ItemTile
             else
             {
                 this.doubleClickTimer.stop();
-            };
+            }
         }
 
         private function beginDragCheck(_arg_1:MouseEvent):void
@@ -166,7 +166,7 @@ public class InteractiveItemTile extends ItemTile
                 this.cancelDragCheck(null);
                 this.setPendingDoubleClick(false);
                 this.beginDrag(_arg_1);
-            };
+            }
         }
 
         private function onDoubleClickTimerComplete(_arg_1:TimerEvent):void
@@ -201,7 +201,7 @@ public class InteractiveItemTile extends ItemTile
             if (_local_2)
             {
                 this.stopDragging();
-            };
+            }
             return (_local_2);
         }
 
@@ -220,9 +220,9 @@ public class InteractiveItemTile extends ItemTile
                 if (stage.contains(itemSprite))
                 {
                     stage.removeChild(itemSprite);
-                };
+                }
                 this.isDragging = false;
-            };
+            }
         }
 
 

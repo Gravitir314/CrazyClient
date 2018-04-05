@@ -34,9 +34,9 @@ public class ExplosionEffect extends ParticleEffect
                     else
                     {
                         this.numParts_ = _arg_3;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         override public function runNormalRendering(_arg_1:int, _arg_2:int):Boolean
@@ -47,18 +47,18 @@ public class ExplosionEffect extends ParticleEffect
             if (this.colors_.length == 0)
             {
                 return (false);
-            };
+            }
             if (ExplosionParticle.total_ > 400)
             {
                 return (false);
-            };
+            }
             while (_local_5 < this.numParts_)
             {
                 _local_3 = uint(this.colors_[int((this.colors_.length * Math.random()))]);
                 _local_4 = new ExplosionParticle(_local_3, 0.5, size_, (200 + (Math.random() * 100)), (Math.random() - 0.5), (Math.random() - 0.5), 0);
                 map_.addObj(_local_4, x_, y_);
                 _local_5++;
-            };
+            }
             return (false);
         }
 
@@ -70,11 +70,11 @@ public class ExplosionEffect extends ParticleEffect
             if (this.colors_.length == 0)
             {
                 return (false);
-            };
+            }
             if (ExplosionParticle.total_ > 400)
             {
                 return (false);
-            };
+            }
             this.numParts_ = 2;
             while (_local_5 < this.numParts_)
             {
@@ -82,7 +82,7 @@ public class ExplosionEffect extends ParticleEffect
                 _local_4 = new ExplosionParticle(_local_3, 0.5, size_, (50 + (Math.random() * 100)), (Math.random() - 0.5), (Math.random() - 0.5), 0);
                 map_.addObj(_local_4, x_, y_);
                 _local_5++;
-            };
+            }
             return (false);
         }
 
@@ -123,9 +123,9 @@ class ExplosionParticle extends Particle
             {
                 total_--;
                 this.deleted = true;
-            };
+            }
             return (false);
-        };
+        }
         x_ = (x_ + ((this.moveVec_.x * _arg_2) * 0.008));
         y_ = (y_ + ((this.moveVec_.y * _arg_2) * 0.008));
         z_ = (z_ + ((this.moveVec_.z * _arg_2) * 0.008));

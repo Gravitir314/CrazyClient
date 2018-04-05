@@ -33,7 +33,7 @@ public class FlowEffect extends ParticleEffect
             if (FlowParticle.total_ > 200)
             {
                 return (false);
-            };
+            }
             x_ = this.start_.x;
             y_ = this.start_.y;
             var _local_6:int = 5;
@@ -43,7 +43,7 @@ public class FlowEffect extends ParticleEffect
                 _local_4 = new FlowParticle(0.5, _local_3, this.color_, this.start_, this.go_);
                 map_.addObj(_local_4, x_, y_);
                 _local_5++;
-            };
+            }
             return (false);
         }
 
@@ -55,7 +55,7 @@ public class FlowEffect extends ParticleEffect
             if (FlowParticle.total_ > 200)
             {
                 return (false);
-            };
+            }
             x_ = this.start_.x;
             y_ = this.start_.y;
             var _local_6:int = 3;
@@ -65,7 +65,7 @@ public class FlowEffect extends ParticleEffect
                 _local_4 = new FlowParticle(0.5, _local_3, this.color_, this.start_, this.go_);
                 map_.addObj(_local_4, x_, y_);
                 _local_5++;
-            };
+            }
             return (false);
         }
 
@@ -110,14 +110,14 @@ class FlowParticle extends Particle
         {
             total_--;
             return (false);
-        };
+        }
         this.flowSpeed_ = (this.flowSpeed_ + ((_local_3 * _arg_2) / 1000));
         this.maxDist_ = (this.maxDist_ - ((this.flowSpeed_ * _arg_2) / 1000));
         var _local_7:Number = (_local_6 - ((this.flowSpeed_ * _arg_2) / 1000));
         if (_local_7 > this.maxDist_)
         {
             _local_7 = this.maxDist_;
-        };
+        }
         var _local_8:Number = (this.go_.x_ - x_);
         var _local_9:Number = (this.go_.y_ - y_);
         _local_8 = (_local_8 * (_local_7 / _local_6));
@@ -156,7 +156,7 @@ class FlowParticle2 extends Particle
         if (_local_5 < 0.5)
         {
             return (false);
-        };
+        }
         var _local_6:Number = Math.atan2((this.go_.y_ - y_), (this.go_.x_ - x_));
         this.dx_ = (this.dx_ + (((this.accel_ * Math.cos(_local_6)) * _arg_2) / 1000));
         this.dy_ = (this.dy_ + (((this.accel_ * Math.sin(_local_6)) * _arg_2) / 1000));

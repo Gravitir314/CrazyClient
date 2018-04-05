@@ -25,7 +25,7 @@ import kabam.rotmg.servers.api.ServerModel;
 public class PlayGameCommand
     {
         public static var startTime:int = -1;
-        public static var visited:Array = new Array();
+        public static var visited:Array = [];
         private static var loaded:Boolean = false;
         public static var currealm:String = "Nexus";
         public static var curloc:String = "Nexus";
@@ -54,7 +54,7 @@ public class PlayGameCommand
             if (!this.data.isNewGame)
             {
                 this.socketServerModel.connectDelayMS = Parameters.RECONNECT_DELAY;
-            };
+            }
             this.recordCharacterUseInSharedObject();
             this.makeGameView();
             this.updatePet();
@@ -72,9 +72,9 @@ public class PlayGameCommand
                 if ((((this.model.currentCharId) && (this.petsModel.getActivePet())) && (!(this.data.isNewGame))))
                 {
                     return;
-                };
+                }
                 this.petsModel.setActivePet(null);
-            };
+            }
         }
 
         private function recordCharacterUseInSharedObject():void
@@ -92,13 +92,13 @@ public class PlayGameCommand
             if (!this.model.account.isRegistered())
             {
                 return;
-            };
+            }
             _local_1 = ((this.data.server) || (this.servers.getServer()));
             var _local_5:Boolean = this.namedConnection(_local_1);
             if ((((Parameters.data_.preferredServer == null) && (!(Parameters.data_.bestServ == "Default"))) && (_local_5)))
             {
                 _local_1 = this.getServerByName(Parameters.data_.bestServ);
-            };
+            }
             var _local_6:String = Parameters.data_.preferredServer;
             if (((!(_local_6 == null)) && (!(_local_1.name.substring(0, _local_6.length) == _local_6))))
             {
@@ -193,10 +193,10 @@ public class PlayGameCommand
                                 case "{oryx.Wine_Cellar}":
                                     _local_1.name = "Wine Cellar";
                                     break;
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 _local_1.name = ((((_local_6 + " ") + currealm) + " ") + _local_1.name);
             }
             else
@@ -210,9 +210,9 @@ public class PlayGameCommand
                     if (_local_1.name == "Realm")
                     {
                         _local_1.name = "";
-                    };
-                };
-            };
+                    }
+                }
+            }
             var _local_7:int = ((this.data.isNewGame) ? this.getInitialGameId() : this.data.gameId);
             var _local_8:Boolean = this.data.createCharacter;
             var _local_9:int = this.data.charId;
@@ -222,7 +222,7 @@ public class PlayGameCommand
             if (startTime == -1)
             {
                 startTime = getTimer();
-            };
+            }
             if (_local_7 == 0)
             {
                 _local_2 = ((_local_1.address + " ") + _local_1.name);
@@ -233,13 +233,13 @@ public class PlayGameCommand
                     {
                         _local_3 = false;
                         break;
-                    };
-                };
+                    }
+                }
                 if (_local_3)
                 {
                     visited.push(_local_2);
-                };
-            };
+                }
+            }
             curloc = _local_1.name;
             curip = _local_1.address;
             this.setScreen.dispatch(new GameSprite(_local_1, _local_7, _local_8, _local_9, _local_10, _local_11, this.model, null, this.data.isFromArena));
@@ -254,8 +254,8 @@ public class PlayGameCommand
                 if (_local_2.name == _arg_1.name)
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -268,8 +268,8 @@ public class PlayGameCommand
                 if (_local_2.name == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 

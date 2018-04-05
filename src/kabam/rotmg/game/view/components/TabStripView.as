@@ -61,8 +61,8 @@ public class TabStripView extends Sprite
                 if ((_local_2 is _arg_1))
                 {
                     return (_local_2 as _arg_1);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -88,7 +88,7 @@ public class TabStripView extends Sprite
                 this.tabSprite.removeChild(this.tabs[_local_1]);
                 this.containerSprite.removeChild(this.contents[_local_1]);
                 _local_1++;
-            };
+            }
             this.tabs = new Vector.<TabView>();
             this.contents = new Vector.<Sprite>();
         }
@@ -106,8 +106,8 @@ public class TabStripView extends Sprite
                 if ((_arg_1 is BaseSimpleText))
                 {
                     _local_3 = this.addTextTab(_local_4, (_arg_1 as BaseSimpleText));
-                };
-            };
+                }
+            }
             this.tabs.push(_local_3);
             this.tabSprite.addChild(_local_3);
             this.contents.push(_arg_2);
@@ -121,7 +121,7 @@ public class TabStripView extends Sprite
                 _local_3.setSelected(true);
                 this.showContent(0);
                 this.tabSelected.dispatch(_arg_2.name);
-            };
+            }
         }
 
         public function removeTab():void
@@ -140,8 +140,8 @@ public class TabStripView extends Sprite
                     _arg_1.setSelected(true);
                     this.showContent(_arg_1.index);
                     this.tabSelected.dispatch(this.contents[_arg_1.index].name);
-                };
-            };
+                }
+            }
         }
 
         private function addIconTab(_arg_1:int, _arg_2:Bitmap):TabIconView
@@ -177,7 +177,7 @@ public class TabStripView extends Sprite
                 _local_2.visible = false;
                 _local_3.visible = true;
                 this.currentTabIndex = _arg_1;
-            };
+            }
         }
 
         private function onTabClicked(_arg_1:MouseEvent):void

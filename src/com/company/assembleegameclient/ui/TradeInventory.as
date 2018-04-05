@@ -71,11 +71,11 @@ public class TradeInventory extends Sprite
                 {
                     _local_6.addEventListener(MouseEvent.MOUSE_DOWN, this.onSlotClick);
                     _local_6.addEventListener(MouseEvent.RIGHT_CLICK, this.selectAll);
-                };
+                }
                 this.slots_.push(_local_6);
                 addChild(_local_6);
                 _local_7++;
-            };
+            }
         }
 
         private function onSlotClick(_arg_1:MouseEvent):void
@@ -96,7 +96,7 @@ public class TradeInventory extends Sprite
             {
                 _local_2 = new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false];
                 this.gs_.map.player_.select_ = (_arg_1.currentTarget as TradeSlot).item_;
-            };
+            }
         }
 
         private function selectAllInstantly():void
@@ -115,10 +115,10 @@ public class TradeInventory extends Sprite
                     {
                         _local_3[_local_1] = true;
                         this.slots_[_local_1].setIncluded((!(this.slots_[_local_1].included_)));
-                    };
-                };
+                    }
+                }
                 _local_1++;
-            };
+            }
             this.gs_.gsc_.changeTrade(_local_3);
         }
 
@@ -130,7 +130,7 @@ public class TradeInventory extends Sprite
             {
                 _local_2.push(this.slots_[_local_1].included_);
                 _local_1++;
-            };
+            }
             return (_local_2);
         }
 
@@ -141,7 +141,7 @@ public class TradeInventory extends Sprite
             {
                 this.slots_[_local_2].setIncluded(_arg_1[_local_2]);
                 _local_2++;
-            };
+            }
         }
 
         public function isOffer(_arg_1:Vector.<Boolean>):Boolean
@@ -152,9 +152,9 @@ public class TradeInventory extends Sprite
                 if (_arg_1[_local_2] != this.slots_[_local_2].included_)
                 {
                     return (false);
-                };
+                }
                 _local_2++;
-            };
+            }
             return (true);
         }
 
@@ -167,9 +167,9 @@ public class TradeInventory extends Sprite
                 if (this.slots_[_local_2].included_)
                 {
                     _local_1++;
-                };
+                }
                 _local_2++;
-            };
+            }
             return (_local_1);
         }
 
@@ -182,9 +182,9 @@ public class TradeInventory extends Sprite
                 if (this.slots_[_local_2].isEmpty())
                 {
                     _local_1++;
-                };
+                }
                 _local_2++;
-            };
+            }
             return (_local_1);
         }
 
@@ -213,7 +213,7 @@ public class TradeInventory extends Sprite
                     this.taglineText_.setColor(0xB3B3B3);
                     _local_2 = TextKey.TRADEINVENTORY_PLAYERISSELECTINGITEMS;
                     break;
-            };
+            }
             this.taglineText_.setStringBuilder(new LineBuilder().setParams(_local_2));
         }
 

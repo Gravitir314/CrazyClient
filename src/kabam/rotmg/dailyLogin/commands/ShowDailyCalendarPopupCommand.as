@@ -23,7 +23,7 @@ public class ShowDailyCalendarPopupCommand
             if (((this.dailyLoginModel.shouldDisplayCalendarAtStartup) && (this.dailyLoginModel.initialized)))
             {
                 this.openDialog.dispatch(new DailyLoginModal());
-            };
+            }
         }
 
 

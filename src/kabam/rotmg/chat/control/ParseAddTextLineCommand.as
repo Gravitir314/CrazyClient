@@ -45,7 +45,7 @@ public class ParseAddTextLineCommand extends Command
                 _local_1.setStringMap(this.textStringMap.getStringMap());
                 _local_2 = _local_1.getString();
                 this.chatMessage.name = ((_local_2) ? ("#" + _local_2) : this.chatMessage.name);
-            };
+            }
         }
 
         private function translateMessage():void
@@ -53,7 +53,7 @@ public class ParseAddTextLineCommand extends Command
             if ((((((this.chatMessage.name == Parameters.CLIENT_CHAT_NAME) || (this.chatMessage.name == Parameters.SERVER_CHAT_NAME)) || (this.chatMessage.name == Parameters.ERROR_CHAT_NAME)) || (this.chatMessage.name == Parameters.HELP_CHAT_NAME)) || (this.chatMessage.name.charAt(0) == "#")))
             {
                 this.translateChatMessage();
-            };
+            }
         }
 
         public function translateChatMessage():void

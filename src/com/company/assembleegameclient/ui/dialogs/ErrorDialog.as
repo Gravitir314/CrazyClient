@@ -105,7 +105,7 @@ public class ErrorDialog extends Sprite
                 this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8, 1)];
                 this.titleText_.setStringBuilder(new StaticStringBuilder(_arg_1));
                 this.addTextFieldDisplay(this.titleText_);
-            };
+            }
         }
 
         private function makeNonNullButtons(_arg_1:String, _arg_2:String):void
@@ -114,12 +114,12 @@ public class ErrorDialog extends Sprite
             {
                 this.button1_ = new DeprecatedTextButton(16, _arg_1, 120);
                 this.button1_.addEventListener(MouseEvent.CLICK, this.onButton1Click);
-            };
+            }
             if (_arg_2 != null)
             {
                 this.button2_ = new DeprecatedTextButton(16, _arg_2, 120);
                 this.button2_.addEventListener(MouseEvent.CLICK, this.onButton2Click);
-            };
+            }
         }
 
         private function onComplete():void
@@ -150,7 +150,7 @@ public class ErrorDialog extends Sprite
             if (this.box_.contains(this.rect_))
             {
                 this.box_.removeChild(this.rect_);
-            };
+            }
             this.removeButtonsIfAlreadyAdded();
             this.addButtonsAndLayout();
             this.drawBackground();
@@ -190,8 +190,8 @@ public class ErrorDialog extends Sprite
                     this.box_.addChild(this.button2_);
                     this.button2_.x = (((3 * WIDTH) / 4) - (this.button2_.width / 2));
                     this.button2_.y = _local_1;
-                };
-            };
+                }
+            }
         }
 
         private function removeButtonsIfAlreadyAdded():void
@@ -199,11 +199,11 @@ public class ErrorDialog extends Sprite
             if (((this.button1_) && (this.box_.contains(this.button1_))))
             {
                 this.box_.removeChild(this.button1_);
-            };
+            }
             if (((this.button2_) && (this.box_.contains(this.button2_))))
             {
                 this.box_.removeChild(this.button2_);
-            };
+            }
         }
 
         private function drawTitleAndText():void
@@ -216,7 +216,7 @@ public class ErrorDialog extends Sprite
             else
             {
                 this.textText_.y = 4;
-            };
+            }
         }
 
         private function onButton1Click(_arg_1:MouseEvent):void

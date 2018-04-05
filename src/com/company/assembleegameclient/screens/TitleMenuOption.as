@@ -118,7 +118,7 @@ public class TitleMenuOption extends Sprite
             if (this.isPulse)
             {
                 addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -126,7 +126,7 @@ public class TitleMenuOption extends Sprite
             if (this.isPulse)
             {
                 removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function onEnterFrame(_arg_1:Event):void
@@ -141,7 +141,7 @@ public class TitleMenuOption extends Sprite
             if (_arg_1 == this.colorTransform)
             {
                 return;
-            };
+            }
             this.colorTransform = _arg_1;
             if (this.colorTransform == null)
             {
@@ -150,7 +150,7 @@ public class TitleMenuOption extends Sprite
             else
             {
                 this.textField.transform.colorTransform = this.colorTransform;
-            };
+            }
         }
 
         protected function onMouseOver(_arg_1:MouseEvent):void
@@ -167,7 +167,7 @@ public class TitleMenuOption extends Sprite
             else
             {
                 this.setColorTransform(null);
-            };
+            }
         }
 
         protected function onMouseClick(_arg_1:MouseEvent):void

@@ -44,7 +44,7 @@ public class ServersConfig implements IConfig
                     return;
                 default:
                     this.configureLiveServers();
-            };
+            }
         }
 
         private function configureLocalhost():void

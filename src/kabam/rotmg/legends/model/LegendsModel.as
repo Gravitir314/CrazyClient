@@ -45,7 +45,7 @@ public class LegendsModel
             {
                 this.dispose(this.map[_local_1]);
                 delete this.map[_local_1];
-            };
+            }
         }
 
         private function dispose(_arg_1:Vector.<Legend>):void
@@ -54,7 +54,7 @@ public class LegendsModel
             for each (_local_2 in _arg_1)
             {
                 ((_local_2.character) && (this.removeLegendCharacter(_local_2)));
-            };
+            }
         }
 
         private function removeLegendCharacter(_arg_1:Legend):void

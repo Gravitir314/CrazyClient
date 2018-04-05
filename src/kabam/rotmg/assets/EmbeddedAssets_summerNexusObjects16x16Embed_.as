@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_summerNexusObjects16x16Embed_()
         {
             super();
-            return;
+
         }
     }
 }

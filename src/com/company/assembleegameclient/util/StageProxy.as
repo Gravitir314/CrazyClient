@@ -33,7 +33,7 @@ public class StageProxy implements IEventDispatcher
             if (this.reference.stage != null)
             {
                 return (this.reference.stage.stageWidth);
-            };
+            }
             return (800);
         }
 
@@ -42,7 +42,7 @@ public class StageProxy implements IEventDispatcher
             if (this.reference.stage != null)
             {
                 return (this.reference.stage.stageHeight);
-            };
+            }
             return (600);
         }
 
@@ -96,7 +96,7 @@ public class StageProxy implements IEventDispatcher
             if (stage3D == null)
             {
                 stage3D = new Stage3DProxy(this.reference.stage.stage3Ds[_arg_1]);
-            };
+            }
             return (stage3D);
         }
 

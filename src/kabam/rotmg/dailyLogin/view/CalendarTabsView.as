@@ -59,12 +59,12 @@ public class CalendarTabsView extends Sprite
                 else
                 {
                     _local_2.state = CalendarTabButton.STATE_IDLE;
-                };
-            };
+                }
+            }
             if (this.calendar)
             {
                 removeChild(this.calendar);
-            };
+            }
             this.calendar = new CalendarView();
             addChild(this.calendar);
             this.calendar.x = CalendarSettings.DAILY_LOGIN_TABS_PADDING;

@@ -62,7 +62,7 @@ public class TradeSlot extends Slot implements TooltipAble
             if (!_arg_2)
             {
                 transform.colorTransform = MoreColorUtil.veryDarkCT;
-            };
+            }
             this.overlay_ = this.getOverlay();
             addChild(this.overlay_);
             this.setIncluded(_arg_3);
@@ -82,7 +82,7 @@ public class TradeSlot extends Slot implements TooltipAble
             if (!this.isEmpty())
             {
                 this.drawItem();
-            };
+            }
         }
 
         private function drawItem():void
@@ -97,13 +97,13 @@ public class TradeSlot extends Slot implements TooltipAble
                 _local_3 = _local_3.clone();
                 _local_2 = this.bitmapFactory.make(new StaticStringBuilder(String(_local_4.Doses)), 12, 0xFFFFFF, false, IDENTITY_MATRIX, false);
                 _local_3.draw(_local_2, DOSE_MATRIX);
-            };
+            }
             if (((_local_4.hasOwnProperty("Quantity")) && (this.bitmapFactory)))
             {
                 _local_3 = _local_3.clone();
                 _local_2 = this.bitmapFactory.make(new StaticStringBuilder(String(_local_4.Quantity)), 12, 0xFFFFFF, false, IDENTITY_MATRIX, false);
                 _local_3.draw(_local_2, DOSE_MATRIX);
-            };
+            }
             var _local_5:Point = offsets(this.item_, type_, false);
             _local_1 = new Bitmap(_local_3);
             _local_1.x = (((WIDTH / 2) - (_local_1.width / 2)) + _local_5.x);
@@ -122,7 +122,7 @@ public class TradeSlot extends Slot implements TooltipAble
             else
             {
                 fill_.color = 0x545454;
-            };
+            }
             drawBackground();
         }
 
@@ -166,7 +166,7 @@ public class TradeSlot extends Slot implements TooltipAble
             if (!this.isEmpty())
             {
                 this.hoverTooltipDelegate.tooltip = this.equipmentToolTipFactory.make(this.item_, _arg_1, -1, InventoryOwnerTypes.OTHER_PLAYER, this.id);
-            };
+            }
         }
 
         public function isEmpty():Boolean

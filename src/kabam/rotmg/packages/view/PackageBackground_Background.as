@@ -8,7 +8,7 @@ import mx.core.*;
 		public function PackageBackground_Background()
 		{
 			super();
-			return;
+
 		}
 	}
 }

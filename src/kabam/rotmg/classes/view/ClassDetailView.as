@@ -119,7 +119,7 @@ public class ClassDetailView extends Sprite
                 this.nextGoalDetailText.x = ((WIDTH / 2) - (this.nextGoalDetailText.width / 2));
                 this.waiter.push(this.nextGoalDetailText.textChanged);
                 this.waiter.push(this.nextGoalText.textChanged);
-            };
+            }
         }
 
         public function setWalkingAnimation(_arg_1:Animation):void

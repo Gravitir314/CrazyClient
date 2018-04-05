@@ -32,7 +32,7 @@ public class ModelFace3D
                 _local_5 = ((_local_3 < _local_5) ? _local_3 : _local_5);
                 _local_6 = ((_local_3 > _local_6) ? _local_3 : _local_6);
                 _local_4++;
-            };
+            }
             var _local_7:Number = Number.MAX_VALUE;
             var _local_8:Number = Number.MIN_VALUE;
             _local_4 = 0;
@@ -42,23 +42,23 @@ public class ModelFace3D
                 _local_7 = ((_local_3 < _local_7) ? _local_3 : _local_7);
                 _local_8 = ((_local_3 > _local_8) ? _local_3 : _local_8);
                 _local_4++;
-            };
+            }
             if (_local_7 > _local_5)
             {
                 return (-1);
-            };
+            }
             if (_local_7 < _local_5)
             {
                 return (1);
-            };
+            }
             if (_local_8 > _local_6)
             {
                 return (-1);
-            };
+            }
             if (_local_8 < _local_6)
             {
                 return (1);
-            };
+            }
             return (0);
         }
 

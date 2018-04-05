@@ -27,8 +27,8 @@ public class Graveyard extends Sprite
                 {
                     this.addLine(new GraveyardLine(_local_2.getIcon(), _local_2.title_, _local_2.tagline_, _local_2.link_, _local_2.date_, _arg_1.getAccountId()));
                     this.hasCharacters_ = true;
-                };
-            };
+                }
+            }
         }
 
         public function hasCharacters():Boolean

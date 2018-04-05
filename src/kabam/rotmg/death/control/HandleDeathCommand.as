@@ -39,7 +39,7 @@ public class HandleDeathCommand
             else
             {
                 this.updateModelAndHandleDeath();
-            };
+            }
         }
 
         private function isZombieDeathPending():Boolean
@@ -68,8 +68,8 @@ public class HandleDeathCommand
                 else
                 {
                     this.normal.dispatch(this.death);
-                };
-            };
+                }
+            }
         }
 
 

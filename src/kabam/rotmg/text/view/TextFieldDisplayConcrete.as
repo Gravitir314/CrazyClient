@@ -214,7 +214,7 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
             if (this.textField)
             {
                 this.setProperties();
-            };
+            }
         }
 
         private function setProperties():void
@@ -228,11 +228,11 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
             if (this.textWidth != 0)
             {
                 this.textField.width = this.textWidth;
-            };
+            }
             if (this.textHeight != 0)
             {
                 this.textField.height = this.textHeight;
-            };
+            }
             this.textField.selectable = false;
             this.textField.textColor = this.color;
             this.textField.autoSize = this.autoSize;
@@ -261,7 +261,7 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
             {
                 _arg_1.text = this.textField.text;
                 removeChild(this.textField);
-            };
+            }
         }
 
         private function setTextIfAble():void
@@ -275,7 +275,7 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
                 this.alignVertically();
                 this.invalidateTextField();
                 this.textChanged.dispatch();
-            };
+            }
         }
 
         private function invalidateTextField():void
@@ -292,7 +292,7 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
             else
             {
                 this.textField.text = _arg_1;
-            };
+            }
         }
 
         private function alignVertically():void
@@ -308,8 +308,8 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
                 {
                     _local_1 = this.textField.getLineMetrics(0);
                     this.textField.y = -(getOnlyTextHeight(_local_1));
-                };
-            };
+                }
+            }
         }
 
         public function getTextHeight():Number

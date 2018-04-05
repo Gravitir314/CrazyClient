@@ -22,7 +22,7 @@ public class TabIconView extends TabView
             if (_arg_3)
             {
                 this.initIcon(_arg_3, _arg_1);
-            };
+            }
         }
 
         private function initBackground(_arg_1:Sprite):void

@@ -28,7 +28,7 @@ public class ArenaLeaderboardList extends Sprite
             {
                 this.listItemPool[_local_1] = new ArenaLeaderboardListItem();
                 _local_1++;
-            };
+            }
             this.scrollList.setSize(new Size(786, 400));
             addChild(this.scrollList);
         }
@@ -44,7 +44,7 @@ public class ArenaLeaderboardList extends Sprite
                 _local_4 = (this.listItemPool[_local_5] as ArenaLeaderboardListItem);
                 _local_4.apply(_local_3, _arg_2);
                 _local_5++;
-            };
+            }
             this.scrollList.setItems(this.listItemPool);
         }
 

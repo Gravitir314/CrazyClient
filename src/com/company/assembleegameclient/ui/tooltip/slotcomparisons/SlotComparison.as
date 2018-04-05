@@ -44,11 +44,11 @@ public class SlotComparison
             if (_arg_1 < 0)
             {
                 return (WORSE_COLOR);
-            };
+            }
             if (_arg_1 > 0)
             {
                 return (BETTER_COLOR);
-            };
+            }
             return (NO_DIFF_COLOR);
         }
 

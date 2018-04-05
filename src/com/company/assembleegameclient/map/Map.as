@@ -123,7 +123,7 @@ public class Map extends AbstractMap
             if (background_ != null)
             {
                 addChild(background_);
-            };
+            }
             addChild(map_);
             addChild(hurtOverlay_);
             addChild(gradientOverlay_);
@@ -147,7 +147,7 @@ public class Map extends AbstractMap
             for each (_local_1 in squareList_)
             {
                 _local_1.dispose();
-            };
+            }
             squareList_.length = 0;
             squareList_ = null;
             squares_.length = 0;
@@ -155,12 +155,12 @@ public class Map extends AbstractMap
             for each (_local_2 in goDict_)
             {
                 _local_2.dispose();
-            };
+            }
             goDict_ = null;
             for each (_local_3 in boDict_)
             {
                 _local_3.dispose();
-            };
+            }
             boDict_ = null;
             merchLookup_ = null;
             player_ = null;
@@ -183,25 +183,25 @@ public class Map extends AbstractMap
                 if (!_local_3.update(_arg_1, _arg_2))
                 {
                     this.idsToRemove_.push(_local_3.objectId_);
-                };
-            };
+                }
+            }
             for each (_local_3 in boDict_)
             {
                 if (!_local_3.update(_arg_1, _arg_2))
                 {
                     this.idsToRemove_.push(_local_3.objectId_);
-                };
-            };
+                }
+            }
             this.inUpdate_ = false;
             for each (_local_3 in this.objsToAdd_)
             {
                 this.internalAddObj(_local_3);
-            };
+            }
             this.objsToAdd_.length = 0;
             for each (_local_4 in this.idsToRemove_)
             {
                 this.internalRemoveObj(_local_4);
-            };
+            }
             this.idsToRemove_.length = 0;
             party_.update(_arg_1, _arg_2);
         }
@@ -214,8 +214,8 @@ public class Map extends AbstractMap
                 if (((!(_local_3.faces_.length == 0)) && (_local_3.faces_[0].face_.contains(_arg_1, _arg_2))))
                 {
                     return (new Point(_local_3.center_.x, _local_3.center_.y));
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -239,11 +239,11 @@ public class Map extends AbstractMap
                     if (((!(_local_6 == null)) && ((_local_6.props_.hasEdge_) || (!(_local_6.tileType_ == _arg_3)))))
                     {
                         _local_6.faces_.length = 0;
-                    };
+                    }
                     _local_4++;
-                };
+                }
                 _local_10++;
-            };
+            }
         }
 
         override public function addObj(_arg_1:BasicObject, _arg_2:Number, _arg_3:Number):void
@@ -251,13 +251,13 @@ public class Map extends AbstractMap
             if (_arg_1 == null)
             {
                 return;
-            };
+            }
             _arg_1.x_ = _arg_2;
             _arg_1.y_ = _arg_3;
             if ((_arg_1 is ParticleEffect))
             {
                 (_arg_1 as ParticleEffect).reducedDrawEnabled = (!(Parameters.data_.particleEffect));
-            };
+            }
             if (this.inUpdate_)
             {
                 this.objsToAdd_.push(_arg_1);
@@ -265,7 +265,7 @@ public class Map extends AbstractMap
             else
             {
                 this.internalAddObj(_arg_1);
-            };
+            }
         }
 
         public function internalAddObj(_arg_1:BasicObject):void
@@ -273,15 +273,15 @@ public class Map extends AbstractMap
             if (!_arg_1.addTo(this, _arg_1.x_, _arg_1.y_))
             {
                 return;
-            };
+            }
             var _local_2:Dictionary = ((_arg_1 is GameObject) ? goDict_ : boDict_);
             if (_local_2[_arg_1.objectId_] != null)
             {
                 if (!isPetYard)
                 {
                     return;
-                };
-            };
+                }
+            }
             _local_2[_arg_1.objectId_] = _arg_1;
         }
 
@@ -294,7 +294,7 @@ public class Map extends AbstractMap
             else
             {
                 this.internalRemoveObj(_arg_1);
-            };
+            }
         }
 
         public function internalRemoveObj(_arg_1:int):void
@@ -308,8 +308,8 @@ public class Map extends AbstractMap
                 if (_local_3 == null)
                 {
                     return;
-                };
-            };
+                }
+            }
             _local_3.removeFromMap();
             delete _local_2[_arg_1];
         }
@@ -319,7 +319,7 @@ public class Map extends AbstractMap
             if (((((_arg_1 < 0) || (_arg_1 >= width_)) || (_arg_2 < 0)) || (_arg_2 >= height_)))
             {
                 return (null);
-            };
+            }
             var _local_3:int = (int(_arg_1) + (int(_arg_2) * width_));
             var _local_4:Square = squares_[_local_3];
             if (_local_4 == null)
@@ -327,7 +327,7 @@ public class Map extends AbstractMap
                 _local_4 = new Square(this, int(_arg_1), int(_arg_2));
                 squares_[_local_3] = _local_4;
                 squareList_.push(_local_4);
-            };
+            }
             return (_local_4);
         }
 
@@ -336,7 +336,7 @@ public class Map extends AbstractMap
             if (((((_arg_1 < 0) || (_arg_1 >= width_)) || (_arg_2 < 0)) || (_arg_2 >= height_)))
             {
                 return (null);
-            };
+            }
             return (squares_[(_arg_1 + (_arg_2 * width_))]);
         }
 
@@ -352,7 +352,7 @@ public class Map extends AbstractMap
             {
                 x = (-(_local_2.x) * Parameters.data_.mscale);
                 y = (-(_local_2.y) * Parameters.data_.mscale);
-            };
+            }
             var _local_3:Number = ((-(_local_2.x) - (_local_2.width / 2)) / 50);
             var _local_4:Number = ((-(_local_2.y) - (_local_2.height / 2)) / 50);
             var _local_5:Number = Math.sqrt(((_local_3 * _local_3) + (_local_4 * _local_4)));
@@ -379,7 +379,7 @@ public class Map extends AbstractMap
             if (MapUserInput.skipRender)
             {
                 return;
-            };
+            }
             if (wasLastFrameGpu != Parameters.isGpuRender())
             {
                 if ((((wasLastFrameGpu == true) && (!(WebMain.STAGE.stage3Ds[0].context3D == null))) && (!((!(WebMain.STAGE.stage3Ds[0].context3D == null)) && (!(WebMain.STAGE.stage3Ds[0].context3D.driverInfo.toLowerCase().indexOf("disposed") == -1))))))
@@ -390,10 +390,10 @@ public class Map extends AbstractMap
                 else
                 {
                     map_.graphics.clear();
-                };
+                }
                 signalRenderSwitch.dispatch(wasLastFrameGpu);
                 wasLastFrameGpu = Parameters.isGpuRender();
-            };
+            }
             var _local_17:Rectangle = _arg_1.clipRect_;
             x = -(_local_17.x);
             y = -(_local_17.y);
@@ -431,13 +431,13 @@ public class Map extends AbstractMap
                             if (_local_3.topFace_ != null)
                             {
                                 this.topSquares_.push(_local_3);
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     _local_6++;
-                };
+                }
                 _local_25++;
-            };
+            }
             for each (_local_4 in goDict_)
             {
                 _local_4.drawn_ = false;
@@ -457,15 +457,15 @@ public class Map extends AbstractMap
                             else
                             {
                                 this.visibleUnder_.push(_local_4);
-                            };
+                            }
                         }
                         else
                         {
                             this.visible_.push(_local_4);
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             for each (_local_5 in boDict_)
             {
                 _local_5.drawn_ = false;
@@ -475,16 +475,16 @@ public class Map extends AbstractMap
                     _local_5.drawn_ = true;
                     _local_5.computeSortVal(_arg_1);
                     this.visible_.push(_local_5);
-                };
-            };
+                }
+            }
             if (this.visibleUnder_.length > 0)
             {
                 this.visibleUnder_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
                 for each (_local_5 in this.visibleUnder_)
                 {
                     _local_5.draw(this.graphicsData_, _arg_1, _arg_2);
-                };
-            };
+                }
+            }
             this.visible_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
             if (Parameters.data_.drawShadows)
             {
@@ -493,24 +493,24 @@ public class Map extends AbstractMap
                     if (_local_5.hasShadow_)
                     {
                         _local_5.drawShadow(this.graphicsData_, _arg_1, _arg_2);
-                    };
-                };
-            };
+                    }
+                }
+            }
             for each (_local_5 in this.visible_)
             {
                 _local_5.draw(this.graphicsData_, _arg_1, _arg_2);
                 if (Parameters.isGpuRender())
                 {
                     _local_5.draw3d(this.graphicsData3d_);
-                };
-            };
+                }
+            }
             if (this.topSquares_.length > 0)
             {
                 for each (_local_3 in this.topSquares_)
                 {
                     _local_3.drawTop(this.graphicsData_, _arg_1, _arg_2);
-                };
-            };
+                }
+            }
             if ((((!(player_ == null)) && (player_.breath_ >= 0)) && (player_.breath_ < Parameters.BREATH_THRESH)))
             {
                 _local_10 = ((Parameters.BREATH_THRESH - player_.breath_) / Parameters.BREATH_THRESH);
@@ -524,7 +524,7 @@ public class Map extends AbstractMap
             else
             {
                 hurtOverlay_.visible = false;
-            };
+            }
             if (((!(player_ == null)) && (!(Parameters.screenShotMode_))))
             {
                 gradientOverlay_.visible = true;
@@ -534,7 +534,7 @@ public class Map extends AbstractMap
             else
             {
                 gradientOverlay_.visible = false;
-            };
+            }
             if (((Parameters.isGpuRender()) && (Renderer.inGame)))
             {
                 _local_12 = this.getFilterIndex();
@@ -556,10 +556,10 @@ public class Map extends AbstractMap
                             this.graphicsDataStageSoftware_.push(this.graphicsData_[_local_14]);
                             this.graphicsDataStageSoftware_.push(this.graphicsData_[(_local_14 + 1)]);
                             this.graphicsDataStageSoftware_.push(this.graphicsData_[(_local_14 + 2)]);
-                        };
-                    };
+                        }
+                    }
                     _local_14++;
-                };
+                }
                 if (this.graphicsDataStageSoftware_.length > 0)
                 {
                     map_.graphics.clear();
@@ -567,7 +567,7 @@ public class Map extends AbstractMap
                     if (this.lastSoftwareClear)
                     {
                         this.lastSoftwareClear = false;
-                    };
+                    }
                 }
                 else
                 {
@@ -575,18 +575,18 @@ public class Map extends AbstractMap
                     {
                         map_.graphics.clear();
                         this.lastSoftwareClear = true;
-                    };
-                };
+                    }
+                }
                 if ((_arg_2 % 149) == 0)
                 {
                     GraphicsFillExtra.manageSize();
-                };
+                }
             }
             else
             {
                 map_.graphics.clear();
                 map_.graphics.drawGraphicsData(this.graphicsData_);
-            };
+            }
             map_.filters.length = 0;
             if (((!(player_ == null)) && (!((player_.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MAP_FILTER_BITMASK) == 0))))
             {
@@ -595,11 +595,11 @@ public class Map extends AbstractMap
                 {
                     _local_16 = (20 + (10 * Math.sin((_arg_2 / 1000))));
                     _local_15.push(new BlurFilter(_local_16, _local_16));
-                };
+                }
                 if (player_.isBlind())
                 {
                     _local_15.push(BLIND_FILTER);
-                };
+                }
                 map_.filters = _local_15;
             }
             else
@@ -607,8 +607,8 @@ public class Map extends AbstractMap
                 if (map_.filters.length > 0)
                 {
                     map_.filters = [];
-                };
-            };
+                }
+            }
             mapOverlay_.draw(_arg_1, _arg_2);
             partyOverlay_.draw(_arg_1, _arg_2);
             if (((player_) && (player_.isDarkness())))
@@ -623,8 +623,8 @@ public class Map extends AbstractMap
                 if (contains(this.darkness))
                 {
                     removeChild(this.darkness);
-                };
-            };
+                }
+            }
         }
 
         private function getFilterIndex():uint
@@ -647,10 +647,10 @@ public class Map extends AbstractMap
                         if (player_.isDrunk())
                         {
                             _local_1 = Renderer.STAGE3D_FILTER_DRUNK;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             return (_local_1);
         }
 

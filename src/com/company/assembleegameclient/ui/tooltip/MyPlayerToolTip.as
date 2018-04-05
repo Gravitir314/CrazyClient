@@ -85,7 +85,7 @@ public class MyPlayerToolTip extends ToolTip
             if (_local_5 > 0)
             {
                 this.makeNextClassQuestText(_local_5, _local_2);
-            };
+            }
         }
 
         public function makeNextClassQuestText(_arg_1:int, _arg_2:XML):void
@@ -122,7 +122,7 @@ public class MyPlayerToolTip extends ToolTip
             {
                 this.nextClassQuest_.x = 8;
                 this.nextClassQuest_.y = (this.bestLevel_.getBounds(this).bottom - 2);
-            };
+            }
         }
 
         override public function draw():void

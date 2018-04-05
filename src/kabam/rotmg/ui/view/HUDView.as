@@ -125,7 +125,7 @@ public class HUDView extends Sprite implements UnFocusAble
                 this.pet.y = 354;
                 this.pet.visible = false;
                 addChild(this.pet);
-            };
+            }
         }
 
         private function createInventories():void
@@ -148,7 +148,7 @@ public class HUDView extends Sprite implements UnFocusAble
                     this.statMeters.y = 240;
                     this.cdtimer.y = 198;
                     this.cdtimer.visible = true;
-                };
+                }
                 this.stats.visible = false;
             }
             else
@@ -161,8 +161,8 @@ public class HUDView extends Sprite implements UnFocusAble
                 else
                 {
                     this.stats.visible = false;
-                };
-            };
+                }
+            }
             if (Parameters.data_.normalUI)
             {
                 this.inventory.visible = false;
@@ -170,8 +170,8 @@ public class HUDView extends Sprite implements UnFocusAble
                 if (this.player.hasBackpack_)
                 {
                     this.backpack.visible = false;
-                };
-            };
+                }
+            }
             addChild(this.inventory);
         }
 
@@ -235,7 +235,7 @@ public class HUDView extends Sprite implements UnFocusAble
             if (!Parameters.data_.normalUI)
             {
                 this.equippedGridBG.visible = false;
-            };
+            }
             this.equippedGridBG.x = (this.EQUIPMENT_INVENTORY_POSITION.x - 3);
             this.equippedGridBG.y = (this.EQUIPMENT_INVENTORY_POSITION.y - 3);
             this.equippedGridBG.graphics.drawGraphicsData(_local_1);
@@ -247,11 +247,11 @@ public class HUDView extends Sprite implements UnFocusAble
             if (this.equippedGrid)
             {
                 this.equippedGrid.draw();
-            };
+            }
             if (this.interactPanel)
             {
                 this.interactPanel.draw();
-            };
+            }
         }
 
         public function startTrade(_arg_1:AGameSprite, _arg_2:TradeStart):void
@@ -263,7 +263,7 @@ public class HUDView extends Sprite implements UnFocusAble
                 this.tradePanel.addEventListener(Event.CANCEL, this.onTradeCancel);
                 addChild(this.tradePanel);
                 this.setNonTradePanelAssetsVisible(false);
-            };
+            }
         }
 
         private function setNonTradePanelAssetsVisible(_arg_1:Boolean):void
@@ -271,7 +271,7 @@ public class HUDView extends Sprite implements UnFocusAble
             if (((Parameters.data_.normalUI) || (!(this.player.hasBackpack_))))
             {
                 this.characterDetails.visible = _arg_1;
-            };
+            }
             this.statMeters.visible = _arg_1;
             if (Parameters.data_.normalUI)
             {
@@ -295,12 +295,12 @@ public class HUDView extends Sprite implements UnFocusAble
                 else
                 {
                     this.stats.visible = _arg_1;
-                };
-            };
+                }
+            }
             if (this.pet != null)
             {
                 this.pet.visible = false;
-            };
+            }
             this.mainView = true;
             this.equippedGrid.visible = _arg_1;
             this.interactPanel.visible = _arg_1;
@@ -316,7 +316,7 @@ public class HUDView extends Sprite implements UnFocusAble
             if (this.tradePanel)
             {
                 this.tradePanel.setYourOffer(_arg_1.offer_);
-            };
+            }
         }
 
         public function tradeAccepted(_arg_1:TradeAccepted):void
@@ -324,7 +324,7 @@ public class HUDView extends Sprite implements UnFocusAble
             if (this.tradePanel)
             {
                 this.tradePanel.youAccepted(_arg_1.myOffer_, _arg_1.yourOffer_);
-            };
+            }
         }
 
         private function onTradeCancel(_arg_1:Event):void
@@ -340,7 +340,7 @@ public class HUDView extends Sprite implements UnFocusAble
                 this.tradePanel.removeEventListener(Event.CANCEL, this.onTradeCancel);
                 this.tradePanel = null;
                 this.setNonTradePanelAssetsVisible(true);
-            };
+            }
         }
 
         private function createButtons():void
@@ -405,7 +405,7 @@ public class HUDView extends Sprite implements UnFocusAble
             {
                 Parameters.data_.normalUI = (!(Parameters.data_.normalUI));
                 return;
-            };
+            }
             var _local_1:Boolean = Parameters.data_.normalUI;
             var _local_2:Boolean = this.player.hasBackpack_;
             this.showButton.visible = (!(_local_1));
@@ -414,7 +414,7 @@ public class HUDView extends Sprite implements UnFocusAble
                 this.optButton.visible = false;
                 this.frButton.visible = false;
                 this.helpButton.visible = false;
-            };
+            }
             this.equippedGrid.visible = true;
             this.characterDetails.visible = ((_local_2) ? _local_1 : true);
             this.tabStrip.visible = _local_1;
@@ -426,7 +426,7 @@ public class HUDView extends Sprite implements UnFocusAble
             if (this.pet != null)
             {
                 this.pet.visible = false;
-            };
+            }
             this.mainView = true;
             this.equippedGrid.y = this.EQUIPMENT_INVENTORY_POSITION.y;
             this.statMeters.y = 230;
@@ -438,15 +438,15 @@ public class HUDView extends Sprite implements UnFocusAble
                 {
                     this.equippedGrid.y = 198;
                     this.statMeters.y = 240;
-                };
+                }
             }
             else
             {
                 if (!_local_1)
                 {
                     this.equippedGrid.y = 348;
-                };
-            };
+                }
+            }
             this.statMeters.toggle();
         }
 
@@ -463,7 +463,7 @@ public class HUDView extends Sprite implements UnFocusAble
                 {
                     this.backpack.visible = this.mainView;
                     this.pet.visible = (!(this.mainView));
-                };
+                }
             }
             else
             {
@@ -472,8 +472,8 @@ public class HUDView extends Sprite implements UnFocusAble
                     this.equippedGrid.visible = this.mainView;
                     this.inventory.visible = this.mainView;
                     this.pet.visible = (!(this.mainView));
-                };
-            };
+                }
+            }
         }
 
 

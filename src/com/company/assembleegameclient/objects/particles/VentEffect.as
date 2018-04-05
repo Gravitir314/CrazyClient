@@ -32,11 +32,11 @@ public class VentEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             if (this.lastUpdate_ < 0)
             {
                 this.lastUpdate_ = Math.max(0, (_arg_1 - 400));
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_9:int = int(int((this.lastUpdate_ / BUBBLE_PERIOD)));
@@ -51,7 +51,7 @@ public class VentEffect extends ParticleEffect
                 _local_8 = (this.go_.y_ + (_local_6 * Math.sin(_local_5)));
                 map_.addObj(_local_4, _local_7, _local_8);
                 _local_9++;
-            };
+            }
             this.lastUpdate_ = _arg_1;
             return (true);
         }

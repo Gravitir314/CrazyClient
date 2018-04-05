@@ -19,24 +19,24 @@ public class MoveRecords
             if (this.lastClearTime_ < 0)
             {
                 return;
-            };
+            }
             var _local_4:int = this.getId(_arg_1);
             if (((_local_4 < 1) || (_local_4 > 10)))
             {
                 return;
-            };
+            }
             if (this.records_.length == 0)
             {
                 this.records_.push(new MoveRecord(_arg_1, _arg_2, _arg_3));
                 return;
-            };
+            }
             var _local_5:MoveRecord = this.records_[(this.records_.length - 1)];
             var _local_6:int = this.getId(_local_5.time_);
             if (_local_4 != _local_6)
             {
                 this.records_.push(new MoveRecord(_arg_1, _arg_2, _arg_3));
                 return;
-            };
+            }
             var _local_7:int = this.getScore(_local_4, _arg_1);
             var _local_8:int = this.getScore(_local_4, _local_5.time_);
             if (_local_7 < _local_8)
@@ -45,7 +45,7 @@ public class MoveRecords
                 _local_5.x_ = _arg_2;
                 _local_5.y_ = _arg_3;
                 return;
-            };
+            }
         }
 
         private function getId(_arg_1:int):int

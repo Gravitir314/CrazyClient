@@ -33,7 +33,7 @@ public class PartyOverlay extends Sprite
                 this.partyMemberArrows_[_local_3] = _local_2;
                 addChild(_local_2);
                 _local_3++;
-            };
+            }
             this.questArrow_ = new QuestArrow(this.map_);
             addChild(this.questArrow_);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -56,7 +56,7 @@ public class PartyOverlay extends Sprite
             if (this.map_.player_ == null)
             {
                 return;
-            };
+            }
             var _local_10:Party = this.map_.party_;
             var _local_11:Player = this.map_.player_;
             while (_local_9 < Party.NUM_MEMBERS)
@@ -89,22 +89,22 @@ public class PartyOverlay extends Sprite
                                     if (!_local_6.mouseOver_)
                                     {
                                         _local_6.addGameObject(_local_4);
-                                    };
+                                    }
                                     _local_3.setGameObject(null);
                                     break;
-                                };
+                                }
                                 _local_5++;
-                            };
+                            }
                             _local_3.draw(_arg_2, _arg_1);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_9++;
-            };
+            }
             if (!this.questArrow_.mouseOver_)
             {
                 this.questArrow_.draw(_arg_2, _arg_1);
-            };
+            }
         }
 
 

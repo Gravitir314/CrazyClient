@@ -33,7 +33,7 @@ public class Damage extends IncomingMessage
             {
                 this.effects_.push(_arg_1.readUnsignedByte());
                 _local_2++;
-            };
+            }
             this.damageAmount_ = _arg_1.readUnsignedShort();
             this.kill_ = _arg_1.readBoolean();
             this.armorPierce_ = _arg_1.readBoolean();

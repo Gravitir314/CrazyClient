@@ -46,7 +46,7 @@ public class GetOffersTask extends BaseTask
             {
                 this.model.lastOfferRequestGUID = this.guid;
                 this.model.lastOfferRequestTime = _local_1;
-            };
+            }
         }
 
         private function sendGetOffersRequest():void
@@ -75,7 +75,7 @@ public class GetOffersTask extends BaseTask
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
             completeTask(_arg_1);
         }
 

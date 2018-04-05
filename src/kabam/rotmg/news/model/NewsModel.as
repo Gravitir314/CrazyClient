@@ -35,7 +35,7 @@ public class NewsModel
             if (this.isValidForPlatform(_arg_1))
             {
                 this.inGameNews.push(_arg_1);
-            };
+            }
             this.sortNews();
         }
 
@@ -46,11 +46,11 @@ public class NewsModel
                 if (_arg_1.weight > _arg_2.weight)
                 {
                     return (-1);
-                };
+                }
                 if (_arg_1.weight == _arg_2.weight)
                 {
                     return (0);
-                };
+                }
                 return (1);
             });
         }
@@ -62,7 +62,7 @@ public class NewsModel
             {
                 Parameters.data_["lastNewsKey"] = _local_1.newsKey;
                 Parameters.save();
-            };
+            }
         }
 
         public function hasUpdates():Boolean
@@ -71,7 +71,7 @@ public class NewsModel
             if (((_local_1 == null) || (Parameters.data_["lastNewsKey"] == _local_1.newsKey)))
             {
                 return (false);
-            };
+            }
             return (true);
         }
 
@@ -80,7 +80,7 @@ public class NewsModel
             if (((this.inGameNews) && (this.inGameNews.length > 0)))
             {
                 return (this.inGameNews[0]);
-            };
+            }
             return (null);
         }
 
@@ -92,7 +92,7 @@ public class NewsModel
             {
                 this.news[_local_1] = new DefaultNewsCellVO(_local_1);
                 _local_1++;
-            };
+            }
         }
 
         public function updateNews(_arg_1:Vector.<NewsCellVO>):void
@@ -118,9 +118,9 @@ public class NewsModel
                     {
                         Parameters.data_[("newsTimestamp" + _local_4)] = _local_2.endDate;
                         Parameters.data_[("hasNewsUpdate" + _local_4)] = true;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.sortByPriority(_local_5);
             this.update.dispatch(this.news);
             this.updateNoParams.dispatch();
@@ -134,8 +134,8 @@ public class NewsModel
                 if (((this.isNewsTimely(_local_2)) && (this.isValidForPlatformGlobal(_local_2))))
                 {
                     this.prioritize(_local_2);
-                };
-            };
+                }
+            }
         }
 
         private function prioritize(_arg_1:NewsCellVO):void
@@ -144,7 +144,7 @@ public class NewsModel
             if (this.news[_local_2])
             {
                 _arg_1 = this.comparePriority(this.news[_local_2], _arg_1);
-            };
+            }
             this.news[_local_2] = _arg_1;
         }
 
@@ -181,7 +181,7 @@ public class NewsModel
             {
                 _local_2 = this.inGameNews[(_arg_1 - 1)];
                 return (new NewsModalPage(_local_2.title, _local_2.text));
-            };
+            }
             return (new NewsModalPage("No new information", "Please check back later."));
         }
 

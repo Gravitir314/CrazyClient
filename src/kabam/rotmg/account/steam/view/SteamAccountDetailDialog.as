@@ -78,7 +78,7 @@ public class SteamAccountDetailDialog extends Sprite
                 this.register_ = new DeprecatedClickableText(12, false, TextKey.STEAM_ACCOUNT_DETAIL_DIALOG_REGISTER);
                 this.register_.addEventListener(MouseEvent.CLICK, this.onRegister);
                 _local_4.addNavigationText(this.register_);
-            };
+            }
             _local_4.rightButton_.addEventListener(MouseEvent.CLICK, this.onContinue);
         }
 

@@ -54,7 +54,7 @@ public class PaymentMethodRadioButtons extends Sprite
             {
                 this.boxes[_local_1] = this.makeRadioButton(this.labels[_local_1]);
                 _local_1++;
-            };
+            }
         }
 
         private function makeRadioButton(_arg_1:String):PaymentMethodRadioButton
@@ -89,7 +89,7 @@ public class PaymentMethodRadioButtons extends Sprite
             {
                 _local_3[_local_1] = this.boxes[_local_1];
                 _local_1++;
-            };
+            }
             return (_local_3);
         }
 
@@ -109,7 +109,7 @@ public class PaymentMethodRadioButtons extends Sprite
             {
                 _local_3[_local_1] = this.boxes[_local_1];
                 _local_1++;
-            };
+            }
             return (_local_3);
         }
 

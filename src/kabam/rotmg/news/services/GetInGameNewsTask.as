@@ -55,7 +55,7 @@ public class GetInGameNewsTask extends BaseTask
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         private function parseNews(_arg_1:String):*
@@ -79,11 +79,11 @@ public class GetInGameNewsTask extends BaseTask
                     _local_4.platform = _local_3.platform;
                     _local_4.weight = _local_3.weight;
                     this.model.addInGameNews(_local_4);
-                };
+                }
             }
             catch(e:Error)
             {
-            };
+            }
             var _local_5:InGameNews = this.model.getFirstNews();
             completeTask(true);
         }

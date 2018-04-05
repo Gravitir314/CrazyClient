@@ -32,8 +32,8 @@ public class InitPackagesCommand
                 if (this.packageModel.hasPackages())
                 {
                     this.packageAvailable.dispatch();
-                };
-            };
+                }
+            }
         }
 
 

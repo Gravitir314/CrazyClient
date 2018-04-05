@@ -36,7 +36,7 @@ public class FriendActionCommand
             {
                 _local_1 = StaticInjectorContext.getInjector().getInstance(AddTextLineSignal);
                 _local_1.dispatch(ChatMessage.make("", "Friend request sent"));
-            };
+            }
             var _local_2:String = FriendConstant.getURL(this.vo.request);
             var _local_3:Object = this.account.getCredentials();
             _local_3["targetName"] = this.vo.target;
@@ -55,8 +55,8 @@ public class FriendActionCommand
                 if (!_arg_1)
                 {
                     this.openDialog.dispatch(new ErrorDialog(_arg_2));
-                };
-            };
+                }
+            }
         }
 
 

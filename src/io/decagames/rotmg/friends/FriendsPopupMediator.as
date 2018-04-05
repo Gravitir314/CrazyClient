@@ -121,14 +121,14 @@ public class FriendsPopupMediator extends Mediator {
             if (!this.model.isDataStillLoading){
                 for each (onlineFriend in onlineFriends) {
                     this.view.addFriend(new FriendListItem(onlineFriend, FriendItemState.ONLINE));
-                };
-            };
+                }
+            }
             this.view.addFriendCategory(((this.model.isDataStillLoading) ? "Loading..." : "Offline"));
             if (!this.model.isDataStillLoading){
                 for each (offlineFriend in offlineFriends) {
                     this.view.addFriend(new FriendListItem(offlineFriend, FriendItemState.OFFLINE));
-                };
-            };
+                }
+            }
         }
 
         private function showGuild():void{
@@ -141,8 +141,8 @@ public class FriendsPopupMediator extends Mediator {
             if (!this.model.isDataStillLoading){
                 for each (_local_2 in _local_1) {
                     this.view.addInvites(new FriendListItem(_local_2, FriendItemState.INVITE));
-                };
-            };
+                }
+            }
         }
 
         private function showContent():void{

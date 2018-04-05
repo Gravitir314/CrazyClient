@@ -8,7 +8,7 @@ import mx.core.*;
 		public function MysteryBoxSelectModal_backgroundImageEmbed()
 		{
 			super();
-			return;
+
 		}
 	}
 }

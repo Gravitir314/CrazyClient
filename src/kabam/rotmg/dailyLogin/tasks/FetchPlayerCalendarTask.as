@@ -60,7 +60,7 @@ public class FetchPlayerCalendarTask extends BaseTask
             else
             {
                 this.onTextError(_arg_2);
-            };
+            }
         }
 
         private function onCalendarUpdate(param1:String):void
@@ -75,22 +75,22 @@ public class FetchPlayerCalendarTask extends BaseTask
             {
                 completeTask(true);
                 return;
-            };
+            }
             this.dailyLoginModel.clear();
             var serverTimestamp:Number = (parseFloat(xmlData.attribute("serverTime")) * 1000);
             this.dailyLoginModel.setServerTime(serverTimestamp);
             if (((!(Parameters.data_.calendarShowOnDay)) || (Parameters.data_.calendarShowOnDay < this.dailyLoginModel.getTimestampDay())))
             {
                 this.dailyLoginModel.shouldDisplayCalendarAtStartup = true;
-            };
+            }
             if (((xmlData.hasOwnProperty("NonConsecutive")) && (xmlData.NonConsecutive..Login.length() > 0)))
             {
                 this.parseCalendar(xmlData.NonConsecutive, CalendarTypes.NON_CONSECUTIVE, xmlData.attribute("nonconCurDay"));
-            };
+            }
             if (((xmlData.hasOwnProperty("Consecutive")) && (xmlData.Consecutive..Login.length() > 0)))
             {
                 this.parseCalendar(xmlData.Consecutive, CalendarTypes.CONSECUTIVE, xmlData.attribute("conCurDay"));
-            };
+            }
             completeTask(true);
         }
 
@@ -110,14 +110,14 @@ public class FetchPlayerCalendarTask extends BaseTask
                     if (_local_4 > 2)
                     {
                         GameServerConnectionConcrete.claimkey = _local_5.key;
-                    };
-                };
+                    }
+                }
                 this.dailyLoginModel.addDay(_local_6, _arg_2);
-            };
+            }
             if (_arg_3)
             {
                 this.dailyLoginModel.setCurrentDay(_arg_2, int(_arg_3));
-            };
+            }
             this.dailyLoginModel.setUserDay(_arg_1.attribute("days"), _arg_2);
             this.dailyLoginModel.calculateCalendar(_arg_2);
         }

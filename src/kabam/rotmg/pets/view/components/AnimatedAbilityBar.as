@@ -55,7 +55,7 @@ public class AnimatedAbilityBar extends Sprite
                 this.reset();
                 this.filledUp.dispatch();
                 return;
-            };
+            }
             var _local_1:Number = this.maxWidth;
             this.setBarColor(this.FILLING_BAR_COLOR);
             var _local_2:GTween = new GTween(this.animatedBar, 1, {"width":_local_1});
@@ -89,7 +89,7 @@ public class AnimatedAbilityBar extends Sprite
                 _local_2 = this.getBarWidth();
                 this.animatedBar.graphics.beginFill(this.NORMAL_BAR_COLOR, 1);
                 this.animatedBar.graphics.drawRect(0, 0, _local_2, this.barHeight);
-            };
+            }
             this.currentPoints = _arg_1;
             this.adjustFilledBar();
         }
@@ -104,7 +104,7 @@ public class AnimatedAbilityBar extends Sprite
                 this.setBarColor(this.FILLING_BAR_COLOR);
                 _local_1 = new GTween(this.animatedBar, 2, {"width":_local_2});
                 _local_1.onComplete = this.handleTweenComplete;
-            };
+            }
         }
 
         private function getBarWidth():int

@@ -33,7 +33,7 @@ public class ParseServerDataCommand
             for each (_local_1 in _local_2)
             {
                 _local_3.push(this.makeServer(_local_1));
-            };
+            }
             return (_local_3);
         }
 

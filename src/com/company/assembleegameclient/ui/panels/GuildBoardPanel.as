@@ -38,7 +38,7 @@ public class GuildBoardPanel extends ButtonPanel
             if (_local_1 == null)
             {
                 return;
-            };
+            }
             gs_.addChild(new GuildBoardWindow((_local_1.guildRank_ >= GuildUtil.OFFICER)));
         }
 
@@ -57,7 +57,7 @@ public class GuildBoardPanel extends ButtonPanel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.openWindow();
-            };
+            }
         }
 
 

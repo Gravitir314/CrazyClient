@@ -83,7 +83,7 @@ public class EquipmentToolTip extends ToolTip
             if (((this.objectType >= 0x9000) && (this.objectType <= 0xF000)))
             {
                 this.objectType = 36863;
-            };
+            }
             this.playerCanUse = ((_arg_2) ? ObjectLibrary.isUsableByPlayer(this.objectType, _arg_2) : false);
             var _local_6:int = ((_arg_2) ? ObjectLibrary.getMatchingSlotIndex(this.objectType, _arg_2) : -1);
             var _local_7:uint = (((this.playerCanUse) || (this.player == null)) ? 0x363636 : 6036765);
@@ -106,9 +106,9 @@ public class EquipmentToolTip extends ToolTip
                     if (this.player.equipment_[_local_6] != -1)
                     {
                         this.curItemXML = ObjectLibrary.xmlLibrary_[this.player.equipment_[_local_6]];
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.addIcon();
             if (((this.originalObjectType >= 0x9000) && (this.originalObjectType <= 0xF000)))
             {
@@ -127,13 +127,13 @@ public class EquipmentToolTip extends ToolTip
                     this.descriptionOverride = (((keyInfo[this.originalObjectType][1] + "\n") + "Created By: ") + keyInfo[this.originalObjectType][2]);
                     this.addTitle();
                     this.addDescriptionText();
-                };
+                }
             }
             else
             {
                 this.addTitle();
                 this.addDescriptionText();
-            };
+            }
             this.addTierText();
             this.handleWisMod();
             this.buildCategorySpecificText();
@@ -161,7 +161,7 @@ public class EquipmentToolTip extends ToolTip
             if (!this.objectXML.hasOwnProperty("@setType"))
             {
                 return;
-            };
+            }
             var _local_1:int = this.objectXML.attribute("setType");
             this.setInfo.push(new Effect("Part of {name}", {"name":(("<b>" + this.objectXML.attribute("setName")) + "</b>")}).setColor(TooltipHelper.SET_COLOR).setReplacementsColor(TooltipHelper.SET_COLOR));
             this.addSetActivateOnEquipTagsToEffectsList(_local_1);
@@ -175,7 +175,7 @@ public class EquipmentToolTip extends ToolTip
             if (!_local_4.hasOwnProperty("ActivateOnEquipAll"))
             {
                 return;
-            };
+            }
             for each (_local_2 in _local_4.ActivateOnEquipAll)
             {
                 if (_local_2.toString() == "ChangeSkin")
@@ -183,13 +183,13 @@ public class EquipmentToolTip extends ToolTip
                     if (((!(this.player == null)) && (this.player.skinId == int(_local_2.@skinType))))
                     {
                         _local_3 = TooltipHelper.SET_COLOR;
-                    };
-                };
+                    }
+                }
                 if (_local_2.toString() == "IncrementStat")
                 {
                     this.setInfo.push(new Effect(TextKey.INCREMENT_STAT, this.getComparedStatText(_local_2)).setColor(_local_3).setReplacementsColor(_local_3));
-                };
-            };
+                }
+            }
         }
 
         private function makeItemPowerText():void
@@ -203,7 +203,7 @@ public class EquipmentToolTip extends ToolTip
                 this.powerText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
                 waiter.push(this.powerText.textChanged);
                 addChild(this.powerText);
-            };
+            }
         }
 
         private function onKeyInfoResponse(_arg_1:KeyInfoResponse):void
@@ -238,15 +238,15 @@ public class EquipmentToolTip extends ToolTip
                     if (_local_3)
                     {
                         _local_6.pushParams(_local_3);
-                    };
+                    }
                     if (_local_4)
                     {
                         _local_6.pushParams(_local_4, {}, TooltipHelper.getOpenTag(16777103), TooltipHelper.getCloseTag());
-                    };
+                    }
                     _local_6.setDelimiter(_local_5);
                     this.uniqueEffects.push(new Effect(TextKey.BLANK, {"data":_local_6}));
-                };
-            };
+                }
+            }
         }
 
         private function isEmptyEquipSlot():Boolean
@@ -261,11 +261,11 @@ public class EquipmentToolTip extends ToolTip
             if (((this.objectType == 4874) || (this.objectType == 4618)))
             {
                 _local_2 = 8;
-            };
+            }
             if (_local_1.hasOwnProperty("ScaleValue"))
             {
                 _local_2 = _local_1.ScaleValue;
-            };
+            }
             var _local_3:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.objectType, 60, true, true, _local_2);
             _local_3 = BitmapUtil.cropToBitmapData(_local_3, 4, 4, (_local_3.width - 8), (_local_3.height - 8));
             this.icon = new Bitmap(_local_3);
@@ -297,10 +297,10 @@ public class EquipmentToolTip extends ToolTip
                     {
                         this.tierText.setColor(TooltipHelper.UNTIERED_COLOR);
                         this.tierText.setStringBuilder(new LineBuilder().setParams(TextKey.UNTIERED_ABBR));
-                    };
-                };
+                    }
+                }
                 addChild(this.tierText);
-            };
+            }
         }
 
         private function isPet():Boolean
@@ -331,7 +331,7 @@ public class EquipmentToolTip extends ToolTip
             else
             {
                 this.titleText.setStringBuilder(new LineBuilder().setParams(ObjectLibrary.typeToDisplayId_[this.objectType]));
-            };
+            }
             this.titleText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
             waiter.push(this.titleText.textChanged);
             addChild(this.titleText);
@@ -349,8 +349,8 @@ public class EquipmentToolTip extends ToolTip
                 for each (_local_3 in _local_1)
                 {
                     _local_2.push(new Effect(_local_3.attribute("name"), _local_3.attribute("description")));
-                };
-            };
+                }
+            }
             return ("");
         }
 
@@ -368,8 +368,8 @@ public class EquipmentToolTip extends ToolTip
                 {
                     addChild(this.line1);
                     addChild(this.effectsText);
-                };
-            };
+                }
+            }
         }
 
         private function getEffectsStringBuilder():AppendingLineBuilder
@@ -379,7 +379,7 @@ public class EquipmentToolTip extends ToolTip
             if (this.comparisonResults.lineBuilder.hasLines())
             {
                 _local_1.pushParams(TextKey.BLANK, {"data":this.comparisonResults.lineBuilder});
-            };
+            }
             this.appendEffects(this.effects, _local_1);
             return (_local_1);
         }
@@ -397,9 +397,9 @@ public class EquipmentToolTip extends ToolTip
                 {
                     _local_4 = (('<font color="#' + _local_3.color_.toString(16)) + '">');
                     _local_5 = "</font>";
-                };
+                }
                 _arg_2.pushParams(_local_3.name_, _local_3.getValueReplacementsWithColor(), _local_4, _local_5);
-            };
+            }
         }
 
         private function addFameBonusTagToEffectsList():void
@@ -415,9 +415,9 @@ public class EquipmentToolTip extends ToolTip
                 {
                     _local_3 = int(this.curItemXML.FameBonus.text());
                     _local_2 = TooltipHelper.getTextColor((_local_1 - _local_3));
-                };
+                }
                 this.effects.push(new Effect(TextKey.FAME_BONUS, {"percent":(this.objectXML.FameBonus + "%")}).setReplacementsColor(_local_2));
-            };
+            }
         }
 
         private function addMpCostTagToEffectsList():void
@@ -431,7 +431,7 @@ public class EquipmentToolTip extends ToolTip
                 if (((this.curItemXML) && (this.curItemXML.hasOwnProperty("MpEndCost"))))
                 {
                     _local_2 = this.curItemXML.MpEndCost;
-                };
+                }
                 this.effects.push(new Effect(TextKey.MP_COST, {"cost":TooltipHelper.compare(_local_1, _local_2, false)}));
             }
             else
@@ -443,10 +443,10 @@ public class EquipmentToolTip extends ToolTip
                     if (((this.curItemXML) && (this.curItemXML.hasOwnProperty("MpCost"))))
                     {
                         _local_2 = this.curItemXML.MpCost;
-                    };
+                    }
                     this.effects.push(new Effect(TextKey.MP_COST, {"cost":TooltipHelper.compare(_local_1, _local_2, false)}));
-                };
-            };
+                }
+            }
         }
 
         private function addDoseTagsToEffectsList():void
@@ -454,11 +454,11 @@ public class EquipmentToolTip extends ToolTip
             if (this.objectXML.hasOwnProperty("Doses"))
             {
                 this.effects.push(new Effect(TextKey.DOSES, {"dose":this.objectXML.Doses}));
-            };
+            }
             if (this.objectXML.hasOwnProperty("Quantity"))
             {
                 this.effects.push(new Effect("Quantity: {quantity}", {"quantity":this.objectXML.Quantity}));
-            };
+            }
         }
 
         private function addNumProjectiles():void
@@ -467,7 +467,7 @@ public class EquipmentToolTip extends ToolTip
             if (((!(_local_1.a == 1)) || (!(_local_1.a == _local_1.b))))
             {
                 this.effects.push(new Effect(TextKey.SHOTS, {"numShots":TooltipHelper.compare(_local_1.a, _local_1.b)}));
-            };
+            }
         }
 
         private function addProjectileTagsToEffectsList():void
@@ -477,7 +477,7 @@ public class EquipmentToolTip extends ToolTip
             {
                 _local_1 = ((this.curItemXML == null) ? null : this.curItemXML.Projectile[0]);
                 this.addProjectile(this.objectXML.Projectile[0], _local_1);
-            };
+            }
         }
 
         private function addProjectile(_arg_1:XML, _arg_2:XML=null):void
@@ -500,15 +500,15 @@ public class EquipmentToolTip extends ToolTip
             if (_arg_1.hasOwnProperty("MultiHit"))
             {
                 this.effects.push(new Effect(TextKey.MULTIHIT, {}).setColor(TooltipHelper.NO_DIFF_COLOR));
-            };
+            }
             if (_arg_1.hasOwnProperty("PassesCover"))
             {
                 this.effects.push(new Effect(TextKey.PASSES_COVER, {}).setColor(TooltipHelper.NO_DIFF_COLOR));
-            };
+            }
             if (_arg_1.hasOwnProperty("ArmorPiercing"))
             {
                 this.effects.push(new Effect(TextKey.ARMOR_PIERCING, {}).setColor(TooltipHelper.NO_DIFF_COLOR));
-            };
+            }
             if (_local_9.a)
             {
                 this.effects.push(new Effect("Shots are parametric", {}).setColor(TooltipHelper.NO_DIFF_COLOR));
@@ -518,19 +518,19 @@ public class EquipmentToolTip extends ToolTip
                 if (_local_8.a)
                 {
                     this.effects.push(new Effect("Shots boomerang", {}).setColor(TooltipHelper.NO_DIFF_COLOR));
-                };
-            };
+                }
+            }
             if (_arg_1.hasOwnProperty("ConditionEffect"))
             {
                 this.effects.push(new Effect(TextKey.SHOT_EFFECT, {"effect":""}));
-            };
+            }
             for each (_local_3 in _arg_1.ConditionEffect)
             {
                 this.effects.push(new Effect(TextKey.EFFECT_FOR_DURATION, {
                     "effect":_local_3,
                     "duration":_local_3.@duration
                 }).setColor(TooltipHelper.NO_DIFF_COLOR));
-            };
+            }
         }
 
         private function addRateOfFire():void
@@ -543,7 +543,7 @@ public class EquipmentToolTip extends ToolTip
                 _local_2.b = MathUtil.round((_local_2.b * 100), 2);
                 _local_1 = TooltipHelper.compare(_local_2.a, _local_2.b, true, "%");
                 this.effects.push(new Effect(TextKey.RATE_OF_FIRE, {"data":_local_1}));
-            };
+            }
         }
 
         private function addCooldown():void
@@ -552,7 +552,7 @@ public class EquipmentToolTip extends ToolTip
             if (((!(_local_1.a == 0.5)) || (!(_local_1.a == _local_1.b))))
             {
                 this.effects.push(new Effect("Cooldown: {cd}", {"cd":TooltipHelper.compareAndGetPlural(_local_1.a, _local_1.b, "second", false)}));
-            };
+            }
         }
 
         private function addActivateTagsToEffectsList():void
@@ -630,7 +630,7 @@ public class EquipmentToolTip extends ToolTip
                                     "damage":activateXML.@damage,
                                     "range":activateXML.@range
                                 }));
-                            };
+                            }
                             this.effects.push(new Effect(TextKey.PARTY_HEAL, {"effect":new AppendingLineBuilder().pushParams(TextKey.HP_WITHIN_SQRS, {
                                     "amount":activateXML.@amount,
                                     "range":activateXML.@range
@@ -701,10 +701,10 @@ public class EquipmentToolTip extends ToolTip
                                         if (comparer < 0)
                                         {
                                             effectColor = 0xFF0000;
-                                        };
-                                    };
-                                };
-                            };
+                                        }
+                                    }
+                                }
+                            }
                             tokens = {
                                 "range":activateXML.@range,
                                 "effect":activateXML.@effect,
@@ -718,7 +718,7 @@ public class EquipmentToolTip extends ToolTip
                             else
                             {
                                 this.effects.push(new Effect(TextKey.ENEMY_EFFECT, {"effect":LineBuilder.returnStringReplace(template, tokens)}).setReplacementsColor(effectColor));
-                            };
+                            }
                             break;
                         case ActivationType.STAT_BOOST_AURA:
                             effectColor2 = 16777103;
@@ -743,10 +743,10 @@ public class EquipmentToolTip extends ToolTip
                                         if (comparer2 < 0)
                                         {
                                             effectColor2 = 0xFF0000;
-                                        };
-                                    };
-                                };
-                            };
+                                        }
+                                    }
+                                }
+                            }
                             stat = int(activateXML.@stat);
                             statStr = LineBuilder.getLocalizedString2(StatData.statToName(stat));
                             tokens2 = {
@@ -768,7 +768,7 @@ public class EquipmentToolTip extends ToolTip
                                 replaceParams["statName"] = new LineBuilder().setParams(StatData.statToName(stat));
                                 this.effects.push(new Effect(val, replaceParams).setColor(16777103));
                                 break;
-                            };
+                            }
                             val = TextKey.BLANK;
                             alb = new AppendingLineBuilder().setDelimiter(" ");
                             alb.pushParams(TextKey.BLANK, {"data":new StaticStringBuilder(("+" + amt))});
@@ -776,9 +776,9 @@ public class EquipmentToolTip extends ToolTip
                             replaceParams["data"] = alb;
                             this.effects.push(new Effect(val, replaceParams));
                             break;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function getSpell(_arg_1:XML, _arg_2:XML=null):void
@@ -813,7 +813,7 @@ public class EquipmentToolTip extends ToolTip
             if (_local_15.a)
             {
                 _local_17 = (_local_17 + "Steals {heal} HP");
-            };
+            }
             if (((_local_15.a) && (_local_16.a)))
             {
                 _local_17 = (_local_17 + " and ignores {ignoreDef} defense");
@@ -823,12 +823,12 @@ public class EquipmentToolTip extends ToolTip
                 if (_local_16.a)
                 {
                     _local_17 = (_local_17 + "Ignores {ignoreDef} defense");
-                };
-            };
+                }
+            }
             if (_local_15.a)
             {
                 _local_17 = (_local_17 + (("\nHeals allies within {healRange}" + this.colorWisBonus(_local_11)) + " squares"));
-            };
+            }
             this.effects.push(new Effect(_local_17, {
                 "damage":TooltipHelper.compare(_local_12.a, _local_12.b),
                 "radius":TooltipHelper.compare(_local_13.a, _local_13.b),
@@ -844,7 +844,7 @@ public class EquipmentToolTip extends ToolTip
                     "condition":_local_18,
                     "duration":TooltipHelper.getPlural(_local_3, "second")
                 }));
-            };
+            }
         }
 
         private function getTrap(_arg_1:XML, _arg_2:XML=null):void
@@ -874,13 +874,13 @@ public class EquipmentToolTip extends ToolTip
                     if (_local_4 == "Nothing")
                     {
                         _local_3.b = 0;
-                    };
-                };
+                    }
+                }
                 this.effects.push(new Effect("Inflicts {condition} for {duration} ", {
                     "condition":_local_13,
                     "duration":TooltipHelper.compareAndGetPlural(_local_3.a, _local_3.b, "second")
                 }));
-            };
+            }
             this.effects.push(new Effect("{tilArmed} to arm for {duration} ", {
                 "tilArmed":TooltipHelper.compareAndGetPlural(_local_8.a, _local_8.b, "second", false),
                 "duration":TooltipHelper.compareAndGetPlural(_local_7.a, _local_7.b, "second")
@@ -913,14 +913,14 @@ public class EquipmentToolTip extends ToolTip
                 if (_local_7.a < 0)
                 {
                     _local_5 = true;
-                };
+                }
                 _local_3 = "reduced";
                 if (_local_5)
                 {
                     _local_3 = TooltipHelper.wrapInFontTag("increased", ("#" + TooltipHelper.NO_DIFF_COLOR.toString(16)));
-                };
+                }
                 _local_16 = (_local_16 + ((", " + _local_3) + " by \n{decrDamage} for each subsequent target"));
-            };
+            }
             this.effects.push(new Effect(_local_16, {
                 "targets":TooltipHelper.compare(_local_14.a, _local_14.b),
                 "damage":TooltipHelper.compare(_local_15.a, _local_15.b),
@@ -934,7 +934,7 @@ public class EquipmentToolTip extends ToolTip
                     "condition":_local_17,
                     "duration":TooltipHelper.getPlural(_local_4, "second")
                 }));
-            };
+            }
         }
 
         private function GetIntArgument(_arg_1:XML, _arg_2:String, _arg_3:int=0):int
@@ -957,7 +957,7 @@ public class EquipmentToolTip extends ToolTip
             if (_arg_1)
             {
                 return (TooltipHelper.wrapInFontTag(((" (+" + _arg_1) + ")"), ("#" + TooltipHelper.WIS_BONUS_COLOR.toString(16))));
-            };
+            }
             return ("");
         }
 
@@ -968,11 +968,11 @@ public class EquipmentToolTip extends ToolTip
             if (_local_3)
             {
                 return (TooltipHelper.wrapInFontTag(_arg_1, ("#" + TooltipHelper.SET_COLOR.toString(16))));
-            };
+            }
             if (!_local_2)
             {
                 return (TooltipHelper.wrapInFontTag(_arg_1, ("#" + TooltipHelper.UNTIERED_COLOR.toString(16))));
-            };
+            }
             return (_arg_1);
         }
 
@@ -986,8 +986,8 @@ public class EquipmentToolTip extends ToolTip
                 if (tag.@effect == effectValue)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -1001,8 +1001,8 @@ public class EquipmentToolTip extends ToolTip
                 if (tag.@stat == statValue)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -1016,12 +1016,12 @@ public class EquipmentToolTip extends ToolTip
                 {
                     this.effects.push(new Effect(TextKey.ON_EQUIP, ""));
                     _local_2 = false;
-                };
+                }
                 if (_local_1.toString() == "IncrementStat")
                 {
                     this.effects.push(new Effect(TextKey.INCREMENT_STAT, this.getComparedStatText(_local_1)).setReplacementsColor(this.getComparedStatColor(_local_1)));
-                };
-            };
+                }
+            }
         }
 
         private function getComparedStatText(_arg_1:XML):Object
@@ -1051,17 +1051,17 @@ public class EquipmentToolTip extends ToolTip
             if (this.curItemXML != null)
             {
                 otherMatches = this.curItemXML.ActivateOnEquip.(@stat == stat);
-            };
+            }
             if (((!(otherMatches == null)) && (otherMatches.length() == 1)))
             {
                 match = XML(otherMatches[0]);
                 otherAmount = int(match.@amount);
                 textColor = TooltipHelper.getTextColor((amount - otherAmount));
-            };
+            }
             if (amount < 0)
             {
                 textColor = 0xFF0000;
-            };
+            }
             return (textColor);
         }
 
@@ -1083,9 +1083,9 @@ public class EquipmentToolTip extends ToolTip
                     else
                     {
                         this.restrictions.push(new Restriction(TextKey.DOUBLE_CLICK_TAKE, 0xB3B3B3, false));
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function addAbilityItemRestrictions():void
@@ -1103,7 +1103,7 @@ public class EquipmentToolTip extends ToolTip
             else
             {
                 this.restrictions.push(new Restriction(TextKey.DOUBLE_CLICK_TAKE_SHIFT_CLICK_USE, 0xFFFFFF, false));
-            };
+            }
         }
 
         private function addReusableItemRestrictions():void
@@ -1122,11 +1122,11 @@ public class EquipmentToolTip extends ToolTip
             if ((((this.objectXML.hasOwnProperty("VaultItem")) && (!(this.invType == -1))) && (!(this.invType == ObjectLibrary.idToType_["Vault Chest"]))))
             {
                 this.restrictions.push(new Restriction(TextKey.STORE_IN_VAULT, 16549442, true));
-            };
+            }
             if (this.objectXML.hasOwnProperty("Soulbound"))
             {
                 this.restrictions.push(new Restriction(TextKey.ITEM_SOULBOUND, 0xB3B3B3, false));
-            };
+            }
             if (this.playerCanUse)
             {
                 if (this.objectXML.hasOwnProperty("Usable"))
@@ -1149,22 +1149,22 @@ public class EquipmentToolTip extends ToolTip
                         else
                         {
                             this.addEquipmentItemRestrictions();
-                        };
-                    };
-                };
+                        }
+                    }
+                }
             }
             else
             {
                 if (this.player != null)
                 {
                     this.restrictions.push(new Restriction(TextKey.NOT_USABLE_BY, 16549442, true));
-                };
-            };
+                }
+            }
             var _local_5:Vector.<String> = ObjectLibrary.usableBy(this.objectType);
             if (_local_5 != null)
             {
                 this.restrictions.push(new Restriction(TextKey.USABLE_BY, 0xB3B3B3, false));
-            };
+            }
             for each (_local_1 in this.objectXML.EquipRequirement)
             {
                 _local_2 = ObjectLibrary.playerMeetsRequirement(_local_1, this.player);
@@ -1173,8 +1173,8 @@ public class EquipmentToolTip extends ToolTip
                     _local_3 = int(_local_1.@stat);
                     _local_4 = int(_local_1.@value);
                     this.restrictions.push(new Restriction(((("Requires " + StatData.statToName(_local_3)) + " of ") + _local_4), ((_local_2) ? 0xB3B3B3 : 16549442), ((_local_2) ? false : true)));
-                };
-            };
+                }
+            }
         }
 
         private function makeLineTwo():void
@@ -1198,7 +1198,7 @@ public class EquipmentToolTip extends ToolTip
                 this.restrictionsText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
                 waiter.push(this.restrictionsText.textChanged);
                 addChild(this.restrictionsText);
-            };
+            }
         }
 
         private function makeSetInfoText():void
@@ -1211,7 +1211,7 @@ public class EquipmentToolTip extends ToolTip
                 waiter.push(this.setInfoText.textChanged);
                 addChild(this.setInfoText);
                 this.makeLineThree();
-            };
+            }
         }
 
         private function getSetBonusStringBuilder():AppendingLineBuilder
@@ -1240,7 +1240,7 @@ public class EquipmentToolTip extends ToolTip
                     "usableClasses":this.getUsableClasses(),
                     "keyCode":KeyCodes.CharCodeStrings[Parameters.data_.useSpecial]
                 }, _local_2, _local_3);
-            };
+            }
             return (_local_5);
         }
 
@@ -1253,7 +1253,7 @@ public class EquipmentToolTip extends ToolTip
             for each (_local_1 in _local_2)
             {
                 _local_3.pushParams(_local_1);
-            };
+            }
             return (_local_3);
         }
 
@@ -1267,7 +1267,7 @@ public class EquipmentToolTip extends ToolTip
             else
             {
                 this.descText.setStringBuilder(new LineBuilder().setParams(String(this.objectXML.Description)));
-            };
+            }
             this.descText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
             waiter.push(this.descText.textChanged);
             addChild(this.descText);
@@ -1281,7 +1281,7 @@ public class EquipmentToolTip extends ToolTip
             {
                 this.tierText.y = ((this.icon.height / 2) - (this.tierText.height / 2));
                 this.tierText.x = (MAX_WIDTH - 30);
-            };
+            }
             this.descText.x = 4;
             this.descText.y = (this.icon.height + 2);
             if (contains(this.line1))
@@ -1295,7 +1295,7 @@ public class EquipmentToolTip extends ToolTip
             {
                 this.line1.y = (this.descText.y + this.descText.height);
                 this.effectsText.y = this.line1.y;
-            };
+            }
             if (this.setInfoText)
             {
                 this.line3.x = 8;
@@ -1309,22 +1309,22 @@ public class EquipmentToolTip extends ToolTip
             {
                 this.line2.x = 8;
                 this.line2.y = ((this.effectsText.y + this.effectsText.height) + 8);
-            };
+            }
             var _local_1:uint = (this.line2.y + 8);
             if (this.restrictionsText)
             {
                 this.restrictionsText.x = 4;
                 this.restrictionsText.y = _local_1;
                 _local_1 = (_local_1 + this.restrictionsText.height);
-            };
+            }
             if (this.powerText)
             {
                 if (contains(this.powerText))
                 {
                     this.powerText.x = 4;
                     this.powerText.y = _local_1;
-                };
-            };
+                }
+            }
         }
 
         private function buildCategorySpecificText():void
@@ -1336,7 +1336,7 @@ public class EquipmentToolTip extends ToolTip
             else
             {
                 this.comparisonResults = new SlotComparisonResult();
-            };
+            }
         }
 
         private function handleWisMod():void
@@ -1348,23 +1348,23 @@ public class EquipmentToolTip extends ToolTip
             if (this.player == null)
             {
                 return;
-            };
+            }
             var _local_5:Number = (this.player.wisdom_ + this.player.wisdomBoost_);
             if (_local_5 < 30)
             {
                 return;
-            };
+            }
             var _local_6:Vector.<XML> = new Vector.<XML>();
             if (this.curItemXML != null)
             {
                 this.curItemXML = this.curItemXML.copy();
                 _local_6.push(this.curItemXML);
-            };
+            }
             if (this.objectXML != null)
             {
                 this.objectXML = this.objectXML.copy();
                 _local_6.push(this.objectXML);
-            };
+            }
             for each (_local_2 in _local_6)
             {
                 for each (_local_1 in _local_2.Activate)
@@ -1398,11 +1398,11 @@ public class EquipmentToolTip extends ToolTip
                                     _local_1.@duration = this.modifyWisModStat(_local_1.@duration);
                                     _local_1.@range = this.modifyWisModStat(_local_1.@range);
                                     break;
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private function modifyWisModStat(_arg_1:String, _arg_2:Number=1):String
@@ -1429,8 +1429,8 @@ public class EquipmentToolTip extends ToolTip
                 else
                 {
                     _local_6 = _local_5.toFixed(0);
-                };
-            };
+                }
+            }
             return (_local_6);
         }
 
@@ -1453,7 +1453,7 @@ class ComPair
         if (_arg_2)
         {
             this.b = ((_arg_2.hasOwnProperty(("@" + _arg_3))) ? Number(_arg_2.@[_arg_3]) : _arg_4);
-        };
+        }
     }
 
     public function add(_arg_1:Number):void
@@ -1477,7 +1477,7 @@ class ComPairTag
         if (_arg_2)
         {
             this.b = ((_arg_2.hasOwnProperty(_arg_3)) ? _arg_2[_arg_3] : _arg_4);
-        };
+        }
     }
 
     public function add(_arg_1:Number):void
@@ -1501,7 +1501,7 @@ class ComPairTagBool
         if (_arg_2)
         {
             this.b = ((_arg_2.hasOwnProperty(_arg_3)) ? true : _arg_4);
-        };
+        }
     }
 
 }
@@ -1543,7 +1543,7 @@ class Effect
         {
             _local_4 = (('</font><font color="#' + this.replacementColor_.toString(16)) + '">');
             _local_5 = (('</font><font color="#' + this.color_.toString(16)) + '">');
-        };
+        }
         for (_local_1 in this.valueReplacements_)
         {
             if ((this.valueReplacements_[_local_1] is AppendingLineBuilder))
@@ -1561,9 +1561,9 @@ class Effect
                 else
                 {
                     _local_3[_local_1] = ((_local_4 + this.valueReplacements_[_local_1]) + _local_5);
-                };
-            };
-        };
+                }
+            }
+        }
         return (_local_3);
     }
 

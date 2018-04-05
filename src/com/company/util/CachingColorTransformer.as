@@ -11,7 +11,7 @@ import flash.geom.ColorTransform;
 import flash.geom.Point;
 import flash.utils.Dictionary;
 
-public class CachingColorTransformer 
+public class CachingColorTransformer
     {
 
         private static var bds_:Dictionary = new Dictionary();
@@ -29,13 +29,13 @@ public class CachingColorTransformer
             {
                 _local_4 = {};
                 bds_[_arg_1] = _local_4;
-            };
+            }
             if (_local_3 == null)
             {
                 _local_3 = _arg_1.clone();
                 _local_3.colorTransform(_local_3.rect, _arg_2);
                 _local_4[_arg_2] = _local_3;
-            };
+            }
             return (_local_3);
         }
 
@@ -51,13 +51,13 @@ public class CachingColorTransformer
             {
                 _local_4 = {};
                 bds_[_arg_1] = _local_4;
-            };
+            }
             if (_local_3 == null)
             {
                 _local_3 = _arg_1.clone();
                 _local_3.applyFilter(_local_3, _local_3.rect, new Point(), _arg_2);
                 _local_4[_arg_2] = _local_3;
-            };
+            }
             return (_local_3);
         }
 
@@ -77,8 +77,8 @@ public class CachingColorTransformer
                 for each (_local_2 in _local_1)
                 {
                     _local_2.dispose();
-                };
-            };
+                }
+            }
             bds_ = new Dictionary();
         }
 

@@ -149,7 +149,7 @@ public class FortuneModal extends EmptyFrame
             if (this.fortuneInfo == null)
             {
                 return;
-            };
+            }
             this.crystalMain.setXPos((protected::modalWidth / 2));
             this.crystalMain.setYPos(crystalMainY);
             this.resetBalls();
@@ -168,12 +168,12 @@ public class FortuneModal extends EmptyFrame
             if (_local_3 != null)
             {
                 this.creditDisplay_.draw(_local_3.credits_, 0, _local_3.tokens_);
-            };
+            }
             if (_arg_1 != null)
             {
                 this.gs_ = _arg_1;
                 this.gs_.creditDisplay_.visible = false;
-            };
+            }
             var _local_4:BitmapData = AssetLibrary.getImageFromSet("lofiObj3", 1172);
             _local_4 = TextureRedrawer.redraw(_local_4, 75, true, 0);
             this.crystalMain.addEventListener(MouseEvent.ROLL_OVER, this.displayInfoHover);
@@ -210,7 +210,7 @@ public class FortuneModal extends EmptyFrame
             if (!(_arg_1.relatedObject is ItemWithTooltip))
             {
                 this.onHoverPanel.visible = false;
-            };
+            }
         }
 
         private function InitButtons():void
@@ -263,7 +263,7 @@ public class FortuneModal extends EmptyFrame
                 _local_1.filters = [new GlowFilter(0xFFFFFF, 1, 2, 2, 1.5, 1)];
                 texts_.push(_local_1);
                 _local_2++;
-            };
+            }
         }
 
         private function setString(_arg_1:int):void
@@ -271,15 +271,15 @@ public class FortuneModal extends EmptyFrame
             if (this.parent == null)
             {
                 return;
-            };
+            }
             if (((this.currentString >= 0) && (!(texts_[this.currentString].parent == null))))
             {
                 removeChild(texts_[this.currentString]);
-            };
+            }
             if (_arg_1 < 0)
             {
                 return;
-            };
+            }
             this.currentString = _arg_1;
             var _local_2:TextField = texts_[this.currentString];
             _local_2.x = ((protected::modalWidth / 2) - (_local_2.width / 2));
@@ -308,7 +308,7 @@ public class FortuneModal extends EmptyFrame
             if (this.gs_ != null)
             {
                 this.gs_.creditDisplay_.visible = false;
-            };
+            }
         }
 
         private function onItemSwitch(_arg_1:TimerEvent=null):void
@@ -318,17 +318,17 @@ public class FortuneModal extends EmptyFrame
             if (this.tooltipItems == null)
             {
                 this.tooltipItems = Vector.<ItemWithTooltip>([new ItemWithTooltip(this.fortuneInfo._rollsWithContentsUnique[this.tooltipItemIDIndex], ITEM_SIZE_IN_MC), new ItemWithTooltip(this.fortuneInfo._rollsWithContentsUnique[(this.tooltipItemIDIndex + 1)], ITEM_SIZE_IN_MC)]);
-            };
+            }
             if (this.tooltipItemIDIndex >= this.fortuneInfo._rollsWithContentsUnique.length)
             {
                 this.tooltipItemIDIndex = 0;
-            };
+            }
             var _local_3:int = (this.tooltipItemIDIndex % 2);
             if (((!(this.tooltipItems[this.currenttooltipItem] == null)) && (!(this.tooltipItems[this.currenttooltipItem].parent == null))))
             {
                 _local_2 = this.tooltipItems[this.currenttooltipItem];
                 this.doEaseInAnimation(_local_2, {"alpha":0}, this.removeChildAfterTween);
-            };
+            }
             var _local_4:ItemWithTooltip = new ItemWithTooltip(this.fortuneInfo._rollsWithContentsUnique[this.tooltipItemIDIndex], ITEM_SIZE_IN_MC, true);
             _local_4.onMouseOver.add(this.onItemSwitchPause);
             _local_4.onMouseOut.add(this.onItemSwitchContinue);
@@ -343,7 +343,7 @@ public class FortuneModal extends EmptyFrame
             if (((!(this.creditDisplay_ == null)) && (!(_local_5 == null))))
             {
                 this.creditDisplay_.draw(_local_5.credits_, 0, _local_5.tokens_);
-            };
+            }
         }
 
         private function removeChildAfterTween(_arg_1:GTween):void
@@ -351,7 +351,7 @@ public class FortuneModal extends EmptyFrame
             if (_arg_1.target.parent != null)
             {
                 _arg_1.target.parent.removeChild(_arg_1.target);
-            };
+            }
         }
 
         public function onItemSwitchPause():void
@@ -384,9 +384,9 @@ public class FortuneModal extends EmptyFrame
                     this.tooltipItems[_local_1].onMouseOut.removeAll();
                     this.tooltipItems[_local_1].onMouseOver.removeAll();
                     this.tooltipItems[_local_1].parent.removeChild(this.tooltipItems[_local_1]);
-                };
+                }
                 _local_1++;
-            };
+            }
             this.onItemSwitchPause();
         }
 
@@ -413,7 +413,7 @@ public class FortuneModal extends EmptyFrame
                 if (((this.state == STATE_ROUND_1) || (!(this.crystals[_local_1] == this.crystalClicked))))
                 {
                     _local_2 = this.crystals[_local_1];
-                };
+                }
             } while (_local_2 == null);
             this.smallBallClick(_local_2);
         }
@@ -474,7 +474,7 @@ public class FortuneModal extends EmptyFrame
             if (!this.canUseFortuneModal())
             {
                 this.fortuneEventOver();
-            };
+            }
             var _local_3:Player = StaticInjectorContext.getInjector().getInstance(GameModel).player;
             if (_local_3 != null)
             {
@@ -483,18 +483,18 @@ public class FortuneModal extends EmptyFrame
                     _local_2 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
                     _local_2.dispatch(new NotEnoughGoldDialog());
                     return;
-                };
+                }
                 if (((_arg_1 == Currency.GOLD) && ((_local_3.credits_ - this.goldPrice_) < 0)))
                 {
                     _local_2 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
                     _local_2.dispatch(new NotEnoughGoldDialog());
                     return;
-                };
+                }
                 if (((_arg_1 == Currency.FORTUNE) && ((_local_3.tokens_ - this.tokenPrice_) < 0)))
                 {
                     return;
-                };
-            };
+                }
+            }
             this.itemSwitchTimer.delay = this.SWITCH_DELAY_FAST;
             this.crystalMain.setAnimationStage(CrystalMain.ANIMATION_STAGE_WAITING);
             var _local_4:Object = this.makeBasicParams();
@@ -511,13 +511,13 @@ public class FortuneModal extends EmptyFrame
                 else
                 {
                     return;
-                };
-            };
+                }
+            }
             if (this.state == STATE_ROUND_1)
             {
                 _local_4.status = 0;
                 this.crystalMain.removeEventListener(MouseEvent.ROLL_OVER, this.displayInfoHover);
-            };
+            }
             if (((this.state == STATE_ROUND_1) && (!(this.client.requestInProgress()))))
             {
                 this.buyButtonsDisable();
@@ -534,11 +534,11 @@ public class FortuneModal extends EmptyFrame
                         if ((_local_3.tokens_ - this.tokenPrice_) < 0)
                         {
                             return;
-                        };
+                        }
                         _local_3.tokens_ = (_local_3.tokens_ - this.tokenPrice_);
                         this.creditDisplay_.draw(_local_3.credits_, 0, _local_3.tokens_);
-                    };
-                };
+                    }
+                }
                 this.client.sendRequest("/account/playFortuneGame", _local_4);
                 this.setString((10 + int((Math.random() * 6))));
                 this.client.complete.addOnce(this.onFirstBuyComplete);
@@ -556,11 +556,11 @@ public class FortuneModal extends EmptyFrame
                     {
                         _local_3.credits_ = (_local_3.credits_ - this.goldPriceSecond_);
                         this.creditDisplay_.draw(_local_3.credits_, 0, _local_3.tokens_);
-                    };
+                    }
                     this.buyButtonGold.visible = false;
                     this.resetButton.visible = false;
-                };
-            };
+                }
+            }
         }
 
         private function onFirstBuyComplete(_arg_1:Boolean, _arg_2:*):void
@@ -598,9 +598,9 @@ public class FortuneModal extends EmptyFrame
                         {
                             _local_4.tokens_ = int(_local_3.FortuneToken);
                             this.creditDisplay_.draw(_local_4.credits_, 0, _local_4.tokens_);
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_5 = Vector.<int>([0, 2, 1]);
                 _local_6 = int(int(Math.floor((Math.random() * 3))));
                 _local_7 = (Math.random() > 0.5);
@@ -627,7 +627,7 @@ public class FortuneModal extends EmptyFrame
                         _local_11 = this.crystals[_local_5[_local_6]].getCenterY();
                         new TimerCallback(_local_15, this.doLightning, _local_13, _local_14, _local_10, _local_11);
                         new TimerCallback((_local_15 + 0.1), this.crystals[_local_5[_local_6]].doItemShow, int(_local_17));
-                    };
+                    }
                     _local_13 = _local_10;
                     _local_14 = _local_11;
                     _local_15 = (_local_15 + _local_16);
@@ -639,14 +639,14 @@ public class FortuneModal extends EmptyFrame
                     else
                     {
                         _local_6 = ((--_local_6 < 0) ? 2 : _local_6);
-                    };
-                };
+                    }
+                }
                 new TimerCallback(this.SHOW_PRIZES_TIME, this.onFirstBuyAnimateSub);
             }
             else
             {
                 this.handleError();
-            };
+            }
         }
 
         private function onFirstBuyAnimateSub():void
@@ -655,7 +655,7 @@ public class FortuneModal extends EmptyFrame
             if (((this.state == STATE_ROUND_2) && (!(this.crystalClicked == null))))
             {
                 this.resetBallsRound2();
-            };
+            }
             while (_local_1 < 3)
             {
                 this.crystals[_local_1].removeItemReveal();
@@ -663,7 +663,7 @@ public class FortuneModal extends EmptyFrame
                 this.crystals[_local_1].setAnimation(6, 7);
                 this.crystals[_local_1].setAnimationDuration(50);
                 _local_1++;
-            };
+            }
             this.setGameStage(this.GAME_STAGE_SPIN);
             this.crystalMain.setAnimationStage(CrystalMain.ANIMATION_STAGE_INNERROTATION);
             new TimerCallback(this.SPIN_TIME, this.onFirstBuyAnimateComplete);
@@ -681,7 +681,7 @@ public class FortuneModal extends EmptyFrame
             else
             {
                 this.setString(4);
-            };
+            }
             this.ballClickEnable(this.crystalClicked);
             this.crystalMain.setAnimationStage(CrystalMain.ANIMATION_STAGE_BUZZING);
             this.doNova(this.crystalMain.getCenterX(), this.crystalMain.getCenterY(), 10, 0xFFFF);
@@ -693,13 +693,13 @@ public class FortuneModal extends EmptyFrame
                     this.crystals[_local_1].doItemReturn();
                     new TimerCallback(this.NOVA_DELAY_TIME, this.doNova, int(this.crystals[_local_1].returnCenterX()), int(this.crystals[_local_1].returnCenterY()), 5, 0xFFFF);
                     new TimerCallback(this.NOVA_DELAY_TIME, this.crystals[_local_1].setAnimationPulse);
-                };
+                }
                 _local_1++;
-            };
+            }
             if (this.countdownTimer == null)
             {
                 return;
-            };
+            }
             new TimerCallback(this.NOVA_DELAY_TIME, this.crystalMain.setAnimationStage, CrystalMain.ANIMATION_STAGE_PULSE);
             this.countdownTimer.start(this.COUNTDOWN_AMOUNT);
             this.countdownTimer.setXPos(this.crystalMain.getCenterX());
@@ -713,7 +713,7 @@ public class FortuneModal extends EmptyFrame
             if (((!(this.countdownTimer == null)) && (this.countdownTimer.isRunning())))
             {
                 this.setString(9);
-            };
+            }
         }
 
         private function handleError():void
@@ -761,14 +761,14 @@ public class FortuneModal extends EmptyFrame
                 {
                     this.smallBallClickSub(_local_3, _local_2);
                     this.crystals[_local_3].setAnimationClicked();
-                };
+                }
                 if (this.crystals[_local_3] != this.crystalClicked)
                 {
                     _local_2++;
-                };
+                }
                 this.crystals[_local_3].setGlowState(CrystalSmall.GLOW_STATE_FADE);
                 _local_3++;
-            };
+            }
             this.chooseingState = false;
         }
 
@@ -785,7 +785,7 @@ public class FortuneModal extends EmptyFrame
                 this.crystalClicked = this.crystals[_arg_1];
                 this.client.sendRequest("/account/playFortuneGame", _local_3);
                 this.client.complete.addOnce(this.onSmallBallClickComplete);
-            };
+            }
         }
 
         private function onSmallBallClickComplete(_arg_1:Boolean, _arg_2:*):void
@@ -809,8 +809,8 @@ public class FortuneModal extends EmptyFrame
                         new TimerCallback(this.DISPLAY_PRIZE_TIME_1, this.onSmallBallClickCompleteRound2, _local_3.Awards);
                         new TimerCallback(0.25, this.doNova, this.crystalClicked.getCenterX(), this.crystalClicked.getCenterY(), 6, 0xFFFF);
                         new TimerCallback(0.25, this.crystalClicked.doItemReveal, _local_3.Awards);
-                    };
-                };
+                    }
+                }
                 new TimerCallback(0.5, this.setString, 5);
             }
             else
@@ -824,8 +824,8 @@ public class FortuneModal extends EmptyFrame
                 else
                 {
                     _local_4.dispatch(new DebugDialog("You have run out of time to choose.", "Oh no!"));
-                };
-            };
+                }
+            }
         }
 
         private function onSmallBallClickCompleteRound2(_arg_1:int):void
@@ -843,9 +843,9 @@ public class FortuneModal extends EmptyFrame
                 if (int(this.items[_local_2]) == _arg_1)
                 {
                     this.items[_local_2] = this.items[(this.items.length - 1)];
-                };
+                }
                 _local_2++;
-            };
+            }
             this.items.pop();
             _local_2 = 0;
             while (_local_2 < this.crystals.length)
@@ -853,9 +853,9 @@ public class FortuneModal extends EmptyFrame
                 if (this.crystals[_local_2] != this.crystalClicked)
                 {
                     this.crystals[_local_2].doItemShow(int(this.items.pop()));
-                };
+                }
                 _local_2++;
-            };
+            }
             this.setString(6);
         }
 
@@ -879,7 +879,7 @@ public class FortuneModal extends EmptyFrame
             {
                 this.crystals[_local_1].resetVars();
                 _local_1++;
-            };
+            }
             this.resetBalls();
         }
 
@@ -902,7 +902,7 @@ public class FortuneModal extends EmptyFrame
             if (this.state == STATE_ROUND_1)
             {
                 this.buyButtonFortune.addEventListener(MouseEvent.CLICK, this.onBuyWithFortuneClick);
-            };
+            }
             this.buyButtonGold.addEventListener(MouseEvent.CLICK, this.onBuyWithGoldClick);
         }
 
@@ -913,7 +913,7 @@ public class FortuneModal extends EmptyFrame
             {
                 this.crystals[_local_1].removeEventListener(MouseEvent.CLICK, this.onSmallBallClick);
                 _local_1++;
-            };
+            }
         }
 
         private function ballClickEnable(_arg_1:CrystalSmall=null):void
@@ -929,9 +929,9 @@ public class FortuneModal extends EmptyFrame
                 {
                     this.crystals[_local_2].addEventListener(MouseEvent.CLICK, this.onSmallBallClick);
                     this.crystals[_local_2].setMouseTracking(true);
-                };
+                }
                 _local_2++;
-            };
+            }
         }
 
         private function resetBalls():void
@@ -953,13 +953,13 @@ public class FortuneModal extends EmptyFrame
                     if (this.crystals[_local_2].visible == false)
                     {
                         this.crystals[_local_2].visible = true;
-                    };
-                };
+                    }
+                }
                 this.crystals[_local_2].removeItemReveal();
                 this.crystals[_local_2].setInactive();
                 this.crystals[_local_2].reset();
                 _local_2++;
-            };
+            }
             this.crystalClicked = null;
         }
 
@@ -973,7 +973,7 @@ public class FortuneModal extends EmptyFrame
             {
                 this.crystalClicked.visible = false;
                 this.crystalClicked.setInactive();
-            };
+            }
             while (_local_3 < 3)
             {
                 if (this.crystals[_local_3] != this.crystalClicked)
@@ -982,9 +982,9 @@ public class FortuneModal extends EmptyFrame
                     this.crystals[_local_3].setXPos((this.crystalMain.getCenterX() + (_local_4 * Math.sin(_local_1))));
                     this.crystals[_local_3].setYPos((this.crystalMain.getCenterY() + (_local_4 * Math.cos(_local_1))));
                     _local_2++;
-                };
+                }
                 _local_3++;
-            };
+            }
         }
 
         public function spinCrystals():void
@@ -995,18 +995,18 @@ public class FortuneModal extends EmptyFrame
             if (this.spinSpeed < this.MAX_SPIN_SPEED)
             {
                 this.spinSpeed = (this.spinSpeed + 4);
-            };
+            }
             while (_local_2 < 3)
             {
                 _local_1 = ((((((_local_2 + 1) * (120 + this.spinSpeed)) - 60) - getTimer()) * Math.PI) / 180);
                 this.crystals[_local_2].setXPos((this.crystalMain.getCenterX() + (this.radius * Math.sin(_local_1))));
                 this.crystals[_local_2].setYPos((this.crystalMain.getCenterY() + (this.radius * Math.cos(_local_1))));
                 _local_2++;
-            };
+            }
             if (this.radius == INIT_RADIUS_FROM_MAINCRYTAL)
             {
                 this.direction = (this.direction * -1);
-            };
+            }
             if (this.radius < 0)
             {
                 this.radius = 0;
@@ -1016,8 +1016,8 @@ public class FortuneModal extends EmptyFrame
                 if (this.spinSpeed == this.MAX_SPIN_SPEED)
                 {
                     this.radius = (this.radius - ((this.direction * 2.85) / this.SPIN_TIME));
-                };
-            };
+                }
+            }
         }
 
         public function onEnterFrame(_arg_1:Event):void
@@ -1032,12 +1032,12 @@ public class FortuneModal extends EmptyFrame
             {
                 this.spinCrystals();
                 this.crystalMain.setAnimationDuration(((this.MAX_SPIN_SPEED + 80) - this.spinSpeed));
-            };
+            }
             while (_local_3 < 3)
             {
                 this.crystals[_local_3].update(_local_4, _local_5);
                 _local_3++;
-            };
+            }
             this.rotateAroundCenter(this.platformMain, 0.1);
             this.rotateAroundCenter(this.platformMainSub, -0.15);
             if (this.chooseingState)
@@ -1046,8 +1046,8 @@ public class FortuneModal extends EmptyFrame
                 if (_local_2 < 0.05)
                 {
                     this.crystals[int(((_local_2 * 200) % 3))].setShake(true);
-                };
-            };
+                }
+            }
             this.draw(_local_4, _local_5);
         }
 
@@ -1061,7 +1061,7 @@ public class FortuneModal extends EmptyFrame
             else
             {
                 _arg_1.rotation = ((_arg_1.rotation + _arg_2) % 360);
-            };
+            }
         }
 
         public function draw(_arg_1:int, _arg_2:int):void
@@ -1083,7 +1083,7 @@ public class FortuneModal extends EmptyFrame
                 _local_5.y_ = ParticleModalMap.getLocalPos(_arg_2);
                 _local_6 = new NovaEffect(_local_5, _arg_3, _arg_4);
                 this.particleMap.addObj(_local_6, _local_5.x_, _local_5.y_);
-            };
+            }
         }
 
         private function doLightning(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:int=200, _arg_6:int=12447231):void
@@ -1091,7 +1091,7 @@ public class FortuneModal extends EmptyFrame
             if (this.parent == null)
             {
                 return;
-            };
+            }
             var _local_7:GameObject = new GameObject(null);
             _local_7.x_ = ParticleModalMap.getLocalPos(_arg_1);
             _local_7.y_ = ParticleModalMap.getLocalPos(_arg_2);

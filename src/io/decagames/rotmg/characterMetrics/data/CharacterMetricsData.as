@@ -27,7 +27,7 @@ public class CharacterMetricsData
             if (!this.stats[_arg_1])
             {
                 return (0);
-            };
+            }
             return (this.stats[_arg_1]);
         }
 

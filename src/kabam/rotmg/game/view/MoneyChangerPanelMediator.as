@@ -45,7 +45,7 @@ public class MoneyChangerPanelMediator extends Mediator
             else
             {
                 this.openDialog.dispatch(new RegisterPromptDialog(TextKey.MONEY_GOLD_NEED_REGISTRATION));
-            };
+            }
         }
 
 

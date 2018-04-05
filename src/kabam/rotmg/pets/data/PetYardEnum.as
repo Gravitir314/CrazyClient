@@ -40,8 +40,8 @@ package kabam.rotmg.pets.data
                 if (_arg_1 == _local_3.value)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -54,8 +54,8 @@ package kabam.rotmg.pets.data
                 if (_arg_1 == _local_3.ordinal)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 

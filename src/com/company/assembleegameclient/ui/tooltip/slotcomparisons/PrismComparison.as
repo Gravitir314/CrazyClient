@@ -35,7 +35,7 @@ public class PrismComparison extends SlotComparison
                 comparisonStringBuilder.pushParams(TextKey.DECOY, {"data":new LineBuilder().setParams(TextKey.SEC_COUNT, {"duration":duration.toString()}).setPrefix(TooltipHelper.getOpenTag(textColor)).setPostfix(TooltipHelper.getCloseTag())});
                 test = this.decoy[0].toXMLString();
                 processedTags[this.decoy[0].toXMLString()] = true;
-            };
+            }
         }
 
 

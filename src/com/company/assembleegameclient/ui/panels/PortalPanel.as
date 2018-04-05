@@ -93,7 +93,7 @@ public class PortalPanel extends Panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.enterPortal();
-            };
+            }
         }
 
         private function enterPortal():void
@@ -118,8 +118,8 @@ public class PortalPanel extends Panel
                 {
                     removeChild(this.enterButton_);
                     addChild(this.fullText_);
-                };
-            };
+                }
+            }
         }
 
         private function updateNameText():void
@@ -137,7 +137,7 @@ public class PortalPanel extends Panel
             if (((this.owner_.lockedPortal_) && (_local_1.indexOf(this.LOCKED) == 0)))
             {
                 return (_local_1.substr(this.LOCKED.length));
-            };
+            }
             return (this.parseJson(_local_1));
         }
 

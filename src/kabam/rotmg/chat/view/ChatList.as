@@ -52,8 +52,8 @@ public class ChatList extends Sprite
                 else
                 {
                     break;
-                };
-            };
+                }
+            }
             while (this.itemsToRemove.length > 0)
             {
                 this.onItemTimedOut(this.itemsToRemove.pop());
@@ -65,9 +65,9 @@ public class ChatList extends Sprite
                         this.addNewItem(_local_3);
                         this.isCurrent = (this.index == this.listItems.length);
                         this.positionItems();
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function setup(_arg_1:ChatModel):void
@@ -86,13 +86,13 @@ public class ChatList extends Sprite
                 if (((!(this.isCurrent)) && (this.index < this.visibleItemCount)))
                 {
                     this.pageDown();
-                };
-            };
+                }
+            }
             this.listItems.push(_arg_1);
             if (this.isCurrent)
             {
                 this.displayNewItem(_arg_1);
-            };
+            }
         }
 
         private function onItemTimedOut(_arg_1:ChatListItem):void
@@ -103,7 +103,7 @@ public class ChatList extends Sprite
                 removeChild(_arg_1);
                 this.visibleItems.splice(_local_2, 1);
                 this.isCurrent = (this.index == this.listItems.length);
-            };
+            }
         }
 
         private function displayNewItem(_arg_1:ChatListItem):void
@@ -123,7 +123,7 @@ public class ChatList extends Sprite
             else
             {
                 this.showAvailable();
-            };
+            }
             this.ignoreTimeOuts = true;
         }
 
@@ -139,9 +139,9 @@ public class ChatList extends Sprite
                 if (this.visibleItems.indexOf(_local_1) == -1)
                 {
                     this.addOldItem(_local_1);
-                };
+                }
                 _local_4--;
-            };
+            }
             this.positionItems();
         }
 
@@ -152,7 +152,7 @@ public class ChatList extends Sprite
                 this.ignoreTimeOuts = false;
                 this.scrollToCurrent();
                 this.onCheckTimeout(null);
-            };
+            }
             if (!this.isCurrent)
             {
                 this.scrollItemsDown();
@@ -162,8 +162,8 @@ public class ChatList extends Sprite
                 if (this.ignoreTimeOuts)
                 {
                     this.ignoreTimeOuts = false;
-                };
-            };
+                }
+            }
         }
 
         public function scrollToCurrent():void
@@ -171,7 +171,7 @@ public class ChatList extends Sprite
             while ((!(this.isCurrent)))
             {
                 this.scrollItemsDown();
-            };
+            }
         }
 
         public function pageUp():void
@@ -194,10 +194,10 @@ public class ChatList extends Sprite
                     else
                     {
                         return;
-                    };
+                    }
                     _local_1++;
-                };
-            };
+                }
+            }
             this.timer.stop();
         }
 
@@ -215,9 +215,9 @@ public class ChatList extends Sprite
                     this.timer.start();
                     this.ignoreTimeOuts = false;
                     return;
-                };
+                }
                 _local_1++;
-            };
+            }
         }
 
         private function scrollItemsUp():void
@@ -234,7 +234,7 @@ public class ChatList extends Sprite
             if (this.index < 0)
             {
                 this.index = 0;
-            };
+            }
             var _local_1:ChatListItem = this.listItems[this.index];
             this.index++;
             this.addNewItem(_local_1);
@@ -254,7 +254,7 @@ public class ChatList extends Sprite
             if (this.visibleItems.length > this.visibleItemCount)
             {
                 removeChild(this.visibleItems.shift());
-            };
+            }
         }
 
         private function canScrollUp():Boolean
@@ -273,7 +273,7 @@ public class ChatList extends Sprite
             if (this.visibleItems.length > this.visibleItemCount)
             {
                 removeChild(this.visibleItems.pop());
-            };
+            }
         }
 
         private function positionItems():void
@@ -286,7 +286,7 @@ public class ChatList extends Sprite
                 _local_1 = this.visibleItems[_local_3];
                 _local_1.y = _local_2;
                 _local_2 = (_local_2 - _local_1.height);
-            };
+            }
         }
 
 

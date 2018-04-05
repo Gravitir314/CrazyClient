@@ -83,7 +83,7 @@ public class MoreColorUtil
                     _local_5 = _local_9;
                     _local_6 = _local_10;
                     break;
-            };
+            }
             return (((int(Math.min(0xFF, Math.floor((_local_4 * 0xFF)))) << 16) | (int(Math.min(0xFF, Math.floor((_local_5 * 0xFF)))) << 8)) | int(Math.min(0xFF, Math.floor((_local_6 * 0xFF)))));
         }
 
@@ -118,11 +118,11 @@ public class MoreColorUtil
             if (_arg_1 == null)
             {
                 _arg_1 = identity;
-            };
+            }
             if (_arg_2 == null)
             {
                 _arg_2 = identity;
-            };
+            }
             var _local_4:Number = (1 - _arg_3);
             return (new ColorTransform(((_arg_1.redMultiplier * _local_4) + (_arg_2.redMultiplier * _arg_3)), ((_arg_1.greenMultiplier * _local_4) + (_arg_2.greenMultiplier * _arg_3)), ((_arg_1.blueMultiplier * _local_4) + (_arg_2.blueMultiplier * _arg_3)), ((_arg_1.alphaMultiplier * _local_4) + (_arg_2.alphaMultiplier * _arg_3)), ((_arg_1.redOffset * _local_4) + (_arg_2.redOffset * _arg_3)), ((_arg_1.greenOffset * _local_4) + (_arg_2.greenOffset * _arg_3)), ((_arg_1.blueOffset * _local_4) + (_arg_2.blueOffset * _arg_3)), ((_arg_1.alphaOffset * _local_4) + (_arg_2.alphaOffset * _arg_3))));
         }

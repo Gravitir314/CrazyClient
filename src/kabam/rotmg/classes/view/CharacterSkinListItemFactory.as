@@ -37,7 +37,7 @@ public class CharacterSkinListItemFactory
             {
                 _local_5[_local_4] = this.makeCharacterSkinTile(_local_2[_local_4]);
                 _local_4++;
-            };
+            }
             return (_local_5);
         }
 

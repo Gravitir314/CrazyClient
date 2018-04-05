@@ -32,7 +32,7 @@ public class ChooseNameCommand
             else
             {
                 _local_1 = new ChooseNameRegisterDialog();
-            };
+            }
             this.openDialog.dispatch(_local_1);
         }
 

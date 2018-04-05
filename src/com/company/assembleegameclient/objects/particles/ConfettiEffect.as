@@ -46,12 +46,12 @@ public class ConfettiEffect extends ParticleEffect
                 else
                 {
                     _local_3 = this.color_;
-                };
+                }
                 _local_4 = ((3 + int((Math.random() * 5))) * 20);
                 _local_5 = new ConfettiParticle(1.85, _local_4, _local_3, ((500 * this.lifetime_) + ((Math.random() * 500) * this.lifetime_)), (0.1 + (Math.random() * 0.1)), this.start_, this.end_);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -103,7 +103,7 @@ class ConfettiParticle extends Particle
         if (this.timeLeft_ <= 0)
         {
             return (false);
-        };
+        }
         this.pathX_ = (this.pathX_ + (this.dx_ * _arg_2));
         this.pathY_ = (this.pathY_ + (this.dy_ * _arg_2));
         var _local_3:Number = Math.sin(((this.timeLeft_ / 1000) / this.period_));

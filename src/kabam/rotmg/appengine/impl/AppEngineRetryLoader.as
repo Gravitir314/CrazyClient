@@ -94,7 +94,7 @@ public class AppEngineRetryLoader implements RetryLoader
             for (_local_1 in this.params)
             {
                 _local_2[_local_1] = this.params[_local_1];
-            };
+            }
             return (_local_2);
         }
 
@@ -115,7 +115,7 @@ public class AppEngineRetryLoader implements RetryLoader
             if (_local_2.length == 0)
             {
                 _local_2 = "Unable to contact server";
-            };
+            }
             this.retryOrReportError(_local_2);
         }
 
@@ -134,7 +134,7 @@ public class AppEngineRetryLoader implements RetryLoader
             else
             {
                 this.cleanUpAndComplete(false, _arg_1);
-            };
+            }
         }
 
         private function onComplete(_arg_1:Event):void
@@ -147,7 +147,7 @@ public class AppEngineRetryLoader implements RetryLoader
             else
             {
                 this.cleanUpAndComplete(true, ByteArray(this.urlLoader.data));
-            };
+            }
         }
 
         private function handleTextResponse(_arg_1:String):void
@@ -165,8 +165,8 @@ public class AppEngineRetryLoader implements RetryLoader
                 else
                 {
                     this.cleanUpAndComplete(true, _arg_1);
-                };
-            };
+                }
+            }
         }
 
         private function cleanUpAndComplete(_arg_1:Boolean, _arg_2:*):void
@@ -174,7 +174,7 @@ public class AppEngineRetryLoader implements RetryLoader
             if (((!(_arg_1)) && (_arg_2 is String)))
             {
                 _arg_2 = this.parseXML(_arg_2);
-            };
+            }
             this.cancelPendingRequest();
             this._complete.dispatch(_arg_1, _arg_2);
         }
@@ -194,7 +194,7 @@ public class AppEngineRetryLoader implements RetryLoader
                 this.urlLoader.removeEventListener(Event.COMPLETE, this.onComplete);
                 this.closeLoader();
                 this.urlLoader = null;
-            };
+            }
         }
 
         private function closeLoader():void
@@ -205,7 +205,7 @@ public class AppEngineRetryLoader implements RetryLoader
             }
             catch(e:Error)
             {
-            };
+            }
         }
 
 

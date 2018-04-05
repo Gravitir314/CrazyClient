@@ -74,17 +74,17 @@ public class ChoiceBox extends Sprite
                     if (_local_3 == this.selectedIndex_)
                     {
                         return;
-                    };
+                    }
                     this.selectedIndex_ = _local_3;
                     break;
-                };
+                }
                 _local_3++;
-            };
+            }
             this.setSelected(this.selectedIndex_);
             if (_arg_2)
             {
                 dispatchEvent(new Event(Event.CHANGE));
-            };
+            }
         }
 
         public function value():Object
@@ -111,7 +111,7 @@ public class ChoiceBox extends Sprite
             {
                 this.color = ((this.color == 0xFFFFFF) ? 0xFF0000 : 0xFFFFFF);
                 this.labelText_.setColor(this.color);
-            };
+            }
             dispatchEvent(new Event(Event.CHANGE));
         }
 
@@ -132,7 +132,7 @@ public class ChoiceBox extends Sprite
             if (((this.selectedIndex_ < 0) || (this.selectedIndex_ >= this.labels_.length)))
             {
                 this.selectedIndex_ = 0;
-            };
+            }
             this.setText(this.labels_[this.selectedIndex_]);
         }
 

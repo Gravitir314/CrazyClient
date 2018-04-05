@@ -8,7 +8,7 @@ import mx.core.*;
 		public function UIAssets_UI_CONFIG()
 		{
 			super();
-			return;
+
 		}
 	}
 }

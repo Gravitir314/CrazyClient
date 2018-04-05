@@ -59,9 +59,9 @@ public class EnterGameCommand
                     else
                     {
                         this.showCurrentCharacterScreen();
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function showCurrentCharacterScreen():void

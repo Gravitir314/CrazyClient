@@ -26,19 +26,19 @@ public class ParticleProperties
             if (_arg_1.hasOwnProperty("Size"))
             {
                 this.size_ = Number(_arg_1.Size);
-            };
+            }
             if (_arg_1.hasOwnProperty("Z"))
             {
                 this.z_ = Number(_arg_1.Z);
-            };
+            }
             if (_arg_1.hasOwnProperty("Duration"))
             {
                 this.duration_ = Number(_arg_1.Duration);
-            };
+            }
             if (_arg_1.hasOwnProperty("Animation"))
             {
                 this.animationsData_ = new AnimationsData(_arg_1);
-            };
+            }
         }
 
     }

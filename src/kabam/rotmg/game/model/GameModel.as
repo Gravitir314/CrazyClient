@@ -23,7 +23,7 @@ public class GameModel
             if (((!(_local_2)) && (this.player.objectId_ == _arg_1)))
             {
                 _local_2 = this.player;
-            };
+            }
             return (_local_2);
         }
 

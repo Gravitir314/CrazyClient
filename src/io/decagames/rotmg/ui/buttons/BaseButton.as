@@ -51,7 +51,7 @@ public class BaseButton extends Sprite
             if (!this._disabled)
             {
                 this.clickSignal.dispatch(this);
-            };
+            }
         }
 
         protected function onMouseDownHandler(_arg_1:MouseEvent):void

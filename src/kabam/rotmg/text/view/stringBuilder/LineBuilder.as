@@ -45,7 +45,7 @@ public class LineBuilder implements StringBuilder
                 _local_3 = StaticInjectorContext.getInjector().getInstance(StringMap);
                 _local_2.setStringMap(_local_3);
                 return (_local_2.getString());
-            };
+            }
             return (_arg_1);
         }
 
@@ -62,8 +62,8 @@ public class LineBuilder implements StringBuilder
                 while (_local_8.indexOf(_local_7) != -1)
                 {
                     _local_8 = _local_8.replace(_local_7, _local_6);
-                };
-            };
+                }
+            }
             _local_8 = _local_8.replace(/\\n/g, "\n");
             return ((_arg_3 + _local_8) + _arg_4);
         }
@@ -129,13 +129,13 @@ public class LineBuilder implements StringBuilder
                 if (((_local_2.charAt(0) == "{") && (_local_2.charAt((_local_2.length - 1)) == "}")))
                 {
                     _local_2 = this.map.getValue(_local_2.substr(1, (_local_2.length - 2)));
-                };
+                }
                 _local_3 = (("{" + _local_1) + "}");
                 while (_local_5.indexOf(_local_3) != -1)
                 {
                     _local_5 = _local_5.replace(_local_3, _local_2);
-                };
-            };
+                }
+            }
             _local_5 = _local_5.replace(/\\n/g, "\n");
             return ((this.prefix + _local_5) + this.postfix);
         }
@@ -153,18 +153,18 @@ public class LineBuilder implements StringBuilder
                 if (((_local_3.charAt(0) == "{") && (_local_3.charAt((_local_3.length - 1)) == "}")))
                 {
                     _local_3 = this.map.getValue(_local_3.substr(1, (_local_3.length - 2)));
-                };
+                }
                 _local_4 = (("{" + _local_2) + "}");
                 while (_local_6.indexOf(_local_4) != -1)
                 {
                     _local_6 = _local_6.replace(_local_4, _local_3);
-                };
-            };
+                }
+            }
             _local_6 = _local_6.replace(/\\n/g, "\n");
             if (this.key == "server.no_teleport_new_connect")
             {
                 _arg_1.startTimer(parseInt(_local_3), 1000);
-            };
+            }
             return ((this.prefix + _local_6) + this.postfix);
         }
 

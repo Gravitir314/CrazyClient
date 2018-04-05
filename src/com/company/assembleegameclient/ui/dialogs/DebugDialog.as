@@ -29,11 +29,11 @@ public class DebugDialog extends StaticDialog
             if (((!(this.parent == null)) && (this.parent.contains(this))))
             {
                 this.parent.removeChild(this);
-            };
+            }
             if (this.f != null)
             {
                 this.f();
-            };
+            }
         }
 
 

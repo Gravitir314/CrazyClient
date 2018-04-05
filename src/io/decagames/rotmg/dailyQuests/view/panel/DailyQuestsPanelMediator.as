@@ -34,7 +34,7 @@ public class DailyQuestsPanelMediator extends Mediator
             {
                 this.view.feedButton.addEventListener(MouseEvent.CLICK, this.onButtonLeftClick);
                 WebMain.STAGE.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-            };
+            }
         }
 
         override public function destroy():void
@@ -48,7 +48,7 @@ public class DailyQuestsPanelMediator extends Mediator
             if (!this.questModel.isPopupOpened)
             {
                 this.openNoModalDialog.dispatch(new DailyQuestWindow());
-            };
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -56,7 +56,7 @@ public class DailyQuestsPanelMediator extends Mediator
             if (((_arg_1.keyCode == Parameters.data_.interact) && (WebMain.STAGE.focus == null)))
             {
                 this.onButtonLeftClick(null);
-            };
+            }
         }
 
 

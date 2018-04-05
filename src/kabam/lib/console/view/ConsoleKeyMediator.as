@@ -38,7 +38,7 @@ public class ConsoleKeyMediator extends Mediator
             if (_arg_1.keyCode == this.TRIGGER)
             {
                 this.toggle.dispatch();
-            };
+            }
         }
 
 

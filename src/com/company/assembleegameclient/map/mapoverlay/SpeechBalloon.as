@@ -100,7 +100,7 @@ public class SpeechBalloon extends Sprite implements IMapOverlayElement
             if (((!(_local_2 == null)) && (_local_2 is Player)))
             {
                 this.model.gameSprite.gsc_.requestTrade(_local_2.name_);
-            };
+            }
         }
 
         public function draw(_arg_1:Camera, _arg_2:int):Boolean
@@ -108,22 +108,22 @@ public class SpeechBalloon extends Sprite implements IMapOverlayElement
             if (this.startTime_ == 0)
             {
                 this.startTime_ = _arg_2;
-            };
+            }
             var _local_3:int = (_arg_2 - this.startTime_);
             if (((_local_3 > this.lifetime_) || ((!(this.go_ == null)) && (this.go_.map_ == null))))
             {
                 return (false);
-            };
+            }
             if (((this.go_ == null) || (!(this.go_.drawn_))))
             {
                 visible = false;
                 return (true);
-            };
+            }
             if (((this.hideable_) && (!(Parameters.data_.textBubbles))))
             {
                 visible = false;
                 return (true);
-            };
+            }
             visible = true;
             x = int((this.go_.posS_[0] + this.offset_.x));
             y = int((this.go_.posS_[1] + this.offset_.y));

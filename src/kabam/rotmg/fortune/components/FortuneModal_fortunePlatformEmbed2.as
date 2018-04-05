@@ -8,7 +8,7 @@ import mx.core.*;
 		public function FortuneModal_fortunePlatformEmbed2()
 		{
 			super();
-			return;
+
 		}
 	}
 }

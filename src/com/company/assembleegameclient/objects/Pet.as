@@ -71,7 +71,7 @@ public class Pet extends GameObject implements IInteractiveObject
             else
             {
                 this.skin = AnimatedChars.getAnimatedChar(_local_4, _local_5);
-            };
+            }
             this.isDefaultAnimatedChar = (this.skin == this.defaultSkin);
             _local_2 = this.skin.imageFromAngle(0, AnimatedChar.STAND, 0);
             animatedChar_ = this.skin;
@@ -93,7 +93,7 @@ public class Pet extends GameObject implements IInteractiveObject
             if (this.defaultSkin == null)
             {
                 return;
-            };
+            }
             _local_1 = this.defaultSkin.imageFromAngle(0, AnimatedChar.STAND, 0);
             this.isDefaultAnimatedChar = true;
             animatedChar_ = this.defaultSkin;

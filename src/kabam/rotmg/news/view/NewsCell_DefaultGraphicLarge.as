@@ -8,7 +8,7 @@ import mx.core.*;
 		public function NewsCell_DefaultGraphicLarge()
 		{
 			super();
-			return;
+
 		}
 	}
 }

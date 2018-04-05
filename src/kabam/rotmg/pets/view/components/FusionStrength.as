@@ -39,23 +39,23 @@ public class FusionStrength extends Sprite
             if (isMaxed(_arg_1))
             {
                 return (MAXED);
-            };
+            }
             if (_arg_1 > 0.8)
             {
                 return (FANTASTIC);
-            };
+            }
             if (_arg_1 > 0.6)
             {
                 return (GREAT);
-            };
+            }
             if (_arg_1 > 0.4)
             {
                 return (GOOD);
-            };
+            }
             if (_arg_1 > 0.2)
             {
                 return (LOW);
-            };
+            }
             return (BAD);
         }
 
@@ -121,8 +121,8 @@ public class FusionStrength extends Sprite
                 else
                 {
                     this.fusionText.setColor(DEFAULT_COLOR);
-                };
-            };
+                }
+            }
         }
 
 

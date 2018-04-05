@@ -54,7 +54,7 @@ public class BuyCharacterSlotCommand
             else
             {
                 this.purchaseSlot();
-            };
+            }
         }
 
         private function isSlotUnaffordable():Boolean

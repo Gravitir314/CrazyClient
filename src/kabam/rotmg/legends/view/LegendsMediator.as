@@ -69,7 +69,7 @@ public class LegendsMediator extends Mediator
             else
             {
                 this.showLoadingAndRequestFameList();
-            };
+            }
         }
 
         private function showLoadingAndRequestFameList():void

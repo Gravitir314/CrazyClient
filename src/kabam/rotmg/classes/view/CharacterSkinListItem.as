@@ -246,7 +246,7 @@ public class CharacterSkinListItem extends Sprite
             else
             {
                 this.removeEventListeners();
-            };
+            }
         }
 
         private function setCost():void
@@ -284,7 +284,7 @@ public class CharacterSkinListItem extends Sprite
             {
                 this.lockText.setStringBuilder(((this.state == CharacterSkinState.PURCHASING) ? new LineBuilder().setParams(TextKey.PURCHASING_SKIN) : this.makeUnlockTextStringBuilder()));
                 this.lockText.y = (HEIGHT / 2);
-            };
+            }
             this.lockText.x = ((WIDTH - this.lockText.width) - 15);
             this.lock.x = ((this.lockText.x - this.lock.width) - 5);
         }
@@ -337,11 +337,11 @@ public class CharacterSkinListItem extends Sprite
             if (this.state.isDisabled())
             {
                 return (LOCKED_COLOR);
-            };
+            }
             if (((this.isSelected) || (this.isOver)))
             {
                 return (HIGHLIGHTED_COLOR);
-            };
+            }
             return (AVAILABLE_COLOR);
         }
 

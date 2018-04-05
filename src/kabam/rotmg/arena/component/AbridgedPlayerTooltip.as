@@ -40,7 +40,7 @@ public class AbridgedPlayerTooltip extends ToolTip
                 _local_3.x = 40;
                 _local_3.y = 20;
                 addChild(_local_3);
-            };
+            }
             super(0x363636, 0.5, 0xFFFFFF, 1);
             var _local_5:EquippedGrid = new EquippedGrid(null, _arg_1.slotTypes, null);
             _local_5.x = 5;

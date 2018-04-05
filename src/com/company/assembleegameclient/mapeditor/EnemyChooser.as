@@ -42,7 +42,7 @@ public class EnemyChooser extends Chooser
             if (!_arg_5)
             {
                 removeElements();
-            };
+            }
             this.lastSearch = _arg_1;
             var _local_11:Boolean = true;
             var _local_12:Boolean = true;
@@ -51,11 +51,11 @@ public class EnemyChooser extends Chooser
             if (_arg_1 != "")
             {
                 _local_10 = new RegExp(_arg_1, "gix");
-            };
+            }
             if (_arg_2 != "")
             {
                 _arg_2 = this.filterTypes[_arg_2];
-            };
+            }
             var _local_15:Dictionary = GroupDivider.GROUPS["Enemies"];
             for each (_local_6 in _local_15)
             {
@@ -68,13 +68,13 @@ public class EnemyChooser extends Chooser
                         if (_local_13 < 0) continue;
                         _local_11 = (_local_13 >= _arg_3);
                         _local_12 = (!((_arg_4 > 0) && (_local_13 > _arg_4)));
-                    };
+                    }
                     if (((_local_11) && (_local_12)))
                     {
                         _local_14.push(_local_7);
-                    };
-                };
-            };
+                    }
+                }
+            }
             _local_14.sort(MoreStringUtil.cmp);
             for each (_local_7 in _local_14)
             {
@@ -87,9 +87,9 @@ public class EnemyChooser extends Chooser
                 else
                 {
                     _local_9 = this.cache[_local_8];
-                };
+                }
                 addElement(_local_9);
-            };
+            }
             scrollBar_.setIndicatorSize(HEIGHT, elementSprite_.height, true);
         }
 

@@ -61,7 +61,7 @@ public class ClassToolTip extends ToolTip
             if (this.showUnlockRequirements)
             {
                 _local_14 = CachingColorTransformer.transformBitmapData(_local_14, new ColorTransform(0, 0, 0, 0.5, 0, 0, 0, 0));
-            };
+            }
             this.portrait_ = new Bitmap();
             this.portrait_.bitmapData = _local_14;
             this.portrait_.x = -4;
@@ -99,8 +99,8 @@ public class ClassToolTip extends ToolTip
                             "unlockLevel":_local_8,
                             "typeToDisplay":ObjectLibrary.typeToDisplayId_[_local_7]
                         });
-                    };
-                };
+                    }
+                }
                 this.unlockText_.setStringBuilder(_local_4);
                 this.unlockText_.filters = [new DropShadowFilter(0, 0, 0)];
                 waiter.push(this.unlockText_.textChanged);
@@ -137,8 +137,8 @@ public class ClassToolTip extends ToolTip
                     this.nextClassQuest_.filters = [new DropShadowFilter(0, 0, 0)];
                     waiter.push(this.nextClassQuest_.textChanged);
                     addChild(this.nextClassQuest_);
-                };
-            };
+                }
+            }
         }
 
         public static function getDisplayId(_arg_1:XML):String
@@ -174,8 +174,8 @@ public class ClassToolTip extends ToolTip
                 {
                     this.nextClassQuest_.x = 8;
                     this.nextClassQuest_.y = (height - 2);
-                };
-            };
+                }
+            }
             this.draw();
             position();
         }

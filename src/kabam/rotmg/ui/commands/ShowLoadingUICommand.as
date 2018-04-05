@@ -33,7 +33,7 @@ public class ShowLoadingUICommand
             else
             {
                 this.openBadDomainView();
-            };
+            }
         }
 
         private function showLoadingScreen():void

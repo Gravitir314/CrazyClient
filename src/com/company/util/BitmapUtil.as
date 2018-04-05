@@ -25,7 +25,7 @@ public class BitmapUtil
             if (_arg_2 == 0)
             {
                 _arg_2 = _arg_1.width;
-            };
+            }
             var _local_5:BitmapData = new BitmapData(_arg_1.width, _arg_1.height, true, 0);
             while (_local_4 < _arg_2)
             {
@@ -34,9 +34,9 @@ public class BitmapUtil
                 {
                     _local_5.setPixel32(((_arg_2 - _local_4) - 1), _local_3, _arg_1.getPixel32(_local_4, _local_3));
                     _local_3++;
-                };
+                }
                 _local_4++;
-            };
+            }
             return (_local_5);
         }
 
@@ -73,11 +73,11 @@ public class BitmapUtil
                     if (_local_3 == 0)
                     {
                         _local_4++;
-                    };
+                    }
                     _local_2++;
-                };
+                }
                 _local_5++;
-            };
+            }
             return (_local_4 / (_arg_1.width * _arg_1.height));
         }
 
@@ -112,12 +112,12 @@ public class BitmapUtil
                             _local_10 = _local_2;
                             _local_11 = (_local_9[_local_10] + 1);
                             _local_9[_local_10] = _local_11;
-                        };
-                    };
+                        }
+                    }
                     _local_4++;
-                };
+                }
                 _local_6++;
-            };
+            }
             for (_local_3 in _local_12)
             {
                 _local_2 = uint(_local_3);
@@ -126,8 +126,8 @@ public class BitmapUtil
                 {
                     _local_7 = _local_2;
                     _local_8 = _local_5;
-                };
-            };
+                }
+            }
             return (_local_7);
         }
 
@@ -155,7 +155,7 @@ public class BitmapUtil
                 _local_4 = _local_8;
                 _local_8 = _local_9;
                 _local_9 = _local_4;
-            };
+            }
             if (_local_10 > _local_12)
             {
                 _local_4 = _local_10;
@@ -164,7 +164,7 @@ public class BitmapUtil
                 _local_4 = _local_11;
                 _local_11 = _local_13;
                 _local_13 = _local_4;
-            };
+            }
             var _local_15:int = (_local_12 - _local_10);
             var _local_16:int = ((_local_11 > _local_13) ? (_local_11 - _local_13) : (_local_13 - _local_11));
             var _local_17:int = int((-(_local_15 + 1) / 2));
@@ -180,9 +180,9 @@ public class BitmapUtil
                     _local_5 = int(((_local_17 / _local_15) + 1));
                     _local_20 = (_local_20 + (_local_18 * _local_5));
                     _local_17 = (_local_17 - (_local_5 * _local_15));
-                };
+                }
                 _local_21 = 0;
-            };
+            }
             if ((((_local_18 > 0) && (_local_20 < 0)) || ((_local_18 < 0) && (_local_20 >= _local_9))))
             {
                 _local_6 = ((_local_18 > 0) ? (-(_local_20) - 1) : (_local_20 - _local_9));
@@ -191,7 +191,7 @@ public class BitmapUtil
                 _local_21 = (_local_21 + _local_7);
                 _local_17 = (_local_17 + (_local_7 * _local_16));
                 _local_20 = (_local_20 + (_local_6 * _local_18));
-            };
+            }
             while (_local_21 <= _local_19)
             {
                 if ((((_local_18 > 0) && (_local_20 >= _local_9)) || ((_local_18 < 0) && (_local_20 < 0)))) break;
@@ -200,23 +200,23 @@ public class BitmapUtil
                     if ((((_local_20 >= 0) && (_local_20 < _local_9)) && (_arg_1.getPixel(_local_20, _local_21) == 0)))
                     {
                         return (false);
-                    };
+                    }
                 }
                 else
                 {
                     if ((((_local_20 >= 0) && (_local_20 < _local_9)) && (_arg_1.getPixel(_local_21, _local_20) == 0)))
                     {
                         return (false);
-                    };
-                };
+                    }
+                }
                 _local_17 = (_local_17 + _local_16);
                 if (_local_17 >= 0)
                 {
                     _local_20 = (_local_20 + _local_18);
                     _local_17 = (_local_17 - _local_15);
-                };
+                }
                 _local_21++;
-            };
+            }
             return (true);
         }
 

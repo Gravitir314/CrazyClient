@@ -31,17 +31,17 @@ public class Animations
                 for each (_local_2 in this.animationsData_.animations)
                 {
                     this.nextRun_.push(_local_2.getLastRun(_arg_1));
-                };
-            };
+                }
+            }
             if (this.running_ != null)
             {
                 _local_3 = this.running_.getTexture(_arg_1);
                 if (_local_3 != null)
                 {
                     return (_local_3);
-                };
+                }
                 this.running_ = null;
-            };
+            }
             while (_local_5 < this.nextRun_.length)
             {
                 if (_arg_1 > this.nextRun_[_local_5])
@@ -53,10 +53,10 @@ public class Animations
                     {
                         this.running_ = new RunningAnimation(_local_2, _local_4);
                         return (this.running_.getTexture(_arg_1));
-                    };
-                };
+                    }
+                }
                 _local_5++;
-            };
+            }
             return (null);
         }
 
@@ -95,16 +95,16 @@ class RunningAnimation
             if (this.frameId_ >= (this.animationData_.frames.length - 1))
             {
                 return (null);
-            };
+            }
             this.frameStart_ = (this.frameStart_ + _local_2.time_);
             this.frameId_++;
             _local_2 = this.animationData_.frames[this.frameId_];
             this.texture_ = null;
-        };
+        }
         if (this.texture_ == null)
         {
             this.texture_ = _local_2.textureData_.getTexture((Math.random() * 100));
-        };
+        }
         return (this.texture_);
     }
 

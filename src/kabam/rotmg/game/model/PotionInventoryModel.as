@@ -36,7 +36,7 @@ public class PotionInventoryModel
                     return (HEALTH_POTION_SLOT);
                 case MAGIC_POTION_ID:
                     return (MAGIC_POTION_SLOT);
-            };
+            }
             return (-1);
         }
 
@@ -52,7 +52,7 @@ public class PotionInventoryModel
             for each (_local_2 in _arg_1.PotionPurchaseCosts.cost)
             {
                 _local_7.push(_local_2);
-            };
+            }
             _local_3 = new PotionModel();
             _local_3.purchaseCooldownMillis = _local_4;
             _local_3.priceCooldownMillis = _local_5;
@@ -81,8 +81,8 @@ public class PotionInventoryModel
                 if (this.potionModels[_local_2].objectId == _arg_1)
                 {
                     return (this.potionModels[_local_2]);
-                };
-            };
+                }
+            }
             return (null);
         }
 

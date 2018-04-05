@@ -58,7 +58,7 @@ public class ChooseNameFrameMediator extends Mediator
             else
             {
                 this.handleFailedNameChange(_arg_1.m_.errorText_);
-            };
+            }
         }
 
         private function handleSuccessfulNameChange():void

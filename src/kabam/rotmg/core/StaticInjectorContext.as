@@ -19,7 +19,7 @@ public class StaticInjectorContext extends Context
             if (!StaticInjectorContext.injector)
             {
                 StaticInjectorContext.injector = this.injector;
-            };
+            }
         }
 
         public static function getInjector():Injector

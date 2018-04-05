@@ -37,7 +37,7 @@ public class HorizontalLayout implements Layout
                 _local_3.x = _local_5;
                 _local_5 = (_local_5 + (_local_3.width + this.padding));
                 _local_4++;
-            };
+            }
         }
 
 

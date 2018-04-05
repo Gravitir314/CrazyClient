@@ -39,7 +39,7 @@ public class ParseCharListXmlCommand
             {
                 _local_2 = this.model.getCharacterClass(_local_1.@classType);
                 _local_2.setMaxLevelAchieved(_local_1.@maxLevel);
-            };
+            }
         }
 
         private function parseItemCosts():void
@@ -57,13 +57,13 @@ public class ParseCharListXmlCommand
                     if (((!(Boolean(int(_local_1.@purchasable)))) && (!(_local_2.id == 0))))
                     {
                         _local_2.setState(CharacterSkinState.UNLISTED);
-                    };
+                    }
                 }
                 else
                 {
                     this.logger.warn("Cannot set Character Skin cost: type {0} not found", [_local_1.@type]);
-                };
-            };
+                }
+            }
         }
 
         private function parseOwnership():void
@@ -81,8 +81,8 @@ public class ParseCharListXmlCommand
                 else
                 {
                     this.logger.warn("Cannot set Character Skin ownership: type {0} not found", [_local_1]);
-                };
-            };
+                }
+            }
         }
 
 

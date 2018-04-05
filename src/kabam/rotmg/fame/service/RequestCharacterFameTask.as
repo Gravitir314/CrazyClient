@@ -78,7 +78,7 @@ public class RequestCharacterFameTask extends BaseTask
             else
             {
                 this.onFameError(_arg_2);
-            };
+            }
         }
 
         private function parseFameData(_arg_1:String):void
@@ -130,7 +130,7 @@ public class RequestCharacterFameTask extends BaseTask
             {
                 this.errorRetry = false;
                 this.openDialog.dispatch(new ErrorDialog(_arg_1));
-            };
+            }
         }
 
 

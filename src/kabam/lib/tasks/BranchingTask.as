@@ -44,7 +44,7 @@ package kabam.lib.tasks
             else
             {
                 this.handleBranchTask(this.failure);
-            };
+            }
         }
 
         private function handleBranchTask(_arg_1:Task):void
@@ -57,7 +57,7 @@ package kabam.lib.tasks
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         private function onBranchComplete(_arg_1:Task, _arg_2:Boolean, _arg_3:String=""):void

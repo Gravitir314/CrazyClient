@@ -45,7 +45,7 @@ public class YardUpgraderPanelMediator extends Mediator
             else
             {
                 this.view.infoButton.addEventListener(MouseEvent.CLICK, this.onButtonRightClick);
-            };
+            }
         }
 
         private function doShowUpgradeButton():Boolean
@@ -54,7 +54,7 @@ public class YardUpgraderPanelMediator extends Mediator
             if (!this.account.isRegistered())
             {
                 return (false);
-            };
+            }
             _local_1 = this.petModel.getPetYardType();
             return (_local_1 < PetYardEnum.MAX_ORDINAL);
         }

@@ -40,8 +40,8 @@ public class SealComparison extends SlotComparison
                         "duration":tag.@duration
                     }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                     processedTags[tag.toXMLString()] = true;
-                };
-            };
+                }
+            }
         }
 
         private function canCompare():Boolean
@@ -59,8 +59,8 @@ public class SealComparison extends SlotComparison
                 if (tag.@effect == effectName)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 

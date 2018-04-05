@@ -93,7 +93,7 @@ public class SimpleButton extends BuyButton
             {
                 this.text.text = _arg_1;
                 this.updateUI();
-            };
+            }
             this.withOutLine = _arg_4;
         }
 
@@ -105,7 +105,7 @@ public class SimpleButton extends BuyButton
                 this.currency = _arg_2;
                 this.text.text = (this.prefix + _arg_1.toString());
                 this.updateUI();
-            };
+            }
         }
 
         public function getPrice():int
@@ -126,7 +126,7 @@ public class SimpleButton extends BuyButton
                 mouseEnabled = _arg_1;
                 filters = ((_arg_1) ? [] : [grayfilter]);
                 this.draw();
-            };
+            }
         }
 
         override public function setWidth(_arg_1:int):void
@@ -167,7 +167,7 @@ public class SimpleButton extends BuyButton
                     break;
                 default:
                     this.icon.bitmapData = null;
-            };
+            }
             this.updateIconPosition();
         }
 
@@ -211,7 +211,7 @@ public class SimpleButton extends BuyButton
             if (this.withOutLine)
             {
                 this.drawOutline(graphics);
-            };
+            }
         }
 
         private function getWidth():int

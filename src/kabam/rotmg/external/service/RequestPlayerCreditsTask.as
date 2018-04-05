@@ -52,7 +52,7 @@ public class RequestPlayerCreditsTask extends BaseTask
                 this.makeRequest();
                 this.retryCount++;
                 this.timer.stop();
-            };
+            }
         }
 
         private function makeRequest():void
@@ -71,7 +71,7 @@ public class RequestPlayerCreditsTask extends BaseTask
                 if (((!(_local_3 == "")) && (!(_local_3.search("Error") == -1))))
                 {
                     this.setCredits(int(_local_3));
-                };
+                }
             }
             else
             {
@@ -80,8 +80,8 @@ public class RequestPlayerCreditsTask extends BaseTask
                     this.timer.addEventListener(TimerEvent.TIMER, this.handleTimer);
                     this.timer.start();
                     _local_4 = true;
-                };
-            };
+                }
+            }
             ((!(_local_4)) && (completeTask(_arg_1, _arg_2)));
         }
 
@@ -98,9 +98,9 @@ public class RequestPlayerCreditsTask extends BaseTask
                     if (((!(this.playerModel == null)) && (!(this.playerModel.getCredits() == _arg_1))))
                     {
                         this.playerModel.setCredits(_arg_1);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function makeRequestObject():Object

@@ -29,18 +29,18 @@ public class ObjectStatusData
             {
                 FreeList.deleteObject(this.stats_[_local_2]);
                 _local_2++;
-            };
+            }
             this.stats_.length = Math.min(_local_3, this.stats_.length);
             while (this.stats_.length < _local_3)
             {
                 this.stats_.push((FreeList.newObject(StatData) as StatData));
-            };
+            }
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
                 this.stats_[_local_2].parseFromInput(_arg_1);
                 _local_2++;
-            };
+            }
         }
 
         public function writeToOutput(_arg_1:IDataOutput):void
@@ -53,7 +53,7 @@ public class ObjectStatusData
             {
                 this.stats_[_local_2].writeToOutput(_arg_1);
                 _local_2++;
-            };
+            }
         }
 
         public function toString():String

@@ -43,7 +43,7 @@ public class PetsButtonBar extends Sprite
             for each (_local_1 in _local_2)
             {
                 _local_3.push(_local_1.textChanged);
-            };
+            }
             _local_3.complete.addOnce(this.positionButtons);
         }
 

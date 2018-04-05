@@ -41,7 +41,7 @@ public class StarsView extends Sprite
                 _local_2[_local_1] = new StarGraphic();
                 addChild(_local_2[_local_1]);
                 _local_1++;
-            };
+            }
             return (_local_2);
         }
 
@@ -53,7 +53,7 @@ public class StarsView extends Sprite
                 _arg_1[_local_2].x = (MARGIN + (_arg_1[0].width * _local_2));
                 _arg_1[_local_2].y = MARGIN;
                 _local_2++;
-            };
+            }
         }
 
         private function makeBackground():Sprite
@@ -82,7 +82,7 @@ public class StarsView extends Sprite
             {
                 this.updateStar(_local_2, _arg_1);
                 _local_2++;
-            };
+            }
         }
 
         private function updateStar(_arg_1:int, _arg_2:int):void

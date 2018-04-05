@@ -100,14 +100,14 @@ public class ItemGridMediator extends Mediator
             {
                 this.onPotionMove(_arg_1);
                 return;
-            };
+            }
             if ((_local_9 is InteractiveItemTile))
             {
                 _local_2 = (_local_9 as InteractiveItemTile);
                 if (this.canSwapItems(_local_8, _local_2))
                 {
                     this.swapItemTiles(_local_8, _local_2);
-                };
+                }
             }
             else
             {
@@ -124,7 +124,7 @@ public class ItemGridMediator extends Mediator
                         _local_8.blockingItemUpdates = true;
                         _local_8.updateUseability(this.view.curPlayer);
                         _local_4.setItemPart2(_local_5);
-                    };
+                    }
                 }
                 else
                 {
@@ -141,11 +141,11 @@ public class ItemGridMediator extends Mediator
                             if (_local_6.SlotType == _local_7.SlotType)
                             {
                                 GameServerConnection.instance.invSwap(this.view.curPlayer, _local_8.ownerGrid.owner, _local_8.tileId, _local_8.itemSprite.itemId, this.view.curPlayer, 1, this.view.curPlayer.equipment_[1]);
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             _local_8.resetItemPosition();
         }
 
@@ -170,8 +170,8 @@ public class ItemGridMediator extends Mediator
                 if (((_local_3 is Map) || (this.hudModel.gameSprite.map.mouseX < 300)))
                 {
                     this.dropItem(_local_2);
-                };
-            };
+                }
+            }
             _local_2.resetItemPosition();
         }
 
@@ -180,7 +180,7 @@ public class ItemGridMediator extends Mediator
             if (((((!(GameServerConnection.instance)) || (!(this.view.interactive))) || (!(_arg_1))) || (this.potionInventoryModel.getPotionModel(_arg_1.getItemId()).maxPotionCount <= this.hudModel.gameSprite.map.player_.getPotionCount(_arg_1.getItemId()))))
             {
                 return;
-            };
+            }
             GameServerConnection.instance.invSwapPotion(this.view.curPlayer, this.view.owner, _arg_1.tileId, _arg_1.itemSprite.itemId, this.view.curPlayer, PotionInventoryModel.getPotionSlot(_arg_1.getItemId()), ItemConstants.NO_ITEM);
             _arg_1.setItem(ItemConstants.NO_ITEM);
             _arg_1.updateUseability(this.view.curPlayer);
@@ -191,19 +191,19 @@ public class ItemGridMediator extends Mediator
             if (!_arg_1.canHoldItem(_arg_2.getItemId()))
             {
                 return (false);
-            };
+            }
             if (!_arg_2.canHoldItem(_arg_1.getItemId()))
             {
                 return (false);
-            };
+            }
             if ((ItemGrid(_arg_2.parent).owner is OneWayContainer))
             {
                 return (false);
-            };
+            }
             if (((_arg_1.blockingItemUpdates) || (_arg_2.blockingItemUpdates)))
             {
                 return (false);
-            };
+            }
             return (true);
         }
 
@@ -228,7 +228,7 @@ public class ItemGridMediator extends Mediator
                     {
                         if (_local_3[_local_5] < 0) break;
                         _local_5++;
-                    };
+                    }
                     if (_local_5 < _local_4)
                     {
                         this.dropWithoutDestTile(_arg_1, _local_2, _local_5);
@@ -236,20 +236,20 @@ public class ItemGridMediator extends Mediator
                     else
                     {
                         GameServerConnection.instance.invDrop(this.view.owner, _arg_1.tileId, _arg_1.getItemId());
-                    };
+                    }
                 }
                 else
                 {
                     GameServerConnection.instance.invDrop(this.view.owner, _arg_1.tileId, _arg_1.getItemId());
-                };
+                }
             }
             else
             {
                 if ((((_local_8.canHaveSoulbound_) && (_local_8.isLoot_)) && (_local_7)))
                 {
                     GameServerConnection.instance.invDrop(this.view.owner, _arg_1.tileId, _arg_1.getItemId());
-                };
-            };
+                }
+            }
             _arg_1.setItem(-1);
         }
 
@@ -258,7 +258,7 @@ public class ItemGridMediator extends Mediator
             if (((((!(GameServerConnection.instance)) || (!(this.view.interactive))) || (!(_arg_1))) || (!(_arg_2))))
             {
                 return (false);
-            };
+            }
             GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, _arg_1.tileId, _arg_1.itemSprite.itemId, _arg_2.ownerGrid.owner, _arg_2.tileId, _arg_2.itemSprite.itemId);
             var _local_3:int = _arg_1.getItemId();
             _arg_1.setItem(_arg_2.getItemId());
@@ -273,7 +273,7 @@ public class ItemGridMediator extends Mediator
             if (((((!(GameServerConnection.instance)) || (!(this.view.interactive))) || (!(_arg_1))) || (!(_arg_2))))
             {
                 return;
-            };
+            }
             GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, _arg_1.tileId, _arg_1.itemSprite.itemId, _arg_2, _arg_3, -1);
             _arg_1.setItem(ItemConstants.NO_ITEM);
         }
@@ -284,7 +284,7 @@ public class ItemGridMediator extends Mediator
             if (((_local_2.ownerGrid is InventoryGrid) || (_local_2.ownerGrid is ContainerGrid)))
             {
                 GameServerConnection.instance.useItem_new(_local_2.ownerGrid.owner, _local_2.tileId);
-            };
+            }
         }
 
         private function onCtrlClick(_arg_1:ItemTileEvent):void
@@ -302,9 +302,9 @@ public class ItemGridMediator extends Mediator
                         GameServerConnection.instance.invSwap(this.view.curPlayer, _local_2.ownerGrid.owner, _local_2.tileId, _local_2.itemSprite.itemId, this.view.curPlayer, _local_3, ItemConstants.NO_ITEM);
                         _local_2.setItem(ItemConstants.NO_ITEM);
                         _local_2.updateUseability(this.view.curPlayer);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function onDoubleClick(_arg_1:ItemTileEvent):void
@@ -329,9 +329,9 @@ public class ItemGridMediator extends Mediator
                     else
                     {
                         this.equipOrUseInventory(_local_2);
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.view.refreshTooltip();
         }
 
@@ -351,8 +351,8 @@ public class ItemGridMediator extends Mediator
                 else
                 {
                     this.addTextLine.dispatch(ChatMessage.make(Parameters.ERROR_CHAT_NAME, "server.use_in_petyard"));
-                };
-            };
+                }
+            }
         }
 
         private function isPetFormStone(_arg_1:InteractiveItemTile):Boolean
@@ -371,7 +371,7 @@ public class ItemGridMediator extends Mediator
             if (_local_2 != -1)
             {
                 GameServerConnection.instance.invSwap(this.view.curPlayer, this.view.owner, _arg_1.tileId, _arg_1.itemSprite.itemId, this.view.curPlayer, _local_2, ItemConstants.NO_ITEM);
-            };
+            }
         }
 
         private function equipOrUseContainer(_arg_1:InteractiveItemTile):void
@@ -386,7 +386,7 @@ public class ItemGridMediator extends Mediator
             else
             {
                 GameServerConnection.instance.useItem_new(_local_2, _arg_1.tileId);
-            };
+            }
         }
 
         private function equipOrUseInventory(_arg_1:InteractiveItemTile):void
@@ -401,7 +401,7 @@ public class ItemGridMediator extends Mediator
             else
             {
                 GameServerConnection.instance.useItem_new(_local_2, _arg_1.tileId);
-            };
+            }
         }
 
 

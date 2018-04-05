@@ -95,16 +95,16 @@ public class PetSkinGroup extends Sprite
                 else
                 {
                     this.addToLower(_local_4);
-                };
+                }
                 this.slots.push(_local_4);
                 if (this.disabled)
                 {
                     _local_3.disable();
                     _local_4.mouseChildren = false;
                     _local_4.mouseEnabled = false;
-                };
+                }
                 _local_1++;
-            };
+            }
         }
 
         private function createPetIcon(_arg_1:PetVO, _arg_2:int):PetIcon
@@ -145,7 +145,7 @@ public class PetSkinGroup extends Sprite
                 _local_3 = PetItem(_local_2.getIcon()).getPetVO().getSkinID();
                 _local_2.highlight((_local_3 == _arg_1));
                 _local_4++;
-            };
+            }
         }
 
 

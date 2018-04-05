@@ -80,7 +80,7 @@ public class PetPanelMediator extends Mediator
             if (this.isPanelPetSameAsActivePet())
             {
                 return (PetsConstants.FOLLOWING);
-            };
+            }
             return (PetsConstants.INTERACTING);
         }
 
@@ -93,7 +93,7 @@ public class PetPanelMediator extends Mediator
             else
             {
                 this.activatePet.dispatch(this.view.petVO.getID());
-            };
+            }
         }
 
         private function onAddToolTip(_arg_1:ToolTip):void

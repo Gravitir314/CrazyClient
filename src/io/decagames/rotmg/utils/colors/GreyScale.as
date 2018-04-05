@@ -46,7 +46,7 @@ public class GreyScale
             else
             {
                 _arg_1.filters = [];
-            };
+            }
         }
 
 

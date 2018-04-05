@@ -24,7 +24,7 @@ public class NotEnoughResources extends TextModal
             if ((_arg_2 == Currency.GOLD))
             {
                 _local_5.push(new BuyGoldButton());
-            };
+            }
             super(_arg_1, ("Not enough " + _local_3), _local_4, _local_5);
         }
 

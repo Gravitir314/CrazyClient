@@ -165,7 +165,7 @@ public class GameConfig implements IConfig
             else
             {
                 this.injector.map(LoopMonitor).toType(NullLoopMonitor);
-            };
+            }
         }
 
 

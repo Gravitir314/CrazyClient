@@ -39,7 +39,7 @@ public class GetLanguageService extends BaseTask
             for each (_local_2 in _local_3)
             {
                 this.strings.setValue(_local_2[0], _local_2[1], _local_2[2]);
-            };
+            }
         }
 
 

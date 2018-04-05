@@ -44,7 +44,7 @@ public class TomeComparison extends SlotComparison
                 }).setPrefix(TooltipHelper.getOpenTag(getTextColor((wavg - otherWavg)))).setPostfix(TooltipHelper.getCloseTag());
                 comparisonStringBuilder.pushParams(TextKey.PARTY_HEAL, {"effect":innerStringBuilder});
                 processedTags[nova.toXMLString()] = true;
-            };
+            }
             if (itemXML.@id == "Tome of Purification")
             {
                 tag = itemXML.Activate.(text() == "RemoveNegativeConditions")[0];
@@ -62,8 +62,8 @@ public class TomeComparison extends SlotComparison
                         "duration":tag.@duration
                     }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                     processedTags[tag.toXMLString()] = true;
-                };
-            };
+                }
+            }
         }
 
 

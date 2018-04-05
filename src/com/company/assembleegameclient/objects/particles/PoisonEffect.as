@@ -26,7 +26,7 @@ public class PoisonEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_4:int = 10;
@@ -34,7 +34,7 @@ public class PoisonEffect extends ParticleEffect
             {
                 map_.addObj(new SparkParticle(100, this.color_, 400, 0.75, RandomUtil.plusMinus(4), RandomUtil.plusMinus(4)), x_, y_);
                 _local_3++;
-            };
+            }
             return (false);
         }
 

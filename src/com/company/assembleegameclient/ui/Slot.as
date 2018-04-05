@@ -127,7 +127,7 @@ public class Slot extends Sprite
                     return ("Scepter");
                 case SHURIKEN_TYPE:
                     return ("Shuriken");
-            };
+            }
             return ("Invalid Type!");
         }
 
@@ -144,7 +144,7 @@ public class Slot extends Sprite
                 case SPELL_TYPE:
                     _local_4.y = -2;
                     break;
-            };
+            }
             return (_local_4);
         }
 
@@ -229,7 +229,7 @@ public class Slot extends Sprite
                 case SCEPTER_TYPE:
                     _local_3 = AssetLibrary.getImageFromSet("lofiObj6", 192);
                     break;
-            };
+            }
             if (this.backgroundImage_ == null)
             {
                 if (_local_3 != null)
@@ -253,9 +253,9 @@ public class Slot extends Sprite
                         this.backgroundImage_.x = ((WIDTH / 2) - (_local_3.width / 2));
                         this.backgroundImage_.y = ((HEIGHT / 2) - 18);
                         addChild(this.backgroundImage_);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
 

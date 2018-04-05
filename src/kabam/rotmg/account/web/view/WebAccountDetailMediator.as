@@ -78,7 +78,7 @@ public class WebAccountDetailMediator extends Mediator
             if (!_arg_1)
             {
                 this.onError(_arg_2);
-            };
+            }
         }
 
         private function onError(_arg_1:String):void

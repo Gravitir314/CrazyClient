@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedData_buffedBunnyObjectCXML()
         {
             super();
-            return;
+
         }
     }
 }

@@ -37,7 +37,7 @@ public class FriendDataRequestTask extends BaseTask
             else
             {
                 completeTask(false, _arg_2);
-            };
+            }
         }
 
 

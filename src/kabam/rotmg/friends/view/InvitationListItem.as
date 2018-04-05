@@ -82,7 +82,7 @@ public class InvitationListItem extends FListItem
                 this._portrait.bitmapData = _arg_1.getPortrait();
                 this._nameText.setStringBuilder(new StaticStringBuilder(this._senderName));
                 this._nameText.x = (this._portrait.width + 12);
-            };
+            }
         }
 
         override public function destroy():void
@@ -91,7 +91,7 @@ public class InvitationListItem extends FListItem
             while (numChildren > 0)
             {
                 this.removeChildAt((numChildren - 1));
-            };
+            }
             this._portrait = null;
             this._nameText = null;
             this._acceptButton.removeEventListener(MouseEvent.CLICK, this.onAcceptClicked);

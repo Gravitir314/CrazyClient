@@ -56,7 +56,7 @@ public class PlayerToolTip extends ToolTip
                 this.guildText_.y = (_local_2 - 2);
                 addChild(this.guildText_);
                 _local_2 = (_local_2 + 30);
-            };
+            }
             if (Parameters.data_["StatsViewer"])
             {
                 this.sBars = new StatMetersView();
@@ -85,7 +85,7 @@ public class PlayerToolTip extends ToolTip
                 this.mpBar_.y = _local_2;
                 addChild(this.mpBar_);
                 _local_2 = (_local_2 + 24);
-            };
+            }
             this.eGrid = new EquippedGrid(null, this.player_.slotTypes_, this.player_, 0, true);
             this.eGrid.x = 8;
             this.eGrid.y = _local_2;
@@ -97,7 +97,7 @@ public class PlayerToolTip extends ToolTip
             else
             {
                 _local_2 = (_local_2 + 42);
-            };
+            }
             this.clickMessage_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
             this.clickMessage_.setAutoSize(TextFieldAutoSize.CENTER);
             this.clickMessage_.setStringBuilder(new LineBuilder().setParams(""));
@@ -119,7 +119,7 @@ public class PlayerToolTip extends ToolTip
             {
                 this.hpBar_.draw(this.player_.hp_, this.player_.maxHP_, this.player_.maxHPBoost_, this.player_.maxHPMax_);
                 this.mpBar_.draw(this.player_.mp_, this.player_.maxMP_, this.player_.maxMPBoost_, this.player_.maxMPMax_);
-            };
+            }
             this.eGrid.setItems(this.player_.equipment_);
             this.rankText_.draw(this.player_.numStars_);
             super.draw();

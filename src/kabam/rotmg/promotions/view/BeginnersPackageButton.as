@@ -44,7 +44,7 @@ public class BeginnersPackageButton extends BasePackageButton
             {
                 this.daysRemaining = _arg_1;
                 this.updateTimeLeftPosition();
-            };
+            }
         }
 
         public function destroy():void

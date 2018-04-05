@@ -31,7 +31,7 @@ public class TaskGroup extends BaseTask
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         override protected function onReset():void
@@ -40,7 +40,7 @@ public class TaskGroup extends BaseTask
             for each (_local_1 in this.tasks)
             {
                 _local_1.reset();
-            };
+            }
         }
 
         private function startAllTasks():void
@@ -50,7 +50,7 @@ public class TaskGroup extends BaseTask
             {
                 this.tasks[_local_1].lastly.addOnce(this.onTaskFinished);
                 this.tasks[_local_1].start();
-            };
+            }
         }
 
         private function onTaskFinished(_arg_1:BaseTask, _arg_2:Boolean, _arg_3:String):void
@@ -60,12 +60,12 @@ public class TaskGroup extends BaseTask
                 if (--this.pending == 0)
                 {
                     completeTask(true);
-                };
+                }
             }
             else
             {
                 completeTask(false, _arg_3);
-            };
+            }
         }
 
         public function toString():String

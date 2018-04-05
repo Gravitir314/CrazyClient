@@ -59,7 +59,7 @@ public class MapBackground extends Sprite
             if (xVal > (mapSize.x_ + BORDER))
             {
                 xVal = (xVal - mapSize.x_);
-            };
+            }
             camera.configure(xVal, yVal, 12, ANGLE, RECTANGLE);
             backgroundMap.draw(camera, this.time);
             this.lastUpdate = this.time;

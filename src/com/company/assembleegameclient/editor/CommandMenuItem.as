@@ -81,8 +81,8 @@ public class CommandMenuItem extends Sprite
                     graphics.drawRect(0, 0, WIDTH, HEIGHT);
                     graphics.endFill();
                     graphics.lineStyle();
-                };
-            };
+                }
+            }
         }
 
         private function onMouseOver(_arg_1:MouseEvent):void

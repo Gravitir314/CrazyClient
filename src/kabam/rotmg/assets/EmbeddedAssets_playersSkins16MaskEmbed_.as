@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_playersSkins16MaskEmbed_()
         {
             super();
-            return;
+
         }
     }
 }

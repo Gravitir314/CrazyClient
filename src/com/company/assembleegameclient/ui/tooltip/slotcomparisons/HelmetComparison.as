@@ -51,8 +51,8 @@ public class HelmetComparison extends SlotComparison
                 if (tag.@effect == typeName)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -66,8 +66,8 @@ public class HelmetComparison extends SlotComparison
                 if (tag.@effect == typeName)
                 {
                     return (tag);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -76,7 +76,7 @@ public class HelmetComparison extends SlotComparison
             if (((this.berserk == null) || (this.otherBerserk == null)))
             {
                 return;
-            };
+            }
             var _local_1:Number = Number(this.berserk.@range);
             var _local_2:Number = Number(this.otherBerserk.@range);
             var _local_3:Number = Number(this.berserk.@duration);
@@ -119,8 +119,8 @@ public class HelmetComparison extends SlotComparison
                         "duration":this.speedy.@duration
                     }, TooltipHelper.getOpenTag(BETTER_COLOR), TooltipHelper.getCloseTag());
                     processedTags[this.speedy.toXMLString()] = true;
-                };
-            };
+                }
+            }
         }
 
         private function handleArmored():void
@@ -133,7 +133,7 @@ public class HelmetComparison extends SlotComparison
                     "duration":this.armored.@duration
                 }, TooltipHelper.getOpenTag(UNTIERED_COLOR), TooltipHelper.getCloseTag());
                 processedTags[this.armored.toXMLString()] = true;
-            };
+            }
         }
 
 

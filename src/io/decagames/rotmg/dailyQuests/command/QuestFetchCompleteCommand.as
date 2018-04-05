@@ -37,7 +37,7 @@ public class QuestFetchCompleteCommand extends Command
                 _local_2.completed = _local_1.completed;
                 _local_2.category = _local_1.category;
                 this.model.addQuest(_local_2);
-            };
+            }
         }
 
 

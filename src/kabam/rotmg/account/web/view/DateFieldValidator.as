@@ -19,7 +19,7 @@ public class DateFieldValidator
             if (((_local_2.month > _local_3.month) || ((_local_2.month == _local_3.month) && (_local_2.date > _local_3.date))))
             {
                 _local_4--;
-            };
+            }
             return (_local_4);
         }
 

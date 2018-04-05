@@ -33,7 +33,7 @@ public class DateValidator
             if (_arg_1 == -1)
             {
                 return (31);
-            };
+            }
             return ((_arg_1 == FEBRUARY) ? this.getDaysInFebruary(_arg_2) : DAYS_IN_MONTH[(_arg_1 - 1)]);
         }
 
@@ -42,7 +42,7 @@ public class DateValidator
             if (((_arg_1 == -1) || (this.isLeapYear(_arg_1))))
             {
                 return (29);
-            };
+            }
             return (28);
         }
 

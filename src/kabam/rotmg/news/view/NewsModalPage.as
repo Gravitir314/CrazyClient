@@ -70,7 +70,7 @@ public class NewsModalPage extends Sprite
                 this.scrollBar_.y = TEXT_TOP_MARGIN_HTML;
                 this.scrollBar_.setIndicatorSize(HEIGHT, _local_3.height);
                 addChild(this.scrollBar_);
-            };
+            }
             this.addEventListener(Event.ADDED_TO_STAGE, this.onAddedHandler);
         }
 
@@ -91,7 +91,7 @@ public class NewsModalPage extends Sprite
             if (this.scrollBar_)
             {
                 this.scrollBar_.addEventListener(Event.CHANGE, this.onScrollBarChange);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -101,7 +101,7 @@ public class NewsModalPage extends Sprite
             if (this.scrollBar_)
             {
                 this.scrollBar_.removeEventListener(Event.CHANGE, this.onScrollBarChange);
-            };
+            }
         }
 
 

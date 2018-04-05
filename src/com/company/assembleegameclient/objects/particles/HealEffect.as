@@ -29,7 +29,7 @@ public class HealEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_8:int = 10;
@@ -41,7 +41,7 @@ public class HealEffect extends ParticleEffect
                 _local_6 = new HealParticle(this.color_, (Math.random() * 0.3), _local_4, 1000, (0.1 + (Math.random() * 0.1)), this.go_, _local_3, _local_5);
                 map_.addObj(_local_6, (x_ + (_local_5 * Math.cos(_local_3))), (y_ + (_local_5 * Math.sin(_local_3))));
                 _local_7++;
-            };
+            }
             return (false);
         }
 

@@ -81,7 +81,7 @@ public class ArenaLeaderboard extends Sprite
             {
                 _local_1.selected.remove(this.onSelected);
                 _local_1.destroy();
-            };
+            }
         }
 
         public function reloadList():void
@@ -107,7 +107,7 @@ public class ArenaLeaderboard extends Sprite
             else
             {
                 this.requestData.dispatch(_arg_1.getFilter());
-            };
+            }
         }
 
         public function setList(_arg_1:Vector.<ArenaLeaderboardEntry>):void
@@ -129,7 +129,7 @@ public class ArenaLeaderboard extends Sprite
                 _local_4.push(_local_2);
                 _local_3.push(_local_2.readyToAlign);
                 addChild(_local_2);
-            };
+            }
             _local_3.complete.addOnce(this.alignTabs);
             return (_local_4);
         }
@@ -140,7 +140,7 @@ public class ArenaLeaderboard extends Sprite
             if (_arg_1)
             {
                 _local_2 = BitmapUtil.mirror(_local_2);
-            };
+            }
             return (new Bitmap(_local_2));
         }
 
@@ -196,7 +196,7 @@ public class ArenaLeaderboard extends Sprite
             {
                 _local_1.x = _local_2;
                 _local_2 = (_local_2 + (_local_1.width + 20));
-            };
+            }
         }
 
         private function makeResetTimer():LeaderboardWeeklyResetTimer

@@ -74,7 +74,7 @@ public class BaseOption extends Option
             if (((!(this.tooltip_ == null)) && (parent.contains(this.tooltip_))))
             {
                 parent.removeChild(this.tooltip_);
-            };
+            }
         }
 
 

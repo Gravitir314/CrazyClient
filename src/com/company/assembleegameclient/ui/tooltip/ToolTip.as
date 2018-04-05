@@ -79,7 +79,7 @@ public class ToolTip extends Sprite
             {
                 this.targetObj = _arg_1;
                 this.targetObj.addEventListener(MouseEvent.ROLL_OUT, this.onLeaveTarget);
-            };
+            }
         }
 
         public function detachFromTarget():void
@@ -90,9 +90,9 @@ public class ToolTip extends Sprite
                 if (parent)
                 {
                     parent.removeChild(this);
-                };
+                }
                 this.targetObj = null;
-            };
+            }
         }
 
         public function forcePostionLeft():void
@@ -117,12 +117,12 @@ public class ToolTip extends Sprite
             if (this.waiter.isEmpty())
             {
                 this.draw();
-            };
+            }
             if (this.followMouse_)
             {
                 this.position();
                 addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -130,7 +130,7 @@ public class ToolTip extends Sprite
             if (this.followMouse_)
             {
                 removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         private function onEnterFrame(_arg_1:Event):void
@@ -166,13 +166,13 @@ public class ToolTip extends Sprite
                     {
                         this.parent.scaleX = _local_3;
                         this.parent.scaleY = _local_4;
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (stage == null)
             {
                 return;
-            };
+            }
             if (((stage.mouseX + (0.5 * stage.stageWidth)) - 400) < (stage.stageWidth / 2))
             {
                 x = (_local_1 + 12);
@@ -180,11 +180,11 @@ public class ToolTip extends Sprite
             else
             {
                 x = ((_local_1 - width) - 1);
-            };
+            }
             if (x < 12)
             {
                 x = 12;
-            };
+            }
             if (((stage.mouseY + (0.5 * stage.stageHeight)) - 300) < (stage.stageHeight / 3))
             {
                 y = (_local_2 + 12);
@@ -192,11 +192,11 @@ public class ToolTip extends Sprite
             else
             {
                 y = ((_local_2 - height) - 1);
-            };
+            }
             if (y < 12)
             {
                 y = 12;
-            };
+            }
         }
 
         public function draw():void

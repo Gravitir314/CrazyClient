@@ -42,7 +42,7 @@ public class WebForgotPasswordDialog extends Frame
             {
                 disable();
                 this.submit.dispatch(this.emailInput.text());
-            };
+            }
         }
 
         private function isEmailValid():Boolean
@@ -51,7 +51,7 @@ public class WebForgotPasswordDialog extends Frame
             if (!_local_1)
             {
                 this.emailInput.setError("Not a valid email address");
-            };
+            }
             return (_local_1);
         }
 

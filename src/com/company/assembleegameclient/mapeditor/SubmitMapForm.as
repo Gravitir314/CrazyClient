@@ -121,7 +121,7 @@ public class SubmitMapForm extends Frame
             else
             {
                 this.enableButtons();
-            };
+            }
         }
 
         private function onCompleteException(_arg_1:IOErrorEvent):void
@@ -145,7 +145,7 @@ public class SubmitMapForm extends Frame
                 _local_2 = _local_4.loader.data.match("<.*>(.*)</.*>");
                 _local_3 = ((_local_2.length > 1) ? _local_2[1] : _local_4.loader.data);
                 this.descr.setError(_local_3);
-            };
+            }
             this.enableButtons();
         }
 
@@ -155,7 +155,7 @@ public class SubmitMapForm extends Frame
             if (parent)
             {
                 parent.removeChild(this);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -163,12 +163,12 @@ public class SubmitMapForm extends Frame
             if (rightButton_)
             {
                 rightButton_.removeEventListener(MouseEvent.CLICK, this.onSubmit);
-            };
+            }
             if (cancel)
             {
                 cancel.removeAll();
                 cancel = null;
-            };
+            }
         }
 
         private function validated(_arg_1:Object):Boolean
@@ -177,12 +177,12 @@ public class SubmitMapForm extends Frame
             {
                 this.mapName.setError("Map name length out of range (6-24 chars)");
                 return (false);
-            };
+            }
             if (((_arg_1["description"].length < 10) || (_arg_1["description"].length > 250)))
             {
                 this.descr.setError("Description length out of range (10-250 chars)");
                 return (false);
-            };
+            }
             return (this.isValidMap());
         }
 
@@ -192,12 +192,12 @@ public class SubmitMapForm extends Frame
             {
                 this.descr.setError("Must have at least one User Dungeon End region drawn in this dungeon. (tmp)");
                 return (false);
-            };
+            }
             if (this.mapInfo.numEntries < 1)
             {
                 this.descr.setError("Must have at least one Spawn Region drawn in this dungeon. (tmp)");
                 return (false);
-            };
+            }
             return (true);
         }
 

@@ -68,8 +68,8 @@ public class NewsCell extends Sprite
                 if (((_arg_1 == 151) && (_arg_2 == 189)))
                 {
                     this.size = SMALL;
-                };
-            };
+                }
+            }
         }
 
         public function init(_arg_1:NewsCellVO):void
@@ -128,7 +128,7 @@ public class NewsCell extends Sprite
                 this.textSize = (this.textSize - 2);
                 this.textField.setSize(this.textSize).setColor(0xFFFFFF);
                 this.resizeTextField();
-            };
+            }
         }
 
         public function load():void
@@ -154,7 +154,7 @@ public class NewsCell extends Sprite
                 case SMALL:
                     this.imageContainer.addChild(new DefaultGraphicSmall());
                     return;
-            };
+            }
         }
 
         private function onMouseDown(_arg_1:MouseEvent):void

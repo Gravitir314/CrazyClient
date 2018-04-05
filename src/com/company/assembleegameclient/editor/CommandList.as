@@ -27,7 +27,7 @@ public class CommandList
             for each (_local_1 in this.list_)
             {
                 _local_1.execute();
-            };
+            }
         }
 
         public function unexecute():void
@@ -36,7 +36,7 @@ public class CommandList
             for each (_local_1 in this.list_)
             {
                 _local_1.unexecute();
-            };
+            }
         }
 
 

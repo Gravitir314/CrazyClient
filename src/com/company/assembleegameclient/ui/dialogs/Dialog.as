@@ -125,7 +125,7 @@ public class Dialog extends Sprite
             if (this.replaceTokens)
             {
                 _local_2.setParams(_arg_1, this.replaceTokens);
-            };
+            }
             this.textText_.setStringBuilder(_local_2);
             this.textText_.mouseEnabled = true;
             this.textText_.filters = [new DropShadowFilter(0, 0, 0, 1, 6, 6, 1)];
@@ -147,7 +147,7 @@ public class Dialog extends Sprite
                 this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8, 1)];
                 this.titleText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
                 this.addTextFieldDisplay(this.titleText_);
-            };
+            }
         }
 
         private function makeNonNullButtons():void
@@ -156,12 +156,12 @@ public class Dialog extends Sprite
             {
                 this.leftButton = new DeprecatedTextButton(16, this.leftButtonKey, 120);
                 this.leftButton.addEventListener(MouseEvent.CLICK, this.onLeftButtonClick);
-            };
+            }
             if (this.rightButtonKey != null)
             {
                 this.rightButton = new DeprecatedTextButton(16, this.rightButtonKey, 120);
                 this.rightButton.addEventListener(MouseEvent.CLICK, this.onRightButtonClick);
-            };
+            }
         }
 
         private function onComplete():void
@@ -192,7 +192,7 @@ public class Dialog extends Sprite
             if (this.box_.contains(this.rect_))
             {
                 this.box_.removeChild(this.rect_);
-            };
+            }
             this.removeButtonsIfAlreadyAdded();
             this.addButtonsAndLayout();
             this.drawBackground();
@@ -237,8 +237,8 @@ public class Dialog extends Sprite
                     this.box_.addChild(this.rightButton);
                     this.rightButton.x = (((3 * this.dialogWidth) / 4) - (this.rightButton.width / 2));
                     this.rightButton.y = _local_1;
-                };
-            };
+                }
+            }
         }
 
         private function drawTitleAndText():void
@@ -252,7 +252,7 @@ public class Dialog extends Sprite
             else
             {
                 this.textText_.y = 4;
-            };
+            }
         }
 
         private function removeButtonsIfAlreadyAdded():void
@@ -260,11 +260,11 @@ public class Dialog extends Sprite
             if (((this.leftButton) && (this.box_.contains(this.leftButton))))
             {
                 this.box_.removeChild(this.leftButton);
-            };
+            }
             if (((this.rightButton) && (this.box_.contains(this.rightButton))))
             {
                 this.box_.removeChild(this.rightButton);
-            };
+            }
         }
 
         protected function onLeftButtonClick(_arg_1:MouseEvent):void

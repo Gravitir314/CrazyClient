@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_chars8x8rHero1Embed_()
         {
             super();
-            return;
+
         }
     }
 }

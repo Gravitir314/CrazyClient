@@ -117,7 +117,7 @@ public class EquipmentTile extends InteractiveItemTile
                 case ItemConstants.SHURIKEN_TYPE:
                     _local_2 = AssetLibrary.getImageFromSet("lofiObj3", 555);
                     break;
-            };
+            }
             if (_local_2 != null)
             {
                 this.backgroundDetail = new Bitmap(_local_2);
@@ -127,7 +127,7 @@ public class EquipmentTile extends InteractiveItemTile
                 this.backgroundDetail.scaleY = 4;
                 this.backgroundDetail.filters = [greyColorFilter];
                 addChildAt(this.backgroundDetail, 0);
-            };
+            }
             this.itemType = _arg_1;
         }
 
@@ -139,9 +139,9 @@ public class EquipmentTile extends InteractiveItemTile
                 if (this.backgroundDetail != null)
                 {
                     this.backgroundDetail.visible = (itemSprite.itemId <= 0);
-                };
+                }
                 this.updateMinMana();
-            };
+            }
             return (_local_2);
         }
 
@@ -161,9 +161,9 @@ public class EquipmentTile extends InteractiveItemTile
                     else
                     {
                         this.minManaUsage = _local_1.MpCost;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function updateDim(_arg_1:Player):void

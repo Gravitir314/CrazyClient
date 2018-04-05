@@ -37,7 +37,7 @@ public class GasEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.go_.x_;
             y_ = this.go_.y_;
             var _local_10:int = 20;
@@ -51,7 +51,7 @@ public class GasEffect extends ParticleEffect
                 _local_8 = new GasParticle(_local_3, this.color_, _local_7, this.props.spread, 0.75, _local_5, _local_6);
                 map_.addObj(_local_8, x_, y_);
                 _local_9++;
-            };
+            }
             return (true);
         }
 

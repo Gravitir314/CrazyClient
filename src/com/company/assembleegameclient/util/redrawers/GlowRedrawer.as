@@ -37,7 +37,7 @@ public class GlowRedrawer
             if (((_arg_4) && (isCached(_arg_1, _local_6))))
             {
                 return (glowHashes[_arg_1][_local_6]);
-            };
+            }
             var _local_7:BitmapData = _arg_1.clone();
             tempMatrix_.identity();
             tempMatrix_.scale((_arg_1.width / 0x0100), (_arg_1.height / 0x0100));
@@ -59,12 +59,12 @@ public class GlowRedrawer
                 {
                     GLOW_FILTER.color = _arg_2;
                     _local_7.applyFilter(_local_7, _local_7.rect, PointUtil.ORIGIN, GLOW_FILTER);
-                };
-            };
+                }
+            }
             if (_arg_4)
             {
                 cache(_arg_1, _arg_2, _arg_3, _local_7);
-            };
+            }
             return (_local_7);
         }
 
@@ -81,7 +81,7 @@ public class GlowRedrawer
                 _local_5 = {};
                 _local_5[_local_6] = _arg_4;
                 glowHashes[_arg_1] = _local_5;
-            };
+            }
         }
 
         private static function isCached(_arg_1:BitmapData, _arg_2:String):Boolean
@@ -93,8 +93,8 @@ public class GlowRedrawer
                 if ((_arg_2 in _local_3))
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 

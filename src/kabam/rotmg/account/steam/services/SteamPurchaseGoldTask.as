@@ -63,7 +63,7 @@ public class SteamPurchaseGoldTask extends BaseTask implements PurchaseGoldTask
                     "steamid":this.steam.getSteamId(),
                     "data":this.offer.data_
                 });
-            };
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -75,7 +75,7 @@ public class SteamPurchaseGoldTask extends BaseTask implements PurchaseGoldTask
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseOfferComplete():void
@@ -110,7 +110,7 @@ public class SteamPurchaseGoldTask extends BaseTask implements PurchaseGoldTask
                     "orderid":_arg_2,
                     "authorized":((_arg_3) ? 1 : 0)
                 });
-            };
+            }
         }
 
         private function onAuthorized(_arg_1:Boolean, _arg_2:*):void
@@ -122,7 +122,7 @@ public class SteamPurchaseGoldTask extends BaseTask implements PurchaseGoldTask
             else
             {
                 this.reportError(_arg_2);
-            };
+            }
         }
 
         private function onPurchaseFinalizeComplete():void

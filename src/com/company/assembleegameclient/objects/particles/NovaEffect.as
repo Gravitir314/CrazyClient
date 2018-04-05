@@ -41,7 +41,7 @@ public class NovaEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_7, this.color_, _local_8, this.start_, _local_4);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 
@@ -63,7 +63,7 @@ public class NovaEffect extends ParticleEffect
                 _local_5 = new SparkerParticle(_local_7, this.color_, _local_8, this.start_, _local_4);
                 map_.addObj(_local_5, x_, y_);
                 _local_6++;
-            };
+            }
             return (false);
         }
 

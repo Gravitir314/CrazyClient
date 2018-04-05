@@ -60,7 +60,7 @@ package com.company.util
             if (_local_2 > 2147483647)
             {
                 _local_2 = (_local_2 - 2147483647);
-            };
+            }
             return (this.seed = _local_2);
         }
 

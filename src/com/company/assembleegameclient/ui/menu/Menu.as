@@ -76,13 +76,13 @@ public class Menu extends Sprite implements UnFocusAble
             if (stage == null)
             {
                 return;
-            };
+            }
             var _local_2:Rectangle = getRect(stage);
             var _local_3:Number = RectangleUtil.pointDist(_local_2, stage.mouseX, stage.mouseY);
             if (_local_3 > 40)
             {
                 this.remove();
-            };
+            }
         }
 
         public function scaleParent(_arg_1:Boolean):void
@@ -95,7 +95,7 @@ public class Menu extends Sprite implements UnFocusAble
             else
             {
                 _local_2 = this.parent;
-            };
+            }
             var _local_3:Number = (800 / stage.stageWidth);
             var _local_4:Number = (600 / stage.stageHeight);
             if (_arg_1 == true)
@@ -107,7 +107,7 @@ public class Menu extends Sprite implements UnFocusAble
             {
                 _local_2.scaleX = _local_3;
                 _local_2.scaleY = _local_4;
-            };
+            }
         }
 
         private function position():void
@@ -122,11 +122,11 @@ public class Menu extends Sprite implements UnFocusAble
             {
                 _local_3 = (_local_3 * _local_4);
                 _local_1 = (_local_1 * _local_4);
-            };
+            }
             if (stage == null)
             {
                 return;
-            };
+            }
             if (((stage.mouseX + (0.5 * stage.stageWidth)) - 400) < (stage.stageWidth / 2))
             {
                 x = (_local_3 + 12);
@@ -134,11 +134,11 @@ public class Menu extends Sprite implements UnFocusAble
             else
             {
                 x = ((_local_3 - width) - 1);
-            };
+            }
             if (x < 12)
             {
                 x = 12;
-            };
+            }
             if (((stage.mouseY + (0.5 * stage.stageHeight)) - 300) < (stage.stageHeight / 3))
             {
                 y = (_local_1 + 12);
@@ -146,11 +146,11 @@ public class Menu extends Sprite implements UnFocusAble
             else
             {
                 y = ((_local_1 - height) - 1);
-            };
+            }
             if (y < 12)
             {
                 y = 12;
-            };
+            }
         }
 
         protected function onRollOut(_arg_1:Event):void
@@ -163,7 +163,7 @@ public class Menu extends Sprite implements UnFocusAble
             if (parent != null)
             {
                 parent.removeChild(this);
-            };
+            }
         }
 
         protected function draw():void

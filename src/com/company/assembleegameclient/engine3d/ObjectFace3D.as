@@ -53,7 +53,7 @@ public class ObjectFace3D
             {
                 _local_5.push(((_local_4 == 0) ? GraphicsPathCommand.MOVE_TO : GraphicsPathCommand.LINE_TO));
                 _local_4++;
-            };
+            }
             var _local_6:Vector.<Number> = new Vector.<Number>();
             _local_6.length = (this.indices_.length * 2);
             this.path_ = new GraphicsPath(_local_5, _local_6);
@@ -75,7 +75,7 @@ public class ObjectFace3D
             if (this.normalL_ != null)
             {
                 this.normalW_ = this.obj_.lToW_.deltaTransformVector(this.normalL_);
-            };
+            }
         }
 
         public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:uint, _arg_3:BitmapData):void
@@ -85,7 +85,7 @@ public class ObjectFace3D
             if (MapUserInput.skipRender == true)
             {
                 return;
-            };
+            }
             var _local_6:int = (this.indices_[0] * 2);
             var _local_7:int = (this.indices_[1] * 2);
             var _local_8:int = (this.indices_[(this.indices_.length - 1)] * 2);
@@ -97,7 +97,7 @@ public class ObjectFace3D
             if (((_local_10 * _local_13) - (_local_11 * _local_12)) < 0)
             {
                 return;
-            };
+            }
             if (((_arg_3 == null) && (Parameters.data_.GPURender)))
             {
                 _arg_3 = blackBitmap;
@@ -105,7 +105,7 @@ public class ObjectFace3D
             else
             {
                 _arg_3 = TextureRedrawer.redrawFace(_arg_3, this.shade_);
-            };
+            }
             this.bitmapFill_.bitmapData = _arg_3;
             this.bitmapFill_.matrix = this.tToS(_arg_3);
             _arg_1.push(this.bitmapFill_);
@@ -115,13 +115,13 @@ public class ObjectFace3D
                 this.path_.data[(_local_5 * 2)] = _local_9[(_local_4 * 2)];
                 this.path_.data[((_local_5 * 2) + 1)] = _local_9[((_local_4 * 2) + 1)];
                 _local_5++;
-            };
+            }
             _arg_1.push(this.path_);
             _arg_1.push(GraphicsUtil.END_FILL);
             if ((((this.softwareException_) && (Parameters.isGpuRender())) && (!(this.bitmapFill_ == null))))
             {
                 GraphicsFillExtra.setSoftwareDraw(this.bitmapFill_, true);
-            };
+            }
         }
 
         private function tToS(_arg_1:BitmapData):Matrix

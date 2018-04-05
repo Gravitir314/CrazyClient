@@ -49,7 +49,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
             {
                 this.interactable = _arg_1;
                 addEventListener(MouseEvent.ROLL_OVER, this.onMouseOverGoalSlot);
-            };
+            }
             highlight(true, 16689154, true);
             if (_arg_2)
             {
@@ -60,10 +60,10 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                     addChild(_local_3);
                     this.animatedOutlines.push(_local_3);
                     _local_4++;
-                };
+                }
                 this.animationStartIndex = (this.animatedOutlines.length - 1);
                 addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            };
+            }
         }
 
         override public function updateTitle():void
@@ -76,30 +76,30 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 {
                     this.actionButton.setOutLineColor(196098);
                     this.actionButton.draw();
-                };
+                }
                 if (((!(this.embeddedSprite_ == null)) && (!(this.embeddedSprite_.parent == null))))
                 {
                     this.embeddedSpriteCopy_.visible = false;
                     this.embeddedSpriteCopy_.alpha = 0;
                     this.embeddedSprite_.alpha = 1;
-                };
+                }
             }
             else
             {
                 if (this.animatedOutlines.length > 0)
                 {
                     addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-                };
+                }
                 if (((!(this.embeddedSprite_ == null)) && (!(this.embeddedSprite_.parent == null))))
                 {
                     this.embeddedSpriteCopy_.visible = true;
-                };
+                }
                 if (this.actionButton)
                 {
                     this.actionButton.setOutLineColor(0x545454);
                     this.actionButton.draw();
-                };
-            };
+                }
+            }
         }
 
         public function makeRedTemporarily():void
@@ -118,7 +118,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 this.marking.textColor = 0xFF00;
                 addChild(this.marking);
                 this.marking.y = Math.round((((height / 2) - (this.marking.textHeight / 2)) / 7));
-            };
+            }
         }
 
         public function setQuestionMark():void
@@ -130,7 +130,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 this.marking.textColor = 0xFF0000;
                 addChild(this.marking);
                 this.marking.y = Math.round((((height / 2) - (this.marking.textHeight / 2)) / 7));
-            };
+            }
         }
 
         public function removeMarking():void
@@ -138,7 +138,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
             if (((!(this.marking == null)) && (!(this.marking.parent == null))))
             {
                 removeChild(this.marking);
-            };
+            }
         }
 
         private function buildTextField():TextField
@@ -165,10 +165,10 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 if (((!(this.usageText == null)) && (this.usageText.parent == null)))
                 {
                     addChild(this.usageText);
-                };
+                }
                 removeEventListener(MouseEvent.ROLL_OVER, this.onMouseOverGoalSlot);
                 addEventListener(MouseEvent.ROLL_OUT, this.onMouseOutsideGoalSlot);
-            };
+            }
         }
 
         private function onMouseOutsideGoalSlot(_arg_1:Event):void
@@ -179,7 +179,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 new TimerCallback(0.5, this.removeIfStillOutside);
                 addEventListener(MouseEvent.ROLL_OVER, this.onMouseOverGoalSlot);
                 removeEventListener(MouseEvent.ROLL_OUT, this.onMouseOutsideGoalSlot);
-            };
+            }
         }
 
         private function removeIfStillOutside():void
@@ -187,7 +187,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
             if ((((this.hovering == false) && (!(this.usageText == null))) && (!(this.usageText.parent == null))))
             {
                 removeChild(this.usageText);
-            };
+            }
         }
 
         public function setUsageText(_arg_1:String, _arg_2:int, _arg_3:int):void
@@ -223,18 +223,18 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                     _local_2.alphaMultiplier = (1 - (_local_3 * 0.3));
                     this.animatedOutlines[_local_3].transform.colorTransform = _local_2;
                     _local_3++;
-                };
+                }
                 _local_4 = (this.animationStartIndex - (this.curOutline * this.animationDir));
                 _local_2 = this.animatedOutlines[_local_4].transform.colorTransform;
                 _local_2.color = 196098;
                 this.animatedOutlines[_local_4].transform.colorTransform = _local_2;
-            };
+            }
             if (this.embeddedImage_)
             {
                 if (((this.embeddedSprite_.alpha == 1) || (this.embeddedSprite_.alpha == 0)))
                 {
                     this.dir = (this.dir * -1);
-                };
+                }
                 this.embeddedSprite_.alpha = (this.embeddedSprite_.alpha + this.dir);
                 this.embeddedSpriteCopy_.alpha = (this.embeddedSpriteCopy_.alpha - this.dir);
                 if (this.embeddedSprite_.alpha >= 1)
@@ -248,9 +248,9 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                     {
                         this.embeddedSprite_.alpha = 0;
                         this.embeddedSpriteCopy_.alpha = 1;
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public function highLightAll(_arg_1:int):void
@@ -264,7 +264,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 _local_2.alphaMultiplier = (1 - (_local_3 * 0.3));
                 this.animatedOutlines[_local_3].transform.colorTransform = _local_2;
                 _local_3--;
-            };
+            }
         }
 
         public function playOutLineAnimation(_arg_1:int):void
@@ -279,8 +279,8 @@ public class ModalItemSlot extends FoodFeedFuseSlot
                 if (_arg_1 == 1)
                 {
                     this.animationStartIndex = (this.animatedOutlines.length - 1);
-                };
-            };
+                }
+            }
             addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
         }
 
@@ -307,7 +307,7 @@ public class ModalItemSlot extends FoodFeedFuseSlot
             {
                 removeChild(itemSprite);
                 addChild(itemSprite);
-            };
+            }
             this.embeddedSprite_.filters = [grayscaleMatrix];
             var _local_3:ColorTransform = new ColorTransform();
             _local_3.color = 0x292929;

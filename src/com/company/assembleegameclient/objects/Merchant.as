@@ -76,7 +76,7 @@ public class Merchant extends SellableObject implements IInteractiveObject
             if (!super.addTo(_arg_1, _arg_2, _arg_3))
             {
                 return (false);
-            };
+            }
             _arg_1.merchLookup_[new IntPoint(x_, y_)] = this;
             return (true);
         }
@@ -87,7 +87,7 @@ public class Merchant extends SellableObject implements IInteractiveObject
             if (map_.merchLookup_[_local_1] == this)
             {
                 map_.merchLookup_[_local_1] = null;
-            };
+            }
             super.removeFromMap();
         }
 
@@ -119,8 +119,8 @@ public class Merchant extends SellableObject implements IInteractiveObject
                         else
                         {
                             _local_2 = new LineBuilder().setParams("Merchant.goingInNMinutes", {"minutes":this.minsLeft_});
-                        };
-                    };
+                        }
+                    }
                     _local_3 = 5973542;
                     _local_4 = 16549442;
                     _local_5 = 16549442;
@@ -139,7 +139,7 @@ public class Merchant extends SellableObject implements IInteractiveObject
                     break;
                 default:
                     return (null);
-            };
+            }
             _local_2.setStringMap(this.stringMap);
             return (new AddSpeechBalloonVO(this, _local_2.getString(), "", false, false, _local_3, 1, _local_4, 1, _local_5, 6, true, false));
         }
@@ -184,7 +184,7 @@ public class Merchant extends SellableObject implements IInteractiveObject
                 _local_1.text = String(_local_3.Doses);
                 _local_1.updateMetrics();
                 _local_2.draw(_local_1, DOSE_MATRIX);
-            };
+            }
             if (_local_3.hasOwnProperty("Quantity"))
             {
                 _local_2 = _local_2.clone();
@@ -192,7 +192,7 @@ public class Merchant extends SellableObject implements IInteractiveObject
                 _local_1.text = String(_local_3.Quantity);
                 _local_1.updateMetrics();
                 _local_2.draw(_local_1, DOSE_MATRIX);
-            };
+            }
             return (_local_2);
         }
 
@@ -202,11 +202,11 @@ public class Merchant extends SellableObject implements IInteractiveObject
             if (_local_2 == null)
             {
                 return (_arg_1);
-            };
+            }
             if (((_local_2.Activate == "Dye") && (_local_2.hasOwnProperty("Tex1"))))
             {
                 return (int(_local_2.Tex1));
-            };
+            }
             return (_arg_1);
         }
 
@@ -216,11 +216,11 @@ public class Merchant extends SellableObject implements IInteractiveObject
             if (_local_2 == null)
             {
                 return (_arg_1);
-            };
+            }
             if (((_local_2.Activate == "Dye") && (_local_2.hasOwnProperty("Tex2"))))
             {
                 return (int(_local_2.Tex2));
-            };
+            }
             return (_arg_1);
         }
 
@@ -229,13 +229,13 @@ public class Merchant extends SellableObject implements IInteractiveObject
             if (((this.alpha_ == 1) && (size_ == 100)))
             {
                 return (this.merchandiseTexture_);
-            };
+            }
             var _local_3:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this.merchandiseType_, size_, false, false);
             if (this.alpha_ != 1)
             {
                 this.ct_.alphaMultiplier = this.alpha_;
                 _local_3.colorTransform(_local_3.rect, this.ct_);
-            };
+            }
             return (_local_3);
         }
 

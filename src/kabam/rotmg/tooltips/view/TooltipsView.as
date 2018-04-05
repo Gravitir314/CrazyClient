@@ -21,7 +21,7 @@ public class TooltipsView extends Sprite
             if (_arg_1)
             {
                 addChild(_arg_1);
-            };
+            }
         }
 
         public function hide():void
@@ -29,7 +29,7 @@ public class TooltipsView extends Sprite
             if (((this.toolTip) && (this.toolTip.parent)))
             {
                 this.toolTip.parent.removeChild(this.toolTip);
-            };
+            }
             this.toolTip = null;
         }
 

@@ -24,7 +24,7 @@ public class ModalPopupMediator extends Mediator
                 this.lastContentHeight = this.view.contentContainer.height;
                 this.view.resize();
                 this.view.addEventListener(Event.ENTER_FRAME, this.checkForUpdates);
-            };
+            }
         }
 
         override public function destroy():void
@@ -39,7 +39,7 @@ public class ModalPopupMediator extends Mediator
             {
                 this.lastContentHeight = this.view.contentContainer.height;
                 this.view.resize();
-            };
+            }
         }
 
 

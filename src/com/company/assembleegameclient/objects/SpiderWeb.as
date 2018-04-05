@@ -25,11 +25,11 @@ public class SpiderWeb extends GameObject
             if (!this.wallFound_)
             {
                 this.wallFound_ = this.findWall();
-            };
+            }
             if (this.wallFound_)
             {
                 super.draw(_arg_1, _arg_2, _arg_3);
-            };
+            }
         }
 
         private function findWall():Boolean
@@ -39,25 +39,25 @@ public class SpiderWeb extends GameObject
             if (((!(_local_1 == null)) && (_local_1.obj_ is Wall)))
             {
                 return (true);
-            };
+            }
             _local_1 = map_.lookupSquare(x_, (y_ - 1));
             if (((!(_local_1 == null)) && (_local_1.obj_ is Wall)))
             {
                 obj3D_.setPosition(x_, y_, 0, 90);
                 return (true);
-            };
+            }
             _local_1 = map_.lookupSquare((x_ + 1), y_);
             if (((!(_local_1 == null)) && (_local_1.obj_ is Wall)))
             {
                 obj3D_.setPosition(x_, y_, 0, 180);
                 return (true);
-            };
+            }
             _local_1 = map_.lookupSquare(x_, (y_ + 1));
             if (((!(_local_1 == null)) && (_local_1.obj_ is Wall)))
             {
                 obj3D_.setPosition(x_, y_, 0, 270);
                 return (true);
-            };
+            }
             return (false);
         }
 

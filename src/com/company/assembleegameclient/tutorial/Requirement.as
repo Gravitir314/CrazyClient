@@ -23,12 +23,12 @@ public class Requirement
             if (((!(_local_2 == null)) && (!(_local_2 == ""))))
             {
                 this.objectType_ = ObjectLibrary.idToType_[_local_2];
-            };
+            }
             this.objectName_ = String(_arg_1.@objectName).replace("tutorial_script", "tutorial");
             if (this.objectName_ == null)
             {
                 this.objectName_ = "";
-            };
+            }
             this.slot_ = int(_arg_1.@slot);
             this.radius_ = Number(_arg_1.@radius);
         }

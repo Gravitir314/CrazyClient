@@ -100,7 +100,7 @@ public class MysteryBoxSelectModal extends Sprite
             for each (_local_1 in this.mysteryData)
             {
                 modalHeight = (modalHeight + aMysteryBoxHeight);
-            };
+            }
             _local_2 = new backgroundImageEmbed();
             _local_2.width = (modalWidth + 1);
             _local_2.height = (modalHeight - 25);
@@ -124,7 +124,7 @@ public class MysteryBoxSelectModal extends Sprite
                 this.box_.addChild(_local_5);
                 this.selectEntries.push(_local_5);
                 _local_4++;
-            };
+            }
         }
 
         public function updateContent():void
@@ -133,7 +133,7 @@ public class MysteryBoxSelectModal extends Sprite
             for each (_local_1 in this.selectEntries)
             {
                 _local_1.updateContent();
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void

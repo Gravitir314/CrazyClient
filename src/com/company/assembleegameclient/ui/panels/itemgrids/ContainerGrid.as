@@ -28,7 +28,7 @@ public class ContainerGrid extends ItemGrid
                 addToGrid(_local_3, 2, _local_4);
                 this.tiles[_local_4] = _local_3;
                 _local_4++;
-            };
+            }
         }
 
         override public function setItems(_arg_1:Vector.<int>, _arg_2:int=0):void
@@ -48,22 +48,22 @@ public class ContainerGrid extends ItemGrid
                         if (this.tiles[_local_5].setItem(_arg_1[(_local_5 + indexOffset)]))
                         {
                             _local_3 = true;
-                        };
+                        }
                     }
                     else
                     {
                         if (this.tiles[_local_5].setItem(-1))
                         {
                             _local_3 = true;
-                        };
-                    };
+                        }
+                    }
                     _local_5++;
-                };
+                }
                 if (_local_3)
                 {
                     refreshTooltip();
-                };
-            };
+                }
+            }
         }
 
 

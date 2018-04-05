@@ -49,7 +49,7 @@ public class ItemWithTooltip extends Sprite implements TooltipAble
                 addEventListener(Event.REMOVED_FROM_STAGE, this.onDestruct);
                 addEventListener(MouseEvent.ROLL_OVER, this.onRollOver);
                 addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
-            };
+            }
         }
 
         public function disableTooltip():void

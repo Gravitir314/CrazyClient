@@ -32,12 +32,12 @@ public class BaseSimpleText extends TextField
             if (this.inputWidth_ != 0)
             {
                 width = _arg_4;
-            };
+            }
             this.inputHeight_ = _arg_5;
             if (this.inputHeight_ != 0)
             {
                 height = _arg_5;
-            };
+            }
             _local_6 = this.defaultTextFormat;
             Font.registerFont(MyriadPro);
             var _local_7:Font = new MyriadPro();
@@ -62,7 +62,7 @@ public class BaseSimpleText extends TextField
             {
                 selectable = false;
                 mouseEnabled = false;
-            };
+            }
         }
 
         public function setFont(_arg_1:String):void
@@ -138,10 +138,10 @@ public class BaseSimpleText extends TextField
                 if (_local_2 > this.actualWidth_)
                 {
                     this.actualWidth_ = _local_2;
-                };
+                }
                 this.actualHeight_ = (this.actualHeight_ + _local_3);
                 _local_4++;
-            };
+            }
             width = ((this.inputWidth_ == 0) ? this.actualWidth_ : this.inputWidth_);
             height = ((this.inputHeight_ == 0) ? this.actualHeight_ : this.inputHeight_);
         }

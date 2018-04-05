@@ -41,7 +41,7 @@ public class BubbleParticle extends Particle
             if (!_local_8)
             {
                 _local_8 = new (BubbleParticle)(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7);
-            };
+            }
             return (_local_8);
         }
 
@@ -55,7 +55,7 @@ public class BubbleParticle extends Particle
             {
                 this.frequencyX = ((Math.random() * this.spread) - 0.1);
                 this.frequencyY = ((Math.random() * this.spread) - 0.1);
-            };
+            }
             var _local_4:Number = ((_arg_2 - _arg_1) / 1000);
             this.timeLeft = (this.life - (this.life * (_local_3 * (1 - this.lifeVariance))));
             z_ = (this.speed * _local_4);
@@ -73,12 +73,12 @@ public class BubbleParticle extends Particle
             if (this.timeLeft <= 0)
             {
                 return (false);
-            };
+            }
             z_ = (this.speed * _local_3);
             if (this.spread > 0)
             {
                 moveTo((x_ + ((this.frequencyX * _arg_2) * this.SPREAD_DAMPER)), (y_ + ((this.frequencyY * _arg_2) * this.SPREAD_DAMPER)));
-            };
+            }
             return (true);
         }
 

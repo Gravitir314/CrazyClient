@@ -66,7 +66,7 @@ public class FriendsPopupView extends ModalPopup {
                 DefaultLabelFormat.totalFriendsLabel(this.totalFriendsLabel);
                 this.totalFriendsLabel.y = 485;
                 addChild(this.totalFriendsLabel);
-            };
+            }
             this.totalFriendsLabel.text = ((("Total Friends: " + _arg_1) + " / ") + _arg_2);
             this.totalFriendsLabel.x = ((350 / 2) - (this.totalFriendsLabel.width / 2));
         }
@@ -131,7 +131,7 @@ public class FriendsPopupView extends ModalPopup {
             var _local_2:TabButton = this.tabs.getTabButtonByLabel("Invites");
             if (_local_2){
                 this.tabs.getTabButtonByLabel("Invites").showIndicator = _arg_1;
-            };
+            }
         }
 
         public function clear():void{
@@ -143,8 +143,8 @@ public class FriendsPopupView extends ModalPopup {
             for each (_local_1 in this.items) {
                 if (_local_1.parent){
                     _local_1.parent.removeChild(_local_1);
-                };
-            };
+                }
+            }
             this.items.length = 0;
             this.friendsGrid.clearGrid();
             this.guildsGrid.clearGrid();

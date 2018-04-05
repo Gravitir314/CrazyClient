@@ -21,8 +21,8 @@ public class PotionsNeededDisplay extends Sprite
 
         private var classes:ClassesModel;
         private var model:PlayerModel;
-        private var needed:Array = new Array(0, 0, 0, 0, 0, 0, 0, 0);
-        private var potions:Array = new Array(2793, 2794, 2591, 2592, 2593, 2636, 2612, 2613);
+        private var needed:Array = [0, 0, 0, 0, 0, 0, 0, 0];
+        private var potions:Array = [2793, 2794, 2591, 2592, 2593, 2636, 2612, 2613];
 
         public function PotionsNeededDisplay()
         {
@@ -42,8 +42,8 @@ public class PotionsNeededDisplay extends Sprite
             for each (_local_1 in _local_10)
             {
                 _local_2 = this.classes.getCharacterClass(_local_1.objectType());
-                _local_5 = new Array(_local_2.hp.max, _local_2.mp.max, _local_2.attack.max, _local_2.defense.max, _local_2.speed.max, _local_2.dexterity.max, _local_2.hpRegeneration.max, _local_2.mpRegeneration.max);
-                _local_6 = new Array(_local_1.charXML_.MaxHitPoints, _local_1.charXML_.MaxMagicPoints, _local_1.charXML_.Attack, _local_1.charXML_.Defense, _local_1.charXML_.Speed, _local_1.charXML_.Dexterity, _local_1.charXML_.HpRegen, _local_1.charXML_.MpRegen);
+                _local_5 = [_local_2.hp.max, _local_2.mp.max, _local_2.attack.max, _local_2.defense.max, _local_2.speed.max, _local_2.dexterity.max, _local_2.hpRegeneration.max, _local_2.mpRegeneration.max];
+                _local_6 = [_local_1.charXML_.MaxHitPoints, _local_1.charXML_.MaxMagicPoints, _local_1.charXML_.Attack, _local_1.charXML_.Defense, _local_1.charXML_.Speed, _local_1.charXML_.Dexterity, _local_1.charXML_.HpRegen, _local_1.charXML_.MpRegen];
                 _local_7 = 0;
                 while (_local_7 < 8)
                 {
@@ -65,12 +65,12 @@ public class PotionsNeededDisplay extends Sprite
                             else
                             {
                                 this.needed[_local_7] = (this.needed[_local_7] + (int(((_local_3 - _local_4) / 5)) + 1));
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     _local_7++;
-                };
-            };
+                }
+            }
             this.drawDisplay();
         }
 
@@ -85,7 +85,7 @@ public class PotionsNeededDisplay extends Sprite
                 _local_1.x = (_local_2 * _local_3);
                 addChild(_local_1);
                 _local_3++;
-            };
+            }
         }
 
 

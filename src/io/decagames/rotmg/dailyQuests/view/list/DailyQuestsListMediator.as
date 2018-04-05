@@ -38,10 +38,10 @@ public class DailyQuestsListMediator extends Mediator
                 if (_local_4)
                 {
                     _local_2.isSelected = true;
-                };
+                }
                 _local_4 = false;
                 this.view.addQuestToList(_local_2);
-            };
+            }
             this.view.scrollBar.update();
         }
 

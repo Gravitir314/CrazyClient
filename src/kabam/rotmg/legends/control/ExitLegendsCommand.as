@@ -32,7 +32,7 @@ public class ExitLegendsCommand
             else
             {
                 this.gotoTitleView();
-            };
+            }
         }
 
         private function clearRecentlyDeceasedAndGotoCharacterView():void

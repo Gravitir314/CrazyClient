@@ -63,7 +63,7 @@ public class BattleSummaryDialog extends Sprite
             if (this.leftSummary)
             {
                 removeChild(this.leftSummary);
-            };
+            }
             this.leftSummary = new BattleSummaryText(TextKey.BATTLE_SUMMARY_CURRENT_SUBTITLE, _arg_1, _arg_2);
             this.leftSummary.y = ((60 - (this.leftSummary.height / 2)) + 132);
             this.leftSummary.x = ((this.WIDTH / 4) - (this.leftSummary.width / 2));
@@ -75,7 +75,7 @@ public class BattleSummaryDialog extends Sprite
             if (this.rightSummary)
             {
                 removeChild(this.rightSummary);
-            };
+            }
             this.rightSummary = new BattleSummaryText(TextKey.BATTLE_SUMMARY_BEST_SUBTITLE, _arg_1, _arg_2);
             this.rightSummary.y = ((60 - (this.rightSummary.height / 2)) + 132);
             this.rightSummary.x = (((this.WIDTH / 4) - (this.rightSummary.width / 2)) + (this.WIDTH / 2));

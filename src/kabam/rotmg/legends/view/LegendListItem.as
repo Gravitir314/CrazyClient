@@ -95,7 +95,7 @@ public class LegendListItem extends Sprite
             {
                 _local_1 = InteractiveItemTile(_local_2.next());
                 _local_1.setInteractive(false);
-            };
+            }
             this.inventoryGrid.setItems(this.legend.equipment);
             this.inventoryGrid.x = 400;
             this.inventoryGrid.y = ((HEIGHT / 2) - (Slot.HEIGHT / 2));
@@ -138,8 +138,8 @@ public class LegendListItem extends Sprite
                 else
                 {
                     _local_1 = 0xFFFFFF;
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

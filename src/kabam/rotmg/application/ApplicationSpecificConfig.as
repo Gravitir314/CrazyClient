@@ -25,7 +25,7 @@ public class ApplicationSpecificConfig implements IConfig
             if (this.applicationSetup.isDebug())
             {
                 this.context.extend(ConsoleExtension);
-            };
+            }
         }
 
 

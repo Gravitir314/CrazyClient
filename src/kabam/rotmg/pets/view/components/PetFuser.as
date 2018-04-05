@@ -41,7 +41,7 @@ public class PetFuser extends Sprite
             if (this.state.rightSlotPetVO)
             {
                 this.setPet(this.state.rightSlotPetVO, PetSlotsState.RIGHT);
-            };
+            }
             this.updateHighlights();
         }
 
@@ -52,7 +52,7 @@ public class PetFuser extends Sprite
             {
                 _local_3 = ((_arg_2 == PetSlotsState.LEFT) ? this.leftSlot : this.rightSlot);
                 _local_3.setPet(_arg_1);
-            };
+            }
         }
 
         private function onOpenLeftPetPicker():void
@@ -78,7 +78,7 @@ public class PetFuser extends Sprite
                 this.rightSlot.highlight((this.state.rightSlotPetVO == null));
                 this.leftSlot.highlight((this.state.leftSlotPetVO == null));
                 this.arrow.highlight(false);
-            };
+            }
         }
 
 

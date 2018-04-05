@@ -37,7 +37,7 @@ public class ParticleGenerator extends ParticleEffect
             else
             {
                 this.bitmapData = TextureRedrawer.redrawSolidSquare(this.effectProps.color, this.effectProps.size);
-            };
+            }
         }
 
         public static function attachParticleGenerator(_arg_1:EffectProperties, _arg_2:GameObject):ParticleGenerator
@@ -58,7 +58,7 @@ public class ParticleGenerator extends ParticleEffect
             if (this.targetGO.map_ == null)
             {
                 return (false);
-            };
+            }
             x_ = this.targetGO.x_;
             y_ = this.targetGO.y_;
             z_ = (this.targetGO.z_ + this.effectProps.zOffset);
@@ -74,12 +74,12 @@ public class ParticleGenerator extends ParticleEffect
                 else
                 {
                     _local_4 = new BaseParticle(this.bitmapData);
-                };
+                }
                 _local_4.initialize((this.effectProps.life + (this.effectProps.lifeVariance * ((2 * Math.random()) - 1))), (this.effectProps.speed + (this.effectProps.speedVariance * ((2 * Math.random()) - 1))), (this.effectProps.speed + (this.effectProps.speedVariance * ((2 * Math.random()) - 1))), (this.effectProps.rise + (this.effectProps.riseVariance * ((2 * Math.random()) - 1))), z_);
                 map_.addObj(_local_4, (x_ + (this.effectProps.rangeX * ((2 * Math.random()) - 1))), (y_ + (this.effectProps.rangeY * ((2 * Math.random()) - 1))));
                 this.liveParticles.push(_local_4);
                 _local_6++;
-            };
+            }
             this.generatedParticles = (this.generatedParticles + _local_10);
             while (_local_7 < this.liveParticles.length)
             {
@@ -98,9 +98,9 @@ public class ParticleGenerator extends ParticleEffect
                     _local_5.x_ = (_local_5.x_ + (_local_5.spdX * _local_3));
                     _local_5.y_ = (_local_5.y_ + (_local_5.spdY * _local_3));
                     _local_5.z_ = (_local_5.z_ + (_local_5.spdZ * _local_3));
-                };
+                }
                 _local_7++;
-            };
+            }
             return (true);
         }
 
@@ -110,7 +110,7 @@ public class ParticleGenerator extends ParticleEffect
             for each (_local_1 in this.liveParticles)
             {
                 map_.removeObj(_local_1.objectId_);
-            };
+            }
             this.liveParticles = null;
             this.particlePool = null;
             super.removeFromMap();

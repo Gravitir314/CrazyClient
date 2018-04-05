@@ -59,9 +59,9 @@ public class NameChangerPanel extends Panel
                     else
                     {
                         this.handleNoName();
-                    };
-                };
-            };
+                    }
+                }
+            }
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
         }
 
@@ -70,7 +70,7 @@ public class NameChangerPanel extends Panel
             if (this.button_)
             {
                 stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-            };
+            }
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
@@ -167,7 +167,7 @@ public class NameChangerPanel extends Panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.performAction();
-            };
+            }
         }
 
         private function onButtonClick(_arg_1:MouseEvent):void

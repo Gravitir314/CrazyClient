@@ -40,7 +40,7 @@ public class LineEffect extends ParticleEffect
                 _local_4 = new SparkParticle(100, this.color_, 700, 0.5, RandomUtil.plusMinus(1), RandomUtil.plusMinus(1));
                 map_.addObj(_local_4, _local_3.x, _local_3.y);
                 _local_5++;
-            };
+            }
             return (false);
         }
 
@@ -58,7 +58,7 @@ public class LineEffect extends ParticleEffect
                 _local_4 = new SparkParticle(100, this.color_, 200, 0.5, RandomUtil.plusMinus(1), RandomUtil.plusMinus(1));
                 map_.addObj(_local_4, _local_3.x, _local_3.y);
                 _local_5++;
-            };
+            }
             return (false);
         }
 

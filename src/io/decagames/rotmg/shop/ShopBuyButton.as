@@ -61,7 +61,7 @@ public class ShopBuyButton extends SliceScalingButton
             else
             {
                 this._priceLabel.x = ((bitmap.width - this._priceLabel.textWidth) / 2);
-            };
+            }
             this.coinBitmap.x = ((bitmap.width - this.coinBitmap.width) - 15);
         }
 
@@ -72,7 +72,7 @@ public class ShopBuyButton extends SliceScalingButton
             {
                 this.priceLabel.text = _arg_1.toString();
                 this.updateLabelPosition();
-            };
+            }
         }
 
         override public function set disabled(_arg_1:Boolean):void
@@ -87,7 +87,7 @@ public class ShopBuyButton extends SliceScalingButton
             {
                 this._priceLabel.text = this._price.toString();
                 addChild(this.coinBitmap);
-            };
+            }
             this.updateLabelPosition();
         }
 

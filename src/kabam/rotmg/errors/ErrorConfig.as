@@ -45,7 +45,7 @@ public class ErrorConfig implements IConfig
             else
             {
                 this.commandMap.map(ErrorSignal).toCommand(LogErrorCommand);
-            };
+            }
         }
 
 

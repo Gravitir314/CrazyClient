@@ -38,7 +38,7 @@ public class HoverTooltipDelegate implements TooltipAble
                 this.displayObject.removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
                 this.displayObject.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
                 this.displayObject = null;
-            };
+            }
         }
 
         public function getDisplayObject():DisplayObject
@@ -71,7 +71,7 @@ public class HoverTooltipDelegate implements TooltipAble
             if (((!(this.tooltip == null)) && (!(this.tooltip.parent == null))))
             {
                 this.hideToolTips.dispatch();
-            };
+            }
             this.displayObject.removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
             this.displayObject.removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
             this.displayObject.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);

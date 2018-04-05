@@ -26,7 +26,7 @@ public class HelpXML
             {
                 this.commands.push(_local_2.Article.Command[_local_1]);
                 this.explanations.push(_local_2.Article.Explanation[_local_1]);
-            };
+            }
         }
 
 

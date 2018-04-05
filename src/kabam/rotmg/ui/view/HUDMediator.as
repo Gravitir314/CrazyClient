@@ -62,7 +62,7 @@ public class HUDMediator extends Mediator
             if (_local_2.hitTestObject(this.view.tabStrip))
             {
                 this.dockStats(_local_2);
-            };
+            }
         }
 
         private function dockStats(_arg_1:Sprite):void
@@ -95,7 +95,7 @@ public class HUDMediator extends Mediator
             if (((this.stats) && (this.stats.hasEventListener(MouseEvent.MOUSE_DOWN))))
             {
                 this.stats.removeEventListener(MouseEvent.MOUSE_DOWN, this.onStatsMouseDown);
-            };
+            }
         }
 
         public function onUpdateHUD(_arg_1:Player):void

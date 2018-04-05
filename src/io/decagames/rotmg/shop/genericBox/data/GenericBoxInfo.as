@@ -206,7 +206,7 @@ public class GenericBoxInfo
             if (!this._endTime)
             {
                 return (int.MAX_VALUE);
-            };
+            }
             var _local_1:Date = new Date();
             return ((this._endTime.time - _local_1.time) / 1000);
         }
@@ -218,7 +218,7 @@ public class GenericBoxInfo
             {
                 _local_1 = new Date();
                 return (_local_1.time < this._saleEnd.time);
-            };
+            }
             return (false);
         }
 
@@ -233,13 +233,13 @@ public class GenericBoxInfo
             if (!this._endTime)
             {
                 return ("");
-            };
+            }
             var _local_1:* = "Ends in: ";
             var _local_2:Number = this.getSecondsToEnd();
             if (_local_2 <= 0)
             {
                 return ("");
-            };
+            }
             if (_local_2 > TimeUtil.DAY_IN_S)
             {
                 _local_1 = (_local_1 + TimeLeft.parse(_local_2, "%dd %hh"));
@@ -253,8 +253,8 @@ public class GenericBoxInfo
                 else
                 {
                     _local_1 = (_local_1 + TimeLeft.parse(_local_2, "%mm %ss"));
-                };
-            };
+                }
+            }
             return (_local_1);
         }
 

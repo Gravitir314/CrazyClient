@@ -26,7 +26,7 @@ public class QueuedStatusTextList
             else
             {
                 this.tail = null;
-            };
+            }
         }
 
         public function append(_arg_1:QueuedStatusText):void
@@ -41,7 +41,7 @@ public class QueuedStatusTextList
             {
                 this.head = (this.tail = _arg_1);
                 this.target.addChild(_arg_1);
-            };
+            }
         }
 
 

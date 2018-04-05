@@ -8,7 +8,7 @@ import mx.core.*;
 		public function YardUpgraderView_PetYardImage()
 		{
 			super();
-			return;
+
 		}
 	}
 }

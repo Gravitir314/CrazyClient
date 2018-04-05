@@ -40,7 +40,7 @@ public class StatsMediator extends Mediator
             if (this.view.myPlayer == false)
             {
                 return;
-            };
+            }
             this.view.draw(_arg_1);
         }
 

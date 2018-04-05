@@ -27,7 +27,7 @@ public class FusionStrengthMediator extends Mediator
             if (!this.petSlotsState.leftSlotPetVO)
             {
                 this.petSlotsState.leftSlotPetVO = this.petsModel.getActivePet();
-            };
+            }
             if (this.petSlotsState.isAcceptableFuseState())
             {
                 this.view.setFusionStrength(FusionCalculator.getStrengthPercentage(this.petSlotsState.leftSlotPetVO, this.petSlotsState.rightSlotPetVO));
@@ -35,7 +35,7 @@ public class FusionStrengthMediator extends Mediator
             else
             {
                 this.view.reset();
-            };
+            }
         }
 
 

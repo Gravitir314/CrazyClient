@@ -63,7 +63,7 @@ public class TransferAccountTask extends BaseTask implements MigrateAccountTask
                 _local_2 = new XML(_arg_1);
                 this.account.updateUser(_local_2.GUID, _local_2.Secret, "");
                 this.account.setPlatformToken(_local_2.PlatformToken);
-            };
+            }
         }
 
 

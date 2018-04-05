@@ -35,7 +35,7 @@ public class ArenaLeaderboardFactory
             {
                 _local_3.push(this.makeArenaEntry(_local_2, _local_4));
                 _local_4++;
-            };
+            }
             _local_3 = this.removeDuplicateUser(_local_3);
             return (this.addCurrentRun(_local_3));
         }
@@ -57,23 +57,23 @@ public class ArenaLeaderboardFactory
                         this.currentRunModel.entry.rank = _local_4.rank;
                         _local_5.push(this.currentRunModel.entry);
                         _local_2 = true;
-                    };
+                    }
                     if (_local_4.isPersonalRecord)
                     {
                         _local_3 = true;
-                    };
+                    }
                     if (_local_2)
                     {
                         _local_4.rank++;
-                    };
+                    }
                     _local_5.push(_local_4);
-                };
+                }
                 if ((((_local_5.length < 20) && (!(_local_2))) && (!(_local_3))))
                 {
                     this.currentRunModel.entry.rank = (_local_5.length + 1);
                     _local_5.push(this.currentRunModel.entry);
-                };
-            };
+                }
+            }
             return ((_local_5.length > 0) ? _local_5 : _arg_1);
         }
 
@@ -99,14 +99,14 @@ public class ArenaLeaderboardFactory
                         if (_local_2)
                         {
                             _local_4.rank--;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_local_5 != -1)
             {
                 _arg_1.splice(_local_5, 1);
-            };
+            }
             return (_arg_1);
         }
 
@@ -137,7 +137,7 @@ public class ArenaLeaderboardFactory
                 _local_4 = new XML(_arg_1.PlayData.Pet);
                 _local_3.apply(_local_4);
                 _local_5.pet = _local_3;
-            };
+            }
             return (_local_5);
         }
 

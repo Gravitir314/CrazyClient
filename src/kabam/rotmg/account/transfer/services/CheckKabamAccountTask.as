@@ -43,7 +43,7 @@ public class CheckKabamAccountTask extends BaseTask
             else
             {
                 this.onChangeDone();
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 

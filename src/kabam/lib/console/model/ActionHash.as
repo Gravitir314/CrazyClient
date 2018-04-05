@@ -32,7 +32,7 @@ public final class ActionHash
             for (_local_1 in this.signalMap)
             {
                 _local_2.push(((_local_1 + " - ") + this.descriptionMap[_local_1]));
-            };
+            }
             return (_local_2);
         }
 
@@ -42,13 +42,13 @@ public final class ActionHash
             if (_local_2.length == 0)
             {
                 return;
-            };
+            }
             var _local_3:String = _local_2.shift();
             var _local_4:Signal = this.signalMap[_local_3];
             if (!_local_4)
             {
                 return;
-            };
+            }
             if (_local_2.length > 0)
             {
                 _local_4.dispatch.apply(this, _local_2.join(" ").split(","));
@@ -56,7 +56,7 @@ public final class ActionHash
             else
             {
                 _local_4.dispatch.apply(this);
-            };
+            }
         }
 
         public function has(_arg_1:String):Boolean

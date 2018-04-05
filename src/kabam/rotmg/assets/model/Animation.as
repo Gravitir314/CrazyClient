@@ -57,7 +57,7 @@ public class Animation extends Sprite
             for each (_local_2 in _args)
             {
                 this.count = this.frames.push(_local_2);
-            };
+            }
             if (this.started)
             {
                 this.start();
@@ -65,7 +65,7 @@ public class Animation extends Sprite
             else
             {
                 this.iterate();
-            };
+            }
         }
 
         public function addFrame(_arg_1:BitmapData):void
@@ -80,7 +80,7 @@ public class Animation extends Sprite
             {
                 this.timer.start();
                 this.iterate();
-            };
+            }
             this.started = true;
         }
 
@@ -107,7 +107,7 @@ public class Animation extends Sprite
             for each (_local_1 in this.frames)
             {
                 _local_1.dispose();
-            };
+            }
         }
 
         public function isStarted():Boolean

@@ -107,7 +107,7 @@ public class BasicObject
             {
                 this.map_ = null;
                 return (false);
-            };
+            }
             this.x_ = _arg_2;
             this.y_ = _arg_3;
             return (true);

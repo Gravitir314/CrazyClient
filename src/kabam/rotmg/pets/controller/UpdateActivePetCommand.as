@@ -32,7 +32,7 @@ public class UpdateActivePetCommand extends Command
             else
             {
                 this.petsModel.setActivePet(this.petsModel.getPet(this.instanceID));
-            };
+            }
             this.petSlotsState.leftSlotPetVO = ((this.instanceID < 0) ? null : this.petSlotsState.leftSlotPetVO = this.petsModel.getPet(this.instanceID));
         }
 

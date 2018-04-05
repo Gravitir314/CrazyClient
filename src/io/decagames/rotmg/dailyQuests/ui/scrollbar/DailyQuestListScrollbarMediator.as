@@ -50,7 +50,7 @@ public class DailyQuestListScrollbarMediator extends Mediator
             {
                 this.view.updatePosition((WebMain.STAGE.mouseY - this.startY));
                 this.startY = WebMain.STAGE.mouseY;
-            };
+            }
         }
 
 

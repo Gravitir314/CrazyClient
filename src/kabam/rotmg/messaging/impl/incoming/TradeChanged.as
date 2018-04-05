@@ -26,7 +26,7 @@ public class TradeChanged extends IncomingMessage
             {
                 this.offer_.push(_arg_1.readBoolean());
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

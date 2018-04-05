@@ -78,7 +78,7 @@ public class ArenaLeaderboardTab extends Sprite
             if (!this.isSelected)
             {
                 this.selected.dispatch(this);
-            };
+            }
         }
 
         private function redraw():void
@@ -96,8 +96,8 @@ public class ArenaLeaderboardTab extends Sprite
                 else
                 {
                     this.label.setColor(OUT_COLOR);
-                };
-            };
+                }
+            }
         }
 
         private function onMouseUp(_arg_1:MouseEvent):void

@@ -57,7 +57,7 @@ public class BoostPanelButton extends Sprite
             if (this.boostPanel)
             {
                 removeChild(this.boostPanel);
-            };
+            }
         }
 
 

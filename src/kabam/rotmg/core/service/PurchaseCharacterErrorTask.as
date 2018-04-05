@@ -28,7 +28,7 @@ public class PurchaseCharacterErrorTask extends BaseTask
             else
             {
                 this.openDialog.dispatch(new ErrorDialog(this.parentTask.error));
-            };
+            }
         }
 
 

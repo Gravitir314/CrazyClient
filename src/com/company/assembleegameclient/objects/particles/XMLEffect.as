@@ -28,13 +28,13 @@ public class XMLEffect extends ParticleEffect
             if (this.go_.map_ == null)
             {
                 return (false);
-            };
+            }
             var _local_3:Number = (_arg_2 / 1000);
             this.cooldownLeft_ = (this.cooldownLeft_ - _local_3);
             if (this.cooldownLeft_ >= 0)
             {
                 return (true);
-            };
+            }
             this.cooldownLeft_ = this.cooldown_;
             map_.addObj(new XMLParticle(this.partProps_), this.go_.x_, this.go_.y_);
             return (true);

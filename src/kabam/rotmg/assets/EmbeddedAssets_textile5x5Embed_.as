@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_textile5x5Embed_()
         {
             super();
-            return;
+
         }
     }
 }

@@ -8,7 +8,7 @@ import mx.core.*;
 		public function UIAssets_UI_SLICE_CONFIG()
 		{
 			super();
-			return;
+
 		}
 	}
 }

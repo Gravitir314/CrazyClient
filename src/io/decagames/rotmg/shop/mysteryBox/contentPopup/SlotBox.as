@@ -92,7 +92,7 @@ public class SlotBox extends UIGridElement
                 this.imageBitmap.x = -(Math.round(((this.imageBitmap.width - this.itemSize) / 2)));
                 this.imageBitmap.y = -(Math.round(((this.imageBitmap.height - this.itemSize) / 2)));
                 this._itemBackground.addChild(this.imageBitmap);
-            };
+            }
             if (this.showFullName)
             {
                 this.label.text = (_arg_1.toString() + ((this._slotType == CHAR_SLOT) ? "x Character Slot" : "x Vault Slot"));
@@ -103,7 +103,7 @@ public class SlotBox extends UIGridElement
                 this.label.text = (_arg_1 + "x");
                 this.label.x = 10;
                 this._itemBackground.x = (this._itemBackground.x + (this.label.x + 10));
-            };
+            }
             addChild(this.label);
         }
 
@@ -118,7 +118,7 @@ public class SlotBox extends UIGridElement
             if (!this.isBackgroundCleared)
             {
                 this.drawBackground("", this.isLastElement, _arg_1);
-            };
+            }
             this.targetWidth = _arg_1;
             this.resizeLabel();
         }
@@ -128,7 +128,7 @@ public class SlotBox extends UIGridElement
             if (this.imageBitmap)
             {
                 this.imageBitmap.bitmapData.dispose();
-            };
+            }
             super.dispose();
         }
 
@@ -150,7 +150,7 @@ public class SlotBox extends UIGridElement
                 this.graphics.beginFill(0x2D2D2D);
                 this.graphics.drawRect(0, 0, _arg_3, (this.itemSize + (2 * this.itemMargin)));
                 this.graphics.endFill();
-            };
+            }
         }
 
         public function get slotType():String

@@ -45,12 +45,12 @@ public class GridList extends Sprite
             for each (_local_2 in _arg_1)
             {
                 this.addItem(_local_2);
-            };
+            }
             this.list.setItems(this.rows);
             if (!_arg_1.length)
             {
                 return;
-            };
+            }
             var _local_3:DisplayObject = _arg_1[0];
             this.maxItemsPerRow = (this.maxRowWidth() / _local_3.width);
         }
@@ -97,7 +97,7 @@ public class GridList extends Sprite
             else
             {
                 this.positionRightOfPrevious(_arg_1);
-            };
+            }
             this.lastItemRight = (_arg_1.x + _arg_1.width);
             this.lastItemRight = (this.lastItemRight + this.padding);
         }
@@ -129,7 +129,7 @@ public class GridList extends Sprite
             if (this.items.length)
             {
                 return (this.items[0]);
-            };
+            }
             return (null);
         }
 
@@ -140,7 +140,7 @@ public class GridList extends Sprite
             {
                 _local_1 = this.grid[0];
                 return (_local_1[(this.maxItemsPerRow - 1)]);
-            };
+            }
             return (null);
         }
 
@@ -151,7 +151,7 @@ public class GridList extends Sprite
             {
                 _local_1 = this.grid[(this.grid.length - 1)];
                 return (_local_1[0]);
-            };
+            }
             return (null);
         }
 
@@ -162,7 +162,7 @@ public class GridList extends Sprite
             {
                 _local_1 = this.grid[(this.grid.length - 1)];
                 return (_local_1[(this.maxItemsPerRow - 1)]);
-            };
+            }
             return (null);
         }
 

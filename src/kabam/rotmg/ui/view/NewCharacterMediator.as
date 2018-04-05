@@ -97,7 +97,7 @@ public class NewCharacterMediator extends Mediator
             else
             {
                 this.hideTooltips.dispatch();
-            };
+            }
         }
 
         private function onUpdate():void

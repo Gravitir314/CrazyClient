@@ -57,7 +57,7 @@ public class PackageButton extends BasePackageButton
             if (this._state == _arg_1)
             {
                 return;
-            };
+            }
             if (_arg_1 == this.SHOW_DURATION)
             {
                 removeChild(this.quantityText);
@@ -73,8 +73,8 @@ public class PackageButton extends BasePackageButton
                 else
                 {
                     throw (new Error(("PackageButton.setState: Unexpected state " + _arg_1)));
-                };
-            };
+                }
+            }
             this._state = _arg_1;
         }
 
@@ -96,7 +96,7 @@ public class PackageButton extends BasePackageButton
             else
             {
                 _local_2 = TextKey.PACKAGE_BUTTON_DAY;
-            };
+            }
             this.durationText.textChanged.addOnce(this.layout);
             this.durationStringBuilder.setParams(_local_2, {"number":_local_3});
             this.durationText.setStringBuilder(this.durationStringBuilder);

@@ -44,7 +44,7 @@ public class DailyQuestInfoMediator extends Mediator
             if (_local_1)
             {
                 this.showQuestInfo(_local_1.id);
-            };
+            }
             this.view.completeButton.addEventListener(MouseEvent.CLICK, this.onCompleteButtonClickHandler);
         }
 
@@ -92,13 +92,13 @@ public class DailyQuestInfoMediator extends Mediator
                         {
                             _local_2.push(this.makeSlotObject(_local_4, _local_5));
                             _local_3.splice(_local_3.indexOf(_local_5), 1);
-                        };
-                    };
+                        }
+                    }
                     _local_4++;
-                };
+                }
                 this.lockScreen.dispatch();
                 this.hud.gameSprite.gsc_.questRedeem(this.model.currentQuest.id, _local_2);
-            };
+            }
         }
 
 

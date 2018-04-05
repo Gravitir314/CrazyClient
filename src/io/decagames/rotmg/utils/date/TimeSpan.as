@@ -32,23 +32,23 @@ public class TimeSpan
                     if (((_local_4.totalSeconds == 0) || (_local_4.totalSeconds == 1)))
                     {
                         return ("now");
-                    };
+                    }
                     return (StringUtil.substitute("{0} seconds ago", [Math.round(_local_4.totalSeconds)]));
-                };
+                }
                 return ("minute ago");
-            };
+            }
             if (((_local_4.totalMinutes >= 1) && (_local_4.totalMinutes < 2)))
             {
                 return ("1 minute ago");
-            };
+            }
             if (_local_4.totalMinutes < 60)
             {
                 return (StringUtil.substitute("{0} minutes ago", [Math.round(_local_4.totalMinutes)]));
-            };
+            }
             if (((_local_4.totalHours >= 1) && (_local_4.totalHours < 2)))
             {
                 return ("1 hour ago");
-            };
+            }
             return (StringUtil.substitute("{0} hours ago", [Math.round(_local_4.totalHours)]));
         }
 

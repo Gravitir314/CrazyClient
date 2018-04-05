@@ -118,7 +118,7 @@ public class CheckBoxField extends Sprite
                 _local_2.lineTo((BOX_SIZE - 2), 2);
                 _local_2.lineStyle();
                 this.hasError = false;
-            };
+            }
             if (this.hasError)
             {
                 _local_1 = 16549442;
@@ -126,7 +126,7 @@ public class CheckBoxField extends Sprite
             else
             {
                 _local_1 = 0x454545;
-            };
+            }
             _local_2.lineStyle(2, _local_1, 1, false, LineScaleMode.NORMAL, CapsStyle.ROUND, JointStyle.ROUND);
             _local_2.drawRect(0, 0, BOX_SIZE, BOX_SIZE);
             _local_2.lineStyle();

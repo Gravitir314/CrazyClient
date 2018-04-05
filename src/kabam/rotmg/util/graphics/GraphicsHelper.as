@@ -24,7 +24,7 @@ public class GraphicsHelper
             else
             {
                 _arg_4.moveTo(_arg_1, _arg_2);
-            };
+            }
             if (_arg_3.topRightBevel)
             {
                 _arg_4.lineTo((_local_5 - _local_7), _arg_2);
@@ -33,7 +33,7 @@ public class GraphicsHelper
             else
             {
                 _arg_4.lineTo(_local_5, _arg_2);
-            };
+            }
             if (_arg_3.bottomRightBevel)
             {
                 _arg_4.lineTo(_local_5, (_local_6 - _local_7));
@@ -42,7 +42,7 @@ public class GraphicsHelper
             else
             {
                 _arg_4.lineTo(_local_5, _local_6);
-            };
+            }
             if (_arg_3.bottomLeftBevel)
             {
                 _arg_4.lineTo((_arg_1 + _local_7), _local_6);
@@ -51,7 +51,7 @@ public class GraphicsHelper
             else
             {
                 _arg_4.lineTo(_arg_1, _local_6);
-            };
+            }
         }
 
 

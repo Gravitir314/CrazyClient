@@ -38,7 +38,7 @@ public class CreateNewCharacterRect extends CharacterRect
                 super.makeTaglineIcon();
                 super.makeTaglineText(new LineBuilder().setParams((_local_2 + " stars to go")));
                 taglineText.x = (taglineText.x + taglineIcon.width);
-            };
+            }
         }
 
         public function makeBitmap():void

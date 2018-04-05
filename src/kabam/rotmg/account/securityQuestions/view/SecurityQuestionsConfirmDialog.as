@@ -33,7 +33,7 @@ public class SecurityQuestionsConfirmDialog extends Frame {
                 _local_1 = (_local_1 + (('<font color="#7777EE">' + LineBuilder.getLocalizedStringFromKey(_local_3)) + "</font>\n"));
                 _local_1 = (_local_1 + (this.answerList[_local_2] + "\n\n"));
                 _local_2++;
-            };
+            }
             _local_1 = (_local_1 + LineBuilder.getLocalizedStringFromKey(TextKey.SECURITY_QUESTIONS_CONFIRM_TEXT));
             this.infoText = new TextFieldDisplayConcrete();
             this.infoText.setStringBuilder(new LineBuilder().setParams(_local_1));

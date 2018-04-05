@@ -59,7 +59,7 @@ public class ItemBox extends UIGridElement
                 this.graphics.beginFill(0x2D2D2D);
                 this.graphics.drawRect(0, 0, _arg_3, (this.itemSize + (2 * this.itemMargin)));
                 this.graphics.endFill();
-            };
+            }
         }
 
         public function clearBackground():void
@@ -93,7 +93,7 @@ public class ItemBox extends UIGridElement
                 this.label.text = (_arg_2 + "x");
                 this.label.x = 10;
                 this._itemBackground.x = (this._itemBackground.x + (this.label.x + 10));
-            };
+            }
             addChild(this.label);
         }
 
@@ -113,7 +113,7 @@ public class ItemBox extends UIGridElement
             if (!this.isBackgroundCleared)
             {
                 this.drawBackground(this.bitmapName, this.isLastElement, _arg_1);
-            };
+            }
             this.targetWidth = _arg_1;
             this.resizeLabel();
         }
@@ -123,7 +123,7 @@ public class ItemBox extends UIGridElement
             if (this.imageBitmap)
             {
                 this.imageBitmap.bitmapData.dispose();
-            };
+            }
             super.dispose();
         }
 

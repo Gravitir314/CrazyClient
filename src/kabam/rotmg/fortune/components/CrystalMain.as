@@ -50,7 +50,7 @@ public class CrystalMain extends Sprite
                 _local_3.filters = [new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix)];
                 this.crystalFrames.push(_local_3);
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 3)
             {
@@ -58,7 +58,7 @@ public class CrystalMain extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, GLOW_COLOR, false);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 7)
             {
@@ -66,7 +66,7 @@ public class CrystalMain extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, GLOW_COLOR, false);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 7)
             {
@@ -74,7 +74,7 @@ public class CrystalMain extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, GLOW_COLOR, false);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 5)
             {
@@ -82,7 +82,7 @@ public class CrystalMain extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, GLOW_COLOR, false);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             _local_2 = 0;
             while (_local_2 < 8)
             {
@@ -90,7 +90,7 @@ public class CrystalMain extends Sprite
                 _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, GLOW_COLOR, false);
                 this.crystalFrames.push(new Bitmap(_local_1));
                 _local_2++;
-            };
+            }
             this.reset();
             _local_1 = AssetLibrary.getImageFromSet("lofiCharBig", 32);
             _local_1 = TextureRedrawer.redraw(_local_1, this.size_, true, GLOW_COLOR, false);
@@ -168,7 +168,7 @@ public class CrystalMain extends Sprite
                     return;
                 default:
                     this.setAnimation(13, 7);
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void

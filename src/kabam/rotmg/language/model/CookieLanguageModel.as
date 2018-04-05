@@ -27,7 +27,7 @@ public class CookieLanguageModel implements LanguageModel
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function getLanguage():String
@@ -50,7 +50,7 @@ public class CookieLanguageModel implements LanguageModel
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         public function getLanguageFamily():String
@@ -65,7 +65,7 @@ public class CookieLanguageModel implements LanguageModel
             for (_local_1 in this.availableLanguages)
             {
                 _local_2.push(_local_1);
-            };
+            }
             return (_local_2);
         }
 
@@ -83,8 +83,8 @@ public class CookieLanguageModel implements LanguageModel
                 if (this.availableLanguages[_local_3] == _arg_1)
                 {
                     _local_2 = _local_3;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 

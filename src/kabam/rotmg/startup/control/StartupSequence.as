@@ -68,7 +68,7 @@ public class StartupSequence extends BaseTask
             else
             {
                 completeTask(true);
-            };
+            }
         }
 
         private function isAnotherTask():Boolean
@@ -94,7 +94,7 @@ public class StartupSequence extends BaseTask
             else
             {
                 completeTask(false, _arg_3);
-            };
+            }
         }
 
 

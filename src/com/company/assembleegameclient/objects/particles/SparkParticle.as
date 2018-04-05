@@ -29,7 +29,7 @@ package com.company.assembleegameclient.objects.particles
             if (this.timeLeft_ <= 0)
             {
                 return (false);
-            };
+            }
             x_ = (x_ + ((this.dx_ * _arg_2) / 1000));
             y_ = (y_ + ((this.dy_ * _arg_2) / 1000));
             setSize(((this.timeLeft_ / this.lifetime_) * this.initialSize_));

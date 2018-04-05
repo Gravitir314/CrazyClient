@@ -72,7 +72,7 @@ public class ReskinPanel extends Panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
             {
                 this.reskin.dispatch();
-            };
+            }
         }
 
 

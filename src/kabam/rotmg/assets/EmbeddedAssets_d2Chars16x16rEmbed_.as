@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_d2Chars16x16rEmbed_()
         {
             super();
-            return;
+
         }
     }
 }

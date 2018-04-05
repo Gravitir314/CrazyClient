@@ -38,13 +38,13 @@ public class WallChooser extends Chooser
             if (!_arg_2)
             {
                 removeElements();
-            };
+            }
             this.lastSearch = _arg_1;
             var _local_8:Vector.<String> = new Vector.<String>();
             if (_arg_1 != "")
             {
                 _local_7 = new RegExp(_arg_1, "gix");
-            };
+            }
             var _local_9:Dictionary = GroupDivider.GROUPS["Walls"];
             for each (_local_4 in _local_9)
             {
@@ -52,8 +52,8 @@ public class WallChooser extends Chooser
                 if (((_local_7 == null) || (_local_3.search(_local_7) >= 0)))
                 {
                     _local_8.push(_local_3);
-                };
-            };
+                }
+            }
             _local_8.sort(MoreStringUtil.cmp);
             for each (_local_3 in _local_8)
             {
@@ -67,9 +67,9 @@ public class WallChooser extends Chooser
                 else
                 {
                     _local_6 = this.cache[_local_5];
-                };
+                }
                 addElement(_local_6);
-            };
+            }
             scrollBar_.setIndicatorSize(HEIGHT, elementSprite_.height, true);
         }
 

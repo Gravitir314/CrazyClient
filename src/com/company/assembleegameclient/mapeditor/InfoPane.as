@@ -76,7 +76,7 @@ public class InfoPane extends Sprite
             if (((_local_2.width > 1) || (_local_2.height > 1)))
             {
                 this.rectText_.text = (this.rectText_.text + ((("\nRect: " + _local_2.width) + ", ") + _local_2.height));
-            };
+            }
             this.rectText_.useTextDimensions();
             var _local_3:METile = this.meMap_.getTile(_local_2.x, _local_2.y);
             var _local_4:Vector.<int> = ((_local_3 == null) ? Layer.EMPTY_TILE : _local_3.types_);

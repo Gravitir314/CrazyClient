@@ -24,7 +24,7 @@ public class DeferredQueueSignal extends Signal
             if (this.log)
             {
                 this.data.push(_args);
-            };
+            }
             super.dispatch.apply(this, _args);
         }
 
@@ -34,7 +34,7 @@ public class DeferredQueueSignal extends Signal
             while (this.data.length > 0)
             {
                 _arg_1.apply(this, this.data.shift());
-            };
+            }
             this.log = false;
             return (_local_2);
         }
@@ -50,11 +50,11 @@ public class DeferredQueueSignal extends Signal
             {
                 _local_2 = super.addOnce(_arg_1);
                 this.log = false;
-            };
+            }
             while (this.data.length > 0)
             {
                 this.data.shift();
-            };
+            }
             return (_local_2);
         }
 

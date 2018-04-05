@@ -47,11 +47,11 @@ public class CharacterSkinListView extends Sprite
             if (!_arg_1)
             {
                 _local_3 = (_local_3 + VerticalScrollingList.SCROLLBAR_GUTTER);
-            };
+            }
             for each (_local_2 in this.items)
             {
                 _local_2.setWidth(_local_3);
-            };
+            }
         }
 
         public function getListHeight():Number

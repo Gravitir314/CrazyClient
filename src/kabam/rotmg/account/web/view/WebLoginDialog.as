@@ -72,7 +72,7 @@ public class WebLoginDialog extends Frame
             if (_arg_1.keyCode == KeyCodes.ENTER)
             {
                 this.onSignInSub();
-            };
+            }
         }
 
         private function onCancel(_arg_1:MouseEvent):void
@@ -94,7 +94,7 @@ public class WebLoginDialog extends Frame
                 _local_1.username = this.email.text();
                 _local_1.password = this.password.text();
                 this.signIn.dispatch(_local_1);
-            };
+            }
         }
 
         private function isPasswordValid():Boolean
@@ -103,7 +103,7 @@ public class WebLoginDialog extends Frame
             if (!_local_1)
             {
                 this.password.setError(TextKey.WEB_LOGIN_DIALOG_PASSWORD_ERROR);
-            };
+            }
             return (_local_1);
         }
 
@@ -113,7 +113,7 @@ public class WebLoginDialog extends Frame
             if (!_local_1)
             {
                 this.email.setError(TextKey.WEBLOGINDIALOG_EMAIL_ERROR);
-            };
+            }
             return (_local_1);
         }
 

@@ -48,11 +48,11 @@ public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask
             {
                 completeTask(true);
                 reset();
-            };
+            }
             if ((((!("production".toLowerCase() == "dev")) && (!(this.updateCooldown == 0))) && (this.numUpdateAttempts >= 2)))
             {
                 this.updateCooldown = 0;
-            };
+            }
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void
@@ -64,7 +64,7 @@ public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask
             else
             {
                 this.onNewsRequestError(_arg_2);
-            };
+            }
             completeTask(_arg_1, _arg_2);
             reset();
         }
@@ -77,7 +77,7 @@ public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask
             for each (_local_2 in _local_4)
             {
                 _local_3.push(this.returnNewsCellVO(_local_2));
-            };
+            }
             this.model.updateNews(_local_3);
         }
 

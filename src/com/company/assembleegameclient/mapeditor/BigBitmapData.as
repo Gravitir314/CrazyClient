@@ -45,9 +45,9 @@ public class BigBitmapData
                     _local_7 = Math.min(CHUNK_SIZE, (this.height_ - (_local_5 * CHUNK_SIZE)));
                     this.chunks_[(_local_8 + (_local_5 * this.maxChunkX_))] = new BitmapDataSpy(_local_6, _local_7, _arg_3, this.fillColor_);
                     _local_5++;
-                };
+                }
                 _local_8++;
-            };
+            }
         }
 
         public function copyTo(_arg_1:BitmapData, _arg_2:Rectangle, _arg_3:Rectangle):void
@@ -75,9 +75,9 @@ public class BigBitmapData
                     _local_6 = new Rectangle((_arg_3.x - (_local_14 * CHUNK_SIZE)), (_arg_3.y - (_local_4 * CHUNK_SIZE)), _arg_3.width, _arg_3.height);
                     _local_5.draw(_arg_1, _local_13, null, null, _local_6, false);
                     _local_4++;
-                };
+                }
                 _local_14++;
-            };
+            }
         }
 
         public function copyFrom(_arg_1:Rectangle, _arg_2:BitmapData, _arg_3:Rectangle):void
@@ -104,9 +104,9 @@ public class BigBitmapData
                     _local_13.scale(_local_6, _local_7);
                     _arg_2.draw(_local_5, _local_13, null, null, _arg_3, false);
                     _local_4++;
-                };
+                }
                 _local_14++;
-            };
+            }
         }
 
         public function erase(_arg_1:Rectangle):void
@@ -131,9 +131,9 @@ public class BigBitmapData
                     _local_8.bottom = (_arg_1.bottom - (_local_2 * CHUNK_SIZE));
                     _local_3.fillRect(_local_8, this.fillColor_);
                     _local_2++;
-                };
+                }
                 _local_9++;
-            };
+            }
         }
 
         public function getDebugSprite():Sprite
@@ -154,9 +154,9 @@ public class BigBitmapData
                     _local_3.y = (_local_1 * CHUNK_SIZE);
                     _local_5.addChild(_local_3);
                     _local_1++;
-                };
+                }
                 _local_4++;
-            };
+            }
             return (_local_5);
         }
 

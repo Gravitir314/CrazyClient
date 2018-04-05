@@ -29,7 +29,7 @@ public class ParticleEffect extends GameObject
             if (((((Parameters.data_["AntiLag"]) && (!(_arg_1.id == "Vent"))) && (!(_arg_1.id == "Vortex"))) || (((Parameters.data_["noParticlesMaster"]) && (!(_arg_1.id == "Vent"))) && (!(_arg_1.id == "Vortex")))))
             {
                 return (null);
-            };
+            }
             switch (_arg_1.id)
             {
                 case "Healing":
@@ -52,7 +52,7 @@ public class ParticleEffect extends GameObject
                     return (new VortexEffect(_arg_2, _arg_1));
                 case "CustomParticles":
                     return (ParticleGenerator.attachParticleGenerator(_arg_1, _arg_2));
-            };
+            }
             return (null);
         }
 
@@ -62,7 +62,7 @@ public class ParticleEffect extends GameObject
             if (this.reducedDrawEnabled)
             {
                 return (this.runEasyRendering(_arg_1, _arg_2));
-            };
+            }
             return (this.runNormalRendering(_arg_1, _arg_2));
         }
 

@@ -50,7 +50,7 @@ public class RequestAppInitTask extends BaseTask
             else
             {
                 this.onPolicyError();
-            };
+            }
             completeTask(_arg_1, _arg_2);
         }
 
@@ -59,7 +59,7 @@ public class RequestAppInitTask extends BaseTask
             if (_arg_1 != null)
             {
                 DynamicSettings.xml = _arg_1;
-            };
+            }
         }
 
         private function onPolicyError():void

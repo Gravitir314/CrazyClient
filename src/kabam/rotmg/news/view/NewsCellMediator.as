@@ -51,7 +51,7 @@ public class NewsCellMediator extends Mediator
                 case NewsCellLinkType.OPENS_SKIN:
                     this.openSkinSignal.dispatch(_arg_1.linkDetail);
                     return;
-            };
+            }
         }
 
 

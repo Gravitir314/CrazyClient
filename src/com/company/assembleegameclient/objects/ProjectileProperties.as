@@ -54,23 +54,23 @@ public class ProjectileProperties
             {
                 this.minDamage_ = int(_arg_1.MinDamage);
                 this.maxDamage_ = int(_arg_1.MaxDamage);
-            };
+            }
             for each (_local_2 in _arg_1.ConditionEffect)
             {
                 if (this.effects_ == null)
                 {
                     this.effects_ = new Vector.<uint>();
-                };
+                }
                 this.effects_.push(ConditionEffect.getConditionEffectFromName(String(_local_2)));
                 if (_local_2.attribute("target") == "1")
                 {
                     if (this.isPetEffect_ == null)
                     {
                         this.isPetEffect_ = new Dictionary();
-                    };
+                    }
                     this.isPetEffect_[ConditionEffect.getConditionEffectFromName(String(_local_2))] = true;
-                };
-            };
+                }
+            }
             this.multiHit_ = _arg_1.hasOwnProperty("MultiHit");
             this.passesCover_ = _arg_1.hasOwnProperty("PassesCover");
             this.armorPiercing_ = _arg_1.hasOwnProperty("ArmorPiercing");
@@ -78,16 +78,16 @@ public class ProjectileProperties
             if (_arg_1.ParticleTrail.hasOwnProperty("@intensity"))
             {
                 this.particleTrailIntensity_ = (Number(_arg_1.ParticleTrail.@intensity) * 100);
-            };
+            }
             if (_arg_1.ParticleTrail.hasOwnProperty("@lifetimeMS"))
             {
                 this.particleTrailLifetimeMS = Number(_arg_1.ParticleTrail.@lifetimeMS);
-            };
+            }
             this.particleTrailColor_ = ((this.particleTrail_) ? Number(_arg_1.ParticleTrail) : Number(0xFF00FF));
             if (this.particleTrailColor_ == 0)
             {
                 this.particleTrailColor_ = 0xFF00FF;
-            };
+            }
             this.wavy_ = _arg_1.hasOwnProperty("Wavy");
             this.parametric_ = _arg_1.hasOwnProperty("Parametric");
             this.boomerang_ = _arg_1.hasOwnProperty("Boomerang");

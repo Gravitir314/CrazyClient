@@ -25,7 +25,7 @@ public class CommandQueue
             if (this.currPos == 0)
             {
                 return;
-            };
+            }
             this.list_[--this.currPos].unexecute();
         }
 
@@ -34,7 +34,7 @@ public class CommandQueue
             if (this.currPos == this.list_.length)
             {
                 return;
-            };
+            }
             this.list_[this.currPos++].execute();
         }
 

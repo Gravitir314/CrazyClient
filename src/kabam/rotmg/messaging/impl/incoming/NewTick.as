@@ -34,18 +34,18 @@ public class NewTick extends IncomingMessage
             {
                 FreeList.deleteObject(this.statuses_[_local_2]);
                 _local_2++;
-            };
+            }
             this.statuses_.length = Math.min(_local_3, this.statuses_.length);
             while (this.statuses_.length < _local_3)
             {
                 this.statuses_.push((FreeList.newObject(ObjectStatusData) as ObjectStatusData));
-            };
+            }
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
                 this.statuses_[_local_2].parseFromInput(_arg_1);
                 _local_2++;
-            };
+            }
         }
 
         override public function toString():String

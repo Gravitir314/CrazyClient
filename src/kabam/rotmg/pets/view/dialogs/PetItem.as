@@ -54,7 +54,7 @@ public class PetItem extends Sprite implements Disableable
             if (this.backgroundGraphic)
             {
                 removeChild(this.backgroundGraphic);
-            };
+            }
             this.backgroundGraphic = PetItemBackground(this.itemBackgroundFactory.create(this.size, this.getCuts()));
             addChildAt(this.backgroundGraphic, 0);
         }
@@ -65,7 +65,7 @@ public class PetItem extends Sprite implements Disableable
             if (this.background != REGULAR)
             {
                 _local_1[CUT_STATES.indexOf(this.background)] = 1;
-            };
+            }
             return (_local_1);
         }
 

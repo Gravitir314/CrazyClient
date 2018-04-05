@@ -42,7 +42,7 @@ public class UseBuyPotionCommand
             if (this.player == null)
             {
                 return;
-            };
+            }
             this.potionId = this.vo.objectId;
             this.count = this.player.getPotionCount(this.potionId);
             this.potion = this.potInventoryModel.getPotionModel(this.potionId);
@@ -53,7 +53,7 @@ public class UseBuyPotionCommand
             else
             {
                 this.logger.info("Not safe to purchase potion");
-            };
+            }
         }
 
         private function canPurchasePotion():Boolean
@@ -71,7 +71,7 @@ public class UseBuyPotionCommand
             {
                 this.sendServerRequest();
                 SoundEffectLibrary.play("use_potion");
-            };
+            }
         }
 
         private function isPlayerStatMaxed():Boolean
@@ -79,11 +79,11 @@ public class UseBuyPotionCommand
             if (this.potionId == PotionInventoryModel.HEALTH_POTION_ID)
             {
                 return (this.player.hp_ >= this.player.maxHP_);
-            };
+            }
             if (this.potionId == PotionInventoryModel.MAGIC_POTION_ID)
             {
                 return (this.player.mp_ >= this.player.maxMP_);
-            };
+            }
             return (false);
         }
 
@@ -95,11 +95,11 @@ public class UseBuyPotionCommand
             if (_local_2 != -1)
             {
                 this.gsc.invSwapPotion(this.player, this.player, _local_2, this.potionId, this.player, (this.potionId - 2340), -1);
-            };
+            }
             if (this.player.getPotionCount(this.vo.objectId) == 0)
             {
                 this.potInventoryModel.getPotionModel(this.vo.objectId).purchasedPot();
-            };
+            }
         }
 
 

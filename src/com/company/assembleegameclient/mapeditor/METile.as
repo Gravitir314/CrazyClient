@@ -34,9 +34,9 @@ public class METile
                 if (this.types_[_local_1] != -1)
                 {
                     return (false);
-                };
+                }
                 _local_1++;
-            };
+            }
             return (true);
         }
 

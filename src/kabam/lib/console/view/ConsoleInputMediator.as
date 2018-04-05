@@ -54,7 +54,7 @@ public final class ConsoleInputMediator extends Mediator
             else
             {
                 this.logError(_arg_1);
-            };
+            }
         }
 
         private function logAction(_arg_1:String):void

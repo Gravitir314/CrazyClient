@@ -91,7 +91,7 @@ public class LegacyBuyButton extends BuyButton
                 _local_3 = ((this.prefix != "") ? this.lineBuilder.setParams(this.prefix, {"cost":_arg_1.toString()}) : this.staticStringBuilder.setString(_arg_1.toString()));
                 this.text.setStringBuilder(_local_3);
                 this.updateUI();
-            };
+            }
         }
 
         public function setStringBuilder(_arg_1:StringBuilder):void
@@ -118,7 +118,7 @@ public class LegacyBuyButton extends BuyButton
                 mouseEnabled = _arg_1;
                 filters = ((_arg_1) ? [] : [grayfilter]);
                 this.draw();
-            };
+            }
         }
 
         override public function setWidth(_arg_1:int):void
@@ -159,7 +159,7 @@ public class LegacyBuyButton extends BuyButton
                     break;
                 default:
                     this.icon.bitmapData = null;
-            };
+            }
             this.updateIconPosition();
         }
 
@@ -201,7 +201,7 @@ public class LegacyBuyButton extends BuyButton
             if (this.withOutLine)
             {
                 this.drawOutline(graphics);
-            };
+            }
         }
 
         private function getWidth():int

@@ -26,8 +26,8 @@ public class FreeList
                 if (_local_2.length > 0)
                 {
                     return (_local_2.pop());
-                };
-            };
+                }
+            }
             return (new (_arg_1)());
         }
 
@@ -38,7 +38,7 @@ public class FreeList
             {
                 _local_3 = new Vector.<Object>();
                 dict_[_arg_1] = _local_3;
-            };
+            }
             _local_3.push(_arg_2);
         }
 
@@ -48,7 +48,7 @@ public class FreeList
             if (((!(_local_2 == null)) && (_local_2.length > 0)))
             {
                 return (_local_2.pop());
-            };
+            }
             return (null);
         }
 
@@ -65,7 +65,7 @@ public class FreeList
             {
                 _local_3 = new Vector.<Object>();
                 dict_[_local_2] = _local_3;
-            };
+            }
             _local_3.push(_arg_1);
         }
 

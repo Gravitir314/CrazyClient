@@ -73,7 +73,7 @@ public class StatusBar extends Sprite
                 else
                 {
                     this.centerVertically(this.labelText_);
-                };
+                }
                 if (_arg_7)
                 {
                     this.labelText_.filters = [new DropShadowFilter(1, 0, 0, 1, 4, 4, 2)];
@@ -81,9 +81,9 @@ public class StatusBar extends Sprite
                 else
                 {
                     this.labelText_.filters = [new DropShadowFilter(0, 0, 0)];
-                };
+                }
                 addChild(this.labelText_);
-            };
+            }
             this.valueText_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF);
             this.valueText_.setBold(true);
             this.valueText_.filters = [new DropShadowFilter(0, 0, 0)];
@@ -110,7 +110,7 @@ public class StatusBar extends Sprite
             {
                 addEventListener(MouseEvent.ROLL_OVER, this.onMouseOver);
                 addEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
-            };
+            }
             barTextSignal.add(this.setBarText);
         }
 
@@ -135,11 +135,11 @@ public class StatusBar extends Sprite
             if (_arg_2 > 0)
             {
                 _arg_1 = Math.min(_arg_2, Math.max(0, _arg_1));
-            };
+            }
             if (((((_arg_1 == this.val_) && (_arg_2 == this.max_)) && (_arg_3 == this.boost_)) && (_arg_4 == this.maxMax_)))
             {
                 return;
-            };
+            }
             this.val_ = _arg_1;
             this.max_ = _arg_2;
             this.boost_ = _arg_3;
@@ -160,7 +160,7 @@ public class StatusBar extends Sprite
             if (this.boostText_ != null)
             {
                 this.boostText_.setColor(this.textColor_);
-            };
+            }
             this.valueText_.setColor(this.textColor_);
         }
 
@@ -176,7 +176,7 @@ public class StatusBar extends Sprite
             {
                 addEventListener(MouseEvent.ROLL_OVER, this.onMouseOver);
                 addEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
-            };
+            }
             this.internalDraw();
         }
 
@@ -194,12 +194,12 @@ public class StatusBar extends Sprite
                 if (this.boost_ > 0)
                 {
                     _local_1 = 6206769;
-                };
-            };
+                }
+            }
             if (this.textColor_ != _local_1)
             {
                 this.setTextColor(_local_1);
-            };
+            }
             graphics.beginFill(this.backColor_);
             graphics.drawRect(0, 0, this.w_, this.h_);
             graphics.endFill();
@@ -207,7 +207,7 @@ public class StatusBar extends Sprite
             {
                 this.colorSprite.graphics.beginFill(this.pulseBackColor);
                 this.colorSprite.graphics.drawRect(0, 0, this.w_, this.h_);
-            };
+            }
             this.colorSprite.graphics.beginFill(this.color_);
             if (this.max_ > 0)
             {
@@ -216,20 +216,20 @@ public class StatusBar extends Sprite
             else
             {
                 this.colorSprite.graphics.drawRect(0, 0, this.w_, this.h_);
-            };
+            }
             this.colorSprite.graphics.endFill();
             if (contains(this.valueText_))
             {
                 removeChild(this.valueText_);
-            };
+            }
             if (contains(this.boostText_))
             {
                 removeChild(this.boostText_);
-            };
+            }
             if ((((Parameters.data_.toggleBarText) || ((this.mouseOver_) && (this.h_ > 4))) || (this.forceNumText_)))
             {
                 this.drawWithMouseOver();
-            };
+            }
         }
 
         public function drawWithMouseOver():void
@@ -242,8 +242,8 @@ public class StatusBar extends Sprite
                 if (((this.level_ >= 20) && (_local_1 > 0)))
                 {
                     _local_2 = (_local_2 + ("|" + Math.ceil((_local_1 / 5)).toString()));
-                };
-            };
+                }
+            }
             if (this.max_ > 0)
             {
                 this.valueText_.setStringBuilder(this.valueTextStringBuilder_.setString((((this.val_ + "/") + this.max_) + _local_2)));
@@ -251,13 +251,13 @@ public class StatusBar extends Sprite
             else
             {
                 this.valueText_.setStringBuilder(this.valueTextStringBuilder_.setString(("" + this.val_)));
-            };
+            }
             if (!contains(this.valueText_))
             {
                 this.valueText_.mouseEnabled = false;
                 this.valueText_.mouseChildren = false;
                 addChild(this.valueText_);
-            };
+            }
             if (this.boost_ != 0)
             {
                 this.boostText_.setStringBuilder(this.valueTextStringBuilder_.setString((((" (" + ((this.boost_ > 0) ? "+" : "")) + this.boost_.toString()) + ")")));
@@ -266,7 +266,7 @@ public class StatusBar extends Sprite
                     this.boostText_.mouseEnabled = false;
                     this.boostText_.mouseChildren = false;
                     addChild(this.boostText_);
-                };
+                }
                 this.valueText_.x = ((this.w_ / 2) - ((this.valueText_.width + this.boostText_.width) / 2));
                 this.boostText_.x = (this.valueText_.x + this.valueText_.width);
             }
@@ -276,8 +276,8 @@ public class StatusBar extends Sprite
                 if (contains(this.boostText_))
                 {
                     removeChild(this.boostText_);
-                };
-            };
+                }
+            }
         }
 
         public function showMultiplierText():void
@@ -293,7 +293,7 @@ public class StatusBar extends Sprite
             if (this.multiplierIcon.parent)
             {
                 removeChild(this.multiplierIcon);
-            };
+            }
         }
 
         public function startPulse(_arg_1:Number, _arg_2:Number, _arg_3:Number):void
@@ -322,9 +322,9 @@ public class StatusBar extends Sprite
                         this.colorSprite.alpha = 1;
                         this.internalDraw();
                         removeEventListener(Event.ENTER_FRAME, this.onPulse);
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.colorSprite.alpha = (this.colorSprite.alpha + (this.speed * this.direction));
         }
 

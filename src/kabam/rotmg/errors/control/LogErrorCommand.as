@@ -24,7 +24,7 @@ public class LogErrorCommand
             if (((this.event["error"]) && (this.event["error"] is Error)))
             {
                 this.logErrorObject(this.event["error"]);
-            };
+            }
         }
 
         private function logErrorObject(_arg_1:Error):void

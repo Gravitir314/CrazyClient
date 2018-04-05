@@ -142,7 +142,7 @@ public class MapUserInput
                 this.gs_.map.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
                 this.gs_.stage.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
                 this.gs_.stage.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
-            };
+            }
         }
 
         public function clearInput():void
@@ -166,7 +166,7 @@ public class MapUserInput
             {
                 this.enablePlayerInput_ = _arg_1;
                 this.clearInput();
-            };
+            }
         }
 
         private function onAddedToStage(_arg_1:Event):void
@@ -188,7 +188,7 @@ public class MapUserInput
             if ((((this.gs_) && (this.gs_.map)) && (this.gs_.map.player_)))
             {
                 this.gs_.map.player_.mapLightSpeed = (!(this.gs_.map.player_.mapLightSpeed));
-            };
+            }
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -224,33 +224,33 @@ public class MapUserInput
             if (((!(this.gs_.hudView == null)) && (this.gs_.mouseX >= this.gs_.hudView.x)))
             {
                 return;
-            };
+            }
             if (optionsOpen)
             {
                 return;
-            };
+            }
             this.mouseDown_ = true;
             var _local_7:Player = this.gs_.map.player_;
             if (_local_7 == null)
             {
                 return;
-            };
+            }
             if (!this.enablePlayerInput_)
             {
                 return;
-            };
+            }
             if (_arg_1.shiftKey)
             {
                 _local_3 = _local_7.equipment_[1];
                 if (_local_3 == -1)
                 {
                     return;
-                };
+                }
                 _local_4 = ObjectLibrary.xmlLibrary_[_local_3];
                 if (((_local_4 == null) || (_local_4.hasOwnProperty("EndMpCost"))))
                 {
                     return;
-                };
+                }
                 if (_local_7.isUnstable())
                 {
                     _local_5 = ((Math.random() * 600) - 300);
@@ -260,20 +260,20 @@ public class MapUserInput
                 {
                     _local_5 = this.gs_.map.mouseX;
                     _local_6 = this.gs_.map.mouseY;
-                };
+                }
                 if (Parameters.isGpuRender())
                 {
                     if ((((_arg_1.currentTarget == _arg_1.target) || (_arg_1.target == this.gs_.map)) || (_arg_1.target == this.gs_)))
                     {
                         _local_7.useAltWeapon(_local_5, _local_6, UseType.START_USE);
-                    };
+                    }
                 }
                 else
                 {
                     _local_7.useAltWeapon(_local_5, _local_6, UseType.START_USE);
-                };
+                }
                 return;
-            };
+            }
             if (Parameters.isGpuRender())
             {
                 if (((((_arg_1.currentTarget == _arg_1.target) || (_arg_1.target == this.gs_.map)) || (_arg_1.target == this.gs_)) || (_arg_1.currentTarget == this.gs_.chatBox_.list)))
@@ -283,12 +283,12 @@ public class MapUserInput
                 else
                 {
                     return;
-                };
+                }
             }
             else
             {
                 _local_2 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
-            };
+            }
             if (_local_7.isUnstable())
             {
                 _local_7.attemptAttackAngle((Math.random() * 360));
@@ -296,7 +296,7 @@ public class MapUserInput
             else
             {
                 _local_7.attemptAttackAngle(_local_2);
-            };
+            }
         }
 
         public function onMouseUp(_arg_1:MouseEvent):void
@@ -306,7 +306,7 @@ public class MapUserInput
             if (_local_2 == null)
             {
                 return;
-            };
+            }
             _local_2.isShooting = false;
         }
 
@@ -319,7 +319,7 @@ public class MapUserInput
             else
             {
                 this.miniMapZoom.dispatch(MiniMapZoomSignal.OUT);
-            };
+            }
         }
 
         private function onEnterFrame(_arg_1:Event):void
@@ -339,9 +339,9 @@ public class MapUserInput
                     {
                         _local_3 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
                         _local_2.attemptAttackAngle(_local_3);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function handleAutoAbil(_arg_1:Player):Boolean
@@ -349,16 +349,16 @@ public class MapUserInput
             if (!((((_arg_1.objectType_ == 0x0300) || (_arg_1.objectType_ == 797)) || (_arg_1.objectType_ == 799)) || ((_arg_1.objectType_ == 784) && (Parameters.data_.priestAA))))
             {
                 return (false);
-            };
+            }
             if (this.spaceSpam >= getTimer())
             {
                 if (_arg_1.mapAutoAbil)
                 {
                     _arg_1.mapAutoAbil = false;
                     _arg_1.notifyPlayer("Auto Ability: Disabled", 0xFF00, 1500);
-                };
+                }
                 return (true);
-            };
+            }
             this.spaceSpam = (getTimer() + 500);
             switch (_arg_1.equipment_[1])
             {
@@ -394,8 +394,8 @@ public class MapUserInput
                         _arg_1.mapAutoAbil = (!(_arg_1.mapAutoAbil));
                         _arg_1.notifyPlayer(((_arg_1.mapAutoAbil) ? "Auto Ability: Enabled" : "Auto Ability: Disabled"), 0xFF00, 1500);
                         return (true);
-                    };
-            };
+                    }
+            }
             return (false);
         }
 
@@ -407,15 +407,15 @@ public class MapUserInput
                 if (_arg_1 == _local_2)
                 {
                     return (true);
-                };
-            };
+                }
+            }
             if ((((Parameters.data_.tombHack) && (_arg_1 >= 3366)) && (_arg_1 <= 3368)))
             {
                 if (_arg_1 != Parameters.data_.curBoss)
                 {
                     return (true);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -436,9 +436,9 @@ public class MapUserInput
                     {
                         _local_6 = _local_4;
                         _local_2 = _local_3;
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (_local_2 == null)
             {
                 _arg_1.notifyPlayer("No targets nearby!", 0xFF00, 1500);
@@ -455,14 +455,14 @@ public class MapUserInput
                     if (((_arg_1.objectType_ == 798) || (_arg_1.equipment_[1] == 5139)))
                     {
                         _local_7 = 0.016;
-                    };
+                    }
                     if (_arg_1.equipment_[1] == 3395)
                     {
                         _local_7 = 0.014;
-                    };
+                    }
                     this.aimAt(_arg_1, _arg_1.leadPos(new Vector3D(_arg_1.x_, _arg_1.y_), new Vector3D(_local_2.x_, _local_2.y_), new Vector3D(_local_2.moveVec_.x, _local_2.moveVec_.y), _local_7));
-                };
-            };
+                }
+            }
         }
 
         private function aimAt(_arg_1:Player, _arg_2:Vector3D):void
@@ -471,7 +471,7 @@ public class MapUserInput
             {
                 _arg_2.x = (int(_arg_2.x) + 0.5);
                 _arg_2.y = (int(_arg_2.y) + 0.5);
-            };
+            }
             this.gs_.gsc_.useItem(getTimer(), _arg_1.objectId_, 1, _arg_1.equipment_[1], _arg_2.x, _arg_2.y, UseType.START_USE);
             _arg_1.doShoot(getTimer(), _arg_1.equipment_[1], ObjectLibrary.xmlLibrary_[_arg_1.equipment_[1]], Math.atan2((_arg_2.y - _arg_1.y_), (_arg_2.x - _arg_1.x_)), false);
         }
@@ -485,11 +485,11 @@ public class MapUserInput
             {
                 this.handlePerfectAim(_arg_1);
                 return (true);
-            };
+            }
             if (!((_arg_1.objectType_ == 782) || (_arg_1.objectType_ == 800)))
             {
                 return (false);
-            };
+            }
             for each (_local_3 in this.gs_.map.goDict_)
             {
                 if ((((_local_3.props_.isEnemy_) && (_local_3.maxHP_ >= 1000)) && (!(this.isIgnored(_local_3.objectType_)))))
@@ -500,10 +500,10 @@ public class MapUserInput
                         if (((_local_2 == null) || (_local_3.maxHP_ > _local_2.maxHP_)))
                         {
                             _local_2 = _local_3;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             if (_local_2 == null)
             {
                 _arg_1.notifyPlayer("No targets nearby!", 0xFF00, 1500);
@@ -524,9 +524,9 @@ public class MapUserInput
                     else
                     {
                         this.gs_.gsc_.useItem(getTimer(), _arg_1.objectId_, 1, _arg_1.equipment_[1], _local_2.x_, _local_2.y_, UseType.START_USE);
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (true);
         }
 
@@ -536,7 +536,7 @@ public class MapUserInput
             if (_arg_2.hasOwnProperty("Cooldown"))
             {
                 _local_3 = (Number(_arg_2.Cooldown) * 1000);
-            };
+            }
             _arg_1.lastAltAttack_ = getTimer();
             _arg_1.nextAltAttack_ = (getTimer() + _local_3);
         }
@@ -546,7 +546,7 @@ public class MapUserInput
             if (_arg_1.objectType_ != 806)
             {
                 return (false);
-            };
+            }
             this.ninjaTapped = (!(this.ninjaTapped));
             if (this.ninjaTapped)
             {
@@ -555,7 +555,7 @@ public class MapUserInput
             else
             {
                 _arg_1.useAltWeapon(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.END_USE);
-            };
+            }
             return (true);
         }
 
@@ -568,40 +568,40 @@ public class MapUserInput
             if (_arg_1 == null)
             {
                 return;
-            };
+            }
             if (((Parameters.data_.autoAbil) && (this.handleAutoAbil(_arg_1))))
             {
                 return;
-            };
+            }
             if (_arg_1.nextAltAttack_ >= getTimer())
             {
                 return;
-            };
+            }
             if (int(_arg_2.MpCost) > _arg_1.mp_)
             {
                 return;
-            };
+            }
             if (((Parameters.data_.perfectBomb) && (this.handlePerfectBomb(_arg_1))))
             {
                 this.handleCooldown(_arg_1, _arg_2);
                 return;
-            };
+            }
             if (((Parameters.data_.ninjaTap) && (this.ninjaTap(_arg_1))))
             {
                 return;
-            };
+            }
             if (((this.maxprism) && ((_arg_1.objectType_ == 804) || (_arg_1.equipment_[1] == 2650))))
             {
                 _local_3 = Math.atan2(this.gs_.map.mouseX, this.gs_.map.mouseY);
                 if (_local_3 < 0)
                 {
                     _local_3 = (_local_3 + (Math.PI * 2));
-                };
+                }
                 _local_4 = ((13 * 50) * Math.sin(_local_3));
                 _local_5 = ((13 * 50) * Math.cos(_local_3));
                 _arg_1.useAltWeapon(_local_4, _local_5, UseType.START_USE);
                 return;
-            };
+            }
             if (((_arg_1.isUnstable()) && (Parameters.data_.dbUnstableAbil)))
             {
                 _arg_1.useAltWeapon(((Math.random() * 600) - 300), ((Math.random() * 600) - 325), UseType.START_USE);
@@ -609,7 +609,7 @@ public class MapUserInput
             else
             {
                 _arg_1.useAltWeapon(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.START_USE);
-            };
+            }
         }
 
         private function onKeyDown(_arg_1:KeyboardEvent):void
@@ -655,8 +655,8 @@ public class MapUserInput
                     if (this.gs_.stage.focus != null)
                     {
                         return;
-                    };
-            };
+                    }
+            }
             switch (_arg_1.keyCode)
             {
                 case Parameters.data_.moveUp:
@@ -689,20 +689,20 @@ public class MapUserInput
                                 {
                                     _local_3 = _local_9;
                                     _local_8 = _local_2.name_;
-                                };
-                            };
-                        };
+                                }
+                            }
+                        }
                         if (_local_8 == _local_21.name_)
                         {
                             _local_21.notifyPlayer("You are the closest!", 0xFF00, 1500);
                             break;
-                        };
+                        }
                         this.gs_.gsc_.teleport(_local_8);
                     }
                     else
                     {
                         _local_21.notifyPlayer("You have no quest!", 0xFF00, 1500);
-                    };
+                    }
                     break;
                 case Parameters.data_.enterPortal:
                     _local_3 = int.MAX_VALUE;
@@ -716,18 +716,18 @@ public class MapUserInput
                             {
                                 _local_3 = _local_10;
                                 _local_5 = _local_2.objectId_;
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                     if (_local_5 == -1)
                     {
                         _local_21.notifyPlayer("No portals to enter!", 0xFF00, 1500);
                         break;
-                    };
+                    }
                     this.gs_.gsc_.usePortal(_local_5);
                     break;
                 case Parameters.data_.incFinder:
-                    _local_6 = new Array();
+                    _local_6 = [];
                     for each (_local_2 in this.gs_.map.goDict_)
                     {
                         if ((_local_2 is Player))
@@ -739,26 +739,26 @@ public class MapUserInput
                                 {
                                     _local_6.push(_local_11.name_);
                                     break;
-                                };
-                            };
-                        };
-                    };
+                                }
+                            }
+                        }
+                    }
                     if (_local_6.length == 0)
                     {
                         _local_21.notifyPlayer("No one has an inc!", 0xFF00, 1500);
                         break;
-                    };
+                    }
                     _local_13 = 0;
                     _local_14 = "Inc Holders:\n";
                     for each (_local_15 in _local_6)
                     {
                         _local_14 = ((_local_14 + _local_15) + "\n");
                         _local_13++;
-                    };
+                    }
                     _local_21.notifyPlayer(_local_14, 0xFF00, (1000 + (500 * _local_13)));
                     break;
                 case Parameters.data_.finderKey:
-                    _local_6 = new Array();
+                    _local_6 = [];
                     for each (_local_2 in this.gs_.map.goDict_)
                     {
                         if ((_local_2 is Player))
@@ -770,22 +770,22 @@ public class MapUserInput
                                 {
                                     _local_6.push(_local_11.name_);
                                     break;
-                                };
-                            };
-                        };
-                    };
+                                }
+                            }
+                        }
+                    }
                     if (_local_6.length == 0)
                     {
                         _local_21.notifyPlayer("No one has what you're looking for!", 0xFF00, 1500);
                         break;
-                    };
+                    }
                     _local_13 = 0;
                     _local_14 = "Names:\n";
                     for each (_local_15 in _local_6)
                     {
                         _local_14 = ((_local_14 + _local_15) + "\n");
                         _local_13++;
-                    };
+                    }
                     _local_21.notifyPlayer(_local_14, 0xFF00, (1000 + (500 * _local_13)));
                     break;
                 case Parameters.data_.rotateLeft:
@@ -834,13 +834,13 @@ public class MapUserInput
                     if (this.potionInventoryModel.getPotionModel(PotionInventoryModel.HEALTH_POTION_ID).available)
                     {
                         this.useBuyPotionSignal.dispatch(new UseBuyPotionVO(PotionInventoryModel.HEALTH_POTION_ID, UseBuyPotionVO.CONTEXTBUY));
-                    };
+                    }
                     break;
                 case Parameters.data_.useMagicPotion:
                     if (this.potionInventoryModel.getPotionModel(PotionInventoryModel.MAGIC_POTION_ID).available)
                     {
                         this.useBuyPotionSignal.dispatch(new UseBuyPotionVO(PotionInventoryModel.MAGIC_POTION_ID, UseBuyPotionVO.CONTEXTBUY));
-                    };
+                    }
                     break;
                 case Parameters.data_.miniMapZoomOut:
                     this.miniMapZoom.dispatch(MiniMapZoomSignal.OUT);
@@ -867,7 +867,7 @@ public class MapUserInput
                     else
                     {
                         this.closeDialogSignal.dispatch();
-                    };
+                    }
                     break;
                 case Parameters.data_.options:
                     _local_20 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
@@ -888,7 +888,7 @@ public class MapUserInput
                     else
                     {
                         this.gs_.hudView.toggleStats();
-                    };
+                    }
                     break;
                 case Parameters.data_.ReconRealm:
                     if (reconRealm != null)
@@ -904,7 +904,7 @@ public class MapUserInput
                         _local_16.setPort(2050);
                         _local_17 = new ReconnectEvent(_local_16, Parameters.data_.reconGID, false, this.gs_.gsc_.charId_, Parameters.data_.reconTime, Parameters.data_.reconKey, false);
                         this.gs_.dispatchEvent(_local_17);
-                    };
+                    }
                     break;
                 case Parameters.data_.ReconRandom:
                     if (reconVault != null)
@@ -914,7 +914,7 @@ public class MapUserInput
                         reconRandom.server_.name = "Random";
                         reconRandom.gameId_ = Parameters.RANDOM_REALM_GAMEID;
                         this.gs_.dispatchEvent(reconRandom);
-                    };
+                    }
                 case Parameters.data_.ReconDung:
                     if (reconDung != null)
                     {
@@ -922,7 +922,7 @@ public class MapUserInput
                         {
                             reconDung.charId_ = this.gs_.gsc_.charId_;
                             this.gs_.dispatchEvent(reconDung);
-                        };
+                        }
                     }
                     else
                     {
@@ -934,15 +934,15 @@ public class MapUserInput
                             _local_18.setPort(2050);
                             _local_19 = new ReconnectEvent(_local_18, Parameters.data_.dreconGID, false, this.gs_.gsc_.charId_, Parameters.data_.dreconTime, Parameters.data_.dreconKey, false);
                             this.gs_.dispatchEvent(_local_19);
-                        };
-                    };
+                        }
+                    }
                     break;
                 case Parameters.data_.ReconVault:
                     if (reconVault != null)
                     {
                         reconVault.charId_ = this.gs_.gsc_.charId_;
                         this.gs_.dispatchEvent(reconVault);
-                    };
+                    }
                     break;
                 case Parameters.data_.tpto:
                     this.gs_.gsc_.teleport(TextHandler.caller);
@@ -1015,7 +1015,7 @@ public class MapUserInput
                     if (Parameters.data_.curBoss > 3368)
                     {
                         Parameters.data_.curBoss = 3366;
-                    };
+                    }
                     Parameters.save();
                     _local_21.notifyPlayer(("Active boss: " + ObjectLibrary.typeToDisplayId_[Parameters.data_.curBoss]), 0xFF00, 1500);
                     break;
@@ -1157,11 +1157,11 @@ public class MapUserInput
                     _local_5 = Parameters.data_.dbPre3[0];
                     _local_3 = Parameters.data_.dbPre3[1];
                     break;
-            };
+            }
             if (_local_3 == 0)
             {
                 return;
-            };
+            }
             if (_arg_2 == -1)
             {
                 switch (_arg_1)
@@ -1178,7 +1178,7 @@ public class MapUserInput
                         Parameters.data_.dbPre3[2] = (!(Parameters.data_.dbPre3[2]));
                         _local_4 = Parameters.data_.dbPre3[2];
                         break;
-                };
+                }
             }
             else
             {
@@ -1198,7 +1198,7 @@ public class MapUserInput
                             Parameters.data_.dbPre3[2] = false;
                             _local_4 = Parameters.data_.dbPre3[2];
                             break;
-                    };
+                    }
                 }
                 else
                 {
@@ -1218,10 +1218,10 @@ public class MapUserInput
                                 Parameters.data_.dbPre3[2] = true;
                                 _local_4 = Parameters.data_.dbPre3[2];
                                 break;
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             while (_local_6 < 11)
             {
                 if ((_local_3 & (1 << _local_6)) != 0)
@@ -1261,15 +1261,15 @@ public class MapUserInput
                         case 10:
                             Parameters.data_.dbPetrify = _local_4;
                             break;
-                    };
-                };
+                    }
+                }
                 _local_6++;
-            };
+            }
             Parameters.save();
             if (_arg_2 != 0)
             {
                 this.gs_.map.player_.notifyPlayer(((_local_4) ? (_local_5 + ": On") : (_local_5 + ": Off")), ((_local_4) ? 0xFF0000 : 0xFF00), 1500);
-            };
+            }
         }
 
         private function selectAimMode():void
@@ -1283,7 +1283,7 @@ public class MapUserInput
             else
             {
                 _local_1 = ((Parameters.data_.aimMode + 1) % 3);
-            };
+            }
             switch (_local_1)
             {
                 case 1:
@@ -1294,7 +1294,7 @@ public class MapUserInput
                     break;
                 case 0:
                     _local_2 = "Aim Assist Mode: Closest to Cursor";
-            };
+            }
             this.gs_.map.player_.levelUpEffect(_local_2);
             Parameters.data_.aimMode = _local_1;
         }
@@ -1328,9 +1328,9 @@ public class MapUserInput
                     if (((!(Parameters.data_.ninjaTap)) && (!(inputting))))
                     {
                         this.gs_.map.player_.useAltWeapon(this.gs_.map.mouseX, this.gs_.map.mouseY, UseType.END_USE);
-                    };
+                    }
                     break;
-            };
+            }
             this.setPlayerMovement();
         }
 
@@ -1346,8 +1346,8 @@ public class MapUserInput
                 else
                 {
                     _local_1.setRelativeMovement(0, 0, 0);
-                };
-            };
+                }
+            }
         }
 
         private function useItem(_arg_1:int):void
@@ -1355,7 +1355,7 @@ public class MapUserInput
             if (this.tabStripModel.currentSelection == TabStripModel.BACKPACK)
             {
                 _arg_1 = (_arg_1 + GeneralConstants.NUM_INVENTORY_SLOTS);
-            };
+            }
             GameServerConnection.instance.useItem_new(this.gs_.map.player_, _arg_1);
         }
 
@@ -1373,7 +1373,7 @@ public class MapUserInput
                 this.gs_.gsc_.enableJitterWatcher();
                 this.gs_.gsc_.jitterWatcher_.y = stats_.height;
                 this.gs_.addChild(this.gs_.gsc_.jitterWatcher_);
-            };
+            }
         }
 
         private function toggleScreenShotMode():void
@@ -1388,7 +1388,7 @@ public class MapUserInput
             {
                 this.gs_.hudView.visible = true;
                 this.setTextBoxVisibility.dispatch(true);
-            };
+            }
         }
 
 

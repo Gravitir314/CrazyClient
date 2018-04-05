@@ -97,7 +97,7 @@ public class Parameters
             catch(error:Error)
             {
                 data_ = {};
-            };
+            }
             setDefaults();
             setTimerPhases();
             save();
@@ -110,11 +110,11 @@ public class Parameters
                 if (savedOptions_ != null)
                 {
                     savedOptions_.flush();
-                };
+                }
             }
             catch(error:Error)
             {
-            };
+            }
         }
 
         private static function setDefaultKey(_arg_1:String, _arg_2:uint):void
@@ -122,7 +122,7 @@ public class Parameters
             if (!data_.hasOwnProperty(_arg_1))
             {
                 data_[_arg_1] = _arg_2;
-            };
+            }
             keyNames_[_arg_1] = true;
         }
 
@@ -132,14 +132,14 @@ public class Parameters
             if (_arg_2 == 0)
             {
                 return;
-            };
+            }
             for (_local_3 in keyNames_)
             {
                 if (data_[_local_3] == _arg_2)
                 {
                     data_[_local_3] = KeyCodes.UNSET;
-                };
-            };
+                }
+            }
             data_[_arg_1] = _arg_2;
         }
 
@@ -148,7 +148,7 @@ public class Parameters
             if (!data_.hasOwnProperty(_arg_1))
             {
                 data_[_arg_1] = _arg_2;
-            };
+            }
         }
 
         public static function isGpuRender():Boolean
@@ -260,7 +260,7 @@ public class Parameters
             else
             {
                 setDefault("musicVolume", 0);
-            };
+            }
             if (((data_.hasOwnProperty("playSFX")) && (data_.playMusic == true)))
             {
                 setDefault("SFXVolume", 1);
@@ -268,7 +268,7 @@ public class Parameters
             else
             {
                 setDefault("SFXVolume", 0);
-            };
+            }
             setDefault("friendList", KeyCodes.UNSET);
             setDefault("tradeWithFriends", false);
             setDefault("chatFriend", false);

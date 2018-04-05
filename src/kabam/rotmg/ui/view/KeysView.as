@@ -39,7 +39,7 @@ public class KeysView extends Sprite
                 this.keys[_local_1].x = (12 + (40 * _local_1));
                 this.keys[_local_1].y = 12;
                 _local_1++;
-            };
+            }
         }
 
         public function showKey(_arg_1:Key):void
@@ -48,7 +48,7 @@ public class KeysView extends Sprite
             if (!contains(_local_2))
             {
                 addChild(_local_2);
-            };
+            }
         }
 
         public function hideKey(_arg_1:Key):void
@@ -57,7 +57,7 @@ public class KeysView extends Sprite
             if (contains(_local_2))
             {
                 removeChild(_local_2);
-            };
+            }
         }
 
 

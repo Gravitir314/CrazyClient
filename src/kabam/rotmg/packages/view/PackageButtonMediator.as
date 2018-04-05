@@ -40,7 +40,7 @@ public class PackageButtonMediator extends Mediator
             {
                 this.view.visible = false;
                 this.getPackageTask.start();
-            };
+            }
         }
 
         override public function destroy():void
@@ -48,7 +48,7 @@ public class PackageButtonMediator extends Mediator
             this.view.clicked.remove(this.onClicked);
             if (!this.dataSet)
             {
-            };
+            }
         }
 
         private function onUpdateDuration(_arg_1:int):void
@@ -65,7 +65,7 @@ public class PackageButtonMediator extends Mediator
             else
             {
                 this.view.setQuantity(_arg_1);
-            };
+            }
         }
 
         private function onDataChanged():void

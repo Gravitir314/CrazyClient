@@ -57,7 +57,7 @@ public class Tutorial extends Sprite
             for each (_local_2 in EmbeddedData.tutorialXML.Step)
             {
                 this.steps_.push(new Step(_local_2));
-            };
+            }
             addChild(this.boxesBack_);
             addChild(this.boxes_);
             _local_3 = this.darkBox_.graphics;
@@ -117,16 +117,16 @@ public class Tutorial extends Sprite
                                     {
                                         _local_9 = true;
                                         break;
-                                    };
-                                };
-                            };
+                                    }
+                                }
+                            }
                             if (!_local_9)
                             {
                                 _local_3 = false;
-                            };
+                            }
                             break;
-                    };
-                };
+                    }
+                }
                 if (!_local_3)
                 {
                     _local_2.satisfiedSince_ = 0;
@@ -136,21 +136,21 @@ public class Tutorial extends Sprite
                     if (_local_2.satisfiedSince_ == 0)
                     {
                         _local_2.satisfiedSince_ = getTimer();
-                    };
+                    }
                     _local_5 = (getTimer() - _local_2.satisfiedSince_);
                     for each (_local_6 in _local_2.uiDrawBoxes_)
                     {
                         _local_6.draw((5 * _local_13), this.boxes_.graphics, _local_5);
                         _local_6.draw((6 * _local_13), this.boxesBack_.graphics, _local_5);
-                    };
+                    }
                     for each (_local_7 in _local_2.uiDrawArrows_)
                     {
                         _local_7.draw((5 * _local_13), this.boxes_.graphics, _local_5);
                         _local_7.draw((6 * _local_13), this.boxesBack_.graphics, _local_5);
-                    };
-                };
+                    }
+                }
                 _local_12++;
-            };
+            }
         }
 
         public function doneAction(_arg_1:String):void
@@ -163,12 +163,12 @@ public class Tutorial extends Sprite
             if (this.currStepId_ >= this.steps_.length)
             {
                 return;
-            };
+            }
             var _local_7:Step = this.steps_[this.currStepId_];
             if (_arg_1 != _local_7.action_)
             {
                 return;
-            };
+            }
             for each (_local_2 in _local_7.reqs_)
             {
                 _local_3 = this.gs_.map.player_;
@@ -185,22 +185,22 @@ public class Tutorial extends Sprite
                                 {
                                     _local_4 = true;
                                     break;
-                                };
-                            };
-                        };
+                                }
+                            }
+                        }
                         if (!_local_4)
                         {
                             return;
-                        };
+                        }
                         break;
                     case EQUIP_REQUIREMENT:
                         if (_local_3.equipment_[_local_2.slot_] != _local_2.objectType_)
                         {
                             return;
-                        };
+                        }
                         break;
-                };
-            };
+                }
+            }
             this.currStepId_++;
             this.draw();
         }

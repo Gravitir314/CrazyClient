@@ -53,7 +53,7 @@ public class PetIcon extends Sprite implements TooltipAble, Disableable
             if (this.enabled)
             {
                 return (super.dispatchEvent(_arg_1));
-            };
+            }
             return (false);
         }
 
@@ -93,7 +93,7 @@ public class PetIcon extends Sprite implements TooltipAble, Disableable
             this.doShowTooltip = _arg_1;
             if (!_arg_1)
             {
-            };
+            }
         }
 
 

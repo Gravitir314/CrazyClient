@@ -104,7 +104,7 @@ public class ObjectLibrary
             {
                 dungeonsXMLLibrary_[currentDungeon][_arg_1] = _arg_2;
                 propsLibrary_[_arg_1].belonedDungeon = currentDungeon;
-            };
+            }
         }
 
         public static function parseFromXML(_arg_1:XML, _arg_2:Function=null):void
@@ -122,19 +122,19 @@ public class ObjectLibrary
                 if (_local_3.hasOwnProperty("DisplayId"))
                 {
                     _local_5 = _local_3.DisplayId;
-                };
+                }
                 if (_local_3.hasOwnProperty("Group"))
                 {
                     if (_local_3.Group == "Hexable")
                     {
                         hexTransforms_.push(_local_3);
-                    };
-                };
+                    }
+                }
                 _local_6 = int(_local_3.@type);
                 if (_local_3.hasOwnProperty("SlotType"))
                 {
                     itemLib.push(_local_4);
-                };
+                }
                 if (((_local_3.hasOwnProperty("PetBehavior")) || (_local_3.hasOwnProperty("PetAbility"))))
                 {
                     petXMLDataLibrary_[_local_6] = _local_3;
@@ -148,7 +148,7 @@ public class ObjectLibrary
                     if (_arg_2 != null)
                     {
                         (_arg_2(_local_6, _local_3));
-                    };
+                    }
                     if (String(_local_3.Class) == "Player")
                     {
                         playerClassAbbr_[_local_6] = String(_local_3.@id).substr(0, 2);
@@ -160,25 +160,25 @@ public class ObjectLibrary
                             {
                                 playerChars_[_local_7] = _local_3;
                                 _local_8 = true;
-                            };
+                            }
                             _local_7++;
-                        };
+                        }
                         if (!_local_8)
                         {
                             playerChars_.push(_local_3);
-                        };
-                    };
+                        }
+                    }
                     typeToTextureData_[_local_6] = textureDataFactory.create(_local_3);
                     if (_local_3.hasOwnProperty("Top"))
                     {
                         typeToTopTextureData_[_local_6] = textureDataFactory.create(XML(_local_3.Top));
-                    };
+                    }
                     if (_local_3.hasOwnProperty("Animation"))
                     {
                         typeToAnimationsData_[_local_6] = new AnimationsData(_local_3);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         public static function getIdFromType(_arg_1:int):String
@@ -187,7 +187,7 @@ public class ObjectLibrary
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (String(_local_2.@id));
         }
 
@@ -198,12 +198,12 @@ public class ObjectLibrary
             if (setLibrary_[_arg_1] != undefined)
             {
                 return (setLibrary_[_arg_1]);
-            };
+            }
             for each (_local_2 in EmbeddedData.skinsEquipmentSetsXML.EquipmentSet)
             {
                 _local_3 = int(_local_2.@type);
                 setLibrary_[_local_3] = _local_2;
-            };
+            }
             return (setLibrary_[_arg_1]);
         }
 
@@ -225,7 +225,7 @@ public class ObjectLibrary
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             var _local_3:String = _local_2.Class;
             var _local_4:Class = ((TYPE_MAP[_local_3]) || (makeClass(_local_3)));
             return (new _local_4(_local_2));
@@ -243,7 +243,7 @@ public class ObjectLibrary
             if (_local_2 == null)
             {
                 return (null);
-            };
+            }
             return (_local_2.getTexture());
         }
 
@@ -254,7 +254,7 @@ public class ObjectLibrary
             if (_local_3)
             {
                 return (_local_3);
-            };
+            }
             return (AssetLibrary.getImageFromSet(IMAGE_SET_NAME, IMAGE_ID));
         }
 
@@ -264,13 +264,13 @@ public class ObjectLibrary
             if (Parameters.itemTypes16.indexOf(_arg_1) != -1)
             {
                 _arg_2 = (_arg_2 * 0.5);
-            };
+            }
             var _local_7:TextureData = typeToTextureData_[_arg_1];
             var _local_8:BitmapData = ((_local_7) ? _local_7.mask_ : null);
             if (_local_8 == null)
             {
                 return (TextureRedrawer.redraw(_local_6, _arg_2, _arg_3, 0, _arg_4, _arg_5));
-            };
+            }
             var _local_9:XML = xmlLibrary_[_arg_1];
             var _local_10:int = ((_local_9.hasOwnProperty("Tex1")) ? int(_local_9.Tex1) : 0);
             var _local_11:int = ((_local_9.hasOwnProperty("Tex2")) ? int(_local_9.Tex2) : 0);
@@ -284,7 +284,7 @@ public class ObjectLibrary
             if (!_local_2.hasOwnProperty("Size"))
             {
                 return (100);
-            };
+            }
             return (int(_local_2.Size));
         }
 
@@ -294,7 +294,7 @@ public class ObjectLibrary
             if (!_local_2.hasOwnProperty("SlotType"))
             {
                 return (-1);
-            };
+            }
             return (int(_local_2.SlotType));
         }
 
@@ -304,7 +304,7 @@ public class ObjectLibrary
             if (_arg_1 == ItemConstants.NO_ITEM)
             {
                 return (false);
-            };
+            }
             var _local_4:XML = xmlLibrary_[_arg_1];
             var _local_5:int = int(_local_4.SlotType.toString());
             while (_local_3 < GeneralConstants.NUM_EQUIPMENT_SLOTS)
@@ -312,9 +312,9 @@ public class ObjectLibrary
                 if (_arg_2.slotTypes_[_local_3] == _local_5)
                 {
                     return (true);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (false);
         }
 
@@ -333,10 +333,10 @@ public class ObjectLibrary
                     if (_arg_2.slotTypes_[_local_5] == _local_4)
                     {
                         return (_local_5);
-                    };
+                    }
                     _local_5++;
-                };
-            };
+                }
+            }
             return (-1);
         }
 
@@ -346,25 +346,25 @@ public class ObjectLibrary
             if (((_arg_2 == null) || (_arg_2.slotTypes_ == null)))
             {
                 return (true);
-            };
+            }
             var _local_4:XML = xmlLibrary_[_arg_1];
             if (((_local_4 == null) || (!(_local_4.hasOwnProperty("SlotType")))))
             {
                 return (false);
-            };
+            }
             var _local_5:int = _local_4.SlotType;
             if (((_local_5 == ItemConstants.POTION_TYPE) || (_local_5 == ItemConstants.EGG_TYPE)))
             {
                 return (true);
-            };
+            }
             while (_local_3 < _arg_2.slotTypes_.length)
             {
                 if (_arg_2.slotTypes_[_local_3] == _local_5)
                 {
                     return (true);
-                };
+                }
                 _local_3++;
-            };
+            }
             return (false);
         }
 
@@ -389,12 +389,12 @@ public class ObjectLibrary
             if (((_local_5 == null) || (!(_local_5.hasOwnProperty("SlotType")))))
             {
                 return (null);
-            };
+            }
             var _local_6:int = _local_5.SlotType;
             if ((((_local_6 == ItemConstants.POTION_TYPE) || (_local_6 == ItemConstants.RING_TYPE)) || (_local_6 == ItemConstants.EGG_TYPE)))
             {
                 return (null);
-            };
+            }
             var _local_7:Vector.<String> = new Vector.<String>();
             for each (_local_2 in playerChars_)
             {
@@ -406,10 +406,10 @@ public class ObjectLibrary
                     {
                         _local_7.push(typeToDisplayId_[int(_local_2.@type)]);
                         break;
-                    };
+                    }
                     _local_4++;
-                };
-            };
+                }
+            }
             return (_local_7);
         }
 
@@ -419,15 +419,15 @@ public class ObjectLibrary
             if (_arg_2 == null)
             {
                 return (true);
-            };
+            }
             var _local_4:XML = xmlLibrary_[_arg_1];
             for each (_local_3 in _local_4.EquipRequirement)
             {
                 if (!playerMeetsRequirement(_local_3, _arg_2))
                 {
                     return (false);
-                };
-            };
+                }
+            }
             return (true);
         }
 
@@ -457,8 +457,8 @@ public class ObjectLibrary
                         return (_arg_2.wisdom_ >= _local_3);
                     case StatData.DEXTERITY_STAT:
                         return (_arg_2.dexterity_ >= _local_3);
-                };
-            };
+                }
+            }
             return (false);
         }
 
@@ -483,7 +483,7 @@ public class ObjectLibrary
                 _local_3 = new BitmapData(22, 22, true, 0);
                 _local_3.draw(_local_7, _local_5);
                 return (_local_3);
-            };
+            }
             _local_2 = xmlLibrary_[_arg_1];
             _local_8 = typeToTextureData_[_arg_1];
             _local_10 = ((_local_8) ? _local_8.mask_ : null);
@@ -493,7 +493,7 @@ public class ObjectLibrary
             if ((((!(_local_6 == 0)) || (!(_local_9 == 0))) && ((!(_arg_1 == 317)) && (!(_arg_1 == 318))))){
                 _local_4 = TextureRedrawer.retextureNoSizeChange(_local_4, _local_10, _local_6, _local_9);
                 _local_5.scale(0.2, 0.2);
-            };
+            }
             _local_7 = scaleBitmapData(_local_4, 2);
             _local_5.translate(4, 4);
             _local_3 = new BitmapData(22, 22, true, 0);

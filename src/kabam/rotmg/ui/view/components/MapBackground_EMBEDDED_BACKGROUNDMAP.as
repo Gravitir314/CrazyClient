@@ -8,7 +8,7 @@ import mx.core.*;
 		public function MapBackground_EMBEDDED_BACKGROUNDMAP()
 		{
 			super();
-			return;
+
 		}
 	}
 }

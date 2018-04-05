@@ -36,7 +36,7 @@ public class PatternBuilder implements StringBuilder
             for each (_local_1 in this.keys)
             {
                 _local_2 = _local_2.replace(_local_1, this.provider.getValue(_local_1.substr(1, (_local_1.length - 2))));
-            };
+            }
             return (_local_2.replace(/\\n/g, "\n"));
         }
 

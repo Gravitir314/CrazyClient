@@ -48,7 +48,7 @@ public class FoodFeedFuseSlot extends FeedFuseSlot
                 itemSprite.filters = ((_arg_1) ? [this.grayscaleMatrix] : []);
                 _local_2 = ((_arg_1) ? MoreColorUtil.darkCT : new ColorTransform());
                 itemSprite.transform.colorTransform = _local_2;
-            };
+            }
         }
 
         override protected function onRemovedFromStage(_arg_1:Event):void
@@ -69,7 +69,7 @@ public class FoodFeedFuseSlot extends FeedFuseSlot
                 alignBitmapInBox();
                 this.updateTitle();
                 this.cancelCallback = _arg_4;
-            };
+            }
         }
 
         public function setItemPart2(_arg_1:int):void
@@ -92,7 +92,7 @@ public class FoodFeedFuseSlot extends FeedFuseSlot
             {
                 setTitle(TextKey.PETORFOODSLOT_PLACE_ITEM, {});
                 setSubtitle(TextKey.BLANK, {"data":""});
-            };
+            }
         }
 
         public function setCancelCallback(_arg_1:Function):void
@@ -135,8 +135,8 @@ public class FoodFeedFuseSlot extends FeedFuseSlot
                 {
                     removeChild(itemSprite);
                     stage.addChild(itemSprite);
-                };
-            };
+                }
+            }
         }
 
         private function endDrag(_arg_1:MouseEvent):void
@@ -155,7 +155,7 @@ public class FoodFeedFuseSlot extends FeedFuseSlot
                 this.clearAndCallCancel();
                 this.foodUnloaded.dispatch();
                 this.updateTitle();
-            };
+            }
         }
 
 

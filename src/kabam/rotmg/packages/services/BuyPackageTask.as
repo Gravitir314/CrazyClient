@@ -53,7 +53,7 @@ public class BuyPackageTask extends BaseTask
             else
             {
                 this.abandonPurchase(_local_3);
-            };
+            }
             completeTask(true, _arg_2);
         }
 
@@ -74,7 +74,7 @@ public class BuyPackageTask extends BaseTask
             if (ERROR_MESSAGES_THAT_REFRESH.indexOf(_arg_1) != -1)
             {
                 this.getPackageTask.start();
-            };
+            }
         }
 
 

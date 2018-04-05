@@ -29,7 +29,7 @@ public class LiveServerModel implements ServerModel
             for each (_local_2 in _arg_1)
             {
                 this.servers.push(_local_2);
-            };
+            }
             this._descendingFlag = false;
         }
 
@@ -55,7 +55,7 @@ public class LiveServerModel implements ServerModel
                     if (_local_1.name == Parameters.data_.preferredServer)
                     {
                         return (_local_1);
-                    };
+                    }
                     _local_2 = _local_1.priority();
                     _local_3 = LatLong.distance(_local_6, _local_1.latLong);
                     if (((_local_2 < _local_8) || ((_local_2 == _local_8) && (_local_3 < _local_7))))
@@ -63,9 +63,9 @@ public class LiveServerModel implements ServerModel
                         _local_4 = _local_1;
                         _local_7 = _local_3;
                         _local_8 = _local_2;
-                    };
-                };
-            };
+                    }
+                }
+            }
             return (_local_4);
         }
 
@@ -77,8 +77,8 @@ public class LiveServerModel implements ServerModel
                 if (_local_2.address == _arg_1)
                 {
                     return (_local_2.name);
-                };
-            };
+                }
+            }
             return ("");
         }
 
@@ -92,11 +92,11 @@ public class LiveServerModel implements ServerModel
             if (_arg_1.name < _arg_2.name)
             {
                 return ((this._descendingFlag) ? -1 : 1);
-            };
+            }
             if (_arg_1.name > _arg_2.name)
             {
                 return ((this._descendingFlag) ? 1 : -1);
-            };
+            }
             return (0);
         }
 

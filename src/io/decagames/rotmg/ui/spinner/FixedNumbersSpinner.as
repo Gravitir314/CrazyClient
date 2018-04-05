@@ -38,11 +38,11 @@ public class FixedNumbersSpinner extends NumberSpinner
             if (_value < 0)
             {
                 _value = 0;
-            };
+            }
             if (_value != _local_2)
             {
                 valueWasChanged.dispatch(this.value);
-            };
+            }
             this.updateLabel();
         }
 

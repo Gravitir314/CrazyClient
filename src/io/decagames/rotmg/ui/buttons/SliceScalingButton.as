@@ -57,7 +57,7 @@ public class SliceScalingButton extends BaseButton
                 this.bitmap.scaleY = 1;
                 this.bitmap.x = 0;
                 this.bitmap.y = 0;
-            };
+            }
             super.onRollOverHandler(_arg_1);
         }
 
@@ -69,7 +69,7 @@ public class SliceScalingButton extends BaseButton
                 this.bitmap.scaleY = 0.9;
                 this.bitmap.x = ((this.bitmap.width * 0.1) / 2);
                 this.bitmap.y = ((this.bitmap.height * 0.1) / 2);
-            };
+            }
             super.onMouseDownHandler(_arg_1);
         }
 
@@ -81,7 +81,7 @@ public class SliceScalingButton extends BaseButton
                 this.bitmap.scaleY = 1;
                 this.bitmap.x = 0;
                 this.bitmap.y = 0;
-            };
+            }
             super.onClickHandler(_arg_1);
         }
 
@@ -94,7 +94,7 @@ public class SliceScalingButton extends BaseButton
                 this.bitmap.scaleY = 1;
                 this.bitmap.x = 0;
                 this.bitmap.y = 0;
-            };
+            }
             super.onRollOutHandler(_arg_1);
         }
 
@@ -126,11 +126,11 @@ public class SliceScalingButton extends BaseButton
                 if (_arg_2())
                 {
                     (_arg_2()(this._label));
-                };
+                }
                 this._label.text = _arg_1;
                 addChild(this._label);
                 this.render();
-            };
+            }
             this.stateFactories[_arg_3] = _arg_2;
         }
 
@@ -153,7 +153,7 @@ public class SliceScalingButton extends BaseButton
             if (this.staticWidth)
             {
                 this.bitmap.width = this._bitmapWidth;
-            };
+            }
             this._label.x = ((((this._bitmapWidth - this._label.textWidth) / 2) + this.bitmap.marginX) + this.labelMargin.y);
             this._label.y = ((((this.bitmap.height - this._label.textHeight) / 2) + this.bitmap.marginY) + this.labelMargin.y);
         }
@@ -164,11 +164,11 @@ public class SliceScalingButton extends BaseButton
             if (this.disableBitmap)
             {
                 this.disableBitmap.dispose();
-            };
+            }
             if (this.rollOverBitmap)
             {
                 this.rollOverBitmap.dispose();
-            };
+            }
             super.dispose();
         }
 
@@ -180,7 +180,7 @@ public class SliceScalingButton extends BaseButton
             if (_arg_2 != null)
             {
                 this.bitmap.addMargin(_arg_2.x, _arg_2.y);
-            };
+            }
             addChildAt(this.bitmap, 0);
             this.bitmap.forceRenderInNextFrame = true;
             this.render();

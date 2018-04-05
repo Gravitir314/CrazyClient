@@ -75,7 +75,7 @@ public class PotionSlotMediator extends Mediator
                 _local_2 = this.potionInventoryModel.getPotionModel(this.view.objectType);
                 _local_3 = _arg_1.getPotionCount(_local_2.objectId);
                 this.view.setData(_local_3, _local_2.currentCost(_local_3), _local_2.available);
-            };
+            }
         }
 
         private function onDrop(_arg_1:DisplayObject):void
@@ -95,9 +95,9 @@ public class PotionSlotMediator extends Mediator
                     if (((_local_2.getItemId() == ItemConstants.NO_ITEM) && (!(_local_2.ownerGrid.owner == _local_3))))
                     {
                         GameServerConnection.instance.invSwapPotion(_local_3, _local_3, PotionInventoryModel.getPotionSlot(this.view.objectType), this.view.objectType, _local_2.ownerGrid.owner, _local_2.tileId, ItemConstants.NO_ITEM);
-                    };
-                };
-            };
+                    }
+                }
+            }
         }
 
         private function onBuyUse():void
@@ -108,7 +108,7 @@ public class PotionSlotMediator extends Mediator
             {
                 _local_1 = new UseBuyPotionVO(_local_2.objectId, UseBuyPotionVO.SHIFTCLICK);
                 this.useBuyPotionSignal.dispatch(_local_1);
-            };
+            }
         }
 
 
