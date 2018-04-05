@@ -1351,8 +1351,8 @@ public class ParseChatMessageCommand
                     _local_10 = _local_4;
                     _local_5 = _local_3.AnimatedTexture.File;
                     _local_6 = _local_3.AnimatedTexture.Index;
-                };
-            };
+                }
+            }
             return (new Array(_local_5, _local_6));
         }
 

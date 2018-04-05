@@ -331,11 +331,11 @@ public class MiniMapImp extends MiniMap
             if (!this.focus)
             {
                 return;
-            };
+            }
             if (!this.active)
             {
                 return;
-            };
+            }
             var _local_12:Number = this.zoomLevels[this.zoomIndex];
             this.mapMatrix_.identity();
             this.mapMatrix_.translate(-(this.focus.x_), -(this.focus.y_));
@@ -352,8 +352,8 @@ public class MiniMapImp extends MiniMap
                 if (_local_14.x < this.windowRect_.right)
                 {
                     _local_15 = (this.windowRect_.right - _local_14.x);
-                };
-            };
+                }
+            }
             var _local_16:Number = 0;
             if (_local_13.y > this.windowRect_.top)
             {
@@ -364,14 +364,14 @@ public class MiniMapImp extends MiniMap
                 if (_local_14.y < this.windowRect_.bottom)
                 {
                     _local_16 = (this.windowRect_.bottom - _local_14.y);
-                };
-            };
+                }
+            }
             this.mapMatrix_.translate(_local_15, _local_16);
             _local_13 = this.mapMatrix_.transformPoint(PointUtil.ORIGIN);
             if (((_local_12 >= 1) && (this._rotateEnableFlag)))
             {
                 this.mapMatrix_.rotate(-(Parameters.data_.cameraAngle));
-            };
+            }
             var _local_17:Rectangle = new Rectangle();
             _local_17.x = Math.max(this.windowRect_.x, _local_13.x);
             _local_17.y = Math.max(this.windowRect_.y, _local_13.y);
@@ -388,34 +388,45 @@ public class MiniMapImp extends MiniMap
             this.players_.length = 0;
             for each (_local_2 in map.goDict_)
             {
-                if (!((_local_2.props_.noMiniMap_) || (_local_2 == this.focus)))
-                {
+                if (!((_local_2.props_.noMiniMap_) || (_local_2 == this.focus))) {
                     _local_4 = (_local_2 as Player);
-                    if (_local_4 != null)
-                    {
+                    if (_local_4 != null) {
                         if ((((map.name_ == "Nexus") && (_local_4.numStars_ <= Parameters.data_.chatStarRequirement)) && (Parameters.data_.HidePlayerFilter))) continue;
-                        if (_local_4.isPaused())
-                        {
+                        if (_local_4.isPaused()) {
                             _local_3 = 0x7F7F7F;
                         }
-                        else
-                        {
-                            if (((Parameters.data_.lockHighlight) && (_local_4.starred_)))
-                            {
-                                _local_3 = 4240365;
+                        else {
+                            if ((((Parameters.data_.newMiniMapColors) && (_local_4.isFellowGuild_)) && (!(_local_4.starred_)))) {
+                                _local_3 = 0xCF00;
                             }
-                            else
-                            {
-                                if (_local_4.isFellowGuild_)
-                                {
-                                    _local_3 = 0xFF00;
+                            else {
+                                if (((Parameters.data_.lockHighlight) && (_local_4.starred_))) {
+                                    _local_3 = 4240365;
                                 }
-                                else
-                                {
-                                    _local_3 = 0xFFFF00;
-                                };
-                            };
-                        };
+                                else {
+                                    if (_local_4.isFellowGuild_) {
+                                        _local_3 = 0xFF00;
+                                    }
+                                    else {
+                                        if ((((Parameters.data_.newMiniMapColors) && (!(_local_4.nameChosen_))) && (_local_4.starred_))) {
+                                            _local_3 = 0xFFFFFF;
+                                        }
+                                        else {
+                                            if (((Parameters.data_.newMiniMapColors) && (!(_local_4.nameChosen_)))) {
+                                                _local_3 = 0xCFCFCF;
+                                            }
+                                            else {
+                                                if (((Parameters.data_.newMiniMapColors) && (!(_local_4.starred_)))) {
+                                                    _local_3 = 0xCFCF00;
+                                                } else {
+                                                    _local_3 = 0xFFFF00;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     else
                     {
@@ -428,7 +439,7 @@ public class MiniMapImp extends MiniMap
                             else
                             {
                                 _local_3 = gameObjectToColor(_local_2);
-                            };
+                            }
                         }
                         else
                         {
@@ -445,10 +456,10 @@ public class MiniMapImp extends MiniMap
                                 else
                                 {
                                     continue;
-                                };
-                            };
-                        };
-                    };
+                                }
+                            }
+                        }
+                    }
                     _local_5 = (((this.mapMatrix_.a * _local_2.x_) + (this.mapMatrix_.c * _local_2.y_)) + this.mapMatrix_.tx);
                     _local_6 = (((this.mapMatrix_.b * _local_2.x_) + (this.mapMatrix_.d * _local_2.y_)) + this.mapMatrix_.ty);
                     if (((((_local_5 <= (-(this._width) / 2)) || (_local_5 >= (this._width / 2))) || (_local_6 <= (-(this._height) / 2))) || (_local_6 >= (this._height / 2))))
@@ -456,7 +467,7 @@ public class MiniMapImp extends MiniMap
                         RectangleUtil.lineSegmentIntersectXY(this.windowRect_, 0, 0, _local_5, _local_6, this.tempPoint);
                         _local_5 = this.tempPoint.x;
                         _local_6 = this.tempPoint.y;
-                    };
+                    }
                     if ((((!(_local_4 == null)) && (this.isMouseOver)) && ((this.menu == null) || (this.menu.parent == null))))
                     {
                         _local_7 = (_local_18 - _local_5);
@@ -465,13 +476,13 @@ public class MiniMapImp extends MiniMap
                         if (_local_9 < MOUSE_DIST_SQ)
                         {
                             this.players_.push(_local_4);
-                        };
-                    };
+                        }
+                    }
                     _local_1.beginFill(_local_3);
                     _local_1.drawRect((_local_5 - 2), (_local_6 - 2), 4, 4);
                     _local_1.endFill();
-                };
-            };
+                }
+            }
             if (this.players_.length != 0)
             {
                 if (this.tooltip == null)
@@ -484,8 +495,8 @@ public class MiniMapImp extends MiniMap
                     if (!this.areSamePlayers(this.tooltip.players_, this.players_))
                     {
                         this.tooltip.setPlayers(this.players_);
-                    };
-                };
+                    }
+                }
             }
             else
             {
@@ -494,10 +505,10 @@ public class MiniMapImp extends MiniMap
                     if (this.tooltip.parent != null)
                     {
                         this.tooltip.parent.removeChild(this.tooltip);
-                    };
+                    }
                     this.tooltip = null;
-                };
-            };
+                }
+            }
             var _local_20:Number = this.focus.x_;
             var _local_21:Number = this.focus.y_;
             var _local_22:Number = (((this.mapMatrix_.a * _local_20) + (this.mapMatrix_.c * _local_21)) + this.mapMatrix_.tx);
@@ -508,7 +519,7 @@ public class MiniMapImp extends MiniMap
             if (!((_local_12 >= 1) && (this._rotateEnableFlag)))
             {
                 this.arrowMatrix_.rotate(Parameters.data_.cameraAngle);
-            };
+            }
             this.arrowMatrix_.translate(_local_22, _local_23);
             _local_1.beginBitmapFill(this.blueArrow_, this.arrowMatrix_, false);
             _local_1.drawRect((_local_22 - 16), (_local_23 - 16), 32, 32);

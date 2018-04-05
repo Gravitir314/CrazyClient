@@ -273,6 +273,7 @@ public class Parameters
             setDefault("chatFriend", false);
             setDefault("friendStarRequirement", 0);
             setDefault("HPBar", true);
+            setDefault("newMiniMapColors", false);
             setDefault("toggleBarText", false);
             setDefault("disableEnemyParticles", false);
             setDefault("disableAllyParticles", false);
