@@ -68,6 +68,7 @@ public class Parameters
         public static var phaseName:String;
         public static var timerPhaseTimes:Dictionary = new Dictionary();
         public static var timerPhaseNames:Dictionary = new Dictionary();
+        public static var dmgCounter:Array = [];
 
         public static function setTimerPhases():void{
             timerPhaseTimes['{"key":"server.oryx_closed_realm"}'] = 120000;
@@ -492,6 +493,7 @@ public class Parameters
             setDefault("onlyGods", false);
             setDefault("SWPanic", true);
             setDefault("SWNoTileMove", true);
+            setDefault("showDamageOnEnemy", false);
         }
 
 

@@ -339,6 +339,10 @@ public class Projectile extends BasicObject
                             }
                             map_.gs_.gsc_.enemyHit(_arg_1, this.bulletId_, _local_13.objectId_, _local_9);
                             _local_13.damage(true, _local_8, this.projProps_.effects_, _local_9, this);
+                            if (isNaN(Parameters.dmgCounter[_local_13.objectId_])){
+                                Parameters.dmgCounter[_local_13.objectId_] = 0;
+                            }
+                            Parameters.dmgCounter[_local_13.objectId_] = (Parameters.dmgCounter[_local_13.objectId_] + _local_8);
                         }
                         else
                         {

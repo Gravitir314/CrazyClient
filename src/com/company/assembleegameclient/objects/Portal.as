@@ -47,7 +47,7 @@ public class Portal extends GameObject implements IInteractiveObject
             super.draw(_arg_1, _arg_2, _arg_3);
             if (this.nexusPortal_)
             {
-                drawName(_arg_1, _arg_2);
+                drawName(_arg_1, _arg_2, false);
             };
         }
 

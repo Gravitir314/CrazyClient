@@ -1834,7 +1834,7 @@ public class Player extends Character
             if (this != map_.player_) {
                 if (!Parameters.screenShotMode_)
                 {
-                    drawName(_arg_1, _arg_2);
+                    drawName(_arg_1, _arg_2, false);
                 }
             } else {
                 if (this.breath_ >= 0)

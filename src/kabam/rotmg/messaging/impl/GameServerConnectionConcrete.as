@@ -2785,6 +2785,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             {
                 this.load();
             };
+            Parameters.dmgCounter.length = 0;
         }
 
         private function onPic(_arg_1:Pic):void

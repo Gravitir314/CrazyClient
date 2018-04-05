@@ -147,6 +147,8 @@ public class GameObject extends BasicObject
         public var aimAssistPoint:Vector3D = null;
         public var aimAssistTarget:GameObject = null;
         public var lastUpdate:int;
+        public var footer_:Boolean;
+        public var lastPercent_:int;
 
         public function GameObject(_arg_1:XML)
         {
@@ -461,7 +463,8 @@ public class GameObject extends BasicObject
                 this.shadowPath_.commands = null;
                 this.shadowPath_.data = null;
                 this.shadowPath_ = null;
-            };
+            }
+            this.footer_ = false;
         }
 
         public function isQuiet():Boolean
@@ -1158,23 +1161,24 @@ public class GameObject extends BasicObject
             return (_local_2.make(_local_1, 16, 0xFFFFFF, true, IDENTITY_MATRIX, true));
         }
 
-        public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera):void
-        {
-            if (this.nameBitmapData_ == null)
-            {
+        public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean):void{
+            if (this.nameBitmapData_ == null){
                 this.nameBitmapData_ = this.makeNameBitmapData();
                 this.nameFill_ = new GraphicsBitmapFill(null, new Matrix(), false, false);
                 this.namePath_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
             };
-            var _local_3:int = int(((this.nameBitmapData_.width / 2) + 1));
-            var _local_4:int = 30;
-            var _local_5:Vector.<Number> = this.namePath_.data;
-            _local_5.length = 0;
-            _local_5.push((posS_[0] - _local_3), posS_[1], (posS_[0] + _local_3), posS_[1], (posS_[0] + _local_3), (posS_[1] + _local_4), (posS_[0] - _local_3), (posS_[1] + _local_4));
+            var _local_6:int = ((this.nameBitmapData_.width * 0.5) + 1);
+            var _local_4:Vector.<Number> = this.namePath_.data;
+            _local_4.length = 0;
+            if (_arg_3){
+                _local_4.push((posS_[0] - _local_6), (posS_[1] + 12), (posS_[0] + _local_6), (posS_[1] + 12), (posS_[0] + _local_6), (posS_[1] + 42), (posS_[0] - _local_6), (posS_[1] + 42));
+            } else {
+                _local_4.push((posS_[0] - _local_6), posS_[1], (posS_[0] + _local_6), posS_[1], (posS_[0] + _local_6), (posS_[1] + 30), (posS_[0] - _local_6), (posS_[1] + 30));
+            };
             this.nameFill_.bitmapData = this.nameBitmapData_;
-            var _local_6:Matrix = this.nameFill_.matrix;
-            _local_6.identity();
-            _local_6.translate(_local_5[0], _local_5[1]);
+            var _local_7:Matrix = this.nameFill_.matrix;
+            _local_7.identity();
+            _local_7.translate(_local_4[0], _local_4[1]);
             _arg_1.push(this.nameFill_);
             _arg_1.push(this.namePath_);
             _arg_1.push(GraphicsUtil.END_FILL);
@@ -1407,14 +1411,14 @@ public class GameObject extends BasicObject
                 if (Parameters.isGpuRender()){
                     _arg_1.push(null);
                     return;
-                };
-            };
+                }
+            }
             var _local_6:int = _local_4.width;
             var _local_7:int = _local_4.height;
             var _local_8:int = (square_.sink_ + this.sinkLevel_);
             if (((_local_8 > 0) && ((this.flying_) || ((!(square_.obj_ == null)) && (square_.obj_.props_.protectFromSink_))))){
                 _local_8 = 0;
-            };
+            }
             if (Parameters.isGpuRender()){
                 if (_local_8 != 0){
                     GraphicsFillExtra.setSinkLevel(this.bitmapFill_, Math.max((((_local_8 / _local_7) * 1.65) - 0.02), 0));
@@ -1422,9 +1426,9 @@ public class GameObject extends BasicObject
                 } else {
                     if (((_local_8 == 0) && (!(GraphicsFillExtra.getSinkLevel(this.bitmapFill_) == 0)))){
                         GraphicsFillExtra.clearSink(this.bitmapFill_);
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.vS_.length = 0;
             this.vS_.push((posS_[3] - (_local_6 / 2)), ((posS_[4] - _local_7) + _local_8), (posS_[3] + (_local_6 / 2)), ((posS_[4] - _local_7) + _local_8), (posS_[3] + (_local_6 / 2)), posS_[4], (posS_[3] - (_local_6 / 2)), posS_[4]);
             this.path_.data = this.vS_;
@@ -1434,11 +1438,11 @@ public class GameObject extends BasicObject
                         this.flash_.applyGPUTextureColorTransform(_local_4, _arg_3);
                     } else {
                         _local_4 = this.flash_.apply(_local_4, _arg_3);
-                    };
+                    }
                 } else {
                     this.flash_ = null;
-                };
-            };
+                }
+            }
             if (((this.isShocked) && (!(this.isShockedTransformSet)))){
                 if (Parameters.isGpuRender()){
                     GraphicsFillExtra.setColorTransform(_local_4, new ColorTransform(-1, -1, -1, 1, 0xFF, 0xFF, 0xFF, 0));
@@ -1447,9 +1451,9 @@ public class GameObject extends BasicObject
                     _local_9.colorTransform(_local_9.rect, new ColorTransform(-1, -1, -1, 1, 0xFF, 0xFF, 0xFF, 0));
                     _local_9 = CachingColorTransformer.filterBitmapData(_local_9, new ColorMatrixFilter(MoreColorUtil.greyscaleFilterMatrix));
                     _local_4 = _local_9;
-                };
+                }
                 this.isShockedTransformSet = true;
-            };
+            }
             if (((this.isCharging) && (!(this.isChargingTransformSet)))){
                 if (Parameters.isGpuRender()){
                     GraphicsFillExtra.setColorTransform(_local_4, new ColorTransform(1, 1, 1, 1, 0xFF, 0xFF, 0xFF, 0));
@@ -1457,9 +1461,9 @@ public class GameObject extends BasicObject
                     _local_9 = _local_4.clone();
                     _local_9.colorTransform(_local_9.rect, new ColorTransform(1, 1, 1, 1, 0xFF, 0xFF, 0xFF, 0));
                     _local_4 = _local_9;
-                };
+                }
                 this.isChargingTransformSet = true;
-            };
+            }
             this.bitmapFill_.bitmapData = _local_4;
             this.fillMatrix_.identity();
             this.fillMatrix_.translate(this.vS_[0], this.vS_[1]);
@@ -1469,10 +1473,10 @@ public class GameObject extends BasicObject
             _arg_1.push(GraphicsUtil.END_FILL);
             if (((((!(this.isPaused())) && ((this.condition_[ConditionEffect.CE_FIRST_BATCH]) || (this.condition_[ConditionEffect.CE_SECOND_BATCH]))) && (!(Parameters.screenShotMode_))) && (!(this is Pet)))){
                 this.drawConditionIcons(_arg_1, _arg_2, _arg_3);
-            };
+            }
             if ((((this.props_.showName_) && (!(this.name_ == null))) && (!(this.name_.length == 0)))){
-                this.drawName(_arg_1, _arg_2);
-            };
+                this.drawName(_arg_1, _arg_2, false);
+            }
             if (_local_5){
                 _local_10 = uint(((_local_4.getPixel32((_local_4.width / 4), (_local_4.height / 4)) | _local_4.getPixel32((_local_4.width / 2), (_local_4.height / 2))) | _local_4.getPixel32(((_local_4.width * 3) / 4), ((_local_4.height * 3) / 4))));
                 _local_11 = (_local_10 >> 24);
@@ -1481,11 +1485,32 @@ public class GameObject extends BasicObject
                     _local_12 = (((this.props_.isPlayer_) && (!(this == map_.player_))) ? 12 : 0);
                     if (((this.bHPBarParamCheck()) && (!(this.props_.healthBar_ == -1)))){
                         this.drawHpBar(_arg_1, ((this.props_.healthBar_) ? this.props_.healthBar_ : (_local_12 + DEFAULT_HP_BAR_Y_OFFSET)));
-                    };
+                    }
                 } else {
                     hasShadow_ = false;
-                };
-            };
+                }
+            }
+            if (((!(this.dead_)) && (Parameters.data_.showDamageOnEnemy))){
+                if (this.footer_){
+                    _local_11 = Parameters.dmgCounter[this.objectId_];
+                    if (_local_11 != this.lastPercent_){
+                        _local_11 = int(((_local_11 / this.maxHP_) * 100));
+                        this.name_ = (_local_11 + "%");
+                        this.lastPercent_ = _local_11;
+                        this.nameBitmapData_ = null;
+                        this.drawName(_arg_1, _arg_2, true);
+                    };
+                } else {
+                    _local_11 = Parameters.dmgCounter[this.objectId_];
+                    if (((!(isNaN(_local_11))) && (_local_11 > 0))){
+                        _local_11 = int(((_local_11 / this.maxHP_) * 100));
+                        this.name_ = (_local_11 + "%");
+                        this.lastPercent_ = _local_11;
+                        this.drawName(_arg_1, _arg_2, true);
+                        this.footer_ = true;
+                    }
+                }
+            }
         }
 
         private function bHPBarParamCheck():Boolean{

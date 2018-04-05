@@ -7,6 +7,7 @@ package com.company.assembleegameclient.game
 {
 import com.company.assembleegameclient.game.events.MoneyChangedEvent;
 import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.objects.Character;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
 import com.company.assembleegameclient.objects.Pet;
@@ -15,6 +16,7 @@ import com.company.assembleegameclient.objects.Projectile;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
+import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.TextureRedrawer;
@@ -662,7 +664,7 @@ public class GameSprite extends AGameSprite
                 this.timerCounter.x = 3;
                 this.timerCounter.y = 180;
                 addChild(this.timerCounter);
-            };
+            }
         }
 
     }
