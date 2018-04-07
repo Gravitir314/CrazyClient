@@ -39,7 +39,7 @@ public class PotionSlotView extends Sprite
         public static var BUTTON_WIDTH:int = 84;
         private static var BUTTON_HEIGHT:int = 24;
         private static var SMALL_SIZE:int = 4;
-        private static var CENTER_ICON_X:int = 13;
+        private static var CENTER_ICON_X:int = 6;
         private static var LEFT_ICON_X:int = -6;
         public static const READABILITY_SHADOW_1:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4, 2);
         public static const READABILITY_SHADOW_2:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4, 3);
@@ -132,11 +132,11 @@ public class PotionSlotView extends Sprite
             var _local_8:* = (_arg_1 > 0);
             if (_local_8)
             {
-                this.setTextString(String(_arg_1));
+                this.setTextString((String(_arg_1) + "/6"));
                 _local_5 = CENTER_ICON_X;
                 this.bg.graphics.clear();
                 this.bg.graphics.drawGraphicsData(this.useGraphicsData);
-                this.text.x = ((BUTTON_WIDTH / 2) + 5);
+                this.text.x = (BUTTON_WIDTH / 2);
             }
             else
             {

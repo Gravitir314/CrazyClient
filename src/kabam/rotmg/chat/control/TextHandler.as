@@ -148,7 +148,7 @@ public class TextHandler
                         break;
                     } else {
                         _local_15.levelUpEffect("", true);
-                        SoundEffectLibrary.play("error");
+                        SoundEffectLibrary.play("level_up");
                     }
                 }
             }

@@ -788,7 +788,7 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Only Gods: On" : "Only Gods: Off")));
                     return (true);
                 case "/blockcubes":
-                    Parameters.data_.onlyGods = (!Parameters.data_.blockCubes);
+                    Parameters.data_.blockCubes = (!Parameters.data_.blockCubes);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockCubes) ? "Cubes Blocked" : "Cubes Allowed")));
                     return (true);
                 case "/swmove":
