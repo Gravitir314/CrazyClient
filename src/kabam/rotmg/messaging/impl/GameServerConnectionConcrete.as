@@ -2259,21 +2259,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         {
                             _arg_1.size_ = _local_5;
                         }
-                        if ((((((Parameters.data_.bigBag) && (!Options.hidden) && (!(_arg_1.objectType_ == 1859))) && (!(_arg_1.objectType_ == 0x0505))) && (!(_arg_1.objectType_ == 1860))) && (!(_arg_1.objectType_ == 1284))))
-                        {
-                            _local_7 = ObjectLibrary.typeToDisplayId_[_arg_1.objectType_];
-                            if ((_arg_1 is Container))
-                            {
-                                _arg_1.size_ = 150;
-                            }
-                            else
-                            {
-                                if (((!(_local_7.indexOf("Chest") == -1)) || (!(_local_7.indexOf("Loot Balloon") == -1))))
-                                {
-                                    _arg_1.size_ = 175;
-                                }
-                            }
-                        }
                         break;
                     case StatData.MAX_MP_STAT:
                         _local_9.maxMP_ = _local_5;

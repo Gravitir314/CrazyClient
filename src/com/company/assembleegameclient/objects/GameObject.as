@@ -1224,6 +1224,11 @@ public class GameObject extends BasicObject
             }
             var _local_12:BitmapData = this.texture_;
             var _local_13:int = this.size_;
+            if (((this is Container) && ((Parameters.data_.bigBag) && ((this as Container).drawMeBig_)))){
+                if (!Options.hidden) {
+                    _local_13 = 150;
+                }
+            }
             if (this.animatedChar_ != null)
             {
                 _local_4 = 0;

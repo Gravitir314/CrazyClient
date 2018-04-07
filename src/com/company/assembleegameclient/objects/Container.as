@@ -32,6 +32,7 @@ public class Container extends GameObject implements IInteractiveObject
         private var icons_:Vector.<BitmapData> = null;
         private var iconFills_:Vector.<GraphicsBitmapFill> = null;
         private var iconPaths_:Vector.<GraphicsPath> = null;
+        public var drawMeBig_:Boolean;
 
         public function Container(_arg_1:XML)
         {
@@ -97,7 +98,14 @@ public class Container extends GameObject implements IInteractiveObject
             {
                 SoundEffectLibrary.play("loot_appears");
             }
+            if (shouldSendBag(this.objectType_)){
+                this.drawMeBig_ = true;
+            }
             return (true);
+        }
+
+        private function shouldSendBag(_arg_1:int):Boolean{
+            return (((((((_arg_1 >= 1287) && (_arg_1 <= 1289)) || (_arg_1 == 1291)) || (_arg_1 == 1292)) || ((_arg_1 >= 1294) && (_arg_1 <= 1296))) || (_arg_1 == 1708)) || ((_arg_1 >= 1722) && (_arg_1 <= 1728)));
         }
 
         public function getPanel(_arg_1:GameSprite):Panel
