@@ -864,10 +864,15 @@ public class ParseChatMessageCommand
                 case "/tr":
                     _local_26.playerText(("/trade " + lastTellTo));
                     return (true);
+                case "/sayfame":
+                    _local_16 = (getTimer() - PlayGameCommand.startTime);
+                    _local_17 = (Math.round((((GameServerConnectionConcrete.totalfamegain / _local_16) * 60000) * 100)) / 100);
+                    _local_26.playerText(("Total fame: " + GameServerConnectionConcrete.totalfamegain + ", total time: " + (Math.floor(((_local_16 / 60000) * 10)) / 10) + " minutes, fame per minute: " + _local_17 + ", status: " + ((_local_17 > 5) ? (_local_17 > 8 ? (_local_17 > 13 ? "Awesome" : "Good") : "Average") : "Bad")));
+                    return (true);
                 case "/fame":
                     _local_16 = (getTimer() - PlayGameCommand.startTime);
                     _local_17 = (Math.round((((GameServerConnectionConcrete.totalfamegain / _local_16) * 60000) * 100)) / 100);
-                    _local_12.notifyPlayer((((((GameServerConnectionConcrete.totalfamegain + " fame\n") + (Math.floor(((_local_16 / 60000) * 10)) / 10)) + " minutes\n") + _local_17) + " fame/min"), 0xE25F00, 3000);
+                    _local_12.notifyPlayer((((((GameServerConnectionConcrete.totalfamegain + " fame\n") + (Math.floor(((_local_16 / 60000) * 10)) / 10)) + " minutes\n") + _local_17) + " fame/min\n" + ((_local_17 > 5) ? (_local_17 > 8 ? (_local_17 > 13 ? "Awesome" : "Good") : "Average") : "Bad")), 0xE25F00, 3000);
                     return (true);
                 case "/fameclear":
                     PlayGameCommand.startTime = getTimer();
