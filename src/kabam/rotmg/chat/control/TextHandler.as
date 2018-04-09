@@ -363,6 +363,9 @@ public class TextHandler
             if ((_arg_1.name_ == "#Oryx the Mad God") && ((_arg_1.text_ == ('{"key":"server.oryx_closed_realm"}')) || (_arg_1.text_ == ('{"key":"server.oryx_minions_failed"}')))) {
                 SoundEffectLibrary.play("level_up");
             }
+            if ((_arg_1.name_ == "#A Strange Presence") && (!_arg_1.text_.indexOf("Innocent souls") == -1)) {
+                SoundEffectLibrary.play("level_up");
+            }
             if ((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("15 sec") == -1))) {
                 Parameters.timerActive = true;
                 Parameters.phaseChangeAt = (getTimer() + (15 * 1000));

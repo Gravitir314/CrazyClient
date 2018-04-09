@@ -208,6 +208,8 @@ public class Parameters
             setDefaultKey("switchTabs", KeyCodes.B);
             setDefaultKey("particleEffect", KeyCodes.P);
             setDefaultKey("toggleHPBar", KeyCodes.H);
+            setDefaultKey("toggleProjectiles", KeyCodes.N);
+            setDefaultKey("toggleMasterParticles", KeyCodes.M);
             setDefault("playerObjectType", 782);
             setDefault("playMusic", true);
             setDefault("playSFX", true);
@@ -315,8 +317,8 @@ public class Parameters
             setDefaultKey("AAModeHotkey", KeyCodes.M);
             setDefault("AATargetLead", true);
             setDefault("AAOn", false);
-            setDefault("STDamage", false);
-            setDefault("STHealth", true);
+            setDefault("STDamage", true);
+            setDefault("STHealth", false);
             setDefault("STColor", true);
             setDefault("LNAbility", 6);
             setDefault("LNRing", 6);
@@ -331,8 +333,8 @@ public class Parameters
             setDefault("potsMajor", true);
             setDefault("lootHP", false);
             setDefault("lootMP", false);
+            setDefaultKey("ReconDung", KeyCodes.UNSET);
             setDefaultKey("ReconRealm", KeyCodes.P);
-            setDefaultKey("ReconDung", KeyCodes.K);
             setDefaultKey("ReconVault", KeyCodes.V);
             setDefaultKey("ReconRandom", KeyCodes.UNSET);
             setDefault("autoRecon", false);
@@ -382,7 +384,6 @@ public class Parameters
             setDefaultKey("tpto", KeyCodes.UNSET);
             setDefaultKey("pbToggle", KeyCodes.UNSET);
             setDefaultKey("QuestTeleport", KeyCodes.UNSET);
-            setDefault("clientSwap", false);
             setDefault("slideOnIce", true);
             setDefault("autoAbil", false);
             setDefault("autoHealP", 70);
@@ -393,11 +394,6 @@ public class Parameters
             setDefault("reconGID", null);
             setDefault("reconTime", null);
             setDefault("reconKey", null);
-            setDefault("dservName", null);
-            setDefault("dservAddr", null);
-            setDefault("dreconGID", null);
-            setDefault("dreconTime", null);
-            setDefault("dreconKey", null);
             setDefault("msg1", "");
             setDefault("msg2", "");
             setDefault("msg3", "");

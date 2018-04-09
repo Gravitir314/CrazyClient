@@ -11,6 +11,7 @@ import com.company.assembleegameclient.ui.GameObjectListItem;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.StatusBar;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 
 import flash.filters.DropShadowFilter;
@@ -57,7 +58,7 @@ public class PlayerToolTip extends ToolTip
                 addChild(this.guildText_);
                 _local_2 = (_local_2 + 30);
             }
-            if (Parameters.data_["StatsViewer"])
+            if (Parameters.data_["StatsViewer"] && !Options.hidden)
             {
                 this.sBars = new StatMetersView();
                 this.sBars.x = 6;
@@ -90,7 +91,7 @@ public class PlayerToolTip extends ToolTip
             this.eGrid.x = 8;
             this.eGrid.y = _local_2;
             addChild(this.eGrid);
-            if (Parameters.data_["InvViewer"])
+            if ((Parameters.data_["InvViewer"]) && (!Options.hidden))
             {
                 _local_2 = (_local_2 + 118);
             }
@@ -110,7 +111,7 @@ public class PlayerToolTip extends ToolTip
 
         override public function draw():void
         {
-            if (Parameters.data_["StatsViewer"])
+            if (Parameters.data_["StatsViewer"] && !Options.hidden)
             {
                 this.sBars.update(this.player_);
                 this.stats.draw(this.player_);

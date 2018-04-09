@@ -118,14 +118,6 @@
       <Explanation>Opens Deca's friends list</Explanation>
    </Article>
    <Article>
-      <Command>/name &lt;name&gt;</Command>
-      <Explanation>Changes the name displayed on the HUD&#xA;Does not change your name on chat&#xA;The name will only be displayed on characters that have no backpack</Explanation>
-   </Article>
-   <Article>
-      <Command>/name</Command>
-      <Explanation>Changes the name displayed on the HUD back to normal</Explanation>
-   </Article>
-   <Article>
       <Command>/take &lt;partial item name&gt;</Command>
       <Explanation>Starts moving items from the nearest vault to your inventory chest&#xA;By using parameter "pots" all stat potions are considered move targets</Explanation>
    </Article>
@@ -140,6 +132,10 @@
    <Article>
       <Command>/fame</Command>
       <Explanation>Shows fame gain statistics on you current session</Explanation>
+   </Article>
+   <Article>
+      <Command>/sayfame</Command>
+      <Explanation>Say in chat fame gain statistics on you current session</Explanation>
    </Article>
    <Article>
       <Command>/fameclear</Command>
@@ -192,10 +188,6 @@
    <Article>
       <Command>/lf</Command>
       <Explanation>Hide non locked players from screen</Explanation>
-   </Article>
-   <Article>
-      <Command>/swmove</Command>
-      <Explanation>Toggle tile moving on sprite world</Explanation>
    </Article>
    <Article>
       <Command>/colo &lt;decimal value&gt;</Command>

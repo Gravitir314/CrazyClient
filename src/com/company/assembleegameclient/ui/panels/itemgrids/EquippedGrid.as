@@ -8,6 +8,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
 import com.company.util.ArrayIterator;
 import com.company.util.IIterator;
@@ -27,7 +28,7 @@ public class EquippedGrid extends ItemGrid
             var _local_7:int;
             var _local_8:int = 1;
             var _local_9:uint = NUM_SLOTS;
-            if (((_arg_5) && (Parameters.data_["InvViewer"])))
+            if (((_arg_5) && (!Options.hidden) && (Parameters.data_["InvViewer"])))
             {
                 _local_8 = ((_arg_3.hasBackpack_) ? 4 : 3);
                 _local_9 = ((_arg_3.hasBackpack_) ? 20 : 12);

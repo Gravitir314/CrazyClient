@@ -89,7 +89,7 @@ public class Options extends Sprite
             graphics.moveTo(0, 100);
             graphics.lineTo(800, 100);
             graphics.lineStyle();
-            _local_2 = new TextFieldDisplayConcrete().setSize(32).setColor(0xFFFFFF);
+            _local_2 = new TextFieldDisplayConcrete().setSize(36).setColor(0xFFFFFF);
             _local_2.setBold(true);
             _local_2.setStringBuilder(new LineBuilder().setParams(TextKey.OPTIONS_TITLE));
             _local_2.setAutoSize(TextFieldAutoSize.CENTER);
@@ -227,7 +227,11 @@ public class Options extends Sprite
 
         private static function makeStarSelectLabels():Vector.<StringBuilder>
         {
-            return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Light Blue"), new StaticStringBuilder("Blue"), new StaticStringBuilder("Red"), new StaticStringBuilder("Orange"), new StaticStringBuilder("Yellow"), new StaticStringBuilder("Alone")]);
+            if (hidden) {
+                return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("1"), new StaticStringBuilder("2"), new StaticStringBuilder("3"), new StaticStringBuilder("5"), new StaticStringBuilder("10")]);
+            } else {
+                return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Light Blue"), new StaticStringBuilder("Blue"), new StaticStringBuilder("Red"), new StaticStringBuilder("Orange"), new StaticStringBuilder("Yellow"), new StaticStringBuilder("Alone")]);
+            }
         }
 
 
@@ -427,11 +431,14 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("useSpecial", TextKey.OPTIONS_USE_SPECIAL_ABILITY, TextKey.OPTIONS_USE_SPECIAL_ABILITY_DESC));
             this.addOptionAndPosition(new KeyMapper("autofireToggle", TextKey.OPTIONS_AUTOFIRE_TOGGLE, TextKey.OPTIONS_AUTOFIRE_TOGGLE_DESC));
             this.addOptionAndPosition(new KeyMapper("toggleHPBar", TextKey.OPTIONS_TOGGLE_HPBAR, TextKey.OPTIONS_TOGGLE_HPBAR_DESC));
-            this.addOptionAndPosition(new KeyMapper("resetToDefaultCameraAngle", "Reset to Default Camera Angle", TextKey.OPTIONS_RESET_CAMERA_DESC));
+            this.addOptionAndPosition(new KeyMapper("resetToDefaultCameraAngle", TextKey.OPTIONS_RESET_CAMERA, TextKey.OPTIONS_RESET_CAMERA_DESC));
             this.addOptionAndPosition(new KeyMapper("togglePerformanceStats", TextKey.OPTIONS_TOGGLE_PERFORMANCE_STATS, TextKey.OPTIONS_TOGGLE_PERFORMANCE_STATS_DESC));
             this.addOptionAndPosition(new KeyMapper("toggleCentering", TextKey.OPTIONS_TOGGLE_CENTERING, TextKey.OPTIONS_TOGGLE_CENTERING_DESC));
             this.addOptionAndPosition(new KeyMapper("interact", TextKey.OPTIONS_INTERACT_OR_BUY, TextKey.OPTIONS_INTERACT_OR_BUY_DESC));
-            this.addOptionAndPosition(makeClickForGold());
+            if (hidden) {
+                this.addOptionAndPosition(makeClickForGold());
+                this.addOptionAndPosition(makePotionBuy());
+            }
         }
 
         private function onToggleUI():void
@@ -750,10 +757,10 @@ public class Options extends Sprite
         private function addReconnectOptions():void
         {
             this.addOptionAndPosition(new KeyMapper("ReconRealm", "Recon Realm", "Key that connects the user to the last realm in."));
-            this.addOptionAndPosition(new KeyMapper("ReconDung", "Recon Dungeon", "Key that connects the user to the last dungeon in. Only works when used within three minutes of connecting to the dungeon."));
-            this.addOptionAndPosition(new KeyMapper("ReconVault", "Recon Vault", "Key that connects the user to their vault."));
             this.addOptionAndPosition(new KeyMapper("ReconRandom", "Connect to Random Realm", "Key that connects the user to a random realm on the server."));
+            this.addOptionAndPosition(new KeyMapper("ReconVault", "Recon Vault", "Key that connects the user to their vault."));
             this.addOptionAndPosition(new ChoiceOption("autoRecon", makeOnOffLabels(), [true, false], "Auto Reconnect", "Automatically reconnect to last realm if HP full.", null));
+            this.addOptionAndPosition(new KeyMapper("ReconDaily", "Recon Daily", "Key that connects the user to daily quest room."));
         }
 
         private function addVisualOptions():void
@@ -773,7 +780,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("HidePlayerFilter", makeOnOffLabels(), [true, false], "Star Requirement (Hide)", "Hide players in nexus that are filtered by the star requirement option.", null));
             this.addOptionAndPosition(new ChoiceOption("AntiLag", makeOnOffLabels(), [true, false], "Anti Lag", "Aggressively disables particles.", null));
             this.addOptionAndPosition(new ChoiceOption("showMobInfo", makeOnOffLabels(), [true, false], "Display Mob Info", "Display mob name and id. Useful for finding ids for use with auto aim exception and ignore list.", this.showMobInfo_));
-            this.addOptionAndPosition(new ChoiceOption("clientSwap", makeOnOffLabels(), [true, false], "Responsive Inventory", "Prevents items from teleporting out of your inventory or moving back after switching positions.", null));
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
             this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "Toggle UI-mode from CC to prod", this.onToggleUI));
@@ -800,6 +806,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("enterPortal", "Portal Enter", "Enters nearest portal."));
             this.addOptionAndPosition(new ChoiceOption("instaSelect", makeOnOffLabels(), [true, false], "Instantly Select All Items", "When turned on, a right click on the trade window will select all your items instantly. When turned off, selects only items of the same type, smoothly, like an actual player.", null));
             this.addOptionAndPosition(new ChoiceOption("mapHack", makeOnOffLabels(), [true, false], "Map Hack", "Shows entire map when entering a realm. Loading in for the first time will take longer.", null));
+            this.addOptionAndPosition(new KeyMapper("SkipRenderKey", "Toggle Rendering", "Stops rendering the playfield. Minimap and the rest of the HUD is still updated."));
         }
 
         private function addMessageOptions():void
@@ -851,9 +858,9 @@ public class Options extends Sprite
         private function addExtraOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("etheriteDisable", makeOnOffLabels(), [true, false], "Offset Etherite", "Offsets your firing angle if you have an Etherite equipped to make it so your shots are in a straight line", null));
-            this.addOptionAndPosition(new ChoiceOption("curBoss", this.bossNames(), [3368, 3366, 3367], "Current Boss", "You will only be able to hit the current boss.", null));
-            this.addOptionAndPosition(new ChoiceOption("cultistStaffDisable", makeOnOffLabels(), [true, false], "Reverse Cultist Staff", "Reverses the angle of the Staff of Unholy Sacrifice (which normally shoots backwards) to make it so you shoot forwards", null));
             this.addOptionAndPosition(new ChoiceOption("tombHack", makeOnOffLabels(), [true, false], "Tomb Hack", "Tomb hack allows you to only damage the selected boss, leaving others unharmed even if you shoot them.", this.tombDeactivate));
+            this.addOptionAndPosition(new ChoiceOption("cultistStaffDisable", makeOnOffLabels(), [true, false], "Reverse Cultist Staff", "Reverses the angle of the Staff of Unholy Sacrifice (which normally shoots backwards) to make it so you shoot forwards", null));
+            this.addOptionAndPosition(new ChoiceOption("curBoss", this.bossNames(), [3368, 3366, 3367], "Current Boss", "You will only be able to hit the current boss.", null));
             this.addOptionAndPosition(new ChoiceOption("offsetColossus", makeOnOffLabels(), [true, false], "Offset Colossus Sword", "Attempts to shoot straight, try /colo 0.4 and /colo 0.2", null));
             this.addOptionAndPosition(new KeyMapper("tombCycle", "Next Boss", "Selects the next boss.", (!(Parameters.data_.tombHack))));
             this.addOptionAndPosition(new ChoiceOption("wordNoti", makeOnOffLabels(), [true, false], "Word Notifier", "Notifies if someone say word in list in chat.", null));
@@ -907,7 +914,7 @@ public class Options extends Sprite
 
         private function makeAllowMiniMapRotation():ChoiceOption
         {
-            return (new ChoiceOption("allowMiniMapRotation", makeOnOffLabels(), [true, false], "Allow Minimap Rotation", TextKey.OPTIONS_ALLOW_MINIMAP_ROTATION_DESC, null));
+            return (new ChoiceOption("allowMiniMapRotation", makeOnOffLabels(), [true, false], TextKey.OPTIONS_ALLOW_MINIMAP_ROTATION, TextKey.OPTIONS_ALLOW_MINIMAP_ROTATION_DESC, null));
         }
 
         private function onAllowRotationChange():void
@@ -940,7 +947,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("switchTabs", TextKey.OPTIONS_SWITCH_TABS, TextKey.OPTIONS_SWITCH_TABS_DESC));
             this.addOptionAndPosition(new KeyMapper("GPURenderToggle", TextKey.OPTIONS_HARDWARE_ACC_HOTKEY_TITLE, TextKey.OPTIONS_HARDWARE_ACC_HOTKEY_DESC));
             this.addOptionsChoiceOption();
-            this.addOptionAndPosition(new KeyMapper("SkipRenderKey", "Toggle Rendering", "Stops rendering the playfield. Minimap and the rest of the HUD is still updated."));
         }
 
         public function isAirApplication():Boolean
@@ -970,21 +976,25 @@ public class Options extends Sprite
             }
         }
 
-        private function addChatOptions():void
-        {
+        private function addChatOptions():void {
             this.addOptionAndPosition(new KeyMapper(CHAT, TextKey.OPTIONS_ACTIVATE_CHAT, TextKey.OPTIONS_ACTIVATE_CHAT_DESC));
             this.addOptionAndPosition(new KeyMapper(CHAT_COMMAND, TextKey.OPTIONS_START_CHAT, TextKey.OPTIONS_START_CHAT_DESC));
             this.addOptionAndPosition(new KeyMapper(TELL, TextKey.OPTIONS_BEGIN_TELL, TextKey.OPTIONS_BEGIN_TELL_DESC));
             this.addOptionAndPosition(new KeyMapper(GUILD_CHAT, TextKey.OPTIONS_BEGIN_GUILD_CHAT, TextKey.OPTIONS_BEGIN_GUILD_CHAT_DESC));
+            this.addOptionAndPosition(new ChoiceOption("filterLanguage", makeOnOffLabels(), [true, false], TextKey.OPTIONS_FILTER_OFFENSIVE_LANGUAGE, TextKey.OPTIONS_FILTER_OFFENSIVE_LANGUAGE_DESC, null));
             this.addOptionAndPosition(new KeyMapper(SCROLL_CHAT_UP, TextKey.OPTIONS_SCROLL_CHAT_UP, TextKey.OPTIONS_SCROLL_CHAT_UP_DESC));
             this.addOptionAndPosition(new KeyMapper(SCROLL_CHAT_DOWN, TextKey.OPTIONS_SCROLL_CHAT_DOWN, TextKey.OPTIONS_SCROLL_CHAT_DOWN_DESC));
             this.addOptionAndPosition(new ChoiceOption("forceChatQuality", makeOnOffLabels(), [true, false], TextKey.OPTIONS_FORCE_CHAT_QUALITY, TextKey.OPTIONS_FORCE_CHAT_QUALITY_DESC, null));
             this.addOptionAndPosition(new ChoiceOption("hidePlayerChat", makeOnOffLabels(), [true, false], TextKey.OPTIONS_HIDE_PLAYER_CHAT, TextKey.OPTIONS_HIDE_PLAYER_CHAT_DESC, null));
+            if (hidden) {
+                this.addOptionAndPosition(new ChoiceOption("chatStarRequirement", makeStarSelectLabels(), [0, 1, 2, 3, 5, 10], TextKey.OPTIONS_STAR_REQ, TextKey.OPTIONS_CHAT_STAR_REQ_DESC, null));
+            } else {
+                this.addOptionAndPosition(new ChoiceOption("chatStarRequirement", makeStarSelectLabels(), [0, 13, 27, 41, 55, 69, 70], TextKey.OPTIONS_STAR_REQ, TextKey.OPTIONS_CHAT_STAR_REQ_DESC, null));
+            }
             this.addOptionAndPosition(new ChoiceOption("chatAll", makeOnOffLabels(), [true, false], TextKey.OPTIONS_CHAT_ALL, TextKey.OPTIONS_CHAT_ALL_DESC, this.onAllChatEnabled));
             this.addOptionAndPosition(new ChoiceOption("chatWhisper", makeOnOffLabels(), [true, false], TextKey.OPTIONS_CHAT_WHISPER, TextKey.OPTIONS_CHAT_WHISPER_DESC, this.onAllChatDisabled));
             this.addOptionAndPosition(new ChoiceOption("chatGuild", makeOnOffLabels(), [true, false], TextKey.OPTIONS_CHAT_GUILD, TextKey.OPTIONS_CHAT_GUILD_DESC, this.onAllChatDisabled));
             this.addOptionAndPosition(new ChoiceOption("chatTrade", makeOnOffLabels(), [true, false], TextKey.OPTIONS_CHAT_TRADE, TextKey.OPTIONS_CHAT_TRADE_DESC, null));
-            this.addOptionAndPosition(new ChoiceOption("chatStarRequirement", makeStarSelectLabels(), [0, 13, 27, 41, 55, 69, 70], TextKey.OPTIONS_STAR_REQ, "Blocks messages from players of this rank and below.", null));
         }
 
         private function onAllChatDisabled():void
@@ -1084,9 +1094,8 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("particleEffect", makeHighLowLabels(), [true, false], TextKey.OPTIONS_TOGGLE_PARTICLE_EFFECT, TextKey.OPTIONS_TOGGLE_PARTICLE_EFFECT_DESC, null));
             this.addOptionAndPosition(new ChoiceOption("uiQuality", makeHighLowLabels(), [true, false], TextKey.OPTIONS_TOGGLE_UI_QUALITY, TextKey.OPTIONS_TOGGLE_UI_QUALITY_DESC, onUIQualityToggle));
             this.addOptionAndPosition(new ChoiceOption("HPBar", makeOnOffLabels(), [true, false], TextKey.OPTIONS_HPBAR, TextKey.OPTIONS_HPBAR_DESC, null));
-            this.addOptionAndPosition(new ChoiceOption("disableEnemyParticles", makeOnOffLabels(), [true, false], "Disable Enemy Particles", "Disable particles when hit enemy and when enemy is dying.", null));
-            this.addOptionAndPosition(new ChoiceOption("disableAllyParticles", makeOnOffLabels(), [true, false], "Disable Ally Particles", "Disable particles produces by shooting ally.", null));
-            this.addOptionAndPosition(new ChoiceOption("disablePlayersHitParticles", makeOnOffLabels(), [true, false], "Disable Players Hit Particles", "Disable particles when player or ally is hit.", null));
+            this.addOptionAndPosition(new KeyMapper("toggleProjectiles", "Toggle Ally Projectiles", "This key will toggle rendering of friendly projectiles"));
+            this.addOptionAndPosition(new KeyMapper("toggleMasterParticles", "Toggle Particles", "This key will toggle rendering of nonessential particles (Particles Master option)"));
         }
 
         private function onShowQuestPortraitsChange():void

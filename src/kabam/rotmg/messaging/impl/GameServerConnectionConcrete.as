@@ -1505,21 +1505,25 @@ public class GameServerConnectionConcrete extends GameServerConnection
             _local_2.platformToken = _local_1.getPlatformToken();
             _local_2.userToken = _local_1.getToken();
             serverConnection.sendMessage(_local_2);
-            this.createVaultRecon(_local_2);
+            this.createVaultDailyRecon(_local_2);
         }
 
-        private function createVaultRecon(_arg_1:Hello):void
+        private function createVaultDailyRecon(_arg_1:Hello):void
         {
             var _local_2:Server = new Server().setName('{"text":"server.vault"}').setAddress(server_.address).setPort(server_.port);
-            var _local_3:int = -5;
+            var _local_3:int = Parameters.VAULT_GAMEID;
             var _local_4:Boolean = createCharacter_;
             var _local_5:int = charId_;
             var _local_6:int = _arg_1.keyTime_;
             var _local_7:ByteArray = _arg_1.key_;
+            var _local_9:int = Parameters.DAILYQUESTROOM_GAMEID;
+            var _local_10:Server = new Server().setName("Daily Quest Room").setAddress(server_.address).setPort(server_.port);
+            var _local_11:ReconnectEvent = new ReconnectEvent(_local_10, _local_9, _local_4, _local_5, _local_6, _local_7, isFromArena_);
+            MapUserInput.reconDaily = _local_11;
             isFromArena_ = false;
             var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
             MapUserInput.reconVault = _local_8;
-            if ((((_arg_1.gameId_ == -2) || (_arg_1.gameId_ == -11)) || (vaultSelect)))
+            if ((((_arg_1.gameId_ == Parameters.NEXUS_GAMEID) || (_arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID)) || (vaultSelect)))
             {
                 reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(server_.address).setPort(server_.port), -2, false, charId_, getTimer(), new ByteArray(), false);
             }
@@ -2279,7 +2283,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                             }
                             break;
                         }
-                        if (Parameters.data_.sizer)
+                        if (Parameters.data_.sizer && !Options.hidden)
                         {
                             _arg_1.size_ = ((_local_5 < 100) ? _local_5 : 100);
                         }
@@ -2722,22 +2726,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
             var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
             if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.nexus"}'))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
             {
-                if (_arg_1.name_.search("NexusPortal.") < 0)
-                {
-                    if (_arg_1.name_ != "Realm")
-                    {
-                        MapUserInput.reconDung = _local_8;
-                        MapUserInput.dungTime = getTimer();
-                        Parameters.data_.dservName = _local_8.server_.name;
-                        Parameters.data_.dservAddr = _local_8.server_.address;
-                        Parameters.data_.dreconGID = _local_8.gameId_;
-                        Parameters.data_.dreconTime = _local_8.keyTime_;
-                        Parameters.data_.dreconKey = _local_8.key_;
-                        Parameters.save();
-                    }
-                }
-                else
-                {
                     MapUserInput.reconRealm = _local_8;
                     Parameters.data_.servName = _local_8.server_.name;
                     Parameters.data_.servAddr = _local_8.server_.address;
@@ -2745,7 +2733,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     Parameters.data_.reconTime = _local_8.keyTime_;
                     Parameters.data_.reconKey = _local_8.key_;
                     Parameters.save();
-                }
             }
             gs_.dispatchEvent(_local_8);
         }

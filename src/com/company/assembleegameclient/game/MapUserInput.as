@@ -61,9 +61,9 @@ public class MapUserInput
         private static const MOUSE_DOWN_WAIT_PERIOD:uint = 175;
         private static var arrowWarning_:Boolean = false;
         public static var reconRealm:ReconnectEvent;
-        public static var reconDung:ReconnectEvent;
         public static var reconVault:ReconnectEvent;
         public static var reconRandom:ReconnectEvent;
+        public static var reconDaily:ReconnectEvent;
         public static var dungTime:uint = 0;
         public static var skipRender:Boolean = false;
         public static var optionsOpen:Boolean = false;
@@ -806,6 +806,12 @@ public class MapUserInput
                 case Parameters.data_.toggleHPBar:
                     Parameters.data_.HPBar = (!(Parameters.data_.HPBar));
                     break;
+                case Parameters.data_.toggleProjectiles:
+                    Parameters.data_.disableAllyParticles = (!(Parameters.data_.disableAllyParticles));
+                    break;
+                case Parameters.data_.toggleMasterParticles:
+                    Parameters.data_.noParticlesMaster = (!(Parameters.data_.noParticlesMaster));
+                    break;
                 case Parameters.data_.useInvSlot1:
                     this.useItem(4);
                     break;
@@ -915,33 +921,18 @@ public class MapUserInput
                         reconRandom.gameId_ = Parameters.RANDOM_REALM_GAMEID;
                         this.gs_.dispatchEvent(reconRandom);
                     }
-                case Parameters.data_.ReconDung:
-                    if (reconDung != null)
-                    {
-                        if ((getTimer() - dungTime) < 180000)
-                        {
-                            reconDung.charId_ = this.gs_.gsc_.charId_;
-                            this.gs_.dispatchEvent(reconDung);
-                        }
-                    }
-                    else
-                    {
-                        if ((getTimer() - Parameters.data_.dreconTime) < 180000)
-                        {
-                            _local_18 = new Server();
-                            _local_18.setName(Parameters.data_.dservName);
-                            _local_18.setAddress(Parameters.data_.dservAddr);
-                            _local_18.setPort(2050);
-                            _local_19 = new ReconnectEvent(_local_18, Parameters.data_.dreconGID, false, this.gs_.gsc_.charId_, Parameters.data_.dreconTime, Parameters.data_.dreconKey, false);
-                            this.gs_.dispatchEvent(_local_19);
-                        }
-                    }
-                    break;
                 case Parameters.data_.ReconVault:
                     if (reconVault != null)
                     {
                         reconVault.charId_ = this.gs_.gsc_.charId_;
                         this.gs_.dispatchEvent(reconVault);
+                    }
+                    break;
+                case Parameters.data_.ReconDaily:
+                    if (reconDaily != null)
+                    {
+                        reconDaily.charId_ = this.gs_.gsc_.charId_;
+                        this.gs_.dispatchEvent(reconDaily);
                     }
                     break;
                 case Parameters.data_.tpto:
