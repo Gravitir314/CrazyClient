@@ -1505,26 +1505,22 @@ public class GameServerConnectionConcrete extends GameServerConnection
             _local_2.platformToken = _local_1.getPlatformToken();
             _local_2.userToken = _local_1.getToken();
             serverConnection.sendMessage(_local_2);
-            this.createVaultDailyRecon(_local_2);
+            this.createVaultRecon(_local_2);
+            var _local_4:ReconnectEvent = new ReconnectEvent(new Server().setName("Daily Quest Room").setAddress(this.server_.address).setPort(this.server_.port), -11, false, charId_, _local_2.keyTime_, _local_2.key_, isFromArena_);
+            MapUserInput.reconDaily = _local_4;
         }
 
-        private function createVaultDailyRecon(_arg_1:Hello):void
-        {
+        private function createVaultRecon(_arg_1:Hello):void{
             var _local_2:Server = new Server().setName('{"text":"server.vault"}').setAddress(server_.address).setPort(server_.port);
-            var _local_3:int = Parameters.VAULT_GAMEID;
+            var _local_3:int = -5;
             var _local_4:Boolean = createCharacter_;
             var _local_5:int = charId_;
             var _local_6:int = _arg_1.keyTime_;
             var _local_7:ByteArray = _arg_1.key_;
-            var _local_9:int = Parameters.DAILYQUESTROOM_GAMEID;
-            var _local_10:Server = new Server().setName("Daily Quest Room").setAddress(server_.address).setPort(server_.port);
-            var _local_11:ReconnectEvent = new ReconnectEvent(_local_10, _local_9, _local_4, _local_5, _local_6, _local_7, isFromArena_);
-            MapUserInput.reconDaily = _local_11;
             isFromArena_ = false;
             var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
             MapUserInput.reconVault = _local_8;
-            if ((((_arg_1.gameId_ == Parameters.NEXUS_GAMEID) || (_arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID)) || (vaultSelect)))
-            {
+            if ((((_arg_1.gameId_ == Parameters.NEXUS_GAMEID) || (_arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID)) || (vaultSelect))){
                 reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(server_.address).setPort(server_.port), -2, false, charId_, getTimer(), new ByteArray(), false);
             }
             vaultSelect = false;
