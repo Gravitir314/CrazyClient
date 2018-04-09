@@ -993,7 +993,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             return (null);
         }
 
-        override public function invSwap(_arg_1:Player, _arg_2:GameObject, _arg_3:int, _arg_4:int, _arg_5:GameObject, _arg_6:int, _arg_7:int):Boolean
+        /*override public function invSwap(_arg_1:Player, _arg_2:GameObject, _arg_3:int, _arg_4:int, _arg_5:GameObject, _arg_6:int, _arg_7:int):Boolean
         {
             var _local_8:int;
             if (!gs_)
@@ -1019,13 +1019,41 @@ public class GameServerConnectionConcrete extends GameServerConnection
             _local_9.slotObject2_.slotId_ = _arg_6;
             _local_9.slotObject2_.objectType_ = _arg_7;
             serverConnection.sendMessage(_local_9);
-            if ((((!(Parameters.data_.clientSwap)) || ((_arg_3 < 4) && (_arg_2 == _arg_1))) || ((_arg_6 < 4) && (_arg_5 == _arg_1))))
-            {
-                _local_8 = _arg_2.equipment_[_arg_3];
-                _arg_2.equipment_[_arg_3] = _arg_5.equipment_[_arg_6];
-                _arg_5.equipment_[_arg_6] = _local_8;
-            }
             SoundEffectLibrary.play("inventory_move_item");
+            return (true);
+        }*/
+
+        override public function invSwap(_arg_1:Player, _arg_2:GameObject, _arg_3:int, _arg_4:int, _arg_5:GameObject, _arg_6:int, _arg_7:int):Boolean{
+            if (!this.gs_){
+                return (false);
+            };
+            if ((this.gs_.lastUpdate_ - this.lastInvSwapTime) < 500){
+                return (false);
+            };
+            if ((((_arg_3 == 1) && (_arg_2 == _arg_1)) || ((_arg_6 == 1) && (_arg_5 == _arg_1))))
+            {
+                if (_arg_1.mapAutoAbil)
+                {
+                    _arg_1.mapAutoAbil = false;
+                    _arg_1.notifyPlayer("Auto Ability: Disabled", 0xFF00, 1500);
+                }
+            }
+            var _local_8:InvSwap = (this.messages.require(82) as InvSwap);
+            _local_8.time_ = this.gs_.lastUpdate_;
+            _local_8.position_.x_ = _arg_1.x_;
+            _local_8.position_.y_ = _arg_1.y_;
+            _local_8.slotObject1_.objectId_ = _arg_2.objectId_;
+            _local_8.slotObject1_.slotId_ = _arg_3;
+            _local_8.slotObject1_.objectType_ = _arg_4;
+            _local_8.slotObject2_.objectId_ = _arg_5.objectId_;
+            _local_8.slotObject2_.slotId_ = _arg_6;
+            _local_8.slotObject2_.objectType_ = _arg_7;
+            serverConnection.sendMessage(_local_8);
+            var _local_9:int = _arg_2.equipment_[_arg_3];
+            _arg_2.equipment_[_arg_3] = _arg_5.equipment_[_arg_6];
+            _arg_5.equipment_[_arg_6] = _local_9;
+            SoundEffectLibrary.play("inventory_move_item");
+            this.lastInvSwapTime = _local_8.time_;
             return (true);
         }
 

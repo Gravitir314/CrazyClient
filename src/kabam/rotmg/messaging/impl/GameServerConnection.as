@@ -143,6 +143,7 @@ public class GameServerConnection
         public var record:int;
         public var needsMap:Boolean;
         public var mapName:String = "";
+        public var lastInvSwapTime:int = 0;
 
 
         public function addTextLine2(param1:String, param2:String):void

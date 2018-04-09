@@ -492,16 +492,13 @@ public class Projectile extends BasicObject
             var _local_2:int;
             for each (_local_2 in Parameters.data_.AAIgnore)
             {
-                if (!((_local_2 == 1619) || (_local_2 == 3441)))
+                if (_local_2 == _arg_1.props_.type_)
                 {
-                    if (_local_2 == _arg_1.props_.type_)
+                    if (!Parameters.data_.damageIgnored)
                     {
-                        if (!Parameters.data_.damageIgnored)
-                        {
-                            return (false);
-                        }
-                        break;
+                        return (false);
                     }
+                    break;
                 }
             }
             return (true);

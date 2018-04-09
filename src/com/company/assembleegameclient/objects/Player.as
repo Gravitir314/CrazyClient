@@ -890,7 +890,7 @@ public class Player extends Character
             return (false);
         }
 
-        public function lootItem(_arg_1:int, _arg_2:Container, _arg_3:int, _arg_4:int):void
+        public function lootItem(_arg_1:int, _arg_2:Container, _arg_3:int, _arg_4:int, _arg_5:int):void
         {
             var _local_5:Boolean = ((!(_arg_1 == HEALTH_SLOT)) && (!(_arg_1 == MAGIC_SLOT)));
             var _local_6:Boolean = ((_arg_4 == HEALTH_POT) || (_arg_4 == MAGIC_POT));
@@ -932,6 +932,7 @@ public class Player extends Character
                 }
             }
             lastLootTime = getTimer();
+            this.map_.gs_.gsc_.lastInvSwapTime = _arg_5;
         }
 
         public function nextAvailableInventorySlotMod():int
@@ -975,8 +976,11 @@ public class Player extends Character
             return (false);
         }
 
-        public function autoloot_():void
+        public function autoloot_(_arg_1:int):void
         {
+            if ((_arg_1 - this.map_.gs_.gsc_.lastInvSwapTime) < 500){
+                return;
+            };
             var _local_1:Container;
             var _local_2:int;
             var _local_3:Player;
@@ -992,7 +996,7 @@ public class Player extends Character
                     {
                         if (_local_1.objectId_ != GameServerConnectionConcrete.ignoredBag)
                         {
-                            this.lootItem(this.nextAvailableInventorySlotMod(), _local_1, _local_4, _local_2);
+                            this.lootItem(this.nextAvailableInventorySlotMod(), _local_1, _local_4, _local_2, _arg_1);
                         }
                         return;
                     }
@@ -1358,7 +1362,7 @@ public class Player extends Character
                 }
                 if (((Parameters.data_.AutoLootOn) && (this.lookForLoot())))
                 {
-                    this.autoloot_();
+                    this.autoloot_(_arg_1);
                 }
                 if ((((!(this.collect == 0)) && (map_.name_ == "Vault")) && ((lastLootTime + 550) < getTimer())))
                 {
