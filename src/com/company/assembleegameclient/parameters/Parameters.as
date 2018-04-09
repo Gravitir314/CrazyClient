@@ -489,6 +489,7 @@ public class Parameters
             setDefault("SWPanic", true);
             setDefault("SWNoTileMove", true);
             setDefault("showDamageOnEnemy", false);
+            setDefault("spellThreshold", 1000);
         }
 
 

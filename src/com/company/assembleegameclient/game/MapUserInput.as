@@ -492,7 +492,7 @@ public class MapUserInput
             }
             for each (_local_3 in this.gs_.map.goDict_)
             {
-                if ((((_local_3.props_.isEnemy_) && (_local_3.maxHP_ >= 1000)) && (!(this.isIgnored(_local_3.objectType_)))))
+                if ((((_local_3.props_.isEnemy_) && (_local_3.maxHP_ >= Parameters.data_.spellThreshold)) && (!(this.isIgnored(_local_3.objectType_)))))
                 {
                     _local_4 = (((_local_3.x_ - _arg_1.x_) * (_local_3.x_ - _arg_1.x_)) + ((_local_3.y_ - _arg_1.y_) * (_local_3.y_ - _arg_1.y_)));
                     if (_local_4 < 225)

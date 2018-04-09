@@ -1012,6 +1012,13 @@ public class ParseChatMessageCommand
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Reconnect delay set to: " + Parameters.RECONNECT_DELAY)));
                         return (true);
                     }
+                    _local_7 = this.data.toLowerCase().match("^/spellthreshold (\\d*\\.*\\d+)$");
+                    if (_local_7 != null) {
+                        Parameters.data_.spellThreshold = _local_7[1];
+                        Parameters.save();
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Spell threshold set to: " + Parameters.data_.spellThreshold)));
+                        return (true);
+                    }
                     _local_7 = this.data.toLowerCase().match("^/colo (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.coloOffset = _local_7[1];

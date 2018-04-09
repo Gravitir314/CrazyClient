@@ -202,6 +202,10 @@
       <Explanation>Set reconnect delay to custom value in milliseconds.&#xA;Set how fast you connect to locations.&#xA;Default: 100</Explanation>
    </Article>
    <Article>
+      <Command>/spellthreshold &lt;value&gt;</Command>
+      <Explanation>Set spell threshold to custom value.&#xA;Sets the threshold of lives, after which enable auto-aim.&#xA;Default: 1000</Explanation>
+   </Article>
+   <Article>
       <Command>/hidehacks</Command>
       <Explanation>Toggle visual hacks to take screenshot.</Explanation>
    </Article>
