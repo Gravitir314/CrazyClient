@@ -486,7 +486,6 @@ public class Parameters
             setDefault("blockPots", false);
             setDefault("blockCubes", false);
             setDefault("onlyGods", false);
-            setDefault("SWPanic", true);
             setDefault("SWNoTileMove", true);
             setDefault("showDamageOnEnemy", false);
             setDefault("spellThreshold", 1000);

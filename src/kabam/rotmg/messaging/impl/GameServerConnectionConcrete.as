@@ -1786,7 +1786,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             {
                 return;
             }
-            if (gs_.map.name_ == "Sprite World" && Parameters.data_.SWPanic && _local_3 is Player) {
+            if (gs_.map.name_ == "Sprite World" && _local_3 is Player) { //deactivate noTileMove
                 if (totPlayers == 1) {
                     addTextLine.dispatch(ChatMessage.make("*Help*", "Another player entered the Sprite World"));
                     Parameters.data_.SWNoTileMove = false;

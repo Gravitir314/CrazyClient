@@ -790,10 +790,6 @@ public class ParseChatMessageCommand
                     Parameters.data_.blockCubes = (!Parameters.data_.blockCubes);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockCubes) ? "Cubes Blocked" : "Cubes Allowed")));
                     return (true);
-                case "/swmove":
-                    Parameters.data_.SWNoTileMove = (!Parameters.data_.SWNoTileMove);
-                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
-                    return (true);
                 case "/blockpots":
                     Parameters.data_.blockPots = (!Parameters.data_.blockPots);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockPots) ? "Thirsty: On" : "Thirsty: Off")));
@@ -1709,6 +1705,7 @@ public class ParseChatMessageCommand
                 else {
                     if (this.data == "/hidehacks") {
                         Options.toggleHax();
+                        this.addTextLine.dispatch(ChatMessage.make("", ("Unrecognized command: " + this.data)));
                     } else {
                         lastMsg = this.data;
                         this.hudModel.gameSprite.gsc_.playerText(this.data);
