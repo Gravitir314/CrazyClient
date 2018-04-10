@@ -14,7 +14,7 @@ import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
-public class TabButton extends SliceScalingButton
+public class TabButton extends SliceScalingButton 
     {
 
         public static const SELECTED_MARGIN:int = 3;

@@ -7,7 +7,7 @@ package io.decagames.rotmg.ui.gird
 {
 import flash.display.Sprite;
 
-public class UIGridElement extends Sprite
+public class UIGridElement extends Sprite 
     {
 
 

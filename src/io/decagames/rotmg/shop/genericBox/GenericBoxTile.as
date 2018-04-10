@@ -18,7 +18,7 @@ import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
-public class GenericBoxTile extends UIGridElement
+public class GenericBoxTile extends UIGridElement 
     {
 
         protected var background:SliceScalingBitmap;

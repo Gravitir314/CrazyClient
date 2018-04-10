@@ -9,7 +9,7 @@ import io.decagames.rotmg.ui.buttons.SliceScalingButton;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-public class NumberSpinnerMediator extends Mediator
+public class NumberSpinnerMediator extends Mediator 
     {
 
         [Inject]

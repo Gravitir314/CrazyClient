@@ -11,7 +11,7 @@ import io.decagames.rotmg.ui.popups.modal.ModalPopup;
 
 import kabam.rotmg.packages.model.PackageInfo;
 
-public class PackageBoxContentPopup extends ModalPopup
+public class PackageBoxContentPopup extends ModalPopup 
     {
 
         private var _info:PackageInfo;

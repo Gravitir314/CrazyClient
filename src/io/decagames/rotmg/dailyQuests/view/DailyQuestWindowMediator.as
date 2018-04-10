@@ -32,7 +32,7 @@ import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-public class DailyQuestWindowMediator extends Mediator
+public class DailyQuestWindowMediator extends Mediator 
     {
 
         [Inject]

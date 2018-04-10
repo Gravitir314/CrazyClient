@@ -17,7 +17,7 @@ import io.decagames.rotmg.ui.scroll.UIScrollbar;
 import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
-public class ModalPopup extends BasePopup
+public class ModalPopup extends BasePopup 
     {
 
         protected var _contentContainer:Sprite;

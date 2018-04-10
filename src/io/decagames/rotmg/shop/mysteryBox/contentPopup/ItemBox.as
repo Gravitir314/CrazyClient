@@ -18,7 +18,7 @@ import io.decagames.rotmg.ui.labels.UILabel;
 
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-public class ItemBox extends UIGridElement
+public class ItemBox extends UIGridElement 
     {
 
         private var _itemId:String;

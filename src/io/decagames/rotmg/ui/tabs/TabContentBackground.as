@@ -12,7 +12,7 @@ import flash.geom.Rectangle;
 import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
-public class TabContentBackground extends SliceScalingBitmap
+public class TabContentBackground extends SliceScalingBitmap 
     {
 
         private var decorBitmapData:BitmapData;

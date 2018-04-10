@@ -18,7 +18,7 @@ import io.decagames.rotmg.ui.texture.TextureParser;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-public class PackageBoxContentPopupMediator extends Mediator
+public class PackageBoxContentPopupMediator extends Mediator 
     {
 
         [Inject]

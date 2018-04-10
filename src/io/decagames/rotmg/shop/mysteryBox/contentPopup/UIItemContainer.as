@@ -17,7 +17,7 @@ import io.decagames.rotmg.ui.labels.UILabel;
 
 import kabam.rotmg.text.model.FontModel;
 
-public class UIItemContainer extends UIGridElement
+public class UIItemContainer extends UIGridElement 
     {
 
         private var _itemId:int;

@@ -9,7 +9,7 @@ import flash.utils.Dictionary;
 
 import io.decagames.rotmg.fame.data.bonus.FameBonus;
 
-public class TotalFame
+public class TotalFame 
     {
 
         private var _bonuses:Vector.<FameBonus> = new Vector.<FameBonus>();

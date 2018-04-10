@@ -15,7 +15,7 @@ import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
 import org.osflash.signals.Signal;
 
-public class NumberSpinner extends Sprite
+public class NumberSpinner extends Sprite 
     {
 
         private var _upArrow:SliceScalingButton;

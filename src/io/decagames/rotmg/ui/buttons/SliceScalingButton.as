@@ -101,9 +101,10 @@ public class SliceScalingButton extends BaseButton
         override public function set disabled(_arg_1:Boolean):void
         {
             super.disabled = _arg_1;
-            if (this.stateFactories[ButtonStates.DISABLED])
+            var _local_2:Function = this.stateFactories[ButtonStates.DISABLED];
+            if (_local_2)
             {
-                (this.stateFactories[ButtonStates.DISABLED](this._label));
+                (_local_2(this._label));
             }
             if (this._interactionEffects)
             {
@@ -123,7 +124,7 @@ public class SliceScalingButton extends BaseButton
         {
             if (_arg_3 == ButtonStates.IDLE)
             {
-                if (_arg_2())
+                if (_arg_2)
                 {
                     (_arg_2(this._label));
                 }

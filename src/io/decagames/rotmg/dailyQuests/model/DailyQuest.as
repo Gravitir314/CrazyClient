@@ -5,7 +5,7 @@
 
 package io.decagames.rotmg.dailyQuests.model
 {
-public class DailyQuest
+public class DailyQuest 
     {
 
         public var completed:Boolean;

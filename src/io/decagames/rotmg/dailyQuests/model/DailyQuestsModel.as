@@ -11,7 +11,7 @@ import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
 import kabam.rotmg.constants.GeneralConstants;
 import kabam.rotmg.ui.model.HUDModel;
 
-public class DailyQuestsModel
+public class DailyQuestsModel 
     {
 
         private var _questsList:Vector.<DailyQuest> = new Vector.<DailyQuest>();

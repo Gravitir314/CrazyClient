@@ -12,7 +12,7 @@ import flash.utils.IDataInput;
 
 import io.decagames.rotmg.characterMetrics.data.CharacterMetricsData;
 
-public class CharactersMetricsTracker
+public class CharactersMetricsTracker 
     {
 
         public static const STATS_SIZE:int = 5;

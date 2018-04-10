@@ -9,7 +9,7 @@ import com.company.assembleegameclient.ui.SoundIcon;
 
 import flash.display.Sprite;
 
-public class ScreenBase extends Sprite
+public class ScreenBase extends Sprite 
     {
         internal static var TitleScreenBackground:Class = ScreenBase_TitleScreenBackground;
 

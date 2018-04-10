@@ -12,7 +12,7 @@ import io.decagames.rotmg.ui.labels.UILabel;
 import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
-public class PopupHeader extends Sprite
+public class PopupHeader extends Sprite 
     {
 
         public static const LEFT_BUTTON:String = "left_button";

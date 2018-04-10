@@ -12,7 +12,7 @@ import io.decagames.rotmg.ui.popups.modal.TextModal;
 import io.decagames.rotmg.ui.popups.modal.buttons.BuyGoldButton;
 import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
 
-public class NotEnoughResources extends TextModal
+public class NotEnoughResources extends TextModal 
     {
 
         public function NotEnoughResources(_arg_1:int, _arg_2:int)

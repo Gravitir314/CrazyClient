@@ -17,7 +17,7 @@ import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 import io.decagames.rotmg.ui.gird.UIGridElement;
 import io.decagames.rotmg.ui.labels.UILabel;
 
-public class SlotBox extends UIGridElement
+public class SlotBox extends UIGridElement 
     {
 
         public static const CHAR_SLOT:String = "CHAR_SLOT";
