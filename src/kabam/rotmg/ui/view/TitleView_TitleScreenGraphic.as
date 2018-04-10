@@ -1,14 +1,14 @@
 package kabam.rotmg.ui.view
 {
-import mx.core.*;
+	import mx.core.*;
 
-[Embed(source="TitleView_TitleScreenGraphic.png")]
-	public class TitleView_TitleScreenGraphic extends BitmapAsset
+	[Embed(source="TitleView_TitleScreenGraphic.png")]
+	public class TitleView_TitleScreenGraphic extends mx.core.BitmapAsset
 	{
 		public function TitleView_TitleScreenGraphic()
 		{
 			super();
-
+			return;
 		}
 	}
 }
