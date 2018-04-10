@@ -11,9 +11,10 @@ import com.company.assembleegameclient.ui.dialogs.DialogCloser;
 
 import flash.events.Event;
 
-import kabam.rotmg.core.StaticInjectorContext;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
 import io.decagames.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.signals.FriendActionSignal;
+
+import kabam.rotmg.core.StaticInjectorContext;
 
 import org.osflash.signals.Signal;
 import org.swiftsuspenders.Injector;

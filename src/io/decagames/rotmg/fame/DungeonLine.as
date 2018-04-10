@@ -4,13 +4,14 @@
 //io.decagames.rotmg.fame.DungeonLine
 
 package io.decagames.rotmg.fame{
-    import flash.display.Bitmap;
-    import flash.display.BitmapData;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import com.company.assembleegameclient.objects.TextureDataConcrete;
-    import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.TextureDataConcrete;
+import com.company.assembleegameclient.util.TextureRedrawer;
 
-    public class DungeonLine extends StatsLine {
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+
+public class DungeonLine extends StatsLine {
 
         private var dungeonTextureName:*;
         private var dungeonBitmap:Bitmap;
@@ -30,23 +31,23 @@ package io.decagames.rotmg.fame{
                 this.dungeonBitmap.x = (-(Math.round((_local_2.width / 2))) + 13);
                 this.dungeonBitmap.y = (-(Math.round((_local_2.height / 2))) + 11);
                 addChild(this.dungeonBitmap);
-            };
+            }
             label.y = 4;
             label.x = 24;
             lineHeight = 25;
             if (fameValue){
                 fameValue.y = 4;
-            };
+            }
             if (lock){
                 lock.y = -6;
-            };
+            }
         }
 
         override public function clean():void{
             super.clean();
             if (this.dungeonBitmap){
                 this.dungeonBitmap.bitmapData.dispose();
-            };
+            }
         }
 
 

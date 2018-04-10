@@ -23,10 +23,10 @@ import flash.geom.Point;
 import flash.geom.Vector3D;
 import flash.utils.getTimer;
 
+import io.decagames.rotmg.friends.FriendsPopupView;
+import io.decagames.rotmg.friends.model.FriendModel;
 import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.friends.FriendsPopupView;
 
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.chat.control.ParseChatMessageSignal;

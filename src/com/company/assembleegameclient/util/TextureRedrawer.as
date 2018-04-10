@@ -43,12 +43,12 @@ public class TextureRedrawer
             var _local_8:String = getHash(_arg_2, _arg_3, _arg_4, _arg_6, _arg_7);
             if (((_arg_5) && (isCached(_arg_1, _local_8)))){
                 return (redrawCaches[_arg_1][_local_8]);
-            };
+            }
             var _local_9:BitmapData = resize(_arg_1, null, _arg_2, _arg_3, 0, 0, _arg_6);
             _local_9 = GlowRedrawer.outlineGlow(_local_9, _arg_4, 1.4, _arg_5, _arg_7);
             if (_arg_5){
                 cache(_arg_1, _local_8, _local_9);
-            };
+            }
             return (_local_9);
         }
 

@@ -807,17 +807,17 @@ public class EquipmentToolTip extends ToolTip
             _local_16 = (_local_16 + "within {radius} squares\n");
             if (_local_14.a){
                 _local_16 = (_local_16 + "Steals {heal} HP");
-            };
+            }
             if (((_local_14.a) && (_local_15.a))){
                 _local_16 = (_local_16 + " and ignores {ignoreDef} defense");
             } else {
                 if (_local_15.a){
                     _local_16 = (_local_16 + "Ignores {ignoreDef} defense");
-                };
-            };
+                }
+            }
             if (_local_14.a){
                 _local_16 = (_local_16 + (("\nHeals allies within {healRange}" + this.colorWisBonus(_local_10)) + " squares"));
-            };
+            }
             this.effects.push(new Effect(_local_16, {
                 "damage":TooltipHelper.compare(_local_11.a, _local_11.b),
                 "radius":TooltipHelper.compare(_local_12.a, _local_12.b),
@@ -871,13 +871,13 @@ public class EquipmentToolTip extends ToolTip
             if (_local_4.a){
                 if (_local_4.a < 0){
                     _local_14 = true;
-                };
+                }
                 _local_15 = "reduced";
                 if (_local_14){
                     _local_15 = TooltipHelper.wrapInFontTag("increased", ("#" + TooltipHelper.NO_DIFF_COLOR.toString(16)));
-                };
+                }
                 _local_13 = (_local_13 + ((", " + _local_15) + " by \n{decrDamage} for each subsequent target"));
-            };
+            }
             this.effects.push(new Effect(_local_13, {
                 "targets":TooltipHelper.compare(_local_11.a, _local_11.b),
                 "damage":TooltipHelper.compare(_local_12.a, _local_12.b),
@@ -898,16 +898,16 @@ public class EquipmentToolTip extends ToolTip
             _local_10 = (_local_10 + "{duration}");
             if (_local_4.a){
                 _local_10 = (_local_10 + " at {angleOffset}");
-            };
+            }
             _local_10 = (_local_10 + "\n");
             if (_local_5.a == 0){
                 _local_10 = (_local_10 + "Decoy does not move");
             } else {
                 _local_10 = (_local_10 + "{distance} in {travelTime}");
-            };
+            }
             if (_local_9.a){
                 _local_10 = (_local_10 + "\nShots: {numShots}");
-            };
+            }
             this.effects.push(new Effect(_local_10, {
                 "duration":TooltipHelper.compareAndGetPlural(_local_3.a, _local_3.b, "second"),
                 "angleOffset":TooltipHelper.compareAndGetPlural(_local_4.a, _local_4.b, "degree"),
@@ -929,7 +929,7 @@ public class EquipmentToolTip extends ToolTip
             _local_10 = (_local_10 + "{totalDamage} damage");
             if (_local_7.a){
                 _local_10 = (_local_10 + " ({impactDamage} on impact)");
-            };
+            }
             _local_10 = (_local_10 + " within {radius}");
             _local_10 = (_local_10 + " over {duration}");
             this.effects.push(new Effect(_local_10, {
@@ -952,13 +952,13 @@ public class EquipmentToolTip extends ToolTip
                     _local_7 = ((_arg_2.hasOwnProperty("@condEffect")) ? _arg_2.@condEffect : _arg_3);
                     if (_local_7 == "Nothing"){
                         _local_6.b = 0;
-                    };
-                };
+                    }
+                }
                 this.effects.push(new Effect("Inflicts {condition} for {duration} ", {
                     "condition":_local_5,
                     "duration":TooltipHelper.compareAndGetPlural(_local_6.a, _local_6.b, "second")
                 }));
-            };
+            }
         }
 
         private function GetIntArgument(_arg_1:XML, _arg_2:String, _arg_3:int=0):int

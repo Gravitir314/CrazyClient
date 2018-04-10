@@ -5,13 +5,13 @@
 
 package io.decagames.rotmg.ui.sliceScaling
 {
-    import flash.display.Bitmap;
-    import flash.geom.Rectangle;
-    import flash.display.BitmapData;
-    import flash.geom.Point;
-    import flash.geom.Matrix;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 
-    public class SliceScalingBitmap extends Bitmap 
+public class SliceScalingBitmap extends Bitmap
     {
 
         public static var SCALE_TYPE_NONE:String = "none";
@@ -45,7 +45,7 @@ package io.decagames.rotmg.ui.sliceScaling
             else
             {
                 this.bitmapData = _arg_1;
-            };
+            }
         }
 
         public function clone():SliceScalingBitmap
@@ -84,23 +84,23 @@ package io.decagames.rotmg.ui.sliceScaling
             if (this._scaleType == SCALE_TYPE_NONE)
             {
                 return;
-            };
+            }
             if (this.bitmapData)
             {
                 this.bitmapData.dispose();
-            };
+            }
             if (this._scaleType == SCALE_TYPE_3)
             {
                 this.prepare3grid();
-            };
+            }
             if (this._scaleType == SCALE_TYPE_9)
             {
                 this.prepare9grid();
-            };
+            }
             if (this._forceRenderInNextFrame)
             {
                 this._forceRenderInNextFrame = false;
-            };
+            }
         }
 
         private function prepare3grid():void
@@ -119,7 +119,7 @@ package io.decagames.rotmg.ui.sliceScaling
                 {
                     this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(this.scaleGrid.x, 0, this.scaleGrid.width, this.bitmapDataToSlice.height), new Point(((this.scaleGrid.x + _local_2) + this.margin.x), this.margin.y));
                     _local_2++;
-                };
+                }
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle((this.scaleGrid.x + this.scaleGrid.width), 0, (this.bitmapDataToSlice.width - (this.scaleGrid.x + this.scaleGrid.width)), this.bitmapDataToSlice.height), new Point(((this.scaleGrid.x + _local_1) + this.margin.x), this.margin.y));
             }
             else
@@ -132,9 +132,9 @@ package io.decagames.rotmg.ui.sliceScaling
                 {
                     this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(0, this.scaleGrid.y, this.scaleGrid.width, this.bitmapDataToSlice.height), new Point(this.margin.x, ((this.margin.y + this.scaleGrid.y) + _local_4)));
                     _local_4++;
-                };
+                }
                 this.bitmapData.copyPixels(this.bitmapDataToSlice, new Rectangle(0, (this.scaleGrid.y + this.scaleGrid.height), this.bitmapDataToSlice.width, (this.bitmapDataToSlice.height - (this.scaleGrid.y + this.scaleGrid.height))), new Point(this.margin.x, ((this.margin.y + this.scaleGrid.y) + _local_3)));
-            };
+            }
         }
 
         private function prepare9grid():void{
@@ -160,9 +160,9 @@ package io.decagames.rotmg.ui.sliceScaling
                     _local_3.ty = (_local_2.y - (_local_1.y * _local_3.d));
                     _local_4.draw(this.bitmapDataToSlice, _local_3, null, null, _local_2);
                     _local_10++;
-                };
+                }
                 _local_9++;
-            };
+            }
             this.bitmapData = _local_4;
         }
 

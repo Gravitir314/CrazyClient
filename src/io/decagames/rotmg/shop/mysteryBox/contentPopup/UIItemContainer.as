@@ -5,16 +5,19 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-    import io.decagames.rotmg.ui.gird.UIGridElement;
-    import flash.display.Bitmap;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import flash.display.BitmapData;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import flash.text.TextFormat;
-    import kabam.rotmg.text.model.FontModel;
-    import flash.filters.DropShadowFilter;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 
-    public class UIItemContainer extends UIGridElement 
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFormat;
+
+import io.decagames.rotmg.ui.gird.UIGridElement;
+import io.decagames.rotmg.ui.labels.UILabel;
+
+import kabam.rotmg.text.model.FontModel;
+
+public class UIItemContainer extends UIGridElement
     {
 
         private var _itemId:int;
@@ -72,7 +75,7 @@ package io.decagames.rotmg.shop.mysteryBox.contentPopup
             if (this._quantity > 1)
             {
                 _local_1.showQuantityLabel(this._quantity);
-            };
+            }
             return (_local_1);
         }
 

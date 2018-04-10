@@ -9,14 +9,15 @@ import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 
+import io.decagames.rotmg.friends.config.FriendsActions;
+import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.signals.FriendActionSignal;
+
 import kabam.rotmg.chat.control.ShowChatInputSignal;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.friends.model.FriendRequestVO;
 import kabam.rotmg.game.model.GameInitData;
 import kabam.rotmg.game.signals.PlayGameSignal;
 import kabam.rotmg.text.model.TextKey;

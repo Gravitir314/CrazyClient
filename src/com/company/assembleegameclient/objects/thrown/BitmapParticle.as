@@ -97,7 +97,7 @@ public class BitmapParticle extends BasicObject
             }
             catch(error:Error)
             {
-                return;
+
             }
         }
 

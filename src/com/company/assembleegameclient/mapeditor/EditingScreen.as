@@ -4,38 +4,39 @@
 //com.company.assembleegameclient.mapeditor.EditingScreen
 
 package com.company.assembleegameclient.mapeditor{
-import flash.display.Sprite;
-import com.company.assembleegameclient.editor.CommandQueue;
-import com.company.assembleegameclient.ui.dropdown.DropDown;
-import flash.utils.Dictionary;
+import com.company.assembleegameclient.account.ui.CheckBoxField;
 import com.company.assembleegameclient.account.ui.TextInputField;
+import com.company.assembleegameclient.editor.CommandEvent;
+import com.company.assembleegameclient.editor.CommandList;
+import com.company.assembleegameclient.editor.CommandQueue;
+import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.RegionLibrary;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.screens.TitleMenuOption;
-import kabam.lib.json.JsonParser;
-import org.swiftsuspenders.Injector;
-import __AS3__.vec.Vector;
+import com.company.assembleegameclient.ui.DeprecatedClickableText;
+import com.company.assembleegameclient.ui.dropdown.DropDown;
+import com.company.util.IntPoint;
+import com.company.util.SpriteUtil;
+import com.hurlant.util.Base64;
+
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.IOErrorEvent;
+import flash.events.MouseEvent;
+import flash.geom.Rectangle;
+import flash.net.FileFilter;
 import flash.net.FileReference;
+import flash.text.TextFieldAutoSize;
+import flash.utils.ByteArray;
+import flash.utils.Dictionary;
+
+import kabam.lib.json.JsonParser;
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.ui.view.components.ScreenBase;
-import com.company.assembleegameclient.editor.CommandEvent;
-import flash.events.Event;
-import com.company.assembleegameclient.ui.DeprecatedClickableText;
-import flash.text.TextFieldAutoSize;
-import flash.events.MouseEvent;
-import com.company.assembleegameclient.account.ui.CheckBoxField;
-import com.company.util.IntPoint;
-import flash.display.Bitmap;
-import com.company.assembleegameclient.objects.ObjectLibrary;
-import com.company.assembleegameclient.editor.CommandList;
-import com.company.util.SpriteUtil;
-import com.company.assembleegameclient.map.GroundLibrary;
-import flash.geom.Rectangle;
-import flash.utils.ByteArray;
-import com.hurlant.util.Base64;
-import com.company.assembleegameclient.map.RegionLibrary;
-import flash.net.FileFilter;
-import flash.events.IOErrorEvent;
-import __AS3__.vec.*;
+
+import org.swiftsuspenders.Injector;
 
 public class EditingScreen extends Sprite {
 
@@ -130,7 +131,7 @@ public class EditingScreen extends Sprite {
             _local_1 = GroupDivider.GROUP_LABELS.concat();
             _local_1.splice(_local_1.indexOf(AllObjectChooser.GROUP_NAME_GAME_OBJECTS), 1);
             this.chooserDropDown_ = new DropDown(_local_1, Chooser.WIDTH, 26);
-        };
+        }
         this.chooserDropDown_.x = ((this.meMap_.x + MEMap.SIZE) + 4);
         this.chooserDropDown_.y = ((MAP_Y - this.chooserDropDown_.height) - 4);
         this.chooserDropDown_.addEventListener(Event.CHANGE, this.onDropDownChange);
@@ -143,7 +144,7 @@ public class EditingScreen extends Sprite {
         while (_local_2 >= 64) {
             _local_1.push(((_local_2 + "x") + _local_2));
             _local_2 = (_local_2 / 2);
-        };
+        }
         this.mapSizeDropDown_ = new DropDown(_local_1, Chooser.WIDTH, 26);
         this.mapSizeDropDown_.setValue(((MEMap.NUM_SQUARES + "x") + MEMap.NUM_SQUARES));
         this.mapSizeDropDown_.x = ((this.chooserDropDown_.x - this.chooserDropDown_.width) - 4);
@@ -246,7 +247,7 @@ public class EditingScreen extends Sprite {
             this.allGameObjChooser_.x = this.chooserDropDown_.x;
             this.allGameObjChooser_.y = _local_1;
             this.choosers_[GroupDivider.GROUP_LABELS[8]] = this.allGameObjChooser_;
-        };
+        }
         this.chooser_ = this.groundChooser_;
         this.groundChooser_.reloadObjects("", "");
         addChild(this.groundChooser_);
@@ -287,7 +288,7 @@ public class EditingScreen extends Sprite {
             case this.dungeonChooser_:
                 this.dungeonChooser_.reloadObjects(this.filter.dungeon, this.filter.searchStr);
                 return;
-        };
+        }
     }
 
     private function onCheckBoxUpdated(_arg_1:MouseEvent):void{
@@ -315,7 +316,7 @@ public class EditingScreen extends Sprite {
                 (this.checkBoxArray[Layer.OBJECT] as CheckBoxField).setUnchecked();
                 (this.checkBoxArray[Layer.REGION] as CheckBoxField).setUnchecked();
                 break;
-        };
+        }
         this.meMap_.draw();
     }
 
@@ -341,7 +342,7 @@ public class EditingScreen extends Sprite {
                 _local_4 = this.meMap_.getType(_local_2.x_, _local_2.y_, this.chooser_.layer_);
                 if (_local_4 == -1){
                     return;
-                };
+                }
                 _local_5 = GroupDivider.getCategoryByType(_local_4, this.chooser_.layer_);
                 if (_local_5 == "") break;
                 this.chooser_ = this.choosers_[_local_5];
@@ -362,10 +363,10 @@ public class EditingScreen extends Sprite {
                     _local_3 = this.meMap_.getTile(_local_2.x_, _local_2.y_);
                     if (_local_3 != null){
                         _local_3 = _local_3.clone();
-                    };
+                    }
                     this.tilesBackup.push(_local_3);
                     _local_8.push(null);
-                };
+                }
                 this.addPasteCommandList(_arg_1.tiles_, _local_8);
                 this.meMap_.freezeSelect();
                 this.commandMenu_.setCommand(MECommandMenu.PASTE_COMMAND);
@@ -376,9 +377,9 @@ public class EditingScreen extends Sprite {
                     _local_3 = this.meMap_.getTile(_local_2.x_, _local_2.y_);
                     if (_local_3 != null){
                         _local_3 = _local_3.clone();
-                    };
+                    }
                     this.tilesBackup.push(_local_3);
-                };
+                }
                 this.meMap_.freezeSelect();
                 this.commandMenu_.setCommand(MECommandMenu.PASTE_COMMAND);
                 break;
@@ -395,7 +396,7 @@ public class EditingScreen extends Sprite {
                     this.pickObjHolder.name = String(_local_3.types_[Layer.OBJECT]);
                     this.addModifyCommandList(_arg_1.tiles_, Layer.OBJECT, -1);
                     this.commandMenu_.setCommand(MECommandMenu.DROP_COMMAND);
-                };
+                }
                 break;
             case MECommandMenu.DROP_COMMAND:
                 if (this.pickObjHolder != null){
@@ -405,9 +406,9 @@ public class EditingScreen extends Sprite {
                     this.pickObjHolder.removeChildAt(0);
                     this.pickObjHolder = null;
                     this.commandMenu_.setCommand(MECommandMenu.PICK_UP_COMMAND);
-                };
+                }
                 break;
-        };
+        }
         this.meMap_.draw();
     }
 
@@ -424,11 +425,11 @@ public class EditingScreen extends Sprite {
             _local_6 = this.meMap_.getType(_local_5.x_, _local_5.y_, _arg_2);
             if (_local_6 != _arg_3){
                 _local_4.addCommand(new MEModifyCommand(this.meMap_, _local_5.x_, _local_5.y_, _arg_2, _local_6, _arg_3));
-            };
-        };
+            }
+        }
         if (_local_4.empty()){
             return;
-        };
+        }
         this.commandQueue_.addCommandList(_local_4);
     }
 
@@ -442,10 +443,10 @@ public class EditingScreen extends Sprite {
             _local_6 = this.meMap_.getTile(_local_5.x_, _local_5.y_);
             _local_3.addCommand(new MEReplaceCommand(this.meMap_, _local_5.x_, _local_5.y_, _local_6, _arg_2[_local_4]));
             _local_4++;
-        };
+        }
         if (_local_3.empty()){
             return;
-        };
+        }
         this.commandQueue_.addCommandList(_local_3);
     }
 
@@ -457,11 +458,11 @@ public class EditingScreen extends Sprite {
             _local_5 = this.meMap_.getObjectName(_local_4.x_, _local_4.y_);
             if (_local_5 != _arg_2){
                 _local_3.addCommand(new MEObjectNameCommand(this.meMap_, _local_4.x_, _local_4.y_, _local_5, _arg_2));
-            };
-        };
+            }
+        }
         if (_local_3.empty()){
             return;
-        };
+        }
         this.commandQueue_.addCommandList(_local_3);
     }
 
@@ -482,7 +483,7 @@ public class EditingScreen extends Sprite {
             case GroundLibrary.GROUND_CATEGORY:
                 if (!this.groundChooser_.hasBeenLoaded){
                     this.groundChooser_.reloadObjects("", "");
-                };
+                }
                 this.setSearch(this.groundChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.groundChooser_);
@@ -495,7 +496,7 @@ public class EditingScreen extends Sprite {
             case "Basic Objects":
                 if (!this.objChooser_.hasBeenLoaded){
                     this.objChooser_.reloadObjects("");
-                };
+                }
                 this.setSearch(this.objChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.objChooser_);
@@ -507,7 +508,7 @@ public class EditingScreen extends Sprite {
             case "Enemies":
                 if (!this.enemyChooser_.hasBeenLoaded){
                     this.enemyChooser_.reloadObjects("", "", 0, -1);
-                };
+                }
                 this.setSearch(this.enemyChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.enemyChooser_);
@@ -529,7 +530,7 @@ public class EditingScreen extends Sprite {
             case "Walls":
                 if (!this.wallChooser_.hasBeenLoaded){
                     this.wallChooser_.reloadObjects("");
-                };
+                }
                 this.setSearch(this.wallChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.wallChooser_);
@@ -541,7 +542,7 @@ public class EditingScreen extends Sprite {
             case "3D Objects":
                 if (!this.object3DChooser_.hasBeenLoaded){
                     this.object3DChooser_.reloadObjects("");
-                };
+                }
                 this.setSearch(this.object3DChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.object3DChooser_);
@@ -553,7 +554,7 @@ public class EditingScreen extends Sprite {
             case "All Map Objects":
                 if (!this.allObjChooser_.hasBeenLoaded){
                     this.allObjChooser_.reloadObjects("");
-                };
+                }
                 this.setSearch(this.allObjChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.allObjChooser_);
@@ -564,7 +565,7 @@ public class EditingScreen extends Sprite {
             case "All Game Objects":
                 if (!this.allGameObjChooser_.hasBeenLoaded){
                     this.allGameObjChooser_.reloadObjects("", AllObjectChooser.GROUP_NAME_GAME_OBJECTS);
-                };
+                }
                 this.setSearch(this.allGameObjChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.allGameObjChooser_);
@@ -575,7 +576,7 @@ public class EditingScreen extends Sprite {
             case "Dungeons":
                 if (!this.dungeonChooser_.hasBeenLoaded){
                     this.dungeonChooser_.reloadObjects(GroupDivider.DEFAULT_DUNGEON, "");
-                };
+                }
                 this.setSearch(this.dungeonChooser_.getLastSearch());
                 this.safeRemoveCategoryChildren();
                 SpriteUtil.safeAddChild(this, this.dungeonChooser_);
@@ -584,7 +585,7 @@ public class EditingScreen extends Sprite {
                 this.filter.enableValueFilter(false);
                 this.filter.enableDungeonFilter(true);
                 return;
-        };
+        }
     }
 
     private function onDropDownSizeChange(_arg_1:Event):void{
@@ -605,7 +606,7 @@ public class EditingScreen extends Sprite {
             case "1024x1024":
                 _local_2 = 0x0400;
                 break;
-        };
+        }
         this.meMap_.resize(_local_2);
         this.meMap_.draw();
     }
@@ -629,11 +630,11 @@ public class EditingScreen extends Sprite {
             _local_5 = this.meMap_.getTile(_local_4.x_, _local_4.y_);
             if (_local_5 != null){
                 _local_3.addCommand(new MEClearCommand(this.meMap_, _local_4.x_, _local_4.y_, _local_5));
-            };
-        };
+            }
+        }
         if (_local_3.empty()){
             return;
-        };
+        }
         this.commandQueue_.addCommandList(_local_3);
         this.meMap_.draw();
         this.filename_ = null;
@@ -648,7 +649,7 @@ public class EditingScreen extends Sprite {
         var _local_1:Rectangle = this.meMap_.getTileBounds();
         if (_local_1 == null){
             return (null);
-        };
+        }
         var _local_2:Object = {};
         _local_2["width"] = int(_local_1.width);
         _local_2["height"] = int(_local_1.height);
@@ -668,12 +669,12 @@ public class EditingScreen extends Sprite {
                     _local_4.push(_local_9);
                 } else {
                     _local_11 = _local_3[_local_10];
-                };
+                }
                 _local_5.writeShort(_local_11);
                 _local_7++;
-            };
+            }
             _local_6++;
-        };
+        }
         _local_2["dict"] = _local_4;
         _local_5.compress();
         _local_2["data"] = Base64.encodeByteArray(_local_5);
@@ -684,7 +685,7 @@ public class EditingScreen extends Sprite {
         var _local_2:String = this.createMapJSON();
         if (_local_2 == null){
             return;
-        };
+        }
         new FileReference().save(_local_2, ((this.filename_ == null) ? "map.jm" : this.filename_));
     }
 
@@ -692,7 +693,7 @@ public class EditingScreen extends Sprite {
         var _local_2:String = this.createMapJSON();
         if (_local_2 == null){
             return;
-        };
+        }
         this.meMap_.setMinZoom();
         this.meMap_.draw();
         dispatchEvent(new SubmitJMEvent(_local_2, this.meMap_.getMapStatistics()));
@@ -708,20 +709,20 @@ public class EditingScreen extends Sprite {
             if (_local_3[Layer.GROUND] != -1){
                 _local_4 = GroundLibrary.getIdFromType(_local_3[Layer.GROUND]);
                 _local_2["ground"] = _local_4;
-            };
+            }
             if (_local_3[Layer.OBJECT] != -1){
                 _local_4 = ObjectLibrary.getIdFromType(_local_3[Layer.OBJECT]);
                 _local_5 = {"id":_local_4};
                 if (_arg_1.objName_ != null){
                     _local_5["name"] = _arg_1.objName_;
-                };
+                }
                 _local_2["objs"] = [_local_5];
-            };
+            }
             if (_local_3[Layer.REGION] != -1){
                 _local_4 = RegionLibrary.getIdFromType(_local_3[Layer.REGION]);
                 _local_2["regions"] = [{"id":_local_4}];
-            };
-        };
+            }
+        }
         return (_local_2);
     }
 
@@ -738,7 +739,7 @@ public class EditingScreen extends Sprite {
         try {
             loadedFile.load();
         } catch(e:Error) {
-        };
+        }
     }
 
     private function onFileLoadComplete(_arg_1:Event):void{
@@ -758,13 +759,13 @@ public class EditingScreen extends Sprite {
         var _local_6:Number = 64;
         while (((_local_6 < _local_3["width"]) || (_local_6 < _local_3["height"]))) {
             _local_6 = (_local_6 * 2);
-        };
+        }
         if (MEMap.NUM_SQUARES != _local_6){
             _local_7 = ((_local_6 + "x") + _local_6);
             if (!this.mapSizeDropDown_.setValue(_local_7)){
                 this.mapSizeDropDown_.setValue("512x512");
-            };
-        };
+            }
+        }
         var _local_8:Rectangle = new Rectangle(int(((MEMap.NUM_SQUARES / 2) - (_local_4 / 2))), int(((MEMap.NUM_SQUARES / 2) - (_local_5 / 2))), _local_4, _local_5);
         this.meMap_.clear();
         this.commandQueue_.clear();
@@ -779,7 +780,7 @@ public class EditingScreen extends Sprite {
                 if (_local_14.hasOwnProperty("ground")){
                     _local_11 = GroundLibrary.idToType_[_local_14["ground"]];
                     this.meMap_.modifyTile(_local_13, _local_12, Layer.GROUND, _local_11);
-                };
+                }
                 _local_15 = _local_14["objs"];
                 if (_local_15 != null){
                     for each (_local_17 in _local_15) {
@@ -788,21 +789,21 @@ public class EditingScreen extends Sprite {
                             this.meMap_.modifyTile(_local_13, _local_12, Layer.OBJECT, _local_11);
                             if (_local_17.hasOwnProperty("name")){
                                 this.meMap_.modifyObjectName(_local_13, _local_12, _local_17["name"]);
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 _local_16 = _local_14["regions"];
                 if (_local_16 != null){
                     for each (_local_18 in _local_16) {
                         _local_11 = RegionLibrary.idToType_[_local_18["id"]];
                         this.meMap_.modifyTile(_local_13, _local_12, Layer.REGION, _local_11);
-                    };
-                };
+                    }
+                }
                 _local_13++;
-            };
+            }
             _local_12++;
-        };
+        }
         this.meMap_.draw();
     }
 
@@ -824,7 +825,7 @@ public class EditingScreen extends Sprite {
     private function onMenuSelect(_arg_1:Event):void{
         if (this.meMap_ != null){
             this.meMap_.clearSelect();
-        };
+        }
     }
 
 

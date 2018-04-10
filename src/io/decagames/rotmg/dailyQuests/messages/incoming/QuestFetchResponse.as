@@ -5,13 +5,13 @@
 
 package io.decagames.rotmg.dailyQuests.messages.incoming
 {
-    import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
-    import __AS3__.vec.Vector;
-    import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
-    import flash.utils.IDataInput;
-    import __AS3__.vec.*;
+import flash.utils.IDataInput;
 
-    public class QuestFetchResponse extends IncomingMessage 
+import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
+
+import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
+
+public class QuestFetchResponse extends IncomingMessage
     {
 
         public var quests:Vector.<QuestData> = new Vector.<QuestData>();
@@ -30,7 +30,7 @@ package io.decagames.rotmg.dailyQuests.messages.incoming
                 this.quests[_local_3] = new QuestData();
                 this.quests[_local_3].parseFromInput(_arg_1);
                 _local_3++;
-            };
+            }
         }
 
         override public function toString():String

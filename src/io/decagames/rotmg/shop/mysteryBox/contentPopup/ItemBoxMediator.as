@@ -5,16 +5,19 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.ui.model.HUDModel;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-    import com.company.assembleegameclient.objects.Player;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-    import flash.events.MouseEvent;
+import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
 
-    public class ItemBoxMediator extends Mediator 
+import flash.events.MouseEvent;
+
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class ItemBoxMediator extends Mediator 
     {
 
         [Inject]

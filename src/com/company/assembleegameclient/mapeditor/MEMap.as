@@ -168,7 +168,7 @@ public class MEMap extends Sprite
             try
             {
                 this.drawTile(x, y, tile);
-                return;
+
             }
             catch(error:Error)
             {

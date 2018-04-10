@@ -5,30 +5,34 @@
 
 package io.decagames.rotmg.dailyQuests.view
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
-    import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal;
-    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import kabam.rotmg.core.signals.HideTooltipsSignal;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-    import kabam.rotmg.tooltips.HoverTooltipDelegate;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.dailyQuests.view.popup.DailyQuestRedeemPopup;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import flash.events.Event;
-    import io.decagames.rotmg.utils.date.TimeSpan;
-    import kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-    public class DailyQuestWindowMediator extends Mediator 
+import flash.events.Event;
+
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal;
+import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
+import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+import io.decagames.rotmg.dailyQuests.view.popup.DailyQuestRedeemPopup;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.utils.date.TimeSpan;
+
+import kabam.rotmg.core.signals.HideTooltipsSignal;
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+import kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse;
+import kabam.rotmg.tooltips.HoverTooltipDelegate;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestWindowMediator extends Mediator
     {
 
         [Inject]
@@ -127,7 +131,7 @@ package io.decagames.rotmg.dailyQuests.view
                 this.view.hideFade();
                 this.view.showFade(0x151515, (this.dailyQuestsModel.numberOfCompletedQuests == this.dailyQuestsModel.numberOfActiveQuests));
                 this.showPopupSignal.dispatch(this.redeemPopup);
-            };
+            }
         }
 
         private function onLockScreen():void

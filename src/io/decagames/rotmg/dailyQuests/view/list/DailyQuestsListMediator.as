@@ -5,16 +5,16 @@
 
 package io.decagames.rotmg.dailyQuests.view.list
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import kabam.rotmg.ui.model.HUDModel;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-    import __AS3__.vec.Vector;
-    import kabam.rotmg.constants.GeneralConstants;
-    import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
-    import __AS3__.vec.*;
+import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
 
-    public class DailyQuestsListMediator extends Mediator 
+import kabam.rotmg.constants.GeneralConstants;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestsListMediator extends Mediator 
     {
 
         [Inject]
@@ -40,21 +40,21 @@ package io.decagames.rotmg.dailyQuests.view.list
                 if (_local_2)
                 {
                     _local_5.isSelected = true;
-                };
+                }
                 _local_2 = false;
                 if (_local_4.category == 3){
                     this.hasEvent = true;
                     this.view.addEventToList(_local_5);
                 } else {
                     this.view.addQuestToList(_local_5);
-                };
-            };
+                }
+            }
         }
 
         private function onAddedHandler():void{
             if (this.hasEvent){
                 this.view.addIndicator(this.hasEvent);
-            };
+            }
         }
 
 

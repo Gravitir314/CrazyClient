@@ -5,10 +5,10 @@
 
 package io.decagames.rotmg.ui.labels
 {
-    import flash.text.TextField;
-    import flash.text.TextFieldAutoSize;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
 
-    public class UILabel extends TextField 
+public class UILabel extends TextField
     {
 
         public static var DEBUG:Boolean = false;
@@ -20,11 +20,11 @@ package io.decagames.rotmg.ui.labels
             if (DEBUG)
             {
                 this.debugDraw();
-            };
+            }
             if (WebMain.USER_AGENT == "Chrome")
             {
                 super.y = this.chromeFixMargin;
-            };
+            }
             this.embedFonts = true;
             this.selectable = false;
             this.autoSize = TextFieldAutoSize.LEFT;
@@ -45,7 +45,7 @@ package io.decagames.rotmg.ui.labels
             else
             {
                 super.y = _arg_1;
-            };
+            }
         }
 
         override public function get textWidth():Number

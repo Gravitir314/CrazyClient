@@ -5,17 +5,16 @@
 
 package io.decagames.rotmg.ui.popups
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
-    import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
-    import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
+import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-    public class PopupMediator extends Mediator 
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class PopupMediator extends Mediator 
     {
 
         [Inject]
@@ -69,7 +68,7 @@ package io.decagames.rotmg.ui.popups
             for each (_local_1 in this.popups)
             {
                 this.view.removeChild(_local_1);
-            };
+            }
             this.popups = new Vector.<BasePopup>();
         }
 
@@ -88,8 +87,8 @@ package io.decagames.rotmg.ui.popups
                 {
                     _arg_1.x = Math.round(((800 - _arg_1.width) / 2));
                     _arg_1.y = Math.round(((600 - _arg_1.height) / 2));
-                };
-            };
+                }
+            }
             this.drawPopupBackground(_arg_1);
         }
 
@@ -100,7 +99,7 @@ package io.decagames.rotmg.ui.popups
             {
                 this.view.removeChild(this.popups[_local_2]);
                 this.popups.splice(_local_2, 1);
-            };
+            }
         }
 
         private function drawPopupBackground(_arg_1:BasePopup):void

@@ -79,6 +79,7 @@ import flash.utils.getTimer;
 import io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse;
 import io.decagames.rotmg.dailyQuests.signal.QuestFetchCompleteSignal;
 import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+import io.decagames.rotmg.friends.model.FriendModel;
 
 import kabam.lib.net.api.MessageMap;
 import kabam.lib.net.api.MessageProvider;
@@ -106,7 +107,6 @@ import kabam.rotmg.death.control.HandleDeathSignal;
 import kabam.rotmg.death.control.ZombifySignal;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import io.decagames.rotmg.friends.model.FriendModel;
 import kabam.rotmg.game.commands.PlayGameCommand;
 import kabam.rotmg.game.focus.control.SetGameFocusSignal;
 import kabam.rotmg.game.model.GameModel;
@@ -1027,10 +1027,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
         override public function invSwap(_arg_1:Player, _arg_2:GameObject, _arg_3:int, _arg_4:int, _arg_5:GameObject, _arg_6:int, _arg_7:int):Boolean{
             if (!this.gs_){
                 return (false);
-            };
+            }
             if ((this.gs_.lastUpdate_ - this.lastInvSwapTime) < 500){
                 return (false);
-            };
+            }
             if ((((_arg_3 == 1) && (_arg_2 == _arg_1)) || ((_arg_6 == 1) && (_arg_5 == _arg_1))))
             {
                 if (_arg_1.mapAutoAbil)

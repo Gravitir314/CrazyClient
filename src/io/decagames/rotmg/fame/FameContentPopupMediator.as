@@ -5,39 +5,40 @@
 
 package io.decagames.rotmg.fame
 {
+import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 import com.company.util.DateFormatterReplacement;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import kabam.rotmg.core.signals.HideTooltipsSignal;
-    import io.decagames.rotmg.fame.data.FameTracker;
-    import kabam.rotmg.core.model.PlayerModel;
-    import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
-    import kabam.rotmg.ui.model.HUDModel;
-    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-    import kabam.rotmg.tooltips.HoverTooltipDelegate;
-    import io.decagames.rotmg.fame.data.TotalFame;
-    import flash.utils.Dictionary;
-    import __AS3__.vec.Vector;
-    import io.decagames.rotmg.fame.data.bonus.FameBonus;
-    import com.company.assembleegameclient.objects.Player;
-    import com.company.assembleegameclient.appengine.SavedCharacter;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import com.company.assembleegameclient.parameters.Parameters;
-    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-    import io.decagames.rotmg.utils.date.TimeSpan;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    import io.decagames.rotmg.characterMetrics.data.MetricsID;
-    import io.decagames.rotmg.fame.data.bonus.FameBonusConfig;
-    import __AS3__.vec.*;
+import flash.utils.Dictionary;
 
-    public class FameContentPopupMediator extends Mediator 
+import io.decagames.rotmg.characterMetrics.data.MetricsID;
+import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
+import io.decagames.rotmg.fame.data.FameTracker;
+import io.decagames.rotmg.fame.data.TotalFame;
+import io.decagames.rotmg.fame.data.bonus.FameBonus;
+import io.decagames.rotmg.fame.data.bonus.FameBonusConfig;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.utils.date.TimeSpan;
+
+import kabam.rotmg.core.model.PlayerModel;
+import kabam.rotmg.core.signals.HideTooltipsSignal;
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+import kabam.rotmg.tooltips.HoverTooltipDelegate;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class FameContentPopupMediator extends Mediator
     {
 
         [Inject]
@@ -87,7 +88,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             else
             {
                 _local_1 = this.player.getCharacterById(this.characterID).bornOn();
-            };
+            }
             this.showInfo();
             this.view.fameOnDeath = this.totalFame.currentFame;
             if (this.view.characterId == -1)
@@ -99,7 +100,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             {
                 _local_4 = this.player.getCharacterById(this.characterID);
                 this.view.setCharacterData(this.totalFame.baseFame, _local_4.name(), _local_4.level(), ObjectLibrary.typeToDisplayId_[_local_4.objectType()], _local_1, _local_4.getIcon(100));
-            };
+            }
             this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Fame calculation", "Refreshes when returning to the Nexus or main menu.", 230);
             this.hoverTooltipDelegate = new HoverTooltipDelegate();
             this.hoverTooltipDelegate.setShowToolTipSignal(this.showTooltipSignal);
@@ -116,7 +117,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             if ((((this.fameTracker.metrics.lastUpdate) && (_local_2 is LineBuilder)) && (LineBuilder(_local_2).key == "Fame calculation")))
             {
                 _arg_1.setTitle(new StaticStringBuilder((("Updated " + TimeSpan.distanceOfTimeInWords(this.fameTracker.metrics.lastUpdate, new Date(), true)) + ".")));
-            };
+            }
         }
 
         override public function destroy():void
@@ -140,7 +141,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             {
                 _local_1 = (_local_1 + this.metrics.getCharacterStat(this.characterID, _local_2));
                 _local_2++;
-            };
+            }
             return ((((((this.metrics.getCharacterStat(this.characterID, MetricsID.PIRATE_CAVES_COMPLETED) + this.metrics.getCharacterStat(this.characterID, MetricsID.UNDEAD_LAIRS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.ABYSS_OF_DEMONS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.SNAKE_PITS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.SPIDER_DENS_COMPLETED)) + this.metrics.getCharacterStat(this.characterID, MetricsID.SPRITE_WORLDS_COMPLETED)) + _local_1);
         }
 
@@ -149,7 +150,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             if (!this.totalFame.bonuses[_arg_1])
             {
                 return (0);
-            };
+            }
             return (this.totalFame.bonuses[_arg_1].fameAdded);
         }
 
@@ -196,13 +197,13 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             _local_1 = _local_1.sort(this.dungeonNameSort);
             for each (_local_2 in _local_1) {
                 this.view.addDungeonLine(_local_2);
-            };
+            }
         }
 
         private function dungeonNameSort(_arg_1:StatsLine, _arg_2:StatsLine):int{
             if (_arg_1.labelText > _arg_2.labelText){
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -212,7 +213,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             if (((this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS_THAT_DAMAGE) > 0) && (this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS) > 0)))
             {
                 _local_1 = ((this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS_THAT_DAMAGE) / this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS)) * 100);
-            };
+            }
             this.view.addStatLine(new StatsLine("Statistics", "", "", StatsLine.TYPE_TITLE));
             this.view.addStatLine(new StatsLine("Shots Fired", this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS).toString(), "The total number of shots fired by this character.", StatsLine.TYPE_STAT));
             this.view.addStatLine(new StatsLine("Shots Hit", this.metrics.getCharacterStat(this.characterID, MetricsID.SHOTS_THAT_DAMAGE).toString(), "The total number of enemy hitting shots fired by this character.", StatsLine.TYPE_STAT));
@@ -238,7 +239,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             if (_arg_1.level > _arg_2.level)
             {
                 return (1);
-            };
+            }
             return (-1);
         }
 
@@ -247,7 +248,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             if (_arg_1.fameAdded > _arg_2.fameAdded)
             {
                 return (-1);
-            };
+            }
             return (1);
         }
 
@@ -267,9 +268,9 @@ import robotlegs.bender.bundles.mvcs.Mediator;
                 else
                 {
                     this.bonusesList.push(bonusConfig);
-                };
+                }
                 i = (i + 1);
-            };
+            }
             bonusConfig = this.totalFame.bonuses[16];
             if (bonusConfig == null)
             {
@@ -278,7 +279,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             else
             {
                 this.bonusesList.push(bonusConfig);
-            };
+            }
             i = 18;
             while (i <= 22)
             {
@@ -290,9 +291,9 @@ import robotlegs.bender.bundles.mvcs.Mediator;
                 else
                 {
                     this.bonusesList.push(bonusConfig);
-                };
+                }
                 i = (i + 1);
-            };
+            }
             if (this.view.characterId == -1)
             {
                 level = this.hudModel.gameSprite.map.player_.level_;
@@ -300,7 +301,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             else
             {
                 level = this.player.getCharacterById(this.characterID).level();
-            };
+            }
             this.bonusesList = this.bonusesList.sort(this.sortBonusesByLevel);
             var unlocked:Vector.<FameBonus> = this.bonusesList.filter(function (_arg_1:FameBonus, _arg_2:int, _arg_3:Vector.<FameBonus>):Boolean
             {
@@ -316,7 +317,7 @@ import robotlegs.bender.bundles.mvcs.Mediator;
             for each (bonus in this.bonusesList)
             {
                 this.view.addStatLine(new StatsLine(LineBuilder.getLocalizedStringFromKey(("FameBonus." + bonus.name)), bonus.fameAdded.toString(), ((LineBuilder.getLocalizedStringFromKey((("FameBonus." + bonus.name) + "Description")) + "\n") + LineBuilder.getLocalizedStringFromKey("FameBonus.LevelRequirement", {"level":bonus.level})), StatsLine.TYPE_BONUS, (level < bonus.level)));
-            };
+            }
         }
 
         private function showInfo():void

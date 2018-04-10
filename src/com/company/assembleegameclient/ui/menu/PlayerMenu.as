@@ -15,11 +15,12 @@ import com.company.util.AssetLibrary;
 import flash.events.Event;
 import flash.events.MouseEvent;
 
+import io.decagames.rotmg.friends.config.FriendsActions;
+import io.decagames.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.signals.FriendActionSignal;
+
 import kabam.rotmg.chat.control.ShowChatInputSignal;
 import kabam.rotmg.core.StaticInjectorContext;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
-import io.decagames.rotmg.friends.model.FriendRequestVO;
-import io.decagames.rotmg.friends.config.FriendsActions;
 import kabam.rotmg.text.model.TextKey;
 
 public class PlayerMenu extends Menu

@@ -4,11 +4,10 @@
 //com.company.assembleegameclient.mapeditor.Object3DChooser
 
 package com.company.assembleegameclient.mapeditor{
-import flash.utils.Dictionary;
-import __AS3__.vec.Vector;
-import com.company.util.MoreStringUtil;
 import com.company.assembleegameclient.objects.ObjectLibrary;
-import __AS3__.vec.*;
+import com.company.util.MoreStringUtil;
+
+import flash.utils.Dictionary;
 
 public class Object3DChooser extends Chooser {
 
@@ -35,14 +34,14 @@ public class Object3DChooser extends Chooser {
         var _local_2:Vector.<String> = new Vector.<String>();
         if (_arg_1 != ""){
             _local_3 = new RegExp(_arg_1, "gix");
-        };
+        }
         var _local_4:Dictionary = GroupDivider.GROUPS["3D Objects"];
         for each (_local_6 in _local_4) {
             _local_5 = String(_local_6.@id);
             if (((_local_3 == null) || (_local_5.search(_local_3) >= 0))){
                 _local_2.push(_local_5);
-            };
-        };
+            }
+        }
         _local_2.sort(MoreStringUtil.cmp);
         for each (_local_5 in _local_2) {
             _local_7 = ObjectLibrary.idToType_[_local_5];
@@ -52,9 +51,9 @@ public class Object3DChooser extends Chooser {
                 this.cache[_local_7] = _local_8;
             } else {
                 _local_8 = this.cache[_local_7];
-            };
+            }
             addElement(_local_8);
-        };
+        }
         hasBeenLoaded = true;
         scrollBar_.setIndicatorSize(HEIGHT, elementContainer_.height, true);
     }

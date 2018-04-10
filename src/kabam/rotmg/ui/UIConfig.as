@@ -5,13 +5,6 @@
 
 package kabam.rotmg.ui
 {
-import io.decagames.rotmg.fame.FameStatsLineMediator;
-import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
-import io.decagames.rotmg.ui.popups.modal.ConfirmationModalMediator;
-import io.decagames.rotmg.ui.tabs.UITab;
-import io.decagames.rotmg.ui.tabs.UITabMediator;
-import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
-import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
 import com.company.assembleegameclient.account.ui.ChooseNameFrame;
 import com.company.assembleegameclient.account.ui.ChooseNameFrameMediator;
 import com.company.assembleegameclient.account.ui.CreateGuildFrame;
@@ -44,6 +37,8 @@ import com.company.assembleegameclient.ui.panels.mediators.GuildRegisterPanelMed
 import com.company.assembleegameclient.ui.panels.mediators.InteractPanelMediator;
 import com.company.assembleegameclient.ui.panels.mediators.ItemGridMediator;
 
+import io.decagames.rotmg.fame.FameStatsLineMediator;
+import io.decagames.rotmg.fame.StatsLine;
 import io.decagames.rotmg.shop.ShopPopupMediator;
 import io.decagames.rotmg.shop.ShopPopupView;
 import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
@@ -64,6 +59,8 @@ import io.decagames.rotmg.shop.packages.startupPackage.StartupPackage;
 import io.decagames.rotmg.shop.packages.startupPackage.StartupPackageMediator;
 import io.decagames.rotmg.ui.popups.PopupMediator;
 import io.decagames.rotmg.ui.popups.PopupView;
+import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
+import io.decagames.rotmg.ui.popups.modal.ConfirmationModalMediator;
 import io.decagames.rotmg.ui.popups.modal.ModalPopup;
 import io.decagames.rotmg.ui.popups.modal.ModalPopupMediator;
 import io.decagames.rotmg.ui.popups.modal.buttons.BuyGoldButton;
@@ -73,11 +70,15 @@ import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
 import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
 import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
 import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 import io.decagames.rotmg.ui.scroll.UIScrollbar;
 import io.decagames.rotmg.ui.scroll.UIScrollbarMediator;
 import io.decagames.rotmg.ui.spinner.NumberSpinner;
 import io.decagames.rotmg.ui.spinner.NumberSpinnerMediator;
+import io.decagames.rotmg.ui.tabs.UITab;
+import io.decagames.rotmg.ui.tabs.UITabMediator;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
 import kabam.rotmg.account.core.services.GetCharListTask;
@@ -163,7 +164,6 @@ import kabam.rotmg.ui.view.TitleView;
 import kabam.rotmg.ui.view.UnFocusAble;
 import kabam.rotmg.ui.view.components.PotionSlotMediator;
 import kabam.rotmg.ui.view.components.PotionSlotView;
-import io.decagames.rotmg.fame.StatsLine;
 
 import org.swiftsuspenders.Injector;
 

@@ -5,30 +5,34 @@
 
 package io.decagames.rotmg.shop.mysteryBox.rollModal
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.account.core.Account;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import kabam.rotmg.game.model.GameModel;
-    import kabam.rotmg.core.model.PlayerModel;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
-    import flash.utils.Timer;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import flash.events.TimerEvent;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import flash.utils.clearTimeout;
-    import flash.utils.setTimeout;
-    import flash.utils.Dictionary;
-    import com.company.assembleegameclient.objects.Player;
-    import io.decagames.rotmg.utils.dictionary.DictionaryUtils;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-    import io.decagames.rotmg.shop.genericBox.BoxUtils;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
+import com.company.assembleegameclient.objects.Player;
 
-    public class MysteryBoxRollModalMediator extends Mediator 
+import flash.events.TimerEvent;
+import flash.utils.Dictionary;
+import flash.utils.Timer;
+import flash.utils.clearTimeout;
+import flash.utils.setTimeout;
+
+import io.decagames.rotmg.shop.genericBox.BoxUtils;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.utils.dictionary.DictionaryUtils;
+
+import kabam.rotmg.account.core.Account;
+import kabam.rotmg.appengine.api.AppEngineClient;
+import kabam.rotmg.core.model.PlayerModel;
+import kabam.rotmg.game.model.GameModel;
+import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class MysteryBoxRollModalMediator extends Mediator 
     {
 
         [Inject]
@@ -106,7 +110,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 _local_1.quantity = this.quantity;
                 _local_1.price = this.view.info.priceAmount;
                 _local_1.currency = this.view.info.priceCurrency;
-            };
+            }
             this.client.sendRequest("/account/purchaseMysteryBox", _local_1);
             this.client.complete.addOnce(this.onRollRequestComplete);
             this.timeout = setTimeout(this.showRewards, this.totalRollDelay);
@@ -127,9 +131,9 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 if (this.rollNumber == 0)
                 {
                     this.view.prepareResultGrid(this.totalRewards);
-                };
+                }
                 this.view.displayResult([_local_1]);
-            };
+            }
         }
 
         private function onRollRequestComplete(_arg_1:Boolean, _arg_2:*):void
@@ -156,11 +160,11 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                     _local_7 = this.convertItemsToAmountDictionary(_local_6);
                     this.totalRewards = (this.totalRewards + DictionaryUtils.countKeys(_local_7));
                     this.rewardsList.push(_local_7);
-                };
+                }
                 if (((_local_3.hasOwnProperty("Left")) && (!(this.view.info.unitsLeft == -1))))
                 {
                     this.view.info.unitsLeft = int(_local_3.Left);
-                };
+                }
                 _local_5 = this.gameModel.player;
                 if (_local_5 != null)
                 {
@@ -173,8 +177,8 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                         if (_local_3.hasOwnProperty("Fame"))
                         {
                             _local_5.setFame(int(_local_3.Fame));
-                        };
-                    };
+                        }
+                    }
                 }
                 else
                 {
@@ -189,14 +193,14 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                             if (_local_3.hasOwnProperty("Fame"))
                             {
                                 this.playerModel.setFame(int(_local_3.Fame));
-                            };
-                        };
-                    };
-                };
+                            }
+                        }
+                    }
+                }
                 if (this.timerComplete)
                 {
                     this.showRewards();
-                };
+                }
             }
             else
             {
@@ -205,7 +209,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 if (LineBuilder.getLocalizedStringFromKey(_arg_2) != "")
                 {
                     _local_8 = _arg_2;
-                };
+                }
                 if (_arg_2.indexOf("MysteryBoxError.soldOut") >= 0)
                 {
                     _local_9 = _arg_2.split("|");
@@ -222,9 +226,9 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                                 "left":this.view.info.unitsLeft,
                                 "box":((this.view.info.unitsLeft == 1) ? LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box") : LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes"))
                             });
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_arg_2.indexOf("MysteryBoxError.maxPurchase") >= 0)
                 {
                     _local_11 = _arg_2.split("|");
@@ -238,19 +242,19 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                         else
                         {
                             _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.maxPurchaseLeft", {"left":_local_12});
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 if (_arg_2.indexOf("blockedForUser") >= 0)
                 {
                     _local_13 = _arg_2.split("|");
                     if (_local_13.length == 2)
                     {
                         _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.blockedForUser", {"date":_local_13[1]});
-                    };
-                };
+                    }
+                }
                 this.showErrorMessage(_local_8);
-            };
+            }
         }
 
         private function showErrorMessage(_arg_1:String):void
@@ -266,7 +270,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             if (this.view.info.quantity > 1)
             {
                 this.totalRollDelay = 1000;
-            };
+            }
         }
 
         private function convertItemsToAmountDictionary(_arg_1:Array):Dictionary
@@ -282,8 +286,8 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 else
                 {
                     _local_2[_local_3] = 1;
-                };
-            };
+                }
+            }
             return (_local_2);
         }
 
@@ -303,10 +307,10 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 for each (_local_7 in _local_6)
                 {
                     _local_5.push(this.convertItemsToAmountDictionary(_local_7.split(",")));
-                };
+                }
                 _local_2[_local_3] = _local_5;
                 _local_3++;
-            };
+            }
             this.totalRolls = _local_3;
             return (_local_2);
         }
@@ -326,7 +330,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 this.view.spinner.value = this.view.quantity;
                 this.view.showBuyButton();
                 this.view.buyButton.clickSignal.add(this.buyMore);
-            };
+            }
         }
 
         private function changeAmountHandler(_arg_1:int):void
@@ -338,7 +342,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             else
             {
                 this.view.buyButton.price = (_arg_1 * int(this.view.info.priceAmount));
-            };
+            }
         }
 
         private function buyMore(_arg_1:BaseButton):void
@@ -353,7 +357,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
                 this.quantity = this.view.quantity;
                 this.playRollAnimation();
                 this.sendRollRequest();
-            };
+            }
         }
 
         private function playRollAnimation():void
@@ -373,7 +377,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
             {
                 _local_4 = int(Math.floor((Math.random() * _local_3.length)));
                 _local_2.push(_local_3[_local_4]);
-            };
+            }
             this.view.displayItems(_local_2);
         }
 

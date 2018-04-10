@@ -5,16 +5,18 @@
 
 package io.decagames.rotmg.dailyQuests.view.panel
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import flash.events.MouseEvent;
-    import flash.events.KeyboardEvent;
-    import io.decagames.rotmg.dailyQuests.view.DailyQuestWindow;
-    import com.company.assembleegameclient.parameters.Parameters;
-    import io.decagames.rotmg.dailyQuests.view.*;
+import com.company.assembleegameclient.parameters.Parameters;
 
-    public class DailyQuestsPanelMediator extends Mediator 
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.view.DailyQuestWindow;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestsPanelMediator extends Mediator 
     {
 
         [Inject]
@@ -31,7 +33,7 @@ package io.decagames.rotmg.dailyQuests.view.panel
             {
                 this.view.feedButton.addEventListener(MouseEvent.CLICK, this.onButtonLeftClick);
                 WebMain.STAGE.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-            };
+            }
         }
 
         override public function destroy():void
@@ -53,7 +55,7 @@ package io.decagames.rotmg.dailyQuests.view.panel
             if (((_arg_1.keyCode == Parameters.data_.interact) && (WebMain.STAGE.focus == null)))
             {
                 this.onButtonLeftClick(null);
-            };
+            }
         }
 
 

@@ -4,11 +4,11 @@
 //io.decagames.rotmg.friends.tasks.FriendDataRequestTask
 
 package io.decagames.rotmg.friends.tasks{
-    import kabam.lib.tasks.BaseTask;
-    import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.account.core.Account;
+import kabam.lib.tasks.BaseTask;
+import kabam.rotmg.account.core.Account;
+import kabam.rotmg.appengine.api.AppEngineClient;
 
-    public class FriendDataRequestTask extends BaseTask {
+public class FriendDataRequestTask extends BaseTask {
 
         [Inject]
         public var client:AppEngineClient;
@@ -30,7 +30,7 @@ package io.decagames.rotmg.friends.tasks{
                 completeTask(true);
             } else {
                 completeTask(false, _arg_2);
-            };
+            }
         }
 
 

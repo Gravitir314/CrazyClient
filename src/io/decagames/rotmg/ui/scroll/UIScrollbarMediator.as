@@ -5,12 +5,13 @@
 
 package io.decagames.rotmg.ui.scroll
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import robotlegs.bender.framework.api.ILogger;
-    import flash.events.Event;
-    import flash.events.MouseEvent;
+import flash.events.Event;
+import flash.events.MouseEvent;
 
-    public class UIScrollbarMediator extends Mediator 
+import robotlegs.bender.bundles.mvcs.Mediator;
+import robotlegs.bender.framework.api.ILogger;
+
+public class UIScrollbarMediator extends Mediator 
     {
 
         [Inject]
@@ -53,7 +54,7 @@ package io.decagames.rotmg.ui.scroll
             if (this.view.scrollObject)
             {
                 this.view.scrollObject.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-            };
+            }
             WebMain.STAGE.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             this.view.dispose();
         }
@@ -63,12 +64,12 @@ package io.decagames.rotmg.ui.scroll
             if (((this.view.scrollObject) && (!(this.view.scrollObject.hasEventListener(MouseEvent.MOUSE_WHEEL)))))
             {
                 this.view.scrollObject.addEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-            };
+            }
             if (this.startDragging)
             {
                 this.view.updatePosition((WebMain.STAGE.mouseY - this.startY));
                 this.startY = WebMain.STAGE.mouseY;
-            };
+            }
             this.view.update();
         }
 

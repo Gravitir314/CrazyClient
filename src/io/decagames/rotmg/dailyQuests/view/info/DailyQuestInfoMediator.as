@@ -5,27 +5,29 @@
 
 package io.decagames.rotmg.dailyQuests.view.info
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import kabam.rotmg.ui.model.HUDModel;
-    import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
-    import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
-    import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import kabam.rotmg.core.signals.HideTooltipsSignal;
-    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-    import kabam.rotmg.tooltips.HoverTooltipDelegate;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-    import flash.events.MouseEvent;
-    import kabam.rotmg.messaging.impl.data.SlotObjectData;
-    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
-    import __AS3__.vec.Vector;
-    import kabam.rotmg.game.view.components.BackpackTabContent;
-    import kabam.rotmg.game.view.components.InventoryTabContent;
-    import __AS3__.vec.*;
+import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-    public class DailyQuestInfoMediator extends Mediator 
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
+import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
+import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
+
+import kabam.rotmg.core.signals.HideTooltipsSignal;
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.game.view.components.BackpackTabContent;
+import kabam.rotmg.game.view.components.InventoryTabContent;
+import kabam.rotmg.messaging.impl.data.SlotObjectData;
+import kabam.rotmg.tooltips.HoverTooltipDelegate;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestInfoMediator extends Mediator 
     {
 
         [Inject]
@@ -57,7 +59,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             if (_local_1)
             {
                 this.showQuestInfo(_local_1.id);
-            };
+            }
             this.tooltip = new TextToolTip(0x363636, 0x9B9B9B, "", "You must select a reward first!", 190, null);
             this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipsSignal);
             this.hoverTooltipDelegate.setShowToolTipSignal(this.showTooltipSignal);
@@ -72,7 +74,7 @@ package io.decagames.rotmg.dailyQuests.view.info
                 this.hoverTooltipDelegate.setDisplayObject(this.view.completeButton);
             } else {
                 this.hoverTooltipDelegate.removeDisplayObject();
-            };
+            }
         }
 
 
@@ -92,7 +94,7 @@ package io.decagames.rotmg.dailyQuests.view.info
             if (((!(this.view.completeButton.completed)) && (this.model.currentQuest.itemOfChoice))){
                 this.view.completeButton.disabled = true;
                 this.hoverTooltipDelegate.setDisplayObject(this.view.completeButton);
-            };
+            }
         }
 
         private function tileToSlot(_arg_1:InventoryTile):SlotObjectData
@@ -122,11 +124,9 @@ package io.decagames.rotmg.dailyQuests.view.info
                     if (_local_3) {
                         _local_6 = _local_6.concat(_local_3.backpack.tiles);
                     }
-                    ;
                     if (_local_4) {
                         _local_6 = _local_6.concat(_local_4.storage.tiles);
                     }
-                    ;
                     for each (_local_7 in _local_5) {
                         for each (_local_8 in _local_6) {
                             if (_local_8.getItemId() == _local_7) {
@@ -134,18 +134,14 @@ package io.decagames.rotmg.dailyQuests.view.info
                                 _local_2.push(this.tileToSlot(_local_8));
                                 break;
                             }
-                            ;
                         }
-                        ;
                     }
-                    ;
                     this.lockScreen.dispatch();
                     this.hud.gameSprite.gsc_.questRedeem(this.model.currentQuest.id, _local_2, this.model.selectedItem);
                     this.model.currentQuest.completed = true;
                     this.view.completeButton.completed = true;
                     this.view.completeButton.disabled = true;
                 }
-                ;
             }
         }
 

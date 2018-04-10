@@ -938,7 +938,7 @@ public class GameObject extends BasicObject
                                 _local_10 = ConditionEffect.effects_[_local_9];
                                 this.showConditionEffectPet(_local_8, _local_10.name_);
                                 _local_8 = (_local_8 + 500);
-                            };
+                            }
                         } else {
                             switch (_local_9){
                                 case ConditionEffect.NOTHING:
@@ -964,7 +964,7 @@ public class GameObject extends BasicObject
                                 case ConditionEffect.QUIET:
                                     if (map_.player_ == this){
                                         map_.player_.mp_ = 0;
-                                    };
+                                    }
                                     _local_10 = ConditionEffect.effects_[_local_9];
                                     break;
                                 case ConditionEffect.STASIS:
@@ -974,7 +974,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.SLOWED:
                                     if (this.isSlowedImmune()){
@@ -983,7 +983,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.ARMORBROKEN:
                                     if (this.isArmorBrokenImmune()){
@@ -992,7 +992,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.STUNNED:
                                     if (this.isStunImmune()){
@@ -1001,7 +1001,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.DAZED:
                                     if (this.isDazedImmune()){
@@ -1010,7 +1010,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.PARALYZED:
                                     if (this.isParalyzeImmune()){
@@ -1019,7 +1019,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.PETRIFIED:
                                     if (this.isPetrifiedImmune()){
@@ -1028,7 +1028,7 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.CURSE:
                                     if (this.isCursedImmune()){
@@ -1037,12 +1037,12 @@ public class GameObject extends BasicObject
                                         map_.mapOverlay_.addStatusText(_local_11);
                                     } else {
                                         _local_10 = ConditionEffect.effects_[_local_9];
-                                    };
+                                    }
                                     break;
                                 case ConditionEffect.GROUND_DAMAGE:
                                     _local_7 = true;
                                     break;
-                            };
+                            }
                             if (_local_10 != null){
                                 if (_local_9 < ConditionEffect.NEW_CON_THREASHOLD){
                                     if ((this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_10.bit_) == this.condition_[ConditionEffect.CE_FIRST_BATCH]) continue;
@@ -1050,15 +1050,15 @@ public class GameObject extends BasicObject
                                 } else {
                                     if ((this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_10.bit_) == this.condition_[ConditionEffect.CE_SECOND_BATCH]) continue;
                                     this.condition_[ConditionEffect.CE_SECOND_BATCH] = (this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_10.bit_);
-                                };
+                                }
                                 _local_14 = _local_10.localizationKey_;
                                 this.showConditionEffect(_local_8, _local_14);
                                 _local_8 = (_local_8 + 500);
-                            };
-                        };
-                    };
-                };
-            };
+                            }
+                        }
+                    }
+                }
+            }
             if (((!((this.props_.isEnemy_) && (Parameters.data_.disableEnemyParticles))) && (!((!(this.props_.isEnemy_)) && (Parameters.data_.disablePlayersHitParticles))))){
                 _local_15 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
                 if (this.dead_){
@@ -1068,16 +1068,16 @@ public class GameObject extends BasicObject
                         map_.addObj(new HitEffect(_local_15, this.size_, 10, _arg_5.angle_, _arg_5.projProps_.speed_), x_, y_);
                     } else {
                         map_.addObj(new ExplosionEffect(_local_15, this.size_, 10), x_, y_);
-                    };
-                };
-            };
+                    }
+                }
+            }
             if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))){
                 return;
-            };
+            }
             if (_arg_2 > 0){
                 _local_16 = ((((this.isArmorBroken()) || ((!(_arg_5 == null)) && (_arg_5.projProps_.armorPiercing_))) || (_local_7)) || (_arg_6));
                 this.showDamageText(_arg_2, _local_16);
-            };
+            }
         }
 
         public function showConditionEffect(_arg_1:int, _arg_2:String):void

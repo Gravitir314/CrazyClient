@@ -15,9 +15,10 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.geom.ColorTransform;
 
-import kabam.rotmg.core.StaticInjectorContext;
 import io.decagames.rotmg.friends.config.FriendsActions;
 import io.decagames.rotmg.friends.model.FriendVO;
+
+import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;

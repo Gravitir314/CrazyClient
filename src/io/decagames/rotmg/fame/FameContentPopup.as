@@ -4,21 +4,23 @@
 //io.decagames.rotmg.fame.FameContentPopup
 
 package io.decagames.rotmg.fame{
-import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 import flash.display.Bitmap;
-import io.decagames.rotmg.ui.labels.UILabel;
-import flash.display.Sprite;
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.tabs.UITabs;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import flash.geom.Rectangle;
-import io.decagames.rotmg.ui.texture.TextureParser;
-import io.decagames.rotmg.ui.popups.header.PopupHeader;
-import kabam.rotmg.assets.services.IconFactory;
 import flash.display.BitmapData;
-import io.decagames.rotmg.ui.tabs.UITab;
+import flash.display.Sprite;
+import flash.geom.Rectangle;
+
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.modal.ModalPopup;
 import io.decagames.rotmg.ui.scroll.UIScrollbar;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.tabs.UITab;
+import io.decagames.rotmg.ui.tabs.UITabs;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+import kabam.rotmg.assets.services.IconFactory;
 
 public class FameContentPopup extends ModalPopup {
 
@@ -183,13 +185,13 @@ public class FameContentPopup extends ModalPopup {
             _local_2 = 5;
         } else {
             _local_2 = 0;
-        };
+        }
         _arg_1.x = 6;
         _arg_1.y = ((this.dungeonLinesPosition * 27) - _local_2);
         this.dungeonContainer.addChild(_arg_1);
         if ((this.dungeonLinesPosition % 2) == 1){
             _arg_1.drawBrightBackground();
-        };
+        }
         this.dungeonLinesPosition++;
     }
 
@@ -199,7 +201,7 @@ public class FameContentPopup extends ModalPopup {
         this.statsContainer.addChild(_arg_1);
         if ((this.statsLinesPosition % 2) == 1){
             _arg_1.drawBrightBackground();
-        };
+        }
         this.statsLinesPosition++;
     }
 

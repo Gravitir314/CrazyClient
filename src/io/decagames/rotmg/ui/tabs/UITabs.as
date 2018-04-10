@@ -5,15 +5,15 @@
 
 package io.decagames.rotmg.ui.tabs
 {
-    import flash.display.Sprite;
-    import __AS3__.vec.Vector;
-    import org.osflash.signals.Signal;
-    import flash.events.Event;
-    import flash.geom.Point;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import __AS3__.vec.*;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.geom.Point;
 
-    public class UITabs extends Sprite 
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+
+import org.osflash.signals.Signal;
+
+public class UITabs extends Sprite 
     {
 
         private var tabsXSpace:int = 3;
@@ -44,7 +44,7 @@ package io.decagames.rotmg.ui.tabs
                 addChild(this.background);
             } else {
                 this.tabsButtonMargin = 3;
-            };
+            }
         }
 
         public function addTab(_arg_1:UITab, _arg_2:Boolean=false):void
@@ -56,7 +56,7 @@ package io.decagames.rotmg.ui.tabs
                 this.defaultSelectedIndex = (this.content.length - 1);
                 this.currentContent = _arg_1;
                 addChild(_arg_1);
-            };
+            }
         }
 
         private function createTabButtons():void
@@ -82,25 +82,25 @@ package io.decagames.rotmg.ui.tabs
                     else
                     {
                         _local_3 = TabButton.CENTER;
-                    };
-                };
+                    }
+                }
                 _local_6 = this.createTabButton(_local_5.tabName, _local_3);
                 _local_6.width = _local_2;
                 _local_6.selected = (this.defaultSelectedIndex == (_local_1 - 1));
                 if (_local_6.selected)
                 {
                     _local_4 = _local_6;
-                };
+                }
                 _local_6.y = 3;
                 _local_6.x = ((this.tabsButtonMargin + (_local_2 * (_local_1 - 1))) + (this.tabsXSpace * (_local_1 - 1)));
                 addChild(_local_6);
                 _local_6.clickSignal.add(this.onButtonSelected);
                 this.buttons.push(_local_6);
                 _local_1++;
-            };
+            }
             if (this.background){
                 this.background.addDecor((_local_4.x - 4), ((_local_4.x + _local_4.width) - 12), this.defaultSelectedIndex, this.buttons.length);
-            };
+            }
             this.onButtonSelected(_local_4);
             this.buttonsRenderedSignal.dispatch();
         }
@@ -117,8 +117,8 @@ package io.decagames.rotmg.ui.tabs
                 {
                     _local_2.selected = false;
                     _local_2.y = 3;
-                };
-            };
+                }
+            }
             _local_3 = this.buttons.indexOf(_arg_1);
             for each (_local_2 in this.buttons)
             {
@@ -137,15 +137,15 @@ package io.decagames.rotmg.ui.tabs
                                 _local_2.changeBitmap("tab_button_right_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
                             } else {
                                 _local_2.changeBitmap("tab_button_left_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-                            };
-                        };
-                    };
+                            }
+                        }
+                    }
                 }
                 else
                 {
                     _local_2.bitmap.alpha = 1;
                 }
-            };
+            }
             if (this.currentContent)
             {
                 this.currentContent.alpha = 0;
@@ -170,8 +170,8 @@ package io.decagames.rotmg.ui.tabs
                 if (_local_2.label.text == _arg_1)
                 {
                     return (_local_2);
-                };
-            };
+                }
+            }
             return (null);
         }
 
@@ -198,11 +198,11 @@ package io.decagames.rotmg.ui.tabs
             for each (_local_1 in this.buttons)
             {
                 _local_1.dispose();
-            };
+            }
             for each (_local_2 in this.content)
             {
                 _local_2.dispose();
-            };
+            }
             this.currentContent.dispose();
             this.content = null;
             this.buttons = null;

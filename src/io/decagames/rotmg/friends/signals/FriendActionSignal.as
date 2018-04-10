@@ -4,10 +4,11 @@
 //io.decagames.rotmg.friends.signals.FriendActionSignal
 
 package io.decagames.rotmg.friends.signals{
-    import org.osflash.signals.Signal;
-    import io.decagames.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.model.FriendRequestVO;
 
-    public class FriendActionSignal extends Signal {
+import org.osflash.signals.Signal;
+
+public class FriendActionSignal extends Signal {
 
         public function FriendActionSignal(){
             super(FriendRequestVO);

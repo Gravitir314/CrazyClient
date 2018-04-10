@@ -5,9 +5,9 @@
 
 package io.decagames.rotmg.dailyQuests.utils{
 import flash.display.Sprite;
-import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
+
 import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
-import __AS3__.vec.Vector;
+import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
 
 public class SlotsRendered {
 
@@ -36,11 +36,11 @@ public class SlotsRendered {
                 _local_13++;
             } else {
                 _local_14++;
-            };
+            }
             _local_22 = _arg_2.indexOf(_local_19);
             if (_local_22 >= 0){
                 _arg_2.splice(_local_22, 1);
-            };
+            }
             _local_23 = new DailyQuestItemSlot(_local_19, _arg_3, ((_arg_3 == DailyQuestItemSlotType.REWARD) ? false : (_local_22 >= 0)), _arg_9);
             _local_23.x = (_local_10 * (DailyQuestItemSlot.SLOT_SIZE + _arg_6));
             _local_18.addChild(_local_23);
@@ -49,14 +49,14 @@ public class SlotsRendered {
                 _local_18 = _local_17;
                 _local_10 = 0;
                 _local_15 = true;
-            };
-        };
+            }
+        }
         _local_20 = ((_local_13 * DailyQuestItemSlot.SLOT_SIZE) + ((_local_13 - 1) * _arg_6));
         _local_21 = ((_local_14 * DailyQuestItemSlot.SLOT_SIZE) + ((_local_14 - 1) * _arg_6));
         _arg_4.y = _arg_5;
         if (!_local_15){
             _arg_4.y = (_arg_4.y + Math.round(((DailyQuestItemSlot.SLOT_SIZE / 2) + (_arg_6 / 2))));
-        };
+        }
         _local_16.x = Math.round(((_arg_7 - _local_20) / 2));
         _local_17.x = Math.round(((_arg_7 - _local_21) / 2));
     }

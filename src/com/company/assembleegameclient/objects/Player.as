@@ -984,7 +984,7 @@ public class Player extends Character
         {
             if ((_arg_1 - this.map_.gs_.gsc_.lastInvSwapTime) < 500){
                 return;
-            };
+            }
             var _local_1:Container;
             var _local_2:int;
             var _local_3:Player;

@@ -44,7 +44,7 @@ public class MoveRecords
                 _local_5.time_ = _arg_1;
                 _local_5.x_ = _arg_2;
                 _local_5.y_ = _arg_3;
-                return;
+
             }
         }
 

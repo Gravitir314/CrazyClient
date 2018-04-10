@@ -5,20 +5,19 @@
 
 package io.decagames.rotmg.ui.popups.modal
 {
-    import io.decagames.rotmg.ui.popups.BasePopup;
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import io.decagames.rotmg.ui.scroll.UIScrollbar;
-    import __AS3__.vec.Vector;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import flash.geom.Rectangle;
-    import flash.display.DisplayObject;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import __AS3__.vec.*;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.geom.Rectangle;
 
-    public class ModalPopup extends BasePopup 
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.popups.BasePopup;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.scroll.UIScrollbar;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class ModalPopup extends BasePopup
     {
 
         protected var _contentContainer:Sprite;
@@ -63,7 +62,7 @@ package io.decagames.rotmg.ui.popups.modal
                 this.contentMask.y = (this.contentMask.y + (_local_6 + 15));
                 this.background.y = (this.background.y + _local_6);
                 this.background.height = (this.background.height + 15);
-            };
+            }
         }
 
         private function drawContentMask(_arg_1:int):void
@@ -99,7 +98,7 @@ package io.decagames.rotmg.ui.popups.modal
             if (this._contentContainer.height > this.maxHeight)
             {
                 return ((this.maxHeight + (2 * this.contentMargin)) + ((this.header) ? ((this._header.height / 2) + 14) : 0));
-            };
+            }
             return (super.height);
         }
 
@@ -109,7 +108,7 @@ package io.decagames.rotmg.ui.popups.modal
             if (_local_1 > this.maxHeight)
             {
                 _local_1 = this.maxHeight;
-            };
+            }
             this.drawContentMask(_local_1);
             this.background.height = ((_local_1 + (2 * this.contentMargin)) + ((this.header) ? 15 : 0));
             if (((this._contentContainer.height > this.maxHeight) && (!(this.scroll))))
@@ -120,7 +119,7 @@ package io.decagames.rotmg.ui.popups.modal
                 super.addChild(this.scroll);
                 this.scroll.scrollObject = this;
                 this.scroll.content = this._contentContainer;
-            };
+            }
         }
 
         public function get header():PopupHeader
@@ -143,15 +142,15 @@ package io.decagames.rotmg.ui.popups.modal
             {
                 this.background.dispose();
                 this.background = null;
-            };
+            }
             if (this._header)
             {
                 this._header.dispose();
-            };
+            }
             for each (_local_1 in this.buttonsList)
             {
                 _local_1.dispose();
-            };
+            }
             this.buttonsList = null;
         }
 

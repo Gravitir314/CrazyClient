@@ -5,13 +5,14 @@
 
 package io.decagames.rotmg.dailyQuests.view.list{
 import flash.display.Sprite;
-import io.decagames.rotmg.ui.tabs.UITabs;
-import io.decagames.rotmg.ui.tabs.TabButton;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.texture.TextureParser;
-import io.decagames.rotmg.ui.tabs.UITab;
-import io.decagames.rotmg.ui.scroll.UIScrollbar;
+
 import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.scroll.UIScrollbar;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.tabs.TabButton;
+import io.decagames.rotmg.ui.tabs.UITab;
+import io.decagames.rotmg.ui.tabs.UITabs;
+import io.decagames.rotmg.ui.texture.TextureParser;
 
 public class DailyQuestsList extends Sprite {
 
@@ -112,13 +113,13 @@ public class DailyQuestsList extends Sprite {
         if (this.eventsTab){
             this.eventsTab.showIndicator = _arg_1;
             this.eventsTab.clickSignal.add(this.onEventsClick);
-        };
+        }
     }
 
     private function onEventsClick(_arg_1:BaseButton):void{
         if (TabButton(_arg_1).hasIndicator){
             TabButton(_arg_1).showIndicator = false;
-        };
+        }
     }
 
     public function addQuestToList(_arg_1:DailyQuestListElement):void{

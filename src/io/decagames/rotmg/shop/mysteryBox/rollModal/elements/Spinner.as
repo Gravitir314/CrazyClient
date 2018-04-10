@@ -5,16 +5,18 @@
 
 package io.decagames.rotmg.shop.mysteryBox.rollModal.elements
 {
-    import flash.display.Sprite;
-    import flash.display.DisplayObject;
-    import kabam.rotmg.assets.EmbeddedAssets;
-    import flash.events.Event;
-    import io.decagames.rotmg.utils.colors.Tint;
-    import io.decagames.rotmg.utils.colors.RGB;
-    import io.decagames.rotmg.utils.colors.RandomColorGenerator;
-    import flash.utils.getTimer;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.utils.getTimer;
 
-    public class Spinner extends Sprite 
+import io.decagames.rotmg.utils.colors.RGB;
+import io.decagames.rotmg.utils.colors.RandomColorGenerator;
+import io.decagames.rotmg.utils.colors.Tint;
+
+import kabam.rotmg.assets.EmbeddedAssets;
+
+public class Spinner extends Sprite 
     {
 
         public const graphic:DisplayObject = new EmbeddedAssets.StarburstSpinner();
@@ -83,16 +85,16 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal.elements
             if (!this.multicolor)
             {
                 return;
-            };
+            }
             if (_arg_1 < this.previousProgress)
             {
                 this.direction = (!(this.direction));
-            };
+            }
             this.previousProgress = _arg_1;
             if (this.direction)
             {
                 _arg_1 = (1 - _arg_1);
-            };
+            }
             var _local_2:uint = this.getColorByProgress(_arg_1);
             Tint.add(this.graphic, _local_2, 1);
         }
@@ -124,7 +126,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal.elements
             if (this.previousSeconds)
             {
                 this.secondsElapsed = (this.secondsElapsed + (_local_1 - this.previousSeconds));
-            };
+            }
             this.previousSeconds = _local_1;
         }
 

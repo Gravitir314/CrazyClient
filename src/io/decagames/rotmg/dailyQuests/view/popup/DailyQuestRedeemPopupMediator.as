@@ -5,11 +5,13 @@
 
 package io.decagames.rotmg.dailyQuests.view.popup
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal;
-    import flash.events.MouseEvent;
+import flash.events.MouseEvent;
 
-    public class DailyQuestRedeemPopupMediator extends Mediator 
+import io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestRedeemPopupMediator extends Mediator 
     {
 
         [Inject]

@@ -5,25 +5,28 @@
 
 package kabam.rotmg.ui.view
 {
-import flash.display.Sprite;
-import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-import kabam.rotmg.ui.view.components.MenuOptionsBar;
-import kabam.rotmg.ui.model.EnvironmentData;
-import org.osflash.signals.Signal;
-import com.company.assembleegameclient.screens.TitleMenuOption;
-import kabam.rotmg.ui.view.components.DarkLayer;
 import com.company.assembleegameclient.screens.AccountScreen;
+import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.ui.SoundIcon;
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFieldAutoSize;
+
+import kabam.rotmg.account.transfer.view.KabamLoginView;
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.account.transfer.view.KabamLoginView;
-import flash.text.TextFieldAutoSize;
-import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.model.TextKey;
-import flash.filters.DropShadowFilter;
+import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+import kabam.rotmg.ui.model.EnvironmentData;
+import kabam.rotmg.ui.view.components.DarkLayer;
+import kabam.rotmg.ui.view.components.MenuOptionsBar;
+
+import org.osflash.signals.Signal;
 import org.osflash.signals.natives.NativeMappedSignal;
-import flash.events.MouseEvent;
 
 public class TitleView extends Sprite
 {

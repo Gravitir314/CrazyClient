@@ -5,12 +5,13 @@
 
 package io.decagames.rotmg.ui.scroll
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import flash.display.DisplayObject;
-    import io.decagames.rotmg.ui.texture.TextureParser;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
 
-    public class UIScrollbar extends Sprite 
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class UIScrollbar extends Sprite
     {
 
         public static const SCROLL_SLIDER_MINIMUM_HEIGHT:int = 39;
@@ -62,9 +63,9 @@ package io.decagames.rotmg.ui.scroll
                 if (_local_1 < SCROLL_SLIDER_MINIMUM_HEIGHT)
                 {
                     _local_1 = SCROLL_SLIDER_MINIMUM_HEIGHT;
-                };
+                }
                 this.sliderAsset.height = _local_1;
-            };
+            }
         }
 
         public function updatePosition(_arg_1:Number):void
@@ -73,12 +74,12 @@ package io.decagames.rotmg.ui.scroll
             if (this._slider.y < 0)
             {
                 this._slider.y = 0;
-            };
+            }
             var _local_2:int = (this.contentHeight - this._slider.height);
             if (this._slider.y > _local_2)
             {
                 this._slider.y = _local_2;
-            };
+            }
             this._content.y = (this.initalPosition + -(Math.round((((this._content.height - this.contentHeight) * this._slider.y) / _local_2))));
         }
 
@@ -97,7 +98,7 @@ package io.decagames.rotmg.ui.scroll
             if (this._scrollObject)
             {
                 return (this._scrollObject);
-            };
+            }
             return (this._content);
         }
 

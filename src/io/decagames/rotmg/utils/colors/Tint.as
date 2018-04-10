@@ -5,11 +5,11 @@
 
 package io.decagames.rotmg.utils.colors
 {
-    import flash.display.Bitmap;
-    import flash.geom.ColorTransform;
-    import flash.display.DisplayObject;
+import flash.display.Bitmap;
+import flash.display.DisplayObject;
+import flash.geom.ColorTransform;
 
-    public class Tint 
+public class Tint 
     {
 
 

@@ -5,16 +5,17 @@
 
 package io.decagames.rotmg.dailyQuests.view.list
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import flash.display.Bitmap;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import flash.filters.DropShadowFilter;
-    import flash.filters.BitmapFilterQuality;
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.filters.BitmapFilterQuality;
+import flash.filters.DropShadowFilter;
 
-    public class DailyQuestListElement extends Sprite 
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class DailyQuestListElement extends Sprite 
     {
 
         private var _id:String;
@@ -74,8 +75,8 @@ package io.decagames.rotmg.dailyQuests.view.list
                     this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_ready_icon");
                 } else {
                     this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_available_icon");
-                };
-            };
+                }
+            }
             this.icon.x = 5;
             this.icon.y = 5;
             if (this._isSelected){
@@ -85,8 +86,8 @@ package io.decagames.rotmg.dailyQuests.view.list
                     this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_green", 190);
                 } else {
                     this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_grey", 190);
-                };
-            };
+                }
+            }
             DefaultLabelFormat.questNameListLabel(this.questNameTextfield, ((this.category == 3) ? 2201331 : (((this._completed) || (this._isSelected)) ? 0xFFFFFF : 0xCFCFCF)));
             this.questNameTextfield.alpha = (((this._completed) || (this._isSelected)) ? 1 : 0.5);
             this.background.height = 30;

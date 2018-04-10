@@ -4,18 +4,19 @@
 //io.decagames.rotmg.friends.commands.FriendActionCommand
 
 package io.decagames.rotmg.friends.commands{
-    import kabam.rotmg.appengine.api.AppEngineClient;
-    import kabam.rotmg.account.core.Account;
-    import io.decagames.rotmg.friends.model.FriendRequestVO;
-    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-    import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
-    import kabam.rotmg.game.signals.AddTextLineSignal;
-    import io.decagames.rotmg.friends.config.FriendsActions;
-    import kabam.rotmg.chat.model.ChatMessage;
-    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+import io.decagames.rotmg.friends.config.FriendsActions;
+import io.decagames.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-    public class FriendActionCommand {
+import kabam.rotmg.account.core.Account;
+import kabam.rotmg.appengine.api.AppEngineClient;
+import kabam.rotmg.chat.model.ChatMessage;
+import kabam.rotmg.game.signals.AddTextLineSignal;
+import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+
+public class FriendActionCommand {
 
         [Inject]
         public var client:AppEngineClient;
@@ -34,7 +35,7 @@ package io.decagames.rotmg.friends.commands{
         public function execute():void{
             if (this.vo.request == FriendsActions.INVITE){
                 this.addTextLine.dispatch(ChatMessage.make("", "Friend request sent"));
-            };
+            }
             var _local_1:String = FriendsActions.getURL(this.vo.request);
             var _local_2:Object = this.account.getCredentials();
             _local_2["targetName"] = this.vo.target;
@@ -43,14 +44,14 @@ package io.decagames.rotmg.friends.commands{
         }
 
         private function onComplete(_arg_1:Boolean, _arg_2:*):void{
-            if (this.vo.callback){
+            if (this.vo.callback()){
                 this.vo.callback(_arg_1, _arg_2, this.vo.target);
             } else {
                 if (!_arg_1){
                     this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(_arg_2)));
                     this.removeFade.dispatch();
-                };
-            };
+                }
+            }
         }
 
 

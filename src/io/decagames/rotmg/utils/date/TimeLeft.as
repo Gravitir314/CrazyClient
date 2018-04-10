@@ -19,19 +19,19 @@ package io.decagames.rotmg.utils.date
                 _local_3 = int(Math.floor((_arg_1 / 86400)));
                 _arg_1 = (_arg_1 - (_local_3 * 86400));
                 _arg_2 = _arg_2.replace("%d", _local_3);
-            };
+            }
             if (_arg_2.indexOf("%h") >= 0)
             {
                 _local_4 = int(Math.floor((_arg_1 / 3600)));
                 _arg_1 = (_arg_1 - (_local_4 * 3600));
                 _arg_2 = _arg_2.replace("%h", _local_4);
-            };
+            }
             if (_arg_2.indexOf("%m") >= 0)
             {
                 _local_5 = int(Math.floor((_arg_1 / 60)));
                 _arg_1 = (_arg_1 - (_local_5 * 60));
                 _arg_2 = _arg_2.replace("%m", _local_5);
-            };
+            }
             return (_arg_2.replace("%s", _arg_1));
         }
 

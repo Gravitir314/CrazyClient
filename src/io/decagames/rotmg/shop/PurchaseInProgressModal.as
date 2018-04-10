@@ -5,11 +5,10 @@
 
 package io.decagames.rotmg.shop
 {
-    import io.decagames.rotmg.ui.popups.modal.TextModal;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
-    import __AS3__.vec.*;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.popups.modal.TextModal;
 
-    public class PurchaseInProgressModal extends TextModal 
+public class PurchaseInProgressModal extends TextModal
     {
 
         public function PurchaseInProgressModal()

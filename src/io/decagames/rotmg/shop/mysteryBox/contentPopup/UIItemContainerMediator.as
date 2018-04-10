@@ -5,16 +5,19 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.ui.model.HUDModel;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-    import com.company.assembleegameclient.objects.Player;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-    import flash.events.MouseEvent;
+import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
 
-    public class UIItemContainerMediator extends Mediator 
+import flash.events.MouseEvent;
+
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class UIItemContainerMediator extends Mediator 
     {
 
         [Inject]
@@ -40,7 +43,7 @@ package io.decagames.rotmg.shop.mysteryBox.contentPopup
             {
                 this.tooltip.attachToTarget(this.view);
                 this.showTooltipSignal.dispatch(this.tooltip);
-            };
+            }
         }
 
         override public function destroy():void

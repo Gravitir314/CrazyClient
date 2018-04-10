@@ -4,23 +4,24 @@
 //io.decagames.rotmg.fame.StatsLine
 
 package io.decagames.rotmg.fame{
-    import flash.display.Sprite;
-    import flash.display.GraphicsSolidFill;
-    import flash.display.GraphicsPath;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import flash.display.Bitmap;
-    import flash.text.TextFormat;
-    import kabam.rotmg.text.model.FontModel;
-    import flash.text.TextFormatAlign;
-    import com.company.assembleegameclient.util.TextureRedrawer;
-    import com.company.util.AssetLibrary;
-    import io.decagames.rotmg.utils.colors.Tint;
-    import flash.display.IGraphicsData;
-    import com.company.util.GraphicsUtil;
-    import __AS3__.vec.Vector;
-    import __AS3__.vec.*;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.AssetLibrary;
+import com.company.util.GraphicsUtil;
 
-    public class StatsLine extends Sprite {
+import flash.display.Bitmap;
+import flash.display.GraphicsPath;
+import flash.display.GraphicsSolidFill;
+import flash.display.IGraphicsData;
+import flash.display.Sprite;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.utils.colors.Tint;
+
+import kabam.rotmg.text.model.FontModel;
+
+public class StatsLine extends Sprite {
 
         public static const TYPE_BONUS:int = 0;
         public static const TYPE_STAT:int = 1;
@@ -53,13 +54,13 @@ package io.decagames.rotmg.fame{
             if (_arg_4 == TYPE_TITLE){
                 _local_6.size = 15;
                 _local_6.color = 0xFFFFFF;
-            };
+            }
             var _local_7:TextFormat = new TextFormat();
             if (_arg_4 == TYPE_BONUS){
                 _local_7.color = 0xFFC800;
             } else {
                 _local_7.color = 5544494;
-            };
+            }
             _local_7.font = FontModel.DEFAULT_FONT_NAME;
             _local_7.size = 13;
             _local_7.bold = true;
@@ -73,12 +74,12 @@ package io.decagames.rotmg.fame{
                 this.fameValue.defaultTextFormat = _local_7;
                 if (((_arg_2 == "0") || (_arg_2 == "0.00%"))){
                     this.fameValue.defaultTextFormat = _local_6;
-                };
+                }
                 if (_arg_4 == TYPE_BONUS){
                     this.fameValue.text = ("+" + _arg_2);
                 } else {
                     this.fameValue.text = _arg_2;
-                };
+                }
                 this.fameValue.x = ((this.lineWidth - 4) - this.fameValue.textWidth);
                 addChild(this.fameValue);
                 this.fameValue.y = 2;
@@ -89,7 +90,7 @@ package io.decagames.rotmg.fame{
                 addChild(this.lock);
                 this.lock.x = ((this.lineWidth - _local_8) + 5);
                 this.lock.y = -8;
-            };
+            }
             this.setLabelsPosition();
             this._tooltipText = _arg_3;
         }
@@ -104,7 +105,7 @@ package io.decagames.rotmg.fame{
             if (this.lock){
                 removeChild(this.lock);
                 this.lock.bitmapData.dispose();
-            };
+            }
         }
 
         public function drawBrightBackground():void{

@@ -5,20 +5,24 @@
 
 package io.decagames.rotmg.dailyQuests.view.slot
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.ui.model.HUDModel;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
-    import io.decagames.rotmg.dailyQuests.signal.UnselectAllSlotsSignal;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-    import com.company.assembleegameclient.objects.Player;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
-    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-    import flash.events.MouseEvent;
+import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
 
-    public class DailyQuestItemSlotMediator extends Mediator 
+import flash.events.MouseEvent;
+
+import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
+import io.decagames.rotmg.dailyQuests.signal.UnselectAllSlotsSignal;
+
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.ui.model.HUDModel;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class DailyQuestItemSlotMediator extends Mediator 
     {
 
         [Inject]
@@ -44,13 +48,13 @@ package io.decagames.rotmg.dailyQuests.view.slot
             if (this.view.isSlotsSelectable){
                 this.unselectAllSignal.add(this.unselectHandler);
                 this.view.addEventListener(MouseEvent.CLICK, this.onSlotSelected);
-            };
+            }
         }
 
         private function unselectHandler(_arg_1:int):void{
             if (this.view.itemID != _arg_1){
                 this.view.selected = false;
-            };
+            }
         }
 
         override public function destroy():void{
@@ -58,7 +62,7 @@ package io.decagames.rotmg.dailyQuests.view.slot
             if (this.view.isSlotsSelectable){
                 this.unselectAllSignal.remove(this.unselectHandler);
                 this.view.removeEventListener(MouseEvent.CLICK, this.onSlotSelected);
-            };
+            }
             this.view.dispose();
         }
 
@@ -69,7 +73,7 @@ package io.decagames.rotmg.dailyQuests.view.slot
                 this.model.selectedItem = this.view.itemID;
             } else {
                 this.model.selectedItem = -1;
-            };
+            }
             this.selectedItemSlotsSignal.dispatch(this.model.selectedItem);
         }
 

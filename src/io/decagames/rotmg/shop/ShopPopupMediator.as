@@ -5,35 +5,37 @@
 
 package io.decagames.rotmg.shop
 {
-    import robotlegs.bender.bundles.mvcs.Mediator;
-    import kabam.rotmg.mysterybox.services.MysteryBoxModel;
-    import kabam.rotmg.packages.services.PackageModel;
-    import kabam.rotmg.game.model.GameModel;
-    import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-    import kabam.rotmg.core.signals.ShowTooltipSignal;
-    import kabam.rotmg.core.signals.HideTooltipsSignal;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import io.decagames.rotmg.ui.gird.UIGrid;
-    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-    import kabam.rotmg.tooltips.HoverTooltipDelegate;
-    import io.decagames.rotmg.ui.tabs.UITabs;
-    import io.decagames.rotmg.ui.tabs.TabButton;
-    import kabam.rotmg.packages.model.PackageInfo;
-    import io.decagames.rotmg.ui.tabs.UITab;
-    import __AS3__.vec.Vector;
-    import io.decagames.rotmg.shop.packages.PackageBoxTile;
-    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-    import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
-    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-    import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import io.decagames.rotmg.ui.popups.header.PopupHeader;
-    import com.company.assembleegameclient.parameters.Parameters;
-    import io.decagames.rotmg.ui.buttons.BaseButton;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-    public class ShopPopupMediator extends Mediator 
+import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
+import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
+import io.decagames.rotmg.shop.packages.PackageBoxTile;
+import io.decagames.rotmg.ui.buttons.BaseButton;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.gird.UIGrid;
+import io.decagames.rotmg.ui.popups.header.PopupHeader;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+import io.decagames.rotmg.ui.tabs.TabButton;
+import io.decagames.rotmg.ui.tabs.UITab;
+import io.decagames.rotmg.ui.tabs.UITabs;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+import kabam.rotmg.core.signals.HideTooltipsSignal;
+import kabam.rotmg.core.signals.ShowTooltipSignal;
+import kabam.rotmg.game.model.GameModel;
+import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+import kabam.rotmg.mysterybox.services.MysteryBoxModel;
+import kabam.rotmg.packages.model.PackageInfo;
+import kabam.rotmg.packages.services.PackageModel;
+import kabam.rotmg.tooltips.HoverTooltipDelegate;
+
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+public class ShopPopupMediator extends Mediator
     {
 
         [Inject]
@@ -74,8 +76,8 @@ package io.decagames.rotmg.shop
                 if (((!(_local_2 == null)) && ((!(_local_2.endTime)) || (_local_2.getSecondsToEnd() > 0))))
                 {
                     this.packageBoxesGrid.addGridElement(this.createBoxTile(_local_2, PackageBoxTile));
-                };
-            };
+                }
+            }
             _local_3 = new UITab("Packages");
             _local_3.addContent(this.packageBoxesGrid);
             return (_local_3);
@@ -92,8 +94,8 @@ package io.decagames.rotmg.shop
             for each (_local_3 in _local_2) {
                 if (((!(_local_3 == null)) && ((!(_local_3.endTime)) || (_local_3.getSecondsToEnd() > 0)))){
                     this.mysteryBoxesGrid.addGridElement(this.createBoxTile(_local_3, MysteryBoxTile));
-                };
-            };
+                }
+            }
             _local_1.addContent(this.mysteryBoxesGrid);
             return (_local_1);
         }
@@ -132,15 +134,15 @@ package io.decagames.rotmg.shop
                     if (((_local_4.isNew()) && ((_local_4.startTime.getTime() > _local_2.getTime()) || (!(Parameters.data_["packages_indicator"])))))
                     {
                         _local_3 = true;
-                    };
-                };
-            };
+                    }
+                }
+            }
             this.packageTab = this.tabs.getTabButtonByLabel("Packages");
             if (this.packageTab)
             {
                 this.packageTab.showIndicator = _local_3;
                 this.packageTab.clickSignal.add(this.onPackageClick);
-            };
+            }
             this.gameModel.player.creditsWereChanged.add(this.refreshCoins);
             this.gameModel.player.fameWasChanged.add(this.refreshFame);
             this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Buy Gold", "Click to buy more Realm Gold!", 200);
@@ -157,7 +159,7 @@ package io.decagames.rotmg.shop
             {
                 Parameters.data_["packages_indicator"] = new Date().getTime();
                 TabButton(_arg_1).showIndicator = false;
-            };
+            }
         }
 
         override public function destroy():void
@@ -176,7 +178,7 @@ package io.decagames.rotmg.shop
             if (this.packageTab)
             {
                 this.packageTab.clickSignal.remove(this.onPackageClick);
-            };
+            }
         }
 
         private function refreshCoins():void

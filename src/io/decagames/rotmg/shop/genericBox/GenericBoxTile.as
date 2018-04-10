@@ -5,21 +5,20 @@
 
 package io.decagames.rotmg.shop.genericBox
 {
-    import io.decagames.rotmg.ui.gird.UIGridElement;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import io.decagames.rotmg.shop.ShopBuyButton;
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import __AS3__.vec.Vector;
-    import io.decagames.rotmg.shop.ShopBoxTag;
-    import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
-    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import __AS3__.vec.*;
+import flash.display.Sprite;
 
-    public class GenericBoxTile extends UIGridElement 
+import io.decagames.rotmg.shop.ShopBoxTag;
+import io.decagames.rotmg.shop.ShopBuyButton;
+import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.gird.UIGridElement;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class GenericBoxTile extends UIGridElement
     {
 
         protected var background:SliceScalingBitmap;
@@ -48,11 +47,11 @@ package io.decagames.rotmg.shop.genericBox
             {
                 this.backgroundTitle = TextureParser.instance.getSliceScalingBitmap("UI", "shop_title_background", 10);
                 this._infoButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "tab_info_button"));
-            };
+            }
             if (this.buyButtonBitmapBackground)
             {
                 this.backgroundButton = TextureParser.instance.getSliceScalingBitmap("UI", this.buyButtonBitmapBackground, 10);
-            };
+            }
             this._spinner = new FixedNumbersSpinner(TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow"), 0, new <int>[1, 2, 3, 5, 10], "x");
             this._spinner.y = 131;
             this._spinner.x = 43;
@@ -66,19 +65,19 @@ package io.decagames.rotmg.shop.genericBox
             else
             {
                 this._buyButton = new ShopBuyButton(_arg_1.priceAmount, _arg_1.priceCurrency);
-            };
+            }
             this._buyButton.width = 95;
             if (_arg_1.unitsLeft == 0)
             {
                 this._buyButton.disabled = true;
-            };
+            }
             this.tags = new Vector.<ShopBoxTag>(0);
             addChild(this.background);
             this.createBoxBackground();
             if (this.backgroundTitle)
             {
                 addChild(this.backgroundTitle);
-            };
+            }
             this._clickMask = new Sprite();
             this._clickMask.graphics.beginFill(0xFF0000, this.clickMaskAlpha);
             this._clickMask.graphics.drawRect(0, 0, 95, this.boxHeight);
@@ -87,19 +86,19 @@ package io.decagames.rotmg.shop.genericBox
             if (this.backgroundButton)
             {
                 addChild(this.backgroundButton);
-            };
+            }
             addChild(this.titleLabel);
             if (_arg_1.isOnSale())
             {
                 this.originalPriceLabel = new SalePriceTag(_arg_1.priceAmount, _arg_1.priceCurrency);
                 addChild(this.originalPriceLabel);
-            };
+            }
             addChild(this._buyButton);
             addChild(this._spinner);
             if (!_arg_2)
             {
                 addChild(this._infoButton);
-            };
+            }
             this.createBoxTags();
             this.createEndTime();
             this.updateTimeEndString();
@@ -113,14 +112,14 @@ package io.decagames.rotmg.shop.genericBox
                 DefaultLabelFormat.popupEndsIn(this._endTimeLabel);
             } else {
                 DefaultLabelFormat.mysteryBoxEndsIn(this._endTimeLabel);
-            };
+            }
         }
 
         private function createBoxTags():void{
             var _local_2:String;
             if (this._boxInfo.isNew()){
                 this.addTag(new ShopBoxTag(ShopBoxTag.BLUE_TAG, "NEW", this._isPopup));
-            };
+            }
             var _local_1:Array = this._boxInfo.tags.split(",");
             for each (_local_2 in _local_1) {
                 switch (_local_2){
@@ -130,14 +129,14 @@ package io.decagames.rotmg.shop.genericBox
                     case "hot":
                         this.addTag(new ShopBoxTag(ShopBoxTag.ORANGE_TAG, "HOT", this._isPopup));
                         break;
-                };
-            };
+                }
+            }
             if (this._boxInfo.isOnSale()){
                 this.addTag(new ShopBoxTag(ShopBoxTag.RED_TAG, (this.calculateBoxPromotionPercent(this._boxInfo) + "% OFF"), this._isPopup));
-            };
+            }
             if (this._boxInfo.unitsLeft != -1){
                 this.addTag(new ShopBoxTag(ShopBoxTag.PURPLE_TAG, (this._boxInfo.unitsLeft + " LEFT!"), this._isPopup));
-            };
+            }
         }
 
         private function calculateBoxPromotionPercent(_arg_1:GenericBoxInfo):int{
@@ -155,7 +154,7 @@ package io.decagames.rotmg.shop.genericBox
             {
                 this._endTimeLabel.text = _local_1;
                 this._endTimeLabel.x = ((this.background.width - this._endTimeLabel.width) / 2);
-            };
+            }
         }
 
         override public function get height():Number
@@ -182,12 +181,12 @@ package io.decagames.rotmg.shop.genericBox
             {
                 this._buyButton.y = 137;
                 this._buyButton.x = (_arg_1 - 110);
-            };
+            }
             if (this._infoButton)
             {
                 this._infoButton.x = 130;
                 this._infoButton.y = 45;
-            };
+            }
             this.updateTimeEndString();
             this.updateSaleLabel();
             this.updateClickMask(_arg_1);
@@ -201,11 +200,11 @@ package io.decagames.rotmg.shop.genericBox
                 this.backgroundTitle = TextureParser.instance.getSliceScalingBitmap("UI", "shop_title_background", 10);
                 _local_2 = ((this.backgroundTitle.y + this.backgroundTitle.height) + 2);
                 this._clickMask.y = _local_2;
-            };
+            }
             if (this.backgroundButton)
             {
                 this.boxHeight = (this.boxHeight - ((this.boxHeight - this.backgroundButton.y) + 4));
-            };
+            }
             this._clickMask.graphics.clear();
             this._clickMask.graphics.beginFill(0xFF0000, this.clickMaskAlpha);
             this._clickMask.graphics.drawRect(0, 0, _arg_1, (this.boxHeight - _local_2));
@@ -218,7 +217,7 @@ package io.decagames.rotmg.shop.genericBox
             {
                 this.originalPriceLabel.y = (this._buyButton.y - 23);
                 this.originalPriceLabel.x = (((this._buyButton.x + this._buyButton.width) - this.originalPriceLabel.width) - 13);
-            };
+            }
         }
 
         override public function update():void
@@ -256,22 +255,22 @@ package io.decagames.rotmg.shop.genericBox
             if (this.backgroundTitle)
             {
                 this.backgroundTitle.dispose();
-            };
+            }
             this.backgroundButton.dispose();
             this._buyButton.dispose();
             if (this._infoButton)
             {
                 this._infoButton.dispose();
-            };
+            }
             this._spinner.dispose();
             if (this.originalPriceLabel)
             {
                 this.originalPriceLabel.dispose();
-            };
+            }
             for each (_local_1 in this.tags)
             {
                 _local_1.dispose();
-            };
+            }
             this.tags = null;
             super.dispose();
         }

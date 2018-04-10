@@ -5,10 +5,11 @@
 
 package io.decagames.rotmg.ui.popups.signals
 {
-    import org.osflash.signals.Signal;
-    import io.decagames.rotmg.ui.popups.BasePopup;
+import io.decagames.rotmg.ui.popups.BasePopup;
 
-    public class ClosePopupSignal extends Signal 
+import org.osflash.signals.Signal;
+
+public class ClosePopupSignal extends Signal
     {
 
         public function ClosePopupSignal()

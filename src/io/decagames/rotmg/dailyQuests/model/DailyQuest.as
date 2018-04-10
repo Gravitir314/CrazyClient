@@ -5,9 +5,7 @@
 
 package io.decagames.rotmg.dailyQuests.model
 {
-    import __AS3__.vec.Vector;
-
-    public class DailyQuest 
+public class DailyQuest
     {
 
         public var completed:Boolean;

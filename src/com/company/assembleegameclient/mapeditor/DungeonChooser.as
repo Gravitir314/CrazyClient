@@ -4,11 +4,10 @@
 //com.company.assembleegameclient.mapeditor.DungeonChooser
 
 package com.company.assembleegameclient.mapeditor{
-import flash.utils.Dictionary;
-import __AS3__.vec.Vector;
-import com.company.util.MoreStringUtil;
 import com.company.assembleegameclient.objects.ObjectLibrary;
-import __AS3__.vec.*;
+import com.company.util.MoreStringUtil;
+
+import flash.utils.Dictionary;
 
 public class DungeonChooser extends Chooser {
 
@@ -37,14 +36,14 @@ public class DungeonChooser extends Chooser {
         var _local_3:Vector.<String> = new Vector.<String>();
         if (_arg_2 != ""){
             _local_4 = new RegExp(_arg_2, "gix");
-        };
+        }
         var _local_5:Dictionary = GroupDivider.getDungeonsXML(this.currentDungon);
         for each (_local_7 in _local_5) {
             _local_6 = String(_local_7.@id);
             if (((_local_4 == null) || (_local_6.search(_local_4) >= 0))){
                 _local_3.push(_local_6);
-            };
-        };
+            }
+        }
         _local_3.sort(MoreStringUtil.cmp);
         for each (_local_6 in _local_3) {
             _local_8 = ObjectLibrary.idToType_[_local_6];
@@ -54,9 +53,9 @@ public class DungeonChooser extends Chooser {
                 this.cache[_local_8] = _local_9;
             } else {
                 _local_9 = this.cache[_local_8];
-            };
+            }
             addElement(_local_9);
-        };
+        }
         hasBeenLoaded = true;
         scrollBar_.setIndicatorSize(HEIGHT, elementContainer_.height, true);
     }

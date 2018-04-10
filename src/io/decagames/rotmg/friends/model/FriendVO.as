@@ -4,10 +4,11 @@
 //io.decagames.rotmg.friends.model.FriendVO
 
 package io.decagames.rotmg.friends.model{
-    import com.company.assembleegameclient.objects.Player;
-    import flash.display.BitmapData;
+import com.company.assembleegameclient.objects.Player;
 
-    public class FriendVO {
+import flash.display.BitmapData;
+
+public class FriendVO {
 
         public var playerName:String;
         private var _player:Player;

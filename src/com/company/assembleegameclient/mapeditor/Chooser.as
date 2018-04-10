@@ -4,27 +4,24 @@
 //com.company.assembleegameclient.mapeditor.Chooser
 
 package com.company.assembleegameclient.mapeditor{
-import flash.display.Sprite;
-import __AS3__.vec.Vector;
-import flash.display.IGraphicsData;
-import com.company.util.GraphicsUtil;
-import com.company.assembleegameclient.mapeditor.Element;
+import com.adobe.images.PNGEncoder;
 import com.company.assembleegameclient.ui.Scrollbar;
+import com.company.util.GraphicsUtil;
+
+import flash.display.BitmapData;
+import flash.display.CapsStyle;
+import flash.display.GraphicsPath;
 import flash.display.GraphicsSolidFill;
 import flash.display.GraphicsStroke;
-import flash.display.LineScaleMode;
-import flash.display.CapsStyle;
+import flash.display.IGraphicsData;
 import flash.display.JointStyle;
-import flash.display.GraphicsPath;
-import flash.events.MouseEvent;
+import flash.display.LineScaleMode;
 import flash.display.Shape;
+import flash.display.Sprite;
 import flash.events.Event;
-import flash.utils.ByteArray;
+import flash.events.MouseEvent;
 import flash.net.FileReference;
-import flash.display.BitmapData;
-import com.adobe.images.PNGEncoder;
-import __AS3__.vec.*;
-import com.company.assembleegameclient.mapeditor.*;
+import flash.utils.ByteArray;
 
 internal class Chooser extends Sprite {
 
@@ -60,8 +57,8 @@ internal class Chooser extends Sprite {
             if (_local_2.type_ == _arg_1){
                 this.setSelected(_local_2);
                 return;
-            };
-        };
+            }
+        }
     }
 
     protected function addElement(_arg_1:Element):void{
@@ -71,7 +68,7 @@ internal class Chooser extends Sprite {
         this.elementContainer_.addChild(_arg_1);
         if (_local_2 == 0){
             this.setSelected(_arg_1);
-        };
+        }
         _arg_1.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
         this.elements_.push(_arg_1);
     }
@@ -82,7 +79,7 @@ internal class Chooser extends Sprite {
             this.elements_ = new Vector.<Element>();
         } else {
             this.cleanupElements();
-        };
+        }
         this._hasBeenLoaded = false;
     }
 
@@ -93,13 +90,13 @@ internal class Chooser extends Sprite {
             _local_2 = this.elements_.pop();
             _local_2.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             _local_1--;
-        };
+        }
     }
 
     protected function setSelected(_arg_1:Element):void{
         if (this.selected_ != null){
             this.selected_.setSelected(false);
-        };
+        }
         this.selected_ = _arg_1;
         this.selected_.setSelected(true);
     }
@@ -130,7 +127,7 @@ internal class Chooser extends Sprite {
             _local_3 = PNGEncoder.encode(_arg_1.objectBitmap);
             _local_4 = new FileReference();
             _local_4.save(_local_3, (_arg_1.type_ + ".png"));
-        };
+        }
     }
 
     private function drawBackground():void{
@@ -145,7 +142,7 @@ internal class Chooser extends Sprite {
             this.downloadElement(_local_2);
         } else {
             this.setSelected(_local_2);
-        };
+        }
     }
 
     protected function onScrollBarChange(_arg_1:Event):void{

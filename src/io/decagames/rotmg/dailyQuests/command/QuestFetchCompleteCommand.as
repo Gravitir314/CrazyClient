@@ -5,13 +5,14 @@
 
 package io.decagames.rotmg.dailyQuests.command
 {
-    import robotlegs.bender.bundles.mvcs.Command;
-    import io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-    import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
-    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
+import io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse;
+import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
 
-    public class QuestFetchCompleteCommand extends Command 
+import robotlegs.bender.bundles.mvcs.Command;
+
+public class QuestFetchCompleteCommand extends Command 
     {
 
         [Inject]
@@ -37,7 +38,7 @@ package io.decagames.rotmg.dailyQuests.command
                 _local_2.category = _local_1.category;
                 _local_2.itemOfChoice = _local_1.itemOfChoice;
                 this.model.addQuest(_local_2);
-            };
+            }
         }
 
 

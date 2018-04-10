@@ -5,19 +5,19 @@
 
 package io.decagames.rotmg.dailyQuests.view.slot
 {
-import flash.display.Sprite;
-import kabam.rotmg.text.view.BitmapTextFactory;
-import flash.display.Shape;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+
 import flash.display.Bitmap;
 import flash.display.BitmapData;
+import flash.display.Shape;
+import flash.display.Sprite;
 import flash.geom.Matrix;
-import com.company.assembleegameclient.objects.ObjectLibrary;
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+
 import io.decagames.rotmg.utils.colors.GreyScale;
-import flash.display.*;
-import flash.geom.*;
-import flash.filters.*;
+
+import kabam.rotmg.core.StaticInjectorContext;
+import kabam.rotmg.text.view.BitmapTextFactory;
+import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
 public class DailyQuestItemSlot extends Sprite
 {
@@ -53,7 +53,7 @@ public class DailyQuestItemSlot extends Sprite
         if (!this.backgroundShape){
             this.backgroundShape = new Shape();
             this.imageContainer.addChild(this.backgroundShape);
-        };
+        }
         this.backgroundShape.graphics.clear();
         if (this.isSlotsSelectable){
             if (this._selected){
@@ -62,10 +62,10 @@ public class DailyQuestItemSlot extends Sprite
                 this.backgroundShape.graphics.beginFill(14846006, 1);
             } else {
                 this.backgroundShape.graphics.beginFill(0x454545, 1);
-            };
+            }
         } else {
             this.backgroundShape.graphics.beginFill(((this.hasItem) ? 0x13A000 : 0x454545), 1);
-        };
+        }
         this.backgroundShape.graphics.drawRect(0, 0, SLOT_SIZE, SLOT_SIZE);
         this.backgroundShape.x = -(Math.round(((SLOT_SIZE + (SELECTED_BORDER_SIZE * 2)) / 2)));
         this.backgroundShape.y = -(Math.round(((SLOT_SIZE + (SELECTED_BORDER_SIZE * 2)) / 2)));
@@ -76,7 +76,7 @@ public class DailyQuestItemSlot extends Sprite
         var _local_4:Matrix;
         if (this.imageBitmap.bitmapData){
             this.imageBitmap.bitmapData.dispose();
-        };
+        }
         var _local_1:BitmapData = ObjectLibrary.getRedrawnTextureFromType(this._itemID, (SLOT_SIZE * 2), true);
         _local_1 = _local_1.clone();
         var _local_2:XML = ObjectLibrary.xmlLibrary_[this._itemID];
@@ -86,16 +86,16 @@ public class DailyQuestItemSlot extends Sprite
             _local_4 = new Matrix();
             _local_4.translate(8, 7);
             _local_1.draw(_local_3, _local_4);
-        };
+        }
         this.imageBitmap.bitmapData = _local_1;
         if (((this.isSlotsSelectable) && (!(this._selected)))){
             GreyScale.setGreyScale(_local_1);
-        };
+        }
         if (!this.imageBitmap.parent){
             this.imageBitmap.x = -(Math.round((this.imageBitmap.width / 2)));
             this.imageBitmap.y = -(Math.round((this.imageBitmap.height / 2)));
             this.imageContainer.addChild(this.imageBitmap);
-        };
+        }
     }
 
     public function set selected(_arg_1:Boolean):void{
@@ -107,7 +107,7 @@ public class DailyQuestItemSlot extends Sprite
     public function dispose():void{
         if (((this.imageBitmap) && (this.imageBitmap.bitmapData))){
             this.imageBitmap.bitmapData.dispose();
-        };
+        }
     }
 
     public function get itemID():int

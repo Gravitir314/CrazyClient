@@ -5,17 +5,19 @@
 
 package io.decagames.rotmg.ui.popups.header
 {
-    import flash.display.Sprite;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import flash.display.Bitmap;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-    import com.company.util.AssetLibrary;
-    import flash.display.BitmapData;
-    import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.assembleegameclient.util.TextureRedrawer;
+import com.company.util.AssetLibrary;
 
-    public class FameField extends Sprite 
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+public class FameField extends Sprite 
     {
 
         private var fameFieldBackground:SliceScalingBitmap;

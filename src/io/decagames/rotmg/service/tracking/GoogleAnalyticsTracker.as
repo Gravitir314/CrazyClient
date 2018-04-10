@@ -4,14 +4,15 @@
 //io.decagames.rotmg.service.tracking.GoogleAnalyticsTracker
 
 package io.decagames.rotmg.service.tracking{
-    import robotlegs.bender.framework.api.ILogger;
-    import flash.net.SharedObject;
-    import flash.utils.ByteArray;
-    import flash.crypto.generateRandomBytes;
-    import flash.display.Loader;
-    import flash.net.URLRequest;
+import flash.crypto.generateRandomBytes;
+import flash.display.Loader;
+import flash.net.SharedObject;
+import flash.net.URLRequest;
+import flash.utils.ByteArray;
 
-    public class GoogleAnalyticsTracker {
+import robotlegs.bender.framework.api.ILogger;
+
+public class GoogleAnalyticsTracker {
 
         public static const VERSION:String = "1";
 
@@ -27,7 +28,7 @@ package io.decagames.rotmg.service.tracking{
             this._debug = _arg_4;
             if (_arg_4){
                 this.trackingURL = "http://www.google-analytics.com/debug/collect";
-            };
+            }
             this.clientID = this.getClientID();
         }
 
@@ -42,11 +43,11 @@ package io.decagames.rotmg.service.tracking{
                     so.flush(0x0400);
                 } catch(e:Error) {
                     logger.debug(("Could not write SharedObject to disk: " + e.message));
-                };
+                }
             } else {
                 this.logger.debug(("CID found, restore from SharedObject: " + so.data.clientid));
                 cid = so.data.clientid;
-            };
+            }
             return (cid);
         }
 
@@ -70,7 +71,7 @@ package io.decagames.rotmg.service.tracking{
                 b = randomBytes[i];
                 str = (str + toHex(b));
                 i++;
-            };
+            }
             var uuid:String = "";
             uuid = (uuid + str.substr(0, 8));
             uuid = (uuid + "-");
@@ -103,14 +104,14 @@ package io.decagames.rotmg.service.tracking{
             if (this._debug){
                 this.logger.debug(("DEBUGGING GA:" + url));
                 return;
-            };
+            }
             try {
                 urlLoader = new Loader();
                 request = new URLRequest(url);
                 urlLoader.load(request);
             } catch(e:Error) {
                 logger.error(((((("Tracking Error:" + e.message) + ", ") + e.name) + ", ") + e.getStackTrace()));
-            };
+            }
         }
 
         public function get debug():Boolean{

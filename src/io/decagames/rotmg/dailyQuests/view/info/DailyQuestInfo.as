@@ -5,16 +5,15 @@
 
 package io.decagames.rotmg.dailyQuests.view.info{
 import flash.display.Sprite;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.labels.UILabel;
-import __AS3__.vec.Vector;
-import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
-import io.decagames.rotmg.ui.texture.TextureParser;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
+
 import io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType;
 import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-import __AS3__.vec.*;
+import io.decagames.rotmg.dailyQuests.utils.SlotsRendered;
+import io.decagames.rotmg.dailyQuests.view.slot.DailyQuestItemSlot;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
 
 public class DailyQuestInfo extends Sprite {
 
@@ -105,8 +104,8 @@ public class DailyQuestInfo extends Sprite {
             _local_5 = _local_3.indexOf(_local_4);
             if (_local_5 >= 0){
                 _local_3.splice(_local_5, 1);
-            };
-        };
+            }
+        }
         return (_local_3.length == 0);
     }
 
@@ -115,7 +114,7 @@ public class DailyQuestInfo extends Sprite {
         var _local_1:DailyQuestItemSlot;
         for each (_local_1 in this.slots) {
             _local_1.parent.removeChild(_local_1);
-        };
+        }
         this.slots = new Vector.<DailyQuestItemSlot>();
     }
 
@@ -125,7 +124,7 @@ public class DailyQuestInfo extends Sprite {
             this.rewardsChoice.visible = true;
         } else {
             this.rewardsChoice.visible = false;
-        };
+        }
         this.questName.text = _arg_1.name;
         this.questDescription.text = _arg_1.description;
         SlotsRendered.renderSlots(_arg_1.requirements, this.playerEquipment, DailyQuestItemSlotType.REQUIREMENT, this.requirementsContainer, this.requirementsTopMargin, this.slotMargin, INFO_WIDTH, this.slots);

@@ -31,7 +31,7 @@ public class UITab extends Sprite {
             this.content.graphics.drawRect(0, 0, this._content.width, this._content.height);
             this.lastSize.x = this._content.width;
             this.lastSize.y = this._content.height;
-        };
+        }
     }
 
     public function get tabName():String{

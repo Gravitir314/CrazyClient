@@ -5,11 +5,11 @@
 
 package io.decagames.rotmg.ui.popups.modal.buttons
 {
-    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+import io.decagames.rotmg.ui.texture.TextureParser;
 
-    public class BuyGoldButton extends SliceScalingButton 
+public class BuyGoldButton extends SliceScalingButton 
     {
 
         public function BuyGoldButton()

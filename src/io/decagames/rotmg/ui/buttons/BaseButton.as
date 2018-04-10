@@ -5,12 +5,13 @@
 
 package io.decagames.rotmg.ui.buttons
 {
-    import flash.display.Sprite;
-    import org.osflash.signals.Signal;
-    import flash.events.Event;
-    import flash.events.MouseEvent;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.MouseEvent;
 
-    public class BaseButton extends Sprite 
+import org.osflash.signals.Signal;
+
+public class BaseButton extends Sprite
     {
 
         protected var _disabled:Boolean;
@@ -50,7 +51,7 @@ package io.decagames.rotmg.ui.buttons
             if (!this._disabled)
             {
                 this.clickSignal.dispatch(this);
-            };
+            }
         }
 
         protected function onMouseDownHandler(_arg_1:MouseEvent):void

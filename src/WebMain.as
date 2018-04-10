@@ -16,6 +16,7 @@ import flash.display.StageScaleMode;
 import flash.events.Event;
 
 import io.decagames.rotmg.dailyQuests.config.DailyQuestsConfig;
+import io.decagames.rotmg.friends.config.FriendsConfig;
 
 import kabam.lib.net.NetConfig;
 import kabam.rotmg.account.AccountConfig;
@@ -37,7 +38,6 @@ import kabam.rotmg.errors.ErrorConfig;
 import kabam.rotmg.external.ExternalConfig;
 import kabam.rotmg.fame.FameConfig;
 import kabam.rotmg.fortune.FortuneConfig;
-import io.decagames.rotmg.friends.config.FriendsConfig;
 import kabam.rotmg.game.GameConfig;
 import kabam.rotmg.language.LanguageConfig;
 import kabam.rotmg.legends.LegendsConfig;

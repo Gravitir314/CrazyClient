@@ -4,13 +4,16 @@
 //io.decagames.rotmg.ui.defaults.DefaultLabelFormat
 
 package io.decagames.rotmg.ui.defaults{
-import flash.text.TextFormat;
-import kabam.rotmg.text.model.FontModel;
-import flash.text.TextFormatAlign;
-import io.decagames.rotmg.ui.labels.UILabel;
-import flash.filters.DropShadowFilter;
-import flashx.textLayout.formats.TextAlign;
 import flash.filters.BitmapFilterQuality;
+import flash.filters.DropShadowFilter;
+import flash.text.TextFormat;
+import flash.text.TextFormatAlign;
+
+import flashx.textLayout.formats.TextAlign;
+
+import io.decagames.rotmg.ui.labels.UILabel;
+
+import kabam.rotmg.text.model.FontModel;
 
 public class DefaultLabelFormat {
 
