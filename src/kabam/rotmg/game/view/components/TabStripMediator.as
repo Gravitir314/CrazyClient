@@ -8,12 +8,7 @@ package kabam.rotmg.game.view.components
 import com.company.assembleegameclient.objects.ImageFactory;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.icons.IconButtonFactory;
-
-import flash.events.MouseEvent;
-
 import kabam.rotmg.assets.services.IconFactory;
-import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.friends.view.FriendListView;
 import kabam.rotmg.pets.controller.NotifyActivePetUpdated;
 import kabam.rotmg.pets.data.PetsModel;
 import kabam.rotmg.pets.view.components.PetsTabContentView;
@@ -54,8 +49,6 @@ public class TabStripMediator extends Mediator
         public var statsTabHotKeyInput:StatsTabHotKeyInputSignal;
         [Inject]
         public var petModel:PetsModel;
-        [Inject]
-        public var openDialog:OpenDialogSignal;
         private var doShowStats:Boolean = true;
 
 
@@ -154,12 +147,6 @@ public class TabStripMediator extends Mediator
             this.clearTabs();
             this.addTabs(this.hudModel.gameSprite.map.player_);
         }
-
-        private function onFriendsBtnClicked(_arg_1:MouseEvent):void
-        {
-            this.openDialog.dispatch(new FriendListView());
-        }
-
 
     }
 }//package kabam.rotmg.game.view.components

@@ -10,8 +10,6 @@ import com.company.assembleegameclient.ui.tooltip.slotcomparisons.GeneralProject
 import com.company.assembleegameclient.ui.tooltip.slotcomparisons.GenericArmorComparison;
 import com.company.assembleegameclient.ui.tooltip.slotcomparisons.HelmetComparison;
 import com.company.assembleegameclient.ui.tooltip.slotcomparisons.OrbComparison;
-import com.company.assembleegameclient.ui.tooltip.slotcomparisons.PoisonComparison;
-import com.company.assembleegameclient.ui.tooltip.slotcomparisons.PrismComparison;
 import com.company.assembleegameclient.ui.tooltip.slotcomparisons.SealComparison;
 import com.company.assembleegameclient.ui.tooltip.slotcomparisons.SlotComparison;
 import com.company.assembleegameclient.ui.tooltip.slotcomparisons.TomeComparison;
@@ -35,9 +33,7 @@ public class SlotComparisonFactory
             this.hash[ItemConstants.CLOAK_TYPE] = new CloakComparison();
             this.hash[ItemConstants.ROBE_TYPE] = _local_2;
             this.hash[ItemConstants.HELM_TYPE] = new HelmetComparison();
-            this.hash[ItemConstants.POISON_TYPE] = new PoisonComparison();
             this.hash[ItemConstants.ORB_TYPE] = new OrbComparison();
-            this.hash[ItemConstants.PRISM_TYPE] = new PrismComparison();
         }
 
         public function getComparisonResults(_arg_1:XML, _arg_2:XML):SlotComparisonResult

@@ -37,14 +37,14 @@ package com.company.assembleegameclient.ui.tooltip
             return ((int((_local_2 * 10)) == 0) ? int(_arg_1).toString() : _arg_1.toFixed(1));
         }
 
-        public static function compareAndGetPlural(_arg_1:Number, _arg_2:Number, _arg_3:String, _arg_4:Boolean=true):String
+        public static function compareAndGetPlural(_arg_1:Number, _arg_2:Number, _arg_3:String, _arg_4:Boolean=true, _arg_5:Boolean=true):String
         {
-            return (wrapInFontTag(getPlural(_arg_1, _arg_3), ("#" + getTextColor(((_arg_4) ? Number((_arg_1 - _arg_2)) : Number((_arg_2 - _arg_1)))).toString(16))));
+            return (wrapInFontTag(getPlural(_arg_1, _arg_3), ("#" + getTextColor((((_arg_4) ? (_arg_1 - _arg_2) : (_arg_2 - _arg_1)) * int(_arg_5))).toString(16))));
         }
 
-        public static function compare(_arg_1:Number, _arg_2:Number, _arg_3:Boolean=true, _arg_4:String="", _arg_5:Boolean=false):String
+        public static function compare(_arg_1:Number, _arg_2:Number, _arg_3:Boolean=true, _arg_4:String="", _arg_5:Boolean=false, _arg_6:Boolean=true):String
         {
-            return (wrapInFontTag((((_arg_5) ? Math.abs(_arg_1) : _arg_1) + _arg_4), ("#" + getTextColor(((_arg_3) ? Number((_arg_1 - _arg_2)) : Number((_arg_2 - _arg_1)))).toString(16))));
+            return (wrapInFontTag((((_arg_5) ? Math.abs(_arg_1) : _arg_1) + _arg_4), ("#" + getTextColor((((_arg_3) ? (_arg_1 - _arg_2) : (_arg_2 - _arg_1)) * int(_arg_6))).toString(16))));
         }
 
         public static function getPlural(_arg_1:Number, _arg_2:String):String

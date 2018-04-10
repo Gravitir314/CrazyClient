@@ -1,79 +1,76 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //com.company.assembleegameclient.mapeditor.AllObjectChooser
 
-package com.company.assembleegameclient.mapeditor
-{
-import com.company.assembleegameclient.objects.ObjectLibrary;
-import com.company.util.MoreStringUtil;
-
+package com.company.assembleegameclient.mapeditor{
 import flash.utils.Dictionary;
+import com.company.assembleegameclient.mapeditor.Layer;
+import __AS3__.vec.Vector;
+import com.company.assembleegameclient.mapeditor.GroupDivider;
+import com.company.util.MoreStringUtil;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import __AS3__.vec.*;
+import com.company.assembleegameclient.mapeditor.*;
 
-public class AllObjectChooser extends Chooser 
-    {
+internal class AllObjectChooser extends Chooser {
 
-        private var cache:Dictionary;
-        private var lastSearch:String = "";
+    public static const GROUP_NAME_MAP_OBJECTS:String = "All Map Objects";
+    public static const GROUP_NAME_GAME_OBJECTS:String = "All Game Objects";
 
-        public function AllObjectChooser(_arg_1:String="")
-        {
-            super(Layer.OBJECT);
-            this.cache = new Dictionary();
-            this.reloadObjects(_arg_1, true);
-        }
+    private var cache:Dictionary;
+    private var lastSearch:String = "";
 
-        public function getLastSearch():String
-        {
-            return (this.lastSearch);
-        }
-
-        public function reloadObjects(_arg_1:String="", _arg_2:Boolean=false):void
-        {
-            var _local_3:String;
-            var _local_4:XML;
-            var _local_5:int;
-            var _local_6:ObjectElement;
-            var _local_7:RegExp;
-            if (!_arg_2)
-            {
-                removeElements();
-            }
-            this.lastSearch = _arg_1;
-            var _local_8:Vector.<String> = new Vector.<String>();
-            if (_arg_1 != "")
-            {
-                _local_7 = new RegExp(_arg_1, "gix");
-            }
-            var _local_9:Dictionary = GroupDivider.GROUPS["All Objects"];
-            for each (_local_4 in _local_9)
-            {
-                _local_3 = String(_local_4.@id);
-                if (((_local_7 == null) || (_local_3.search(_local_7) >= 0)))
-                {
-                    _local_8.push(_local_3);
-                }
-            }
-            _local_8.sort(MoreStringUtil.cmp);
-            for each (_local_3 in _local_8)
-            {
-                _local_5 = ObjectLibrary.idToType_[_local_3];
-                _local_4 = ObjectLibrary.xmlLibrary_[_local_5];
-                if (!this.cache[_local_5])
-                {
-                    _local_6 = new ObjectElement(_local_4);
-                    this.cache[_local_5] = _local_6;
-                }
-                else
-                {
-                    _local_6 = this.cache[_local_5];
-                }
-                addElement(_local_6);
-            }
-            scrollBar_.setIndicatorSize(HEIGHT, elementSprite_.height, true);
-        }
-
-
+    public function AllObjectChooser(){
+        super(Layer.OBJECT);
+        this.cache = new Dictionary();
     }
+
+    public function getLastSearch():String{
+        return (this.lastSearch);
+    }
+
+    public function reloadObjects(_arg_1:String="", _arg_2:String="All Map Objects"):void{
+        var _local_4:RegExp;
+        var _local_6:String;
+        var _local_7:int;
+        var _local_8:XML;
+        var _local_9:int;
+        var _local_10:ObjectElement;
+        removeElements();
+        this.lastSearch = _arg_1;
+        var _local_3:Vector.<String> = new Vector.<String>();
+        if (_arg_1 != ""){
+            _local_4 = new RegExp(_arg_1, "gix");
+        };
+        var _local_5:Dictionary = GroupDivider.GROUPS[_arg_2];
+        for each (_local_8 in _local_5) {
+            _local_6 = String(_local_8.@id);
+            _local_7 = int(_local_8.@type);
+            if ((((_local_4 == null) || (_local_6.search(_local_4) >= 0)) || (_local_7 == int(_arg_1)))){
+                _local_3.push(_local_6);
+            };
+        };
+        _local_3.sort(MoreStringUtil.cmp);
+        for each (_local_6 in _local_3) {
+            _local_9 = ObjectLibrary.idToType_[_local_6];
+            _local_8 = ObjectLibrary.xmlLibrary_[_local_9];
+            if (!this.cache[_local_9]){
+                _local_10 = new ObjectElement(_local_8);
+                if (_arg_2 == GROUP_NAME_GAME_OBJECTS){
+                    _local_10.downloadOnly = true;
+                };
+                this.cache[_local_9] = _local_10;
+            } else {
+                _local_10 = this.cache[_local_9];
+            };
+            addElement(_local_10);
+        };
+        hasBeenLoaded = true;
+        scrollBar_.setIndicatorSize(HEIGHT, elementContainer_.height, true);
+    }
+
+
+}
 }//package com.company.assembleegameclient.mapeditor
 

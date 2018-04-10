@@ -16,6 +16,8 @@ package kabam.rotmg.application.api
         function isGameLoopMonitored():Boolean;
         function useProductionDialogs():Boolean;
         function areErrorsReported():Boolean;
+        function isServerLocal():Boolean;
+        function getServerDomain():String;
 
     }
 }//package kabam.rotmg.application.api

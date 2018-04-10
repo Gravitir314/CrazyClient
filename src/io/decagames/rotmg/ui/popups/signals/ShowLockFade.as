@@ -1,12 +1,12 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.ui.popups.signals.ShowLockFade
 
 package io.decagames.rotmg.ui.popups.signals{
-import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-public class ShowLockFade extends Signal {
+    public class ShowLockFade extends Signal {
 
 
     }

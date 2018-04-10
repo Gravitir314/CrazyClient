@@ -913,48 +913,36 @@ public class GameObject extends BasicObject
             this.myLastTickId_ = _arg_4;
         }
 
-        public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile):void
-        {
-            var _local_6:int;
-            var _local_7:uint;
-            var _local_8:ConditionEffect;
-            var _local_9:CharacterStatusText;
-            var _local_10:PetsModel;
-            var _local_11:PetVO;
-            var _local_12:String;
-            var _local_13:Vector.<uint>;
-            var _local_14:Boolean;
-            var _local_15:Boolean;
-            if (_arg_4)
-            {
+        public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile, _arg_6:Boolean=false):void{
+            var _local_8:int;
+            var _local_9:uint;
+            var _local_10:ConditionEffect;
+            var _local_11:CharacterStatusText;
+            var _local_12:PetsModel;
+            var _local_13:PetVO;
+            var _local_14:String;
+            var _local_15:Vector.<uint>;
+            var _local_16:Boolean;
+            var _local_7:Boolean;
+            if (_arg_4){
                 this.dead_ = true;
-            }
-            else
-            {
-                if (_arg_3 != null)
-                {
-                    _local_6 = 0;
-                    for each (_local_7 in _arg_3)
-                    {
-                        _local_8 = null;
-                        if ((((!(_arg_5 == null)) && (_arg_5.projProps_.isPetEffect_)) && (_arg_5.projProps_.isPetEffect_[_local_7])))
-                        {
-                            _local_10 = StaticInjectorContext.getInjector().getInstance(PetsModel);
-                            _local_11 = _local_10.getActivePet();
-                            if (_local_11 != null)
-                            {
-                                _local_8 = ConditionEffect.effects_[_local_7];
-                                this.showConditionEffectPet(_local_6, _local_8.name_);
-                                _local_6 = (_local_6 + 500);
-                            }
-                        }
-                        else
-                        {
-                            switch (_local_7)
-                            {
+            } else {
+                if (_arg_3 != null){
+                    _local_8 = 0;
+                    for each (_local_9 in _arg_3) {
+                        _local_10 = null;
+                        if ((((!(_arg_5 == null)) && (_arg_5.projProps_.isPetEffect_)) && (_arg_5.projProps_.isPetEffect_[_local_9]))){
+                            _local_12 = StaticInjectorContext.getInjector().getInstance(PetsModel);
+                            _local_13 = _local_12.getActivePet();
+                            if (_local_13 != null){
+                                _local_10 = ConditionEffect.effects_[_local_9];
+                                this.showConditionEffectPet(_local_8, _local_10.name_);
+                                _local_8 = (_local_8 + 500);
+                            };
+                        } else {
+                            switch (_local_9){
                                 case ConditionEffect.NOTHING:
                                     break;
-                                case ConditionEffect.QUIET:
                                 case ConditionEffect.WEAK:
                                 case ConditionEffect.SICK:
                                 case ConditionEffect.BLIND:
@@ -965,174 +953,131 @@ public class GameObject extends BasicObject
                                 case ConditionEffect.INVISIBLE:
                                 case ConditionEffect.SPEEDY:
                                 case ConditionEffect.BLEEDING:
-                                case ConditionEffect.STASIS:
                                 case ConditionEffect.STASIS_IMMUNE:
                                 case ConditionEffect.NINJA_SPEEDY:
                                 case ConditionEffect.UNSTABLE:
                                 case ConditionEffect.DARKNESS:
                                 case ConditionEffect.PETRIFIED_IMMUNE:
                                 case ConditionEffect.SILENCED:
-                                    _local_8 = ConditionEffect.effects_[_local_7];
+                                    _local_10 = ConditionEffect.effects_[_local_9];
+                                    break;
+                                case ConditionEffect.QUIET:
+                                    if (map_.player_ == this){
+                                        map_.player_.mp_ = 0;
+                                    };
+                                    _local_10 = ConditionEffect.effects_[_local_9];
                                     break;
                                 case ConditionEffect.STASIS:
-                                    if (this.isStasisImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isStasisImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.SLOWED:
-                                    if (this.isSlowedImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isSlowedImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.ARMORBROKEN:
-                                    if (this.isArmorBrokenImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isArmorBrokenImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.STUNNED:
-                                    if (this.isStunImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isStunImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.DAZED:
-                                    if (this.isDazedImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isDazedImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.PARALYZED:
-                                    if (this.isParalyzeImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isParalyzeImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.PETRIFIED:
-                                    if (this.isPetrifiedImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isPetrifiedImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.CURSE:
-                                    if (this.isCursedImmune())
-                                    {
-                                        if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))) break;
-                                        _local_9 = new CharacterStatusText(this, 0xFF0000, 3000);
-                                        _local_9.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-                                        map_.mapOverlay_.addStatusText(_local_9);
-                                    }
-                                    else
-                                    {
-                                        _local_8 = ConditionEffect.effects_[_local_7];
-                                    }
+                                    if (this.isCursedImmune()){
+                                        _local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+                                        _local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+                                        map_.mapOverlay_.addStatusText(_local_11);
+                                    } else {
+                                        _local_10 = ConditionEffect.effects_[_local_9];
+                                    };
                                     break;
                                 case ConditionEffect.GROUND_DAMAGE:
-                                    _local_15 = true;
+                                    _local_7 = true;
                                     break;
-                            }
-                            if (_local_8 != null)
-                            {
-                                if (_local_7 < ConditionEffect.NEW_CON_THREASHOLD)
-                                {
-                                    if ((this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_8.bit_) == this.condition_[ConditionEffect.CE_FIRST_BATCH]) continue;
-                                    this.condition_[ConditionEffect.CE_FIRST_BATCH] = (this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_8.bit_);
-                                }
-                                else
-                                {
-                                    if ((this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_8.bit_) == this.condition_[ConditionEffect.CE_SECOND_BATCH]) continue;
-                                    this.condition_[ConditionEffect.CE_SECOND_BATCH] = (this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_8.bit_);
-                                }
-                                _local_12 = _local_8.localizationKey_;
-                                this.showConditionEffect(_local_6, _local_12);
-                                _local_6 = (_local_6 + 500);
-                            }
-                        }
-                    }
-                }
-            }
-            if (((!((this.props_.isEnemy_) && (Parameters.data_.disableEnemyParticles))) && (!((!(this.props_.isEnemy_)) && (Parameters.data_.disablePlayersHitParticles)))))
-            {
-                _local_13 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
-                if (this.dead_)
-                {
-                    map_.addObj(new ExplosionEffect(_local_13, this.size_, 30), x_, y_);
-                }
-                else
-                {
-                    if (_arg_5 != null)
-                    {
-                        map_.addObj(new HitEffect(_local_13, this.size_, 10, _arg_5.angle_, _arg_5.projProps_.speed_), x_, y_);
-                    }
-                    else
-                    {
-                        map_.addObj(new ExplosionEffect(_local_13, this.size_, 10), x_, y_);
-                    }
-                }
-            }
-            if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_)))))
-            {
+                            };
+                            if (_local_10 != null){
+                                if (_local_9 < ConditionEffect.NEW_CON_THREASHOLD){
+                                    if ((this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_10.bit_) == this.condition_[ConditionEffect.CE_FIRST_BATCH]) continue;
+                                    this.condition_[ConditionEffect.CE_FIRST_BATCH] = (this.condition_[ConditionEffect.CE_FIRST_BATCH] | _local_10.bit_);
+                                } else {
+                                    if ((this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_10.bit_) == this.condition_[ConditionEffect.CE_SECOND_BATCH]) continue;
+                                    this.condition_[ConditionEffect.CE_SECOND_BATCH] = (this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_10.bit_);
+                                };
+                                _local_14 = _local_10.localizationKey_;
+                                this.showConditionEffect(_local_8, _local_14);
+                                _local_8 = (_local_8 + 500);
+                            };
+                        };
+                    };
+                };
+            };
+            if (((!((this.props_.isEnemy_) && (Parameters.data_.disableEnemyParticles))) && (!((!(this.props_.isEnemy_)) && (Parameters.data_.disablePlayersHitParticles))))){
+                _local_15 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
+                if (this.dead_){
+                    map_.addObj(new ExplosionEffect(_local_15, this.size_, 30), x_, y_);
+                } else {
+                    if (_arg_5 != null){
+                        map_.addObj(new HitEffect(_local_15, this.size_, 10, _arg_5.angle_, _arg_5.projProps_.speed_), x_, y_);
+                    } else {
+                        map_.addObj(new ExplosionEffect(_local_15, this.size_, 10), x_, y_);
+                    };
+                };
+            };
+            if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))){
                 return;
-            }
-            if (((_arg_2 > 0) && (!(this.dead_))))
-            {
-                if (((Parameters.data_.autoDecrementHP) && (!(this == this.map_.player_)))){
-                    this.hp_ = (this.hp_ - _arg_2);
-                }
-                _local_14 = (((this.isArmorBroken()) || ((!(_arg_5 == null)) && (_arg_5.projProps_.armorPiercing_))) || (_local_15));
-                this.showDamageText(_arg_2, _local_14);
-            }
+            };
+            if (_arg_2 > 0){
+                _local_16 = ((((this.isArmorBroken()) || ((!(_arg_5 == null)) && (_arg_5.projProps_.armorPiercing_))) || (_local_7)) || (_arg_6));
+                this.showDamageText(_arg_2, _local_16);
+            };
         }
 
         public function showConditionEffect(_arg_1:int, _arg_2:String):void

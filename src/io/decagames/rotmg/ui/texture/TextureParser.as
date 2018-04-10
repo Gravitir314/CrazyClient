@@ -5,19 +5,17 @@
 
 package io.decagames.rotmg.ui.texture
 {
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.geom.Rectangle;
-import flash.utils.ByteArray;
-import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
+    import kabam.lib.json.JsonParser;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import io.decagames.rotmg.ui.assets.UIAssets;
+    import flash.display.Bitmap;
+    import flash.geom.Rectangle;
+    import flash.utils.ByteArray;
+    import flash.display.BitmapData;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
-import io.decagames.rotmg.ui.assets.UIAssets;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-
-import kabam.lib.json.JsonParser;
-import kabam.rotmg.core.StaticInjectorContext;
-
-public class TextureParser
+    public class TextureParser 
     {
 
         private static var _instance:TextureParser;
@@ -37,7 +35,7 @@ public class TextureParser
             if (_instance == null)
             {
                 _instance = new (TextureParser)();
-            }
+            };
             return (_instance);
         }
 
@@ -56,11 +54,11 @@ public class TextureParser
             if (!this.textures[_arg_1])
             {
                 throw (new Error(("Can't find set name " + _arg_1)));
-            }
+            };
             if (!this.textures[_arg_1].configuration.frames[(_arg_2 + ".png")])
             {
                 throw (new Error(("Can't find config for " + _arg_2)));
-            }
+            };
             return (this.textures[_arg_1].configuration.frames[(_arg_2 + ".png")]);
         }
 
@@ -90,13 +88,13 @@ public class TextureParser
             {
                 _local_6 = new Rectangle(_local_5.rectangle.x, _local_5.rectangle.y, _local_5.rectangle.w, _local_5.rectangle.h);
                 _local_7 = _local_5.type;
-            }
+            };
             var _local_8:SliceScalingBitmap = new SliceScalingBitmap(_local_4.bitmapData, _local_7, _local_6);
             _local_8.sourceBitmapName = _arg_2;
             if (_arg_3 != 0)
             {
                 _local_8.width = _arg_3;
-            }
+            };
             return (_local_8);
         }
 

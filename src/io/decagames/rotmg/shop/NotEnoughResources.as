@@ -5,14 +5,15 @@
 
 package io.decagames.rotmg.shop
 {
-import com.company.assembleegameclient.util.Currency;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import com.company.assembleegameclient.util.Currency;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import __AS3__.vec.Vector;
+    import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
+    import io.decagames.rotmg.ui.popups.modal.buttons.BuyGoldButton;
+    import __AS3__.vec.*;
 
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.popups.modal.TextModal;
-import io.decagames.rotmg.ui.popups.modal.buttons.BuyGoldButton;
-import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
-
-public class NotEnoughResources extends TextModal
+    public class NotEnoughResources extends TextModal 
     {
 
         public function NotEnoughResources(_arg_1:int, _arg_2:int)
@@ -24,7 +25,7 @@ public class NotEnoughResources extends TextModal
             if ((_arg_2 == Currency.GOLD))
             {
                 _local_5.push(new BuyGoldButton());
-            }
+            };
             super(_arg_1, ("Not enough " + _local_3), _local_4, _local_5);
         }
 

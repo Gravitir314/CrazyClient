@@ -39,6 +39,10 @@ public class TestingSetup implements ApplicationSetup
             return (true);
         }
 
+        public function isServerLocal():Boolean{
+            return (false);
+        }
+
         public function isGameLoopMonitored():Boolean
         {
             return (true);
@@ -62,6 +66,10 @@ public class TestingSetup implements ApplicationSetup
         public function isDebug():Boolean
         {
             return (false);
+        }
+
+        public function getServerDomain():String{
+            return (this.SERVER);
         }
 
 

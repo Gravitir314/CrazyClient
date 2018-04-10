@@ -21,7 +21,7 @@ import org.osflash.signals.Signal;
 public class StatusBar extends Sprite
     {
 
-        public static var barTextSignal:Signal = new Signal(Boolean);
+        public static var barTextSignal:Signal = new Signal(int);
 
         public var w_:int;
         public var h_:int;
@@ -47,12 +47,14 @@ public class StatusBar extends Sprite
         public var mouseOver_:Boolean = false;
         private var isPulsing:Boolean = false;
         private var forceNumText_:Boolean = false;
+        private var isProgressBar_:Boolean = false;
         private var repetitions:int;
         private var direction:int = -1;
         private var speed:Number = 0.1;
 
         public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String=null, _arg_6:Boolean=false, _arg_7:Boolean=false)
         {
+            this.isProgressBar_ = _arg_7;
             addChild(this.colorSprite);
             this.w_ = _arg_1;
             this.h_ = _arg_2;
@@ -106,7 +108,7 @@ public class StatusBar extends Sprite
             this.multiplierText.setStringBuilder(new StaticStringBuilder("x2"));
             this.multiplierText.filters = [new DropShadowFilter(0, 0, 0)];
             this.multiplierIcon.addChild(this.multiplierText);
-            if (!Parameters.data_.toggleBarText)
+            if (!this.bTextEnabled(Parameters.data_.toggleBarText))
             {
                 addEventListener(MouseEvent.ROLL_OVER, this.onMouseOver);
                 addEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
@@ -164,10 +166,10 @@ public class StatusBar extends Sprite
             this.valueText_.setColor(this.textColor_);
         }
 
-        public function setBarText(_arg_1:Boolean):void
+        public function setBarText(_arg_1:int):void
         {
             this.mouseOver_ = false;
-            if (_arg_1)
+            if (this.bTextEnabled(_arg_1))
             {
                 removeEventListener(MouseEvent.ROLL_OVER, this.onMouseOver);
                 removeEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
@@ -178,6 +180,10 @@ public class StatusBar extends Sprite
                 addEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
             }
             this.internalDraw();
+        }
+
+        private function bTextEnabled(_arg_1:int):Boolean{
+            return ((_arg_1) && (((_arg_1 == 1) || ((_arg_1 == 2) && (this.isProgressBar_))) || ((_arg_1 == 3) && (!(this.isProgressBar_)))));
         }
 
         private function internalDraw():void
@@ -226,7 +232,7 @@ public class StatusBar extends Sprite
             {
                 removeChild(this.boostText_);
             }
-            if ((((Parameters.data_.toggleBarText) || ((this.mouseOver_) && (this.h_ > 4))) || (this.forceNumText_)))
+            if ((((this.bTextEnabled(Parameters.data_.toggleBarText)) || ((this.mouseOver_) && (this.h_ > 4))) || (this.forceNumText_)))
             {
                 this.drawWithMouseOver();
             }

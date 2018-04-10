@@ -31,6 +31,10 @@ public class FixedIPSetup implements ApplicationSetup
             return ((_arg_1) ? this.UNENCRYPTED : this.ENCRYPTED);
         }
 
+        public function isServerLocal():Boolean{
+            return (false);
+        }
+
         public function getBuildLabel():String
         {
             var _local_1:String = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
@@ -70,6 +74,10 @@ public class FixedIPSetup implements ApplicationSetup
         public function isDebug():Boolean
         {
             return (false);
+        }
+
+        public function getServerDomain():String{
+            return (this.SERVER);
         }
 
 

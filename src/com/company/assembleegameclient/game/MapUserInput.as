@@ -24,6 +24,9 @@ import flash.geom.Vector3D;
 import flash.utils.getTimer;
 
 import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.friends.FriendsPopupView;
 
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.chat.control.ParseChatMessageSignal;
@@ -634,6 +637,9 @@ public class MapUserInput
             var _local_19:ReconnectEvent;
             var _local_20:CloseAllPopupsSignal;
             var _local_21:Player = this.gs_.map.player_;
+            var _local_22:ShowPopupSignal;
+            var _local_23:FriendModel;
+            var _local_24:OpenDialogSignal;
             switch (_arg_1.keyCode)
             {
                 case KeyCodes.F1:
@@ -804,7 +810,7 @@ public class MapUserInput
                     _local_21.isShooting = (this.autofire_ = (!(this.autofire_)));
                     break;
                 case Parameters.data_.toggleHPBar:
-                    Parameters.data_.HPBar = (!(Parameters.data_.HPBar));
+                    Parameters.data_.HPBar = ((Parameters.data_.HPBar != 0) ? 0 : 1);
                     break;
                 case Parameters.data_.toggleProjectiles:
                     Parameters.data_.disableAllyParticles = (!(Parameters.data_.disableAllyParticles));
@@ -868,7 +874,14 @@ public class MapUserInput
                     Parameters.data_.friendListDisplayFlag = (!(Parameters.data_.friendListDisplayFlag));
                     if (Parameters.data_.friendListDisplayFlag)
                     {
-                        this.openDialogSignal.dispatch(new FriendListView());
+                        if (Parameters.USE_NEW_FRIENDS_UI){
+                            _local_22 = StaticInjectorContext.getInjector().getInstance(ShowPopupSignal);
+                            _local_23 = StaticInjectorContext.getInjector().getInstance(FriendModel);
+                            _local_22.dispatch(new FriendsPopupView(_local_23.hasInvitations));
+                        } else {
+                            _local_24 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
+                            _local_24.dispatch(new FriendListView());
+                        }
                     }
                     else
                     {

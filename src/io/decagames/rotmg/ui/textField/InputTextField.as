@@ -1,17 +1,16 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.ui.textField.InputTextField
 
 package io.decagames.rotmg.ui.textField{
-import flash.events.Event;
-import flash.events.FocusEvent;
-import flash.text.TextFieldAutoSize;
-import flash.text.TextFieldType;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import flash.text.TextFieldType;
+    import flash.text.TextFieldAutoSize;
+    import flash.events.FocusEvent;
+    import flash.events.Event;
 
-import io.decagames.rotmg.ui.labels.UILabel;
-
-public class InputTextField extends UILabel {
+    public class InputTextField extends UILabel {
 
         private var _wasModified:Boolean;
         private var placeholder:String;
@@ -42,7 +41,7 @@ public class InputTextField extends UILabel {
             if (!this._wasModified){
                 this._wasModified = true;
                 this.text = "";
-            }
+            };
         }
 
         public function get wasModified():Boolean{

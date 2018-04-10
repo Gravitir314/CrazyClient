@@ -5,20 +5,17 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-import com.company.assembleegameclient.objects.ObjectLibrary;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import flash.display.Bitmap;
+    import flash.text.TextFieldAutoSize;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import flash.display.BitmapData;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.Sprite;
-import flash.text.TextFieldAutoSize;
-
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.gird.UIGridElement;
-import io.decagames.rotmg.ui.labels.UILabel;
-
-import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-
-public class ItemBox extends UIGridElement
+    public class ItemBox extends UIGridElement 
     {
 
         private var _itemId:String;
@@ -59,7 +56,7 @@ public class ItemBox extends UIGridElement
                 this.graphics.beginFill(0x2D2D2D);
                 this.graphics.drawRect(0, 0, _arg_3, (this.itemSize + (2 * this.itemMargin)));
                 this.graphics.endFill();
-            }
+            };
         }
 
         public function clearBackground():void
@@ -93,7 +90,7 @@ public class ItemBox extends UIGridElement
                 this.label.text = (_arg_2 + "x");
                 this.label.x = 10;
                 this._itemBackground.x = (this._itemBackground.x + (this.label.x + 10));
-            }
+            };
             addChild(this.label);
         }
 
@@ -113,7 +110,7 @@ public class ItemBox extends UIGridElement
             if (!this.isBackgroundCleared)
             {
                 this.drawBackground(this.bitmapName, this.isLastElement, _arg_1);
-            }
+            };
             this.targetWidth = _arg_1;
             this.resizeLabel();
         }
@@ -123,7 +120,7 @@ public class ItemBox extends UIGridElement
             if (this.imageBitmap)
             {
                 this.imageBitmap.bitmapData.dispose();
-            }
+            };
             super.dispose();
         }
 

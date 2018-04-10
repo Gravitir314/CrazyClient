@@ -5,11 +5,10 @@
 
 package io.decagames.rotmg.ui.popups.modal
 {
-import flash.events.Event;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import flash.events.Event;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class ModalPopupMediator extends Mediator 
+    public class ModalPopupMediator extends Mediator 
     {
 
         [Inject]
@@ -24,7 +23,7 @@ public class ModalPopupMediator extends Mediator
                 this.lastContentHeight = this.view.contentContainer.height;
                 this.view.resize();
                 this.view.addEventListener(Event.ENTER_FRAME, this.checkForUpdates);
-            }
+            };
         }
 
         override public function destroy():void
@@ -39,7 +38,7 @@ public class ModalPopupMediator extends Mediator
             {
                 this.lastContentHeight = this.view.contentContainer.height;
                 this.view.resize();
-            }
+            };
         }
 
 

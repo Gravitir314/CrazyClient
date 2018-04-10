@@ -1,19 +1,16 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.ui.defaults.DefaultLabelFormat
 
 package io.decagames.rotmg.ui.defaults{
-import flash.filters.BitmapFilterQuality;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFormat;
-import flash.text.TextFormatAlign;
-
-import flashx.textLayout.formats.TextAlign;
-
-import io.decagames.rotmg.ui.labels.UILabel;
-
 import kabam.rotmg.text.model.FontModel;
+import flash.text.TextFormatAlign;
+import io.decagames.rotmg.ui.labels.UILabel;
+import flash.filters.DropShadowFilter;
+import flashx.textLayout.formats.TextAlign;
+import flash.filters.BitmapFilterQuality;
 
 public class DefaultLabelFormat {
 

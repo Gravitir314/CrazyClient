@@ -17,9 +17,9 @@ import flash.events.MouseEvent;
 
 import kabam.rotmg.chat.control.ShowChatInputSignal;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.friends.controller.FriendActionSignal;
-import kabam.rotmg.friends.model.FriendConstant;
-import kabam.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.signals.FriendActionSignal;
+import io.decagames.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.config.FriendsActions;
 import kabam.rotmg.text.model.TextKey;
 
 public class PlayerMenu extends Menu
@@ -116,7 +116,7 @@ public class PlayerMenu extends Menu
         private function onAddFriend(_arg_1:Event):void
         {
             var _local_2:FriendActionSignal = StaticInjectorContext.getInjector().getInstance(FriendActionSignal);
-            _local_2.dispatch(new FriendRequestVO(FriendConstant.INVITE, this.playerName_));
+            _local_2.dispatch(new FriendRequestVO(FriendsActions.INVITE, this.playerName_));
             remove();
         }
 

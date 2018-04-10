@@ -5,17 +5,15 @@
 
 package io.decagames.rotmg.shop.packages.startupPackage
 {
-import io.decagames.rotmg.shop.packages.contentPopup.PackageBoxContentPopup;
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import kabam.rotmg.packages.services.PackageModel;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.shop.packages.contentPopup.PackageBoxContentPopup;
 
-import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
-import kabam.rotmg.packages.services.PackageModel;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class StartupPackageMediator extends Mediator 
+    public class StartupPackageMediator extends Mediator 
     {
 
         [Inject]

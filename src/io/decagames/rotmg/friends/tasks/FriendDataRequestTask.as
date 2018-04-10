@@ -1,14 +1,14 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.tasks.FriendDataRequestTask
 
 package io.decagames.rotmg.friends.tasks{
-import kabam.lib.tasks.BaseTask;
-import kabam.rotmg.account.core.Account;
-import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.account.core.Account;
 
-public class FriendDataRequestTask extends BaseTask {
+    public class FriendDataRequestTask extends BaseTask {
 
         [Inject]
         public var client:AppEngineClient;
@@ -30,7 +30,7 @@ public class FriendDataRequestTask extends BaseTask {
                 completeTask(true);
             } else {
                 completeTask(false, _arg_2);
-            }
+            };
         }
 
 

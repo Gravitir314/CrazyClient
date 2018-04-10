@@ -1,15 +1,14 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.ui.popups.modal.ConfirmationModalMediator
 
 package io.decagames.rotmg.ui.popups.modal{
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class ConfirmationModalMediator extends Mediator {
+    public class ConfirmationModalMediator extends Mediator {
 
         [Inject]
         public var view:ConfirmationModal;

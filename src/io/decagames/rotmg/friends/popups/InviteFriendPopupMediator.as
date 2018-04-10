@@ -1,28 +1,26 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.popups.InviteFriendPopupMediator
 
 package io.decagames.rotmg.friends.popups{
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.friends.model.FriendRequestVO;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.popups.header.PopupHeader;
-import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
-import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
-import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-import io.decagames.rotmg.ui.texture.TextureParser;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
+    import io.decagames.rotmg.friends.signals.FriendActionSignal;
+    import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.friends.model.FriendModel;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.popups.header.PopupHeader;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.friends.model.FriendRequestVO;
+    import io.decagames.rotmg.friends.config.FriendsActions;
+    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class InviteFriendPopupMediator extends Mediator {
+    public class InviteFriendPopupMediator extends Mediator {
 
         [Inject]
         public var view:InviteFriendPopup;
@@ -69,7 +67,7 @@ public class InviteFriendPopupMediator extends Mediator {
             } else {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
                 this.removeFade.dispatch();
-            }
+            };
         }
 
 

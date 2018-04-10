@@ -5,15 +5,16 @@
 
 package io.decagames.rotmg.dailyQuests.view.list
 {
-import flash.display.Bitmap;
-import flash.display.Sprite;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import flash.filters.DropShadowFilter;
+    import flash.filters.BitmapFilterQuality;
 
-import io.decagames.rotmg.dailyQuests.assets.DailyQuestAssets;
-
-import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-
-public class DailyQuestListElement extends Sprite 
+    public class DailyQuestListElement extends Sprite 
     {
 
         private var _id:String;
@@ -22,98 +23,81 @@ public class DailyQuestListElement extends Sprite
         private var selectedBorder:Sprite;
         private var _isSelected:Boolean;
         private var ready:Boolean;
-        private var background:Sprite = new Sprite();
-        private var questNameTextfield:TextFieldDisplayConcrete;
+        private var background:SliceScalingBitmap;
+        private var icon:Bitmap;
+        private var questNameTextfield:UILabel;
+        private var category:int;
 
-        public function DailyQuestListElement(_arg_1:String, _arg_2:String, _arg_3:Boolean, _arg_4:Boolean)
+        public function DailyQuestListElement(_arg_1:String, _arg_2:String, _arg_3:Boolean, _arg_4:Boolean, _arg_5:int)
         {
             this._id = _arg_1;
             this._questName = _arg_2;
             this._completed = _arg_3;
             this.ready = _arg_4;
-            this.selectedBorder = new Sprite();
-            this.draw();
+            this.category = _arg_5;
+            this.setElements();
         }
 
         public function set isSelected(_arg_1:Boolean):void
         {
             this._isSelected = _arg_1;
-            this.drawBackground();
-            this.setElements();
+            this.draw();
         }
 
         private function setElements():void
         {
-            if (((this.questNameTextfield) && (this.questNameTextfield.parent)))
-            {
-                removeChild(this.questNameTextfield);
-            }
-            this.questNameTextfield = new TextFieldDisplayConcrete().setSize(14).setColor((((this._completed) || (this._isSelected)) ? uint(0xFFFFFF) : uint(0xCFCFCF))).setBold(true);
-            this.questNameTextfield.alpha = (((this._completed) || (this._isSelected)) ? Number(1) : Number(0.5));
-            this.questNameTextfield.setStringBuilder(new StaticStringBuilder(this._questName));
+            this.selectedBorder = new Sprite();
+            this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_grey", 190);
+            this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_available_icon");
+            this.background.height = 30;
+            this.icon.x = 5;
+            this.icon.y = 5;
+            this.questNameTextfield = new UILabel();
+            DefaultLabelFormat.questNameListLabel(this.questNameTextfield, ((this.category == 3) ? 2201331 : (((this._completed) || (this._isSelected)) ? 0xFFFFFF : 0xCFCFCF)));
+            this.questNameTextfield.filters = [new DropShadowFilter(1, 90, 0, 1, 2, 2), new DropShadowFilter(0, 90, 0, 0.4, 4, 4, 1, BitmapFilterQuality.HIGH)];
+            this.questNameTextfield.text = this._questName;
             this.questNameTextfield.x = 24;
-            this.questNameTextfield.y = 8;
-            addChild(this.questNameTextfield);
-        }
-
-        private function draw():void
-        {
-            this.drawBackground();
-            this.setElements();
-        }
-
-        private function drawBackground():void
-        {
-            var _local_1:Bitmap;
-            if (this.background.parent)
-            {
-                removeChild(this.background);
-            }
-            this.background = new Sprite();
-            if (this._completed)
-            {
-                _local_1 = new DailyQuestAssets.DailyQuestsListCompleteIcon();
-            }
-            else
-            {
-                if (this.ready)
-                {
-                    _local_1 = new DailyQuestAssets.DailyQuestsListReadyIcon();
-                }
-                else
-                {
-                    _local_1 = new DailyQuestAssets.DailyQuestsListAvailableIcon();
-                }
-            }
-            _local_1.x = 5;
-            _local_1.y = 5;
-            if (this._isSelected)
-            {
-                this.background.addChild(new DailyQuestAssets.DailyQuestsListElementOrange());
-            }
-            else
-            {
-                if (this._completed)
-                {
-                    this.background.addChild(new DailyQuestAssets.DailyQuestsListElementGreen());
-                }
-                else
-                {
-                    this.background.addChild(new DailyQuestAssets.DailyQuestsListElementGrey());
-                }
-            }
+            this.questNameTextfield.y = 7;
             addChild(this.background);
-            addChild(_local_1);
+            addChild(this.icon);
+            addChild(this.questNameTextfield);
+            this.draw();
+        }
+
+        private function draw():void{
+            removeChild(this.icon);
+            removeChild(this.background);
+            if (this._completed){
+                this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_complete_icon");
+            } else {
+                if (this.ready){
+                    this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_ready_icon");
+                } else {
+                    this.icon = TextureParser.instance.getTexture("UI", "daily_quest_list_element_available_icon");
+                };
+            };
+            this.icon.x = 5;
+            this.icon.y = 5;
+            if (this._isSelected){
+                this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_orange", 190);
+            } else {
+                if (this._completed){
+                    this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_green", 190);
+                } else {
+                    this.background = TextureParser.instance.getSliceScalingBitmap("UI", "daily_quest_list_element_grey", 190);
+                };
+            };
+            DefaultLabelFormat.questNameListLabel(this.questNameTextfield, ((this.category == 3) ? 2201331 : (((this._completed) || (this._isSelected)) ? 0xFFFFFF : 0xCFCFCF)));
+            this.questNameTextfield.alpha = (((this._completed) || (this._isSelected)) ? 1 : 0.5);
+            this.background.height = 30;
+            addChild(this.background);
+            addChild(this.icon);
+            addChild(this.questNameTextfield);
         }
 
         public function get id():String
         {
             return (this._id);
-        }
-
-        public function get questName():String
-        {
-            return (this._questName);
         }
 
 

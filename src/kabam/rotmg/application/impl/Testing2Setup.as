@@ -39,6 +39,10 @@ public class Testing2Setup implements ApplicationSetup
             return (true);
         }
 
+        public function isServerLocal():Boolean{
+            return (false);
+        }
+
         public function isGameLoopMonitored():Boolean
         {
             return (true);
@@ -64,6 +68,9 @@ public class Testing2Setup implements ApplicationSetup
             return (false);
         }
 
+        public function getServerDomain():String{
+            return (this.SERVER);
+        }
 
     }
 }//package kabam.rotmg.application.impl

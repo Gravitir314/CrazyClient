@@ -5,19 +5,17 @@
 
 package io.decagames.rotmg.fame
 {
-import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-import kabam.rotmg.core.signals.HideTooltipsSignal;
-import kabam.rotmg.core.signals.ShowTooltipSignal;
-import kabam.rotmg.tooltips.HoverTooltipDelegate;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class FameStatsLineMediator extends Mediator 
+    public class FameStatsLineMediator extends Mediator 
     {
 
         [Inject]
-        public var view:FameStatsLine;
+        public var view:StatsLine;
         [Inject]
         public var showTooltipSignal:ShowTooltipSignal;
         [Inject]
@@ -36,7 +34,7 @@ public class FameStatsLineMediator extends Mediator
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            }
+            };
         }
 
         override public function destroy():void
@@ -45,7 +43,7 @@ public class FameStatsLineMediator extends Mediator
             {
                 this.hoverTooltipDelegate = null;
                 this.toolTip = null;
-            }
+            };
             this.view.clean();
         }
 

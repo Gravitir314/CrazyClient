@@ -1,35 +1,32 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.FriendsPopupMediator
 
 package io.decagames.rotmg.friends{
-import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.ui.model.HUDModel;
+    import io.decagames.rotmg.friends.model.FriendModel;
+    import io.decagames.rotmg.friends.signals.RefreshFriendsListSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.popups.header.PopupHeader;
+    import flash.events.KeyboardEvent;
+    import io.decagames.rotmg.friends.popups.InviteFriendPopup;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.friends.model.FriendVO;
+    import __AS3__.vec.Vector;
+    import io.decagames.rotmg.friends.config.FriendsConfig;
+    import io.decagames.rotmg.friends.widgets.FriendListItem;
+    import io.decagames.rotmg.friends.data.FriendItemState;
 
-import flash.events.KeyboardEvent;
-
-import io.decagames.rotmg.friends.config.FriendsConfig;
-import io.decagames.rotmg.friends.data.FriendItemState;
-import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.friends.model.FriendVO;
-import io.decagames.rotmg.friends.popups.InviteFriendPopup;
-import io.decagames.rotmg.friends.signals.RefreshFriendsListSignal;
-import io.decagames.rotmg.friends.widgets.FriendListItem;
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.popups.header.PopupHeader;
-import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-import io.decagames.rotmg.ui.texture.TextureParser;
-
-import kabam.rotmg.core.signals.HideTooltipsSignal;
-import kabam.rotmg.core.signals.ShowTooltipSignal;
-import kabam.rotmg.tooltips.HoverTooltipDelegate;
-import kabam.rotmg.ui.model.HUDModel;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class FriendsPopupMediator extends Mediator {
+    public class FriendsPopupMediator extends Mediator {
 
         [Inject]
         public var view:FriendsPopupView;
@@ -121,14 +118,14 @@ public class FriendsPopupMediator extends Mediator {
             if (!this.model.isDataStillLoading){
                 for each (onlineFriend in onlineFriends) {
                     this.view.addFriend(new FriendListItem(onlineFriend, FriendItemState.ONLINE));
-                }
-            }
+                };
+            };
             this.view.addFriendCategory(((this.model.isDataStillLoading) ? "Loading..." : "Offline"));
             if (!this.model.isDataStillLoading){
                 for each (offlineFriend in offlineFriends) {
                     this.view.addFriend(new FriendListItem(offlineFriend, FriendItemState.OFFLINE));
-                }
-            }
+                };
+            };
         }
 
         private function showGuild():void{
@@ -141,8 +138,8 @@ public class FriendsPopupMediator extends Mediator {
             if (!this.model.isDataStillLoading){
                 for each (_local_2 in _local_1) {
                     this.view.addInvites(new FriendListItem(_local_2, FriendItemState.INVITE));
-                }
-            }
+                };
+            };
         }
 
         private function showContent():void{

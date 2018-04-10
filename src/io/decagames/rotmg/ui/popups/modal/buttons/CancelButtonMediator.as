@@ -5,12 +5,11 @@
 
 package io.decagames.rotmg.ui.popups.modal.buttons
 {
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
 
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class CancelButtonMediator extends Mediator 
+    public class CancelButtonMediator extends Mediator 
     {
 
         [Inject]

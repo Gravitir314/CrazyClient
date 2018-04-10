@@ -5,6 +5,7 @@
 
 package io.decagames.rotmg.dailyQuests.model
 {
+    import __AS3__.vec.Vector;
 
     public class DailyQuest 
     {
@@ -19,8 +20,9 @@ package io.decagames.rotmg.dailyQuests.model
         public var itemOfChoice:Boolean;
 
 
-        public function toString():String{
-            return (((((((((((((("Quest: id=" + this.id) + ", name=") + this.name) + ", description=") + this.description) + ", category=") + this.category) + ", rewards=") + this.rewards) + ", requirements=") + this.requirements) + ", is itemOfChoice? ") + ((this.itemOfChoice) ? "true" : "false, is completed? ")) + ((this.completed) ? "true" : "false"));
+        public function toString():String
+        {
+            return (((((((((((((("Quest: id=" + this.id) + ", name=") + this.name) + ", description=") + this.description) + ", category=") + this.category) + ", rewards=") + this.rewards) + ", requirements=") + this.requirements) + ", is itemOfChoice? ") + ((this.itemOfChoice) ? "true" : ("false" + ", is completed? "))) + ((this.completed) ? "true" : "false"));
         }
 
 

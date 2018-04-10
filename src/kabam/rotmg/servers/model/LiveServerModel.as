@@ -67,6 +67,8 @@ public class LiveServerModel implements ServerModel
                 }
             }
             return (_local_4);
+            Parameters.data_.bestServer = _local_3.name;
+            Parameters.save();
         }
 
         public function getServerNameByAddress(_arg_1:String):String

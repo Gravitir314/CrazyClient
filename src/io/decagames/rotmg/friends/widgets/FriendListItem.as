@@ -1,30 +1,27 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.widgets.FriendListItem
 
 package io.decagames.rotmg.friends.widgets{
-import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.ui.icons.IconButton;
-import com.company.assembleegameclient.ui.icons.IconButtonFactory;
-import com.company.util.AssetLibrary;
+    import flash.display.Sprite;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import com.company.assembleegameclient.ui.icons.IconButton;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.friends.model.FriendVO;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.friends.data.FriendItemState;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import kabam.rotmg.text.model.TextKey;
+    import com.company.util.AssetLibrary;
 
-import flash.display.Bitmap;
-import flash.display.Sprite;
-
-import io.decagames.rotmg.friends.data.FriendItemState;
-import io.decagames.rotmg.friends.model.FriendVO;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.labels.UILabel;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.texture.TextureParser;
-
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.text.model.TextKey;
-import kabam.rotmg.ui.model.HUDModel;
-
-public class FriendListItem extends Sprite {
+    public class FriendListItem extends Sprite {
 
         private const ONLINE_COLOR:uint = 3407650;
         private const OFFLINE_COLOR:uint = 0xB3B3B3;
@@ -76,7 +73,7 @@ public class FriendListItem extends Sprite {
             if (this.isLocked){
                 DefaultLabelFormat.defaultSmallPopupTitle(this.listLabel);
                 return;
-            }
+            };
             switch (this._state){
                 case FriendItemState.ONLINE:
                     DefaultLabelFormat.friendsItemLabel(this.listLabel, this.ONLINE_COLOR);
@@ -86,7 +83,7 @@ public class FriendListItem extends Sprite {
                     return;
                 default:
                     DefaultLabelFormat.defaultSmallPopupTitle(this.listLabel);
-            }
+            };
         }
 
         private function createListPortrait():void{
@@ -95,7 +92,7 @@ public class FriendListItem extends Sprite {
             this.listPortrait.y = (-(Math.round((this.listPortrait.height / 2))) + 20);
             if (this.listPortrait){
                 addChild(this.listPortrait);
-            }
+            };
         }
 
         private function setState():void{
@@ -111,7 +108,7 @@ public class FriendListItem extends Sprite {
                     if (_local_2 != _local_1){
                         _local_3 = (("Your friend is playing on server: " + _local_1) + ". Clicking this will take you to this server.");
                         this.teleportButton = this.addButton("lofiInterface2", 3, 230, 12, TextKey.FRIEND_TELEPORT_TITLE, _local_3);
-                    }
+                    };
                     this.messageButton = this.addButton("lofiInterfaceBig", 21, 0xFF, 12, TextKey.PLAYERMENU_PM);
                     this.removeButton = this.addButton("lofiInterfaceBig", 12, 280, 12, TextKey.FRIEND_REMOVE_BUTTON);
                     break;
@@ -127,7 +124,7 @@ public class FriendListItem extends Sprite {
                     this.rejectButton = this.addButton("lofiInterfaceBig", 12, 0xFF, 12, TextKey.GUILD_REJECTION);
                     this.blockButton = this.addButton("lofiInterfaceBig", 8, 280, 12, TextKey.FRIEND_BLOCK_BUTTON, TextKey.FRIEND_BLOCK_BUTTON_DESC);
                     break;
-            }
+            };
             this.listBackground.height = 40;
             this.listBackground.width = 310;
         }

@@ -1,35 +1,36 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.FriendsPopupView
 
 package io.decagames.rotmg.friends{
-import com.company.assembleegameclient.util.TextureRedrawer;
-import com.company.util.AssetLibrary;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.textField.InputTextField;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import flash.display.Sprite;
+    import __AS3__.vec.Vector;
+    import flash.display.DisplayObject;
+    import io.decagames.rotmg.ui.tabs.UITabs;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import flash.geom.Rectangle;
+    import io.decagames.rotmg.friends.widgets.FriendListItem;
+    import io.decagames.rotmg.friends.widgets.GuildInfoItem;
+    import io.decagames.rotmg.ui.tabs.TabButton;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import flash.display.BitmapData;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.ui.tabs.UITab;
+    import io.decagames.rotmg.ui.scroll.UIScrollbar;
+    import __AS3__.vec.*;
+    import io.decagames.rotmg.friends.widgets.*;
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.DisplayObject;
-import flash.display.Sprite;
-import flash.geom.Rectangle;
-
-import io.decagames.rotmg.friends.widgets.FriendListItem;
-import io.decagames.rotmg.friends.widgets.GuildInfoItem;
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.gird.UIGrid;
-import io.decagames.rotmg.ui.gird.UIGridElement;
-import io.decagames.rotmg.ui.labels.UILabel;
-import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-import io.decagames.rotmg.ui.scroll.UIScrollbar;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.tabs.TabButton;
-import io.decagames.rotmg.ui.tabs.UITab;
-import io.decagames.rotmg.ui.tabs.UITabs;
-import io.decagames.rotmg.ui.textField.InputTextField;
-import io.decagames.rotmg.ui.texture.TextureParser;
-
-public class FriendsPopupView extends ModalPopup {
+    public class FriendsPopupView extends ModalPopup {
 
         public var search:InputTextField;
         public var addButton:SliceScalingButton;
@@ -66,7 +67,7 @@ public class FriendsPopupView extends ModalPopup {
                 DefaultLabelFormat.totalFriendsLabel(this.totalFriendsLabel);
                 this.totalFriendsLabel.y = 485;
                 addChild(this.totalFriendsLabel);
-            }
+            };
             this.totalFriendsLabel.text = ((("Total Friends: " + _arg_1) + " / ") + _arg_2);
             this.totalFriendsLabel.x = ((350 / 2) - (this.totalFriendsLabel.width / 2));
         }
@@ -131,7 +132,7 @@ public class FriendsPopupView extends ModalPopup {
             var _local_2:TabButton = this.tabs.getTabButtonByLabel("Invites");
             if (_local_2){
                 this.tabs.getTabButtonByLabel("Invites").showIndicator = _arg_1;
-            }
+            };
         }
 
         public function clear():void{
@@ -143,8 +144,8 @@ public class FriendsPopupView extends ModalPopup {
             for each (_local_1 in this.items) {
                 if (_local_1.parent){
                     _local_1.parent.removeChild(_local_1);
-                }
-            }
+                };
+            };
             this.items.length = 0;
             this.friendsGrid.clearGrid();
             this.guildsGrid.clearGrid();
@@ -169,7 +170,7 @@ public class FriendsPopupView extends ModalPopup {
         }
 
         private function addTabs():void{
-            this.tabs = new UITabs(350);
+            this.tabs = new UITabs(350, true);
             this.tabs.addTab(this.createFriendsTab(), (!(this._hasInvitations)));
             this.tabs.addTab(this.createInvitesTab(), this._hasInvitations);
             this.tabs.y = ((this.searchInset.height + this.searchInset.y) + 6);
@@ -228,7 +229,7 @@ public class FriendsPopupView extends ModalPopup {
         private function createFriendsTab():UITab{
             var _local_2:Sprite;
             var _local_4:Sprite;
-            var _local_1:UITab = new UITab("Friends");
+            var _local_1:UITab = new UITab("Friends", true);
             _local_2 = new Sprite();
             this.friendsContainer = new Sprite();
             this.friendsContainer.x = this.contentInset.x;
@@ -280,7 +281,7 @@ public class FriendsPopupView extends ModalPopup {
         }
 
         private function createInvitesTab():UITab{
-            var _local_1:UITab = new UITab("Invites");
+            var _local_1:UITab = new UITab("Invites", true);
             var _local_2:Sprite = new Sprite();
             this.invitesContainer = new Sprite();
             this.invitesContainer.x = this.contentInset.x;

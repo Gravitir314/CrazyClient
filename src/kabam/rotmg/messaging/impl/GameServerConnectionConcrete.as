@@ -106,7 +106,7 @@ import kabam.rotmg.death.control.HandleDeathSignal;
 import kabam.rotmg.death.control.ZombifySignal;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.friends.model.FriendModel;
 import kabam.rotmg.game.commands.PlayGameCommand;
 import kabam.rotmg.game.focus.control.SetGameFocusSignal;
 import kabam.rotmg.game.model.GameModel;
@@ -338,6 +338,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             key_ = _arg_7;
             mapJSON_ = _arg_8;
             isFromArena_ = _arg_9;
+            this.friendModel.loadData();
             this.friendModel.setCurrentServer(server_);
             this.getPetUpdater();
             instance = this;
@@ -1566,7 +1567,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             if (_local_6 != null)
             {
                 _local_4 = (_arg_1.objectId_ == this.player.objectId_);
-                _local_6.damage(_local_4, _arg_1.damageAmount_, _arg_1.effects_, _arg_1.kill_, _local_3);
+                _local_6.damage(_local_4, _arg_1.damageAmount_, _arg_1.effects_, _arg_1.kill_, _local_3, _arg_1.armorPierce_);
             }
         }
 
@@ -2745,7 +2746,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
         {
             var _local_2:XML = XML(_arg_1);
             GroundLibrary.parseFromXML(_local_2);
-            ObjectLibrary.parseFromXML(_local_2);
             ObjectLibrary.parseFromXML(_local_2);
         }
 

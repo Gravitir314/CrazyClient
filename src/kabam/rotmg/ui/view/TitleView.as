@@ -23,14 +23,13 @@ import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.ui.model.EnvironmentData;
 import kabam.rotmg.ui.view.components.DarkLayer;
-import kabam.rotmg.ui.view.components.MapBackground;
 import kabam.rotmg.ui.view.components.MenuOptionsBar;
 
 import org.osflash.signals.Signal;
 
 public class TitleView extends Sprite
     {
-
+        internal static var TitleScreenBackground:Class = TitleView_TitleScreenBackground;
         public static const MIDDLE_OF_BOTTOM_BAND:Number = 589.45;
         public static var queueEmailConfirmation:Boolean = false;
         public static var queuePasswordPrompt:Boolean = false;
@@ -59,7 +58,7 @@ public class TitleView extends Sprite
             this.menuOptionsBar = this.makeMenuOptionsBar();
             this.optionalButtonsAdded = new Signal();
             super();
-            addChild(new MapBackground());
+            addChild(new TitleScreenBackground());
             addChild(new DarkLayer());
             addChild(new TitleScreenGraphic());
             addChild(this.menuOptionsBar);

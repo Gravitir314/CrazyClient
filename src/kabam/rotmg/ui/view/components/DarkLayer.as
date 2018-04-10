@@ -12,7 +12,7 @@ public class DarkLayer extends Shape
 
         public function DarkLayer()
         {
-            graphics.beginFill(0x2B2B2B, 0.8);
+            graphics.beginFill(0x2B2B2B, 0.7);
             graphics.drawRect(0, 0, 800, 600);
             graphics.endFill();
         }

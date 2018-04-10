@@ -5,17 +5,15 @@
 
 package io.decagames.rotmg.shop
 {
-import flash.display.Bitmap;
-import flash.display.BitmapData;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import kabam.rotmg.assets.services.IconFactory;
+    import flash.display.BitmapData;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.labels.UILabel;
-import io.decagames.rotmg.ui.texture.TextureParser;
-
-import kabam.rotmg.assets.services.IconFactory;
-
-public class ShopBuyButton extends SliceScalingButton
+    public class ShopBuyButton extends SliceScalingButton 
     {
 
         public static const CURRENCY_GOLD:int = 0;
@@ -61,7 +59,7 @@ public class ShopBuyButton extends SliceScalingButton
             else
             {
                 this._priceLabel.x = ((bitmap.width - this._priceLabel.textWidth) / 2);
-            }
+            };
             this.coinBitmap.x = ((bitmap.width - this.coinBitmap.width) - 15);
         }
 
@@ -72,7 +70,7 @@ public class ShopBuyButton extends SliceScalingButton
             {
                 this.priceLabel.text = _arg_1.toString();
                 this.updateLabelPosition();
-            }
+            };
         }
 
         override public function set disabled(_arg_1:Boolean):void
@@ -87,7 +85,7 @@ public class ShopBuyButton extends SliceScalingButton
             {
                 this._priceLabel.text = this._price.toString();
                 addChild(this.coinBitmap);
-            }
+            };
             this.updateLabelPosition();
         }
 

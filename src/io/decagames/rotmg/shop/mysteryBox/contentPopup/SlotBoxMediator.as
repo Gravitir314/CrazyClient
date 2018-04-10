@@ -5,17 +5,15 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.text.model.TextKey;
 
-import kabam.rotmg.core.signals.HideTooltipsSignal;
-import kabam.rotmg.core.signals.ShowTooltipSignal;
-import kabam.rotmg.text.model.TextKey;
-import kabam.rotmg.tooltips.HoverTooltipDelegate;
-import kabam.rotmg.ui.model.HUDModel;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class SlotBoxMediator extends Mediator
+    public class SlotBoxMediator extends Mediator 
     {
 
         [Inject]
@@ -40,7 +38,7 @@ public class SlotBoxMediator extends Mediator
                 this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipSignal);
                 this.hoverTooltipDelegate.setDisplayObject(this.view);
                 this.hoverTooltipDelegate.tooltip = this.toolTip;
-            }
+            };
         }
 
         override public function destroy():void

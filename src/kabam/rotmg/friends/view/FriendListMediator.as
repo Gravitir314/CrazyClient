@@ -13,10 +13,10 @@ import kabam.rotmg.chat.control.ShowChatInputSignal;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.friends.controller.FriendActionSignal;
-import kabam.rotmg.friends.model.FriendConstant;
-import kabam.rotmg.friends.model.FriendModel;
-import kabam.rotmg.friends.model.FriendRequestVO;
+import io.decagames.rotmg.friends.signals.FriendActionSignal;
+import io.decagames.rotmg.friends.config.FriendsActions;
+import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.friends.model.FriendRequestVO;
 import kabam.rotmg.game.model.GameInitData;
 import kabam.rotmg.game.signals.PlayGameSignal;
 import kabam.rotmg.text.model.TextKey;
@@ -82,10 +82,10 @@ public class FriendListMediator extends Mediator
         {
             switch (_arg_1)
             {
-                case FriendConstant.FRIEND_TAB:
+                case FriendsActions.FRIEND_TAB:
                     this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
                     return;
-                case FriendConstant.INVITE_TAB:
+                case FriendsActions.INVITE_TAB:
                     this.view.updateInvitationTab(this.model.getAllInvitations());
                     return;
             }
@@ -98,7 +98,7 @@ public class FriendListMediator extends Mediator
             var _local_5:FriendRequestVO = new FriendRequestVO(_arg_1, _arg_2);
             switch (_arg_1)
             {
-                case FriendConstant.SEARCH:
+                case FriendsActions.SEARCH:
                     if (((!(_arg_2 == null)) && (!(_arg_2 == ""))))
                     {
                         this.view.updateFriendTab(this.model.getFilterFriends(_arg_2), this.model.getCurrentServerName());
@@ -111,7 +111,7 @@ public class FriendListMediator extends Mediator
                         }
                     }
                     return;
-                case FriendConstant.INVITE:
+                case FriendsActions.INVITE:
                     if (this.model.ifReachMax())
                     {
                         this.view.updateInput(TextKey.FRIEND_REACH_CAPACITY);
@@ -119,28 +119,28 @@ public class FriendListMediator extends Mediator
                     }
                     _local_5.callback = this.inviteFriendCallback;
                     break;
-                case FriendConstant.REMOVE:
+                case FriendsActions.REMOVE:
                     _local_5.callback = this.removeFriendCallback;
                     _local_3 = TextKey.FRIEND_REMOVE_TITLE;
                     _local_4 = TextKey.FRIEND_REMOVE_TEXT;
                     this.openDialog.dispatch(new FriendUpdateConfirmDialog(_local_3, _local_4, TextKey.FRAME_CANCEL, TextKey.FRIEND_REMOVE_BUTTON, _local_5, {"name":_local_5.target}));
                     return;
-                case FriendConstant.ACCEPT:
+                case FriendsActions.ACCEPT:
                     _local_5.callback = this.acceptInvitationCallback;
                     break;
-                case FriendConstant.REJECT:
+                case FriendsActions.REJECT:
                     _local_5.callback = this.rejectInvitationCallback;
                     break;
-                case FriendConstant.BLOCK:
+                case FriendsActions.BLOCK:
                     _local_5.callback = this.blockInvitationCallback;
                     _local_3 = TextKey.FRIEND_BLOCK_TITLE;
                     _local_4 = TextKey.FRIEND_BLOCK_TEXT;
                     this.openDialog.dispatch(new FriendUpdateConfirmDialog(_local_3, _local_4, TextKey.FRAME_CANCEL, TextKey.FRIEND_BLOCK_BUTTON, _local_5, {"name":_local_5.target}));
                     return;
-                case FriendConstant.WHISPER:
+                case FriendsActions.WHISPER:
                     this.whisperCallback(_arg_2);
                     return;
-                case FriendConstant.JUMP:
+                case FriendsActions.JUMP:
                     this.jumpCallback(_arg_2);
                     return;
             }

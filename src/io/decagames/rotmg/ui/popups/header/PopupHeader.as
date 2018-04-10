@@ -5,14 +5,15 @@
 
 package io.decagames.rotmg.ui.popups.header
 {
-import flash.display.Sprite;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import __AS3__.vec.Vector;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import __AS3__.vec.*;
 
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.labels.UILabel;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.texture.TextureParser;
-
-public class PopupHeader extends Sprite
+    public class PopupHeader extends Sprite 
     {
 
         public static const LEFT_BUTTON:String = "left_button";
@@ -38,7 +39,7 @@ public class PopupHeader extends Sprite
             {
                 this.backgroundBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "popup_header", _arg_1);
                 addChild(this.backgroundBitmap);
-            }
+            };
             this.buttonsContainers = new Vector.<Sprite>();
             this.buttons = new Vector.<SliceScalingButton>();
         }
@@ -59,17 +60,21 @@ public class PopupHeader extends Sprite
                     this.titleBackgroundBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "modal_header_title", _arg_2);
                     addChild(this.titleBackgroundBitmap);
                     this.titleBackgroundBitmap.x = Math.round(((this.headerWidth - _arg_2) / 2));
-                }
+                };
                 this._titleLabel = new UILabel();
                 if (_arg_3 != null)
                 {
                     (_arg_3(this._titleLabel));
-                }
+                };
                 this._titleLabel.text = _arg_1;
-                this._titleLabel.x = (this.titleBackgroundBitmap.x + ((this.titleBackgroundBitmap.width - this._titleLabel.textWidth) / 2));
-                this._titleLabel.y = (this.titleBackgroundBitmap.y + ((this.titleBackgroundBitmap.height - this._titleLabel.height) / 2));
                 addChild(this._titleLabel);
-            }
+                this._titleLabel.x = (this.titleBackgroundBitmap.x + ((this.titleBackgroundBitmap.width - this._titleLabel.textWidth) / 2));
+                if (this.headerType == TYPE_FULL){
+                    this._titleLabel.y = ((this.titleBackgroundBitmap.height - (this._titleLabel.height / 2)) - 3);
+                } else {
+                    this._titleLabel.y = (this.titleBackgroundBitmap.y + ((this.titleBackgroundBitmap.height - this._titleLabel.height) / 2));
+                };
+            };
         }
 
         public function addButton(_arg_1:SliceScalingButton, _arg_2:String):void
@@ -80,7 +85,7 @@ public class PopupHeader extends Sprite
             {
                 _local_4 = TextureParser.instance.getSliceScalingBitmap("UI", "popup_header_button_decor");
                 _local_3.addChild(_local_4);
-            }
+            };
             _local_3.addChild(_arg_1);
             addChild(_local_3);
             this.buttonsContainers.push(_local_3);
@@ -93,7 +98,7 @@ public class PopupHeader extends Sprite
             else
             {
                 _arg_1.y = 5;
-            }
+            };
             if (_arg_2 == RIGHT_BUTTON)
             {
                 if (this.headerType == TYPE_FULL)
@@ -104,7 +109,7 @@ public class PopupHeader extends Sprite
                 else
                 {
                     _arg_1.x = (((this.titleBackgroundBitmap.x + this.titleBackgroundBitmap.width) - _arg_1.width) - 3);
-                }
+                };
             }
             else
             {
@@ -117,8 +122,8 @@ public class PopupHeader extends Sprite
                 else
                 {
                     _arg_1.x = (this.titleBackgroundBitmap.x + 3);
-                }
-            }
+                };
+            };
         }
 
         public function showCoins(_arg_1:int):CoinsField
@@ -131,7 +136,7 @@ public class PopupHeader extends Sprite
             for each (_local_2 in this.buttonsContainers)
             {
                 addChild(_local_2);
-            }
+            };
             return (this._coinsField);
         }
 
@@ -150,20 +155,20 @@ public class PopupHeader extends Sprite
             if (this.backgroundBitmap)
             {
                 this.backgroundBitmap.dispose();
-            }
+            };
             this.titleBackgroundBitmap.dispose();
             if (this._coinsField)
             {
                 this._coinsField.dispose();
-            }
+            };
             if (this._fameField)
             {
                 this._fameField.dispose();
-            }
+            };
             for each (_local_1 in this.buttons)
             {
                 _local_1.dispose();
-            }
+            };
             this.buttonsContainers = null;
             this.buttons = null;
         }

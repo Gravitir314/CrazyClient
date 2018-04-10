@@ -5,22 +5,27 @@
 
 package io.decagames.rotmg.dailyQuests.view.info
 {
-import com.company.assembleegameclient.objects.Player;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+    import kabam.rotmg.ui.model.HUDModel;
+    import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+    import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
+    import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+    import flash.events.MouseEvent;
+    import kabam.rotmg.messaging.impl.data.SlotObjectData;
+    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
+    import __AS3__.vec.Vector;
+    import kabam.rotmg.game.view.components.BackpackTabContent;
+    import kabam.rotmg.game.view.components.InventoryTabContent;
+    import __AS3__.vec.*;
 
-import flash.events.MouseEvent;
-
-import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
-import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
-import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
-
-import kabam.rotmg.messaging.impl.data.SlotObjectData;
-import kabam.rotmg.ui.model.HUDModel;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class DailyQuestInfoMediator extends Mediator 
+    public class DailyQuestInfoMediator extends Mediator 
     {
 
         [Inject]
@@ -35,6 +40,14 @@ public class DailyQuestInfoMediator extends Mediator
         public var redeemCompleteSignal:QuestRedeemCompleteSignal;
         [Inject]
         public var lockScreen:LockQuestScreenSignal;
+        [Inject]
+        public var selectedItemSlotsSignal:SelectedItemSlotsSignal;
+        [Inject]
+        public var showTooltipSignal:ShowTooltipSignal;
+        [Inject]
+        public var hideTooltipsSignal:HideTooltipsSignal;
+        private var tooltip:TextToolTip;
+        private var hoverTooltipDelegate:HoverTooltipDelegate = new HoverTooltipDelegate();
 
 
         override public function initialize():void
@@ -44,60 +57,95 @@ public class DailyQuestInfoMediator extends Mediator
             if (_local_1)
             {
                 this.showQuestInfo(_local_1.id);
-            }
+            };
+            this.tooltip = new TextToolTip(0x363636, 0x9B9B9B, "", "You must select a reward first!", 190, null);
+            this.hoverTooltipDelegate.setHideToolTipsSignal(this.hideTooltipsSignal);
+            this.hoverTooltipDelegate.setShowToolTipSignal(this.showTooltipSignal);
+            this.hoverTooltipDelegate.tooltip = this.tooltip;
             this.view.completeButton.addEventListener(MouseEvent.CLICK, this.onCompleteButtonClickHandler);
+            this.selectedItemSlotsSignal.add(this.itemSelectedHandler);
         }
+
+        private function itemSelectedHandler(_arg_1:int):void{
+            this.view.completeButton.disabled = ((this.model.currentQuest.completed) ? true : ((this.model.selectedItem == -1) ? true : (!(DailyQuestInfo.hasAllItems(this.model.currentQuest.requirements, this.model.playerItemsFromInventory)))));
+            if (this.model.selectedItem == -1){
+                this.hoverTooltipDelegate.setDisplayObject(this.view.completeButton);
+            } else {
+                this.hoverTooltipDelegate.removeDisplayObject();
+            };
+        }
+
 
         override public function destroy():void
         {
             this.view.completeButton.removeEventListener(MouseEvent.CLICK, this.onCompleteButtonClickHandler);
             this.showInfoSignal.remove(this.showQuestInfo);
+            this.selectedItemSlotsSignal.remove(this.itemSelectedHandler);
         }
 
         private function showQuestInfo(_arg_1:String):void
         {
+            this.model.selectedItem = -1;
             this.view.clear();
             this.model.currentQuest = this.model.getQuestById(_arg_1);
             this.view.show(this.model.currentQuest, this.model.playerItemsFromInventory);
+            if (((!(this.view.completeButton.completed)) && (this.model.currentQuest.itemOfChoice))){
+                this.view.completeButton.disabled = true;
+                this.hoverTooltipDelegate.setDisplayObject(this.view.completeButton);
+            };
         }
 
-        private function makeSlotObject(_arg_1:int, _arg_2:int):SlotObjectData
+        private function tileToSlot(_arg_1:InventoryTile):SlotObjectData
         {
-            var _local_3:SlotObjectData;
-            _local_3 = new SlotObjectData();
-            _local_3.objectId_ = this.hud.gameSprite.map.player_.objectId_;
-            _local_3.objectType_ = _arg_2;
-            _local_3.slotId_ = _arg_1;
-            return (_local_3);
+            var _local_2:SlotObjectData = new SlotObjectData();
+            _local_2.objectId_ = _arg_1.ownerGrid.owner.objectId_;
+            _local_2.objectType_ = _arg_1.getItemId();
+            _local_2.slotId_ = _arg_1.tileId;
+            return (_local_2);
         }
 
-        private function onCompleteButtonClickHandler(_arg_1:MouseEvent):void
-        {
+        private function onCompleteButtonClickHandler(_arg_1:MouseEvent):void {
             var _local_2:Vector.<SlotObjectData>;
-            var _local_3:Vector.<int>;
-            var _local_4:int;
-            var _local_5:int;
-            var _local_6:Player = this.hud.gameSprite.map.player_;
-            if (((this.view.completeButton.enabled) && (!(this.view.completeButton.completed))))
-            {
-                _local_2 = new Vector.<SlotObjectData>();
-                _local_3 = this.model.currentQuest.requirements.concat();
-                _local_4 = 4;
-                while (_local_4 < _local_6.equipment_.length)
+            var _local_3:BackpackTabContent;
+            var _local_4:InventoryTabContent;
+            var _local_5:Vector.<int>;
+            var _local_6:Vector.<InventoryTile>;
+            var _local_7:int;
+            var _local_8:InventoryTile;
+            if (((!(this.view.completeButton.disabled)) && (!(this.view.completeButton.completed)))) {
                 {
-                    if (_local_6.equipment_[_local_4] != -1)
-                    {
-                        _local_5 = _local_6.equipment_[_local_4];
-                        if (_local_3.indexOf(_local_5) > -1)
-                        {
-                            _local_2.push(this.makeSlotObject(_local_4, _local_5));
-                            _local_3.splice(_local_3.indexOf(_local_5), 1);
-                        }
+                    _local_2 = new Vector.<SlotObjectData>();
+                    _local_3 = this.hud.gameSprite.hudView.tabStrip.getTabView(BackpackTabContent);
+                    _local_4 = this.hud.gameSprite.hudView.tabStrip.getTabView(InventoryTabContent);
+                    _local_5 = this.model.currentQuest.requirements.concat();
+                    _local_6 = new Vector.<InventoryTile>();
+                    if (_local_3) {
+                        _local_6 = _local_6.concat(_local_3.backpack.tiles);
                     }
-                    _local_4++;
+                    ;
+                    if (_local_4) {
+                        _local_6 = _local_6.concat(_local_4.storage.tiles);
+                    }
+                    ;
+                    for each (_local_7 in _local_5) {
+                        for each (_local_8 in _local_6) {
+                            if (_local_8.getItemId() == _local_7) {
+                                _local_6.splice(_local_6.indexOf(_local_8), 1);
+                                _local_2.push(this.tileToSlot(_local_8));
+                                break;
+                            }
+                            ;
+                        }
+                        ;
+                    }
+                    ;
+                    this.lockScreen.dispatch();
+                    this.hud.gameSprite.gsc_.questRedeem(this.model.currentQuest.id, _local_2, this.model.selectedItem);
+                    this.model.currentQuest.completed = true;
+                    this.view.completeButton.completed = true;
+                    this.view.completeButton.disabled = true;
                 }
-                this.lockScreen.dispatch();
-                this.hud.gameSprite.gsc_.questRedeem(this.model.currentQuest.id, _local_2);
+                ;
             }
         }
 

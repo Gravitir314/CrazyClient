@@ -43,6 +43,10 @@ public class ProductionSetup implements ApplicationSetup
             return (false);
         }
 
+        public function isServerLocal():Boolean{
+            return (false);
+        }
+
         public function useProductionDialogs():Boolean
         {
             return (true);
@@ -61,6 +65,10 @@ public class ProductionSetup implements ApplicationSetup
         public function isDebug():Boolean
         {
             return (false);
+        }
+
+        public function getServerDomain():String{
+            return (this.SERVER);
         }
 
 

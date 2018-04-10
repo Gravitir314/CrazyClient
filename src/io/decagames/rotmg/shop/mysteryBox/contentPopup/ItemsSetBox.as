@@ -5,9 +5,10 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 {
-import io.decagames.rotmg.ui.gird.UIGridElement;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import __AS3__.vec.Vector;
 
-public class ItemsSetBox extends UIGridElement
+    public class ItemsSetBox extends UIGridElement 
     {
 
         private var items:Vector.<ItemBox>;
@@ -23,7 +24,7 @@ public class ItemsSetBox extends UIGridElement
                 _local_3.y = _local_2;
                 addChild(_local_3);
                 _local_2 = (_local_2 + _local_3.height);
-            }
+            };
             this.drawBackground(260);
         }
 
@@ -52,7 +53,7 @@ public class ItemsSetBox extends UIGridElement
             for each (_local_1 in this.items)
             {
                 _local_1.dispose();
-            }
+            };
             this.items = null;
             super.dispose();
         }

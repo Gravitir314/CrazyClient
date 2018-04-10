@@ -1,14 +1,13 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.model.FriendVO
 
 package io.decagames.rotmg.friends.model{
-import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Player;
+    import flash.display.BitmapData;
 
-import flash.display.BitmapData;
-
-public class FriendVO {
+    public class FriendVO {
 
         public var playerName:String;
         private var _player:Player;

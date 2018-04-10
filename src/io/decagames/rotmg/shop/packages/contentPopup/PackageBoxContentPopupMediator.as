@@ -5,20 +5,19 @@
 
 package io.decagames.rotmg.shop.packages.contentPopup
 {
-import flash.utils.Dictionary;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.popups.header.PopupHeader;
+    import flash.utils.Dictionary;
+    import io.decagames.rotmg.shop.mysteryBox.contentPopup.ItemBox;
+    import io.decagames.rotmg.shop.mysteryBox.contentPopup.SlotBox;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.shop.mysteryBox.contentPopup.*;
 
-import io.decagames.rotmg.shop.mysteryBox.contentPopup.ItemBox;
-import io.decagames.rotmg.shop.mysteryBox.contentPopup.SlotBox;
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-import io.decagames.rotmg.ui.gird.UIGrid;
-import io.decagames.rotmg.ui.popups.header.PopupHeader;
-import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-import io.decagames.rotmg.ui.texture.TextureParser;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class PackageBoxContentPopupMediator extends Mediator 
+    public class PackageBoxContentPopupMediator extends Mediator 
     {
 
         [Inject]
@@ -62,25 +61,25 @@ public class PackageBoxContentPopupMediator extends Mediator
                     else
                     {
                         _local_7[_local_8] = 1;
-                    }
-                }
+                    };
+                };
                 for (_local_9 in _local_7)
                 {
                     _local_10 = new ItemBox(_local_9, _local_7[_local_9], true, "", false);
                     this.contentGrids.addGridElement(_local_10);
-                }
-            }
+                };
+            };
             if (_arg_2 > 0)
             {
                 _local_11 = new SlotBox(SlotBox.CHAR_SLOT, _arg_2, true, "", false);
                 this.contentGrids.addGridElement(_local_11);
-            }
+            };
             if (_arg_3 > 0)
             {
                 _local_12 = new SlotBox(SlotBox.VAULT_SLOT, _arg_3, true, "", false);
                 this.contentGrids.addGridElement(_local_12);
-            }
-            this.contentGrids.y = 20;
+            };
+            this.contentGrids.y = (this.view.infoLabel.textHeight + 8);
             this.contentGrids.x = 10;
             this.view.addChild(this.contentGrids);
         }

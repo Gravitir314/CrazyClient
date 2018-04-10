@@ -44,6 +44,10 @@ public class PrivateSetup implements ApplicationSetup
             return (true);
         }
 
+        public function isServerLocal():Boolean{
+            return (false);
+        }
+
         public function useProductionDialogs():Boolean
         {
             return (false);
@@ -62,6 +66,10 @@ public class PrivateSetup implements ApplicationSetup
         public function isDebug():Boolean
         {
             return (true);
+        }
+
+        public function getServerDomain():String{
+            return (this.SERVER);
         }
 
 

@@ -14,8 +14,8 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.friends.model.FriendConstant;
-import kabam.rotmg.friends.model.FriendVO;
+import io.decagames.rotmg.friends.config.FriendsActions;
+import io.decagames.rotmg.friends.model.FriendVO;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
@@ -129,17 +129,17 @@ public class FriendListItem extends FListItem
 
         private function onRemoveClicked(_arg_1:MouseEvent):void
         {
-            actionSignal.dispatch(FriendConstant.REMOVE, this._senderName);
+            actionSignal.dispatch(FriendsActions.REMOVE, this._senderName);
         }
 
         private function onWhisperClicked(_arg_1:MouseEvent):void
         {
-            actionSignal.dispatch(FriendConstant.WHISPER, this._senderName);
+            actionSignal.dispatch(FriendsActions.WHISPER, this._senderName);
         }
 
         private function onJumpClicked(_arg_1:MouseEvent):void
         {
-            actionSignal.dispatch(FriendConstant.JUMP, this._serverName);
+            actionSignal.dispatch(FriendsActions.JUMP, this._serverName);
         }
 
 

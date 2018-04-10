@@ -5,17 +5,15 @@
 
 package io.decagames.rotmg.shop.genericBox
 {
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.Sprite;
+    import flash.display.Sprite;
+    import flash.display.Bitmap;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import kabam.rotmg.assets.services.IconFactory;
+    import flash.display.BitmapData;
 
-import io.decagames.rotmg.shop.ShopBuyButton;
-import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-import io.decagames.rotmg.ui.labels.UILabel;
-
-import kabam.rotmg.assets.services.IconFactory;
-
-public class SalePriceTag extends Sprite
+    public class SalePriceTag extends Sprite 
     {
 
         private var coinBitmap:Bitmap;

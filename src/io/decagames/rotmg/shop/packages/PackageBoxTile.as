@@ -5,16 +5,14 @@
 
 package io.decagames.rotmg.shop.packages
 {
-import flash.display.Loader;
-import flash.display.Sprite;
+    import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
+    import flash.display.Sprite;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import flash.display.Loader;
+    import kabam.rotmg.packages.model.PackageInfo;
 
-import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-
-import kabam.rotmg.packages.model.PackageInfo;
-
-public class PackageBoxTile extends GenericBoxTile
+    public class PackageBoxTile extends GenericBoxTile 
     {
 
         private var backgroundContainer:Sprite = new Sprite();
@@ -42,7 +40,7 @@ public class PackageBoxTile extends GenericBoxTile
             else
             {
                 _local_1 = PackageInfo(_boxInfo).loader;
-            }
+            };
             if (((_local_1) && (!(_local_1.parent == this.backgroundContainer))))
             {
                 this.backgroundContainer.addChild(_local_1);
@@ -51,7 +49,7 @@ public class PackageBoxTile extends GenericBoxTile
                 addChild(this.imageMask);
                 this.imageMask.cacheAsBitmap = true;
                 this.backgroundContainer.mask = this.imageMask;
-            }
+            };
             if (this.imageMask)
             {
                 this.imageMask.width = (background.width - 6);
@@ -59,7 +57,7 @@ public class PackageBoxTile extends GenericBoxTile
                 this.imageMask.x = (background.x + 3);
                 this.imageMask.y = (background.y + 3);
                 this.imageMask.cacheAsBitmap = true;
-            }
+            };
         }
 
         override public function dispose():void
@@ -75,7 +73,7 @@ public class PackageBoxTile extends GenericBoxTile
             {
                 backgroundTitle.width = _arg_1;
                 backgroundTitle.y = 2;
-            }
+            };
             backgroundButton.width = 158;
             if (_arg_2 == -1)
             {
@@ -84,7 +82,7 @@ public class PackageBoxTile extends GenericBoxTile
             else
             {
                 background.height = _arg_2;
-            }
+            };
             titleLabel.x = Math.round(((_arg_1 - titleLabel.textWidth) / 2));
             titleLabel.y = 6;
             backgroundButton.y = (background.height - 51);
@@ -95,7 +93,7 @@ public class PackageBoxTile extends GenericBoxTile
             {
                 _infoButton.x = ((background.width - _infoButton.width) - 3);
                 _infoButton.y = 2;
-            }
+            };
             _spinner.x = (backgroundButton.x + 34);
             _spinner.y = (background.height - 53);
             updateTimeEndString();

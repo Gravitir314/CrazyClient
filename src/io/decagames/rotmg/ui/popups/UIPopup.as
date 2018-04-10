@@ -5,11 +5,11 @@
 
 package io.decagames.rotmg.ui.popups
 {
-import io.decagames.rotmg.ui.popups.header.PopupHeader;
-import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.popups.header.PopupHeader;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-public class UIPopup extends BasePopup
+    public class UIPopup extends BasePopup 
     {
 
         private var _header:PopupHeader;
@@ -39,11 +39,11 @@ public class UIPopup extends BasePopup
             if (this.footer)
             {
                 this.footer.dispose();
-            }
+            };
             if (this._background)
             {
                 this._background.dispose();
-            }
+            };
         }
 
 

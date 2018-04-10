@@ -432,7 +432,7 @@ public class Player extends Character
 
         public function handleExpUp(_arg_1:int):void
         {
-            if (((level_ == 20) && (!(Parameters.data_.forceEXP))))
+            if (((level_ == 20) && (!(this.bForceExp()))))
             {
                 return;
             }
@@ -443,6 +443,10 @@ public class Player extends Character
             var _local_2:CharacterStatusText = new CharacterStatusText(this, 0xFF00, 1000);
             _local_2.setStringBuilder(new LineBuilder().setParams(TextKey.PLAYER_EXP, {"exp":_arg_1}));
             map_.mapOverlay_.addStatusText(_local_2);
+        }
+
+        private function bForceExp():Boolean{
+            return ((Parameters.data_.forceEXP) && ((Parameters.data_.forceEXP == 1) || ((Parameters.data_.forceEXP == 2) && (map_.player_ == this))));
         }
 
         private function getNearbyMerchant():Merchant
@@ -1172,7 +1176,7 @@ public class Player extends Character
             this.startTime = getTimer();
         }
 
-        override public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile):void
+        override public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile, _arg_6:Boolean = false):void
         {
             this.negateHealth(_arg_2);
             super.damage(_arg_1, _arg_2, _arg_3, false, _arg_5);

@@ -6,6 +6,13 @@
 package kabam.rotmg.ui.view{
 import com.company.assembleegameclient.objects.ImageFactory;
 import com.company.assembleegameclient.objects.Player;
+import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+import kabam.rotmg.dialogs.control.OpenDialogSignal;
+import io.decagames.rotmg.friends.FriendsPopupView;
+import kabam.rotmg.friends.view.FriendListView;
+import flash.events.MouseEvent;
+import kabam.rotmg.core.StaticInjectorContext;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.icons.IconButtonFactory;
 import com.company.assembleegameclient.ui.options.Options;

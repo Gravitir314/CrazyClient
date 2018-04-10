@@ -25,7 +25,7 @@ public class Parameters
         public static const ENABLE_ENCRYPTION:Boolean = true;
         public static const PORT:int = 2050;
         public static const ALLOW_SCREENSHOT_MODE:Boolean = true;
-        public static const USE_NEW_FRIENDS_UI:Boolean = false;
+        public static const USE_NEW_FRIENDS_UI:Boolean = true;
         public static const FELLOW_GUILD_COLOR:uint = 10944349;
         public static const NAME_CHOSEN_COLOR:uint = 0xFCDF00;
         public static var root:DisplayObject;
@@ -215,6 +215,7 @@ public class Parameters
             setDefault("playPewPew", true);
             setDefault("centerOnPlayer", true);
             setDefault("preferredServer", null);
+            setDefault("bestServer", null);
             setDefault("cameraAngle", ((7 * Math.PI) / 4));
             setDefault("defaultCameraAngle", ((7 * Math.PI) / 4));
             setDefault("showQuestPortraits", true);
@@ -274,9 +275,9 @@ public class Parameters
             setDefault("tradeWithFriends", false);
             setDefault("chatFriend", false);
             setDefault("friendStarRequirement", 0);
-            setDefault("HPBar", true);
+            setDefault("HPBar", 1);
             setDefault("newMiniMapColors", false);
-            setDefault("toggleBarText", false);
+            setDefault("toggleBarText", 0);
             setDefault("disableEnemyParticles", false);
             setDefault("disableAllyParticles", false);
             setDefault("disablePlayersHitParticles", false);
@@ -285,7 +286,8 @@ public class Parameters
             setDefault("noAllyNotifications", false);
             setDefault("noEnemyDamage", false);
             setDefault("noAllyDamage", false);
-            setDefault("forceEXP", false);
+            setDefault("forceEXP", 0);
+            setDefault("curseIndication", false);
             setDefault("stageScale", StageScaleMode.NO_SCALE);
             setDefault("uiscale", false);
             setDefault("removeParticles", true);
@@ -479,7 +481,6 @@ public class Parameters
             setDefault("etheriteDisable", true);
             setDefault("cultistStaffDisable", true);
             setDefault("AutoReply", true);
-            setDefault("curseIndication", false);
             setDefault("statusText", true);
             setDefault("blockTP", false);
             setDefault("blockAbil", false);

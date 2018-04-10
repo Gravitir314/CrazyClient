@@ -39,25 +39,22 @@ public class TextureRedrawer
         private static var shader:Shader = new Shader(textureShaderData_);
 
 
-        public static function redraw(_arg_1:BitmapData, _arg_2:int, _arg_3:Boolean, _arg_4:uint, _arg_5:Boolean=true, _arg_6:Number=5):BitmapData
-        {
-            var _local_7:String = getHash(_arg_2, _arg_3, _arg_4, _arg_6);
-            if (((_arg_5) && (isCached(_arg_1, _local_7))))
-            {
-                return (redrawCaches[_arg_1][_local_7]);
-            }
-            var _local_8:BitmapData = resize(_arg_1, null, _arg_2, _arg_3, 0, 0, _arg_6);
-            _local_8 = GlowRedrawer.outlineGlow(_local_8, _arg_4, 1.4, _arg_5);
-            if (_arg_5)
-            {
-                cache(_arg_1, _local_7, _local_8);
-            }
-            return (_local_8);
+        public static function redraw(_arg_1:BitmapData, _arg_2:int, _arg_3:Boolean, _arg_4:uint, _arg_5:Boolean=true, _arg_6:Number=5, _arg_7:int=0):BitmapData{
+            var _local_8:String = getHash(_arg_2, _arg_3, _arg_4, _arg_6, _arg_7);
+            if (((_arg_5) && (isCached(_arg_1, _local_8)))){
+                return (redrawCaches[_arg_1][_local_8]);
+            };
+            var _local_9:BitmapData = resize(_arg_1, null, _arg_2, _arg_3, 0, 0, _arg_6);
+            _local_9 = GlowRedrawer.outlineGlow(_local_9, _arg_4, 1.4, _arg_5, _arg_7);
+            if (_arg_5){
+                cache(_arg_1, _local_8, _local_9);
+            };
+            return (_local_9);
         }
 
-        private static function getHash(_arg_1:int, _arg_2:Boolean, _arg_3:uint, _arg_4:Number):String
+        private static function getHash(_arg_1:int, _arg_2:Boolean, _arg_3:uint, _arg_4:Number, _arg_5:int):String
         {
-            return ((((((_arg_1.toString() + ",") + _arg_3.toString()) + ",") + _arg_2) + ",") + _arg_4);
+            return ((((((((_arg_1.toString() + ",") + _arg_3.toString()) + ",") + _arg_2) + ",") + _arg_4) + ",") + _arg_5);
         }
 
         private static function cache(_arg_1:BitmapData, _arg_2:String, _arg_3:BitmapData):void

@@ -1,38 +1,34 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
+﻿// Decompiled by AS3 Sorcerer 5.72
 // www.as3sorcerer.com
 
 //io.decagames.rotmg.friends.widgets.FriendListItemMediator
 
 package io.decagames.rotmg.friends.widgets{
-import com.company.assembleegameclient.appengine.SavedCharacter;
-import com.company.assembleegameclient.parameters.Parameters;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
+    import io.decagames.rotmg.friends.signals.FriendActionSignal;
+    import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+    import io.decagames.rotmg.friends.model.FriendModel;
+    import io.decagames.rotmg.friends.signals.RefreshFriendsListSignal;
+    import kabam.rotmg.chat.control.ShowChatInputSignal;
+    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import kabam.rotmg.ui.signals.EnterGameSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.signals.PlayGameSignal;
+    import flash.events.MouseEvent;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import kabam.rotmg.game.model.GameInitData;
+    import io.decagames.rotmg.friends.model.FriendRequestVO;
+    import io.decagames.rotmg.friends.config.FriendsActions;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
+    import kabam.rotmg.text.model.TextKey;
 
-import flash.events.MouseEvent;
-
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.friends.model.FriendRequestVO;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
-import io.decagames.rotmg.friends.signals.RefreshFriendsListSignal;
-import io.decagames.rotmg.ui.buttons.BaseButton;
-import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
-import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
-import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
-import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
-import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-
-import kabam.rotmg.chat.control.ShowChatInputSignal;
-import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.game.model.GameInitData;
-import kabam.rotmg.game.signals.PlayGameSignal;
-import kabam.rotmg.text.model.TextKey;
-import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-import kabam.rotmg.ui.signals.EnterGameSignal;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class FriendListItemMediator extends Mediator {
+    public class FriendListItemMediator extends Mediator {
 
         [Inject]
         public var view:FriendListItem;
@@ -65,22 +61,22 @@ public class FriendListItemMediator extends Mediator {
         override public function initialize():void{
             if (this.view.removeButton){
                 this.view.removeButton.addEventListener(MouseEvent.CLICK, this.onRemoveClick);
-            }
+            };
             if (this.view.acceptButton){
                 this.view.acceptButton.addEventListener(MouseEvent.CLICK, this.onAcceptClick);
-            }
+            };
             if (this.view.rejectButton){
                 this.view.rejectButton.addEventListener(MouseEvent.CLICK, this.onRejectClick);
-            }
+            };
             if (this.view.messageButton){
                 this.view.messageButton.addEventListener(MouseEvent.CLICK, this.onMessageClick);
-            }
+            };
             if (this.view.teleportButton){
                 this.view.teleportButton.addEventListener(MouseEvent.CLICK, this.onTeleportClick);
-            }
+            };
             if (this.view.blockButton){
                 this.view.blockButton.addEventListener(MouseEvent.CLICK, this.onBlockClick);
-            }
+            };
             this.model.dataSignal.add(this.onDataLoaded);
         }
 
@@ -92,22 +88,22 @@ public class FriendListItemMediator extends Mediator {
         override public function destroy():void{
             if (this.view.removeButton){
                 this.view.removeButton.removeEventListener(MouseEvent.CLICK, this.onRemoveClick);
-            }
+            };
             if (this.view.acceptButton){
                 this.view.acceptButton.removeEventListener(MouseEvent.CLICK, this.onAcceptClick);
-            }
+            };
             if (this.view.rejectButton){
                 this.view.rejectButton.removeEventListener(MouseEvent.CLICK, this.onRejectClick);
-            }
+            };
             if (this.view.messageButton){
                 this.view.messageButton.removeEventListener(MouseEvent.CLICK, this.onMessageClick);
-            }
+            };
             if (this.view.teleportButton){
                 this.view.teleportButton.removeEventListener(MouseEvent.CLICK, this.onTeleportClick);
-            }
+            };
             if (this.view.blockButton){
                 this.view.blockButton.removeEventListener(MouseEvent.CLICK, this.onBlockClick);
-            }
+            };
             this.model.dataSignal.remove(this.onDataLoaded);
         }
 
@@ -141,7 +137,7 @@ public class FriendListItemMediator extends Mediator {
                 this.model.removeFriend(_arg_3);
             } else {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            }
+            };
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(_arg_1);
         }
@@ -151,7 +147,7 @@ public class FriendListItemMediator extends Mediator {
                 this.model.removeInvitation(_arg_3);
             } else {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            }
+            };
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(_arg_1);
         }
@@ -161,10 +157,10 @@ public class FriendListItemMediator extends Mediator {
                 this.model.removeInvitation(_arg_3);
                 if (!this.model.isDataStillLoading){
                     this.model.loadData();
-                }
+                };
             } else {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            }
+            };
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(_arg_1);
         }
@@ -174,7 +170,7 @@ public class FriendListItemMediator extends Mediator {
                 this.model.removeInvitation(_arg_3);
             } else {
                 this.showPopup.dispatch(new ErrorModal(350, "Friends List Error", LineBuilder.getLocalizedStringFromKey(String(_arg_2))));
-            }
+            };
             this.removeFade.dispatch();
             this.refreshSignal.dispatch(_arg_1);
         }

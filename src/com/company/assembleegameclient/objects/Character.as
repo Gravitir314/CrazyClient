@@ -22,9 +22,9 @@ public class Character extends GameObject
             SoundEffectLibrary.load(this.deathSound_);
         }
 
-        override public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile):void
+        override public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile, _arg_6:Boolean=false):void
         {
-            super.damage(_arg_1, _arg_2, _arg_3, _arg_4, _arg_5);
+            super.damage(_arg_1, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
             if (dead_)
             {
                 SoundEffectLibrary.play(this.deathSound_);

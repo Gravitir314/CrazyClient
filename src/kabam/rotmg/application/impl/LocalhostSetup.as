@@ -67,6 +67,10 @@ public class LocalhostSetup implements ApplicationSetup
             return (true);
         }
 
+        public function getServerDomain():String{
+            return ("localhost");
+        }
+
 
     }
 }//package kabam.rotmg.application.impl

@@ -5,6 +5,13 @@
 
 package kabam.rotmg.ui
 {
+import io.decagames.rotmg.fame.FameStatsLineMediator;
+import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
+import io.decagames.rotmg.ui.popups.modal.ConfirmationModalMediator;
+import io.decagames.rotmg.ui.tabs.UITab;
+import io.decagames.rotmg.ui.tabs.UITabMediator;
+import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
+import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
 import com.company.assembleegameclient.account.ui.ChooseNameFrame;
 import com.company.assembleegameclient.account.ui.ChooseNameFrameMediator;
 import com.company.assembleegameclient.account.ui.CreateGuildFrame;
@@ -156,6 +163,7 @@ import kabam.rotmg.ui.view.TitleView;
 import kabam.rotmg.ui.view.UnFocusAble;
 import kabam.rotmg.ui.view.components.PotionSlotMediator;
 import kabam.rotmg.ui.view.components.PotionSlotView;
+import io.decagames.rotmg.fame.StatsLine;
 
 import org.swiftsuspenders.Injector;
 
@@ -193,6 +201,8 @@ public class UIConfig implements IConfig
             this.injector.map(ClosePopupSignal).asSingleton();
             this.injector.map(CloseCurrentPopupSignal).asSingleton();
             this.injector.map(CloseAllPopupsSignal).asSingleton();
+            this.injector.map(ShowLockFade).asSingleton();
+            this.injector.map(RemoveLockFade).asSingleton();
             this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);
             this.commandMap.map(ShowTitleUISignal).toCommand(ShowTitleUICommand);
             this.commandMap.map(ChooseNameSignal).toCommand(ChooseNameCommand);
@@ -243,11 +253,14 @@ public class UIConfig implements IConfig
             this.mediatorMap.map(ItemBox).toMediator(ItemBoxMediator);
             this.mediatorMap.map(UIScrollbar).toMediator(UIScrollbarMediator);
             this.mediatorMap.map(UIItemContainer).toMediator(UIItemContainerMediator);
+            this.mediatorMap.map(StatsLine).toMediator(FameStatsLineMediator);
+            this.mediatorMap.map(UITab).toMediator(UITabMediator);
             this.mediatorMap.map(PopupView).toMediator(PopupMediator);
             this.mediatorMap.map(ModalPopup).toMediator(ModalPopupMediator);
             this.mediatorMap.map(BuyGoldButton).toMediator(BuyGoldButtonMediator);
             this.mediatorMap.map(ClosePopupButton).toMediator(CancelButtonMediator);
             this.mediatorMap.map(MysteryBoxRollModal).toMediator(MysteryBoxRollModalMediator);
+            this.mediatorMap.map(ConfirmationModal).toMediator(ConfirmationModalMediator);
             this.mediatorMap.map(StartupPackage).toMediator(StartupPackageMediator);
             TextureParser.instance;
             this.setupKeyUI();

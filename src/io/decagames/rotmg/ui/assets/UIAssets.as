@@ -1,18 +1,22 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.ui.assets.UIAssets
-
-package io.decagames.rotmg.ui.assets
+package io.decagames.rotmg.ui.assets 
 {
-    public class UIAssets 
+    public class UIAssets extends Object
     {
+        public function UIAssets()
+        {
+            super();
+            return;
+        }
 
-        public static var UI:Class = UIAssets_UI;
-        public static const UI_CONFIG:Class = UIAssets_UI_CONFIG;
-        public static const UI_SLICE_CONFIG:Class = UIAssets_UI_SLICE_CONFIG;
+        
+        {
+            UI = io.decagames.rotmg.ui.assets.UIAssets_UI;
+        }
 
+        public static const UI_CONFIG:Class=io.decagames.rotmg.ui.assets.UIAssets_UI_CONFIG;
 
+        public static const UI_SLICE_CONFIG:Class=io.decagames.rotmg.ui.assets.UIAssets_UI_SLICE_CONFIG;
+
+        public static var UI:Class;
     }
-}//package io.decagames.rotmg.ui.assets
-
+}

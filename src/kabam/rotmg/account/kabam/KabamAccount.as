@@ -51,6 +51,10 @@ public class KabamAccount implements Account
             this.token = _arg_3;
         }
 
+        public function getUserNaid():String{
+            return ("");
+        }
+
         public function getRequestPrefix():String
         {
             return ("/credits");
