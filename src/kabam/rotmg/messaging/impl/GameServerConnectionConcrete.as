@@ -2225,6 +2225,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             var _local_9:Player = (_arg_1 as Player);
             var _local_10:Merchant = (_arg_1 as Merchant);
             var _local_11:Pet = (_arg_1 as Pet);
+            var _local_12
             if (_local_11)
             {
                 this.petUpdater.updatePet(_local_11, _arg_2);
@@ -2438,6 +2439,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
                                 player.cmaxhpboost = _local_5;
                             }
                         }
+                        if (_arg_3){
+                            _local_12 = true;
+                        }
                         break;
                     case StatData.MAX_MP_BOOST_STAT:
                         _local_9.maxMPBoost_ = _local_5;
@@ -2569,6 +2573,11 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 if ((_arg_1 is Container))
                 {
                     (_arg_1 as Container).lootNotify();
+                }
+            }
+            if (_arg_3) {
+                if (_local_12){
+                    _local_9.triggerHealBuffer();
                 }
             }
         }

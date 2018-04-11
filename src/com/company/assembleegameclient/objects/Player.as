@@ -101,6 +101,8 @@ public class Player extends Character
         public static var pItems:eItems = new eItems();
         public static var reconRealm:ReconnectEvent;
 
+        public var healBuffer:int = 0;
+        public var healBufferTime:int = 0;
         private var lastreconnect:int = 0;
         private var nextSwap:int = 0;
         public var followTarget:GameObject;
@@ -1256,6 +1258,21 @@ public class Player extends Character
                     }
                 }
             }
+        }
+
+        public function triggerHealBuffer():void{
+            if (this.healBuffer > 0){
+                this.addHealth(this.healBuffer);
+                this.healBuffer = 0;
+                this.healBufferTime = 2147483647;
+            }
+        }
+
+        public function addHealth(_arg_1:int):void{
+            this.chp = (this.chp + _arg_1);
+            if (this.chp > this.maxHP_){
+                this.chp = this.maxHP_;
+            };
         }
 
         override public function update(_arg_1:int, _arg_2:int):Boolean
