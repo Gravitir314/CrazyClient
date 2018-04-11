@@ -141,16 +141,13 @@ public class TextHandler
                     SoundEffectLibrary.play("level_up");
                 }
             }
+            _local_6 = _arg_1.text_.toLowerCase();
             for each (_local_4 in Parameters.data_.wordNotiList)
             {
-                if ((_local_6.indexOf(_local_4) != -1) && (Parameters.data_.wordNoti))
+                if ((_local_6.indexOf(_local_4) != -1) && (!(_local_6.indexOf("call") != -1)) && (!(_local_6.indexOf("event") != -1)) && (Parameters.data_.wordNoti))
                 {
-                    if (_local_6.indexOf("call") != -1) {
-                        break;
-                    } else {
-                        _local_15.levelUpEffect("", true);
-                        SoundEffectLibrary.play("level_up");
-                    }
+                    _local_15.levelUpEffect("", true);
+                    SoundEffectLibrary.play("level_up");
                 }
             }
             if (Parameters.data_.eventnotify)
