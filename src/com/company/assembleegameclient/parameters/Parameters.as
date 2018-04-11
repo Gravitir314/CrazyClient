@@ -338,6 +338,7 @@ public class Parameters
             setDefaultKey("ReconVault", KeyCodes.RIGHTBRACKET);
             setDefaultKey("ReconRandom", KeyCodes.BACKSLASH);
             setDefaultKey("ReconDaily", KeyCodes.LEFTBRACKET);
+            setDefaultKey("ReconDung", KeyCodes.UNSET);
             setDefault("autoRecon", false);
             setDefault("AutoNexus", 20);
             setDefault("NoClip", false);
@@ -395,6 +396,11 @@ public class Parameters
             setDefault("reconGID", null);
             setDefault("reconTime", null);
             setDefault("reconKey", null);
+            setDefault("dservName", null);
+            setDefault("dservAddr", null);
+            setDefault("dreconGID", null);
+            setDefault("dreconTime", null);
+            setDefault("dreconKey", null);
             setDefault("msg1", "");
             setDefault("msg2", "");
             setDefault("msg3", "");
@@ -413,8 +419,8 @@ public class Parameters
             setDefaultKey("msg7key", KeyCodes.UNSET);
             setDefaultKey("msg8key", KeyCodes.UNSET);
             setDefaultKey("msg9key", KeyCodes.UNSET);
-            setDefault("spamFilter", ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org"]);
-            setDefault("eventCalls", ["testx", "Skull_Shrine.new", "Pentaract.new", "Cube_God.new", "Ghost_Ship.new", "shtrs_Defense_System.new", "Grand_Sphinx.new", "Hermit_God.new", "Temple_Encounter.new", "Lord_of_the_Lost_Lands.new", "Dragon_Head_Leader.new", "LH_Lost_Sentry.new"]);
+            setDefault("spamFilter", ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org", "realmgold"]);
+            setDefault("eventCalls", ["Skull_Shrine.new", "Pentaract.new", "Cube_God.new", "Ghost_Ship.new", "shtrs_Defense_System.new", "Grand_Sphinx.new", "Hermit_God.new", "Temple_Encounter.new", "Lord_of_the_Lost_Lands.new", "Dragon_Head_Leader.new", "LH_Lost_Sentry.new"]);
             setDefault("friendList2", []);
             setDefault("tptoList", ["tp", "udl", "manor"]);
             setDefault("wordNotiList", ["tp", "udl", "manor"]);

@@ -2723,6 +2723,22 @@ public class GameServerConnectionConcrete extends GameServerConnection
             var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
             if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.nexus"}'))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
             {
+                if (_arg_1.name_.search("NexusPortal.") < 0)
+                {
+                    if (_arg_1.name_ != "Realm")
+                    {
+                        MapUserInput.reconDung = _local_8;
+                        MapUserInput.dungTime = getTimer();
+                        Parameters.data_.dservName = _local_8.server_.name;
+                        Parameters.data_.dservAddr = _local_8.server_.address;
+                        Parameters.data_.dreconGID = _local_8.gameId_;
+                        Parameters.data_.dreconTime = _local_8.keyTime_;
+                        Parameters.data_.dreconKey = _local_8.key_;
+                        Parameters.save();
+                    }
+                }
+                else
+                {
                     MapUserInput.reconRealm = _local_8;
                     Parameters.data_.servName = _local_8.server_.name;
                     Parameters.data_.servAddr = _local_8.server_.address;
@@ -2730,6 +2746,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     Parameters.data_.reconTime = _local_8.keyTime_;
                     Parameters.data_.reconKey = _local_8.key_;
                     Parameters.save();
+                }
             }
             gs_.dispatchEvent(_local_8);
         }
