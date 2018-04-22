@@ -10,6 +10,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.PointUtil;
 
 import flash.utils.Dictionary;
+import flash.utils.getTimer;
 
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.core.StaticInjectorContext;
@@ -41,9 +42,12 @@ public class Party
             this.map_ = _arg_1;
         }
 
-        public static function dodBot(player:Player):void{
-            if (player.map_.name_ == "Tutorial") {
-                if ((!(debugEnd))) {
+        public static function dodBot(player:Player):void
+        {
+            if (player.map_.name_ == "Tutorial")
+            {
+                if (!debugEnd)
+                {
                     moveTo(DOD_PATH_X[PATH_IDX], DOD_PATH_Y[PATH_IDX], player);
                 } else {
                     PATH_IDX = 0;
@@ -58,6 +62,7 @@ public class Party
                 player.map_.gs_.gsc_.playerText("/tutorial");
             }
         }
+
         public static function moveTo(dx:Number, dy:Number, player:Player):void{
             if (((int(player.x_) == dx) && (int(player.y_) == dy))){
                 if (PATH_IDX == (DOD_PATH_X.length - 1)){

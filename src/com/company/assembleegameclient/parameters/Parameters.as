@@ -69,6 +69,7 @@ public class Parameters
         public static var timerPhaseTimes:Dictionary = new Dictionary();
         public static var timerPhaseNames:Dictionary = new Dictionary();
         public static var dmgCounter:Array = [];
+        public static var keyHolders:String;
 
         public static function setTimerPhases():void{
             timerPhaseTimes['{"key":"server.oryx_closed_realm"}'] = 120000;
@@ -360,7 +361,7 @@ public class Parameters
             setDefault("AABoundingDist", 20);
             setDefault("showMobInfo", false);
             setDefault("AAException", [355, 3414, 3417, 3441, 3561, 3448, 3449, 3472, 3334, 5952, 2354, 2369, 3368, 3366, 3367, 3391, 3389, 3390, 5920, 2314, 3412, 3639, 3634, 2327, 1755, 24582, 24351, 24363, 24135, 24133, 24134, 24132, 24136, 3356, 3357, 3358, 3359, 3360, 3361, 3362, 3363, 3364, 2352, 28780, 28781, 28795, 28942, 28957, 28988, 28938, 29291, 29018, 29517, 24338, 29580, 29712, 6282, 29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262]);
-            setDefault("AAIgnore", [1711, 1712, 1550, 1551, 1552, 1619, 1715, 2309, 2310, 2311, 2371, 2312, 0x0909, 2370, 2392, 2393, 2400, 2401, 3335, 3336, 3337, 3338, 3413, 3418, 3419, 3420, 3421, 3427, 3454, 3638, 3645, 6157, 28715, 28716, 28717, 28718, 28719, 28730, 28731, 28732, 28733, 28734, 29306, 29568, 29594, 29597, 29710, 29711, 29742, 29743, 29746, 29748, 30001, 29752, 43702, 43708, 43709, 43710, 3389, 3390, 3391, 24223, 0x0900, 2305, 2306, 0x0600, 1537, 1538, 1539, 1540]);
+            setDefault("AAIgnore", [1711, 1712, 1550, 1551, 1552, 1619, 1715, 2309, 2310, 2311, 2371, 2312, 0x0909, 2370, 2392, 2393, 2400, 2401, 3335, 3336, 3337, 3338, 3413, 3418, 3419, 3420, 3421, 3427, 3454, 3638, 3645, 6157, 28715, 28716, 28717, 28718, 28719, 28730, 28731, 28732, 28733, 28734, 29306, 29568, 29594, 29597, 29710, 29711, 29742, 29743, 29746, 29748, 30001, 29752, 43702, 43708, 43709, 43710, 3389, 3390, 3391, 0x0900, 2305, 2306, 0x0600, 1537, 1538, 1539, 1540]);
             setDefault("AAPriority", [29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262, 6282, 1646]);
             setDefault("damageIgnored", false);
             setDefault("QuestToolTipMod", true);
@@ -419,7 +420,7 @@ public class Parameters
             setDefaultKey("msg7key", KeyCodes.UNSET);
             setDefaultKey("msg8key", KeyCodes.UNSET);
             setDefaultKey("msg9key", KeyCodes.UNSET);
-            setDefault("spamFilter", ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org", "realmgold"]);
+            setDefault("spamFilter", ["realmk!ngs", "rea!mkings", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org", "realmgold"]);
             setDefault("eventCalls", ["Skull_Shrine.new", "Pentaract.new", "Cube_God.new", "Ghost_Ship.new", "shtrs_Defense_System.new", "Grand_Sphinx.new", "Hermit_God.new", "Temple_Encounter.new", "Lord_of_the_Lost_Lands.new", "Dragon_Head_Leader.new", "LH_Lost_Sentry.new"]);
             setDefault("friendList2", []);
             setDefault("tptoList", ["tp", "udl", "manor"]);
@@ -479,6 +480,7 @@ public class Parameters
             setDefault("keyFinderid", 0);
             setDefault("bDebug", false);
             setDefault("keyNoti", false);
+            setDefault("mobNotifier", false);
             setDefault("wordNoti", false);
             setDefault("dodBot", false);
             setDefault("autoDecrementHP", true);
@@ -496,6 +498,7 @@ public class Parameters
             setDefault("SWNoTileMove", true);
             setDefault("showDamageOnEnemy", false);
             setDefault("spellThreshold", 1000);
+            setDefault("keyList", false);
         }
 
 

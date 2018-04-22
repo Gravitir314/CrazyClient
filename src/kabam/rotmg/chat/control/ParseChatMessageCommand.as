@@ -9,7 +9,9 @@ import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.AbstractMap;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.objects.Portal;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.board.HelpBoard;
 import com.company.assembleegameclient.ui.menu.FindMenu;
@@ -782,24 +784,34 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                     return (true);
+                case "/keylist":
+                    Parameters.data_.keyList = !Parameters.data_.keyList;
+                    Parameters.save();
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Key list enabled" : "Key list disabled")));
+                    return (true);
                 case "/onlygods":
                     Parameters.data_.onlyGods = (!Parameters.data_.onlyGods);
+                    Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Only Gods: On" : "Only Gods: Off")));
                     return (true);
                 case "/blockcubes":
                     Parameters.data_.blockCubes = (!Parameters.data_.blockCubes);
+                    Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockCubes) ? "Cubes Blocked" : "Cubes Allowed")));
                     return (true);
                 case "/blockpots":
                     Parameters.data_.blockPots = (!Parameters.data_.blockPots);
+                    Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockPots) ? "Thirsty: On" : "Thirsty: Off")));
                     return (true);
                 case "/blockabil":
                     Parameters.data_.blockAbil = (!Parameters.data_.blockAbil);
+                    Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockAbil) ? "Ability Blocked" : "Ability Allowed")));
                     return (true);
                 case "/blocktp":
                     Parameters.data_.blockTP = (!Parameters.data_.blockTP);
+                    Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockTP) ? "Teleport Blocked" : "Teleport Allowed")));
                     return (true);
                 case "/statustext":
@@ -1001,7 +1013,7 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     return (true);
                 default:
-                    _local_7 = this.data.toLowerCase().match("^/recondelay (\\d*\\.*\\d+)$");
+                    _local_7 = this.data.match("^/recondelay (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.RECONNECT_DELAY = _local_7[1];
                         Parameters.save();
@@ -1068,7 +1080,7 @@ public class ParseChatMessageCommand
                         this.hudModel.gameSprite.hudView.characterDetails.setName("");
                         return (true);
                     }
-                    _local_7 = this.data.toLowerCase().match("^/timer (\\d+) ?(\\d*)$");
+                    _local_7 = this.data.match("^/timer (\\d+) ?(\\d*)$");
                     if (_local_7 != null) {
                         Parameters.timerActive = true;
                         Parameters.phaseChangeAt = (getTimer() + (_local_7[1] * 1000));

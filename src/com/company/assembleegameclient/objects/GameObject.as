@@ -1516,7 +1516,7 @@ public class GameObject extends BasicObject
 
         override public function drawShadow(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
         {
-            if (((((!(Parameters.data_.HidePlayerFilter == false)) && (this is Player)) && (!(this == map_.player_))) && (map_.name_ == "Nexus")))
+            if ((Parameters.data_.HidePlayerFilter) && (this is Player) && (!(this == map_.player_)) && (map_.name_ == "Nexus"))
             {
                 if ((this as Player).numStars_ <= Parameters.data_.chatStarRequirement)
                 {

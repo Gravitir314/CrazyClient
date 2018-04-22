@@ -91,6 +91,7 @@ import kabam.rotmg.arena.control.ImminentArenaWaveSignal;
 import kabam.rotmg.arena.model.CurrentArenaRunModel;
 import kabam.rotmg.arena.view.BattleSummaryDialog;
 import kabam.rotmg.arena.view.ContinueOrQuitDialog;
+import kabam.rotmg.chat.control.TextHandler;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.classes.model.CharacterClass;
 import kabam.rotmg.classes.model.CharacterSkin;
@@ -993,36 +994,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
             }
             return (null);
         }
-
-        /*override public function invSwap(_arg_1:Player, _arg_2:GameObject, _arg_3:int, _arg_4:int, _arg_5:GameObject, _arg_6:int, _arg_7:int):Boolean
-        {
-            var _local_8:int;
-            if (!gs_)
-            {
-                return (false);
-            }
-            if ((((_arg_3 == 1) && (_arg_2 == _arg_1)) || ((_arg_6 == 1) && (_arg_5 == _arg_1))))
-            {
-                if (_arg_1.mapAutoAbil)
-                {
-                    _arg_1.mapAutoAbil = false;
-                    _arg_1.notifyPlayer("Auto Ability: Disabled", 0xFF00, 1500);
-                }
-            }
-            var _local_9:InvSwap = (this.messages.require(INVSWAP) as InvSwap);
-            _local_9.time_ = gs_.lastUpdate_;
-            _local_9.position_.x_ = _arg_1.x_;
-            _local_9.position_.y_ = _arg_1.y_;
-            _local_9.slotObject1_.objectId_ = _arg_2.objectId_;
-            _local_9.slotObject1_.slotId_ = _arg_3;
-            _local_9.slotObject1_.objectType_ = _arg_4;
-            _local_9.slotObject2_.objectId_ = _arg_5.objectId_;
-            _local_9.slotObject2_.slotId_ = _arg_6;
-            _local_9.slotObject2_.objectType_ = _arg_7;
-            serverConnection.sendMessage(_local_9);
-            SoundEffectLibrary.play("inventory_move_item");
-            return (true);
-        }*/
 
         override public function invSwap(_arg_1:Player, _arg_2:GameObject, _arg_3:int, _arg_4:int, _arg_5:GameObject, _arg_6:int, _arg_7:int):Boolean{
             if (!this.gs_){

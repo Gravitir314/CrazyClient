@@ -5,15 +5,22 @@
 
 package kabam.rotmg.ui.view
 {
+import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.options.Options;
 
 import flash.display.Sprite;
 import flash.utils.getTimer;
+
+import kabam.rotmg.chat.control.TextHandler;
+
+import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 
 public class QuestHealthBar extends Sprite
     {
@@ -23,6 +30,7 @@ public class QuestHealthBar extends Sprite
         private var questBar3:StatusBar;
         private var nextUpdate:int = 0;
         private var showstr:String;
+        public var gs_:GameSprite;
 
         public function QuestHealthBar()
         {
@@ -86,7 +94,7 @@ public class QuestHealthBar extends Sprite
                     if (this.nextUpdate <= getTimer())
                     {
                         this.showstr = this.genClosest(_arg_1);
-                        this.nextUpdate = (getTimer() + 1000);
+                        this.nextUpdate = (getTimer() + 250);
                     }
                     _local_4 = this.showstr;
                 }

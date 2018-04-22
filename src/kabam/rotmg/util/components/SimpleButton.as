@@ -216,7 +216,7 @@ public class SimpleButton extends BuyButton
 
         private function getWidth():int
         {
-            return ((this.fixedWidth != -1) ? this.fixedWidth : Math.max(this._width, ((this.text.width + this.icon.width) + (3 * PADDING))));
+            return ((this.fixedWidth != -1) ? this.fixedWidth : Math.max(this._width, ((this.text.width + this.icon.width) + (4 * PADDING))));
         }
 
         private function getHeight():int

@@ -172,10 +172,9 @@
       <Group>Cubes</Group>
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Red Gelatinous Sphere</DisplayId>
       <Texture>
-         <File>d3LofiObjEmbed</File>
-         <Index>0x12d</Index>
+         <File>lofiChar8x8</File>
+         <Index>0xbc</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
@@ -203,10 +202,9 @@
       <Group>Cubes</Group>
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Purple Gelatinous Sphere</DisplayId>
       <Texture>
-         <File>d3LofiObjEmbed</File>
-         <Index>0x12e</Index>
+         <File>lofiChar8x8</File>
+         <Index>0xbd</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
@@ -234,10 +232,9 @@
       <Group>Cubes</Group>
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Green Gelatinous Sphere</DisplayId>
       <Texture>
-         <File>d3LofiObjEmbed</File>
-         <Index>0x12f</Index>
+         <File>lofiChar8x8</File>
+         <Index>0xbe</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>

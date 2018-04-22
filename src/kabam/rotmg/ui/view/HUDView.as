@@ -51,7 +51,7 @@ public class HUDView extends Sprite implements UnFocusAble
         private const STAT_METERS_POSITION:Point = new Point(12, 230);
         private const EQUIPMENT_INVENTORY_POSITION:Point = new Point(14, 304);
         private const TAB_STRIP_POSITION:Point = new Point(7, 346);
-        private const INTERACT_PANEL_POSITION:Point = new Point(0, 496);
+        private const INTERACT_PANEL_POSITION:Point = new Point(0, 500);
 
         private var background:CharacterWindowBackground;
         public var miniMap:MiniMapImp;

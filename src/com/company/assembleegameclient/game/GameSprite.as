@@ -9,6 +9,7 @@ import com.company.assembleegameclient.game.events.MoneyChangedEvent;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
+import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Pet;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.Projectile;
@@ -89,6 +90,8 @@ public class GameSprite extends AGameSprite
         public var questBar:QuestHealthBar;
         private var timerCounter:TextFieldDisplayConcrete;
         private var timerCounterStringBuilder:StaticStringBuilder;
+        private var findKeys:TextFieldDisplayConcrete;
+        private var findKeysStringBuilder:StaticStringBuilder;
 
         public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
         {
@@ -564,6 +567,13 @@ public class GameSprite extends AGameSprite
                     this.updateTimer(_local_5);
                 }
             }
+            if (Parameters.data_.keyList)
+            {
+                this.listKeys();
+                this.updateKeyHolders();
+            } else {
+                this.findKeys.visible = false;
+            }
             var _local_6:Player = map.player_;
             if (this.focus)
             {
@@ -616,28 +626,14 @@ public class GameSprite extends AGameSprite
 
         private function updateTimer(_arg_1:int):void{
             this.timerCounter.visible = true;
-            if (_arg_1 < 3000){
-                this.timerCounter.setColor(this.fadeRed(((Parameters.phaseChangeAt - _arg_1) * 0.00033333333)));
-            }
             this.timerCounter.setText(((Parameters.phaseName + "\n") + toTimeCode((Parameters.phaseChangeAt - _arg_1))));
         }
 
-        private function fadeRed(_arg_1:Number):uint{
-            if (_arg_1 > 100){
-                _arg_1 = 100;
-            }
-            var _local_5:int = (0xFF * _arg_1);
-            var _local_2:* = 0xFF0000;
-            var _local_4:* = (_local_5 << 8);
-            var _local_3:* = _local_5;
-            return ((_local_2 | _local_4) | _local_3);
-        }
-
-        public static function toTimeCode_HOWDIDIBREAKTHIS(_arg_1:Number):String{
-            var _local_3:int = (_arg_1 * 0.001);
-            var _local_2:int = Math.floor((_local_3 % 60));
-            var _local_4:String = (((Math.round(Math.floor((_local_3 * 0.0166666666666667))) + ":") + (_local_2 < 10)) ? ("0" + _local_2) : String(_local_2));
-            return (_local_4);
+        public function updateKeyHolders():void
+        {
+            this.findKeys.visible = true;
+            this.findKeys.setText(("Key List:" + "\n") + Parameters.keyHolders);
+            keysFind();
         }
 
         public static function toTimeCode(_arg_1:Number):String{
@@ -649,7 +645,8 @@ public class GameSprite extends AGameSprite
             return (_local_6);
         }
 
-        private function addTimer():void{
+        private function addTimer():void
+        {
             if (this.timerCounter == null){
                 this.timerCounter = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
                 this.timerCounter.mouseChildren = false;
@@ -658,9 +655,53 @@ public class GameSprite extends AGameSprite
                 this.timerCounter.setStringBuilder(this.timerCounterStringBuilder);
                 this.timerCounter.filters = [EMPTY_FILTER];
                 this.timerCounter.x = 3;
-                this.timerCounter.y = 180;
+                this.timerCounter.y = 80;
                 addChild(this.timerCounter);
             }
+        }
+        
+        private function listKeys():void
+        {
+            if (this.findKeys == null){
+                this.findKeys = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
+                this.findKeys.mouseChildren = false;
+                this.findKeys.setBold(true);
+                this.findKeysStringBuilder = new StaticStringBuilder("Key List:");
+                this.findKeys.setStringBuilder(this.findKeysStringBuilder);
+                this.findKeys.filters = [EMPTY_FILTER];
+                this.findKeys.x = 3;
+                this.findKeys.y = 130;
+                addChild(this.findKeys);
+            }
+        }
+
+        public function keysFind():void
+        {
+            var _local_4:int;
+            var _local_7:int;
+            var _local_3:* = null;
+            var _local_6:* = null;
+            var _local_1:String = "";
+            for each (var _local_2:GameObject in this.map.goDict_) {
+                if ((_local_2 is Player)){
+                    _local_4 = 0;
+                    while (_local_4 < 20) {
+                        _local_7 = _local_2.equipment_[_local_4];
+                        _local_3 = ObjectLibrary.xmlLibrary_[_local_7];
+                        if (((_local_3) && ("Consumable" in _local_3))){
+                            for each (var _local_5:XML in _local_3.Activate) {
+                                _local_6 = _local_5.toString();
+                                if ((((_local_6 == "Create") || (_local_6 == "UnlockPortal")) || (_local_6 == "CreatePortal"))){
+                                    _local_1 = (_local_1 + (((_local_2.name_ + " has ") + _local_3.@id) + "\n"));
+                                }
+                            }
+                        }
+                        _local_4++;
+                    }
+                }
+            }
+            //this.map.player_.notifyPlayer(_local_1, 16762889, 6000);
+            Parameters.keyHolders = _local_1
         }
 
     }

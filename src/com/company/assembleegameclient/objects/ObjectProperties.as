@@ -5,6 +5,7 @@
 
 package com.company.assembleegameclient.objects
 {
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
 import flash.utils.Dictionary;

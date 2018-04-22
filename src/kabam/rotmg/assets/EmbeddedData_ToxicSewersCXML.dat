@@ -53,10 +53,10 @@
    <Object type="0x714e" id="DS Natural Slime God">
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Natural Smile God</DisplayId>
+      <DisplayId>Natural Slime God</DisplayId>
       <AnimatedTexture>
-         <File>d3Chars16x16rEmbed</File>
-         <Index>36</Index>
+         <File>chars16x16dMountains1</File>
+         <Index>0x07</Index>
       </AnimatedTexture>
       <HitSound>monster/slimes_hit</HitSound>
       <DeathSound>monster/slimes_death</DeathSound>

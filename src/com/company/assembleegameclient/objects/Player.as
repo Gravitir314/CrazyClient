@@ -15,6 +15,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.TradeSlot;
 import com.company.assembleegameclient.ui.options.Options;
+import com.company.assembleegameclient.ui.panels.PortalPanel;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.FameUtil;
@@ -38,6 +39,7 @@ import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 import flash.geom.Point;
 import flash.geom.Vector3D;
+import flash.utils.ByteArray;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
@@ -104,6 +106,7 @@ public class Player extends Character
         private var lastreconnect:int = 0;
         private var nextSwap:int = 0;
         public var followTarget:GameObject;
+        public var followPortal:GameObject;
         public var questMob:GameObject;
         public var questMob1:GameObject;
         public var questMob2:GameObject;
@@ -1288,7 +1291,8 @@ public class Player extends Character
             var _local_28:ReconnectEvent;
             if (this == map_.player_)
             {
-                if (Parameters.data_.dodBot) {
+                if (Parameters.data_.dodBot)
+                {
                     Party.dodBot(this);
                 }
                 if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50))))
@@ -1618,6 +1622,21 @@ public class Player extends Character
                 }
                 else
                 {
+                    if ((this.followPortal != null) && (_local_14 is Portal)) //follow to portal and enter
+                    {
+                        _local_10 = _local_14.objectId_;
+                        _local_7 = (((this.followPortal.y_ - y_) * (this.followPortal.y_ - y_)) + ((this.followPortal.x_ - x_) * (this.followPortal.x_ - x_)));
+                        if (_local_7 < 0.5)
+                        {
+                            map_.gs_.gsc_.usePortal(_local_10);
+                        }
+                        else
+                        {
+                            _local_7 = Math.atan2((this.followPortal.y_ - y_), (this.followPortal.x_ - x_));
+                            moveVec_.x = (_local_6 * Math.cos(_local_7));
+                            moveVec_.y = (_local_6 * Math.sin(_local_7));
+                        }
+                    }
                     if (this.followTarget != null)
                     {
                         _local_7 = (((this.followTarget.y_ - y_) * (this.followTarget.y_ - y_)) + ((this.followTarget.x_ - x_) * (this.followTarget.x_ - x_)));

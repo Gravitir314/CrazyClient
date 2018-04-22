@@ -20,8 +20,6 @@
       <Size>120</Size>
       <ShadowSize>100</ShadowSize>
       <Terrain>MidPlains</Terrain>
-      <PerRealmMax>20</PerRealmMax>
-      <SpawnProb>1.0</SpawnProb>
       <Level>20</Level>
    </Object>
    <Object type="0x428" id="Easter Egg Basket High">
@@ -43,8 +41,6 @@
       <Size>120</Size>
       <ShadowSize>100</ShadowSize>
       <PerRealmMax>20</PerRealmMax>
-      <Terrain>HighPlains</Terrain>
-      <SpawnProb>1.0</SpawnProb>
       <Level>20</Level>
    </Object>
    <Object type="0x429" id="Easter Egg Basket God">
@@ -66,8 +62,6 @@
       <Size>120</Size>
       <ShadowSize>100</ShadowSize>
       <PerRealmMax>40</PerRealmMax>
-      <Terrain>Mountains</Terrain>
-      <SpawnProb>1.0</SpawnProb>
       <Level>20</Level>
    </Object>
    <Object type="0x893" id="BB Bunny Blaster">
@@ -173,9 +167,6 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
-      <Terrain>LowPlains</Terrain>
-      <PerRealmMax>5</PerRealmMax>
-      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -207,9 +198,6 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
-      <Terrain>MidPlains</Terrain>
-      <PerRealmMax>5</PerRealmMax>
-      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -241,9 +229,6 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
-      <Terrain>HighPlains</Terrain>
-      <PerRealmMax>5</PerRealmMax>
-      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -275,9 +260,6 @@
       <MaxHitPoints>10000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
-      <Terrain>Mountains</Terrain>
-      <PerRealmMax>1</PerRealmMax>
-      <SpawnProb>1.0</SpawnProb>
       <Quest/>
       <Level>13</Level>
       <DisplayId>Easter Egg</DisplayId>
@@ -314,9 +296,6 @@
       <MaxHitPoints>300000</MaxHitPoints>
       <Defense>0</Defense>
       <StasisImmune/>
-      <Terrain>Mountains</Terrain>
-      <SpawnProb>1.0</SpawnProb>
-      <PerRealmMax>1</PerRealmMax>
       <ShadowSize>0</ShadowSize>
       <DisplayId>Mysterious Egg</DisplayId>
    </Object>

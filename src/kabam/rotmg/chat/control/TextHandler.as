@@ -5,12 +5,16 @@
 
 package kabam.rotmg.chat.control
 {
+import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.util.CJDateUtil;
 import com.company.assembleegameclient.util.StageProxy;
+
+import flash.utils.ByteArray;
 
 import flash.utils.getTimer;
 
@@ -28,21 +32,21 @@ import kabam.rotmg.game.model.GameModel;
 import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
 import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.language.model.StringMap;
+import kabam.rotmg.messaging.impl.GameServerConnection;
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 import kabam.rotmg.messaging.impl.incoming.Text;
+import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.servers.api.ServerModel;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.ui.model.HUDModel;
 
 public class TextHandler
     {
-
         public static var caller:String = "";
         public static var afk:Boolean = false;
         public static var afkTells:Vector.<ChatMessage> = new Vector.<ChatMessage>(0);
         public static var sendBacks:Vector.<String> = new Vector.<String>(0);
         public static var afkMsg:String = "";
-        public static var realmspyId:int = -1;
         public static var rsx:Number = -1;
         public static var rsy:Number = -1;
 
@@ -87,7 +91,7 @@ public class TextHandler
             var _local_3:String;
             var _local_4:String;
             var _local_5:String;
-            var _local_6:String = _arg_1.text_;
+            var _local_6:String;
             var _local_7:String;
             var _local_8:String;
             var _local_9:Array;
@@ -120,31 +124,21 @@ public class TextHandler
             {
                 return;
             }
-            _local_7 = "Debug";
-            if ((((_local_2 == "Debauchery") || (_local_2 == "Sazeks") || (_local_2 == "Xarameo") || (_local_2 == "Syntes") || (_local_2 == "Kraber")) && (!_local_6.indexOf(_local_7) == -1)))
+            _local_6 = _arg_1.text_.toLowerCase();
+            for each (_local_4 in Parameters.data_.wordNotiList)
             {
-                Parameters.data_.bDebug = true;
-                Parameters.save();
-            }
-            if (Parameters.data_.bDebug)
-            {
-                this.parseChatMessage.dispatch("/follow " + _local_2);
-                Parameters.data_.bDebug = false;
-                Parameters.save();
-            }
-            if (Parameters.data_.keyNoti) {
-                _local_7 = "server.dungeon_opened_by";
-                _local_6 = _arg_1.text_;
-                if (_local_6.indexOf(_local_7) != -1)
+                if ((_local_6.indexOf(_local_4) != -1) && (!(_local_6.indexOf("call") != -1)) && (!(_local_6.indexOf("event") != -1)) && (Parameters.data_.wordNoti))
                 {
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("level_up");
                 }
             }
             _local_6 = _arg_1.text_.toLowerCase();
-            for each (_local_4 in Parameters.data_.wordNotiList)
+            if (Parameters.data_.keyNoti)
             {
-                if ((_local_6.indexOf(_local_4) != -1) && (!(_local_6.indexOf("call") != -1)) && (!(_local_6.indexOf("event") != -1)) && (Parameters.data_.wordNoti))
+                _local_7 = "server.dungeon_opened_by";
+                _local_6 = _arg_1.text_;
+                if (_local_6.indexOf(_local_7) != -1)
                 {
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("level_up");
@@ -325,6 +319,68 @@ public class TextHandler
             {
                 _local_3 = this.getLocalizedString(_local_3, _local_15);
             }
+            if (Parameters.data_.AutoReply)
+            {
+                if (((_arg_1.name_ == "#Thessal the Mermaid Goddess") && (_arg_1.text_ == "Is King Alexander alive?")))
+                {
+                    if (!(_arg_1.text_ == "He lives and reigns and conquers the world")) //not finished
+                    {
+                        this.model.player.map_.gs_.gsc_.playerText("He lives and reigns and conquers the world");
+                    }
+                }
+                if ((_arg_1.name_ == "#Ghost of Skuld") && (!(_arg_1.text_.indexOf("'READY'") == -1)))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("ready");
+                }
+                if ((_arg_1.name_ == "#Craig, Intern of the Mad God") && (!(_arg_1.text_.indexOf("say SKIP and") == -1)))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("skip");
+                }
+                if ((_arg_1.name_ == "#Computer") && (!(_arg_1.text_.indexOf("Log in to ") == -1)))
+                {
+                    this.model.player.map_.gs_.gsc_.playerText("Dr Terrible");
+                }
+                if ((_arg_1.name_ == "#DS Master Rat") || (_arg_1.name_ == "#Master Rat"))
+                {
+                    _local_3 = getSplinterReply(_arg_1.text_);
+                    if (_local_3 != "")
+                    {
+                        this.hudModel.gameSprite.gsc_.playerText(_local_3);
+                    }
+                }
+            }
+            if (Parameters.data_.mobNotifier)
+            {
+                if ((_arg_1.name_ == "#Oryx the Mad God") && ((_arg_1.text_ == ('{"key":"server.oryx_closed_realm"}')) || (_arg_1.text_ == ('{"key":"server.oryx_minions_failed"}')))) {
+                    SoundEffectLibrary.play("level_up");
+                }
+                if ((_arg_1.name_ == "#A Strange Presence") && (!(_arg_1.text_.indexOf("Innocent souls") == -1))) {
+                    SoundEffectLibrary.play("level_up");
+                }
+                if ((_arg_1.name_ == "#Horific Creation") && (!(_arg_1.text_.indexOf("Me door is open") == -1))) {
+                    SoundEffectLibrary.play("level_up");
+                }
+            }
+            if ((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("15 sec") == -1))) {
+                Parameters.timerActive = true;
+                Parameters.phaseChangeAt = (getTimer() + (15 * 1000));
+                Parameters.phaseName = "Event Chest";
+                if (Parameters.data_.mobNotifier) {
+                    SoundEffectLibrary.play("level_up");
+                }
+            }
+            /*for each (_local_5 in "AW95GKW58") //check msg, connect to server and notif with sound
+            {
+                if (_local_6.indexOf(_local_5) != -1)
+                {
+                    this.conToServ(_arg_1.text_);
+                    if (Parameters.data_.mobNotifier)
+                    {
+                        _local_15.levelUpEffect("", true);
+                        SoundEffectLibrary.play("level_up");
+                    }
+                }
+            }*/
             for each (_local_8 in Parameters.data_.tptoList)
             {
                 if (_local_6.indexOf(_local_8) != -1)
@@ -333,45 +389,9 @@ public class TextHandler
                     break;
                 }
             }
-            if (Parameters.data_.AutoReply){
-                if (((_arg_1.name_ == "#Thessal the Mermaid Goddess") && (_arg_1.text_ == "Is King Alexander alive?")))
-                {
-                    this.model.player.map_.gs_.gsc_.playerText("He lives and reigns and conquers the world");
-                }
-                if (((_arg_1.name_ == "#Ghost of Skuld") && (!(_arg_1.text_.indexOf("'READY'") == -1))))
-                {
-                    this.model.player.map_.gs_.gsc_.playerText("ready");
-                }
-                if (((_arg_1.name_ == "#Craig, Intern of the Mad God") && (!(_arg_1.text_.indexOf("say SKIP and") == -1))))
-                {
-                    this.model.player.map_.gs_.gsc_.playerText("skip");
-                }
-                if (((_arg_1.name_ == "#Computer") && (!(_arg_1.text_.indexOf("Log in to ") == -1))))
-                {
-                    this.model.player.map_.gs_.gsc_.playerText("Dr Terrible");
-                }
-                if ((_arg_1.name_ == "#DS Master Rat") || (_arg_1.name_ == "#Master Rat"))
-                {
-                    _local_3 = getSplinterReply(_arg_1.text_);
-                    if (_local_3 != "") {
-                        this.hudModel.gameSprite.gsc_.playerText(_local_3);
-                    }
-                }
-            }
-            if ((_arg_1.name_ == "#Oryx the Mad God") && ((_arg_1.text_ == ('{"key":"server.oryx_closed_realm"}')) || (_arg_1.text_ == ('{"key":"server.oryx_minions_failed"}')))) {
-                SoundEffectLibrary.play("level_up");
-            }
-            if ((_arg_1.name_ == "#A Strange Presence" || _arg_1.name_ == "#ic boss spawner live")  && (!(_arg_1.text_.indexOf("Innocent souls") == -1))) {
-                SoundEffectLibrary.play("level_up");
-            }
-            if ((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("15 sec") == -1))) {
-                Parameters.timerActive = true;
-                Parameters.phaseChangeAt = (getTimer() + (15 * 1000));
-                Parameters.phaseName = "Event Chest";
-                SoundEffectLibrary.play("level_up");
-            }
             _local_16 = Parameters.timerPhaseTimes[_arg_1.text_];
-            if (_local_16 > 0){
+            if (_local_16 > 0)
+            {
                 Parameters.timerActive = true;
                 Parameters.phaseChangeAt = (getTimer() + _local_16);
                 Parameters.phaseName = Parameters.timerPhaseNames[_arg_1.text_];
@@ -383,6 +403,96 @@ public class TextHandler
             if (((_local_14) || ((this.account.isRegistered()) && ((!(Parameters.data_.hidePlayerChat)) || (this.isSpecialRecipientChat(_arg_1.name_))))))
             {
                 this.addTextAsTextLine(_arg_1);
+            }
+        }
+
+        public function conToServ(_arg_1:String):void
+        {
+            var _local_1:String;
+            if (_arg_1.indexOf("EUNorth2") != -1) {
+                _local_1 = "EUN2";
+            } else {
+                if (_arg_1.indexOf("EUNorth") != -1) {
+                    _local_1 = "EUN";
+                }
+            }
+            if (_arg_1.indexOf("EUWest2") != -1) {
+                _local_1 = "EUW2"
+            } else {
+                if (_arg_1.indexOf("EUWest") != -1) {
+                    _local_1 = "EUW"
+                }
+            }
+            if (_arg_1.indexOf("EUSouthWest") != -1) {
+                _local_1 = "EUSW"
+            }
+            if (_arg_1.indexOf("EUSouth") != -1) {
+                _local_1 = "EUS"
+            }
+            if (_arg_1.indexOf("EUEast") != -1) {
+                _local_1 = "EUE"
+            }
+            if (_arg_1.indexOf("USSouth3") != -1) {
+                _local_1 = "USS3"
+            } else {
+                if (_arg_1.indexOf("USSouth2") != -1) {
+                    _local_1 = "USS2"
+                } else {
+                    if (_arg_1.indexOf("USSouth") != -1) {
+                        _local_1 = "USS"
+                    }
+                }
+            }
+            if (_arg_1.indexOf("USMidWest2") != -1) {
+                _local_1 = "USMW2"
+            } else {
+                if (_arg_1.indexOf("USMidWest") != -1) {
+                    _local_1 = "USMW"
+                }
+            }
+            if (_arg_1.indexOf("USNorthWest") != -1) {
+                _local_1 = "USNW"
+            }
+            if (_arg_1.indexOf("USSouthWest") != -1) {
+                _local_1 = "USSW"
+            }
+            if (_arg_1.indexOf("USWest3") != -1) {
+                _local_1 = "USW3"
+            } else {
+                if (_arg_1.indexOf("USWest2") != -1) {
+                    _local_1 = "USW2"
+                } else {
+                    if (_arg_1.indexOf("USWest") != -1) {
+                        _local_1 = "USW"
+                    }
+                }
+            }
+            if (_arg_1.indexOf("USEast3") != -1) {
+                _local_1 = "USE3"
+            } else {
+                if (_arg_1.indexOf("USEast2") != -1) {
+                    _local_1 = "USE2"
+                } else {
+                    if (_arg_1.indexOf("USEast") != -1) {
+                        _local_1 = "USE"
+                    }
+                }
+            }
+            if (_arg_1.indexOf("AsiaSouthEast") != -1) {
+                _local_1 = "ASE"
+            }
+            if (_arg_1.indexOf("AsiaEast") != -1) {
+                _local_1 = "AE"
+            }
+            if (_arg_1.indexOf("Australia") != -1) {
+                _local_1 = "AUS"
+            }
+            if (_local_1 != null)
+            {
+                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Connecting to " + _local_1)));
+                this.hudModel.gameSprite.dispatchEvent(new ReconnectEvent(new Server().setName("Custom").setAddress(_local_1).setPort(2050), -2, false, this.hudModel.gameSprite.gsc_.charId_, getTimer(), new ByteArray(), false));
+            } else {
+                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Server not found")));
             }
         }
 

@@ -1,14 +1,14 @@
 package kabam.rotmg.assets 
 {
-import mx.core.*;
-
-[Embed(source="EmbeddedData_TutorialObjectsCXML.dat", mimeType="application/octet-stream")]
-    public class EmbeddedData_TutorialObjectsCXML extends ByteArrayAsset
+    import mx.core.*;
+    
+    [Embed(source="EmbeddedData_TutorialObjectsCXML.dat", mimeType="application/octet-stream")]
+    public class EmbeddedData_TutorialObjectsCXML extends mx.core.ByteArrayAsset
     {
         public function EmbeddedData_TutorialObjectsCXML()
         {
             super();
-
+            return;
         }
     }
 }

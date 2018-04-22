@@ -1427,14 +1427,14 @@
       <Soulbound/>
    </Object>
    <Object type="0xa03" id="Crystal Sword">
-      <DisplayId>Mithril Sword</DisplayId>
+      <DisplayId>Crystal Sword</DisplayId>
       <Texture>
-         <File>lofiObj</File>
-         <Index>0x38</Index>
+         <File>lofiObj2</File>
+         <Index>0x68</Index>
       </Texture>
-      <Description>An extremely sharp sword made from the strongest and most desirable of all metals. You should go to the Nexus and show everyone!</Description>
+      <Description>A lightweight blade that seems to dance in your hands.</Description>
       <Projectile>
-         <ObjectId>Blue Bolt</ObjectId>
+         <ObjectId>Aqua Slash</ObjectId>
          <Speed>100</Speed>
          <MinDamage>180</MinDamage>
          <MaxDamage>210</MaxDamage>
@@ -2473,9 +2473,8 @@
    <Object type="0xaf9" id="Hydra Skin Armor">
       <Class>Equipment</Class>
       <Item/>
-      <DisplayId>BUFFED Hydra Skin Armor</DisplayId>
-      <ActivateOnEquip stat="3" amount="1">IncrementStat</ActivateOnEquip>
-      <Description>Superlative leather armor fashioned from the skin of an extra beefy twelve-headed swamp hydra.</Description>
+      <DisplayId>Hydra Skin Armor</DisplayId>
+      <Description>Superlative leather armor fashioned from the skin of a twelve-headed swamp hydra.</Description>
       <Texture>
          <File>lofiObj5new</File>
          <Index>0x0c</Index>
@@ -2785,7 +2784,7 @@
       </Texture>
       <SlotType>2</SlotType>
       <Tier>1</Tier>
-      <Description>A short sword blade mounted on a dagger hilt. You don't want the realm to be taken over by chickens, do you?</Description>
+      <Description>A short sword blade mounted on a dagger hilt.</Description>
       <RateOfFire>1</RateOfFire>
       <Sound>weapon/dirk</Sound>
       <Projectile>
