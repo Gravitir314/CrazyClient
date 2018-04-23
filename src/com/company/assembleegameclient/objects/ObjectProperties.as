@@ -51,7 +51,6 @@ public class ObjectProperties
         public var isGod_:Boolean;
         public var isCube_:Boolean;
         public var isPotion_:Boolean;
-        public var isToken_:Boolean;
 
         public function ObjectProperties(_arg_1:XML)
         {
@@ -94,7 +93,6 @@ public class ObjectProperties
             this.isGod_ = ("God" in _arg_1);
             this.isCube_ = ("Cube" in _arg_1);
             this.isPotion_ = ("Potion" in _arg_1);
-            this.isToken_ = ("Token" in _arg_1);
             if (_arg_1.hasOwnProperty("Z"))
             {
                 this.z_ = Number(_arg_1.Z);

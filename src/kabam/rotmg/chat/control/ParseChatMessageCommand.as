@@ -787,7 +787,7 @@ public class ParseChatMessageCommand
                 case "/keylist":
                     Parameters.data_.keyList = !Parameters.data_.keyList;
                     Parameters.save();
-                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Key list enabled" : "Key list disabled")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.keyList) ? "Key list enabled" : "Key list disabled")));
                     return (true);
                 case "/onlygods":
                     Parameters.data_.onlyGods = (!Parameters.data_.onlyGods);
@@ -1013,6 +1013,13 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     return (true);
                 default:
+                    _local_7 = this.data.match("^/uitextsize (\\d*\\.*\\d+)$");
+                    if (_local_7 != null) {
+                        Parameters.data_.uiTextSize = _local_7[1];
+                        Parameters.save();
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("UI-text size set to: " + Parameters.data_.uiTextSize)));
+                        return (true);
+                    }
                     _local_7 = this.data.match("^/recondelay (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.RECONNECT_DELAY = _local_7[1];
@@ -1141,14 +1148,6 @@ public class ParseChatMessageCommand
                     if (_local_7 != null)
                     {
                         this.findItem(this.findMatch2(_local_7[1]));
-                        return (true);
-                    }
-                    _local_7 = this.data.toLowerCase().match("^/setfinder (.+)$");
-                    if (_local_7 != null)
-                    {
-                        Parameters.data_.keyFinderid = this.findMatch2(_local_7[1]);
-                        _local_1 = ObjectLibrary.getIdFromType(Parameters.data_.keyFinderid);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Finder set to " + _local_1)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/take (.+)$");

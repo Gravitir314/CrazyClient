@@ -37,8 +37,13 @@ import com.company.assembleegameclient.ui.panels.mediators.GuildRegisterPanelMed
 import com.company.assembleegameclient.ui.panels.mediators.InteractPanelMediator;
 import com.company.assembleegameclient.ui.panels.mediators.ItemGridMediator;
 
+import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
+import io.decagames.rotmg.fame.FameContentPopup;
+import io.decagames.rotmg.fame.FameContentPopupMediator;
+
 import io.decagames.rotmg.fame.FameStatsLineMediator;
 import io.decagames.rotmg.fame.StatsLine;
+import io.decagames.rotmg.fame.data.FameTracker;
 import io.decagames.rotmg.shop.ShopPopupMediator;
 import io.decagames.rotmg.shop.ShopPopupView;
 import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
@@ -201,6 +206,10 @@ public class UIConfig implements IConfig
             this.injector.map(ClosePopupSignal).asSingleton();
             this.injector.map(CloseCurrentPopupSignal).asSingleton();
             this.injector.map(CloseAllPopupsSignal).asSingleton();
+            this.injector.map(CharactersMetricsTracker).asSingleton();
+            this.injector.map(FameTracker).asSingleton();
+            this.injector.map(CharactersMetricsTracker).asSingleton();
+            this.injector.map(FameTracker).asSingleton();
             this.injector.map(ShowLockFade).asSingleton();
             this.injector.map(RemoveLockFade).asSingleton();
             this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);
@@ -245,6 +254,7 @@ public class UIConfig implements IConfig
             this.mediatorMap.map(GameObjectArrow).toMediator(GameObjectArrowMediator);
             this.mediatorMap.map(UnFocusAble).toMediator(UnFocusAbleMediator);
             this.mediatorMap.map(ShopPopupView).toMediator(ShopPopupMediator);
+            this.mediatorMap.map(FameContentPopup).toMediator(FameContentPopupMediator);
             this.mediatorMap.map(MysteryBoxTile).toMediator(MysteryBoxTileMediator);
             this.mediatorMap.map(PackageBoxTile).toMediator(PackageBoxTileMediator);
             this.mediatorMap.map(NumberSpinner).toMediator(NumberSpinnerMediator);

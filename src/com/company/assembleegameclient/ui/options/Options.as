@@ -671,6 +671,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("perfectStun", makeOnOffLabels(), [true, false], "Shield Aim", "Targets the mob closest to cursor.", null));
             this.addOptionAndPosition(new ChoiceOption("inaccurate", makeOnOffLabels(), [true, false], "Inaccurate Ability Aim", "Look more legit by aiming inaccurately.", null));
             this.addOptionAndPosition(new ChoiceOption("autoAbil", makeOnOffLabels(), [true, false], "Auto Ability", "Automatically uses your ability on warrior, paladin and rogue. Activated by pressing space.", null));
+            this.addOptionAndPosition(new KeyMapper("autoAbilKey", "Toggle Auto Ability", "Toggles Auto Ability with hotkey."));
             this.addOptionAndPosition(new ChoiceOption("palaSpam", makeOnOffLabels(), [true, false], "Spam Paladin Ability", "Uses paladin ability every 0.5 seconds if auto ability is enabled", null));
             this.addOptionAndPosition(new ChoiceOption("spellVoid", makeOnOffLabels(), [true, false], "Unsafe Prism Use", "Allows using prism through walls. If you land on void you will get disconnected.", null));
             this.addOptionAndPosition(new KeyMapper("maxPrism", "Teleport Max Distance", "Always teleports the maximum distance on Trickster. You will have to stand still for this to work."));
@@ -798,6 +799,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
             this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "Toggle UI-mode from CC to prod", this.onToggleUI));
+            this.addOptionAndPosition(new ChoiceOption("keyList", makeOnOffLabels(), [true, false], "Key list", "Shows the list of keyholders in left-side ui panel.", null));
         }
 
         private function addOtherOptions():void
@@ -808,7 +810,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("bestServ", this.ServerPrefValues(), ["Default", "USWest", "USMidWest", "EUWest", "USEast", "AsiaSouthEast", "USSouth", "USSouthWest", "EUEast", "EUNorth", "EUSouthWest", "USEast3", "USWest2", "USMidWest2", "USEast2", "USNorthWest", "AsiaEast", "USSouth3", "EUNorth2", "EUWest2", "EUSouth", "USSouth2", "USWest3"], "Best Server", "Select your best server.", null));
             this.addOptionAndPosition(new ChoiceOption("TradeDelay", makeOnOffLabels(), [true, false], "Disable Trade Delay", "Removes trade delay. Indicator still shows.", null));
             this.addOptionAndPosition(new ChoiceOption("slideOnIce", makeOnOffLabels(), [true, false], "Slide on Ice", "Toggles sliding on ice.", null));
-            this.addOptionAndPosition(new KeyMapper("incFinder", "Inc Finder", "Goes through everyone's inventory and backpack then reports if they have an incantation."));
             this.addOptionAndPosition(new ChoiceOption("rclickTp", makeOnOffLabels(), [true, false], "Right-click Chat Teleport", "Right click a chat name to teleport. No menu will be shown.", null));
             this.addOptionAndPosition(new ChoiceOption("autoTp", makeOnOffLabels(), [true, false], "Teleport Queue", "Automatically teleports after teleport cooldown if you have tried to teleport to someone during the cooldown.", null));
             this.addOptionAndPosition(new KeyMapper("QuestTeleport", "Closest Player to Quest Teleport", "Teleports to the player that is closest to your quest."));
@@ -884,10 +885,9 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
             this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
-            this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Leeeech Notifier", "Notifies you with a sound when event chest spawned/oryx shaking/2nd lab open/portal spawned in ice cave.", null));
+            this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Leech Notifier", "Notifies you with a sound when event chest spawned/oryx shaking/2nd lab open/portal spawned in ice cave.", null));
             this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
             this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null));
-            this.addOptionAndPosition(new ChoiceOption("keyList", makeOnOffLabels(), [true, false], "Key list", "Shows the list of keys", null));
             this.tombDeactivate();
             this.addOptionAndPosition(new NullOption());
         }
@@ -1079,7 +1079,6 @@ public class Options extends Sprite
             if (!hidden) {
                 this.addOptionAndPosition(new ChoiceOption("rotateSpeed", this.OneTen(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Rotate Speed", "Change how fast your camera rotates. ( default is 3 )", this.updateRotate));
                 this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
-                this.addOptionAndPosition(new KeyMapper("finderKey", "Finder", "set it with /setfinder itemname , then when you hit the key it searches everyone for that item and tells you who has em"));
             }
         }
 

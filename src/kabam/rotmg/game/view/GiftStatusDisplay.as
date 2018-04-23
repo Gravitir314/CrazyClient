@@ -39,7 +39,7 @@ public class GiftStatusDisplay extends Sprite implements TooltipAble
         private var background:Sprite;
         private var giftOpenProcessedTexture:BitmapData;
         private var text:TextFieldDisplayConcrete;
-        private var tooltip:TextToolTip = new TextToolTip(0x363636, 0x9B9B9B, null, TextKey.BUYPACKAGETASK_NEWGIFTS, 200);
+        private var tooltip:TextToolTip = new TextToolTip(0x363636, 0x9B9B9B, null, TextKey.BUYPACKAGETASK_NEWGIFTS, 120);
 
         public function GiftStatusDisplay()
         {

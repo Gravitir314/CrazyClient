@@ -56,6 +56,7 @@ import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.game.signals.UseBuyPotionSignal;
 import kabam.rotmg.messaging.impl.GameServerConnection;
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
+import kabam.rotmg.messaging.impl.data.StatData;
 import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.stage3D.GraphicsFillExtra;
 import kabam.rotmg.text.model.TextKey;
@@ -138,6 +139,7 @@ public class Player extends Character
         public var skin:AnimatedChar;
         public var isShooting:Boolean;
         public var fameWasChanged:Signal = new Signal();
+        private var famePortrait_:BitmapData = null;
         public var accountId_:String = "";
         public var credits_:int = 0;
         public var tokens_:int = 0;
@@ -260,6 +262,96 @@ public class Player extends Character
             return (ChatMessage.make(Parameters.ERROR_CHAT_NAME, _arg_1, -1, -1, "", false, _arg_2));
         }
 
+        public function getFamePortrait(_arg_1:int):BitmapData{
+            var _local_2:MaskedImage;
+            if (this.famePortrait_ == null){
+                _local_2 = animatedChar_.imageFromDir(AnimatedChar.RIGHT, AnimatedChar.STAND, 0);
+                _arg_1 = int(((4 / _local_2.image_.width) * _arg_1));
+                this.famePortrait_ = TextureRedrawer.resize(_local_2.image_, _local_2.mask_, _arg_1, true, tex1Id_, tex2Id_);
+                this.famePortrait_ = GlowRedrawer.outlineGlow(this.famePortrait_, 0);
+            };
+            return (this.famePortrait_);
+        }
+
+        public function getFameBonus():int{
+            var _local_3:int;
+            var _local_4:XML;
+            var _local_1:int;
+            var _local_2:uint;
+            while (_local_2 < GeneralConstants.NUM_EQUIPMENT_SLOTS) {
+                if (((equipment_) && (equipment_.length > _local_2))){
+                    _local_3 = equipment_[_local_2];
+                    if (_local_3 != -1){
+                        _local_4 = ObjectLibrary.xmlLibrary_[_local_3];
+                        if (((!(_local_4 == null)) && (_local_4.hasOwnProperty("FameBonus")))){
+                            _local_1 = (_local_1 + int(_local_4.FameBonus));
+                        };
+                    };
+                };
+                _local_2++;
+            };
+            return (_local_1);
+        }
+
+        public function calculateStatBoosts():void{
+            var _local_2:int;
+            var _local_3:XML;
+            var _local_4:XML;
+            var _local_5:int;
+            var _local_6:int;
+            this.maxHPBoost_ = 0;
+            this.maxMPBoost_ = 0;
+            this.attackBoost_ = 0;
+            this.defenseBoost_ = 0;
+            this.speedBoost_ = 0;
+            this.vitalityBoost_ = 0;
+            this.wisdomBoost_ = 0;
+            this.dexterityBoost_ = 0;
+            var _local_1:uint;
+            while (_local_1 < GeneralConstants.NUM_EQUIPMENT_SLOTS) {
+                if (((equipment_) && (equipment_.length > _local_1))){
+                    _local_2 = equipment_[_local_1];
+                    if (_local_2 != -1){
+                        _local_3 = ObjectLibrary.xmlLibrary_[_local_2];
+                        if (((!(_local_3 == null)) && (_local_3.hasOwnProperty("ActivateOnEquip")))){
+                            for each (_local_4 in _local_3.ActivateOnEquip) {
+                                if (_local_4.toString() == "IncrementStat"){
+                                    _local_5 = int(_local_4.@stat);
+                                    _local_6 = int(_local_4.@amount);
+                                    switch (_local_5){
+                                        case StatData.MAX_HP_STAT:
+                                            this.maxHPBoost_ = (this.maxHPBoost_ + _local_6);
+                                            break;
+                                        case StatData.MAX_MP_STAT:
+                                            this.maxMPBoost_ = (this.maxMPBoost_ + _local_6);
+                                            break;
+                                        case StatData.ATTACK_STAT:
+                                            this.attackBoost_ = (this.attackBoost_ + _local_6);
+                                            break;
+                                        case StatData.DEFENSE_STAT:
+                                            this.defenseBoost_ = (this.defenseBoost_ + _local_6);
+                                            break;
+                                        case StatData.SPEED_STAT:
+                                            this.speedBoost_ = (this.speedBoost_ + _local_6);
+                                            break;
+                                        case StatData.VITALITY_STAT:
+                                            this.vitalityBoost_ = (this.vitalityBoost_ + _local_6);
+                                            break;
+                                        case StatData.WISDOM_STAT:
+                                            this.wisdomBoost_ = (this.wisdomBoost_ + _local_6);
+                                            break;
+                                        case StatData.DEXTERITY_STAT:
+                                            this.dexterityBoost_ = (this.dexterityBoost_ + _local_6);
+                                            break;
+                                    };
+                                };
+                            };
+                        };
+                    };
+                };
+                _local_1++;
+            };
+        }
 
         public function setRelativeMovement(_arg_1:Number, _arg_2:Number, _arg_3:Number):void
         {

@@ -22,6 +22,8 @@ public class BeginnersPackageButton extends BasePackageButton
     {
 
         private static const FONT_SIZE:int = 16;
+        public static const NOTIFICATION_BACKGROUND_WIDTH:Number = 50;
+        public static const NOTIFICATION_BACKGROUND_HEIGHT:Number = 25;
 
         public var clicked:Signal;
         private var timeLeftText:TextFieldDisplayConcrete;
@@ -31,7 +33,7 @@ public class BeginnersPackageButton extends BasePackageButton
 
         public function BeginnersPackageButton()
         {
-            this.clickArea = UIUtils.makeStaticHUDBackground();
+            this.clickArea = UIUtils.makeHUDBackground(NOTIFICATION_BACKGROUND_WIDTH, NOTIFICATION_BACKGROUND_HEIGHT);
             this.clicked = new NativeMappedSignal(this, MouseEvent.CLICK);
             tabChildren = false;
             tabEnabled = false;
@@ -64,7 +66,7 @@ public class BeginnersPackageButton extends BasePackageButton
         private function makeTimeLeftText():void
         {
             this.timeLeftText = new TextFieldDisplayConcrete().setSize(FONT_SIZE).setColor(0xFFFFFF);
-            this.timeLeftText.filters = [new DropShadowFilter(0, 0, 0)];
+            this.timeLeftText.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
             this.updateTimeLeftPosition();
             addChild(this.timeLeftText);
         }
@@ -72,7 +74,7 @@ public class BeginnersPackageButton extends BasePackageButton
         private function updateTimeLeftPosition():void
         {
             this.timeLeftText.textChanged.addOnce(this.onTextChanged);
-            this.timeLeftText.setStringBuilder(new StaticStringBuilder(((this.daysRemaining.toString() + " day") + ((this.daysRemaining > 1) ? "s" : ""))));
+            this.timeLeftText.setStringBuilder(new StaticStringBuilder((this.daysRemaining.toString() + "d")));
         }
 
         private function onTextChanged():void

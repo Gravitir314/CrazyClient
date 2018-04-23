@@ -733,68 +733,6 @@ public class MapUserInput
                     }
                     this.gs_.gsc_.usePortal(_local_5);
                     break;
-                case Parameters.data_.incFinder:
-                    _local_6 = [];
-                    for each (_local_2 in this.gs_.map.goDict_)
-                    {
-                        if ((_local_2 is Player))
-                        {
-                            _local_11 = (_local_2 as Player);
-                            for each (_local_12 in _local_11.equipment_)
-                            {
-                                if (_local_12 == 1826)
-                                {
-                                    _local_6.push(_local_11.name_);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (_local_6.length == 0)
-                    {
-                        _local_21.notifyPlayer("No one has an inc!", 0xFF00, 1500);
-                        break;
-                    }
-                    _local_13 = 0;
-                    _local_14 = "Inc Holders:\n";
-                    for each (_local_15 in _local_6)
-                    {
-                        _local_14 = ((_local_14 + _local_15) + "\n");
-                        _local_13++;
-                    }
-                    _local_21.notifyPlayer(_local_14, 0xFF00, (1000 + (500 * _local_13)));
-                    break;
-                case Parameters.data_.finderKey:
-                    _local_6 = [];
-                    for each (_local_2 in this.gs_.map.goDict_)
-                    {
-                        if ((_local_2 is Player))
-                        {
-                            _local_11 = (_local_2 as Player);
-                            for each (_local_12 in _local_11.equipment_)
-                            {
-                                if (_local_12 == Parameters.data_.keyFinderid)
-                                {
-                                    _local_6.push(_local_11.name_);
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (_local_6.length == 0)
-                    {
-                        _local_21.notifyPlayer("No one has what you're looking for!", 0xFF00, 1500);
-                        break;
-                    }
-                    _local_13 = 0;
-                    _local_14 = "Names:\n";
-                    for each (_local_15 in _local_6)
-                    {
-                        _local_14 = ((_local_14 + _local_15) + "\n");
-                        _local_13++;
-                    }
-                    _local_21.notifyPlayer(_local_14, 0xFF00, (1000 + (500 * _local_13)));
-                    break;
                 case Parameters.data_.rotateLeft:
                     if (!Parameters.data_.allowRotation) break;
                     this.rotateLeft_ = 1;
@@ -1151,6 +1089,10 @@ public class MapUserInput
                     break;
                 case Parameters.data_.SelfTPHotkey:
                     this.gs_.gsc_.teleportId(_local_21.objectId_);
+                    break;
+                case Parameters.data_.autoAbilKey:
+                    Parameters.data_.autoAbil = !Parameters.data_.autoAbil;
+                    _local_21.notifyPlayer((Parameters.data_.autoAbil) ? "Auto Ability enabled" : "Auto Ability disabled", 0xFF00, 1500);
                     break;
             }
             this.setPlayerMovement();

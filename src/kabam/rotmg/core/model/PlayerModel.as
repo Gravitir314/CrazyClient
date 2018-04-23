@@ -302,6 +302,11 @@ public class PlayerModel
             return (this.charList.bestLevel(_arg_1));
         }
 
+        public function getBestCharFame():int
+        {
+            return (this.charList.bestCharFame_);
+        }
+
         public function setCharacterList(_arg_1:SavedCharactersList):void
         {
             this.charList = _arg_1;

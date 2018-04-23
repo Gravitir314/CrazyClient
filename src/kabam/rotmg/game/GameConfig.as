@@ -57,6 +57,8 @@ import kabam.rotmg.game.view.CreditDisplayMediator;
 import kabam.rotmg.game.view.GameSpriteMediator;
 import kabam.rotmg.game.view.GiftStatusDisplay;
 import kabam.rotmg.game.view.GiftStatusDisplayMediator;
+import kabam.rotmg.game.view.ShopDisplay;
+import kabam.rotmg.game.view.ShopDisplayMediator;
 import kabam.rotmg.game.view.MapOverlayMediator;
 import kabam.rotmg.game.view.MoneyChangerPanel;
 import kabam.rotmg.game.view.MoneyChangerPanelMediator;
@@ -149,6 +151,7 @@ public class GameConfig implements IConfig
         private function makeGiftStatusDisplayMappings():void
         {
             this.mediatorMap.map(GiftStatusDisplay).toMediator(GiftStatusDisplayMediator);
+            this.mediatorMap.map(ShopDisplay).toMediator(ShopDisplayMediator);
             this.mediatorMap.map(GameSprite).toMediator(GameSpriteMediator);
             this.mediatorMap.map(CreditDisplay).toMediator(CreditDisplayMediator);
             this.mediatorMap.map(MoneyChangerPanel).toMediator(MoneyChangerPanelMediator);

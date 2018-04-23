@@ -18,9 +18,9 @@ public class TextToolTip extends ToolTip
         public var titleText_:TextFieldDisplayConcrete;
         public var tipText_:TextFieldDisplayConcrete;
 
-        public function TextToolTip(_arg_1:uint, _arg_2:uint, _arg_3:String, _arg_4:String, _arg_5:int, _arg_6:Object=null)
+        public function TextToolTip(_arg_1:uint, _arg_2:uint, _arg_3:String, _arg_4:String, _arg_5:int, _arg_6:Object=null, _arg_7:Boolean=true)
         {
-            super(_arg_1, 1, _arg_2, 1);
+            super(_arg_1, 1, _arg_2, 1, _arg_7);
             if (_arg_3 != null)
             {
                 this.titleText_ = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);

@@ -80,6 +80,7 @@ import io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse;
 import io.decagames.rotmg.dailyQuests.signal.QuestFetchCompleteSignal;
 import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
 import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
 
 import kabam.lib.net.api.MessageMap;
 import kabam.lib.net.api.MessageProvider;
@@ -288,6 +289,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
         private var model:GameModel;
         private var updateActivePet:UpdateActivePet;
         private var petsModel:PetsModel;
+        private var statsTracker:CharactersMetricsTracker;
         private var friendModel:FriendModel;
         private var servers:ServerModel;
         private var keyInfoResponse:KeyInfoResponseSignal;
@@ -320,6 +322,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.questFetchComplete = this.injector.getInstance(QuestFetchCompleteSignal);
             this.questRedeemComplete = this.injector.getInstance(QuestRedeemCompleteSignal);
             this.claimDailyRewardResponse = this.injector.getInstance(ClaimDailyRewardResponseSignal);
+            this.statsTracker = this.injector.getInstance(CharactersMetricsTracker);
             this.logger = this.injector.getInstance(ILogger);
             this.handleDeath = this.injector.getInstance(HandleDeathSignal);
             this.zombify = this.injector.getInstance(ZombifySignal);
@@ -2691,6 +2694,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
             var _local_6:int = _arg_1.keyTime_;
             var _local_7:ByteArray = _arg_1.key_;
             isFromArena_ = _arg_1.isFromArena_;
+            if (_arg_1.stats_){
+                this.statsTracker.setBinaryStringData(_local_5, _arg_1.stats_);
+            }
             var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
             if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.nexus"}'))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
             {

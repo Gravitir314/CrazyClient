@@ -53,7 +53,11 @@ public class ScoreTextLine extends Sprite implements TooltipAble
             this.nameText_ = new TextFieldDisplayConcrete().setSize(_arg_1).setColor(_arg_2);
             this.nameText_.setBold(true);
             this.nameText_.setAutoSize(TextFieldAutoSize.RIGHT);
-            this.nameText_.setStringBuilder(new LineBuilder().setParams(_arg_4));
+            var _local_11:LineBuilder = new LineBuilder().setParams(_arg_4);
+            if (_arg_8 == "+"){
+                _local_11.setPrefix("Bonus: ");
+            }
+            this.nameText_.setStringBuilder(_local_11);
             this.nameText_.x = 410;
             this.nameText_.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
             addChild(this.nameText_);
@@ -172,7 +176,7 @@ public class ScoreTextLine extends Sprite implements TooltipAble
             _local_1.pushParams(this.description);
             if (this.level > 1)
             {
-                _local_1.pushParams(TextKey.BLANK, {"data":" ("});
+                _local_1.pushParams(TextKey.BLANK, {"data":" \n("});
                 _local_1.pushParams("FameBonus.LevelRequirement", {"level":this.level});
                 _local_1.pushParams(TextKey.BLANK, {"data":")"});
             }

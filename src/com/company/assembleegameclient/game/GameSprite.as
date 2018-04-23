@@ -17,6 +17,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.CachingColorTransformer;
 import com.company.util.MoreColorUtil;
@@ -89,9 +90,7 @@ public class GameSprite extends AGameSprite
         public var chatPlayerMenu:PlayerMenu;
         public var questBar:QuestHealthBar;
         private var timerCounter:TextFieldDisplayConcrete;
-        private var timerCounterStringBuilder:StaticStringBuilder;
         private var findKeys:TextFieldDisplayConcrete;
-        private var findKeysStringBuilder:StaticStringBuilder;
 
         public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
         {
@@ -567,11 +566,11 @@ public class GameSprite extends AGameSprite
                     this.updateTimer(_local_5);
                 }
             }
-            if (Parameters.data_.keyList)
-            {
+            if (this.findKeys == null) {
                 this.listKeys();
-                this.updateKeyHolders();
-            } else {
+            }
+            this.keysFind();
+            if ((!Parameters.data_.keyList) && (this.findKeys != null) || (Options.hidden)) {
                 this.findKeys.visible = false;
             }
             var _local_6:Player = map.player_;
@@ -629,13 +628,6 @@ public class GameSprite extends AGameSprite
             this.timerCounter.setText(((Parameters.phaseName + "\n") + toTimeCode((Parameters.phaseChangeAt - _arg_1))));
         }
 
-        public function updateKeyHolders():void
-        {
-            this.findKeys.visible = true;
-            this.findKeys.setText(("Key List:" + "\n") + Parameters.keyHolders);
-            keysFind();
-        }
-
         public static function toTimeCode(_arg_1:Number):String{
             var _local_2:int = Math.floor(((_arg_1 * 0.001) % 60));
             var _local_3:String = ((_local_2 < 10) ? ("0" + _local_2) : String(_local_2));
@@ -648,26 +640,22 @@ public class GameSprite extends AGameSprite
         private function addTimer():void
         {
             if (this.timerCounter == null){
-                this.timerCounter = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
+                this.timerCounter = new TextFieldDisplayConcrete().setSize(Parameters.data_.uiTextSize).setColor(0xFFFFFF);
                 this.timerCounter.mouseChildren = false;
                 this.timerCounter.setBold(true);
-                this.timerCounterStringBuilder = new StaticStringBuilder("0:00");
-                this.timerCounter.setStringBuilder(this.timerCounterStringBuilder);
                 this.timerCounter.filters = [EMPTY_FILTER];
                 this.timerCounter.x = 3;
                 this.timerCounter.y = 80;
                 addChild(this.timerCounter);
             }
         }
-        
+
         private function listKeys():void
         {
-            if (this.findKeys == null){
-                this.findKeys = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
+            if (this.findKeys == null) {
+                this.findKeys = new TextFieldDisplayConcrete().setSize(Parameters.data_.uiTextSize).setColor(0xFFFFFF);
                 this.findKeys.mouseChildren = false;
                 this.findKeys.setBold(true);
-                this.findKeysStringBuilder = new StaticStringBuilder("Key List:");
-                this.findKeys.setStringBuilder(this.findKeysStringBuilder);
                 this.findKeys.filters = [EMPTY_FILTER];
                 this.findKeys.x = 3;
                 this.findKeys.y = 130;
@@ -682,6 +670,8 @@ public class GameSprite extends AGameSprite
             var _local_3:* = null;
             var _local_6:* = null;
             var _local_1:String = "";
+            this.findKeys.visible = true;
+            this.findKeys.setText(("Key List:" + "\n") + Parameters.keyHolders);
             for each (var _local_2:GameObject in this.map.goDict_) {
                 if ((_local_2 is Player)){
                     _local_4 = 0;

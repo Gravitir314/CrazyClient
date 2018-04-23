@@ -102,6 +102,14 @@
       <Explanation>Starts a timer which will be shown on top left of your screen&#xA;Count specifies how many timer the timer should ticks.</Explanation>
    </Article>
    <Article>
+      <Command>/uitextsize &lt;value&gt;</Command>
+      <Explanation>Set size of text in left-side ui panel&#xA;Default is 15.</Explanation>
+   </Article>
+   <Article>
+      <Command>/keylist</Command>
+      <Explanation>Toggle list of keyholders in left-side ui panel.</Explanation>
+   </Article>
+   <Article>
       <Command>/nexus</Command>
       <Explanation>Sends you to nexus&#xA;Can be used to fix the issue with nexus key sending you to realm</Explanation>
    </Article>

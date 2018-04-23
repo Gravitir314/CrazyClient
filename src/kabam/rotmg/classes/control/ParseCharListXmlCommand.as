@@ -5,6 +5,8 @@
 
 package kabam.rotmg.classes.control
 {
+import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
+
 import kabam.rotmg.classes.model.CharacterClass;
 import kabam.rotmg.classes.model.CharacterSkin;
 import kabam.rotmg.classes.model.CharacterSkinState;
@@ -21,6 +23,8 @@ public class ParseCharListXmlCommand
         public var model:ClassesModel;
         [Inject]
         public var logger:ILogger;
+        [Inject]
+        public var statsTracker:CharactersMetricsTracker;
 
 
         public function execute():void
@@ -28,6 +32,7 @@ public class ParseCharListXmlCommand
             this.parseMaxLevelsAchieved();
             this.parseItemCosts();
             this.parseOwnership();
+            this.statsTracker.parseCharListData(this.data);
         }
 
         private function parseMaxLevelsAchieved():void

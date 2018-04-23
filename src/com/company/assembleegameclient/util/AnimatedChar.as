@@ -241,6 +241,10 @@ public class AnimatedChar
             return (_local_8);
         }
 
+        public function getHeight():int{
+            return (this.height_);
+        }
+
 
     }
 }//package com.company.assembleegameclient.util
