@@ -799,7 +799,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
             this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "Toggle UI-mode from CC to prod", this.onToggleUI));
-            this.addOptionAndPosition(new ChoiceOption("keyList", makeOnOffLabels(), [true, false], "Key list", "Shows the list of keyholders in left-side ui panel.", null));
         }
 
         private function addOtherOptions():void
@@ -888,6 +887,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Leech Notifier", "Notifies you with a sound when event chest spawned/oryx shaking/2nd lab open/portal spawned in ice cave.", null));
             this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
             this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null));
+            this.addOptionAndPosition(new ChoiceOption("keyList", makeOnOffLabels(), [true, false], "Key list", "Shows the list of keyholders in left-side ui panel.", null));
             this.tombDeactivate();
             this.addOptionAndPosition(new NullOption());
         }

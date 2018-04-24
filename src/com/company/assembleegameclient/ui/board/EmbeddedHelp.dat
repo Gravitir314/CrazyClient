@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Articles>
+    <Article>
+      <Command>/status</Command>
+      <Explanation>Display current values to commands.&#xA;List of commands:&#xA;/onlygods &lt;true|false&gt;&#xA;/blockcubes &lt;true|false&gt;&#xA;/blockpots &lt;true|false&gt;&#xA;/blockabil &lt;true|false&gt;&#xA;/blocktp &lt;true|false&gt;&#xA;/statustext &lt;true|false&gt;&#xA;/dodbot &lt;true|false&gt;&#xA;/lockfilter &lt;true|false&gt;&#xA;/recondelay &lt;value&gt;&#xA;/autonex &lt;value&gt;&#xA;/autopot &lt;value&gt;&#xA;/automana &lt;value&gt;</Explanation>
+   </Article>
    <Article>
       <Command>/con &lt;server?&gt; &lt;character?&gt; &lt;realm?&gt;</Command>
       <Explanation>Connects you to different servers and worlds&#xA;All parameters are optional (indicated by ?)&#xA;Server specifies the server to connect to (e.g. uss2)&#xA;Character is the class you want to connect as, name doesn't have to be written in its entirety (e.g. /con kn)&#xA;2 can be postfixed to indicate the second instance of the said character (e.g. kn2 for second knight)&#xA;Realm selects a realm to connect to, the realm must have been visited before (e.g. med for medusa)&#xA;v can be used for vault&#xA;If no parameters are given you'll be connected the a server told by a friend&#xA;To ask a friend to tell their server, tell them s? (note: they must have added you as a friend with /afr command)</Explanation>
@@ -70,6 +74,14 @@
       <Explanation>Sets your skin&#xA;A map change is required for this to take effect&#xA;Use none to remove the skin</Explanation>
    </Article>
    <Article>
+      <Command>/name &lt;name&gt;</Command>
+      <Explanation>Changes the name displayed on the HUD&#xA;Does not change your name on chat&#xA;The name will only be displayed on characters that have no backpack</Explanation>
+   </Article>
+   <Article>
+      <Command>/name</Command>
+      <Explanation>Changes the name displayed on the HUD back to normal</Explanation>
+   </Article>
+   <Article>
       <Command>/setmsg &lt;message id&gt; &lt;message&gt;</Command>
       <Explanation>Sets a message to be used with a hotkey (Options -> Messages)&#xA;Message ID must be between 1 and 3</Explanation>
    </Article>
@@ -107,7 +119,7 @@
    </Article>
    <Article>
       <Command>/keylist</Command>
-      <Explanation>Toggle list of keyholders in left-side ui panel.</Explanation>
+      <Explanation>Toggle list of keyholders on left-side panel.</Explanation>
    </Article>
    <Article>
       <Command>/nexus</Command>

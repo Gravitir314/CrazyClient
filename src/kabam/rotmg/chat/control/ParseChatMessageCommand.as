@@ -772,7 +772,6 @@ public class ParseChatMessageCommand
                 case "/status":
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.onlyGods) ? "Only Gods: On" : "Only Gods: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockCubes) ? "Cubes Blocked" : "Cubes Allowed")));
-                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "Tile Moving: On" : "Tile Moving: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockPots) ? "Thirsty: On" : "Thirsty: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockAbil) ? "Ability Blocked" : "Ability Allowed")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.blockTP) ? "Teleport Blocked" : "Teleport Allowed")));

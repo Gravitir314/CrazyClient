@@ -15,6 +15,7 @@ import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.Portal;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.menu.PlayerGroupMenu;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.tooltip.PlayerGroupToolTip;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.util.AssetLibrary;
@@ -449,7 +450,7 @@ public class MiniMapImp extends MiniMap
                             }
                             else
                             {
-                                if ((((_local_2 is Container) && (!(_local_2.objectType_ == 1284))) && (!(_local_2.objectType_ == 1860))))
+                                if ((((_local_2 is Container) && (!Options.hidden) && (!(_local_2.objectType_ == 1284))) && (!(_local_2.objectType_ == 1860))))
                                 {
                                     _local_3 = gameObjectToColor(_local_2);
                                 }
