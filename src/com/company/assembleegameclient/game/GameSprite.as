@@ -675,7 +675,7 @@ public class GameSprite extends AGameSprite
             for each (var _local_2:GameObject in this.map.goDict_) {
                 if ((_local_2 is Player)){
                     _local_4 = 0;
-                    while (_local_4 < 20) {
+                    while (_local_4 < 10) {
                         _local_7 = _local_2.equipment_[_local_4];
                         _local_3 = ObjectLibrary.xmlLibrary_[_local_7];
                         if (((_local_3) && ("Consumable" in _local_3))){

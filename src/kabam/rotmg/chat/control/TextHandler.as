@@ -323,10 +323,7 @@ public class TextHandler
             {
                 if (((_arg_1.name_ == "#Thessal the Mermaid Goddess") && (_arg_1.text_ == "Is King Alexander alive?")))
                 {
-                    if (!(_arg_1.text_ == "He lives and reigns and conquers the world")) //not finished
-                    {
-                        this.model.player.map_.gs_.gsc_.playerText("He lives and reigns and conquers the world");
-                    }
+                    this.model.player.map_.gs_.gsc_.playerText("He lives and reigns and conquers the world");
                 }
                 if ((_arg_1.name_ == "#Ghost of Skuld") && (!(_arg_1.text_.indexOf("'READY'") == -1)))
                 {
@@ -373,7 +370,7 @@ public class TextHandler
             {
                 if (_local_6.indexOf(_local_5) != -1)
                 {
-                    this.conToServ(_arg_1.text_);
+                    this.conToServ(_local_6);
                     if (Parameters.data_.mobNotifier)
                     {
                         _local_15.levelUpEffect("", true);
