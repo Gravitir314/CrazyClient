@@ -424,7 +424,7 @@
       </Projectile>
    </Object>
    <Object type="0x95a" id="pD Swords Scout">
-      <Group>Host Players</Group>
+      <Group>Host Players Scouts</Group>
       <DisplayId>Sword Wielding Host</DisplayId>
       <Class>Character</Class>
       <Enemy/>
@@ -461,7 +461,7 @@
       <StunImmune/>
    </Object>
    <Object type="0x95b" id="pD Wands Scout">
-      <Group>Host Players</Group>
+      <Group>Host Players Scouts</Group>
       <DisplayId>Wand Wielding Host</DisplayId>
       <Class>Character</Class>
       <Enemy/>
@@ -494,7 +494,7 @@
       </Projectile>
    </Object>
    <Object type="0x95c" id="pD Bows Scout">
-      <Group>Host Players</Group>
+      <Group>Host Players Scouts</Group>
       <DisplayId>Bow Wielding Host</DisplayId>
       <Class>Character</Class>
       <Enemy/>
@@ -528,7 +528,7 @@
       <ParalyzeImmune/>
    </Object>
    <Object type="0x95d" id="pD Daggers Scout">
-      <Group>Host Players</Group>
+      <Group>Host Players Scouts</Group>
       <DisplayId>Dagger Wielding Host</DisplayId>
       <Class>Character</Class>
       <Enemy/>
@@ -564,7 +564,7 @@
       </Projectile>
    </Object>
    <Object type="0x95e" id="pD Staves Scout">
-      <Group>Host Players</Group>
+      <Group>Host Players Scouts</Group>
       <DisplayId>Staff Wielding Host</DisplayId>
       <Class>Character</Class>
       <Enemy/>
@@ -602,7 +602,7 @@
       </Projectile>
    </Object>
    <Object type="0x95f" id="pD Katanas Scout">
-      <Group>Host Players</Group>
+      <Group>Host Players Scouts</Group>
       <DisplayId>Katana Wielding Host</DisplayId>
       <Class>Character</Class>
       <Enemy/>

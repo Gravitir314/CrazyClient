@@ -178,17 +178,12 @@
       <ShadowSize>80</ShadowSize>
    </Object>
    <Object type="0x0dc7" id="Jungle Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Defense>0</Defense>
-      <XpMult>0</XpMult>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0dc8" id="Jungle Invisible Solid">
       <Class>GameObject</Class>

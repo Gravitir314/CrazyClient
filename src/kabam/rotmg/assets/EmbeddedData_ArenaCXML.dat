@@ -260,7 +260,6 @@
          </AnimatedTexture>
       </RandomTexture>
       <Size>100</Size>
-      <XpMult>0.0</XpMult>
       <Z>1</Z>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
@@ -319,7 +318,6 @@
          </AnimatedTexture>
       </RandomTexture>
       <Size>100</Size>
-      <XpMult>0.0</XpMult>
       <Z>1.9</Z>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>

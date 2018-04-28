@@ -163,8 +163,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>60</Size>
@@ -191,8 +189,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>60</Size>
@@ -219,8 +215,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>60</Size>
@@ -247,8 +241,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>60</Size>
@@ -256,15 +248,12 @@
       <NoMiniMap/>
    </Object>
    <Object type="0xfab" id="Onsen Steam">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>SakuraEnvironment8x8</File>
          <Index>0x36</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Effect color="0xffffff" rate="2" life="3" lifeVariance=".1" speed="0" speedVariance=".5" size="10" sizeVariance="10" rise="1" riseVariance=".1" rangeX="5" rangeY="5">CustomParticles</Effect>
    </Object>
    <Object type="0xfac" id="Onsen Sign">
@@ -398,8 +387,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>60</Size>

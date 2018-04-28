@@ -18,6 +18,7 @@
       <Level>1</Level>
       <XpMult>0.8</XpMult>
       <NoArticle/>
+      <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Blade</ObjectId>
          <Damage>17</Damage>

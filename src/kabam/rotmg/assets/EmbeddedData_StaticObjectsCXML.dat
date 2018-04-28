@@ -14,7 +14,6 @@
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x0101" id="Tree B">
@@ -30,7 +29,6 @@
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x0102" id="Tree Leafless">
@@ -46,7 +44,6 @@
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x0103" id="Tree Dead">
@@ -62,7 +59,6 @@
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x0104" id="Tree Jungle">
@@ -78,7 +74,6 @@
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x0105" id="Bush">
@@ -1953,12 +1948,9 @@
          <File>lofiEnvironment</File>
          <Index>0x49</Index>
       </Texture>
-      <HitSound>monster/trees_hit</HitSound>
-      <DeathSound>monster/tress_death</DeathSound>
       <MaxHitPoints>1000</MaxHitPoints>
       <Size>175</Size>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x01df" id="Guild Register">
@@ -4174,11 +4166,7 @@
          <File>lofiObj3</File>
          <Index>0x9a</Index>
       </Texture>
-      <HitSound>monster/stone_walls_hit</HitSound>
-      <DeathSound>monster/stone_walls_death</DeathSound>
-      <MaxHitPoints>400</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x1838" id="GhostShip Panel">
@@ -5788,10 +5776,6 @@
             <Index>0x2d2</Index>
          </Texture>
       </RandomTexture>
-      <HitSound>monster/blobs_hit</HitSound>
-      <DeathSound>monster/blobs_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <XpMult>0.0</XpMult>
       <MinSize>120</MinSize>
       <MaxSize>160</MaxSize>
       <Static/>
@@ -5913,10 +5897,6 @@
             <Index>0x7e</Index>
          </Texture>
       </RandomTexture>
-      <HitSound>monster/rocks_hit</HitSound>
-      <DeathSound>monster/rocks_death</DeathSound>
-      <MaxHitPoints>2000</MaxHitPoints>
-      <XpMult>0.0</XpMult>
       <MinSize>120</MinSize>
       <MaxSize>140</MaxSize>
       <Static/>
@@ -6184,8 +6164,6 @@
             <Index>0xec</Index>
          </Texture>
       </Top>
-      <HitSound>monster/stone_walls_hit</HitSound>
-      <DeathSound>monster/stone_walls_death</DeathSound>
       <Static/>
       <FullOccupy/>
       <OccupySquare/>
@@ -6271,9 +6249,6 @@
       <Static/>
       <OccupySquare/>
       <EnemyOccupySquare/>
-      <XpMult>0.0</XpMult>
-      <HitSound>monster/rocks_hit</HitSound>
-      <DeathSound>monster/rocks_death</DeathSound>
    </Object>
    <Object type="0x1900" id="Holloween Leaves">
       <Class>GameObject</Class>
@@ -6309,11 +6284,7 @@
          <File>lofiObj3</File>
          <Index>0x2e9</Index>
       </Texture>
-      <HitSound>monster/trees_hit</HitSound>
-      <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x5f00" id="Arena Cauldron">
@@ -6322,11 +6293,7 @@
          <File>lofiObj3</File>
          <Index>0x2ea</Index>
       </Texture>
-      <HitSound>monster/trees_hit</HitSound>
-      <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x5f11" id="Arena Grave Stones">
@@ -6349,11 +6316,7 @@
             <Index>0x2ec</Index>
          </Texture>
       </RandomTexture>
-      <HitSound>monster/trees_hit</HitSound>
-      <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x1904" id="Gate Entry 2 Rotated">

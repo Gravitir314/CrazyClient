@@ -18,8 +18,6 @@
       <NoMiniMap/>
       <Size>150</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x709a" id="Red Egg Summoner">
       <Class>Character</Class>
@@ -30,8 +28,6 @@
       <NoMiniMap/>
       <Size>150</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x709b" id="Silver Egg Summoner">
       <Class>Character</Class>
@@ -42,8 +38,6 @@
       <NoMiniMap/>
       <Size>150</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x709c" id="Yellow Egg Summoner">
       <Class>Character</Class>
@@ -54,8 +48,6 @@
       <NoMiniMap/>
       <Size>150</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x701a" id="Crawling Depths Egg Sac">
       <Enemy/>

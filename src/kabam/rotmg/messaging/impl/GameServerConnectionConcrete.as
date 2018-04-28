@@ -1013,7 +1013,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     _arg_1.notifyPlayer("Auto Ability: Disabled", 0xFF00, 1500);
                 }
             }
-            var _local_8:InvSwap = (this.messages.require(82) as InvSwap);
+            var _local_8:InvSwap = (this.messages.require(INVSWAP) as InvSwap);
             _local_8.time_ = this.gs_.lastUpdate_;
             _local_8.position_.x_ = _arg_1.x_;
             _local_8.position_.y_ = _arg_1.y_;

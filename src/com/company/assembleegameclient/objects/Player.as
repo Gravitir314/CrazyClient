@@ -293,66 +293,6 @@ public class Player extends Character
             return (_local_1);
         }
 
-        public function calculateStatBoosts():void{
-            var _local_2:int;
-            var _local_3:XML;
-            var _local_4:XML;
-            var _local_5:int;
-            var _local_6:int;
-            this.maxHPBoost_ = 0;
-            this.maxMPBoost_ = 0;
-            this.attackBoost_ = 0;
-            this.defenseBoost_ = 0;
-            this.speedBoost_ = 0;
-            this.vitalityBoost_ = 0;
-            this.wisdomBoost_ = 0;
-            this.dexterityBoost_ = 0;
-            var _local_1:uint;
-            while (_local_1 < GeneralConstants.NUM_EQUIPMENT_SLOTS) {
-                if (((equipment_) && (equipment_.length > _local_1))){
-                    _local_2 = equipment_[_local_1];
-                    if (_local_2 != -1){
-                        _local_3 = ObjectLibrary.xmlLibrary_[_local_2];
-                        if (((!(_local_3 == null)) && (_local_3.hasOwnProperty("ActivateOnEquip")))){
-                            for each (_local_4 in _local_3.ActivateOnEquip) {
-                                if (_local_4.toString() == "IncrementStat"){
-                                    _local_5 = int(_local_4.@stat);
-                                    _local_6 = int(_local_4.@amount);
-                                    switch (_local_5){
-                                        case StatData.MAX_HP_STAT:
-                                            this.maxHPBoost_ = (this.maxHPBoost_ + _local_6);
-                                            break;
-                                        case StatData.MAX_MP_STAT:
-                                            this.maxMPBoost_ = (this.maxMPBoost_ + _local_6);
-                                            break;
-                                        case StatData.ATTACK_STAT:
-                                            this.attackBoost_ = (this.attackBoost_ + _local_6);
-                                            break;
-                                        case StatData.DEFENSE_STAT:
-                                            this.defenseBoost_ = (this.defenseBoost_ + _local_6);
-                                            break;
-                                        case StatData.SPEED_STAT:
-                                            this.speedBoost_ = (this.speedBoost_ + _local_6);
-                                            break;
-                                        case StatData.VITALITY_STAT:
-                                            this.vitalityBoost_ = (this.vitalityBoost_ + _local_6);
-                                            break;
-                                        case StatData.WISDOM_STAT:
-                                            this.wisdomBoost_ = (this.wisdomBoost_ + _local_6);
-                                            break;
-                                        case StatData.DEXTERITY_STAT:
-                                            this.dexterityBoost_ = (this.dexterityBoost_ + _local_6);
-                                            break;
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-                _local_1++;
-            };
-        }
-
         public function setRelativeMovement(_arg_1:Number, _arg_2:Number, _arg_3:Number):void
         {
             var _local_4:Number;
@@ -1714,21 +1654,6 @@ public class Player extends Character
                 }
                 else
                 {
-                    if ((this.followPortal != null) && (_local_14 is Portal)) //follow to portal and enter
-                    {
-                        _local_10 = _local_14.objectId_;
-                        _local_7 = (((this.followPortal.y_ - y_) * (this.followPortal.y_ - y_)) + ((this.followPortal.x_ - x_) * (this.followPortal.x_ - x_)));
-                        if (_local_7 < 0.5)
-                        {
-                            map_.gs_.gsc_.usePortal(_local_10);
-                        }
-                        else
-                        {
-                            _local_7 = Math.atan2((this.followPortal.y_ - y_), (this.followPortal.x_ - x_));
-                            moveVec_.x = (_local_6 * Math.cos(_local_7));
-                            moveVec_.y = (_local_6 * Math.sin(_local_7));
-                        }
-                    }
                     if (this.followTarget != null)
                     {
                         _local_7 = (((this.followTarget.y_ - y_) * (this.followTarget.y_ - y_)) + ((this.followTarget.x_ - x_) * (this.followTarget.x_ - x_)));

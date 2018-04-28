@@ -167,16 +167,12 @@
    </Object>
    <Object type="0x2009" id="md dwGenerator">
       <DisplayId>Janus the Doorwarden</DisplayId>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x746D" id="md dwspawner">
       <Class>Character</Class>
@@ -187,8 +183,6 @@
       <NoMiniMap/>
       <Size>250</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x2008" id="md Janus the Doorwarden">
       <DisplayId>Janus the Doorwarden</DisplayId>
@@ -345,52 +339,36 @@
       </Projectile>
    </Object>
    <Object type="0x746F" id="md placer1">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x2002" id="md placer3">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x2003" id="md placer2">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x2004" id="md placer4">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x2005" id="Craig, Intern of the Mad God">
       <Class>Character</Class>
@@ -404,16 +382,12 @@
       <ShadowSize>50</ShadowSize>
    </Object>
    <Object type="0x2006" id="md placer5">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x2007" id="md Loot Balloon Doorwarden">
       <DisplayId>Janus Chest</DisplayId>

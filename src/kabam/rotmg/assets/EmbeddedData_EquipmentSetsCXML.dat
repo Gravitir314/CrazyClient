@@ -107,6 +107,16 @@
       <ActivateOnEquipAll stat="20" amount="6">IncrementStat</ActivateOnEquipAll>
       <ActivateOnEquipAll stat="28" amount="5">IncrementStat</ActivateOnEquipAll>
    </EquipmentSet>
+   <EquipmentSet type="0x000d" id="Horrific Sorcerer Set">
+      <Setpiece slot="0" itemtype="0xbbc">Equipment</Setpiece>
+      <Setpiece slot="1" itemtype="0xbbd">Equipment</Setpiece>
+      <Setpiece slot="2" itemtype="0xbbe">Equipment</Setpiece>
+      <Setpiece slot="3" itemtype="0xbbf">Equipment</Setpiece>
+      <ActivateOnEquipAll skinType="0xbc1" size="80" color="0x92A9BA" bulletType="Horrific Proj Big">ChangeSkin</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="21" amount="15">IncrementStat</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="20" amount="3">IncrementStat</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="22" amount="6">IncrementStat</ActivateOnEquipAll>
+   </EquipmentSet>
    <EquipmentSet type="0x000f" id="Swarming Huntress Set">
       <Setpiece slot="0" itemtype="0x08f7">Equipment</Setpiece>
       <Setpiece slot="1" itemtype="0x08f8">Equipment</Setpiece>

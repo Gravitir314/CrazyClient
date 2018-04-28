@@ -955,11 +955,7 @@
          <File>lofiObj3</File>
          <Index>0x30e</Index>
       </Texture>
-      <HitSound>monster/trees_hit</HitSound>
-      <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x5f10" id="Arena Statue Right">
@@ -1017,11 +1013,7 @@
             <Index>0x93</Index>
          </Texture>
       </RandomTexture>
-      <HitSound>monster/trees_hit</HitSound>
-      <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
       <EnemyOccupySquare/>
    </Object>
@@ -1037,11 +1029,7 @@
             <Index>0x95</Index>
          </Texture>
       </RandomTexture>
-      <HitSound>monster/rocks_hit</HitSound>
-      <DeathSound>monster/rocks_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Static/>
-      <XpMult>0.0</XpMult>
       <OccupySquare/>
    </Object>
    <Object type="0x5f12" id="Arena Ghost 2">

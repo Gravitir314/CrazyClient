@@ -951,6 +951,17 @@
       <UnlockSpecial>Set Skin</UnlockSpecial>
       <NoSkinSelect/>
    </Object>
+   <Object type="0xbc1" id="Horrific Sorcerer Set Skin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>17</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0325</PlayerClassType>
+      <UnlockSpecial>Set Skin</UnlockSpecial>
+      <NoSkinSelect/>
+   </Object>
    <Object type="0x7492" id="Mini Geb">
       <Skin/>
       <Class>Skin</Class>
@@ -3769,6 +3780,96 @@
          <Index>344</Index>
       </AnimatedTexture>
       <PlayerClassType>0x30e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2456" id="Butterfly Wizard">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>345</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x30e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0xbc2" id="Mini Horrific">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>123</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0325</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x245e" id="Demonhunter Huntress">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>346</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0322</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x245f" id="Blessed Champion Paladin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>347</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031f</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2460" id="Sworded Inquisitor Paladin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>348</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031f</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2461" id="Dapper Disguiser Rogue">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>349</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0300</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2462" id="Wise Elder Sorcerer">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>350</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0325</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2468" id="Jellyhead Trickster">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>351</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0324</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x7005" id="Mini Horrific Sorcerer">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>352</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0325</PlayerClassType>
       <NoSkinSelect/>
    </Object>
 </Objects>

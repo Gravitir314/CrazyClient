@@ -572,7 +572,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>140</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B11" id="SN Hs">
@@ -583,7 +582,6 @@
          <Index>0x2</Index>
       </AnimatedTexture>
       <Size>100</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B12" id="SN MD">
@@ -594,7 +592,6 @@
          <Index>0x3</Index>
       </AnimatedTexture>
       <Size>80</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B13" id="SN Ds">
@@ -605,7 +602,6 @@
          <Index>0x4</Index>
       </AnimatedTexture>
       <Size>60</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B14" id="SN H C">
@@ -634,7 +630,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>40</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B15" id="SN Sg">
@@ -645,7 +640,6 @@
          <Index>0x7</Index>
       </AnimatedTexture>
       <Size>60</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B16" id="SN W Bh TL">
@@ -2384,7 +2378,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>40</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B2F" id="SN Bh Tw 1">
@@ -3266,8 +3259,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <XpMult>0.0</XpMult>
       <Size>80</Size>
       <ShadowSize>0</ShadowSize>
       <ShadowColor>0xFFFDCB</ShadowColor>
@@ -3304,7 +3295,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>60</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B61" id="SN Hn">
@@ -3315,7 +3305,6 @@
          <Index>0x3</Index>
       </AnimatedTexture>
       <Size>60</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B62" id="SN Cs">
@@ -3326,7 +3315,6 @@
          <Index>0x8</Index>
       </AnimatedTexture>
       <Size>60</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B63" id="SN FW H NFS">
@@ -3389,8 +3377,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>60</Size>
@@ -3405,9 +3391,7 @@
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
    </Object>
    <Object type="0x3B66" id="SN Map Changer 2">
       <Class>Character</Class>
@@ -3417,9 +3401,7 @@
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
    </Object>
    <Object type="0x3B67" id="SN Map Changer 3">
       <Class>Character</Class>
@@ -3429,9 +3411,7 @@
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
    </Object>
    <Object type="0x3B68" id="SN Map Changer B">
       <Class>Character</Class>
@@ -3441,9 +3421,7 @@
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
    </Object>
    <Object type="0x3B69" id="SN F Ch2">
       <Class>ConnectedWall</Class>
@@ -4177,7 +4155,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>140</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3B84" id="SNS W Bh TL">
@@ -7451,7 +7428,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>140</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3BE5" id="SNN W Bh TL">
@@ -9782,9 +9758,7 @@
          <File>summerNexusObjects8x8</File>
          <Index>0x237</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x3C23" id="SNN Fl">
       <Class>GameObject</Class>
@@ -10504,8 +10478,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <XpMult>0</XpMult>
       <Z>0.27</Z>
       <Flying/>
       <Size>40</Size>
@@ -11323,7 +11295,6 @@
          </AnimatedTexture>
       </AltTexture>
       <Size>140</Size>
-      <XpMult>0.0</XpMult>
       <NoMiniMap/>
    </Object>
    <Object type="0x3C67" id="SNR W Bh TL">
@@ -14063,8 +14034,6 @@
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
    </Object>
 </Objects>

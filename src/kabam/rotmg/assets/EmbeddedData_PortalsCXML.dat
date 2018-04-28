@@ -716,6 +716,15 @@
          <Index>0x54F</Index>
       </Texture>
    </Object>
+   <Object type="0x753f" id="Inner Sanctum Portal Temp">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DungeonName>The Inner Sanctum</DungeonName>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x54F</Index>
+      </Texture>
+   </Object>
    <Object type="0x753E" id="Lair of Draconis Portal">
       <Class>Portal</Class>
       <IntergamePortal/>

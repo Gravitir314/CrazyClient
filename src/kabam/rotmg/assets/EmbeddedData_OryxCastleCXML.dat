@@ -257,6 +257,7 @@
       <StunImmune/>
       <Quest/>
       <Level>20</Level>
+      <EventChestBoss/>
       <AnimatedTexture>
          <File>chars16x16dEncounters</File>
          <Index>20</Index>
@@ -381,19 +382,12 @@
    </Object>
    <Object type="0x0d7a" id="Oryx Guardian TaskMaster">
       <Group>Oryx Minions</Group>
-      <Class>Character</Class>
-      <StasisImmune/>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>lofiEnvironment</File>
+         <Index>0xa4</Index>
       </Texture>
-      <HitSound>monster/skeletons_hit</HitSound>
-      <DeathSound>monster/dwarves_death</DeathSound>
-      <MaxHitPoints>100</MaxHitPoints>
       <Size>0</Size>
-      <Defense>0</Defense>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x0d7c" id="Oryx Guardian Sword">
       <DisplayId>Stone Guardian Sword</DisplayId>
@@ -423,25 +417,12 @@
    </Object>
    <Object type="0x0d7d" id="Oryx Armor Spawner">
       <Group>Oryx Minions</Group>
-      <Class>Character</Class>
-      <StasisImmune/>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>11</Index>
       </AnimatedTexture>
-      <AltTexture id="1">
-         <Texture>
-            <File>invisible</File>
-            <Index>0</Index>
-         </Texture>
-      </AltTexture>
-      <HitSound>monster/skeletons_hit</HitSound>
-      <DeathSound>monster/dwarves_death</DeathSound>
-      <MaxHitPoints>100</MaxHitPoints>
       <Size>0</Size>
-      <Defense>20</Defense>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x0d7e" id="Oryx Suit of Armor">
       <DisplayId>Haunted Armor</DisplayId>

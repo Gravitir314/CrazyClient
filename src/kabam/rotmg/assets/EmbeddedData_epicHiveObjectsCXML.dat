@@ -359,9 +359,7 @@
       <Size>85</Size>
       <HitSound>monster/wooden_walls_hit</HitSound>
       <DeathSound>monster/wooden_walls_death</DeathSound>
-      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>30</Defense>
-      <XpMult>1.0</XpMult>
       <StasisImmune/>
    </Object>
    <Object type="0x1090" id="EH Small Bees">
@@ -906,8 +904,6 @@
       </AnimatedTexture>
       <HitSound>monster/wooden_walls_hit</HitSound>
       <DeathSound>monster/wooden_walls_death</DeathSound>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <XpMult>1</XpMult>
       <NoMiniMap/>
       <StasisImmune/>
       <Size>100</Size>

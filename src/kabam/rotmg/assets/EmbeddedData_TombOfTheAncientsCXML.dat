@@ -569,15 +569,12 @@
       </Projectile>
    </Object>
    <Object type="0x0d25" id="Tomb Boss Anchor">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiChar216x16</File>
          <Index>0x0e</Index>
       </Texture>
       <Size>0</Size>
-      <Defense>0</Defense>
-      <XpMult>0.0</XpMult>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0d3d" id="Tomb Support Statue">
       <Group>Tomb Boss Statues</Group>

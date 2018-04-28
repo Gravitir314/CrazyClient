@@ -6874,8 +6874,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <XpMult>0.0</XpMult>
       <Size>80</Size>
       <ShadowSize>0</ShadowSize>
       <ShadowColor>0xECFFB2</ShadowColor>

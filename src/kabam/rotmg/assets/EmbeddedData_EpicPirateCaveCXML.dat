@@ -71,8 +71,6 @@
       </Texture>
       <Size>80</Size>
       <Z>0.40</Z>
-      <StasisImmune/>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x705b" id="Deadwater Docks Parrot">
       <Group>Deadwater Parrots</Group>

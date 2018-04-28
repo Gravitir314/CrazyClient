@@ -1,6 +1,184 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x20c3" id="Aether Trap">
+      <Class>Character</Class>
+      <HitSound>monster/dark_elves_hit</HitSound>
+      <DeathSound>monster/dark_elves_death</DeathSound>
+      <Size>0</Size>
+      <ShadowSize>100</ShadowSize>
+      <MaxHitPoints>15000</MaxHitPoints>
+      <Defense>65</Defense>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+      <Texture>
+         <File>mountainTempleObjects16x16</File>
+         <Index>0x60</Index>
+      </Texture>
+      <AltTexture id="1">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x63</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="2">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x64</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="3">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x65</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="4">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x66</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="5">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x67</Index>
+         </Texture>
+      </AltTexture>
+   </Object>
+   <Object type="0x7002" id="Daichi Room Wall">
+      <Class>Wall</Class>
+      <Top>
+         <Texture>
+            <File>mountainTempleObjects8x8</File>
+            <Index>0xdd</Index>
+         </Texture>
+      </Top>
+      <Texture>
+         <File>mountainTempleObjects8x8</File>
+         <Index>0xe2</Index>
+      </Texture>
+      <HitSound>monster/stone_walls_hit</HitSound>
+      <DeathSound>monster/stone_walls_death</DeathSound>
+      <Static/>
+      <FullOccupy/>
+      <OccupySquare/>
+      <EnemyOccupySquare/>
+      <BlocksSight/>
+   </Object>
+   <Object type="0x7000" id="Daichi Door helper">
+      <Enemy/>
+      <NoMiniMap/>
+      <Class>Character</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <HitSound>monster/greater_demons_hit</HitSound>
+      <DeathSound>monster/greater_demons_death</DeathSound>
+      <Size>1</Size>
+      <MaxHitPoints>75000</MaxHitPoints>
+      <Defense>12</Defense>
+      <Flying/>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+   </Object>
+   <Object type="0x7004" id="Troom helper">
+      <Enemy/>
+      <NoMiniMap/>
+      <Class>Character</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <HitSound>monster/greater_demons_hit</HitSound>
+      <DeathSound>monster/greater_demons_death</DeathSound>
+      <Size>1</Size>
+      <MaxHitPoints>75000</MaxHitPoints>
+      <Defense>12</Defense>
+      <Flying/>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+   </Object>
+   <Object type="0x7001" id="Lantern Opener">
+      <Enemy/>
+      <NoMiniMap/>
+      <Class>Character</Class>
+      <Texture>
+         <File>mountainTempleObjects16x16</File>
+         <Index>0x39</Index>
+      </Texture>
+      <Size>120</Size>
+      <HitSound>monster/greater_demons_hit</HitSound>
+      <DeathSound>monster/greater_demons_death</DeathSound>
+      <MaxHitPoints>75000</MaxHitPoints>
+      <Defense>12</Defense>
+      <Flying/>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+   </Object>
+   <Object type="0x7003" id="Lantern On">
+      <Enemy/>
+      <NoMiniMap/>
+      <Class>Character</Class>
+      <Texture>
+         <File>mountainTempleObjects16x16</File>
+         <Index>0x39</Index>
+      </Texture>
+      <Animation prob="1.0" period="0.8">
+         <Frame time="0.2">
+            <Texture>
+               <File>mountainTempleObjects16x16</File>
+               <Index>0x68</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>mountainTempleObjects16x16</File>
+               <Index>0x69</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>mountainTempleObjects16x16</File>
+               <Index>0x6a</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>mountainTempleObjects16x16</File>
+               <Index>0x6b</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <Size>120</Size>
+      <HitSound>monster/greater_demons_hit</HitSound>
+      <DeathSound>monster/greater_demons_death</DeathSound>
+      <MaxHitPoints>75000</MaxHitPoints>
+      <Defense>12</Defense>
+      <Flying/>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+   </Object>
+   <Object type="0x6fff" id="MT Troom Chest">
+      <DisplayId>Old Chest</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>mountainTempleObjects16x16</File>
+         <Index>0x02</Index>
+      </Texture>
+      <MaxHitPoints>35000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>160</Size>
+      <XpMult>5.13</XpMult>
+   </Object>
    <Object type="0x6fc6" id="Temple Orange Trident">
       <Class>Projectile</Class>
       <Texture>
@@ -2859,7 +3037,7 @@
          <Speed>50</Speed>
          <LifetimeMS>3000</LifetimeMS>
          <Size>100</Size>
-         <ConditionEffect duration="5">Confused</ConditionEffect>
+         <ConditionEffect duration="1.5">Confused</ConditionEffect>
       </Projectile>
    </Object>
    <Object type="0xaae1" id="Corrupted Monk">

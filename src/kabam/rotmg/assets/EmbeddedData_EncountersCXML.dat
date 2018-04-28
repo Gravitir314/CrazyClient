@@ -1974,19 +1974,12 @@
    </Object>
    <Object type="0x0d66" id="Hermit God Drop">
       <Group>Hermit God Encounter</Group>
-      <Class>Character</Class>
-      <StasisImmune/>
-      <NoMiniMap/>
-      <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
-      </Texture>
-      <HitSound>monster/hobbits_death</HitSound>
-      <DeathSound>monster/minion_of_oryx_death</DeathSound>
-      <MaxHitPoints>100</MaxHitPoints>
+      <Class>GameObject</Class>
+      <AnimatedTexture>
+         <File>chars16x16dEncounters2</File>
+         <Index>11</Index>
+      </AnimatedTexture>
       <Size>0</Size>
-      <Defense>0</Defense>
-      <XpMult>0.0</XpMult>
    </Object>
    <Object type="0x0e54" id="Zombie Horde">
       <Enemy/>

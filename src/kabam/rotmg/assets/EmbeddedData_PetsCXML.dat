@@ -3051,7 +3051,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Bagston Pet Skin</DisplayId>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object type="0x6107" id="Goldy Skin">
       <PetSkin/>
@@ -3076,7 +3076,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Goldy Pet Skin</DisplayId>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object type="0x610a" id="Jaco Skin">
       <PetSkin/>
@@ -3202,7 +3202,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Red Bagston Skin</DisplayId>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Helper Bagston" type="0x7fc2">
       <Pet/>
@@ -3240,7 +3240,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Helper Bagston Skin</DisplayId>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Red Helper Bagston" type="0x7fc5">
       <Pet/>
@@ -3278,7 +3278,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Red Helper Bagston Skin</DisplayId>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Muddy Tidechaser" type="0x7fc9">
       <Pet/>
@@ -3290,6 +3290,7 @@
       <Family>Humanoid</Family>
       <Rarity>Common</Rarity>
       <DefaultSkin>Muddy Tidechaser Skin</DefaultSkin>
+      <FirstAbility>Magic Heal</FirstAbility>
       <ShadowSize>40</ShadowSize>
       <Size>80</Size>
    </Object>
@@ -3316,7 +3317,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Muddy Tidechaser Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x8090" id="Disabled Pet Skin">
       <PetSkin/>
@@ -3530,7 +3531,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Turtle Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x1998" id="Peppermint Snail Pet Stone">
       <Class>Equipment</Class>
@@ -3546,7 +3547,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Peppermint Snail Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x1999" id="Golden Crab Pet Stone">
       <Class>Equipment</Class>
@@ -3579,7 +3580,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Robobuddy Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x199b" id="Redbot Pet Stone">
       <Class>Equipment</Class>
@@ -3595,7 +3596,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Redbot Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x199c" id="Gutsbot Pet Stone">
       <Class>Equipment</Class>
@@ -3628,7 +3629,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Cardinal Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x199e" id="USA Eagle Pet Stone">
       <Class>Equipment</Class>
@@ -3644,7 +3645,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>USA Eagle Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x199f" id="Griffin Pet Stone">
       <Class>Equipment</Class>
@@ -3677,7 +3678,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Sheepdog Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19a1" id="Gold Bulldog Pet Stone">
       <Class>Equipment</Class>
@@ -3693,7 +3694,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Gold Bulldog Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19a2" id="Golden Hyena Pet Stone">
       <Class>Equipment</Class>
@@ -3726,7 +3727,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Elephant Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19a4" id="Panda Pet Stone">
       <Class>Equipment</Class>
@@ -3742,7 +3743,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Panda Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19a5" id="King Gorilla Pet Stone">
       <Class>Equipment</Class>
@@ -3775,7 +3776,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Duck Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19a7" id="Mallard Pet Stone">
       <Class>Equipment</Class>
@@ -3791,7 +3792,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Mallard Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19a8" id="Enraged Yack Pet Stone">
       <Class>Equipment</Class>
@@ -3824,7 +3825,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Tan Cat Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19aa" id="White Lion Pet Stone">
       <Class>Equipment</Class>
@@ -3840,7 +3841,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>White Lion Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19ab" id="Tiger Pet Stone">
       <Class>Equipment</Class>
@@ -3873,7 +3874,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Leprechaun Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19ad" id="Red Ant Pet Stone">
       <Class>Equipment</Class>
@@ -3889,7 +3890,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Red Ant Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19ae" id="Bee Pet Stone">
       <Class>Equipment</Class>
@@ -3905,7 +3906,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Bee Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19af" id="Beetleman Pet Stone">
       <Class>Equipment</Class>
@@ -3938,7 +3939,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Penguin Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19b1" id="Karate Purple Pet Stone">
       <Class>Equipment</Class>
@@ -3954,7 +3955,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Karate Purple Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19b2" id="Tank Penguin Pet Stone">
       <Class>Equipment</Class>
@@ -3987,7 +3988,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Dino Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object id="Frilled Lizard" type="0x19b4">
       <Pet/>
@@ -4024,7 +4025,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19b7" id="Poison Drake Pet Stone">
       <Class>Equipment</Class>
@@ -4057,7 +4058,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Spirit Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19b9" id="Werewolf Cub Pet Stone">
       <Class>Equipment</Class>
@@ -4073,7 +4074,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Werewolf Cub Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19ba" id="Hamster Pet Stone">
       <Class>Equipment</Class>
@@ -4089,7 +4090,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Hamster Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19bb" id="Snowy Owl Pet Stone">
       <Class>Equipment</Class>
@@ -4105,7 +4106,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Snowy Owl Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19bc" id="Sprite Star Pet Stone">
       <Class>Equipment</Class>
@@ -4121,7 +4122,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Sprite Star Pet Skin</DisplayId>
-      <feedPower>300</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object type="0x19bd" id="Gummy Bear Pet Stone">
       <Class>Equipment</Class>
@@ -4137,7 +4138,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Gummy Bear Pet Skin</DisplayId>
-      <feedPower>600</feedPower>
+      <feedPower>500</feedPower>
    </Object>
    <Object id="Fire Rooster" type="0x19be">
       <Pet/>
@@ -4211,7 +4212,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Mini Chinese Dragon" type="0x19c4">
       <Pet/>
@@ -4858,7 +4859,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Mr Cactus Jr." type="0x4af4">
       <Pet/>
@@ -4969,7 +4970,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object type="0x08ae" id="Killer Bee Queen">
       <Pet/>
@@ -5011,7 +5012,7 @@
       <Soulbound/>
       <BagType>8</BagType>
       <DisplayId>Killer Bee Queen Pet Skin</DisplayId>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Mini Stone Oryx" type="0x4c05">
       <Pet/>
@@ -5270,7 +5271,7 @@
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
-      <feedPower>5000</feedPower>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Mini Ghost King" type="0x4c2e">
       <Pet/>
@@ -7416,6 +7417,7 @@
       <Family>Woodland</Family>
       <Rarity>Common</Rarity>
       <DefaultSkin>Rat Skin</DefaultSkin>
+      <FirstAbility>Heal</FirstAbility>
       <Size>60</Size>
    </Object>
    <Object type="0x6203" id="Rat Skin">
@@ -8421,6 +8423,228 @@
       <SlotType>10</SlotType>
       <Description>The Ambrosia it stores in its abdomen is used as fuel.\n\nSprite Credits: Santeripe\n\nTransform your pet into Honey-bot Ant of the Automaton family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
       <Activate skinId="9287">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Fountain Child" type="0x244a">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Fountain Child Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x244b" id="Fountain Child Pet Skin">
+      <PetSkin/>
+      <DisplayId>Fountain Child</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>194</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x244c" id="Fountain Child Pet Stone">
+      <DisplayId>Fountain Child Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>194</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>She is a great swimmer.\n\nSprite Credits: Poshun\n\nTransform your pet into Fountain Child of the Humanoid family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9290">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Desert Scorpion" type="0x244d">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Insect</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Desert Scorpion Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x244e" id="Desert Scorpion Pet Skin">
+      <PetSkin/>
+      <DisplayId>Desert Scorpion</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>76</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x244f" id="Desert Scorpion Pet Stone">
+      <DisplayId>Desert Scorpion Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>76</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A distant relative of the scorpion queens found on the shorelines.\n\nSprite Credits: Poshun\n\nTransform your pet into Desert Scorpion of the Insect family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9293">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Giant Centipede" type="0x2450">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Insect</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Giant Centipede Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2451" id="Giant Centipede Pet Skin">
+      <PetSkin/>
+      <DisplayId>Giant Centipede</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>77</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2452" id="Giant Centipede Pet Stone">
+      <DisplayId>Giant Centipede Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>77</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Giant centipedes share their territories with spider queens. Despite its impressive length, it&#8217;s a nimble navigator... And can be highly venomous.\n\nSprite Credits: Poshun\n\nTransform your pet into Giant Centipede of the Insect family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9296">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Silver Sky Serpent" type="0x2453">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Silver Sky Serpent Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2454" id="Silver Sky Serpent Pet Skin">
+      <PetSkin/>
+      <DisplayId>Silver Sky Serpent</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>78</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2455" id="Silver Sky Serpent Pet Stone">
+      <DisplayId>Silver Sky Serpent Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>78</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A divine serpent that takes on a peaceful appearance with its beautiful silver scales and angelic wings. When threatened, its fangs are able to release a venom similar to that of a baneserpent.\n\nSprite Credits: Poshun\n\nTransform your pet into Silver Sky Serpent of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9299">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Twilight Angler" type="0x2458">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Aquatic</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Twilight Angler Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x2459" id="Twilight Angler Pet Skin">
+      <PetSkin/>
+      <DisplayId>Twilight Angler</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>79</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x245a" id="Twilight Angler Pet Stone">
+      <DisplayId>Twilight Angler Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>79</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Your very own portable lamp! Just watch out for its teeth.\n\nSprite Credits: Piggby\n\nTransform your pet into Twilight Angler of the Aquatic family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9304">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Abyss Goliath" type="0x245b">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Abyss Goliath Pet Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x245c" id="Abyss Goliath Pet Skin">
+      <PetSkin/>
+      <DisplayId>Abyss Goliath</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>80</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x245d" id="Abyss Goliath Pet Stone">
+      <DisplayId>Abyss Goliath Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>80</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Well, it looks like SOMEONE skipped leg day.\n\nSprite Credits: Piggby\n\nTransform your pet into Abyss Goliath of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="9307">PetSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>

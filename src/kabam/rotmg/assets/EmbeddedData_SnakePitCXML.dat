@@ -12,16 +12,12 @@
       <Size>0</Size>
    </Object>
    <Object type="0x0e28" id="Snakepit Guard Spawner">
-      <Class>Character</Class>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>39</Index>
       </AnimatedTexture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>100</MaxHitPoints>
-      <StasisImmune/>
    </Object>
    <Object type="0x0e27" id="Snakepit Button">
       <Class>Character</Class>
@@ -37,8 +33,6 @@
             <Index>0x09</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <XpMult>0.0</XpMult>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
    </Object>

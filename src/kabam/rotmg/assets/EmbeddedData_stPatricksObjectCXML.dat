@@ -84,6 +84,8 @@
       </RandomTexture>
       <DrawOnGround/>
       <Static/>
+      <ProtectFromGroundDamage/>
+      <ProtectFromSink/>
    </Object>
    <Object type="0x164f" id="Patty Clover1">
       <Class>GameObject</Class>
@@ -185,15 +187,12 @@
       <MaxHitPoints>10</MaxHitPoints>
    </Object>
    <Object type="0x1655" id="Patty Coin Drop">
-      <Class>Character</Class>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
-         <File>invisible</File>
-         <Index>0</Index>
+         <File>stPatricksObjects8x8</File>
+         <Index>5</Index>
       </Texture>
-      <XpMult>0.0</XpMult>
       <Size>0</Size>
-      <MaxHitPoints>10</MaxHitPoints>
    </Object>
    <Object type="0x5b00" id="MotMG St Patricks Event Anchor">
       <Enemy/>

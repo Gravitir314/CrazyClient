@@ -70,6 +70,7 @@
       <Level>1</Level>
       <XpMult>0.0</XpMult>
       <NoArticle/>
+      <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Fire Bolt</ObjectId>
          <Damage>135</Damage>

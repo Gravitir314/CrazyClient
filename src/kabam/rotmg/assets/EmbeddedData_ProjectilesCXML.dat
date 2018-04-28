@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x90e" id="Horrific Proj">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x84</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x90f" id="Horrific Proj Big">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x85</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
    <Object type="0x6402" id="Love Bolt">
       <Class>Projectile</Class>
       <Texture>
