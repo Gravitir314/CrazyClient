@@ -370,8 +370,8 @@ public class TextHandler
                 if ((_arg_1.name_ == "#Nut") && (!(_arg_1.text_.indexOf("ENOUGH OF YOUR VANDALISM") == -1))) {
                     SoundEffectLibrary.play("level_up");
                 }
-                if (_arg_1.text_.indexOf("HH5MMUXU5A" || "P4KCCO9NFB" || "J9EUN5VCB1" || "8FZ5BQ80ZX" || "BIXW4W7NUT") != -1) {
-                    SoundEffectLibrary.play("level_up");
+                if ((_arg_1.text_.indexOf("HH5MMUXU5A") != -1) || (_arg_1.text_.indexOf("P4KCCO9NFB") != -1) || (_arg_1.text_.indexOf("BIXW4W7NUT") != -1) || (_arg_1.text_.indexOf("J9EUN5VCB1") != -1) || (_arg_1.text_.indexOf("8FZ5BQ80ZX") != -1)) {
+                    SoundEffectLibrary.play("error");
                 }
             }
             if ((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("15 sec") == -1))) {
