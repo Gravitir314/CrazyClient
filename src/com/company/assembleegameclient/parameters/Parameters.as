@@ -476,7 +476,7 @@ public class Parameters
             setDefault("eventnotify", false);
             setDefault("bDebug", false);
             setDefault("keyNoti", false);
-            setDefault("mobNotifier", false);
+            setDefault("mobNotifier", true);
             setDefault("wordNoti", false);
             setDefault("dodBot", false);
             setDefault("autoDecrementHP", true);
@@ -494,7 +494,7 @@ public class Parameters
             setDefault("SWNoTileMove", true);
             setDefault("showDamageOnEnemy", false);
             setDefault("spellThreshold", 1000);
-            setDefault("keyList", false);
+            setDefault("keyList", true);
             setDefault("uiTextSize", 15);
         }
 

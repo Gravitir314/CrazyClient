@@ -357,6 +357,18 @@ public class TextHandler
                 if ((_arg_1.name_ == "#Horific Creation") && (!(_arg_1.text_.indexOf("Me door is open") == -1))) {
                     SoundEffectLibrary.play("level_up");
                 }
+                if ((_arg_1.name_ == "#Troom helper") && (!(_arg_1.text_.indexOf("is opened") == -1))) {
+                    SoundEffectLibrary.play("level_up");
+                }
+                if ((_arg_1.name_ == "#Daichi the Fallen") && (!(_arg_1.text_.indexOf("you are too late") == -1))) {
+                    SoundEffectLibrary.play("level_up");
+                }
+                if ((_arg_1.name_ == "#Nut") && (!(_arg_1.text_.indexOf("ENOUGH OF YOUR VANDALISM") == -1))) {
+                    SoundEffectLibrary.play("level_up");
+                }
+                if (_arg_1.text_.indexOf("HH5MMUXU5A" || "P4KCCO9NFB" || "J9EUN5VCB1" || "8FZ5BQ80ZX" || "BIXW4W7NUT") != -1) {
+                    SoundEffectLibrary.play("level_up");
+                }
             }
             if ((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("15 sec") == -1))) {
                 Parameters.timerActive = true;
@@ -366,18 +378,6 @@ public class TextHandler
                     SoundEffectLibrary.play("level_up");
                 }
             }
-            /*for each (_local_5 in "AW95GKW58") //check msg, connect to server and notif with sound
-            {
-                if (_local_6.indexOf(_local_5) != -1)
-                {
-                    this.conToServ(_local_6);
-                    if (Parameters.data_.mobNotifier)
-                    {
-                        _local_15.levelUpEffect("", true);
-                        SoundEffectLibrary.play("level_up");
-                    }
-                }
-            }*/
             for each (_local_8 in Parameters.data_.tptoList)
             {
                 if (_local_6.indexOf(_local_8) != -1)
