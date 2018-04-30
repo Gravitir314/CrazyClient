@@ -7,6 +7,7 @@ package com.company.assembleegameclient.objects
 {
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.PointUtil;
 
 import flash.utils.Dictionary;
@@ -94,7 +95,7 @@ public class Party
         {
             var _local_3:GameObject;
             var _local_4:Player;
-            if (_arg_1 < (this.lastUpdate_ + 500))
+            if (_arg_1 < (this.lastUpdate_ + ((!Options.hidden && Parameters.lowCPUMode) ? 2500 : 500)))
             {
                 return;
             }

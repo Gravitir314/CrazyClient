@@ -8,6 +8,8 @@ package com.company.assembleegameclient.objects.particles
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.objects.BasicObject;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.GraphicsUtil;
 
@@ -73,6 +75,9 @@ public class Particle extends BasicObject
 
         override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
         {
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             var _local_4:BitmapData = TextureRedrawer.redrawSolidSquare(this.color_, this.size_);
             var _local_5:int = _local_4.width;
             var _local_6:int = _local_4.height;

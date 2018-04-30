@@ -249,7 +249,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
         private static var reconNexus:ReconnectEvent;
         public static var sRec:Boolean = false;
         public static var whereto:String;
-        public static var claimkey:String = "";
         public static var vaultSelect:Boolean = false;
         public static var ignoredBag:int = -1;
         public static var receivingGift:Vector.<Boolean>;
@@ -1451,13 +1450,14 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.encryptConnection();
             var _local_2:Hello = (this.messages.require(HELLO) as Hello);
             _local_2.buildVersion_ = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
-            if (claimkey != "")
+            if (Parameters.dailyCalendar1RunOnce)
             {
                 _local_2.gameId_ = Parameters.DAILYQUESTROOM_GAMEID;
+                Parameters.dailyCalendar1RunOnce = false;
             }
             else
             {
-                if (vaultSelect)
+                if (vaultSelect || Parameters.data_.disableNexus)
                 {
                     _local_2.gameId_ = Parameters.VAULT_GAMEID
                 }
@@ -1507,10 +1507,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
             charId_ = _arg_1.charId_;
             gs_.initialize();
             createCharacter_ = false;
-            if (claimkey != "")
+            if (Parameters.dailyCalendar1RunOnce)
             {
                 this.openDialog.dispatch(new DailyLoginModal());
-                claimkey = "";
+                Parameters.dailyCalendar1RunOnce = false;
             }
         }
 
@@ -1518,7 +1518,13 @@ public class GameServerConnectionConcrete extends GameServerConnection
         {
             if (((!(Parameters.data_.AntiLag)) || (_arg_1.objectId_ == this.playerId_)))
             {
-                this.damage_(_arg_1);
+                if ((_arg_1.objectId_ == this.player.objectId_) || (_arg_1.targetId_ == this.player.objectId_)) {
+                    this.damage_(_arg_1);
+                } else {
+                    if (Parameters.lowCPUMode) {
+                        return;
+                    }
+                }
             }
         }
 
@@ -2004,6 +2010,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 {
                     this.handleSeal((_local_6.goDict_[_arg_1.targetObjectId_] as Player));
                 }
+            }
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
             }
             if (((Parameters.data_.AntiLag) || (Parameters.data_.noParticlesMaster)))
             {
@@ -3053,6 +3062,11 @@ public class GameServerConnectionConcrete extends GameServerConnection
         private function onQuestFetchResponse(_arg_1:QuestFetchResponse):void
         {
             this.questFetchComplete.dispatch(_arg_1);
+            if (Parameters.dailyCalendar2RunOnce){
+                this.gs_.showDailyLoginCalendar();
+                Parameters.dailyCalendar2RunOnce = false;
+                this.escape();
+            }
         }
 
         private function onQuestRedeemResponse(_arg_1:QuestRedeemResponse):void

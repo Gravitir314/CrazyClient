@@ -6,6 +6,8 @@
 package com.company.assembleegameclient.engine3d
 {
 import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 
 import flash.display.BitmapData;
 import flash.display.IGraphicsData;
@@ -94,6 +96,9 @@ public class Object3D
 
         public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:uint, _arg_4:BitmapData):void
         {
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             var _local_5:ObjectFace3D;
             Utils3D.projectVectors(_arg_2.wToS_, this.vW_, this.vS_, this.uvts_);
             for each (_local_5 in this.faces_)

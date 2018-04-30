@@ -5,6 +5,8 @@
 
 package com.company.assembleegameclient.screens
 {
+import com.company.assembleegameclient.account.ui.CheckBoxField;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.charrects.PotionsNeededDisplay;
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
 import com.company.assembleegameclient.ui.Scrollbar;
@@ -13,6 +15,7 @@ import flash.display.DisplayObject;
 import flash.display.Shape;
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.events.FocusEvent;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.geom.Rectangle;
@@ -71,6 +74,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
         private var menuOptionsBar:MenuOptionsBar;
         private var BOUNDARY_LINE_ONE_Y:int = 106;
         private var potionDisplay:PotionsNeededDisplay;
+        private var disableNexusCheckBox:CheckBoxField;
 
         public function CharacterSelectionAndNewsScreen()
         {
@@ -112,6 +116,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             {
                 this.createChooseNameLink();
             }
+            this.createDisableNexusCheckBox();
         }
 
         private function createPotionDisplay():void
@@ -211,6 +216,24 @@ public class CharacterSelectionAndNewsScreen extends Sprite
                 removeChild(this.scrollBar);
                 this.scrollBar = null;
             }
+        }
+
+        private function createDisableNexusCheckBox():void
+        {
+            this.disableNexusCheckBox = new CheckBoxField("Vault", false);
+            this.disableNexusCheckBox.x = 700;
+            this.disableNexusCheckBox.y = this.openCharactersText.y;
+            if (Parameters.data_.disableNexus){
+                this.disableNexusCheckBox.setChecked();
+            } else {
+                this.disableNexusCheckBox.setUnchecked();
+            }
+            this.disableNexusCheckBox.addEventListener(MouseEvent.CLICK, this.onDisableVaultCheckBoxCheckedChanged);
+            addChild(this.disableNexusCheckBox);
+        }
+
+        public function onDisableVaultCheckBoxCheckedChanged(_arg_1:MouseEvent):void{
+            Parameters.data_.disableNexus = this.disableNexusCheckBox.isChecked();
         }
 
         private function createOpenCharactersText():void

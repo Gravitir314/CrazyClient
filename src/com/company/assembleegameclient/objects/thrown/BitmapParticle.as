@@ -8,6 +8,8 @@ package com.company.assembleegameclient.objects.thrown
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.objects.BasicObject;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.GraphicsUtil;
 
 import flash.display.BitmapData;
@@ -61,6 +63,9 @@ public class BitmapParticle extends BasicObject
 
         override public function draw(graphicsData:Vector.<IGraphicsData>, camera:Camera, time:int):void
         {
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             var texture:BitmapData;
             var w:int;
             var h:int;

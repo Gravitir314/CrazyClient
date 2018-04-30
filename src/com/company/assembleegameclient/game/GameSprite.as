@@ -44,6 +44,8 @@ import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.core.model.MapModel;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.core.view.Layers;
+import kabam.rotmg.dailyLogin.view.DailyLoginModal;
+import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.game.view.CreditDisplay;
 import kabam.rotmg.game.view.NewsModalButton;
 import kabam.rotmg.maploading.signals.HideMapLoadingSignal;
@@ -91,6 +93,7 @@ public class GameSprite extends AGameSprite
         public var questBar:QuestHealthBar;
         private var timerCounter:TextFieldDisplayConcrete;
         private var findKeys:TextFieldDisplayConcrete;
+        public var openDialog:OpenDialogSignal;
 
         public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
         {
@@ -257,6 +260,12 @@ public class GameSprite extends AGameSprite
             };
             MoreObjectUtil.addToObject(_local_4, _local_1.getCredentials());
             isSafeMap = this.evalIsNotInCombatMapArea();
+            if (this.isSafeMap) {
+                if (Parameters.dailyCalendar1RunOnce) {
+                    this.gsc_.gotoQuestRoom();
+                    Parameters.dailyCalendar1RunOnce = false;
+                }
+            }
             hidePreloader();
             stage.dispatchEvent(new Event(Event.RESIZE));
             this.parent.parent.setChildIndex((this.parent.parent as Layers).top, 2);
@@ -692,6 +701,10 @@ public class GameSprite extends AGameSprite
             }
             //this.map.player_.notifyPlayer(_local_1, 16762889, 6000);
             Parameters.keyHolders = _local_1
+        }
+
+        override public function showDailyLoginCalendar():void{
+            this.openDialog.dispatch(new DailyLoginModal());
         }
 
     }

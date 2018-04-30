@@ -783,6 +783,11 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                     return (true);
+                case "/vaultonly":
+                    Parameters.data_.disableNexus = !Parameters.data_.disableNexus;
+                    Parameters.save();
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only Vault mode enabled" : "Only Vault mode disabled")));
+                    return (true);
                 case "/keylist":
                     Parameters.data_.keyList = !Parameters.data_.keyList;
                     Parameters.save();

@@ -68,6 +68,9 @@ public class Parameters
         public static var timerPhaseNames:Dictionary = new Dictionary();
         public static var dmgCounter:Array = [];
         public static var keyHolders:String;
+        public static var lowCPUMode:Boolean = false;
+        public static var dailyCalendar1RunOnce:Boolean = false;
+        public static var dailyCalendar2RunOnce:Boolean = false;
 
         public static function setTimerPhases():void{
             timerPhaseTimes['{"key":"server.oryx_closed_realm"}'] = 120000;
@@ -277,20 +280,20 @@ public class Parameters
             setDefault("HPBar", 1);
             setDefault("newMiniMapColors", false);
             setDefault("toggleBarText", 0);
-            setDefault("disableEnemyParticles", false);
-            setDefault("disableAllyParticles", false);
-            setDefault("disablePlayersHitParticles", false);
+            setDefault("disableEnemyParticles", true);
+            setDefault("disableAllyParticles", true);
+            setDefault("disablePlayersHitParticles", true);
             setDefault("toggleToMaxText", false);
-            setDefault("noParticlesMaster", false);
+            setDefault("noParticlesMaster", true);
             setDefault("noAllyNotifications", false);
             setDefault("noEnemyDamage", false);
-            setDefault("noAllyDamage", false);
+            setDefault("noAllyDamage", true);
             setDefault("forceEXP", 0);
             setDefault("curseIndication", false);
             setDefault("stageScale", StageScaleMode.NO_SCALE);
             setDefault("uiscale", false);
             setDefault("removeParticles", true);
-            setDefault("drawProjectiles", true);
+            setDefault("drawProjectiles", false);
             setDefault("filterZeroStar", true);
             setDefault("tombAim", false);
             setDefault("activateSpellBomb", true);
@@ -452,6 +455,7 @@ public class Parameters
             setDefaultKey("keyFinder", KeyCodes.UNSET);
             setDefaultKey("SafeWalkKey", KeyCodes.UNSET);
             setDefaultKey("SelfTPHotkey", KeyCodes.UNSET);
+            setDefaultKey("LowCPUModeHotKey", KeyCodes.UNSET);
             setDefault("autoCorrCHP", false);
             setDefault("rclickTp", true);
             setDefault("autoTp", true);
@@ -496,6 +500,8 @@ public class Parameters
             setDefault("spellThreshold", 1000);
             setDefault("keyList", true);
             setDefault("uiTextSize", 15);
+            setDefault("disableNexus", false);
+            setDefault("autoClaimCalendar", true);
         }
 
 

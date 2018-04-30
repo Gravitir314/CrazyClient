@@ -1107,6 +1107,9 @@ public class GameObject extends BasicObject
         }
 
         public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean):void{
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             if (this.nameBitmapData_ == null){
                 this.nameBitmapData_ = this.makeNameBitmapData();
                 this.nameFill_ = new GraphicsBitmapFill(null, new Matrix(), false, false);
@@ -1337,6 +1340,9 @@ public class GameObject extends BasicObject
             var _local_12:int;
             var _local_4:BitmapData = this.getTexture(_arg_2, _arg_3);
             if (this.props_.drawOnGround_){
+                if (!Options.hidden && Parameters.lowCPUMode) {
+                    return;
+                }
                 if (square_.faces_.length == 0){
                     return;
                 }
@@ -1516,6 +1522,9 @@ public class GameObject extends BasicObject
 
         override public function drawShadow(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
         {
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             if ((Parameters.data_.HidePlayerFilter) && (this is Player) && (!(this == map_.player_)) && (map_.name_ == "Nexus"))
             {
                 if ((this as Player).numStars_ <= Parameters.data_.chatStarRequirement)

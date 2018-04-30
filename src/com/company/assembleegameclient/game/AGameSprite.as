@@ -54,6 +54,10 @@ public class AGameSprite extends Sprite
             return (false);
         }
 
+        public function showDailyLoginCalendar():void
+        {
+        }
+
 
     }
 }//package com.company.assembleegameclient.game

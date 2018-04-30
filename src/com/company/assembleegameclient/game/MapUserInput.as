@@ -1094,6 +1094,10 @@ public class MapUserInput
                     Parameters.data_.autoAbil = !Parameters.data_.autoAbil;
                     _local_21.notifyPlayer((Parameters.data_.autoAbil) ? "Auto Ability enabled" : "Auto Ability disabled", 0xFF00, 1500);
                     break;
+                case Parameters.data_.LowCPUModeHotKey:
+                    Parameters.lowCPUMode = !Parameters.lowCPUMode;
+                    _local_21.notifyPlayer((Parameters.lowCPUMode) ? "Low CPU enabled" : "Low CPU disabled", 0xFF00, 1500);
+                    break;
             }
             this.setPlayerMovement();
         }

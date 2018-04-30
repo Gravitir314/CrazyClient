@@ -1864,7 +1864,7 @@ public class Player extends Character
                     }
                 }
             }
-            if (Parameters.data_.hideLockList && !Options.hidden)
+            if (!Options.hidden && (Parameters.data_.hideLockList || Parameters.lowCPUMode))
             {
                 if (this != map_.player_)
                 {

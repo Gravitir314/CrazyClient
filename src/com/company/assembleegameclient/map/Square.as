@@ -8,6 +8,8 @@ package com.company.assembleegameclient.map
 import com.company.assembleegameclient.engine3d.TextureMatrix;
 import com.company.assembleegameclient.game.MapUserInput;
 import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.TileRedrawer;
 
 import flash.display.BitmapData;
@@ -92,6 +94,9 @@ public class Square
         public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
         {
             var _local_4:SquareFace;
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             if (MapUserInput.skipRender == true)
             {
                 return;

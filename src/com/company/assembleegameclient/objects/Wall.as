@@ -8,6 +8,8 @@ package com.company.assembleegameclient.objects
 import com.company.assembleegameclient.engine3d.Face3D;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.BitmapUtil;
 
 import flash.display.BitmapData;
@@ -50,6 +52,9 @@ public class Wall extends GameObject
             var _local_5:Face3D;
             var _local_6:Square;
             var _local_7:int;
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             if (texture_ == null)
             {
                 return;

@@ -11,6 +11,7 @@ import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.CJDateUtil;
 import com.company.assembleegameclient.util.StageProxy;
 
@@ -102,6 +103,9 @@ public class TextHandler
             var _local_14:* = (_arg_1.numStars_ == -1);
             var _local_15:Player = this.hudModel.gameSprite.map.player_;
             var _local_16:int;
+            if (!Options.hidden && Parameters.lowCPUMode) {
+                return;
+            }
             if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
