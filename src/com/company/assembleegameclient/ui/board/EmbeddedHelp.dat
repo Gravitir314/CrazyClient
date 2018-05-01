@@ -238,6 +238,14 @@
       <Explanation>Shows list of keyholders.</Explanation>
    </Article>
    <Article>
+      <Command>/ao</Command>
+      <Explanation>Make other players transparent</Explanation>
+   </Article>
+   <Article>
+      <Command>/alpha &lt;decimal value&gt;</Command>
+      <Explanation>Make other players transparent.#xA;Default is 0.5</Explanation>
+   </Article>
+   <Article>
       <Command>/blocktp</Command>
       <Explanation>Block teleport function to achieve Boots on the Ground.</Explanation>
    </Article>

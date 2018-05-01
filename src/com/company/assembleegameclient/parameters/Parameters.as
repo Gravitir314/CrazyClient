@@ -504,6 +504,8 @@ public class Parameters
             setDefault("uiTextSize", 15);
             setDefault("disableNexus", false);
             setDefault("autoClaimCalendar", true);
+            setDefault("alphaOnOthers", false);
+            setDefault("alphaMan", 0.5);
         }
 
 

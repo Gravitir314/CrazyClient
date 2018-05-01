@@ -783,6 +783,10 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                     return (true);
+                case "/ao":
+                    Parameters.data_.alphaOnOthers = (!(Parameters.data_.alphaOnOthers));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.alphaOnOthers) ? "Alpha enabled" : "Alpha disabled")));
+                    return (true);
                 case "/vaultonly":
                     Parameters.data_.disableNexus = !Parameters.data_.disableNexus;
                     Parameters.save();
@@ -1020,6 +1024,12 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     return (true);
                 default:
+                    _local_7 = this.data.match("^/alpha (\\d*\\.*\\d+)$");
+                    if (_local_7 != null) {
+                        Parameters.data_.alphaMan = _local_7[1];
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Alpha set to: " + Parameters.data_.alphaMan));
+                        return (true);
+                    }
                     _local_7 = this.data.match("^/uitextsize (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.uiTextSize = _local_7[1];

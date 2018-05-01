@@ -2054,6 +2054,10 @@ public class Player extends Character
                 if (isInvisible())
                 {
                     _local_14 = CachingColorTransformer.alphaBitmapData(_local_14, 0.4);
+                } else {
+                    if (!Options.hidden && Parameters.data_.alphaOnOthers && this.objectId_ != map_.player_.objectId_ && !this.starred_) {
+                        _local_14 = CachingColorTransformer.alphaBitmapData(_local_14, Parameters.data_.alphaMan);
+                    }
                 }
             }
             return (_local_14);
