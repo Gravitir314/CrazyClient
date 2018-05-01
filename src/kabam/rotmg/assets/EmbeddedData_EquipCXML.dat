@@ -24777,4 +24777,86 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
+   <Object type="0x96a" id="Picante Taco">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x87</Index>
+      </Texture>
+      <Description>This taco is spicy!</Description>
+      <BagType>8</BagType>
+      <feedPower>650</feedPower>
+      <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x96b" id="Napalm Taco">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x88</Index>
+      </Texture>
+      <Description>This taco is so hot it can melt steel beam.</Description>
+      <BagType>8</BagType>
+      <feedPower>1350</feedPower>
+      <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x96c" id="Atomic Taco">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x89</Index>
+      </Texture>
+      <Description>Not for human consumption. Only a god... or your pet... can eat this!</Description>
+      <BagType>8</BagType>
+      <feedPower>2900</feedPower>
+      <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x96d" id="Hot Sauce">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x86</Index>
+      </Texture>
+      <Description>Malphas' special! Combine with Tacos at the Tinkerer for some explosive Pet Food!</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Scoville Units" description="1.5 million"/>
+      </ExtraTooltipData>
+      <BagType>8</BagType>
+      <feedPower>50</feedPower>
+      <PetFood/>
+   </Object>
+   <Object type="0x96e" id="Cerveza">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x8a</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A refreshing beverage that temporarily boosts your stats. Goes well with lime!</Description>
+      <Sound>use_potion</Sound>
+      <Consumable/>
+      <Potion/>
+      <BagType>2</BagType>
+      <Activate stat="0" amount="100" duration="30" cooldown="30">StatBoostSelf</Activate>
+      <Activate stat="3" amount="100" duration="30">StatBoostSelf</Activate>
+      <Activate stat="20" amount="5" duration="30">StatBoostSelf</Activate>
+      <Activate stat="21" amount="5" duration="30">StatBoostSelf</Activate>
+      <Activate stat="22" amount="5" duration="30">StatBoostSelf</Activate>
+      <Activate stat="28" amount="5" duration="30">StatBoostSelf</Activate>
+      <Activate stat="26" amount="10" duration="30">StatBoostSelf</Activate>
+      <Activate stat="27" amount="10" duration="30">StatBoostSelf</Activate>
+      <Cooldown>30</Cooldown>
+      <Soulbound/>
+   </Object>
 </Objects>

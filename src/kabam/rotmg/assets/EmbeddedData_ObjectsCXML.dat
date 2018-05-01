@@ -556,6 +556,23 @@
          </Frame>
       </Animation>
    </Object>
+   <Object type="0x96f" id="Event Pinata">
+      <DisplayId>Pinata</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x8b</Index>
+      </Texture>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Sound id="0">weapon/firework</Sound>
+      <Defense>0</Defense>
+      <Size>160</Size>
+      <XpMult>5.13</XpMult>
+      <StasisImmune/>
+      <ParalyzeImmune/>
+   </Object>
    <Object type="0x744D" id="Event Chest">
       <DisplayId>Event Chest</DisplayId>
       <Class>Character</Class>

@@ -1098,8 +1098,42 @@ public class MapUserInput
                     Parameters.lowCPUMode = !Parameters.lowCPUMode;
                     _local_21.notifyPlayer((Parameters.lowCPUMode) ? "Low CPU enabled" : "Low CPU disabled", 0xFF00, 1500);
                     break;
+                case Parameters.data_.lootPreviewKey:
+                    Parameters.data_.lootPreview = !Parameters.data_.lootPreview;
+                    _local_21.notifyPlayer((Parameters.data_.lootPreview) ? "Loot Preview enabled" : "Loot Preview disabled", 0xFF00, 1500);
+                    break;
+                case Parameters.data_.findKeysKey:
+                    this.findKeys();
+                    break;
             }
             this.setPlayerMovement();
+        }
+
+        public function findKeys():void{
+            var _local_4:int;
+            var _local_7:int;
+            var _local_3:* = null;
+            var _local_6:* = null;
+            var _local_1:String = "";
+            for each (var _local_2:GameObject in this.gs_.map.goDict_) {
+                if ((_local_2 is Player)){
+                    _local_4 = 0;
+                    while (_local_4 < 20) {
+                        _local_7 = _local_2.equipment_[_local_4];
+                        _local_3 = ObjectLibrary.xmlLibrary_[_local_7];
+                        if (((_local_3) && ("Consumable" in _local_3))){
+                            for each (var _local_5:XML in _local_3.Activate) {
+                                _local_6 = _local_5.toString();
+                                if ((((_local_6 == "Create") || (_local_6 == "UnlockPortal")) || (_local_6 == "CreatePortal"))){
+                                    _local_1 = (_local_1 + (((_local_2.name_ + " has ") + _local_3.@id) + "\n"));
+                                }
+                            }
+                        }
+                        _local_4++;
+                    }
+                }
+            }
+            this.gs_.map.player_.notifyPlayer(_local_1, 0xE25F00, 6000);
         }
 
         public function openOptions():void

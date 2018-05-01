@@ -229,6 +229,14 @@
       <Command>/hidehacks</Command>
       <Explanation>Toggle visual hacks to take screenshot.</Explanation>
    </Article>
+    <Article>
+      <Command>/vaultonly</Command>
+      <Explanation>Automatically send you to vault.</Explanation>
+   </Article>
+    <Article>
+      <Command>/keys</Command>
+      <Explanation>Shows list of keyholders.</Explanation>
+   </Article>
    <Article>
       <Command>/blocktp</Command>
       <Explanation>Block teleport function to achieve Boots on the Ground.</Explanation>

@@ -793,6 +793,9 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.keyList) ? "Key list enabled" : "Key list disabled")));
                     return (true);
+                case "/keys":
+                    this.hudModel.gameSprite.mui_.findKeys();
+                    return (true);
                 case "/onlygods":
                     Parameters.data_.onlyGods = (!Parameters.data_.onlyGods);
                     Parameters.save();

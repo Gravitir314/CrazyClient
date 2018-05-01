@@ -86,6 +86,7 @@
       <ParalyzeImmune/>
    </Object>
    <Object type="0x7004" id="Troom helper">
+      <DisplayId>Secret mechanism</DisplayId>
       <Enemy/>
       <NoMiniMap/>
       <Class>Character</Class>
