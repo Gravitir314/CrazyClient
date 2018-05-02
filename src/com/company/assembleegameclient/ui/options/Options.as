@@ -730,8 +730,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("LNWeap", this.ZeroTwelve(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "Min Weapon Tier", "Minimum tier at which notifications and auto loot will function for weapons.", this.updateWanted));
             this.addOptionAndPosition(new ChoiceOption("lootPreview", makeOnOffLabels(), [true, false], "Loot Preview", "Shows previews of equipment over bags", null));
             this.addOptionAndPosition(new ChoiceOption("LNArmor", this.ZeroThirteen(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "Min Armor Tier", "Minimum tier at which notifications and auto loot will function for armor.", this.updateWanted));
-            this.addOptionAndPosition(new KeyMapper("lootPreviewKey", "Loot Preview Hotkey", "Key that toggle shows previews of equipment over bags"));
-            //this.addOptionAndPosition(new NullOption());
+            this.addOptionAndPosition(new NullOption());
             this.addOptionAndPosition(new ChoiceOption("potsMajor", makeOnOffLabels(), [true, false], "Loot LIFE/MANA/ATT/DEF", "High value potions.", this.updateWanted));
             this.addOptionAndPosition(new ChoiceOption("lootHP", makeOnOffLabels(), [true, false], "Loot HP Potions to Inventory", "Loots health potions from ground to inventory.", null));
             this.addOptionAndPosition(new ChoiceOption("potsMinor", makeOnOffLabels(), [true, false], "Loot SPD/DEX/VIT/WIS", "Low value potions.", this.updateWanted));
@@ -801,6 +800,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
             this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "Toggle UI-mode from CC to prod", this.onToggleUI));
+            this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
             this.addOptionAndPosition(new KeyMapper("LowCPUModeHotKey", "Low CPU Mode", "Disables a lot of rendering and stuff by hotkey"));
 
         }
@@ -888,12 +888,11 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped.", null));
             this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
             this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
-            this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
             this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Leech Notifier", "Notifies you with a sound when event chest spawned/oryx shaking/2nd lab open/portal spawned in ice cave/daichi's troom opened/nut are awaken.", null));
             this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
             this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null));
-            this.addOptionAndPosition(new ChoiceOption("keyList", makeOnOffLabels(), [true, false], "UI Key List", "Shows the list of keyholders in left-side ui panel", null));
             this.addOptionAndPosition(new KeyMapper("findKeysKey", "Show list of keys", "Shows list of keyholders"));
+            this.addOptionAndPosition(new ChoiceOption("tpToBoss", makeOnOffLabels(), [true, false], "Auto TP Boss", "Automaticaly teleport to closest at boss player", null));
             this.tombDeactivate();
             this.addOptionAndPosition(new NullOption());
         }

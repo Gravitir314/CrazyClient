@@ -118,10 +118,6 @@
       <Explanation>Set size of text in left-side ui panel&#xA;Default is 15.</Explanation>
    </Article>
    <Article>
-      <Command>/keylist</Command>
-      <Explanation>Toggle list of keyholders on left-side panel.</Explanation>
-   </Article>
-   <Article>
       <Command>/nexus</Command>
       <Explanation>Sends you to nexus&#xA;Can be used to fix the issue with nexus key sending you to realm</Explanation>
    </Article>
@@ -267,7 +263,15 @@
    </Article>
    <Article>
       <Command>/statustext</Command>
-      <Explanation>Disable all status notifications (pet healing/quest complete/.</Explanation>
+      <Explanation>Disable all status notifications (pet healing/quest complete/etc.</Explanation>
+   </Article>
+   <Article>
+      <Command>/swtree</Command>
+      <Explanation>Remove/add trees from sprite world in aim exception list.</Explanation>
+   </Article>
+   <Article>
+      <Command>/const</Command>
+      <Explanation>Remove/add constructs from godland in aim ignoring list.</Explanation>
    </Article>
    <Article>
       <Command>/dodbot</Command>

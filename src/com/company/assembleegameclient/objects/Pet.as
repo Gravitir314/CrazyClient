@@ -80,7 +80,7 @@ public class Pet extends GameObject implements IInteractiveObject
         }
 
         override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void{
-            if ((Parameters.data_.showPets) || (Options.hidden))
+            if ((Parameters.data_.showPets) || (Options.hidden) || (this.map_.isPetYard))
             {
                 super.draw(_arg_1, _arg_2, _arg_3);
             }

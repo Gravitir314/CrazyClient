@@ -1098,10 +1098,6 @@ public class MapUserInput
                     Parameters.lowCPUMode = !Parameters.lowCPUMode;
                     _local_21.notifyPlayer((Parameters.lowCPUMode) ? "Low CPU enabled" : "Low CPU disabled", 0xFF00, 1500);
                     break;
-                case Parameters.data_.lootPreviewKey:
-                    Parameters.data_.lootPreview = !Parameters.data_.lootPreview;
-                    _local_21.notifyPlayer((Parameters.data_.lootPreview) ? "Loot Preview enabled" : "Loot Preview disabled", 0xFF00, 1500);
-                    break;
                 case Parameters.data_.findKeysKey:
                     this.findKeys();
                     break;

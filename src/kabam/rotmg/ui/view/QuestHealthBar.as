@@ -19,6 +19,7 @@ import flash.display.Sprite;
 import flash.utils.getTimer;
 
 import kabam.rotmg.chat.control.TextHandler;
+import kabam.rotmg.messaging.impl.GameServerConnection;
 
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 
@@ -30,7 +31,6 @@ public class QuestHealthBar extends Sprite
         private var questBar3:StatusBar;
         private var nextUpdate:int = 0;
         private var showstr:String;
-        public var gs_:GameSprite;
 
         public function QuestHealthBar()
         {

@@ -5,6 +5,7 @@
 
 package com.company.assembleegameclient.objects
 {
+import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
@@ -107,7 +108,6 @@ public class Player extends Character
         private var lastreconnect:int = 0;
         private var nextSwap:int = 0;
         public var followTarget:GameObject;
-        public var followPortal:GameObject;
         public var questMob:GameObject;
         public var questMob1:GameObject;
         public var questMob2:GameObject;
@@ -1276,10 +1276,12 @@ public class Player extends Character
 
         public function checkAutonexus():void
         {
+            var _local_1:Player = map_.gs_.map.player_;
             if (((this == map_.player_) && (!(map_.gs_.isSafeMap))))
             {
                 if (((hp_ / maxHP_) * 100) <= Parameters.data_.AutoNexus)
                 {
+                    map_.gs_.gsc_.teleportId(_local_1.objectId_);
                     map_.gs_.gsc_.escape();
                 }
                 if (((((hp_ / maxHP_) * 100) <= Parameters.data_.autoPot) && (!(isSick()))))
@@ -1667,7 +1669,7 @@ public class Player extends Character
                             if (this.lastteleport <= getTimer())
                             {
                                 _local_3.teleport(this.followTarget.name_);
-                                this.lastteleport = (getTimer() + 10000);
+                                this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
                             }
                             _local_7 = Math.atan2((this.followTarget.y_ - y_), (this.followTarget.x_ - x_));
                             moveVec_.x = (_local_6 * Math.cos(_local_7));
@@ -1714,7 +1716,7 @@ public class Player extends Character
                     }
                 }
                 if (square_ != null && square_.props_.push_) {
-                    if (!Parameters.data_.SWNoTileMove) {
+                    if (!Parameters.SWNoTileMove) {
                         moveVec_.x = (moveVec_.x - (square_.props_.animate_.dx_ / 1000));
                         moveVec_.y = (moveVec_.y - (square_.props_.animate_.dy_ / 1000));
                     }

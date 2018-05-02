@@ -792,11 +792,6 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only Vault mode enabled" : "Only Vault mode disabled")));
                     return (true);
-                case "/keylist":
-                    Parameters.data_.keyList = !Parameters.data_.keyList;
-                    Parameters.save();
-                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.keyList) ? "Key list enabled" : "Key list disabled")));
-                    return (true);
                 case "/keys":
                     this.hudModel.gameSprite.mui_.findKeys();
                     return (true);
@@ -1020,6 +1015,40 @@ public class ParseChatMessageCommand
                             _local_9++;
                         }
                         this.addTextLine.dispatch(ChatMessage.make("*Help*", "Constructs removed from ignore list."));
+                    }
+                    Parameters.save();
+                    return (true);
+                case "/swtree":
+                    _local_19 = new Vector.<int>(0);
+                    _local_9 = 0;
+                    while (_local_9 < Parameters.data_.AAException.length)
+                    {
+                        _local_18 = Parameters.data_.AAException[_local_9];
+                        if ((((_local_18 == 373) || (_local_18 == 374)) || (_local_18 == 375) || (_local_18 == 376) || (_local_18 == 377)))
+                        {
+                            _local_19.push(_local_9);
+                            if (_local_19.length == 3) break;
+                        }
+                        _local_9++;
+                    }
+                    if (_local_19.length == 0)
+                    {
+                        Parameters.data_.AAException.push(373);
+                        Parameters.data_.AAException.push(374);
+                        Parameters.data_.AAException.push(375);
+                        Parameters.data_.AAException.push(376);
+                        Parameters.data_.AAException.push(377);
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Trees added to exception list."));
+                    }
+                    else
+                    {
+                        _local_9 = 0;
+                        while (_local_9 < _local_19.length)
+                        {
+                            Parameters.data_.AAException.splice((_local_19[_local_9] - _local_9), 1);
+                            _local_9++;
+                        }
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Trees removed from exception list."));
                     }
                     Parameters.save();
                     return (true);

@@ -92,7 +92,6 @@ public class GameSprite extends AGameSprite
         public var chatPlayerMenu:PlayerMenu;
         public var questBar:QuestHealthBar;
         private var timerCounter:TextFieldDisplayConcrete;
-        private var findKeys:TextFieldDisplayConcrete;
         public var openDialog:OpenDialogSignal;
 
         public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
@@ -575,13 +574,6 @@ public class GameSprite extends AGameSprite
                     this.updateTimer(_local_5);
                 }
             }
-            if (this.findKeys == null) {
-                this.listKeys();
-            }
-            this.keysFind();
-            if ((!Parameters.data_.keyList) && (this.findKeys != null) || (Options.hidden)) {
-                this.findKeys.visible = false;
-            }
             var _local_6:Player = map.player_;
             if (this.focus)
             {
@@ -657,50 +649,6 @@ public class GameSprite extends AGameSprite
                 this.timerCounter.y = 80;
                 addChild(this.timerCounter);
             }
-        }
-
-        private function listKeys():void
-        {
-            if (this.findKeys == null) {
-                this.findKeys = new TextFieldDisplayConcrete().setSize(Parameters.data_.uiTextSize).setColor(0xFFFFFF);
-                this.findKeys.mouseChildren = false;
-                this.findKeys.setBold(true);
-                this.findKeys.filters = [EMPTY_FILTER];
-                this.findKeys.x = 3;
-                this.findKeys.y = 130;
-                addChild(this.findKeys);
-            }
-        }
-
-        public function keysFind():void
-        {
-            var _local_4:int;
-            var _local_7:int;
-            var _local_3:* = null;
-            var _local_6:* = null;
-            var _local_1:String = "";
-            this.findKeys.visible = true;
-            this.findKeys.setText(("Key List:" + "\n") + Parameters.keyHolders);
-            for each (var _local_2:GameObject in this.map.goDict_) {
-                if ((_local_2 is Player)){
-                    _local_4 = 0;
-                    while (_local_4 < 10) {
-                        _local_7 = _local_2.equipment_[_local_4];
-                        _local_3 = ObjectLibrary.xmlLibrary_[_local_7];
-                        if (((_local_3) && ("Consumable" in _local_3))){
-                            for each (var _local_5:XML in _local_3.Activate) {
-                                _local_6 = _local_5.toString();
-                                if ((((_local_6 == "Create") || (_local_6 == "UnlockPortal")) || (_local_6 == "CreatePortal"))){
-                                    _local_1 = (_local_1 + (((_local_2.name_ + " has ") + _local_3.@id) + "\n"));
-                                }
-                            }
-                        }
-                        _local_4++;
-                    }
-                }
-            }
-            //this.map.player_.notifyPlayer(_local_1, 16762889, 6000);
-            Parameters.keyHolders = _local_1
         }
 
         override public function showDailyLoginCalendar():void{
