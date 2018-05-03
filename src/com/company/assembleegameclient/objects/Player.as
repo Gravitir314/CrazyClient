@@ -1269,12 +1269,12 @@ public class Player extends Character
 
         private function checkOPAuto():void
         {
-            if ((((this.chp / maxHP_) * 100) <= (Parameters.data_.AutoNexus + 10)) && (this.lastteleport <= getTimer()))
+            if ((((this.chp / maxHP_) * 100) <= (Parameters.AutoNexus + 10)) && (this.lastteleport <= getTimer()) && (Parameters.data_.tpBeforeNexus))
             {
                 map_.gs_.gsc_.teleportId(this.map_.gs_.map.player_.objectId_);
                 this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
             }
-            if (((((this.chp / maxHP_) * 100) <= Parameters.data_.AutoNexus) && (!(Parameters.data_.AutoNexus == 0))))
+            if (((((this.chp / maxHP_) * 100) <= Parameters.AutoNexus) && (!(Parameters.AutoNexus == 0))))
             {
                 this.addTextLine.dispatch(ChatMessage.make("", (("You were saved at " + this.chp.toFixed(0)) + " health")));
                 map_.gs_.gsc_.escape();
@@ -1318,7 +1318,7 @@ public class Player extends Character
         {
             if (((this == map_.player_) && (!(map_.gs_.isSafeMap))))
             {
-                if (((hp_ / maxHP_) * 100) <= Parameters.data_.AutoNexus)
+                if (((hp_ / maxHP_) * 100) <= Parameters.AutoNexus)
                 {
                     map_.gs_.gsc_.escape();
                 }

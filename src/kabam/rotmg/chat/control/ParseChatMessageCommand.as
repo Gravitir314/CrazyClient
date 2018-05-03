@@ -779,7 +779,7 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Doer of Deeds Bot: On" : "Doer of Deeds Bot: Off")));
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players")));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Reconnect delay set to: " + Parameters.RECONNECT_DELAY)));
-                    this.addTextLine.dispatch(ChatMessage.make("", ("Auto nexus percentage set to " + Parameters.data_.AutoNexus)));
+                    this.addTextLine.dispatch(ChatMessage.make("", ("Auto nexus percentage set to " + Parameters.AutoNexus)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                     return (true);
@@ -1159,9 +1159,9 @@ public class ParseChatMessageCommand
                     _local_7 = this.data.toLowerCase().match("^/autonex (\\d+)$");
                     if (_local_7 != null)
                     {
-                        Parameters.data_.AutoNexus = _local_7[1];
+                        Parameters.AutoNexus = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto nexus percentage set to " + Parameters.data_.AutoNexus)));
+                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto nexus percentage set to " + Parameters.AutoNexus)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/autoheal (\\d+)$");

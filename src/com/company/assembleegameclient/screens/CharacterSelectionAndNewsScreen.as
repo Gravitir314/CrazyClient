@@ -75,6 +75,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
         private var BOUNDARY_LINE_ONE_Y:int = 106;
         private var potionDisplay:PotionsNeededDisplay;
         private var disableNexusCheckBox:CheckBoxField;
+        private var disableAutoReconCheckBox:CheckBoxField;
 
         public function CharacterSelectionAndNewsScreen()
         {
@@ -117,6 +118,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
                 this.createChooseNameLink();
             }
             this.createDisableNexusCheckBox();
+            this.createDisableAutoReconCheckBox();
         }
 
         private function createPotionDisplay():void
@@ -232,8 +234,28 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             addChild(this.disableNexusCheckBox);
         }
 
-        public function onDisableVaultCheckBoxCheckedChanged(_arg_1:MouseEvent):void{
+        private function createDisableAutoReconCheckBox():void
+        {
+            this.disableAutoReconCheckBox = new CheckBoxField("Auto Recon", false);
+            this.disableAutoReconCheckBox.x = 560;
+            this.disableAutoReconCheckBox.y = this.openCharactersText.y;
+            if (Parameters.data_.autoRecon){
+                this.disableAutoReconCheckBox.setChecked();
+            } else {
+                this.disableAutoReconCheckBox.setUnchecked();
+            }
+            this.disableAutoReconCheckBox.addEventListener(MouseEvent.CLICK, this.onDisableAutoReconCheckBoxCheckedChanged);
+            addChild(this.disableAutoReconCheckBox);
+        }
+
+        public function onDisableVaultCheckBoxCheckedChanged(_arg_1:MouseEvent):void
+        {
             Parameters.data_.disableNexus = this.disableNexusCheckBox.isChecked();
+        }
+
+        public function onDisableAutoReconCheckBoxCheckedChanged(_arg_1:MouseEvent):void
+        {
+            Parameters.data_.autoRecon = this.disableAutoReconCheckBox.isChecked();
         }
 
         private function createOpenCharactersText():void

@@ -800,6 +800,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));
             this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest HUD", "Toggle Quest HUD", null));
             this.addOptionAndPosition(new ChoiceOption("normalUI", makeOnOffLabels(), [true, false], "Normal UI", "Toggle UI-mode from CC to prod", this.onToggleUI));
+            this.addOptionAndPosition(new KeyMapper("SkipRenderKey", "Toggle Rendering", "Stops rendering the playfield. Minimap and the rest of the HUD is still updated."));
             this.addOptionAndPosition(new KeyMapper("panicKey", "Panic Key", "Toggle visual options to take screenshot."));
             this.addOptionAndPosition(new KeyMapper("LowCPUModeHotKey", "Low CPU Mode", "Disables a lot of rendering and stuff by hotkey"));
 
@@ -811,6 +812,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("autoHealP", this.AutoHealValues(), [0, 50, 55, 60, 65, 70, 75, 80], "Auto Heal", "Heals you once your HP drops low enough on priest or paladin.", null));
             this.addOptionAndPosition(new ChoiceOption("autoPot", this.AutoPotValues(), [0, 50, 55, 60, 65, 70, 75, 80], "Auto Pot", "Automatically drink a potion if your hp falls below a certain percentage.", null));
             this.addOptionAndPosition(new ChoiceOption("autoMana", this.AutoManaValues(), [0, 20, 30, 40, 50, 60, 70, 80], "Auto Mana", "Automatically drinks your mana.", null));
+            this.addOptionAndPosition(new ChoiceOption("tpBeforeNexus", makeOnOffLabels(), [true, false], "Last Chance", "If your HP low, but not so low to AutoNexus, then you automatically get 1 sec of invisibility.", null));
             this.addOptionAndPosition(new ChoiceOption("bestServ", this.ServerPrefValues(), ["Default", "USWest", "USMidWest", "EUWest", "USEast", "AsiaSouthEast", "USSouth", "USSouthWest", "EUEast", "EUNorth", "EUSouthWest", "USEast3", "USWest2", "USMidWest2", "USEast2", "USNorthWest", "AsiaEast", "USSouth3", "EUNorth2", "EUWest2", "EUSouth", "USSouth2", "USWest3"], "Best Server", "Select your best server.", null));
             this.addOptionAndPosition(new ChoiceOption("TradeDelay", makeOnOffLabels(), [true, false], "Disable Trade Delay", "Removes trade delay. Indicator still shows.", null));
             this.addOptionAndPosition(new ChoiceOption("slideOnIce", makeOnOffLabels(), [true, false], "Slide on Ice", "Toggles sliding on ice.", null));
@@ -826,7 +828,6 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("enterPortal", "Portal Enter", "Enters nearest portal."));
             this.addOptionAndPosition(new ChoiceOption("instaSelect", makeOnOffLabels(), [true, false], "Instantly Select All Items", "When turned on, a right click on the trade window will select all your items instantly. When turned off, selects only items of the same type, smoothly, like an actual player.", null));
             this.addOptionAndPosition(new ChoiceOption("mapHack", makeOnOffLabels(), [true, false], "Map Hack", "Shows entire map when entering a realm. Loading in for the first time will take longer.", null));
-            this.addOptionAndPosition(new KeyMapper("SkipRenderKey", "Toggle Rendering", "Stops rendering the playfield. Minimap and the rest of the HUD is still updated."));
         }
 
         private function addMessageOptions():void
@@ -852,7 +853,7 @@ public class Options extends Sprite
 
         private function AutoNexusValues():Vector.<StringBuilder>
         {
-            return (new <StringBuilder>[new StaticStringBuilder(((Parameters.data_.AutoNexus == 0) ? "Off" : (Parameters.data_.AutoNexus + "%"))), new StaticStringBuilder("15%"), new StaticStringBuilder("20%"), new StaticStringBuilder("25%"), new StaticStringBuilder("30%")]);
+            return (new <StringBuilder>[new StaticStringBuilder(((Parameters.AutoNexus == 0) ? "Off" : (Parameters.AutoNexus + "%"))), new StaticStringBuilder("15%"), new StaticStringBuilder("20%"), new StaticStringBuilder("25%"), new StaticStringBuilder("30%")]);
         }
 
         private function AutoHealValues():Vector.<StringBuilder>
