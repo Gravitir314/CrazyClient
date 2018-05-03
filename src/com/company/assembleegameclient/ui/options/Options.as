@@ -883,16 +883,11 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("curBoss", this.bossNames(), [3368, 3366, 3367], "Current Boss", "You will only be able to hit the current boss.", null));
             this.addOptionAndPosition(new ChoiceOption("offsetColossus", makeOnOffLabels(), [true, false], "Offset Colossus Sword", "Attempts to shoot straight, try /colo 0.4 and /colo 0.2", null));
             this.addOptionAndPosition(new KeyMapper("tombCycle", "Next Boss", "Selects the next boss.", (!(Parameters.data_.tombHack))));
-            this.addOptionAndPosition(new ChoiceOption("wordNoti", makeOnOffLabels(), [true, false], "Word Notifier", "Notifies you with sound if someone say custom word. Use /awn to add word in list.", null));
             this.addOptionAndPosition(new ChoiceOption("SafeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles.", null));
-            this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped.", null));
             this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
-            this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
-            this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Leech Notifier", "Notifies you with a sound when event chest spawned/oryx shaking/2nd lab open/portal spawned in ice cave/daichi's troom opened/nut are awaken.", null));
             this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
             this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null));
             this.addOptionAndPosition(new KeyMapper("findKeysKey", "Show list of keys", "Shows list of keyholders"));
-            this.addOptionAndPosition(new ChoiceOption("tpToBoss", makeOnOffLabels(), [true, false], "Auto TP Boss", "Automaticaly teleport to closest at boss player", null));
             this.tombDeactivate();
             this.addOptionAndPosition(new NullOption());
         }
@@ -1139,6 +1134,16 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("playSFX", makeOnOffLabels(), [true, false], TextKey.OPTIONS_PLAY_SOUND_EFFECTS, TextKey.OPTIONS_PLAY_SOUND_EFFECTS_DESC, this.onPlaySoundEffectsChange));
             this.addOptionAndPosition(new SliderOption("SFXVolume", this.onSoundEffectsVolumeChange), -120, 34);
             this.addOptionAndPosition(new ChoiceOption("playPewPew", makeOnOffLabels(), [true, false], TextKey.OPTIONS_PLAY_WEAPON_SOUNDS, TextKey.OPTIONS_PLAY_WEAPON_SOUNDS_DESC, null));
+            if (!hidden) {
+                this.addOptionAndPosition(new NullOption());
+                this.addOptionAndPosition(new ChoiceOption("wordNoti", makeOnOffLabels(), [true, false], "Word Notifier", "Notifies you with sound if someone say custom word. Use /awn to add word in list.", null));
+                this.addOptionAndPosition(new NullOption());
+                this.addOptionAndPosition(new ChoiceOption("keyNoti", makeOnOffLabels(), [true, false], "Key Notifier", "Notifies you with a sound when a key is popped.", null));
+                this.addOptionAndPosition(new NullOption());
+                this.addOptionAndPosition(new ChoiceOption("eventnotify", makeOnOffLabels(), [true, false], "Event Notifier", "Notifies you overhead when oryx calls out a new event", null));
+                this.addOptionAndPosition(new NullOption());
+                this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Leech Notifier", "Notifies you with a sound when event chest spawned/oryx shaking/2nd lab open/portal spawned in ice cave/daichi's troom opened/nut are awaken.", null));
+            }
         }
 
         private function addFriendOptions():void

@@ -263,7 +263,7 @@
    </Article>
    <Article>
       <Command>/statustext</Command>
-      <Explanation>Disable all status notifications (pet healing/quest complete/etc.</Explanation>
+      <Explanation>Disable all status notifications (pet healing/quest complete/etc).</Explanation>
    </Article>
    <Article>
       <Command>/swtree</Command>

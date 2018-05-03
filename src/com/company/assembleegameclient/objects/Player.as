@@ -1316,12 +1316,10 @@ public class Player extends Character
 
         public function checkAutonexus():void
         {
-            var _local_1:Player = map_.gs_.map.player_;
             if (((this == map_.player_) && (!(map_.gs_.isSafeMap))))
             {
                 if (((hp_ / maxHP_) * 100) <= Parameters.data_.AutoNexus)
                 {
-                    map_.gs_.gsc_.teleportId(_local_1.objectId_);
                     map_.gs_.gsc_.escape();
                 }
                 if (((((hp_ / maxHP_) * 100) <= Parameters.data_.autoPot) && (!(isSick()))))
