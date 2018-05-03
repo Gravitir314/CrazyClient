@@ -331,7 +331,6 @@ public class Parameters
             setDefault("AutoLootOn", true);
             setDefault("showLootNotifs", false);
             setDefault("lootPreview", true);
-            setDefault("NoLoot", ["common", "tincture", "mark"]);
             setDefault("pots2inv", true);
             setDefault("potsMinor", true);
             setDefault("potsMajor", true);
@@ -427,6 +426,7 @@ public class Parameters
             setDefault("tptoList", ["tp", "udl", "manor"]);
             setDefault("wordNotiList", ["tp", "sew", "davy"]);
             setDefault("lootIgnore", [9018, 9019, 9020, 9021, 9022, 9023, 9024, 9025, 3861, 2635, 7718, 7719, 7720, 7722, 7727, 7730]);
+            setDefault("NoLoot", ["common", "tincture", "mark"]);
             setDefault("wMenu", true);
             setDefault("conCom", "/con");
             setDefault("dbPre1", ["Preset 1", 0, false]);

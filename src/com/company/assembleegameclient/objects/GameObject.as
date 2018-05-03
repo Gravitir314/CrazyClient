@@ -1074,7 +1074,11 @@ public class GameObject extends BasicObject
             if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_))))){
                 return;
             }
-            if (_arg_2 > 0){
+            if ((_arg_2 > 0) && (!this.dead_))
+            {
+                if ((Parameters.data_.autoDecrementHP) && (this != this.map_.player_)) {
+                    this.hp_ = (this.hp_ - _arg_2);
+                }
                 _local_16 = ((((this.isArmorBroken()) || ((!(_arg_5 == null)) && (_arg_5.projProps_.armorPiercing_))) || (_local_7)) || (_arg_6));
                 this.showDamageText(_arg_2, _local_16);
             }

@@ -536,7 +536,7 @@ public class MapUserInput
 
         private function handleCooldown(_arg_1:Player, _arg_2:XML):void
         {
-            var _local_3:* = 500;
+            var _local_3:Number = 500;
             if (_arg_2.hasOwnProperty("Cooldown"))
             {
                 _local_3 = (Number(_arg_2.Cooldown) * 1000);

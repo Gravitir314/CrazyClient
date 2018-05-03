@@ -519,6 +519,41 @@ public class Player extends Character
             return (_local_3);
         }
 
+        public function targetAA():void{
+            var _local_1:int;
+            var _local_2:Boolean;
+            if (this.aimAssistPoint != null){
+                if ((((!(this.aimAssistTarget.isStasis())) && (!(this.aimAssistTarget.isInvincible()))) && (!(this.aimAssistTarget.isInvulnerable())))){
+                    this.useAltWeapon_(this.aimAssistPoint.x, this.aimAssistPoint.y, 1, true);
+                }
+            }
+        }
+
+        public function autoAbility():void{
+            var _local_1:int = equipment_[1];
+            if (_local_1 == -1){
+                return;
+            }
+            var _local_2:int = ObjectLibrary.xmlLibrary_[_local_1].MpCost;
+            if (((_local_2 > this.mp_) || (this.nextAltAttack_ > getTimer()))){
+                return;
+            }
+            switch (this.objectType_){
+                case 801:
+                case 782:
+                case 803:
+                case 802:
+                case 775:
+                case 805:
+                case 798:
+                case 800:
+                    this.targetAA();
+                    return;
+                default:
+                    return;
+            }
+        }
+
         public function modifyMove(_arg_1:Number, _arg_2:Number, _arg_3:Point):void
         {
             var _local_4:Boolean;
@@ -1234,6 +1269,11 @@ public class Player extends Character
 
         private function checkOPAuto():void
         {
+            if ((((this.chp / maxHP_) * 100) <= (Parameters.data_.AutoNexus + 10)) && (this.lastteleport <= getTimer()))
+            {
+                map_.gs_.gsc_.teleportId(this.map_.gs_.map.player_.objectId_);
+                this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
+            }
             if (((((this.chp / maxHP_) * 100) <= Parameters.data_.AutoNexus) && (!(Parameters.data_.AutoNexus == 0))))
             {
                 this.addTextLine.dispatch(ChatMessage.make("", (("You were saved at " + this.chp.toFixed(0)) + " health")));
@@ -1474,6 +1514,10 @@ public class Player extends Character
                         this.notifyPlayer(_local_20.toFixed(((this.timerStep < 1000) ? 1 : 0)), GameObject.green2red((100 - ((_local_19 / _local_18) * 100))));
                     }
                     this.timerCount++;
+                }
+                if ((this == this.map_.player_) && (!this.map_.gs_.isSafeMap) && (Parameters.data_.autoAbil))
+                {
+                    this.autoAbility();
                 }
                 if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil))))
                 {

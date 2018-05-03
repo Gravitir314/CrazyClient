@@ -670,7 +670,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("perfectLead", makeOnOffLabels(), [true, false], "Ability Aim Target Lead", "Enables leading of ability aim targets.", null));
             this.addOptionAndPosition(new ChoiceOption("perfectStun", makeOnOffLabels(), [true, false], "Shield Aim", "Targets the mob closest to cursor.", null));
             this.addOptionAndPosition(new ChoiceOption("inaccurate", makeOnOffLabels(), [true, false], "Inaccurate Ability Aim", "Look more legit by aiming inaccurately.", null));
-            this.addOptionAndPosition(new ChoiceOption("autoAbil", makeOnOffLabels(), [true, false], "Auto Ability", "Automatically uses your ability on warrior, paladin and rogue. Activated by pressing space.", null));
+            this.addOptionAndPosition(new ChoiceOption("autoAbil", makeOnOffLabels(), [true, false], "Auto Ability", "Automatically uses your ability. Activated by pressing space.", null));
             this.addOptionAndPosition(new KeyMapper("autoAbilKey", "Toggle Auto Ability", "Toggles Auto Ability with hotkey."));
             this.addOptionAndPosition(new ChoiceOption("palaSpam", makeOnOffLabels(), [true, false], "Spam Paladin Ability", "Uses paladin ability every 0.5 seconds if auto ability is enabled", null));
             this.addOptionAndPosition(new ChoiceOption("spellVoid", makeOnOffLabels(), [true, false], "Unsafe Prism Use", "Allows using prism through walls. If you land on void you will get disconnected.", null));
