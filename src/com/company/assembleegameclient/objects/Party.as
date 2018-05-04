@@ -11,7 +11,6 @@ import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.PointUtil;
 
 import flash.utils.Dictionary;
-import flash.utils.getTimer;
 
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.core.StaticInjectorContext;

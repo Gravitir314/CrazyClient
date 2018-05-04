@@ -76,11 +76,11 @@ import flash.utils.ByteArray;
 import flash.utils.Timer;
 import flash.utils.getTimer;
 
+import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
 import io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse;
 import io.decagames.rotmg.dailyQuests.signal.QuestFetchCompleteSignal;
 import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
 import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
 
 import kabam.lib.net.api.MessageMap;
 import kabam.lib.net.api.MessageProvider;
@@ -92,7 +92,6 @@ import kabam.rotmg.arena.control.ImminentArenaWaveSignal;
 import kabam.rotmg.arena.model.CurrentArenaRunModel;
 import kabam.rotmg.arena.view.BattleSummaryDialog;
 import kabam.rotmg.arena.view.ContinueOrQuitDialog;
-import kabam.rotmg.chat.control.TextHandler;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.classes.model.CharacterClass;
 import kabam.rotmg.classes.model.CharacterSkin;
@@ -1522,7 +1521,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                     this.damage_(_arg_1);
                 } else {
                     if (Parameters.lowCPUMode) {
-                        return;
+                        
                     }
                 }
             }

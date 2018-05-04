@@ -5,23 +5,15 @@
 
 package kabam.rotmg.ui.view
 {
-import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
-import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.options.Options;
 
 import flash.display.Sprite;
 import flash.utils.getTimer;
-
-import kabam.rotmg.chat.control.TextHandler;
-import kabam.rotmg.messaging.impl.GameServerConnection;
-
-import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 
 public class QuestHealthBar extends Sprite
     {

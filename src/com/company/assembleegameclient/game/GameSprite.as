@@ -9,7 +9,6 @@ import com.company.assembleegameclient.game.events.MoneyChangedEvent;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
-import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Pet;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.Projectile;
@@ -17,7 +16,6 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
-import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.CachingColorTransformer;
 import com.company.util.MoreColorUtil;
@@ -58,7 +56,6 @@ import kabam.rotmg.protip.signals.ShowProTipSignal;
 import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.stage3D.Renderer;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.ui.UIUtils;
 import kabam.rotmg.ui.view.HUDView;
 import kabam.rotmg.ui.view.QuestHealthBar;
@@ -525,7 +522,7 @@ public class GameSprite extends AGameSprite
                 CachingColorTransformer.clear();
                 TextureRedrawer.clearCache();
                 Projectile.dispose();
-                if (((this.timerCounter) && (!((Parameters.phaseName == "Realm Closed") || (Parameters.phaseName == "Oryx Shake"))))){
+                if (((this.timerCounter) && (!((Parameters.phaseName == "Realm Closed") || (Parameters.phaseName == "Oryx Shake") || (Parameters.phaseName == "Portal Opened"))))){
                     Parameters.timerActive = false;
                     this.timerCounter.visible = false;
                     this.timerCounter = null;

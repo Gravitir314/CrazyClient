@@ -122,9 +122,9 @@ public class EmbeddedData {
             _local_6 = XML(_arg_1[_local_5]);
             for each (_local_7 in _local_6[_arg_3]) {
                 _local_4 = _local_4.appendChild(_local_7);
-            };
+            }
             _local_5++;
-        };
+        }
         return (_local_4);
     }
 

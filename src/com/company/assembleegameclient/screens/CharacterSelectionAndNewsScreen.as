@@ -15,7 +15,6 @@ import flash.display.DisplayObject;
 import flash.display.Shape;
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.events.FocusEvent;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.geom.Rectangle;
@@ -36,7 +35,7 @@ import kabam.rotmg.ui.view.components.ScreenBase;
 
 import org.osflash.signals.Signal;
 
-public class CharacterSelectionAndNewsScreen extends Sprite 
+public class CharacterSelectionAndNewsScreen extends Sprite
     {
 
         private static const NEWS_X:int = 475;

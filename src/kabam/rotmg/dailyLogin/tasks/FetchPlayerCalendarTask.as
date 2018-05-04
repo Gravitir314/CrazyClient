@@ -16,7 +16,6 @@ import kabam.rotmg.core.signals.SetLoadingMessageSignal;
 import kabam.rotmg.dailyLogin.model.CalendarDayModel;
 import kabam.rotmg.dailyLogin.model.CalendarTypes;
 import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 
 import robotlegs.bender.framework.api.ILogger;
 

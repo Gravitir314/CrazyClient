@@ -5,7 +5,6 @@
 
 package com.company.assembleegameclient.objects
 {
-import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
@@ -16,7 +15,6 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.TradeSlot;
 import com.company.assembleegameclient.ui.options.Options;
-import com.company.assembleegameclient.ui.panels.PortalPanel;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.FameUtil;
@@ -40,7 +38,6 @@ import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 import flash.geom.Point;
 import flash.geom.Vector3D;
-import flash.utils.ByteArray;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
@@ -57,7 +54,6 @@ import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.game.signals.UseBuyPotionSignal;
 import kabam.rotmg.messaging.impl.GameServerConnection;
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
-import kabam.rotmg.messaging.impl.data.StatData;
 import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.stage3D.GraphicsFillExtra;
 import kabam.rotmg.text.model.TextKey;
@@ -269,7 +265,7 @@ public class Player extends Character
                 _arg_1 = int(((4 / _local_2.image_.width) * _arg_1));
                 this.famePortrait_ = TextureRedrawer.resize(_local_2.image_, _local_2.mask_, _arg_1, true, tex1Id_, tex2Id_);
                 this.famePortrait_ = GlowRedrawer.outlineGlow(this.famePortrait_, 0);
-            };
+            }
             return (this.famePortrait_);
         }
 
@@ -285,11 +281,11 @@ public class Player extends Character
                         _local_4 = ObjectLibrary.xmlLibrary_[_local_3];
                         if (((!(_local_4 == null)) && (_local_4.hasOwnProperty("FameBonus")))){
                             _local_1 = (_local_1 + int(_local_4.FameBonus));
-                        };
-                    };
-                };
+                        }
+                    }
+                }
                 _local_2++;
-            };
+            }
             return (_local_1);
         }
 

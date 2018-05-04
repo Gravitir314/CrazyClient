@@ -40,7 +40,6 @@ import com.company.assembleegameclient.ui.panels.mediators.ItemGridMediator;
 import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
 import io.decagames.rotmg.fame.FameContentPopup;
 import io.decagames.rotmg.fame.FameContentPopupMediator;
-
 import io.decagames.rotmg.fame.FameStatsLineMediator;
 import io.decagames.rotmg.fame.StatsLine;
 import io.decagames.rotmg.fame.data.FameTracker;

@@ -5,17 +5,13 @@
 
 package kabam.rotmg.chat.control
 {
-import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.objects.GameObject;
-import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.CJDateUtil;
 import com.company.assembleegameclient.util.StageProxy;
-
-import flash.utils.ByteArray;
 
 import flash.utils.getTimer;
 
@@ -33,10 +29,8 @@ import kabam.rotmg.game.model.GameModel;
 import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
 import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.language.model.StringMap;
-import kabam.rotmg.messaging.impl.GameServerConnection;
 import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 import kabam.rotmg.messaging.impl.incoming.Text;
-import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.servers.api.ServerModel;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.ui.model.HUDModel;
@@ -144,8 +138,12 @@ public class TextHandler
                 _local_6 = _arg_1.text_;
                 if (_local_6.indexOf(_local_7) != -1)
                 {
+                    Parameters.timerActive = true;
+                    Parameters.phaseChangeAt = (getTimer() + 30000);
+                    Parameters.phaseName = 'Portal Opened';
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("level_up");
+
                 }
             }
             if (Parameters.data_.eventnotify)
@@ -370,9 +368,6 @@ public class TextHandler
                 if ((_arg_1.name_ == "#Nut") && (!(_arg_1.text_.indexOf("ENOUGH OF YOUR VANDALISM") == -1))) {
                     SoundEffectLibrary.play("level_up");
                 }
-                if ((_arg_1.text_.indexOf("HH5MMUXU5A") != -1) || (_arg_1.text_.indexOf("P4KCCO9NFB") != -1) || (_arg_1.text_.indexOf("BIXW4W7NUT") != -1) || (_arg_1.text_.indexOf("J9EUN5VCB1") != -1) || (_arg_1.text_.indexOf("8FZ5BQ80ZX") != -1)) {
-                    SoundEffectLibrary.play("error");
-                }
             }
             if ((_arg_1.name_ == "#Event Chest") && (!(_arg_1.text_.indexOf("15 sec") == -1))) {
                 Parameters.timerActive = true;
@@ -404,96 +399,6 @@ public class TextHandler
             if (((_local_14) || ((this.account.isRegistered()) && ((!(Parameters.data_.hidePlayerChat)) || (this.isSpecialRecipientChat(_arg_1.name_))))))
             {
                 this.addTextAsTextLine(_arg_1);
-            }
-        }
-
-        public function conToServ(_arg_1:String):void
-        {
-            var _local_1:String;
-            if (_arg_1.indexOf("EUNorth2") != -1) {
-                _local_1 = "EUN2";
-            } else {
-                if (_arg_1.indexOf("EUNorth") != -1) {
-                    _local_1 = "EUN";
-                }
-            }
-            if (_arg_1.indexOf("EUWest2") != -1) {
-                _local_1 = "EUW2"
-            } else {
-                if (_arg_1.indexOf("EUWest") != -1) {
-                    _local_1 = "EUW"
-                }
-            }
-            if (_arg_1.indexOf("EUSouthWest") != -1) {
-                _local_1 = "EUSW"
-            }
-            if (_arg_1.indexOf("EUSouth") != -1) {
-                _local_1 = "EUS"
-            }
-            if (_arg_1.indexOf("EUEast") != -1) {
-                _local_1 = "EUE"
-            }
-            if (_arg_1.indexOf("USSouth3") != -1) {
-                _local_1 = "USS3"
-            } else {
-                if (_arg_1.indexOf("USSouth2") != -1) {
-                    _local_1 = "USS2"
-                } else {
-                    if (_arg_1.indexOf("USSouth") != -1) {
-                        _local_1 = "USS"
-                    }
-                }
-            }
-            if (_arg_1.indexOf("USMidWest2") != -1) {
-                _local_1 = "USMW2"
-            } else {
-                if (_arg_1.indexOf("USMidWest") != -1) {
-                    _local_1 = "USMW"
-                }
-            }
-            if (_arg_1.indexOf("USNorthWest") != -1) {
-                _local_1 = "USNW"
-            }
-            if (_arg_1.indexOf("USSouthWest") != -1) {
-                _local_1 = "USSW"
-            }
-            if (_arg_1.indexOf("USWest3") != -1) {
-                _local_1 = "USW3"
-            } else {
-                if (_arg_1.indexOf("USWest2") != -1) {
-                    _local_1 = "USW2"
-                } else {
-                    if (_arg_1.indexOf("USWest") != -1) {
-                        _local_1 = "USW"
-                    }
-                }
-            }
-            if (_arg_1.indexOf("USEast3") != -1) {
-                _local_1 = "USE3"
-            } else {
-                if (_arg_1.indexOf("USEast2") != -1) {
-                    _local_1 = "USE2"
-                } else {
-                    if (_arg_1.indexOf("USEast") != -1) {
-                        _local_1 = "USE"
-                    }
-                }
-            }
-            if (_arg_1.indexOf("AsiaSouthEast") != -1) {
-                _local_1 = "ASE"
-            }
-            if (_arg_1.indexOf("AsiaEast") != -1) {
-                _local_1 = "AE"
-            }
-            if (_arg_1.indexOf("Australia") != -1) {
-                _local_1 = "AUS"
-            }
-            if (_local_1 != null)
-            {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Connecting to " + _local_1)));
-                this.hudModel.gameSprite.dispatchEvent(new ReconnectEvent(new Server().setName("Custom").setAddress(_local_1).setPort(2050), -2, false, this.hudModel.gameSprite.gsc_.charId_, getTimer(), new ByteArray(), false));
-            } else {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Server not found")));
             }
         }
 

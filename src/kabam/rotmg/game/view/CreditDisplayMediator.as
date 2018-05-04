@@ -71,7 +71,7 @@ public class CreditDisplayMediator extends Mediator
                 this.hoverTooltipDelegate.getDisplayObject().dispatchEvent(new MouseEvent(MouseEvent.MOUSE_OVER, true));
                 this.toolTip.x = 267;
                 this.toolTip.y = 41;
-            };
+            }
         }
 
         override public function destroy():void
@@ -81,10 +81,10 @@ public class CreditDisplayMediator extends Mediator
             this.view.openAccountDialog.remove(this.onOpenAccountDialog);
             if (((this.view.fameButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS)))){
                 this.view.fameButton.removeEventListener(MouseEvent.CLICK, this.view.onFameClick);
-            };
+            }
             if (((this.view.creditsButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS)))){
                 this.view.creditsButton.removeEventListener(MouseEvent.CLICK, this.view.onCreditsClick);
-            };
+            }
             this.view.displayFameTooltip.remove(this.forceShowingTooltip);
         }
 
