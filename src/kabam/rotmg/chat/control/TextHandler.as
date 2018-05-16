@@ -9,7 +9,6 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
-import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.CJDateUtil;
 import com.company.assembleegameclient.util.StageProxy;
 
@@ -97,9 +96,6 @@ public class TextHandler
             var _local_14:* = (_arg_1.numStars_ == -1);
             var _local_15:Player = this.hudModel.gameSprite.map.player_;
             var _local_16:int;
-            if (!Options.hidden && Parameters.lowCPUMode) {
-                return;
-            }
             if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
             {
                 if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
@@ -143,7 +139,6 @@ public class TextHandler
                     Parameters.phaseName = 'Portal Opened';
                     _local_15.levelUpEffect("", true);
                     SoundEffectLibrary.play("level_up");
-
                 }
             }
             if (Parameters.data_.eventnotify)
@@ -335,10 +330,6 @@ public class TextHandler
                 {
                     this.model.player.map_.gs_.gsc_.playerText("skip");
                 }
-                if ((_arg_1.name_ == "#Computer") && (!(_arg_1.text_.indexOf("Log in to ") == -1)))
-                {
-                    this.model.player.map_.gs_.gsc_.playerText("Dr Terrible");
-                }
                 if ((_arg_1.name_ == "#DS Master Rat") || (_arg_1.name_ == "#Master Rat"))
                 {
                     _local_3 = getSplinterReply(_arg_1.text_);
@@ -392,7 +383,7 @@ public class TextHandler
                 Parameters.phaseChangeAt = (getTimer() + _local_16);
                 Parameters.phaseName = Parameters.timerPhaseNames[_arg_1.text_];
             }
-            if (((_arg_1.objectId_ >= 0) && ((_arg_1.numStars_ > Parameters.data_.chatStarRequirement) || (_arg_1.numStars_ == -1))))
+            if (((_arg_1.objectId_ >= 0) && ((_arg_1.numStars_ > Parameters.data_.chatStarRequirement) || (_local_14))))
             {
                 this.showSpeechBaloon(_arg_1, _local_3);
             }
@@ -511,8 +502,7 @@ public class TextHandler
             var _local_5:Boolean;
             var _local_6:AddSpeechBalloonVO;
             var _local_7:GameObject = this.model.getGameObject(_arg_1.objectId_);
-            if (_local_7 != null)
-            {
+            if (_local_7 != null) {
                 _local_3 = this.getColors(_arg_1, _local_7);
                 _local_4 = ChatListItemFactory.isTradeMessage(_arg_1.numStars_, _arg_1.objectId_, _arg_2);
                 _local_5 = ChatListItemFactory.isGuildMessage(_arg_1.name_);

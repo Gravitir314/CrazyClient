@@ -9,6 +9,7 @@ import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.ExperienceBoostTimerPopup;
 import com.company.assembleegameclient.ui.StatusBar;
+import com.company.assembleegameclient.ui.options.Options;
 
 import flash.display.Sprite;
 import flash.events.Event;
@@ -40,7 +41,7 @@ public class StatMetersView extends Sprite
             this.hpBar_.y = 16;
             this.chpBar_ = new StatusBar(176, 12, 14693428, 0x545454, "CL");
             this.chpBar_.y = 32;
-            if (Parameters.data_.normalUI)
+            if (Parameters.data_.normalUI || Options.hidden)
             {
                 this.hpBar_.y = 24;
                 this.mpBar_.y = 48;
@@ -61,9 +62,9 @@ public class StatMetersView extends Sprite
 
         public function toggle():void
         {
-            this.chpBar_.visible = (!(Parameters.data_.normalUI));
-            this.hpBar_.y = ((Parameters.data_.normalUI) ? 24 : 16);
-            this.mpBar_.y = ((Parameters.data_.normalUI) ? 48 : 44);
+            this.chpBar_.visible = (!Parameters.data_.normalUI && !Options.hidden);
+            this.hpBar_.y = ((Parameters.data_.normalUI || Options.hidden) ? 24 : 16);
+            this.mpBar_.y = ((Parameters.data_.normalUI || Options.hidden) ? 48 : 44);
         }
 
         public function update(_arg_1:Player):void

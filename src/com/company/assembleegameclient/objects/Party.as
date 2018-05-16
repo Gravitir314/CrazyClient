@@ -25,8 +25,8 @@ public class Party
         private static const SORT_ON_PARAMS:Array = [(Array.NUMERIC | Array.DESCENDING), Array.NUMERIC, Array.NUMERIC];
         private static const PARTY_DISTANCE_SQ:int = 2500;
         private static var addTextLine:AddTextLineSignal = StaticInjectorContext.getInjector().getInstance(AddTextLineSignal);
-        private static const DOD_PATH_X:Array = [124, 124, 132, 132, 128, 128, 132, 132, 128, 131, 128, 128, 126, 126, 130, 130, 126, 126, 130, 130, 128];
-        private static const DOD_PATH_Y:Array = [229, 223, 223, 217, 217, 211, 211, 208, 207, 205, 202, 129, 132, 128, 128, 132, 132, 128, 128, 132, 129];
+        private static const DOD_PATH_X:Array = [124, 124, 132, 132, 128, 128, 132, 132, 128, 131, 128, 128/*, 126, 126, 130, 130, 126, 126, 130, 130, 128*/];
+        private static const DOD_PATH_Y:Array = [229, 223, 223, 217, 217, 211, 211, 208, 207, 205, 202, 129/*, 132, 128, 128, 132, 132, 128, 128, 132, 129*/];
         private static var PATH_IDX:int = 0;
         private static var debugEnd:Boolean = false;
         private static var COUNT:Number = 0;

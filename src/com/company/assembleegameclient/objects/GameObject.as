@@ -841,9 +841,9 @@ public class GameObject extends BasicObject
             {
                 if (!this.mobInfoShown)
                 {
-                    if (this.props_.isEnemy_)
+                    if (this)
                     {
-                        this.mobInfo(((this.props_.id_ + " - ") + this.props_.type_));
+                        this.mobInfo(((this.props_.id_ + "\n") + this.props_.type_));
                         this.mobInfoShown = true;
                     }
                 }

@@ -527,8 +527,8 @@ public class Map extends AbstractMap
             }
             if (((!(player_ == null)) && (!(Parameters.screenShotMode_))))
             {
-                gradientOverlay_.visible = true;
-                gradientOverlay_.x = (_local_17.right - ((Options.hidden) ? 210 : 10));
+                gradientOverlay_.visible = Options.hidden;
+                gradientOverlay_.x = (_local_17.right - 210);
                 gradientOverlay_.y = _local_17.top;
             }
             else

@@ -331,6 +331,9 @@ public class GameServerConnection
         {
         }
 
+        public function fakeDeath(_arg_1:String):void
+        {
+        }
 
     }
 }//package kabam.rotmg.messaging.impl

@@ -519,7 +519,7 @@ public class Player extends Character
             var _local_1:int;
             var _local_2:Boolean;
             if (this.aimAssistPoint != null){
-                if ((((!(this.aimAssistTarget.isStasis())) && (!(this.aimAssistTarget.isInvincible()))) && (!(this.aimAssistTarget.isInvulnerable())) && (this.aimAssistTarget.maxHP_ >= Parameters.data_.spellThreshold))){
+                if (!this.aimAssistTarget.isStasis() && !this.aimAssistTarget.isInvincible() && !this.aimAssistTarget.isInvulnerable() && this.aimAssistTarget.maxHP_ >= Parameters.data_.spellThreshold) {
                     this.useAltWeapon_(this.aimAssistPoint.x, this.aimAssistPoint.y, 1, true);
                 }
             }
@@ -527,11 +527,9 @@ public class Player extends Character
 
         public function autoAbility():void{
             var _local_1:int = equipment_[1];
-            if (_local_1 == -1){
-                return;
-            }
             var _local_2:int = ObjectLibrary.xmlLibrary_[_local_1].MpCost;
-            if (((_local_2 > this.mp_) || (this.nextAltAttack_ > getTimer()))){
+            if (_local_2 > this.mp_ || this.nextAltAttack_ > getTimer() || _local_1 == -1)
+            {
                 return;
             }
             switch (this.objectType_){
@@ -1270,7 +1268,7 @@ public class Player extends Character
                 map_.gs_.gsc_.teleportId(this.map_.gs_.map.player_.objectId_);
                 this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
             }
-            if (((((this.chp / maxHP_) * 100) <= Parameters.AutoNexus) && (!(Parameters.AutoNexus == 0))))
+            if (((((this.chp / maxHP_) * 100) <= Parameters.AutoNexus) && !map_.gs_.isSafeMap && Parameters.AutoNexus != 0))
             {
                 this.addTextLine.dispatch(ChatMessage.make("", (("You were saved at " + this.chp.toFixed(0)) + " health")));
                 map_.gs_.gsc_.escape();
@@ -1329,8 +1327,7 @@ public class Player extends Character
             }
         }
 
-        override public function update(_arg_1:int, _arg_2:int):Boolean
-        {
+        override public function update(_arg_1:int, _arg_2:int):Boolean {
             var _local_3:GameServerConnection = map_.gs_.gsc_;
             var _local_4:int;
             var _local_5:Number;
@@ -1357,112 +1354,87 @@ public class Player extends Character
             var _local_26:Point;
             var _local_27:Server;
             var _local_28:ReconnectEvent;
-            if (this == map_.player_)
-            {
+            if (this == map_.player_) {
                 if (Parameters.data_.dodBot)
                 {
                     Party.dodBot(this);
                 }
-                if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50))))
-                {
+                if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50)))) {
                     this.thunderTime = getTimer();
                     map_.gs_.gsc_.thunderMove(this);
                 }
-                if (((!(this.vitTime == -1)) && (!(isPaused()))))
-                {
-                    if (isBleeding())
-                    {
+                if (((!(this.vitTime == -1)) && (!(isPaused())))) {
+                    if (isBleeding()) {
                         this.chp = (this.chp - ((getTimer() - this.vitTime) * 0.02));
                     }
-                    else
-                    {
-                        if (!isSick())
-                        {
-                            if (isHealing())
-                            {
+                    else {
+                        if (!isSick()) {
+                            if (isHealing()) {
                                 this.chp = (this.chp + ((getTimer() - this.vitTime) * Number(((21 + (0.12 * this.vitality_)) / 1000))));
                             }
-                            else
-                            {
+                            else {
                                 this.chp = (this.chp + ((getTimer() - this.vitTime) * Number(((1 + (0.12 * this.vitality_)) / 1000))));
                             }
                         }
                     }
-                    if (this.breath_ == 0)
-                    {
+                    if (this.breath_ == 0) {
                         this.chp = (this.chp - ((getTimer() - this.vitTime) * 0.094));
                     }
                     this.checkOPAuto();
-                    if (this.chp > maxHP_)
-                    {
+                    if (this.chp > maxHP_) {
                         this.chp = maxHP_;
                     }
                 }
                 this.vitTime = getTimer();
                 _local_12 = -1;
-                if (map_.quest_.getObject(1) != null)
-                {
+                if (map_.quest_.getObject(1) != null) {
                     _local_14 = map_.quest_.getObject(1);
                     _local_12 = _local_14.objectType_;
                 }
-                if ((((!(_local_12 == 3366)) && (!(_local_12 == 3367))) && (!(_local_12 == 3368))))
-                {
+                if ((((!(_local_12 == 3366)) && (!(_local_12 == 3367))) && (!(_local_12 == 3368)))) {
                     this.questMob = _local_14;
                 }
-                else
-                {
+                else {
                     this.questMob = null;
                 }
-                if (((map_.gs_.gsc_.oncd) && (getTimer() >= this.nextTeleportAt_)))
-                {
+                if (((map_.gs_.gsc_.oncd) && (getTimer() >= this.nextTeleportAt_))) {
                     map_.gs_.gsc_.retryTeleport();
                 }
-                if (((this.remBuff.length > 0) && (getTimer() >= this.remBuff[(this.remBuff.length - 1)])))
-                {
+                if (((this.remBuff.length > 0) && (getTimer() >= this.remBuff[(this.remBuff.length - 1)]))) {
                     _local_15 = this.getItemHp();
-                    if (((!(_local_15 == this.cmaxhpboost)) && (!(isHpBoosted()))))
-                    {
+                    if (((!(_local_15 == this.cmaxhpboost)) && (!(isHpBoosted())))) {
                         this.cmaxhp = (this.cmaxhp - (this.cmaxhpboost - _local_15));
                         this.cmaxhpboost = _local_15;
                     }
                     this.remBuff.pop();
                 }
-                if (this.vitTime >= this.sendStr)
-                {
+                if (this.vitTime >= this.sendStr) {
                     map_.gs_.gsc_.playerText(this.afkMsg);
                     this.sendStr = int.MAX_VALUE;
                 }
-                if (wantedList == null)
-                {
+                if (wantedList == null) {
                     wantedList = this.genWantedList();
                 }
-                if (((Parameters.data_.AutoLootOn) && (this.lookForLoot())))
-                {
+                if (((Parameters.data_.AutoLootOn) && (this.lookForLoot()))) {
                     this.autoloot_(_arg_1);
                 }
-                if ((((!(this.collect == 0)) && (map_.name_ == "Vault")) && ((lastLootTime + 550) < getTimer())))
-                {
+                if ((((!(this.collect == 0)) && (map_.name_ == "Vault")) && ((lastLootTime + 550) < getTimer()))) {
                     this.vault_();
                 }
-                if (ParseChatMessageCommand.switch_)
-                {
+                if (ParseChatMessageCommand.switch_) {
                     this.findSlots();
                     ParseChatMessageCommand.switch_ = false;
                 }
-                if (((!(this.select_ == -1)) && (getTimer() >= this.nextSelect)))
-                {
+                if (((!(this.select_ == -1)) && (getTimer() >= this.nextSelect))) {
                     _local_4 = this.loopStart;
-                    while (_local_4 < 12)
-                    {
+                    while (_local_4 < 12) {
                         _local_16 = this.naturalize((_local_4 - 4));
-                        if (_local_16.item_ == this.select_)
-                        {
+                        if (_local_16.item_ == this.select_) {
                             this.selectSlot(_local_16);
                             this.loopStart = (_local_4 + 1);
                             if (_local_4 != 11) break;
                         }
-                        if (_local_4 == 11)
-                        {
+                        if (_local_4 == 11) {
                             this.select_ = -1;
                             this.loopStart = 4;
                         }
@@ -1470,55 +1442,44 @@ public class Player extends Character
                     }
                 }
                 _local_4 = 0;
-                while (_local_4 < 8)
-                {
-                    if (this.bools[_local_4])
-                    {
+                while (_local_4 < 8) {
+                    if (this.bools[_local_4]) {
                         this.swapInvBp(_local_4);
                         break;
                     }
                     _local_4++;
                 }
                 _local_13 = map_.player_;
-                if ((lastLootTime + 550) < getTimer())
-                {
-                    if (_local_13.healthPotionCount_ < 6)
-                    {
+                if ((lastLootTime + 550) < getTimer()) {
+                    if (_local_13.healthPotionCount_ < 6) {
                         _local_17 = _local_13.getSlotwithItem(2594);
-                        if (_local_17 != -1)
-                        {
+                        if (_local_17 != -1) {
                             map_.gs_.gsc_.invSwapPotion(_local_13, _local_13, _local_17, 2594, _local_13, 254, -1);
                             lastLootTime = getTimer();
                         }
                     }
                 }
-                if (((this.timerCount <= this.endCount) && ((this.startTime + (this.timerStep * this.timerCount)) <= getTimer())))
-                {
+                if (((this.timerCount <= this.endCount) && ((this.startTime + (this.timerStep * this.timerCount)) <= getTimer()))) {
                     _local_18 = (this.endCount * this.timerStep);
                     _local_19 = (this.timerCount * this.timerStep);
                     _local_20 = ((_local_18 - _local_19) / 1000);
-                    if (int((_local_18 / 60000)) > 0)
-                    {
+                    if (int((_local_18 / 60000)) > 0) {
                         _local_21 = (_local_20 % 60);
                         _local_22 = _local_21.toFixed(((this.timerStep < 1000) ? 1 : 0));
                         this.notifyPlayer(((int((_local_20 / 60)).toString() + ":") + ((_local_21 < 10) ? ("0" + _local_22) : _local_22)), GameObject.green2red((100 - ((_local_19 / _local_18) * 100))));
                     }
-                    else
-                    {
+                    else {
                         this.notifyPlayer(_local_20.toFixed(((this.timerStep < 1000) ? 1 : 0)), GameObject.green2red((100 - ((_local_19 / _local_18) * 100))));
                     }
                     this.timerCount++;
                 }
-                if ((this == this.map_.player_) && (!this.map_.gs_.isSafeMap) && (Parameters.data_.autoAbil))
-                {
+                if ((this == this.map_.player_) && (!this.map_.gs_.isSafeMap) && (Parameters.data_.autoAbil)) {
                     this.autoAbility();
                 }
-                if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil))))
-                {
+                if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil)))) {
                     _local_23 = 0;
                     _local_24 = (1 + (this.wisdom_ / 150));
-                    switch (equipment_[1])
-                    {
+                    switch (equipment_[1]) {
                         case eItems.Cloak_of_Ghostly_Concealment:
                         case eItems.Cloak_of_Endless_Twilight:
                         case eItems.Cloak_of_Winter:
@@ -1537,12 +1498,10 @@ public class Player extends Character
                         case eItems.Seal_of_the_Blessed_Champion:
                         case eItems.Seal_of_the_Holy_Warrior:
                         case eItems.Advent_Seal:
-                            if (Parameters.data_.palaSpam)
-                            {
+                            if (Parameters.data_.palaSpam) {
                                 _local_23 = 500;
                             }
-                            else
-                            {
+                            else {
                                 _local_23 = ((4000 * _local_24) - 200);
                             }
                             break;
@@ -1556,38 +1515,31 @@ public class Player extends Character
                         case eItems.Tome_of_Holy_Guidance:
                         case eItems.Tome_of_Purification:
                         case eItems.Nativity_Tome:
-                            if (Parameters.data_.palaSpam)
-                            {
+                            if (Parameters.data_.palaSpam) {
                                 _local_23 = 500;
                             }
                             break;
                         case eItems.Tome_of_Holy_Protection:
                         case eItems.Tome_of_Frigid_Protection:
-                            if (Parameters.data_.palaSpam)
-                            {
+                            if (Parameters.data_.palaSpam) {
                                 _local_23 = 500;
                             }
-                            else
-                            {
+                            else {
                                 _local_23 = ((4000 * _local_24) - 200);
                             }
                             break;
                     }
-                    if (_local_23 > 0)
-                    {
+                    if (_local_23 > 0) {
                         this.useAltWeapon(x_, y_, UseType.START_USE, _local_23);
                     }
                 }
-                if (this.lastManaUse <= getTimer())
-                {
+                if (this.lastManaUse <= getTimer()) {
                     this.handleAutoMana();
                 }
-                if (this.autohealtimer <= getTimer())
-                {
+                if (this.autohealtimer <= getTimer()) {
                     _local_23 = 0;
                     _local_24 = (1 + (this.wisdom_ / 150));
-                    switch (equipment_[1])
-                    {
+                    switch (equipment_[1]) {
                         case eItems.Seal_of_the_Blessed_Champion:
                         case eItems.Seal_of_the_Holy_Warrior:
                         case eItems.Advent_Seal:
@@ -1615,75 +1567,58 @@ public class Player extends Character
                             _local_23 = 500;
                             break;
                     }
-                    if (_local_23 > 0)
-                    {
+                    if (_local_23 > 0) {
                         this.handleAutoH(_local_23);
                     }
                 }
             }
-            if (((this.tierBoost) && (!(isPaused()))))
-            {
+            if (((this.tierBoost) && (!(isPaused())))) {
                 this.tierBoost = (this.tierBoost - _arg_2);
-                if (this.tierBoost < 0)
-                {
+                if (this.tierBoost < 0) {
                     this.tierBoost = 0;
                 }
             }
-            if (((this.dropBoost) && (!(isPaused()))))
-            {
+            if (((this.dropBoost) && (!(isPaused())))) {
                 this.dropBoost = (this.dropBoost - _arg_2);
-                if (this.dropBoost < 0)
-                {
+                if (this.dropBoost < 0) {
                     this.dropBoost = 0;
                 }
             }
-            if (((this.xpTimer) && (!(isPaused()))))
-            {
+            if (((this.xpTimer) && (!(isPaused())))) {
                 this.xpTimer = (this.xpTimer - _arg_2);
-                if (this.xpTimer < 0)
-                {
+                if (this.xpTimer < 0) {
                     this.xpTimer = 0;
                 }
             }
-            if (((isHealing()) && (!(isPaused()))))
-            {
-                if ((((!(Parameters.data_.AntiLag)) && (this.healingEffect_ == null)) || ((this.healingEffect_ == null) && (!(Parameters.data_.noParticlesMaster)))))
-                {
+            if (((isHealing()) && (!(isPaused())))) {
+                if ((((!(Parameters.data_.AntiLag)) && (this.healingEffect_ == null)) || ((this.healingEffect_ == null) && (!(Parameters.data_.noParticlesMaster))))) {
                     this.healingEffect_ = new HealingEffect(this);
                     map_.addObj(this.healingEffect_, x_, y_);
                 }
             }
-            else
-            {
-                if (this.healingEffect_ != null)
-                {
+            else {
+                if (this.healingEffect_ != null) {
                     map_.removeObj(this.healingEffect_.objectId_);
                     this.healingEffect_ = null;
                 }
             }
-            if (((map_.player_ == this) && (isPaused())))
-            {
+            if (((map_.player_ == this) && (isPaused()))) {
                 return (true);
             }
-            if (this.relMoveVec_ != null)
-            {
+            if (this.relMoveVec_ != null) {
                 _local_5 = Parameters.data_.cameraAngle;
-                if (this.rotate_ != 0)
-                {
+                if (this.rotate_ != 0) {
                     _local_5 = (_local_5 + ((_arg_2 * Parameters.PLAYER_ROTATE_SPEED) * this.rotate_));
                     Parameters.data_.cameraAngle = _local_5;
                 }
                 _local_6 = this.getMoveSpeed();
-                if (map_.gs_.gsc_.record == 2)
-                {
+                if (map_.gs_.gsc_.record == 2) {
                     _local_25 = map_.gs_.gsc_.recorded;
                     _local_26 = _local_25[this.recordPointer];
                     _local_7 = (((_local_26.y - y_) * (_local_26.y - y_)) + ((_local_26.x - x_) * (_local_26.x - x_)));
-                    if (_local_7 < 0.1)
-                    {
+                    if (_local_7 < 0.1) {
                         this.recordPointer++;
-                        if (this.recordPointer >= _local_25.length)
-                        {
+                        if (this.recordPointer >= _local_25.length) {
                             this.recordPointer = 0;
                         }
                         _local_26 = _local_25[this.recordPointer];
@@ -1692,20 +1627,15 @@ public class Player extends Character
                     moveVec_.x = (_local_6 * Math.cos(_local_7));
                     moveVec_.y = (_local_6 * Math.sin(_local_7));
                 }
-                else
-                {
-                    if (this.followTarget != null)
-                    {
+                else {
+                    if (this.followTarget != null) {
                         _local_7 = (((this.followTarget.y_ - y_) * (this.followTarget.y_ - y_)) + ((this.followTarget.x_ - x_) * (this.followTarget.x_ - x_)));
-                        if (_local_7 < 0.1)
-                        {
+                        if (_local_7 < 0.1) {
                             moveVec_.x = 0;
                             moveVec_.y = 0;
                         }
-                        else
-                        {
-                            if (this.lastteleport <= getTimer())
-                            {
+                        else {
+                            if (this.lastteleport <= getTimer()) {
                                 _local_3.teleport(this.followTarget.name_);
                                 this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
                             }
@@ -1714,13 +1644,10 @@ public class Player extends Character
                             moveVec_.y = (_local_6 * Math.sin(_local_7));
                         }
                     }
-                    else
-                    {
-                        if (((!(this.relMoveVec_.x == 0)) || (!(this.relMoveVec_.y == 0))))
-                        {
+                    else {
+                        if (((!(this.relMoveVec_.x == 0)) || (!(this.relMoveVec_.y == 0)))) {
                             _local_7 = Math.atan2(this.relMoveVec_.y, this.relMoveVec_.x);
-                            if (((square_.props_.slideAmount_ > 0) && (Parameters.data_.slideOnIce)))
-                            {
+                            if (((square_.props_.slideAmount_ > 0) && (Parameters.data_.slideOnIce))) {
                                 _local_8 = new Vector3D();
                                 _local_8.x = (_local_6 * Math.cos((_local_5 + _local_7)));
                                 _local_8.y = (_local_6 * Math.sin((_local_5 + _local_7)));
@@ -1728,25 +1655,20 @@ public class Player extends Character
                                 _local_9 = _local_8.length;
                                 _local_8.scaleBy((-1 * (square_.props_.slideAmount_ - 1)));
                                 moveVec_.scaleBy(square_.props_.slideAmount_);
-                                if (moveVec_.length < _local_9)
-                                {
+                                if (moveVec_.length < _local_9) {
                                     moveVec_ = moveVec_.add(_local_8);
                                 }
                             }
-                            else
-                            {
+                            else {
                                 moveVec_.x = (_local_6 * Math.cos((_local_5 + _local_7)));
                                 moveVec_.y = (_local_6 * Math.sin((_local_5 + _local_7)));
                             }
                         }
-                        else
-                        {
-                            if ((((moveVec_.length > 0.00012) && (square_.props_.slideAmount_ > 0)) && (Parameters.data_.slideOnIce)))
-                            {
+                        else {
+                            if ((((moveVec_.length > 0.00012) && (square_.props_.slideAmount_ > 0)) && (Parameters.data_.slideOnIce))) {
                                 moveVec_.scaleBy(square_.props_.slideAmount_);
                             }
-                            else
-                            {
+                            else {
                                 moveVec_.x = 0;
                                 moveVec_.y = 0;
                             }
@@ -1754,22 +1676,19 @@ public class Player extends Character
                     }
                 }
                 if (square_ != null && square_.props_.push_) {
-                    if (!Parameters.SWNoTileMove) {
+                    if (Parameters.data_.SWNoTileMove == false) {
                         moveVec_.x = (moveVec_.x - (square_.props_.animate_.dx_ / 1000));
                         moveVec_.y = (moveVec_.y - (square_.props_.animate_.dy_ / 1000));
                     }
                 }
                 this.walkTo((x_ + (_arg_2 * moveVec_.x)), (y_ + (_arg_2 * moveVec_.y)));
             }
-            else
-            {
-                if (!super.update(_arg_1, _arg_2))
-                {
+            else {
+                if (!super.update(_arg_1, _arg_2)) {
                     return (false);
                 }
             }
-            if ((((((map_.player_ == this) && (square_.props_.maxDamage_ > 0)) && ((square_.lastDamage_ + 500) < _arg_1)) && (!(isInvincible()))) && ((square_.obj_ == null) || (!(square_.obj_.props_.protectFromGroundDamage_)))))
-            {
+            if ((((((map_.player_ == this) && (square_.props_.maxDamage_ > 0)) && ((square_.lastDamage_ + 500) < _arg_1)) && (!(isInvincible()))) && ((square_.obj_ == null) || (!(square_.obj_.props_.protectFromGroundDamage_))))) {
                 _local_10 = map_.gs_.gsc_.getNextDamage(square_.props_.minDamage_, square_.props_.maxDamage_);
                 _local_11 = new Vector.<uint>();
                 _local_11.push(ConditionEffect.GROUND_DAMAGE);
@@ -1777,12 +1696,12 @@ public class Player extends Character
                 map_.gs_.gsc_.groundDamage(_arg_1, x_, y_);
                 square_.lastDamage_ = _arg_1;
             }
-            if (Parameters.data_.autoRecon){
-                if (this.lastreconnect <= getTimer()){
-                    if (((map_.player_ == this) && (map_.name_ == "Nexus"))){
+            if (Parameters.data_.autoRecon) {
+                if (this.lastreconnect <= getTimer()) {
+                    if (((map_.player_ == this) && (map_.name_ == "Nexus"))) {
                         _local_4 = int(((this.chp / this.maxHP_) * 100));
-                        if (_local_4 > 75){
-                            if (reconRealm != null){
+                        if (_local_4 > 75) {
+                            if (reconRealm != null) {
                                 reconRealm.charId_ = map_.gs_.gsc_.charId_;
                                 map_.gs_.dispatchEvent(reconRealm);
                             } else {

@@ -10,6 +10,7 @@ import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.tutorial.Tutorial;
 
+import flash.display.Bitmap;
 import flash.display.Sprite;
 
 import kabam.rotmg.core.model.PlayerModel;
@@ -35,6 +36,7 @@ public class AGameSprite extends Sprite
         public var camera_:Camera = new Camera();
         public var gsc_:GameServerConnection;
         public var isSafeMap:Boolean;
+        public var deathOverlay:Bitmap;
 
 
         public function initialize():void

@@ -7,6 +7,7 @@ package com.company.assembleegameclient.map
 {
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.RandomUtil;
 
 import flash.geom.Matrix3D;
@@ -69,10 +70,10 @@ public class Camera
             var _local_3:Number;
             var _local_4:Number;
             var _local_5:Number;
-            _local_2 = Parameters.data_.mscale;
+            _local_2 = ((Options.hidden) ? 1 : Parameters.data_.mscale);
             _local_3 = (WebMain.sWidth / _local_2);
             _local_4 = (WebMain.sHeight / _local_2);
-            _local_5 = ((Parameters.data_.uiscale) ? Number((((200 * WebMain.sHeight) / 600) / _local_2)) : Number((200 / _local_2)));
+            _local_5 = ((Parameters.data_.uiscale && !Options.hidden) ? Number((((200 * WebMain.sHeight) / 600) / _local_2)) : Number((200 / _local_2)));
             if (_arg_1)
             {
                 return (new Rectangle(-((_local_3 - _local_5) / 2), -((_local_4 * 13) / 24), _local_3, _local_4));

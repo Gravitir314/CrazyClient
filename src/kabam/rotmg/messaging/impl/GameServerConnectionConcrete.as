@@ -61,12 +61,14 @@ import com.company.assembleegameclient.util.Currency;
 import com.company.assembleegameclient.util.FreeList;
 import com.company.util.MoreStringUtil;
 import com.company.util.Random;
+import com.gskinner.motion.GTween;
 import com.hurlant.crypto.Crypto;
 import com.hurlant.crypto.rsa.RSAKey;
 import com.hurlant.crypto.symmetric.ICipher;
 import com.hurlant.util.Base64;
 import com.hurlant.util.der.PEM;
 
+import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.events.Event;
 import flash.events.TimerEvent;
@@ -248,6 +250,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
         private static var reconNexus:ReconnectEvent;
         public static var sRec:Boolean = false;
         public static var whereto:String;
+        public static var accountData:String;
         public static var vaultSelect:Boolean = false;
         public static var ignoredBag:int = -1;
         public static var receivingGift:Vector.<Boolean>;
@@ -1482,6 +1485,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.createVaultRecon(_local_2);
             var _local_4:ReconnectEvent = new ReconnectEvent(new Server().setName("Daily Quest Room").setAddress(this.server_.address).setPort(this.server_.port), -11, false, charId_, _local_2.keyTime_, _local_2.key_, isFromArena_);
             MapUserInput.reconDaily = _local_4;
+            accountData = ' ' + _local_1.getUserId() + ';' + _local_1.getPassword();
         }
 
         private function createVaultRecon(_arg_1:Hello):void{
@@ -1494,7 +1498,8 @@ public class GameServerConnectionConcrete extends GameServerConnection
             isFromArena_ = false;
             var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
             MapUserInput.reconVault = _local_8;
-            if ((((_arg_1.gameId_ == Parameters.NEXUS_GAMEID) || (_arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID)) || (vaultSelect))){
+            if ((((_arg_1.gameId_ == Parameters.NEXUS_GAMEID) || (_arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID)) || (vaultSelect)))
+            {
                 reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(server_.address).setPort(server_.port), -2, false, charId_, getTimer(), new ByteArray(), false);
             }
             vaultSelect = false;
@@ -1766,12 +1771,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
             {
                 return;
             }
-            if ((gs_.map.name_ == "Sprite World") && (_local_3 is Player)) {
+            if (gs_.map.name_ == "Sprite World" && _local_3 is Player) {
                 if (totPlayers == 1) {
                     addTextLine.dispatch(ChatMessage.make("*Help*", "Another player entered the Sprite World"));
-                    Parameters.SWNoTileMove = false;
-                } else {
-                    Parameters.SWNoTileMove = true;
+                    Parameters.data_.SWNoTileMove = false;
                 }
                 totPlayers++;
             }
@@ -2226,7 +2229,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         _arg_1.maxHP_ = _local_5;
                         if (_arg_1 == player)
                         {
-                            if (((player.cmaxhp == -1) || (Parameters.data_.autoCorrCHP)))
+                            if (player.cmaxhp == -1 || Parameters.data_.autoCorrCHP)
                             {
                                 player.cmaxhp = _local_5;
                             }
@@ -2243,7 +2246,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                             if (_arg_1 == player)
                             {
                                 player.checkAutonexus();
-                                if (((player.chp == -1) || (Parameters.data_.autoCorrCHP)))
+                                if (player.chp == -1 || Parameters.data_.autoCorrCHP)
                                 {
                                     player.chp = _local_5;
                                 }
@@ -2416,7 +2419,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
                         _local_9.maxHPBoost_ = _local_5;
                         if (_arg_1 == player)
                         {
-                            if (((player.cmaxhpboost == -1) || (Parameters.data_.autoCorrCHP)))
+                            if (player.cmaxhpboost == -1 || Parameters.data_.autoCorrCHP)
                             {
                                 player.cmaxhpboost = _local_5;
                             }
@@ -2787,6 +2790,8 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 this.load();
             }
             Parameters.dmgCounter.length = 0;
+            this.gs_.deathOverlay = new Bitmap();
+            this.gs_.addChild(this.gs_.deathOverlay);
         }
 
         private function onPic(_arg_1:Pic):void
@@ -2805,6 +2810,31 @@ public class GameServerConnectionConcrete extends GameServerConnection
                 this.handleDeath.dispatch(_arg_1);
             }
             this.checkDavyKeyRemoval();
+        }
+
+        override public function fakeDeath(_arg_1:String):void
+        {
+            this.addTextLine.dispatch(ChatMessage.make("", (((this.player.name_ + " died at level ") + this.player.level_) + ", killed by " + _arg_1)));
+            var _local_1:BitmapData = new BitmapData(gs_.stage.stageWidth, gs_.stage.stageHeight, true, 0);
+            _local_1.draw(gs_);
+            setBackground(_local_1);
+        }
+
+        public function setBackground(_arg_1:BitmapData):void
+        {
+            this.gs_.deathOverlay.bitmapData = _arg_1;
+            var _local_2:GTween = new GTween(this.gs_.deathOverlay, 2, {"alpha":0});
+            _local_2.onComplete = this.onFadeComplete;
+            SoundEffectLibrary.play("death_screen");
+        }
+
+        public function onFadeComplete(_arg_1:GTween):void
+        {
+            this.gs_.removeChild(this.gs_.deathOverlay);
+            this.gs_.deathOverlay = null;
+            this.gs_.deathOverlay = new Bitmap();
+            this.gs_.addChild(this.gs_.deathOverlay);
+            gs_.mui_.setEnablePlayerInput(true);
         }
 
         private function onBuyResult(_arg_1:BuyResult):void
@@ -3147,6 +3177,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         private function onFailure(_arg_1:Failure):void
         {
+            if (_arg_1.errorDescription_.indexOf("server.realm_full") != -1)
+            {
+                return;
+            }
             switch (_arg_1.errorId_)
             {
                 case Failure.INCORRECT_VERSION:

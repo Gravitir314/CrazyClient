@@ -781,8 +781,19 @@ public class ParseChatMessageCommand
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                     this.addTextLine.dispatch(ChatMessage.make("", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                     return (true);
+                case "/pets":
+                    Parameters.data_.showPets = !Parameters.data_.showPets;
+                    Parameters.save();
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.showPets) ? "Pets are displayed" : "Pets are hidden")));
+                    return (true);
+                case "/swmove":
+                    Parameters.data_.SWNoTileMove = !Parameters.data_.SWNoTileMove;
+                    Parameters.save();
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.SWNoTileMove) ? "SWMove enabled" : "SWMove disabled")));
+                    return (true);
                 case "/ao":
                     Parameters.data_.alphaOnOthers = (!(Parameters.data_.alphaOnOthers));
+                    Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.alphaOnOthers) ? "Alpha enabled" : "Alpha disabled")));
                     return (true);
                 case "/vaultonly":
@@ -825,7 +836,7 @@ public class ParseChatMessageCommand
                 case "/dodbot":
                     Parameters.data_.dodBot = (!Parameters.data_.dodBot);
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Doer of Deeds Bot: On" : "Doer of Deeds Bot: Off")));
-                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Use /aex 355 to add walls to aim list. Use /aig 1711 and /aig 1712 to add chickens to ignore list" : "")));
+                    this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.dodBot) ? "Type /aex 355 to add walls to aim list. Type /aig 1711 and /aig 1712 to add chickens to ignore list" : "")));
                     return (true);
                 case "/lf":
                 case "/lockfilter":
@@ -1051,6 +1062,17 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     return (true);
                 default:
+                    _local_7 = this.data.match("^/death (.+)$");
+                    if (_local_7 != null) {
+                        _local_12.dead_ = true;
+                        _local_25 = new GameObject(ObjectLibrary.getXMLfromId("Gravestone 11"));
+                        _local_25.objectId_ = (-2147483648 + getTimer());
+                        _local_25.name_ = _local_12.name_;
+                        this.hudModel.gameSprite.map.addObj(_local_25, _local_12.x_, _local_12.y_);
+                        this.hudModel.gameSprite.mui_.setEnablePlayerInput(false);
+                        this.hudModel.gameSprite.gsc_.fakeDeath(_local_7[1].toString());
+                        return (true);
+                    }
                     _local_7 = this.data.match("^/alpha (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.alphaMan = _local_7[1];
@@ -1429,7 +1451,7 @@ public class ParseChatMessageCommand
             {
                 if ((_local_3 is Player))
                 {
-                    _local_2 = this.levenshtein(_arg_1, _local_3.name_.toLowerCase().substr(0, _arg_1.length));
+                    _local_2 = levenshtein(_arg_1, _local_3.name_.toLowerCase().substr(0, _arg_1.length));
                     if (_local_2 < _local_5)
                     {
                         _local_5 = _local_2;
@@ -1490,7 +1512,7 @@ public class ParseChatMessageCommand
             return (_arg_1);
         }
 
-        private function levenshtein(_arg_1:String, _arg_2:String):int
+        public static function levenshtein(_arg_1:String, _arg_2:String):int
         {
             var _local_3:int;
             var _local_4:int;

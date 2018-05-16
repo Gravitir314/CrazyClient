@@ -266,6 +266,14 @@
       <Explanation>Disable all status notifications (pet healing/quest complete/etc).</Explanation>
    </Article>
    <Article>
+      <Command>/pets</Command>
+      <Explanation>Toggle displaying of pets.</Explanation>
+   </Article>
+   <Article>
+      <Command>/swmove</Command>
+      <Explanation>Toggle tile moving in sprite world.</Explanation>
+   </Article>
+   <Article>
       <Command>/swtree</Command>
       <Explanation>Remove/add trees from sprite world in aim exception list.</Explanation>
    </Article>

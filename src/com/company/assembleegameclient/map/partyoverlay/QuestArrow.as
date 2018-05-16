@@ -34,6 +34,8 @@ public class QuestArrow extends GameObjectArrow
 
         override protected function onMouseOver(_arg_1:MouseEvent):void
         {
+            super.onMouseOver(_arg_1);
+            this.refreshToolTip();
         }
 
         override protected function onMouseOut(_arg_1:MouseEvent):void
@@ -47,6 +49,10 @@ public class QuestArrow extends GameObjectArrow
             if (((_arg_1 == null) || (_arg_1.texture_ == null)))
             {
                 return (null);
+            }
+            if (this.shouldShowFullQuest(_arg_2))
+            {
+                return (new QuestToolTip(go_));
             }
             if (Parameters.data_.showQuestPortraits)
             {

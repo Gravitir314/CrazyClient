@@ -12,6 +12,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.TradePanel;
 import com.company.assembleegameclient.ui.board.HelpBoard;
 import com.company.assembleegameclient.ui.icons.SimpleIconButton;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
@@ -96,10 +97,10 @@ public class HUDView extends Sprite implements UnFocusAble
         {
             this.background = new CharacterWindowBackground();
             this.miniMap = new MiniMapImp(192, 192);
-            (this.tabStrip = new TabStripView()).visible = Parameters.data_.normalUI;
+            (this.tabStrip = new TabStripView()).visible = (Parameters.data_.normalUI || Options.hidden);
             this.characterDetails = new CharacterDetailsView();
             this.statMeters = new StatMetersView();
-            (this.potions = new PotionInventoryView()).visible = (!(Parameters.data_.normalUI));
+            (this.potions = new PotionInventoryView()).visible = (!Parameters.data_.normalUI && !Options.hidden);
             this.stats = new StatsView();
             this.stats.visible = false;
             this.cdtimer = new CooldownTimer();
@@ -135,14 +136,14 @@ public class HUDView extends Sprite implements UnFocusAble
             this.inventory.y = 392;
             if (this.player.hasBackpack_)
             {
-                this.characterDetails.visible = Parameters.data_.normalUI;
+                this.characterDetails.visible = (Parameters.data_.normalUI || Options.hidden);
                 this.backpack = new InventoryGrid(this.player, this.player, 12);
                 this.inventory.x = 14;
                 this.inventory.y = 304;
                 this.backpack.x = 14;
                 this.backpack.y = 392;
                 addChild(this.backpack);
-                if (!Parameters.data_.normalUI)
+                if (!Parameters.data_.normalUI && !Options.hidden)
                 {
                     this.equippedGrid.y = 198;
                     this.statMeters.y = 240;
@@ -153,7 +154,7 @@ public class HUDView extends Sprite implements UnFocusAble
             }
             else
             {
-                if (!Parameters.data_.normalUI)
+                if (!Parameters.data_.normalUI && !Options.hidden)
                 {
                     this.equippedGrid.y = 348;
                     this.stats.visible = true;
@@ -163,7 +164,7 @@ public class HUDView extends Sprite implements UnFocusAble
                     this.stats.visible = false;
                 }
             }
-            if (Parameters.data_.normalUI)
+            if (Parameters.data_.normalUI || Options.hidden)
             {
                 this.inventory.visible = false;
                 this.cdtimer.visible = false;
@@ -211,7 +212,7 @@ public class HUDView extends Sprite implements UnFocusAble
         {
             this.interactPanel = new InteractPanel(_arg_1, this.player, 200, 100);
             this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
-            this.interactPanel.y = ((Parameters.data_.normalUI) ? 496 : 500);
+            this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;
             addChild(this.interactPanel);
         }
 
@@ -232,7 +233,7 @@ public class HUDView extends Sprite implements UnFocusAble
             _local_1 = new <IGraphicsData>[_local_2, _local_3, GraphicsUtil.END_FILL];
             GraphicsUtil.drawCutEdgeRect(0, 0, 178, 46, 6, [1, 1, 1, 1], _local_3);
             this.equippedGridBG = new Sprite();
-            if (!Parameters.data_.normalUI)
+            if (!Parameters.data_.normalUI && !Options.hidden)
             {
                 this.equippedGridBG.visible = false;
             }
@@ -268,12 +269,12 @@ public class HUDView extends Sprite implements UnFocusAble
 
         private function setNonTradePanelAssetsVisible(_arg_1:Boolean):void
         {
-            if (((Parameters.data_.normalUI) || (!(this.player.hasBackpack_))))
+            if (((Parameters.data_.normalUI || Options.hidden) || (!(this.player.hasBackpack_))))
             {
                 this.characterDetails.visible = _arg_1;
             }
             this.statMeters.visible = _arg_1;
-            if (Parameters.data_.normalUI)
+            if (Parameters.data_.normalUI || Options.hidden)
             {
                 this.tabStrip.visible = _arg_1;
                 this.equippedGridBG.visible = _arg_1;
@@ -369,7 +370,7 @@ public class HUDView extends Sprite implements UnFocusAble
             this.showButton.scaleX = 2;
             this.showButton.scaleY = 2;
             this.showButton.addEventListener(MouseEvent.CLICK, this.toggleIcons);
-            this.showButton.visible = (!(Parameters.data_.normalUI));
+            this.showButton.visible = (!Parameters.data_.normalUI && !Options.hidden);
             addChild(this.showButton);
         }
 
@@ -403,10 +404,10 @@ public class HUDView extends Sprite implements UnFocusAble
         {
             if (this.tradePanel)
             {
-                Parameters.data_.normalUI = (!(Parameters.data_.normalUI));
+                Parameters.data_.normalUI = !Parameters.data_.normalUI;
                 return;
             }
-            var _local_1:Boolean = Parameters.data_.normalUI;
+            var _local_1:Boolean = (Parameters.data_.normalUI || Options.hidden);
             var _local_2:Boolean = this.player.hasBackpack_;
             this.showButton.visible = (!(_local_1));
             if (_local_1)
@@ -420,7 +421,7 @@ public class HUDView extends Sprite implements UnFocusAble
             this.tabStrip.visible = _local_1;
             this.inventory.visible = (!(_local_1));
             this.potions.visible = (!(_local_1));
-            this.interactPanel.y = ((_local_1) ? 496 : 500);
+            this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;
             this.stats.visible = ((!(_local_1)) && (!(_local_2)));
             this.cdtimer.visible = (!(_local_1));
             if (this.pet != null)

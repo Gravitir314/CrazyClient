@@ -108,68 +108,60 @@ public class Face3D
 
         public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera):Boolean
         {
-            var _local_3:Vector.<Number>;
-            var _local_4:Number;
-            var _local_5:Number;
-            var _local_6:Number;
-            var _local_7:Number;
-            var _local_8:int;
-            var _local_9:int;
-            if (MapUserInput.skipRender == true)
-            {
-                return (false);
-            }
-            Utils3D.projectVectors(_arg_2.wToS_, this.vin_, this.vout_, this.uvt_);
-            if (this.backfaceCull_)
-            {
-                _local_3 = this.vout_;
-                _local_4 = (_local_3[2] - _local_3[0]);
-                _local_5 = (_local_3[3] - _local_3[1]);
-                _local_6 = (_local_3[4] - _local_3[0]);
-                _local_7 = (_local_3[5] - _local_3[1]);
-                if (((_local_4 * _local_7) - (_local_5 * _local_6)) > 0)
-                {
+                var _local_3:Vector.<Number>;
+                var _local_4:Number;
+                var _local_5:Number;
+                var _local_6:Number;
+                var _local_7:Number;
+                var _local_8:int;
+                var _local_9:int;
+                if (MapUserInput.skipRender == true) {
                     return (false);
                 }
-            }
-            var _local_10:Number = (_arg_2.clipRect_.x - 10);
-            var _local_11:Number = (_arg_2.clipRect_.y - 10);
-            var _local_12:Number = (_arg_2.clipRect_.right + 10);
-            var _local_13:Number = (_arg_2.clipRect_.bottom + 10);
-            var _local_14:Boolean = true;
-            var _local_15:int = this.vout_.length;
-            while (_local_9 < _local_15)
-            {
-                _local_8 = (_local_9 + 1);
-                if (((((this.vout_[_local_9] >= _local_10) && (this.vout_[_local_9] <= _local_12)) && (this.vout_[_local_8] >= _local_11)) && (this.vout_[_local_8] <= _local_13)))
-                {
-                    _local_14 = false;
-                    break;
+                Utils3D.projectVectors(_arg_2.wToS_, this.vin_, this.vout_, this.uvt_);
+                if (this.backfaceCull_) {
+                    _local_3 = this.vout_;
+                    _local_4 = (_local_3[2] - _local_3[0]);
+                    _local_5 = (_local_3[3] - _local_3[1]);
+                    _local_6 = (_local_3[4] - _local_3[0]);
+                    _local_7 = (_local_3[5] - _local_3[1]);
+                    if (((_local_4 * _local_7) - (_local_5 * _local_6)) > 0) {
+                        return (false);
+                    }
                 }
-                _local_9 = (_local_9 + 2);
-            }
-            if (_local_14)
-            {
-                return (false);
-            }
-            if (this.blackOut_)
-            {
-                _arg_1.push(blackOutFill_);
+                var _local_10:Number = (_arg_2.clipRect_.x - 10);
+                var _local_11:Number = (_arg_2.clipRect_.y - 10);
+                var _local_12:Number = (_arg_2.clipRect_.right + 10);
+                var _local_13:Number = (_arg_2.clipRect_.bottom + 10);
+                var _local_14:Boolean;
+                var _local_15:int = this.vout_.length;
+                while (_local_9 < _local_15) {
+                    _local_8 = (_local_9 + 1);
+                    if (((((this.vout_[_local_9] >= _local_10) && (this.vout_[_local_9] <= _local_12)) && (this.vout_[_local_8] >= _local_11)) && (this.vout_[_local_8] <= _local_13))) {
+                        _local_14 = false;
+                        break;
+                    }
+                    _local_9 = (_local_9 + 2);
+                }
+                if (_local_14) {
+                    return (false);
+                }
+                if (this.blackOut_) {
+                    _arg_1.push(blackOutFill_);
+                    _arg_1.push(this.path_);
+                    _arg_1.push(GraphicsUtil.END_FILL);
+                    return (true);
+                }
+                if (this.needGen_) {
+                    this.generateTextureMatrix();
+                }
+                this.textureMatrix_.calculateTextureMatrix(this.vout_);
+                this.bitmapFill_.bitmapData = this.textureMatrix_.texture_;
+                this.bitmapFill_.matrix = this.textureMatrix_.tToS_;
+                _arg_1.push(this.bitmapFill_);
                 _arg_1.push(this.path_);
                 _arg_1.push(GraphicsUtil.END_FILL);
                 return (true);
-            }
-            if (this.needGen_)
-            {
-                this.generateTextureMatrix();
-            }
-            this.textureMatrix_.calculateTextureMatrix(this.vout_);
-            this.bitmapFill_.bitmapData = this.textureMatrix_.texture_;
-            this.bitmapFill_.matrix = this.textureMatrix_.tToS_;
-            _arg_1.push(this.bitmapFill_);
-            _arg_1.push(this.path_);
-            _arg_1.push(GraphicsUtil.END_FILL);
-            return (true);
         }
 
         public function contains(_arg_1:Number, _arg_2:Number):Boolean

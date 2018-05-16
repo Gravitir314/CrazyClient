@@ -51,7 +51,6 @@ import kabam.rotmg.minimap.control.MiniMapZoomSignal;
 import kabam.rotmg.pets.controller.reskin.ReskinPetFlowStartSignal;
 import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.ui.model.TabStripModel;
-import kabam.rotmg.ui.view.StatMetersView;
 
 import net.hires.debug.Stats;
 
@@ -59,10 +58,7 @@ import org.swiftsuspenders.Injector;
 
 public class MapUserInput
     {
-
         private static var stats_:Stats = new Stats();
-        private static const MOUSE_DOWN_WAIT_PERIOD:uint = 175;
-        private static var arrowWarning_:Boolean = false;
         public static var reconRealm:ReconnectEvent;
         public static var reconVault:ReconnectEvent;
         public static var reconRandom:ReconnectEvent;
@@ -73,23 +69,21 @@ public class MapUserInput
         public static var optionsOpen:Boolean = false;
         public static var inputting:Boolean = false;
 
-        public var lightSpeed:Boolean = false;
+        public var ninjaTapped:Boolean = false;
+        public var gs_:GameSprite;
+        public var mouseDown_:Boolean = false;
+        public var autofire_:Boolean = false;
+        public var specialKeyDown_:Boolean = false;
         private var maxprism:Boolean = false;
         private var spaceSpam:int = 0;
-        public var ninjaTapped:Boolean = false;
         private var tabStripModel:TabStripModel;
-        public var gs_:GameSprite;
-        public var smv_:StatMetersView;
         private var moveLeft_:int = 0;
         private var moveRight_:int = 0;
         private var moveUp_:int = 0;
         private var moveDown_:int = 0;
         private var rotateLeft_:int = 0;
         private var rotateRight_:int = 0;
-        public var mouseDown_:Boolean = false;
-        public var autofire_:Boolean = false;
         private var currentString:String = "";
-        public var specialKeyDown_:Boolean = false;
         private var enablePlayerInput_:Boolean = true;
         private var giftStatusUpdateSignal:GiftStatusUpdateSignal;
         private var addTextLine:AddTextLineSignal;
@@ -159,7 +153,6 @@ public class MapUserInput
             this.rotateRight_ = 0;
             this.mouseDown_ = false;
             this.autofire_ = false;
-            this.lightSpeed = false;
             this.maxprism = false;
             this.setPlayerMovement();
         }
@@ -839,7 +832,7 @@ public class MapUserInput
                 case Parameters.data_.switchTabs:
                     _local_20 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
                     _local_20.dispatch();
-                    if (Parameters.data_.normalUI)
+                    if (Parameters.data_.normalUI || Options.hidden)
                     {
                         this.statsTabHotKeyInputSignal.dispatch();
                     }
@@ -1081,6 +1074,7 @@ public class MapUserInput
                     break;
                 case Parameters.data_.panicKey:
                     Options.toggleHax();
+                    this.gs_.hudView.toggle();
                     break;
                 case Parameters.data_.SafeWalkKey:
                     Parameters.data_.SafeWalk = (!Parameters.data_.SafeWalk);
@@ -1100,6 +1094,10 @@ public class MapUserInput
                     break;
                 case Parameters.data_.findKeysKey:
                     this.findKeys();
+                    break;
+                case Parameters.data_.testKey:
+                    Parameters.data_.test = !Parameters.data_.test;
+                    _local_21.notifyPlayer((Parameters.data_.test) ? "Test started" : "Test ended", 0xFF00, 1500);
                     break;
             }
             this.setPlayerMovement();

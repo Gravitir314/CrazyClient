@@ -45,6 +45,7 @@ public class DailyQuestItemSlotMediator extends Mediator
             var _local_1:Player = (((this.hud.gameSprite) && (this.hud.gameSprite.map)) ? this.hud.gameSprite.map.player_ : null);
             var _local_2:int = ObjectLibrary.idToType_[this.view.itemID];
             this.tooltip = new EquipmentToolTip(this.view.itemID, ((this.view.type == DailyQuestItemSlotType.REQUIREMENT) ? null : _local_1), _local_2, InventoryOwnerTypes.CURRENT_PLAYER);
+            this.view.addEventListener(MouseEvent.ROLL_OVER, this.onRollOverHandler);
             if (this.view.isSlotsSelectable){
                 this.unselectAllSignal.add(this.unselectHandler);
                 this.view.addEventListener(MouseEvent.CLICK, this.onSlotSelected);

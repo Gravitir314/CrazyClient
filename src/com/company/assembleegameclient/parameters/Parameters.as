@@ -7,7 +7,6 @@ package com.company.assembleegameclient.parameters
 {
 import com.company.assembleegameclient.map.Map;
 import com.company.util.KeyCodes;
-import com.company.util.MoreDateUtil;
 
 import flash.display.DisplayObject;
 import flash.display.StageScaleMode;
@@ -68,11 +67,11 @@ public class Parameters
         public static var timerPhaseNames:Dictionary = new Dictionary();
         public static var dmgCounter:Array = [];
         public static var lowCPUMode:Boolean = false;
-        public static var SWNoTileMove:Boolean = true;
         public static var dailyCalendar1RunOnce:Boolean = false;
         public static var dailyCalendar2RunOnce:Boolean = false;
 
-        public static function setTimerPhases():void{
+        public static function setTimerPhases():void
+        {
             timerPhaseTimes['{"key":"server.oryx_closed_realm"}'] = 120000;
             timerPhaseTimes['{"key":"server.oryx_minions_failed"}'] = 12000;
             timerPhaseTimes["Futility!"] = 25000;
@@ -218,14 +217,12 @@ public class Parameters
             setDefault("centerOnPlayer", true);
             setDefault("preferredServer", null);
             setDefault("bestServer", null);
-            setDefault("cameraAngle", ((7 * Math.PI) / 4));
-            setDefault("defaultCameraAngle", ((7 * Math.PI) / 4));
+            setDefault("cameraAngle", 0);
+            setDefault("defaultCameraAngle", 0);
             setDefault("showQuestPortraits", true);
             setDefault("fullscreenMode", false);
             setDefault("showProtips", true);
             setDefault("protipIndex", 0);
-            setDefault("joinDate", MoreDateUtil.getDayStringInPT());
-            setDefault("lastDailyAnalytics", null);
             setDefault("allowRotation", false);
             setDefault("allowMiniMapRotation", false);
             setDefault("charIdUseMap", {});
@@ -341,7 +338,6 @@ public class Parameters
             setDefaultKey("ReconDaily", KeyCodes.LEFTBRACKET);
             setDefaultKey("ReconDung", KeyCodes.UNSET);
             setDefault("autoRecon", false);
-            setDefault("AutoNexus", 20);
             setDefault("NoClip", false);
             setDefault("NumericalHP", true);
             setDefault("PassesCover", true);
@@ -360,7 +356,7 @@ public class Parameters
             setDefault("AAAddOne", false);
             setDefault("AABoundingDist", 20);
             setDefault("showMobInfo", false);
-            setDefault("AAException", [355, 373, 374, 375, 376, 3463, 3461, 3414, 3417, 3441, 3561, 3448, 3449, 3472, 3334, 5952, 2354, 2369, 3368, 3366, 3367, 3391, 3389, 3390, 5920, 2314, 3412, 3639, 3634, 2327, 1755, 24582, 24351, 24363, 24135, 24133, 24134, 24132, 24136, 3356, 3357, 3358, 3359, 3360, 3361, 3362, 3363, 3364, 2352, 28780, 28781, 28795, 28942, 28957, 28988, 28938, 29291, 29018, 29517, 24338, 29580, 29712, 6282, 29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262]);
+            setDefault("AAException", [355, 373, 374, 375, 376, 3463, 2053, 2052, 3461, 3414, 3417, 3441, 3561, 3448, 3449, 3472, 3334, 5952, 2354, 2369, 3368, 3366, 3367, 3391, 3389, 3390, 5920, 2314, 3412, 3639, 3634, 2327, 1755, 24582, 24351, 24363, 24135, 24133, 24134, 24132, 24136, 3356, 3357, 3358, 3359, 3360, 3361, 3362, 3363, 3364, 2352, 28780, 28781, 28795, 28942, 28957, 28988, 28938, 29291, 29018, 29517, 24338, 29580, 29712, 6282, 29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262]);
             setDefault("AAIgnore", [1711, 1712, 1550, 1551, 1552, 1619, 1715, 2309, 2310, 2311, 2371, 2312, 0x0909, 2370, 2392, 2393, 2400, 2401, 3335, 3336, 3337, 3338, 3413, 3418, 3419, 3420, 3421, 3427, 3454, 3638, 3645, 6157, 28715, 28716, 28717, 28718, 28719, 28730, 28731, 28732, 28733, 28734, 29306, 29568, 29594, 29597, 29710, 29711, 29742, 29743, 29746, 29748, 30001, 29752, 43702, 43708, 43709, 43710, 3389, 3390, 3391, 0x0900, 2305, 2306, 0x0600, 1537, 1538, 1539, 1540]);
             setDefault("AAPriority", [29535, 29518, 29054, 5952, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262, 6282, 1646, 3472, 3408]);
             setDefault("damageIgnored", false);
@@ -457,6 +453,8 @@ public class Parameters
             setDefaultKey("SelfTPHotkey", KeyCodes.UNSET);
             setDefaultKey("LowCPUModeHotKey", KeyCodes.UNSET);
             setDefaultKey("findKeysKey", KeyCodes.K);
+            setDefaultKey("testKey", KeyCodes.UNSET);
+            setDefault("test", false);
             setDefault("autoCorrCHP", false);
             setDefault("rclickTp", true);
             setDefault("autoTp", true);
@@ -491,6 +489,7 @@ public class Parameters
             setDefault("cultistStaffDisable", true);
             setDefault("AutoReply", false);
             setDefault("statusText", true);
+            setDefault("SWNoTileMove", true);
             setDefault("blockTP", false);
             setDefault("blockAbil", false);
             setDefault("blockPots", false);
