@@ -519,7 +519,7 @@ public class Player extends Character
             var _local_1:int;
             var _local_2:Boolean;
             if (this.aimAssistPoint != null){
-                if ((((!(this.aimAssistTarget.isStasis())) && (!(this.aimAssistTarget.isInvincible()))) && (!(this.aimAssistTarget.isInvulnerable())))){
+                if ((((!(this.aimAssistTarget.isStasis())) && (!(this.aimAssistTarget.isInvincible()))) && (!(this.aimAssistTarget.isInvulnerable())) && (this.aimAssistTarget.maxHP_ >= Parameters.data_.spellThreshold))){
                     this.useAltWeapon_(this.aimAssistPoint.x, this.aimAssistPoint.y, 1, true);
                 }
             }
