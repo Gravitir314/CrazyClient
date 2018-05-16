@@ -1810,19 +1810,6 @@ public class Player extends Character
         }
 
         override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
-            if (Parameters.data_.HidePlayerFilter)
-            {
-                if (map_.name_ == "Nexus")
-                {
-                    if (this != map_.player_)
-                    {
-                        if (this.numStars_ < Parameters.data_.chatStarRequirement)
-                        {
-                            return;
-                        }
-                    }
-                }
-            }
             if (!Options.hidden && (Parameters.data_.hideLockList || Parameters.lowCPUMode))
             {
                 if (this != map_.player_)

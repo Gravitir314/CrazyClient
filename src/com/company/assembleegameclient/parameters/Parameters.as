@@ -341,7 +341,6 @@ public class Parameters
             setDefault("NoClip", false);
             setDefault("NumericalHP", true);
             setDefault("PassesCover", true);
-            setDefault("HidePlayerFilter", false);
             setDefault("hideLockList", false);
             setDefault("TradeDelay", true);
             setDefault("lockHighlight", false);

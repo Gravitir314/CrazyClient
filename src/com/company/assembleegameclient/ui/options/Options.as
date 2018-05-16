@@ -794,7 +794,7 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("InvViewer", makeOnOffLabels(), [true, false], "Inventory Viewer", "See the inventory items of other players.", null));
             this.addOptionAndPosition(new ChoiceOption("StatsViewer", makeOnOffLabels(), [true, false], "Stat Viewer", "See the stats of other players.", null));
             this.addOptionAndPosition(new ChoiceOption("lockHighlight", makeOnOffLabels(), [true, false], "Highlight Locked Players", "Highlights locked players name and minimap dot. Requires reloading of area for changes to take effect.", null));
-            this.addOptionAndPosition(new ChoiceOption("HidePlayerFilter", makeOnOffLabels(), [true, false], "Star Requirement (Hide)", "Hide players in nexus that are filtered by the star requirement option.", null));
+            this.addOptionAndPosition(new ChoiceOption("hideLockList", makeOnOffLabels(), [true, false], "Hide Players", "Hide players everywhere. If you want palyers transparented, then type /ao. Type /alpha to change level of transparent.", null));
             this.addOptionAndPosition(new ChoiceOption("AntiLag", makeOnOffLabels(), [true, false], "Anti Lag", "Aggressively disables particles.", null));
             this.addOptionAndPosition(new ChoiceOption("showMobInfo", makeOnOffLabels(), [true, false], "Display Mob Info", "Display mob name and id. Useful for finding ids for use with auto aim exception and ignore list.", this.showMobInfo_));
             this.addOptionAndPosition(new ChoiceOption("sizer", makeOnOffLabels(), [true, false], "Shrink Large Objects", "Makes more efficient use of screen space. Hitboxes are unaffected.", null));

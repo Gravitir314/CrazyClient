@@ -392,7 +392,6 @@ public class MiniMapImp extends MiniMap
                 if (!((_local_2.props_.noMiniMap_) || (_local_2 == this.focus))) {
                     _local_4 = (_local_2 as Player);
                     if (_local_4 != null) {
-                        if ((((map.name_ == "Nexus") && (_local_4.numStars_ <= Parameters.data_.chatStarRequirement)) && (Parameters.data_.HidePlayerFilter))) continue;
                         if (_local_4.isPaused()) {
                             _local_3 = 0x7F7F7F;
                         }

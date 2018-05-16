@@ -1319,7 +1319,7 @@ public class GameObject extends BasicObject
             var _local_4:int = 5;
             this.hpbarBackPath_.data.length = 0;
             var _local_5:* = 1.2;
-            this.hpbarBackPath_.data.push(((posS_[0] - _local_3) - _local_5), (((posS_[1] + _arg_2) - 0) - _local_5), ((posS_[0] + _local_3) + _local_5), (((posS_[1] + _arg_2) - 0) - _local_5), ((posS_[0] + _local_3) + _local_5), (((posS_[1] + _arg_2) + _local_4) + _local_5), ((posS_[0] - _local_3) - _local_5), (((posS_[1] + _arg_2) + _local_4) + _local_5));
+            (this.hpbarBackPath_.data as Vector.<Number>).push(((posS_[0] - _local_3) - _local_5), ((posS_[1] + _arg_2) - _local_5), ((posS_[0] + _local_3) + _local_5), ((posS_[1] + _arg_2) - _local_5), ((posS_[0] + _local_3) + _local_5), (((posS_[1] + _arg_2) + _local_4) + _local_5), ((posS_[0] - _local_3) - _local_5), (((posS_[1] + _arg_2) + _local_4) + _local_5));
             _arg_1.push(this.hpbarBackFill_);
             _arg_1.push(this.hpbarBackPath_);
             _arg_1.push(GraphicsUtil.END_FILL);
@@ -1327,7 +1327,7 @@ public class GameObject extends BasicObject
                 _local_6 = (this.hp_ / this.maxHP_);
                 _local_7 = ((_local_6 * 2) * _local_3);
                 this.hpbarPath_.data.length = 0;
-                this.hpbarPath_.data.push((posS_[0] - _local_3), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), ((posS_[1] + _arg_2) + _local_4), (posS_[0] - _local_3), ((posS_[1] + _arg_2) + _local_4));
+                (this.hpbarPath_.data as Vector.<Number>).push((posS_[0] - _local_3), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), ((posS_[1] + _arg_2) + _local_4), (posS_[0] - _local_3), ((posS_[1] + _arg_2) + _local_4));
                 this.hpbarFill_.color = ((_local_6 < 0.5) ? ((_local_6 < 0.2) ? 14684176 : 16744464) : 0x10FF00);
                 _arg_1.push(this.hpbarFill_);
                 _arg_1.push(this.hpbarPath_);
@@ -1513,7 +1513,7 @@ public class GameObject extends BasicObject
                 _local_7 = ((_local_12 - ((_local_4.width * _local_14) / 2)) + (_local_10 * _local_4.width));
                 _local_8 = (_local_13 - (_local_4.height / 2));
                 _local_6.data.length = 0;
-                _local_6.data.push(_local_7, _local_8, (_local_7 + _local_4.width), _local_8, (_local_7 + _local_4.width), (_local_8 + _local_4.height), _local_7, (_local_8 + _local_4.height));
+                (_local_6.data as Vector.<Number>).push(_local_7, _local_8, (_local_7 + _local_4.width), _local_8, (_local_7 + _local_4.width), (_local_8 + _local_4.height), _local_7, (_local_8 + _local_4.height));
                 _local_9 = _local_5.matrix;
                 _local_9.identity();
                 _local_9.translate(_local_7, _local_8);
@@ -1529,13 +1529,6 @@ public class GameObject extends BasicObject
             if (!Options.hidden && Parameters.lowCPUMode) {
                 return;
             }
-            if ((Parameters.data_.HidePlayerFilter) && (this is Player) && (!(this == map_.player_)) && (map_.name_ == "Nexus"))
-            {
-                if ((this as Player).numStars_ <= Parameters.data_.chatStarRequirement)
-                {
-                    return;
-                }
-            }
             if (this.shadowGradientFill_ == null)
             {
                 this.shadowGradientFill_ = new GraphicsGradientFill(GradientType.RADIAL, [this.props_.shadowColor_, this.props_.shadowColor_], [0.5, 0], null, new Matrix());
@@ -1547,7 +1540,7 @@ public class GameObject extends BasicObject
             this.shadowGradientFill_.matrix.createGradientBox((_local_5 * 2), (_local_6 * 2), 0, (posS_[0] - _local_5), (posS_[1] - _local_6));
             _arg_1.push(this.shadowGradientFill_);
             this.shadowPath_.data.length = 0;
-            this.shadowPath_.data.push((posS_[0] - _local_5), (posS_[1] - _local_6), (posS_[0] + _local_5), (posS_[1] - _local_6), (posS_[0] + _local_5), (posS_[1] + _local_6), (posS_[0] - _local_5), (posS_[1] + _local_6));
+            (this.shadowPath_.data as Vector.<Number>).push((posS_[0] - _local_5), (posS_[1] - _local_6), (posS_[0] + _local_5), (posS_[1] - _local_6), (posS_[0] + _local_5), (posS_[1] + _local_6), (posS_[0] - _local_5), (posS_[1] + _local_6));
             _arg_1.push(this.shadowPath_);
             _arg_1.push(GraphicsUtil.END_FILL);
         }
