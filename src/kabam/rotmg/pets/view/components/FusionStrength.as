@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.view.components.FusionStrength
+﻿//kabam.rotmg.pets.view.components.FusionStrength
 
 package kabam.rotmg.pets.view.components
 {

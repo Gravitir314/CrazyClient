@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.display.Loader.LoaderProxyConcrete
+﻿//kabam.display.Loader.LoaderProxyConcrete
 
 package kabam.display.Loader
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.mysterybox.components.MysteryBoxRollModal
+﻿//kabam.rotmg.mysterybox.components.MysteryBoxRollModal
 
 package kabam.rotmg.mysterybox.components
 {

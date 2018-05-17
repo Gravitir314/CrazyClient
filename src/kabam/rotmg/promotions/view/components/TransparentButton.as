@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.promotions.view.components.TransparentButton
+﻿//kabam.rotmg.promotions.view.components.TransparentButton
 
 package kabam.rotmg.promotions.view.components
 {

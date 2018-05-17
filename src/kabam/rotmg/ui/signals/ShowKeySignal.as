@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.signals.ShowKeySignal
+﻿//kabam.rotmg.ui.signals.ShowKeySignal
 
 package kabam.rotmg.ui.signals
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.packages.services.PackageModel
+﻿//kabam.rotmg.packages.services.PackageModel
 
 package kabam.rotmg.packages.services
 {

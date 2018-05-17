@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.particles.BubbleParticle
+﻿//com.company.assembleegameclient.objects.particles.BubbleParticle
 
 package com.company.assembleegameclient.objects.particles
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.minimap.control.MiniMapZoomSignal
+﻿//kabam.rotmg.minimap.control.MiniMapZoomSignal
 
 package kabam.rotmg.minimap.control
 {

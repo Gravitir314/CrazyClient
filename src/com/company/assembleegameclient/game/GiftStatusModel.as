@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.game.GiftStatusModel
+﻿//com.company.assembleegameclient.game.GiftStatusModel
 
 package com.company.assembleegameclient.game
 {

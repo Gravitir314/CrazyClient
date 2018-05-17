@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.tasks.TaskGroup
+﻿//kabam.lib.tasks.TaskGroup
 
 package kabam.lib.tasks
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.util.StageLifecycleUtil
+﻿//kabam.lib.util.StageLifecycleUtil
 
 package kabam.lib.util
 {

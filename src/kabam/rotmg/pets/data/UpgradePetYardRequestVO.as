@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.data.UpgradePetYardRequestVO
+﻿//kabam.rotmg.pets.data.UpgradePetYardRequestVO
 
 package kabam.rotmg.pets.data
 {

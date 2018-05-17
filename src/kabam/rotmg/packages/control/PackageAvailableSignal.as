@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.packages.control.PackageAvailableSignal
+﻿//kabam.rotmg.packages.control.PackageAvailableSignal
 
 package kabam.rotmg.packages.control
 {

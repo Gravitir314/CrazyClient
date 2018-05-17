@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.core.commands.InternalOpenMoneyWindowCommand
+﻿//kabam.rotmg.account.core.commands.InternalOpenMoneyWindowCommand
 
 package kabam.rotmg.account.core.commands
 {

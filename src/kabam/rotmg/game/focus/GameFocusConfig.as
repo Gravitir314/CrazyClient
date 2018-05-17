@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.focus.GameFocusConfig
+﻿//kabam.rotmg.game.focus.GameFocusConfig
 
 package kabam.rotmg.game.focus
 {

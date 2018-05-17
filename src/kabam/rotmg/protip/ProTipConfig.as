@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.protip.ProTipConfig
+﻿//kabam.rotmg.protip.ProTipConfig
 
 package kabam.rotmg.protip
 {

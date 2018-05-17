@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.util.TextureRedrawer
+﻿//com.company.assembleegameclient.util.TextureRedrawer
 
 package com.company.assembleegameclient.util
 {

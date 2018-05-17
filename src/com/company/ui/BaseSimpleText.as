@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.ui.BaseSimpleText
+﻿//com.company.ui.BaseSimpleText
 
 package com.company.ui
 {

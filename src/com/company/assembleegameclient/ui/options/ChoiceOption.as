@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.ui.options.ChoiceOption
+﻿//com.company.assembleegameclient.ui.options.ChoiceOption
 
 package com.company.assembleegameclient.ui.options
 {

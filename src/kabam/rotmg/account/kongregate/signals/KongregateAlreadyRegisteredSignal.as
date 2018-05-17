@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.kongregate.signals.KongregateAlreadyRegisteredSignal
+﻿//kabam.rotmg.account.kongregate.signals.KongregateAlreadyRegisteredSignal
 
 package kabam.rotmg.account.kongregate.signals
 {

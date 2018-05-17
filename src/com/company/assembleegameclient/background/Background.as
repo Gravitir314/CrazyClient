@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.background.Background
+﻿//com.company.assembleegameclient.background.Background
 
 package com.company.assembleegameclient.background
 {

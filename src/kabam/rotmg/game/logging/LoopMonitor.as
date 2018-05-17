@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.logging.LoopMonitor
+﻿//kabam.rotmg.game.logging.LoopMonitor
 
 package kabam.rotmg.game.logging
 {

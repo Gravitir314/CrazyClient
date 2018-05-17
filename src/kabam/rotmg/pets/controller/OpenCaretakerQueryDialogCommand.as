@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.controller.OpenCaretakerQueryDialogCommand
+﻿//kabam.rotmg.pets.controller.OpenCaretakerQueryDialogCommand
 
 package kabam.rotmg.pets.controller
 {

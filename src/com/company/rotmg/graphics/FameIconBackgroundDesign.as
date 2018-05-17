@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.rotmg.graphics.FameIconBackgroundDesign
+﻿//com.company.rotmg.graphics.FameIconBackgroundDesign
 
 package com.company.rotmg.graphics
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.shop.genericBox.BoxUtils
+﻿//io.decagames.rotmg.shop.genericBox.BoxUtils
 
 package io.decagames.rotmg.shop.genericBox
 {

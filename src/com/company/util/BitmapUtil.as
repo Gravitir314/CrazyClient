@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.util.BitmapUtil
+﻿//com.company.util.BitmapUtil
 
 package com.company.util
 {

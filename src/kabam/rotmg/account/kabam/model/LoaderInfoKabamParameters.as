@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.kabam.model.LoaderInfoKabamParameters
+﻿//kabam.rotmg.account.kabam.model.LoaderInfoKabamParameters
 
 package kabam.rotmg.account.kabam.model
 {

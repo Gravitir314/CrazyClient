@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.news.controller.NewsDataUpdatedSignal
+﻿//kabam.rotmg.news.controller.NewsDataUpdatedSignal
 
 package kabam.rotmg.news.controller
 {

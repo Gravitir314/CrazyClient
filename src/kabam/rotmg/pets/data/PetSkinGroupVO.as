@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.data.PetSkinGroupVO
+﻿//kabam.rotmg.pets.data.PetSkinGroupVO
 
 package kabam.rotmg.pets.data
 {

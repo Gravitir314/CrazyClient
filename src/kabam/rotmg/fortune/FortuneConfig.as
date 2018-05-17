@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.fortune.FortuneConfig
+﻿//kabam.rotmg.fortune.FortuneConfig
 
 package kabam.rotmg.fortune
 {

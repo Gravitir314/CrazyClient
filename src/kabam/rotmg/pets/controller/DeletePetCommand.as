@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.controller.DeletePetCommand
+﻿//kabam.rotmg.pets.controller.DeletePetCommand
 
 package kabam.rotmg.pets.controller
 {

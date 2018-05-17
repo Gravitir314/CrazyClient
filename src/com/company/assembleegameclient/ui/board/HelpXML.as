@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.ui.board.HelpXML
+﻿//com.company.assembleegameclient.ui.board.HelpXML
 
 package com.company.assembleegameclient.ui.board
 {

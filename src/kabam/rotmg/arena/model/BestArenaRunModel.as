@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.model.BestArenaRunModel
+﻿//kabam.rotmg.arena.model.BestArenaRunModel
 
 package kabam.rotmg.arena.model
 {

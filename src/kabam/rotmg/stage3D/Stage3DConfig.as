@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.stage3D.Stage3DConfig
+﻿//kabam.rotmg.stage3D.Stage3DConfig
 
 package kabam.rotmg.stage3D
 {

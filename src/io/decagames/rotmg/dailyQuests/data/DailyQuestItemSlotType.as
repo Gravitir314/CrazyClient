@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType
+﻿//io.decagames.rotmg.dailyQuests.data.DailyQuestItemSlotType
 
 package io.decagames.rotmg.dailyQuests.data
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.chat.control.ParseChatMessageCommand
+﻿//kabam.rotmg.chat.control.ParseChatMessageCommand
 
 package kabam.rotmg.chat.control
 {
@@ -68,13 +65,13 @@ public class ParseChatMessageCommand
                 {
                     _local_2.stage.scaleMode = StageScaleMode.NO_SCALE;
                     Parameters.data_.stageScale = StageScaleMode.NO_SCALE;
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "Fullscreen: On"));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Fullscreen: On"));
                 }
                 else
                 {
                     _local_2.stage.scaleMode = StageScaleMode.EXACT_FIT;
                     Parameters.data_.stageScale = StageScaleMode.EXACT_FIT;
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "Fullscreen: Off"));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Fullscreen: Off"));
                 }
                 Parameters.save();
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
@@ -82,7 +79,7 @@ public class ParseChatMessageCommand
             }
             if (_arg_1 == "/mscale")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Map Scale: " + Parameters.data_.mscale) + " - Usage: /mscale <any decimal number>.")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Map Scale: " + Parameters.data_.mscale) + " - Usage: /mscale <any decimal number>.")));
                 return (true);
             }
             var _local_3:Array = _arg_1.match("^/mscale (\\d*\\.*\\d+)$");
@@ -91,7 +88,7 @@ public class ParseChatMessageCommand
                 Parameters.data_.mscale = _local_3[1];
                 Parameters.save();
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Map Scale: " + _local_3[1])));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Map Scale: " + _local_3[1])));
                 return (true);
             }
             if (_arg_1 == "/scaleui")
@@ -99,7 +96,7 @@ public class ParseChatMessageCommand
                 Parameters.data_.uiscale = (!(Parameters.data_.uiscale));
                 Parameters.save();
                 _local_2.dispatchEvent(new Event(Event.RESIZE));
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Scale UI: " + Parameters.data_.uiscale)));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Scale UI: " + Parameters.data_.uiscale)));
                 return (true);
             }
             return (false);
@@ -126,7 +123,7 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in exception list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in exception list.")));
                         break;
                     }
                 }
@@ -135,11 +132,11 @@ public class ParseChatMessageCommand
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
                     {
                         Parameters.data_.AAException.push(_local_2[1]);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((("Added " + _local_2[1]) + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") to exception list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((("Added " + _local_2[1]) + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") to exception list.")));
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (("No mob has the type " + _local_2[1]) + ".")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("No mob has the type " + _local_2[1]) + ".")));
                     }
                 }
                 Parameters.save();
@@ -154,7 +151,7 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in ignore list.")));
                         break;
                     }
                 }
@@ -163,11 +160,11 @@ public class ParseChatMessageCommand
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
                     {
                         Parameters.data_.AAIgnore.push(_local_2[1]);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((("Added " + _local_2[1]) + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") to ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((("Added " + _local_2[1]) + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") to ignore list.")));
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (("No mob has the type " + _local_2[1]) + ".")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("No mob has the type " + _local_2[1]) + ".")));
                     }
                 }
                 Parameters.save();
@@ -182,14 +179,14 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already being filtered out.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" already being filtered out.')));
                         break;
                     }
                 }
                 if (_local_4 == false)
                 {
                     Parameters.data_.spamFilter.push(_local_2[1]);
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to spamfilter list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('Added "' + _local_2[1]) + '" to spamfilter list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -203,14 +200,14 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in friend list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" already exists in friend list.')));
                         break;
                     }
                 }
                 if (_local_4 == false)
                 {
                     Parameters.data_.friendList2.push(_local_2[1]);
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to friend list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('Added "' + _local_2[1]) + '" to friend list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -224,14 +221,14 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in teleport keyword list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" already exists in teleport keyword list.')));
                         break;
                     }
                 }
                 if (_local_4 == false)
                 {
                     Parameters.data_.tptoList.push(_local_2[1]);
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to teleport keyword list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('Added "' + _local_2[1]) + '" to teleport keyword list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -245,7 +242,7 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in auto aim priority list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") already exists in auto aim priority list.")));
                         break;
                     }
                 }
@@ -254,11 +251,11 @@ public class ParseChatMessageCommand
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
                     {
                         Parameters.data_.AAPriority.push(_local_2[1]);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((("Added " + _local_2[1]) + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") to auto aim priority list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((("Added " + _local_2[1]) + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") to auto aim priority list.")));
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (("No mob has the type " + _local_2[1]) + ".")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("No mob has the type " + _local_2[1]) + ".")));
                     }
                 }
                 Parameters.save();
@@ -272,18 +269,18 @@ public class ParseChatMessageCommand
                 {
                     if (_local_5 == _local_3)
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_3 + " (") + ObjectLibrary.getIdFromType(_local_3)) + ") already exists in loot ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_3 + " (") + ObjectLibrary.getIdFromType(_local_3)) + ") already exists in loot ignore list.")));
                         return (true);
                     }
                 }
                 if (_local_3 != 2581)
                 {
                     Parameters.data_.lootIgnore.push(_local_3);
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (((("Added " + _local_3) + " (") + ObjectLibrary.getIdFromType(_local_3)) + ") to loot ignore list.")));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((("Added " + _local_3) + " (") + ObjectLibrary.getIdFromType(_local_3)) + ") to loot ignore list.")));
                 }
                 else
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "No item matched the query."));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "No item matched the query."));
                 }
                 Parameters.save();
                 return (true);
@@ -297,14 +294,14 @@ public class ParseChatMessageCommand
                     if (_local_5 == _local_2[1])
                     {
                         _local_4 = true;
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" already exists in notifier keyword list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" already exists in notifier keyword list.')));
                         break;
                     }
                 }
                 if (_local_4 == false)
                 {
                     Parameters.data_.wordNotiList.push(_local_2[1]);
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('Added "' + _local_2[1]) + '" to notifier keyword list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('Added "' + _local_2[1]) + '" to notifier keyword list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -329,7 +326,7 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.AAIgnore.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from ignore list.")));
                         break;
                     }
                     _local_4++;
@@ -338,11 +335,11 @@ public class ParseChatMessageCommand
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") not found in ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") not found in ignore list.")));
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (_local_2[1] + " not found in ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (_local_2[1] + " not found in ignore list.")));
                     }
                 }
                 Parameters.save();
@@ -359,7 +356,7 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.AAException.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from exception list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from exception list.")));
                         break;
                     }
                     _local_4++;
@@ -368,11 +365,11 @@ public class ParseChatMessageCommand
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") not found in exception list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") not found in exception list.")));
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (_local_2[1] + " not found in exception list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (_local_2[1] + " not found in exception list.")));
                     }
                 }
                 Parameters.save();
@@ -389,14 +386,14 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.spamFilter.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from spamfilter list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" removed from spamfilter list.')));
                         break;
                     }
                     _local_4++;
                 }
                 if (_local_3 == false)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in spamfilter list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" not found in spamfilter list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -412,14 +409,14 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.friendList2.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from friend list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" removed from friend list.')));
                         break;
                     }
                     _local_4++;
                 }
                 if (_local_3 == false)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in friend list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" not found in friend list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -435,14 +432,14 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.tptoList.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from teleport keyword list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" removed from teleport keyword list.')));
                         break;
                     }
                     _local_4++;
                 }
                 if (_local_3 == false)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in teleport keyword list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" not found in teleport keyword list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -458,7 +455,7 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.AAPriority.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from auto aim priority list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ((ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined) ? ObjectLibrary.xmlLibrary_[_local_2[1]].@id : "")) + ") removed from auto aim priority list.")));
                         break;
                     }
                     _local_4++;
@@ -467,11 +464,11 @@ public class ParseChatMessageCommand
                 {
                     if (ObjectLibrary.xmlLibrary_[_local_2[1]] != undefined)
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_2[1] + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") not found in auto aim priority list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_2[1] + " (") + ObjectLibrary.xmlLibrary_[_local_2[1]].@id) + ") not found in auto aim priority list.")));
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (_local_2[1] + " not found in auto aim priority list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (_local_2[1] + " not found in auto aim priority list.")));
                     }
                 }
                 Parameters.save();
@@ -487,18 +484,18 @@ public class ParseChatMessageCommand
                     if (Parameters.data_.lootIgnore[_local_4] == _local_5)
                     {
                         Parameters.data_.lootIgnore.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_5 + " (") + ObjectLibrary.getIdFromType(_local_5)) + ") removed from loot ignore list.")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_5 + " (") + ObjectLibrary.getIdFromType(_local_5)) + ") removed from loot ignore list.")));
                         return (true);
                     }
                     _local_4++;
                 }
                 if (_local_5 != 2581)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (((_local_5 + " (") + ObjectLibrary.getIdFromType(_local_5)) + ") not found in loot ignore list.")));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((_local_5 + " (") + ObjectLibrary.getIdFromType(_local_5)) + ") not found in loot ignore list.")));
                 }
                 else
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "No item matched the query."));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "No item matched the query."));
                 }
                 Parameters.save();
                 return (true);
@@ -514,14 +511,14 @@ public class ParseChatMessageCommand
                     {
                         _local_3 = true;
                         Parameters.data_.wordNotiList.splice(_local_4, 1);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" removed from notifier keyword list.')));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" removed from notifier keyword list.')));
                         break;
                     }
                     _local_4++;
                 }
                 if (_local_3 == false)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", (('"' + _local_2[1]) + '" not found in notifier keyword list.')));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" not found in notifier keyword list.')));
                 }
                 Parameters.save();
                 return (true);
@@ -534,88 +531,88 @@ public class ParseChatMessageCommand
             var _local_2:int;
             if (_arg_1 == "/exlist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Auto aim exception list (" + Parameters.data_.AAException.length) + " mobs):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Auto aim exception list (" + Parameters.data_.AAException.length) + " mobs):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.AAException.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.AAException[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAException[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAException[_local_2]].@id : ""))));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((Parameters.data_.AAException[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAException[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAException[_local_2]].@id : ""))));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/iglist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Auto aim ignore list (" + Parameters.data_.AAIgnore.length) + " mobs):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Auto aim ignore list (" + Parameters.data_.AAIgnore.length) + " mobs):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.AAIgnore.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.AAIgnore[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAIgnore[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAIgnore[_local_2]].@id : ""))));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((Parameters.data_.AAIgnore[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAIgnore[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAIgnore[_local_2]].@id : ""))));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/splist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Spamfilter list (" + Parameters.data_.spamFilter.length) + " filtered words):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Spamfilter list (" + Parameters.data_.spamFilter.length) + " filtered words):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.spamFilter.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.spamFilter[_local_2]));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, Parameters.data_.spamFilter[_local_2]));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/frlist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Friend list (" + Parameters.data_.friendList2.length) + " friends):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Friend list (" + Parameters.data_.friendList2.length) + " friends):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.friendList2.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.friendList2[_local_2]));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, Parameters.data_.friendList2[_local_2]));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/tplist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Teleport keyword list (" + Parameters.data_.tptoList.length) + " keywords):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Teleport keyword list (" + Parameters.data_.tptoList.length) + " keywords):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.tptoList.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.tptoList[_local_2]));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, Parameters.data_.tptoList[_local_2]));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/prlist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Auto aim priority list (" + Parameters.data_.AAPriority.length) + " mobs):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Auto aim priority list (" + Parameters.data_.AAPriority.length) + " mobs):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.AAPriority.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.AAPriority[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAPriority[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAPriority[_local_2]].@id : ""))));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((Parameters.data_.AAPriority[_local_2] + " - ") + ((ObjectLibrary.xmlLibrary_[Parameters.data_.AAPriority[_local_2]] != undefined) ? ObjectLibrary.xmlLibrary_[Parameters.data_.AAPriority[_local_2]].@id : ""))));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/lilist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Loot ignore list (" + Parameters.data_.lootIgnore.length) + " items):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Loot ignore list (" + Parameters.data_.lootIgnore.length) + " items):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.lootIgnore.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((Parameters.data_.lootIgnore[_local_2] + " - ") + ObjectLibrary.getIdFromType(Parameters.data_.lootIgnore[_local_2]))));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((Parameters.data_.lootIgnore[_local_2] + " - ") + ObjectLibrary.getIdFromType(Parameters.data_.lootIgnore[_local_2]))));
                     _local_2++;
                 }
                 return (true);
             }
             if (_arg_1 == "/wnlist")
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Notifier keyword list (" + Parameters.data_.wordNotiList.length) + " keywords):")));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Notifier keyword list (" + Parameters.data_.wordNotiList.length) + " keywords):")));
                 _local_2 = 0;
                 while (_local_2 < Parameters.data_.wordNotiList.length)
                 {
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.data_.wordNotiList[_local_2]));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, Parameters.data_.wordNotiList[_local_2]));
                     _local_2++;
                 }
                 return (true);
@@ -628,56 +625,56 @@ public class ParseChatMessageCommand
             if (_arg_1 == "/igclear")
             {
                 Parameters.data_.AAIgnore = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim ignore list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto aim ignore list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/exclear")
             {
                 Parameters.data_.AAException = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim exception list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto aim exception list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/spclear")
             {
                 Parameters.data_.spamFilter = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Spamfilter list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Spamfilter list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/frclear")
             {
                 Parameters.data_.friendList2 = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Friend list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Friend list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/tpclear")
             {
                 Parameters.data_.tptoList = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Teleport keyword list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Teleport keyword list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/prclear")
             {
                 Parameters.data_.AAPriority = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Auto aim priority list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto aim priority list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/liclear")
             {
                 Parameters.data_.lootIgnore = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Loot ignore list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Loot ignore list cleared."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/wnclear")
             {
                 Parameters.data_.wordNotiList = [];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Notifier keyword list cleared."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Notifier keyword list cleared."));
                 Parameters.save();
                 return (true);
             }
@@ -689,49 +686,49 @@ public class ParseChatMessageCommand
             if (_arg_1 == "/igdefault")
             {
                 Parameters.data_.AAIgnore = [1550, 1551, 1552, 1715, 2309, 2310, 2311, 2371, 2312, 0x0909, 2370, 2392, 2393, 2400, 2401, 3335, 3336, 3337, 3338, 3413, 3418, 3419, 3420, 3421, 3427, 3454, 3638, 3645, 6157, 28715, 28716, 28717, 28718, 28719, 28730, 28731, 28732, 28733, 28734, 29306, 29568, 29594, 29597, 29710, 29711, 29742, 29743, 29746, 29748, 30001, 29752, 43702, 43708, 43709, 43710, 3389, 3390, 3391, 24223, 0x0900, 2305, 2306, 0x0600, 1537, 1538, 1539, 1540];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default ignore list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default ignore list restored."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/exdefault")
             {
                 Parameters.data_.AAException = [3441, 3414, 3417, 3448, 3449, 3472, 3334, 5952, 2354, 2369, 3368, 3366, 3367, 3391, 3389, 3390, 5920, 2314, 3412, 3639, 3634, 2327, 1755, 24582, 24351, 24363, 24135, 24133, 24134, 24132, 24136, 3356, 3357, 3358, 3359, 3360, 3361, 3362, 3363, 3364, 2352, 28780, 28781, 28795, 28942, 28957, 28988, 28938, 29291, 29018, 29517, 24338, 29580, 29712, 6282, 29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default exception list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default exception list restored."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/spdefault")
             {
                 Parameters.data_.spamFilter = ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org"];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default spamfilter list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default spamfilter list restored."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/tpdefault")
             {
                 Parameters.data_.tptoList = ["tp"];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default teleport keyword list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default teleport keyword list restored."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/prdefault")
             {
                 Parameters.data_.AAPriority = [29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262, 6282, 1646];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default auto aim priority list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default auto aim priority list restored."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/lidefault")
             {
                 Parameters.data_.lootIgnore = [9018, 9019, 9020, 9021, 9022, 9023, 9024, 9025, 3861, 2635];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default loot ignore list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default loot ignore list restored."));
                 Parameters.save();
                 return (true);
             }
             if (_arg_1 == "/wndefault")
             {
                 Parameters.data_.wordNotiList = ["tp"];
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "Default notifier keyword list restored."));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default notifier keyword list restored."));
                 Parameters.save();
                 return (true);
             }
@@ -871,7 +868,7 @@ public class ParseChatMessageCommand
                         _local_10++;
                     }
                     needed = ((_local_13) ? "You're maxed" : (needed.substr(0, (needed.length - 2)) + " to be maxed"));
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", needed));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, needed));
                     return (true);
                 case "/stats":
                 case "/roll":
@@ -899,7 +896,7 @@ public class ParseChatMessageCommand
                     GameServerConnectionConcrete.totalfamegain = 0;
                     return (true);
                 case "/pos":
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((("X: " + _local_12.x_) + " Y: ") + _local_12.y_)));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((("X: " + _local_12.x_) + " Y: ") + _local_12.y_)));
                     return (true);
                 case "/s":
                 case "/switch":
@@ -910,7 +907,7 @@ public class ParseChatMessageCommand
                     }
                     else
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Whoa, that was close! Your items almost disappeared."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Whoa, that was close! Your items almost disappeared."));
                     }
                     return (true);
                 case "/unname":
@@ -936,7 +933,7 @@ public class ParseChatMessageCommand
                     TextHandler.afk = (!(TextHandler.afk));
                     if (!TextHandler.afk)
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ((TextHandler.afkTells.length + " messages since ") + afkStart.getFormattedTime())));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((TextHandler.afkTells.length + " messages since ") + afkStart.getFormattedTime())));
                         for each (_local_20 in TextHandler.afkTells)
                         {
                             this.addTextLine.dispatch(_local_20);
@@ -947,7 +944,7 @@ public class ParseChatMessageCommand
                     else
                     {
                         afkStart = new CJDateUtil();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Your messages will be saved, have fun."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Your messages will be saved, have fun."));
                     }
                     TextHandler.afkMsg = "";
                     return (true);
@@ -957,7 +954,7 @@ public class ParseChatMessageCommand
                 case "/record":
                     _local_26.recorded = new Vector.<Point>();
                     _local_26.record = 1;
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "Recording your movements."));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Recording your movements."));
                     return (true);
                 case "/save":
                     _local_26.record = 0;
@@ -980,19 +977,19 @@ public class ParseChatMessageCommand
                         }
                         _local_9++;
                     }
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((("Save completed. Movement data compressed from " + _local_11) + " steps to ") + _local_26.recorded.length)));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((("Save completed. Movement data compressed from " + _local_11) + " steps to ") + _local_26.recorded.length)));
                     return (true);
                 case "/play":
                     _local_26.record = 2;
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "Playing the record."));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Playing the record."));
                     return (true);
                 case "/stop":
                     _local_26.record = 0;
                     _local_12.recordPointer = 0;
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", "Playback stopped."));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Playback stopped."));
                     return (true);
                 case "/myid":
-                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Id #" + _local_12.objectId_)));
+                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Id #" + _local_12.objectId_)));
                     return (true);
                 case "/constructs":
                 case "/const":
@@ -1013,7 +1010,7 @@ public class ParseChatMessageCommand
                         Parameters.data_.AAIgnore.push(2309);
                         Parameters.data_.AAIgnore.push(2310);
                         Parameters.data_.AAIgnore.push(2311);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Constructs added to ignore list."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Constructs added to ignore list."));
                     }
                     else
                     {
@@ -1023,7 +1020,7 @@ public class ParseChatMessageCommand
                             Parameters.data_.AAIgnore.splice((_local_19[_local_9] - _local_9), 1);
                             _local_9++;
                         }
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Constructs removed from ignore list."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Constructs removed from ignore list."));
                     }
                     Parameters.save();
                     return (true);
@@ -1047,7 +1044,7 @@ public class ParseChatMessageCommand
                         Parameters.data_.AAException.push(375);
                         Parameters.data_.AAException.push(376);
                         Parameters.data_.AAException.push(377);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Trees added to exception list."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Trees added to exception list."));
                     }
                     else
                     {
@@ -1057,7 +1054,7 @@ public class ParseChatMessageCommand
                             Parameters.data_.AAException.splice((_local_19[_local_9] - _local_9), 1);
                             _local_9++;
                         }
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Trees removed from exception list."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Trees removed from exception list."));
                     }
                     Parameters.save();
                     return (true);
@@ -1076,35 +1073,35 @@ public class ParseChatMessageCommand
                     _local_7 = this.data.match("^/alpha (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.alphaMan = _local_7[1];
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Alpha set to: " + Parameters.data_.alphaMan));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Alpha set to: " + Parameters.data_.alphaMan));
                         return (true);
                     }
                     _local_7 = this.data.match("^/uitextsize (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.uiTextSize = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("UI-text size set to: " + Parameters.data_.uiTextSize)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("UI-text size set to: " + Parameters.data_.uiTextSize)));
                         return (true);
                     }
                     _local_7 = this.data.match("^/recondelay (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.RECONNECT_DELAY = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Reconnect delay set to: " + Parameters.RECONNECT_DELAY)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Reconnect delay set to: " + Parameters.RECONNECT_DELAY)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/spellthreshold (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.spellThreshold = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Spell threshold set to: " + Parameters.data_.spellThreshold)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Spell threshold set to: " + Parameters.data_.spellThreshold)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/colo (\\d*\\.*\\d+)$");
                     if (_local_7 != null) {
                         Parameters.data_.coloOffset = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Sword of the Colossus offset: " + Parameters.data_.coloOffset)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Sword of the Colossus offset: " + Parameters.data_.coloOffset)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/afk (.+)$");
@@ -1113,14 +1110,14 @@ public class ParseChatMessageCommand
                         TextHandler.afk = true;
                         TextHandler.afkMsg = _local_7[1];
                         afkStart = new CJDateUtil();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Your messages will be saved, have fun."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Your messages will be saved, have fun."));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/load (\\d{1,2})$");
                     if (_local_7 != null)
                     {
                         this.hudModel.gameSprite.hudView.miniMap.miniMapData_ = AssetLoader.maps[(parseInt(_local_7[1]) - 1)];
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", "Loaded from file."));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Loaded from file."));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/player (\\w+)$");
@@ -1165,7 +1162,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.autoPot = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto pot percentage set to " + Parameters.data_.autoPot)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Auto pot percentage set to " + Parameters.data_.autoPot)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/automana (\\d+)$");
@@ -1173,7 +1170,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.autoMana = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto mana percentage set to " + Parameters.data_.autoMana)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Auto mana percentage set to " + Parameters.data_.autoMana)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/autonex (\\d+)$");
@@ -1181,7 +1178,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.AutoNexus = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto nexus percentage set to " + Parameters.AutoNexus)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Auto nexus percentage set to " + Parameters.AutoNexus)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/autoheal (\\d+)$");
@@ -1189,7 +1186,7 @@ public class ParseChatMessageCommand
                     {
                         Parameters.data_.autoHealP = _local_7[1];
                         Parameters.save();
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Auto heal percentage set to " + Parameters.data_.autoHealP)));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Auto heal percentage set to " + Parameters.data_.autoHealP)));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/give (\\w+) (\\d{1,8})$");
@@ -1221,17 +1218,17 @@ public class ParseChatMessageCommand
                     {
                         if (this.hudModel.gameSprite.map.name_ != "Vault")
                         {
-                            this.addTextLine.dispatch(ChatMessage.make("*Help*", "Use the command in vault and run over the chest you wish to interact with."));
+                            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Use the command in vault and run over the chest you wish to interact with."));
                             return (true);
                         }
                         if (_local_7[1] == "pots")
                         {
                             _local_12.collect = int.MAX_VALUE;
-                            this.addTextLine.dispatch(ChatMessage.make("*Help*", "Taking Potion(s) from vault chests"));
+                            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Taking Potion(s) from vault chests"));
                             return (true);
                         }
                         _local_12.collect = this.findMatch2(_local_7[1]);
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Taking " + ObjectLibrary.getIdFromType(_local_12.collect)) + "(s) from vault chests")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Taking " + ObjectLibrary.getIdFromType(_local_12.collect)) + "(s) from vault chests")));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/put (.+)$");
@@ -1239,17 +1236,17 @@ public class ParseChatMessageCommand
                     {
                         if (this.hudModel.gameSprite.map.name_ != "Vault")
                         {
-                            this.addTextLine.dispatch(ChatMessage.make("*Help*", "Use the command in vault and run over the chest you wish to interact with."));
+                            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Use the command in vault and run over the chest you wish to interact with."));
                             return (true);
                         }
                         if (_local_7[1] == "pots")
                         {
                             _local_12.collect = int.MIN_VALUE;
-                            this.addTextLine.dispatch(ChatMessage.make("*Help*", "Putting Potion(s) to vault chests"));
+                            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Putting Potion(s) to vault chests"));
                             return (true);
                         }
                         _local_12.collect = (0 - this.findMatch2(_local_7[1]));
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", (("Putting " + ObjectLibrary.getIdFromType((0 - _local_12.collect))) + "(s) to vault chests")));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Putting " + ObjectLibrary.getIdFromType((0 - _local_12.collect))) + "(s) to vault chests")));
                         return (true);
                     }
                     _local_7 = this.data.toLowerCase().match("^/buy (\\w+) ?(\\w*)$");
@@ -1391,7 +1388,7 @@ public class ParseChatMessageCommand
                             {
                                 if (_local_7[1] == _local_25.name_.toLowerCase())
                                 {
-                                    this.addTextLine.dispatch(ChatMessage.make("*Help*", ((_local_25.name_ + " has id ") + _local_25.objectId_)));
+                                    this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((_local_25.name_ + " has id ") + _local_25.objectId_)));
                                 }
                             }
                         }
@@ -1400,7 +1397,7 @@ public class ParseChatMessageCommand
                     _local_7 = this.data.toLowerCase().match("^/connect ([0-9.]+)$");
                     if (_local_7 != null)
                     {
-                        this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Connecting to " + _local_7[1])));
+                        this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Connecting to " + _local_7[1])));
                         this.hudModel.gameSprite.dispatchEvent(new ReconnectEvent(new Server().setName("Custom").setAddress(_local_7[1]).setPort(2050), -2, false, this.hudModel.gameSprite.gsc_.charId_, getTimer(), new ByteArray(), false));
                         return (true);
                     }
@@ -1568,7 +1565,7 @@ public class ParseChatMessageCommand
             var _local_8:int;
             if (_arg_1 == 2581)
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", "No item matched the query"));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "No item matched the query"));
             }
             var _local_6:Vector.<Player> = new Vector.<Player>(0);
             var _local_7:AbstractMap = this.hudModel.gameSprite.map;
@@ -1605,7 +1602,7 @@ public class ParseChatMessageCommand
             }
             else
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("No one has " + ObjectLibrary.getIdFromType(_arg_1))));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("No one has " + ObjectLibrary.getIdFromType(_arg_1))));
             }
         }
 
@@ -1651,7 +1648,7 @@ public class ParseChatMessageCommand
                     }
                 }
             }
-            this.addTextLine.dispatch(ChatMessage.make("*Help*", (((("Message #" + _local_1[1]) + ' set to "') + _local_1[2]) + '"')));
+            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (((("Message #" + _local_1[1]) + ' set to "') + _local_1[2]) + '"')));
             Parameters.save();
             return (true);
         }
@@ -1687,7 +1684,7 @@ public class ParseChatMessageCommand
                     }
                 }
             }
-            this.addTextLine.dispatch(ChatMessage.make("*Help*", ("A new preset was created for effect ID " + _local_1[2])));
+            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("A new preset was created for effect ID " + _local_1[2])));
             Parameters.save();
             return (true);
         }

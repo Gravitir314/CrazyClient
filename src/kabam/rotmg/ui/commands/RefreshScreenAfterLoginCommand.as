@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.commands.RefreshScreenAfterLoginCommand
+﻿//kabam.rotmg.ui.commands.RefreshScreenAfterLoginCommand
 
 package kabam.rotmg.ui.commands
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.Player
+﻿//com.company.assembleegameclient.objects.Player
 
 package com.company.assembleegameclient.objects
 {
@@ -452,7 +449,7 @@ public class Player extends Character
                     }
                     _local_9++;
                 }
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", _local_4.substr(0, (_local_4.length - 2))));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, _local_4.substr(0, (_local_4.length - 2))));
             }
         }
 
@@ -1358,6 +1355,10 @@ public class Player extends Character
                 if (Parameters.data_.dodBot)
                 {
                     Party.dodBot(this);
+                }
+                if (Parameters.data_.templeBot)
+                {
+                    Party.templeBot(this);
                 }
                 if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50)))) {
                     this.thunderTime = getTimer();

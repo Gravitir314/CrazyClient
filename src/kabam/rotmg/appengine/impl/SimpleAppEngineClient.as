@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.appengine.impl.SimpleAppEngineClient
+﻿//kabam.rotmg.appengine.impl.SimpleAppEngineClient
 
 package kabam.rotmg.appengine.impl
 {

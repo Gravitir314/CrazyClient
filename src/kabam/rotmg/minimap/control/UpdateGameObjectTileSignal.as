@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.minimap.control.UpdateGameObjectTileSignal
+﻿//kabam.rotmg.minimap.control.UpdateGameObjectTileSignal
 
 package kabam.rotmg.minimap.control
 {

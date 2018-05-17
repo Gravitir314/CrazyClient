@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.control.ClearCurrentRunCommand
+﻿//kabam.rotmg.arena.control.ClearCurrentRunCommand
 
 package kabam.rotmg.arena.control
 {

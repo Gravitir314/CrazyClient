@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.protip.signals.ShowProTipSignal
+﻿//kabam.rotmg.protip.signals.ShowProTipSignal
 
 package kabam.rotmg.protip.signals
 {

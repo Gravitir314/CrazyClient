@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.incoming.PlaySound
+﻿//kabam.rotmg.messaging.impl.incoming.PlaySound
 
 package kabam.rotmg.messaging.impl.incoming
 {

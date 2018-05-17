@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.ui.board.ViewBoard
+﻿//com.company.assembleegameclient.ui.board.ViewBoard
 
 package com.company.assembleegameclient.ui.board
 {

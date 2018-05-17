@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.parameters.Parameters
+﻿//com.company.assembleegameclient.parameters.Parameters
 
 package com.company.assembleegameclient.parameters
 {
@@ -481,6 +478,7 @@ public class Parameters
             setDefault("mobNotifier", true);
             setDefault("wordNoti", false);
             setDefault("dodBot", false);
+            setDefault("templeBot", false);
             setDefault("autoDecrementHP", true);
             setDefault("offsetColossus", true);
             setDefault("coloOffset", 0.225);

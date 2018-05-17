@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.legends.model.Legend
+﻿//kabam.rotmg.legends.model.Legend
 
 package kabam.rotmg.legends.model
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.errors.control.ErrorSignal
+﻿//kabam.rotmg.errors.control.ErrorSignal
 
 package kabam.rotmg.errors.control
 {

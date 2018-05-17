@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.map.Square
+﻿//com.company.assembleegameclient.map.Square
 
 package com.company.assembleegameclient.map
 {

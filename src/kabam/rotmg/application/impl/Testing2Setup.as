@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.application.impl.Testing2Setup
+﻿//kabam.rotmg.application.impl.Testing2Setup
 
 package kabam.rotmg.application.impl
 {

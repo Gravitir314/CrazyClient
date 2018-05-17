@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.screens.ScoreTextLine
+﻿//com.company.assembleegameclient.screens.ScoreTextLine
 
 package com.company.assembleegameclient.screens
 {

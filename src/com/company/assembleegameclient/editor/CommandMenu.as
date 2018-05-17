@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.editor.CommandMenu
+﻿//com.company.assembleegameclient.editor.CommandMenu
 
 package com.company.assembleegameclient.editor
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.controller.UnFocusAbleMediator
+﻿//kabam.rotmg.ui.controller.UnFocusAbleMediator
 
 package kabam.rotmg.ui.controller
 {

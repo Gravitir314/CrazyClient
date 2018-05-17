@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.OutstandingBuy
+﻿//kabam.rotmg.messaging.impl.OutstandingBuy
 
 package kabam.rotmg.messaging.impl
 {

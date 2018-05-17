@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.utils.colors.RGB
+﻿//io.decagames.rotmg.utils.colors.RGB
 
 package io.decagames.rotmg.utils.colors
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.language.model.CookieLanguageModel
+﻿//kabam.rotmg.language.model.CookieLanguageModel
 
 package kabam.rotmg.language.model
 {

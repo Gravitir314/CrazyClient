@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.death.view.ZombifyGameMediator
+﻿//kabam.rotmg.death.view.ZombifyGameMediator
 
 package kabam.rotmg.death.view
 {

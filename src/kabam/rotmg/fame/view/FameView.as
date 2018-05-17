@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.fame.view.FameView
+﻿//kabam.rotmg.fame.view.FameView
 
 package kabam.rotmg.fame.view
 {

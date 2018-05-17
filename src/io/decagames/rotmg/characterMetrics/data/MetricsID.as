@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.characterMetrics.data.MetricsID
+﻿//io.decagames.rotmg.characterMetrics.data.MetricsID
 
 package io.decagames.rotmg.characterMetrics.data
 {

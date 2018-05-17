@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.particles.ConfettiEffect
+﻿//com.company.assembleegameclient.objects.particles.ConfettiEffect
 
 package com.company.assembleegameclient.objects.particles
 {

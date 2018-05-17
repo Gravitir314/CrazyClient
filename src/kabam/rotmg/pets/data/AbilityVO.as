@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.data.AbilityVO
+﻿//kabam.rotmg.pets.data.AbilityVO
 
 package kabam.rotmg.pets.data
 {

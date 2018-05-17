@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.map.serialization.MapDecoder
+﻿//com.company.assembleegameclient.map.serialization.MapDecoder
 
 package com.company.assembleegameclient.map.serialization
 {

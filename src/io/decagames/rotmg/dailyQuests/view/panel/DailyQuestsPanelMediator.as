@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.dailyQuests.view.panel.DailyQuestsPanelMediator
+﻿//io.decagames.rotmg.dailyQuests.view.panel.DailyQuestsPanelMediator
 
 package io.decagames.rotmg.dailyQuests.view.panel
 {

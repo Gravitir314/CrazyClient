@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.signals.DeferredQueueSignal
+﻿//kabam.lib.signals.DeferredQueueSignal
 
 package kabam.lib.signals
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.startup.control.StartupCommand
+﻿//kabam.rotmg.startup.control.StartupCommand
 
 package kabam.rotmg.startup.control
 {

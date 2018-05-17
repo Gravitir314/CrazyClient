@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.util.components.SpriteBackground
+﻿//kabam.rotmg.util.components.SpriteBackground
 
 package kabam.rotmg.util.components
 {

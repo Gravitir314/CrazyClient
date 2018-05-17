@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.ui.icons.IconButton
+﻿//com.company.assembleegameclient.ui.icons.IconButton
 
 package com.company.assembleegameclient.ui.icons
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.util.graphics.BevelRect
+﻿//kabam.rotmg.util.graphics.BevelRect
 
 package kabam.rotmg.util.graphics
 {

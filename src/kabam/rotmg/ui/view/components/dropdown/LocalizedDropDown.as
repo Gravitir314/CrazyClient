@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.view.components.dropdown.LocalizedDropDown
+﻿//kabam.rotmg.ui.view.components.dropdown.LocalizedDropDown
 
 package kabam.rotmg.ui.view.components.dropdown
 {

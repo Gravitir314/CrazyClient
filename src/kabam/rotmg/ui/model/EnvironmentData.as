@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.model.EnvironmentData
+﻿//kabam.rotmg.ui.model.EnvironmentData
 
 package kabam.rotmg.ui.model
 {

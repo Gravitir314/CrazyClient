@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.friends.view.FriendListItem
+﻿//kabam.rotmg.friends.view.FriendListItem
 
 package kabam.rotmg.friends.view
 {

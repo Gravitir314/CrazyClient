@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.ui.api.Size
+﻿//kabam.lib.ui.api.Size
 
 package kabam.lib.ui.api
 {

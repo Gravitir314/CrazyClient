@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.util.CachingColorTransformer
+﻿//com.company.util.CachingColorTransformer
 
 package com.company.util
 {

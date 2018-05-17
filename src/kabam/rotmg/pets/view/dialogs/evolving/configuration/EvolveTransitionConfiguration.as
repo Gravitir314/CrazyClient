@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.view.dialogs.evolving.configuration.EvolveTransitionConfiguration
+﻿//kabam.rotmg.pets.view.dialogs.evolving.configuration.EvolveTransitionConfiguration
 
 package kabam.rotmg.pets.view.dialogs.evolving.configuration
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.service.GetArenaLeaderboardTask
+﻿//kabam.rotmg.arena.service.GetArenaLeaderboardTask
 
 package kabam.rotmg.arena.service
 {

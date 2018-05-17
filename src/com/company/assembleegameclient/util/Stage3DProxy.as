@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.util.Stage3DProxy
+﻿//com.company.assembleegameclient.util.Stage3DProxy
 
 package com.company.assembleegameclient.util
 {

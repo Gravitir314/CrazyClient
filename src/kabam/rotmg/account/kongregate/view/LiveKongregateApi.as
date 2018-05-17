@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.kongregate.view.LiveKongregateApi
+﻿//kabam.rotmg.account.kongregate.view.LiveKongregateApi
 
 package kabam.rotmg.account.kongregate.view
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.view.components.MapBackground
+﻿//kabam.rotmg.ui.view.components.MapBackground
 
 package kabam.rotmg.ui.view.components
 {

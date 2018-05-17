@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.model.GameInitData
+﻿//kabam.rotmg.game.model.GameInitData
 
 package kabam.rotmg.game.model
 {

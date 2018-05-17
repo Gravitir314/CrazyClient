@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.ui.tooltip.TextToolTip
+﻿//com.company.assembleegameclient.ui.tooltip.TextToolTip
 
 package com.company.assembleegameclient.ui.tooltip
 {

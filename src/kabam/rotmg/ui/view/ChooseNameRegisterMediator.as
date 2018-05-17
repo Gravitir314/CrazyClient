@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.ui.view.ChooseNameRegisterMediator
+﻿//kabam.rotmg.ui.view.ChooseNameRegisterMediator
 
 package kabam.rotmg.ui.view
 {

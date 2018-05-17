@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.view.components.AnimatedAbilityBar
+﻿//kabam.rotmg.pets.view.components.AnimatedAbilityBar
 
 package kabam.rotmg.pets.view.components
 {

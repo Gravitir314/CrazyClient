@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.control.ImminentArenaWaveCommand
+﻿//kabam.rotmg.arena.control.ImminentArenaWaveCommand
 
 package kabam.rotmg.arena.control
 {

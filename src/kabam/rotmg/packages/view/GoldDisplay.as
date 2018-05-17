@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.packages.view.GoldDisplay
+﻿//kabam.rotmg.packages.view.GoldDisplay
 
 package kabam.rotmg.packages.view
 {

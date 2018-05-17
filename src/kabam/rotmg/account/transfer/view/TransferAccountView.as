@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.transfer.view.TransferAccountView
+﻿//kabam.rotmg.account.transfer.view.TransferAccountView
 
 package kabam.rotmg.account.transfer.view
 {

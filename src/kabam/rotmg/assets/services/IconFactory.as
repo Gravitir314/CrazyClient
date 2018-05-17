@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.assets.services.IconFactory
+﻿//kabam.rotmg.assets.services.IconFactory
 
 package kabam.rotmg.assets.services
 {

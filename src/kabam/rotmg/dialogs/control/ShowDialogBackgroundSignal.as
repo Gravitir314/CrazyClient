@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.dialogs.control.ShowDialogBackgroundSignal
+﻿//kabam.rotmg.dialogs.control.ShowDialogBackgroundSignal
 
 package kabam.rotmg.dialogs.control
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.view.ArenaQueryPanelMediator
+﻿//kabam.rotmg.arena.view.ArenaQueryPanelMediator
 
 package kabam.rotmg.arena.view
 {

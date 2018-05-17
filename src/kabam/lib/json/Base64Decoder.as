@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.json.Base64Decoder
+﻿//kabam.lib.json.Base64Decoder
 
 package kabam.lib.json
 {

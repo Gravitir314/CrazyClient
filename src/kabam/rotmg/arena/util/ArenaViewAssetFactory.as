@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.util.ArenaViewAssetFactory
+﻿//kabam.rotmg.arena.util.ArenaViewAssetFactory
 
 package kabam.rotmg.arena.util
 {

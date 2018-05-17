@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.console.model.ActionHash
+﻿//kabam.lib.console.model.ActionHash
 
 package kabam.lib.console.model
 {

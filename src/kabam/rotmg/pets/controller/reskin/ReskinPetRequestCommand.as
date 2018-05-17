@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.controller.reskin.ReskinPetRequestCommand
+﻿//kabam.rotmg.pets.controller.reskin.ReskinPetRequestCommand
 
 package kabam.rotmg.pets.controller.reskin
 {

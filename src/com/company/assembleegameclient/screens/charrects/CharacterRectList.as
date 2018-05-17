@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.screens.charrects.CharacterRectList
+﻿//com.company.assembleegameclient.screens.charrects.CharacterRectList
 
 package com.company.assembleegameclient.screens.charrects
 {

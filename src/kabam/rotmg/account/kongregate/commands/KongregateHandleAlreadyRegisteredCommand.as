@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.kongregate.commands.KongregateHandleAlreadyRegisteredCommand
+﻿//kabam.rotmg.account.kongregate.commands.KongregateHandleAlreadyRegisteredCommand
 
 package kabam.rotmg.account.kongregate.commands
 {

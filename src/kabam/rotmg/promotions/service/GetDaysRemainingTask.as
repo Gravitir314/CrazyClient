@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.promotions.service.GetDaysRemainingTask
+﻿//kabam.rotmg.promotions.service.GetDaysRemainingTask
 
 package kabam.rotmg.promotions.service
 {

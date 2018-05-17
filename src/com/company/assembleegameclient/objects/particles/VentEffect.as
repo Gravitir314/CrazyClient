@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.particles.VentEffect
+﻿//com.company.assembleegameclient.objects.particles.VentEffect
 
 package com.company.assembleegameclient.objects.particles
 {

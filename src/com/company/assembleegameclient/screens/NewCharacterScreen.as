@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.screens.NewCharacterScreen
+﻿//com.company.assembleegameclient.screens.NewCharacterScreen
 
 package com.company.assembleegameclient.screens
 {

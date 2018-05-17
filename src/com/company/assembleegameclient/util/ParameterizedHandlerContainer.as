@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.util.ParameterizedHandlerContainer
+﻿//com.company.assembleegameclient.util.ParameterizedHandlerContainer
 
 package com.company.assembleegameclient.util
 {

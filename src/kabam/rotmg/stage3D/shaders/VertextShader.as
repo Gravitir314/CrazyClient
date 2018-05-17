@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.stage3D.shaders.VertextShader
+﻿//kabam.rotmg.stage3D.shaders.VertextShader
 
 package kabam.rotmg.stage3D.shaders
 {

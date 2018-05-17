@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.minimap.view.MiniMapImp
+﻿//kabam.rotmg.minimap.view.MiniMapImp
 
 package kabam.rotmg.minimap.view
 {
@@ -129,7 +126,7 @@ public class MiniMapImp extends MiniMap
                         _local_4++;
                     }
                     this.miniMapData_ = this.maps[_local_6];
-                    map.gs_.gsc_.addTextLine2("*Help*", (((("World " + ++_local_6) + " (") + _local_5) + " uncertainty)"));
+                    map.gs_.gsc_.addTextLine2(Parameters.HELP_CHAT_NAME, (((("World " + ++_local_6) + " (") + _local_5) + " uncertainty)"));
                     map.gs_.gsc_.needsMap = false;
                 }
             }

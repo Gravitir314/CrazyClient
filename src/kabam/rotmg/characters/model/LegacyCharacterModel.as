@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.characters.model.LegacyCharacterModel
+﻿//kabam.rotmg.characters.model.LegacyCharacterModel
 
 package kabam.rotmg.characters.model
 {

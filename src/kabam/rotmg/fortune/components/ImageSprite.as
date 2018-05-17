@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.fortune.components.ImageSprite
+﻿//kabam.rotmg.fortune.components.ImageSprite
 
 package kabam.rotmg.fortune.components
 {

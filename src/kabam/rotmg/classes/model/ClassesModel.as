@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.classes.model.ClassesModel
+﻿//kabam.rotmg.classes.model.ClassesModel
 
 package kabam.rotmg.classes.model
 {

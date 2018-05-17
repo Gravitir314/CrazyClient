@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.rotmg.graphics.KabamLogo
+﻿//com.company.rotmg.graphics.KabamLogo
 
 package com.company.rotmg.graphics
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.build.impl.BuildEnvironments
+﻿//kabam.rotmg.build.impl.BuildEnvironments
 
 package kabam.rotmg.build.impl
 {

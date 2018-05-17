@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.screens.CreditsScreen
+﻿//com.company.assembleegameclient.screens.CreditsScreen
 
 package com.company.assembleegameclient.screens
 {

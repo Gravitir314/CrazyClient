@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.legends.control.RequestFameListSignal
+﻿//kabam.rotmg.legends.control.RequestFameListSignal
 
 package kabam.rotmg.legends.control
 {

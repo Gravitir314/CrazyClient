@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.component.AbridgedPlayerTooltip
+﻿//kabam.rotmg.arena.component.AbridgedPlayerTooltip
 
 package kabam.rotmg.arena.component
 {

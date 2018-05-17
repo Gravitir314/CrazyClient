@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.util.PetsConstants
+﻿//kabam.rotmg.pets.util.PetsConstants
 
 package kabam.rotmg.pets.util
 {

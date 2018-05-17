@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.particles.XMLEffect
+﻿//com.company.assembleegameclient.objects.particles.XMLEffect
 
 package com.company.assembleegameclient.objects.particles
 {

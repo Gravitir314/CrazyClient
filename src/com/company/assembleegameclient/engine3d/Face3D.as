@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.engine3d.Face3D
+﻿//com.company.assembleegameclient.engine3d.Face3D
 
 package com.company.assembleegameclient.engine3d
 {

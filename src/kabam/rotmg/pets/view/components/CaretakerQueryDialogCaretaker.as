@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.view.components.CaretakerQueryDialogCaretaker
+﻿//kabam.rotmg.pets.view.components.CaretakerQueryDialogCaretaker
 
 package kabam.rotmg.pets.view.components
 {

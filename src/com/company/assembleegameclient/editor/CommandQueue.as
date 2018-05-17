@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.editor.CommandQueue
+﻿//com.company.assembleegameclient.editor.CommandQueue
 
 package com.company.assembleegameclient.editor
 {

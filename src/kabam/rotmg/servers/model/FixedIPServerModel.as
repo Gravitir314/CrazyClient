@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.servers.model.FixedIPServerModel
+﻿//kabam.rotmg.servers.model.FixedIPServerModel
 
 package kabam.rotmg.servers.model
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.dailyLogin.view.CalendarDayBox
+﻿//kabam.rotmg.dailyLogin.view.CalendarDayBox
 
 package kabam.rotmg.dailyLogin.view
 {

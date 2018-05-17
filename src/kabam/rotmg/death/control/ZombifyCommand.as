@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.death.control.ZombifyCommand
+﻿//kabam.rotmg.death.control.ZombifyCommand
 
 package kabam.rotmg.death.control
 {

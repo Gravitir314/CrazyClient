@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.EvolvePetInfo
+﻿//kabam.rotmg.messaging.impl.EvolvePetInfo
 
 package kabam.rotmg.messaging.impl
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.view.dialogs.PetDialogStyler
+﻿//kabam.rotmg.pets.view.dialogs.PetDialogStyler
 
 package kabam.rotmg.pets.view.dialogs
 {

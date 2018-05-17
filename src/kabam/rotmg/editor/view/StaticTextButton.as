@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.editor.view.StaticTextButton
+﻿//kabam.rotmg.editor.view.StaticTextButton
 
 package kabam.rotmg.editor.view
 {

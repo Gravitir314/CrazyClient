@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.editor.view.components.savedialog.TagsInputField
+﻿//kabam.rotmg.editor.view.components.savedialog.TagsInputField
 
 package kabam.rotmg.editor.view.components.savedialog
 {

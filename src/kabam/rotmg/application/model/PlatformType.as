@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.application.model.PlatformType
+﻿//kabam.rotmg.application.model.PlatformType
 
 package kabam.rotmg.application.model
 {

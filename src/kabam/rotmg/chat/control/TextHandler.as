@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.chat.control.TextHandler
+﻿//kabam.rotmg.chat.control.TextHandler
 
 package kabam.rotmg.chat.control
 {
@@ -292,7 +289,7 @@ public class TextHandler
                                 }
                                 GameServerConnectionConcrete.receivingGift = _local_11;
                                 this.hudModel.gameSprite.gsc_.requestTrade(_arg_1.name_);
-                                this.addTextLine.dispatch(ChatMessage.make("*Help*", ("Received item(s) as a gift from " + _arg_1.name_)));
+                                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Received item(s) as a gift from " + _arg_1.name_)));
                             }
                             return;
                         }

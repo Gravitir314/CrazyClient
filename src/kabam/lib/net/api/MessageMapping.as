@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.net.api.MessageMapping
+﻿//kabam.lib.net.api.MessageMapping
 
 package kabam.lib.net.api
 {

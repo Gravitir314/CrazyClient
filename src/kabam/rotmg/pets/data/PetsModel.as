@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.data.PetsModel
+﻿//kabam.rotmg.pets.data.PetsModel
 
 package kabam.rotmg.pets.data
 {

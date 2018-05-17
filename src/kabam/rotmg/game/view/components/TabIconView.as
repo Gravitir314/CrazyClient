@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.view.components.TabIconView
+﻿//kabam.rotmg.game.view.components.TabIconView
 
 package kabam.rotmg.game.view.components
 {

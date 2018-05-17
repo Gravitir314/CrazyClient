@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.view.ContinueOrQuitDialog
+﻿//kabam.rotmg.arena.view.ContinueOrQuitDialog
 
 package kabam.rotmg.arena.view
 {

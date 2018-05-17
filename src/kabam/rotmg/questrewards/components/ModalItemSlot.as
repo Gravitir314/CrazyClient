@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.questrewards.components.ModalItemSlot
+﻿//kabam.rotmg.questrewards.components.ModalItemSlot
 
 package kabam.rotmg.questrewards.components
 {

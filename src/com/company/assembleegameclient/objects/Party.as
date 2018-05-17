@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.Party
+﻿//com.company.assembleegameclient.objects.Party
 
 package com.company.assembleegameclient.objects
 {
@@ -27,8 +24,11 @@ public class Party
         private static var addTextLine:AddTextLineSignal = StaticInjectorContext.getInjector().getInstance(AddTextLineSignal);
         private static const DOD_PATH_X:Array = [124, 124, 132, 132, 128, 128, 132, 132, 128, 131, 128, 128/*, 126, 126, 130, 130, 126, 126, 130, 130, 128*/];
         private static const DOD_PATH_Y:Array = [229, 223, 223, 217, 217, 211, 211, 208, 207, 205, 202, 129/*, 132, 128, 128, 132, 132, 128, 128, 132, 129*/];
+        private static const TOT_X:Array = [2,3,-5];
+        private static const TOT_Y:Array = [2,3,-5];
         private static var PATH_IDX:int = 0;
         private static var debugEnd:Boolean = false;
+        public static var daichi:GameObject;
         private static var COUNT:Number = 0;
 
         public var map_:Map;
@@ -36,6 +36,7 @@ public class Party
         private var starred_:Dictionary = new Dictionary(true);
         private var ignored_:Dictionary = new Dictionary(true);
         private var lastUpdate_:int = -2147483648;
+        private static var nextPhase:int = 0;
 
         public function Party(_arg_1:Map)
         {
@@ -63,12 +64,35 @@ public class Party
             }
         }
 
+        public static function templeBot(player:Player):void {
+            if (daichi != null && player.map_.name_ == "Nexus"/*Mountain Temple*/) {
+                if (!debugEnd) {
+                    moveTo(daichi.x_ - TOT_X[PATH_IDX], daichi.y_ - TOT_Y[PATH_IDX], player);
+                } else {
+                    PATH_IDX = 0;
+                    COUNT++;
+                    debugEnd = false;
+                    addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (COUNT + " phase started.")));
+                }
+            }
+        }
+
+
         public static function moveTo(dx:Number, dy:Number, player:Player):void{
             if (((int(player.x_) == dx) && (int(player.y_) == dy))){
-                if (PATH_IDX == (DOD_PATH_X.length - 1)){
-                    debugEnd = true;
-                } else {
-                    PATH_IDX++;
+                if (Parameters.data_.dodBot) {
+                    if (PATH_IDX == (DOD_PATH_X.length - 1)) {
+                        debugEnd = true;
+                    } else {
+                        PATH_IDX++;
+                    }
+                }
+                if (Parameters.data_.templeBot) {
+                    if (PATH_IDX == (TOT_X.length - 1)) {
+                        debugEnd = true;
+                    } else {
+                        PATH_IDX++;
+                    }
                 }
                 return;
             }

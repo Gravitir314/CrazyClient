@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.news.model.InGameNews
+﻿//kabam.rotmg.news.model.InGameNews
 
 package kabam.rotmg.news.model
 {

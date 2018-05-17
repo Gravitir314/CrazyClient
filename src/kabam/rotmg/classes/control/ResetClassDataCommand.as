@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.classes.control.ResetClassDataCommand
+﻿//kabam.rotmg.classes.control.ResetClassDataCommand
 
 package kabam.rotmg.classes.control
 {

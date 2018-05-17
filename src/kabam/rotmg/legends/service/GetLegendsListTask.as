@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.legends.service.GetLegendsListTask
+﻿//kabam.rotmg.legends.service.GetLegendsListTask
 
 package kabam.rotmg.legends.service
 {

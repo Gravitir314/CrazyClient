@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.view.components.StatsTabHotKeyInputSignal
+﻿//kabam.rotmg.game.view.components.StatsTabHotKeyInputSignal
 
 package kabam.rotmg.game.view.components
 {

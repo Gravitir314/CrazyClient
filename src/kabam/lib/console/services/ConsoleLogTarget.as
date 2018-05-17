@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.console.services.ConsoleLogTarget
+﻿//kabam.lib.console.services.ConsoleLogTarget
 
 package kabam.lib.console.services
 {

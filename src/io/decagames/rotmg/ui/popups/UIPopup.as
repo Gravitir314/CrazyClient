@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.ui.popups.UIPopup
+﻿//io.decagames.rotmg.ui.popups.UIPopup
 
 package io.decagames.rotmg.ui.popups
 {

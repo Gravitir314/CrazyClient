@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.util.GraphicsUtil
+﻿//com.company.util.GraphicsUtil
 
 package com.company.util
 {

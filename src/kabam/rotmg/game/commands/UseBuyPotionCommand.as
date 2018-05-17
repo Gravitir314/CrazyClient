@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.commands.UseBuyPotionCommand
+﻿//kabam.rotmg.game.commands.UseBuyPotionCommand
 
 package kabam.rotmg.game.commands
 {

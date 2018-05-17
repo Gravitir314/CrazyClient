@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.assets.model.CharacterTemplate
+﻿//kabam.rotmg.assets.model.CharacterTemplate
 
 package kabam.rotmg.assets.model
 {

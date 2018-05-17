@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.build.api.BuildData
+﻿//kabam.rotmg.build.api.BuildData
 
 package kabam.rotmg.build.api
 {

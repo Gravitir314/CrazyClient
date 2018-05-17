@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.OneWayContainer
+﻿//com.company.assembleegameclient.objects.OneWayContainer
 
 package com.company.assembleegameclient.objects
 {

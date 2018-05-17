@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.util.Extents2D
+﻿//com.company.util.Extents2D
 
 package com.company.util
 {

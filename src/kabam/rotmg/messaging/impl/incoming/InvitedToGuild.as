@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.incoming.InvitedToGuild
+﻿//kabam.rotmg.messaging.impl.incoming.InvitedToGuild
 
 package kabam.rotmg.messaging.impl.incoming
 {

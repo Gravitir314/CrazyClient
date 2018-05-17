@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.util.ConditionEffect
+﻿//com.company.assembleegameclient.util.ConditionEffect
 
 package com.company.assembleegameclient.util
 {

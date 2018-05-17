@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.constants.ScreenTypes
+﻿//com.company.assembleegameclient.constants.ScreenTypes
 
 package com.company.assembleegameclient.constants
 {

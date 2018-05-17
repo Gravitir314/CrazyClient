@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.core.signals.UpdateAccountInfoSignal
+﻿//kabam.rotmg.account.core.signals.UpdateAccountInfoSignal
 
 package kabam.rotmg.account.core.signals
 {

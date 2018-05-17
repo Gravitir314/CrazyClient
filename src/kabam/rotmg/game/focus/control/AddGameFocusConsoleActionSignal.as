@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.focus.control.AddGameFocusConsoleActionSignal
+﻿//kabam.rotmg.game.focus.control.AddGameFocusConsoleActionSignal
 
 package kabam.rotmg.game.focus.control
 {

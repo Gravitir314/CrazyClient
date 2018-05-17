@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.classes.view.CharacterSkinListView
+﻿//kabam.rotmg.classes.view.CharacterSkinListView
 
 package kabam.rotmg.classes.view
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.legends.model.Timespan
+﻿//kabam.rotmg.legends.model.Timespan
 
 package kabam.rotmg.legends.model
 {

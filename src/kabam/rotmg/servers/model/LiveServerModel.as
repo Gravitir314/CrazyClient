@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.servers.model.LiveServerModel
+﻿//kabam.rotmg.servers.model.LiveServerModel
 
 package kabam.rotmg.servers.model
 {

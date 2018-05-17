@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.sound.Music
+﻿//com.company.assembleegameclient.sound.Music
 
 package com.company.assembleegameclient.sound
 {

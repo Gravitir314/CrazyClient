@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.console.controller.RegisterConsoleActionCommand
+﻿//kabam.lib.console.controller.RegisterConsoleActionCommand
 
 package kabam.lib.console.controller
 {

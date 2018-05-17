@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.display.LoaderInfo.LoaderInfoProxy
+﻿//kabam.display.LoaderInfo.LoaderInfoProxy
 
 package kabam.display.LoaderInfo
 {

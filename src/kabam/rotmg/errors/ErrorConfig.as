@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.errors.ErrorConfig
+﻿//kabam.rotmg.errors.ErrorConfig
 
 package kabam.rotmg.errors
 {

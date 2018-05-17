@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.net.impl.Message
+﻿//kabam.lib.net.impl.Message
 
 package kabam.lib.net.impl
 {

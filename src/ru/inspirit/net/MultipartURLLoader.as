@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//ru.inspirit.net.MultipartURLLoader
+﻿//ru.inspirit.net.MultipartURLLoader
 
 package ru.inspirit.net
 {

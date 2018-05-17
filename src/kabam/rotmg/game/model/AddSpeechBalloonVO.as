@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.game.model.AddSpeechBalloonVO
+﻿//kabam.rotmg.game.model.AddSpeechBalloonVO
 
 package kabam.rotmg.game.model
 {

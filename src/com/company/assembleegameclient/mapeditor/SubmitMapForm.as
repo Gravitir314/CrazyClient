@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.mapeditor.SubmitMapForm
+﻿//com.company.assembleegameclient.mapeditor.SubmitMapForm
 
 package com.company.assembleegameclient.mapeditor
 {

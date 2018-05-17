@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.lib.ui.impl.VerticalLayout
+﻿//kabam.lib.ui.impl.VerticalLayout
 
 package kabam.lib.ui.impl
 {

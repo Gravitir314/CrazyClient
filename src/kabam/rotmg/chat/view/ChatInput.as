@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.chat.view.ChatInput
+﻿//kabam.rotmg.chat.view.ChatInput
 
 package kabam.rotmg.chat.view
 {

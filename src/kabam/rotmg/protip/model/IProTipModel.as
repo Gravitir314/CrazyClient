@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.protip.model.IProTipModel
+﻿//kabam.rotmg.protip.model.IProTipModel
 
 package kabam.rotmg.protip.model
 {

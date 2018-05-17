@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.GameServerConnectionConcrete
+﻿//kabam.rotmg.messaging.impl.GameServerConnectionConcrete
 
 package kabam.rotmg.messaging.impl
 {
@@ -21,6 +18,7 @@ import com.company.assembleegameclient.objects.Merchant;
 import com.company.assembleegameclient.objects.NameChanger;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.ObjectProperties;
+import com.company.assembleegameclient.objects.Party;
 import com.company.assembleegameclient.objects.Pet;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.Portal;
@@ -516,7 +514,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         private function onSetSpeed(_arg_1:SetSpeed):void
         {
-            this.addTextLine.dispatch(ChatMessage.make("*Help*", ((("Changing speed from " + player.speed_) + " to ") + _arg_1.spd)));
+            this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ((("Changing speed from " + player.speed_) + " to ") + _arg_1.spd)));
             player.speed_ = _arg_1.spd;
         }
 
@@ -1759,12 +1757,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
         private function addObject(_arg_1:ObjectData):void
         {
-            if (_arg_1.objectType_ == 1825) //wc portal
-            {
-                Parameters.timerActive = true;
-                Parameters.phaseChangeAt = (getTimer() + (120 * 1000));
-                Parameters.phaseName = "Wine Cellar";
-            }
             var _local_2:AbstractMap = gs_.map;
             var _local_3:GameObject = ObjectLibrary.getObjectFromType(_arg_1.objectType_);
             if (_local_3 == null)
@@ -1773,7 +1765,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             }
             if (gs_.map.name_ == "Sprite World" && _local_3 is Player) {
                 if (totPlayers == 1) {
-                    addTextLine.dispatch(ChatMessage.make("*Help*", "Another player entered the Sprite World"));
+                    addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Another player entered the Sprite World"));
                     Parameters.data_.SWNoTileMove = false;
                 }
                 totPlayers++;
@@ -1800,6 +1792,14 @@ public class GameServerConnectionConcrete extends GameServerConnection
             }
             switch (_local_3.objectType_)
             {
+                case 1825:
+                    Parameters.timerActive = true;
+                    Parameters.phaseChangeAt = (getTimer() + (120 * 1000));
+                    Parameters.phaseName = "Wine Cellar";
+                    return;
+                case 455://fountain test
+                        Party.daichi = _local_3;
+                    return;
                 case 3368:
                 case 32694:
                 case 29003:
@@ -2767,7 +2767,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             }
             else
             {
-                this.addTextLine.dispatch(ChatMessage.make("*Help*", _arg_1.name_));
+                this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, _arg_1.name_));
             }
             for each (_local_2 in _arg_1.clientXML_)
             {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.outgoing.EnemyHit
+﻿//kabam.rotmg.messaging.impl.outgoing.EnemyHit
 
 package kabam.rotmg.messaging.impl.outgoing
 {

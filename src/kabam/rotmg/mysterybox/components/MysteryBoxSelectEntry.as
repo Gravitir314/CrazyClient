@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.mysterybox.components.MysteryBoxSelectEntry
+﻿//kabam.rotmg.mysterybox.components.MysteryBoxSelectEntry
 
 package kabam.rotmg.mysterybox.components
 {

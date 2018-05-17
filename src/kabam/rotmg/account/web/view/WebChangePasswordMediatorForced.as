@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.web.view.WebChangePasswordMediatorForced
+﻿//kabam.rotmg.account.web.view.WebChangePasswordMediatorForced
 
 package kabam.rotmg.account.web.view
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.ui.scroll.UIScrollbar
+﻿//io.decagames.rotmg.ui.scroll.UIScrollbar
 
 package io.decagames.rotmg.ui.scroll
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.appengine.SavedCharacter
+﻿//com.company.assembleegameclient.appengine.SavedCharacter
 
 package com.company.assembleegameclient.appengine
 {

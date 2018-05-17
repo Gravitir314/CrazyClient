@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.tooltips.TooltipsConfig
+﻿//kabam.rotmg.tooltips.TooltipsConfig
 
 package kabam.rotmg.tooltips
 {

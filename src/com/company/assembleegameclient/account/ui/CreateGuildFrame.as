@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.account.ui.CreateGuildFrame
+﻿//com.company.assembleegameclient.account.ui.CreateGuildFrame
 
 package com.company.assembleegameclient.account.ui
 {

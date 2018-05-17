@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.view.dialogs.evolving.TweenProxy
+﻿//kabam.rotmg.pets.view.dialogs.evolving.TweenProxy
 
 package kabam.rotmg.pets.view.dialogs.evolving
 {

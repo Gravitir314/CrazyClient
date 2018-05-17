@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.core.signals.AppInitDataReceivedSignal
+﻿//kabam.rotmg.core.signals.AppInitDataReceivedSignal
 
 package kabam.rotmg.core.signals
 {

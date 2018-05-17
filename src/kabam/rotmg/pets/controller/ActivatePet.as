@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.pets.controller.ActivatePet
+﻿//kabam.rotmg.pets.controller.ActivatePet
 
 package kabam.rotmg.pets.controller
 {

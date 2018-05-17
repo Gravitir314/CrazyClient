@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.death.control.ResurrectPlayerCommand
+﻿//kabam.rotmg.death.control.ResurrectPlayerCommand
 
 package kabam.rotmg.death.control
 {

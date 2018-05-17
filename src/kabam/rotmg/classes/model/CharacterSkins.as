@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.classes.model.CharacterSkins
+﻿//kabam.rotmg.classes.model.CharacterSkins
 
 package kabam.rotmg.classes.model
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.arena.model.ArenaLeaderboardEntry
+﻿//kabam.rotmg.arena.model.ArenaLeaderboardEntry
 
 package kabam.rotmg.arena.model
 {

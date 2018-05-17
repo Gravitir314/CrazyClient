@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.mapeditor.MECommandMenu
+﻿//com.company.assembleegameclient.mapeditor.MECommandMenu
 
 package com.company.assembleegameclient.mapeditor
 {

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.appengine.api.AppEngineClient
+﻿//kabam.rotmg.appengine.api.AppEngineClient
 
 package kabam.rotmg.appengine.api
 {

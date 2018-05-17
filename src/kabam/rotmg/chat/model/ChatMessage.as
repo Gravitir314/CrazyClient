@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.chat.model.ChatMessage
+﻿//kabam.rotmg.chat.model.ChatMessage
 
 package kabam.rotmg.chat.model
 {

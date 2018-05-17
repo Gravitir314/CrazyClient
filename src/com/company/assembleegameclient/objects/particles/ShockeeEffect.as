@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.objects.particles.ShockeeEffect
+﻿//com.company.assembleegameclient.objects.particles.ShockeeEffect
 
 package com.company.assembleegameclient.objects.particles
 {

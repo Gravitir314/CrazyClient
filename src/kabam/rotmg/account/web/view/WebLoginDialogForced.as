@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.web.view.WebLoginDialogForced
+﻿//kabam.rotmg.account.web.view.WebLoginDialogForced
 
 package kabam.rotmg.account.web.view
 {

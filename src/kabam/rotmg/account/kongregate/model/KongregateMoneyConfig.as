@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.account.kongregate.model.KongregateMoneyConfig
+﻿//kabam.rotmg.account.kongregate.model.KongregateMoneyConfig
 
 package kabam.rotmg.account.kongregate.model
 {

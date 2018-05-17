@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.util.ConversionUtil
+﻿//com.company.util.ConversionUtil
 
 package com.company.util
 {
