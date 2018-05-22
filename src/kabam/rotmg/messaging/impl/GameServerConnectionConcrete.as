@@ -1450,10 +1450,9 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.encryptConnection();
             var _local_2:Hello = (this.messages.require(HELLO) as Hello);
             _local_2.buildVersion_ = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
-            if (Parameters.dailyCalendar1RunOnce)
+            if (Parameters.dailyClaimKeys.length > 0)
             {
                 _local_2.gameId_ = Parameters.DAILYQUESTROOM_GAMEID;
-                Parameters.dailyCalendar1RunOnce = false;
             }
             else
             {
@@ -1509,11 +1508,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
             charId_ = _arg_1.charId_;
             gs_.initialize();
             createCharacter_ = false;
-            if (Parameters.dailyCalendar1RunOnce)
-            {
-                this.openDialog.dispatch(new DailyLoginModal());
-                Parameters.dailyCalendar1RunOnce = false;
-            }
         }
 
         private function onDamage(_arg_1:Damage):void
@@ -3092,12 +3086,24 @@ public class GameServerConnectionConcrete extends GameServerConnection
         private function onQuestFetchResponse(_arg_1:QuestFetchResponse):void
         {
             this.questFetchComplete.dispatch(_arg_1);
-            if (Parameters.dailyCalendar2RunOnce){
-                this.gs_.showDailyLoginCalendar();
-                Parameters.dailyCalendar2RunOnce = false;
-                this.escape();
+            if (Parameters.dailyClaimKeys.length > 0){
+				for (var i:int = 0; i < Parameters.dailyClaimKeys.length; i++) //TODO get rid of delays
+				{
+					claimDailyReward(Parameters.dailyClaimKeys[i]);
+				}
+				escape();
+                addTextLine.dispatch(ChatMessage.make("*Help*", Parameters.dailyClaimKeys.length+" rewards claimed!"));
+				Parameters.dailyClaimKeys.length = 0;
             }
         }
+		
+		private function claimDailyReward(key:String):void {
+			var packet:ClaimDailyRewardMessage;
+			packet = messages.require(GameServerConnection.CLAIM_LOGIN_REWARD_MSG) as ClaimDailyRewardMessage;
+			packet.claimKey = key;
+			packet.type = "nonconsecutive";
+			serverConnection.sendMessage(packet);
+		}
 
         private function onQuestRedeemResponse(_arg_1:QuestRedeemResponse):void
         {

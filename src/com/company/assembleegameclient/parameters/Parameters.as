@@ -64,8 +64,7 @@ public class Parameters
         public static var timerPhaseNames:Dictionary = new Dictionary();
         public static var dmgCounter:Array = [];
         public static var lowCPUMode:Boolean = false;
-        public static var dailyCalendar1RunOnce:Boolean = false;
-        public static var dailyCalendar2RunOnce:Boolean = false;
+        public static var dailyClaimKeys:Vector.<String> = new Vector.<String>();
 
         public static function setTimerPhases():void
         {

@@ -105,8 +105,7 @@ public class FetchPlayerCalendarTask extends BaseTask
                     this.account.reportIntStat("NumStars", _local_4);
                     if (Parameters.data_.autoClaimCalendar)
                     {
-                        Parameters.dailyCalendar1RunOnce = true;
-                        Parameters.dailyCalendar2RunOnce = true;
+						Parameters.dailyClaimKeys.push(_local_6.claimKey);
                     }
                 }
                 this.dailyLoginModel.addDay(_local_6, _arg_2);

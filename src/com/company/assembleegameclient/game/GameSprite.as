@@ -253,12 +253,6 @@ public class GameSprite extends AGameSprite
             };
             MoreObjectUtil.addToObject(_local_4, _local_1.getCredentials());
             isSafeMap = this.evalIsNotInCombatMapArea();
-            if (this.isSafeMap) {
-                if (Parameters.dailyCalendar1RunOnce) {
-                    this.gsc_.gotoQuestRoom();
-                    Parameters.dailyCalendar1RunOnce = false;
-                }
-            }
             hidePreloader();
             stage.dispatchEvent(new Event(Event.RESIZE));
             this.parent.parent.setChildIndex((this.parent.parent as Layers).top, 2);
