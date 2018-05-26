@@ -49,11 +49,11 @@ public class DefaultLabelFormat {
         applyTextFromat(_local_3, _arg_1);
     }
 
-    public static function totalFriendsLabel(_arg_1:UILabel):void{
-        var _local_2:TextFormat;
-        _local_2 = createTextFormat(14, 0xEAEAEA, TextFormatAlign.CENTER, true);
+    public static function guildInfoLabel(_arg_1:UILabel, _arg_2:int=14, _arg_3:Number=0xFFFFFF, _arg_4:String="left"):void{
+        var _local_5:TextFormat;
+        _local_5 = createTextFormat(_arg_2, _arg_3, _arg_4, true);
         _arg_1.filters = [new DropShadowFilter(0, 90, 212992, 0.6, 4, 4)];
-        applyTextFromat(_local_2, _arg_1);
+        applyTextFromat(_local_5, _arg_1);
     }
 
     public static function characterViewNameLabel(_arg_1:UILabel, _arg_2:int=18):void{
@@ -271,6 +271,16 @@ public class DefaultLabelFormat {
         _local_2.size = 18;
         _local_2.align = TextFormatAlign.RIGHT;
         applyTextFromat(_local_2, _arg_1);
+    }
+
+    public static function tierLevelLabel(_arg_1:UILabel, _arg_2:int=12, _arg_3:Number=0xFFFFFF, _arg_4:String="right"):void{
+        var _local_5:TextFormat = new TextFormat();
+        _local_5.color = _arg_3;
+        _local_5.bold = true;
+        _local_5.font = FontModel.DEFAULT_FONT_NAME;
+        _local_5.size = _arg_2;
+        _local_5.align = _arg_4;
+        applyTextFromat(_local_5, _arg_1);
     }
 
     public static function questRefreshLabel(_arg_1:UILabel):void{

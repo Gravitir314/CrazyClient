@@ -12,6 +12,7 @@ import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
 import kabam.rotmg.account.web.view.WebAccountDetailDialog;
 import kabam.rotmg.core.signals.TaskErrorSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
+import kabam.rotmg.ui.signals.EnterGameSignal;
 
 public class WebRegisterAccountCommand
     {
@@ -26,6 +27,8 @@ public class WebRegisterAccountCommand
         public var updateAccount:UpdateAccountInfoSignal;
         [Inject]
         public var openDialog:OpenDialogSignal;
+        [Inject]
+        public var enterGame:EnterGameSignal;
 
 
         public function execute():void
@@ -40,6 +43,7 @@ public class WebRegisterAccountCommand
             var _local_1:TaskSequence = new TaskSequence();
             _local_1.add(new DispatchSignalTask(this.updateAccount));
             _local_1.add(new DispatchSignalTask(this.openDialog, new WebAccountDetailDialog()));
+            _local_1.add(new DispatchSignalTask(this.enterGame));
             return (_local_1);
         }
 

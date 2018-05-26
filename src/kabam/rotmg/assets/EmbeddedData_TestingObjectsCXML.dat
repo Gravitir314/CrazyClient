@@ -1494,4 +1494,32 @@
          <Index>16</Index>
       </AnimatedTexture>
    </Object>
+   <Object type="0xbde" id="Testing Gift ST Horrific">
+      <Group>Testing Gifts ST</Group>
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <MaxHitPoints>100</MaxHitPoints>
+      <XpMult>0.0</XpMult>
+      <Size>40</Size>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>17</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0xbdf" id="Testing Gift ST Flesh">
+      <Group>Testing Gifts ST</Group>
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <MaxHitPoints>100</MaxHitPoints>
+      <XpMult>0.0</XpMult>
+      <Size>40</Size>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>18</Index>
+      </AnimatedTexture>
+   </Object>
 </Objects>

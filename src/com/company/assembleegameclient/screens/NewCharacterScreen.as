@@ -21,13 +21,12 @@ import org.osflash.signals.Signal;
 public class NewCharacterScreen extends Sprite 
     {
 
-        private var backButton_:TitleMenuOption;
-        private var creditDisplay_:CreditDisplay;
-        private var boxes_:Object = {};
         public var tooltip:Signal;
         public var close:Signal;
         public var selected:Signal;
-        public var buy:Signal;
+        private var backButton_:TitleMenuOption;
+        private var creditDisplay_:CreditDisplay;
+        private var boxes_:Object = {};
         private var isInitialized:Boolean = false;
 
         public function NewCharacterScreen()
@@ -35,7 +34,6 @@ public class NewCharacterScreen extends Sprite
             this.tooltip = new Signal(Sprite);
             this.selected = new Signal(int);
             this.close = new Signal();
-            this.buy = new Signal(int);
             addChild(new ScreenBase());
             addChild(new AccountScreen());
             addChild(new ScreenGraphic());
@@ -77,11 +75,6 @@ public class NewCharacterScreen extends Sprite
                     _local_7.addEventListener(MouseEvent.ROLL_OVER, this.onCharBoxOver);
                     _local_7.addEventListener(MouseEvent.ROLL_OUT, this.onCharBoxOut);
                     _local_7.characterSelectClicked_.add(this.onCharBoxClick);
-                    _local_7.buyButtonClicked_.add(this.onBuyClicked);
-                    if (((_local_4 == 784) && (!(_local_7.available_))))
-                    {
-                        _local_7.setSale(75);
-                    }
                     addChild(_local_7);
                 }
                 _local_2++;
@@ -148,7 +141,6 @@ public class NewCharacterScreen extends Sprite
                     _local_6 = this.boxes_[_local_3];
                     if (_local_6)
                     {
-                        _local_6.setIsBuyButtonEnabled(true);
                         if (((_local_5) || (_arg_1.isLevelRequirementsMet(_local_3))))
                         {
                             _local_6.unlock();
@@ -156,18 +148,6 @@ public class NewCharacterScreen extends Sprite
                     }
                 }
                 _local_7++;
-            }
-        }
-
-        private function onBuyClicked(_arg_1:MouseEvent):void
-        {
-            var _local_2:int;
-            var _local_3:CharacterBox = (_arg_1.currentTarget.parent as CharacterBox);
-            if (((_local_3) && (!(_local_3.available_))))
-            {
-                _local_2 = int(_local_3.playerXML_.@type);
-                _local_3.setIsBuyButtonEnabled(false);
-                this.buy.dispatch(_local_2);
             }
         }
 

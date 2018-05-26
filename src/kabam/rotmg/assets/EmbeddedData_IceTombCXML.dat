@@ -281,6 +281,10 @@
          <Index>0x0e</Index>
       </Texture>
       <Size>0</Size>
+      <Enemy/>
+      <MaxHitPoints>90000</MaxHitPoints>
+      <XpMult>0</XpMult>
+      <EventChestBoss/>
    </Object>
    <Object type="0x7fa7" id="Activator">
       <DisplayId>Mysterious Ice Shard</DisplayId>
@@ -483,7 +487,6 @@
       <XpMult>1</XpMult>
       <God/>
       <NoArticle/>
-      <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Blue Bolt Shot</ObjectId>
          <Damage>280</Damage>

@@ -23,7 +23,7 @@ public class AgeVerificationDialog extends Dialog
 
         private const BIRTH_DATE_BELOW_MINIMUM_ERROR:String = "AgeVerificationDialog.tooYoung";
         private const BIRTH_DATE_INVALID_ERROR:String = "AgeVerificationDialog.invalidBirthDate";
-        private const MINIMUM_AGE:uint = 13;
+        private const MINIMUM_AGE:uint = 16;
         public const response:Signal = new Signal(Boolean);
 
         private var ageVerificationField:DateField;

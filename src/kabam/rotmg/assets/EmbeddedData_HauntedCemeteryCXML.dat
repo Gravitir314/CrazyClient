@@ -68,7 +68,7 @@
             <Index>0x0b</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>1000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <Size>120</Size>
       <ShadowSize>80</ShadowSize>
       <NoMiniMap/>
@@ -147,7 +147,7 @@
             <Index>74</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>1000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <Size>0</Size>
       <ShadowSize>80</ShadowSize>
       <StasisImmune/>

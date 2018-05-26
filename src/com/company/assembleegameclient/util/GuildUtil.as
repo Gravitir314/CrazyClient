@@ -138,6 +138,28 @@ public class GuildUtil
             return ((_arg_1 >= OFFICER) && (_arg_2 < _arg_1));
         }
 
+        public static function getRankIconIdByRank(_arg_1:int):Number{
+            var _local_2:Number;
+            switch (_arg_1){
+                case INITIATE:
+                    _local_2 = 20;
+                    break;
+                case MEMBER:
+                    _local_2 = 19;
+                    break;
+                case OFFICER:
+                    _local_2 = 18;
+                    break;
+                case LEADER:
+                    _local_2 = 17;
+                    break;
+                case FOUNDER:
+                    _local_2 = 16;
+                    break;
+            }
+            return (_local_2);
+        }
+
 
     }
 }//package com.company.assembleegameclient.util

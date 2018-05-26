@@ -330,6 +330,15 @@
         "h" : 1
       }
     },
+    "listitem_content_background_indicator.png" : {
+      "type" : "9grid",
+      "rectangle" : {
+        "y" : 9,
+        "w" : 1,
+        "x" : 9,
+        "h" : 1
+      }
+    },
     "listitem_content_background_selected.png" : {
       "type" : "9grid",
       "rectangle" : {
@@ -354,6 +363,15 @@
         "y": 14,
         "w": 1,
         "x": 14,
+        "h": 1
+      }
+    },
+    "popup_background_decoration.png": {
+      "type": "9grid",
+      "rectangle": {
+        "x": 17,
+        "y": 17,
+        "w": 1,
         "h": 1
       }
     },

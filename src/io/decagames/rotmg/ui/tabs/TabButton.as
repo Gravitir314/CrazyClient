@@ -118,10 +118,6 @@ public class TabButton extends SliceScalingButton
         override protected function onClickHandler(_arg_1:MouseEvent):void
         {
             super.onClickHandler(_arg_1);
-            if (!this._selected)
-            {
-                this.selected = (!(this._selected));
-            }
         }
 
         public function get selected():Boolean

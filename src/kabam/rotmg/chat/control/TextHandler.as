@@ -11,7 +11,7 @@ import com.company.assembleegameclient.util.StageProxy;
 
 import flash.utils.getTimer;
 
-import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.social.model.SocialModel;
 
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.chat.model.ChatMessage;
@@ -67,7 +67,7 @@ public class TextHandler
         [Inject]
         public var hudModel:HUDModel;
         [Inject]
-        public var friendModel:FriendModel;
+        public var socialModel:SocialModel;
         private var now:CJDateUtil;
 
 
@@ -103,7 +103,7 @@ public class TextHandler
                     }
                 }
             }
-            if ((((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatFriend)) && (!(this.friendModel.isMyFriend(_arg_1.recipient_)))))
+            if ((((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatFriend)) && (!(this.socialModel.isMyFriend(_arg_1.recipient_)))))
             {
                 return;
             }
@@ -347,7 +347,7 @@ public class TextHandler
                 if ((_arg_1.name_ == "#Horific Creation") && (!(_arg_1.text_.indexOf("Me door is open") == -1))) {
                     SoundEffectLibrary.play("level_up");
                 }
-                if ((_arg_1.name_ == "#Troom helper") && (!(_arg_1.text_.indexOf("is opened") == -1))) {
+                if ((_arg_1.name_ == "#Secret mechanism") && (!(_arg_1.text_.indexOf("The door to Daichi") == -1))) {
                     SoundEffectLibrary.play("level_up");
                 }
                 if ((_arg_1.name_ == "#Daichi the Fallen") && (!(_arg_1.text_.indexOf("you are too late") == -1))) {

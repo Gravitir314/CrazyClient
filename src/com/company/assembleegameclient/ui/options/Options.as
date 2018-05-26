@@ -28,6 +28,7 @@ import flash.ui.Mouse;
 import flash.ui.MouseCursor;
 import flash.ui.MouseCursorData;
 
+import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.game.view.components.StatView;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -35,6 +36,7 @@ import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 import kabam.rotmg.ui.UIUtils;
+import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
 
 public class Options extends Sprite
     {
@@ -885,8 +887,8 @@ public class Options extends Sprite
             this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
             this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
             this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null));
-            this.addOptionAndPosition(new KeyMapper("findKeysKey", "Show list of keys", "Shows list of keyholders"));
-            //this.addOptionAndPosition(new KeyMapper("testKey", "Test Key", "Toggle some testing functions"));
+            this.addOptionAndPosition(new ChoiceOption("rightClickOption", makeRightClickOptions(), ["Off", "Ability", "Camera"], "Right Click Option", "Select the functionality you want on right click: none, spellbomb/ability assist (uses your ability at the enemy closest to your cursor), camera (rotates your camera when holding right click)", null));
+            this.addOptionAndPosition(new ChoiceOption("tiltCam", makeOnOffLabels(), [true, false], "Tilt Camera X Axis", "Allows the Right Click Option, when on Camera, to rotate the X Axis of the Camera's perspective", null));
             this.tombDeactivate();
             this.addOptionAndPosition(new NullOption());
         }
@@ -1109,8 +1111,19 @@ public class Options extends Sprite
             this.addOptionAndPosition(new ChoiceOption("particleEffect", makeHighLowLabels(), [true, false], TextKey.OPTIONS_TOGGLE_PARTICLE_EFFECT, TextKey.OPTIONS_TOGGLE_PARTICLE_EFFECT_DESC, null));
             this.addOptionAndPosition(new ChoiceOption("uiQuality", makeHighLowLabels(), [true, false], TextKey.OPTIONS_TOGGLE_UI_QUALITY, TextKey.OPTIONS_TOGGLE_UI_QUALITY_DESC, onUIQualityToggle));
             this.addOptionAndPosition(new ChoiceOption("HPBar", makeHpBarLabels(), [0, 1, 2, 3, 4, 5], TextKey.OPTIONS_HPBAR, TextKey.OPTIONS_HPBAR_DESC, null));
+            this.addOptionAndPosition(new ChoiceOption("showTierTag", makeOnOffLabels(), [true, false], "Show Tier level", "Show Tier level on gear", this.onToggleTierTag));
             this.addOptionAndPosition(new KeyMapper("toggleProjectiles", "Toggle Ally Projectiles", "This key will toggle rendering of friendly projectiles"));
             this.addOptionAndPosition(new KeyMapper("toggleMasterParticles", "Toggle Particles", "This key will toggle rendering of nonessential particles (Particles Master option)"));
+        }
+
+        private function onToggleTierTag():void
+        {
+            StaticInjectorContext.getInjector().getInstance(ToggleShowTierTagSignal).dispatch(Parameters.data_.showTierTag);
+        }
+
+        private static function makeRightClickOptions():Vector.<StringBuilder>
+        {
+            return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Ability"), new StaticStringBuilder("Camera")]);
         }
 
         private function onShowQuestPortraitsChange():void

@@ -52,6 +52,7 @@ public class UIScrollbar extends Sprite
             if (this._content.height <= this.contentHeight)
             {
                 this.sliderAsset.height = this.contentHeight;
+                this._slider.y = 1;
             }
             else
             {
@@ -77,7 +78,9 @@ public class UIScrollbar extends Sprite
             {
                 this._slider.y = _local_2;
             }
-            this._content.y = (this.initalPosition + -(Math.round((((this._content.height - this.contentHeight) * this._slider.y) / _local_2))));
+            if (_local_2 > 0){
+                this._content.y = (this.initalPosition + -(Math.round((((this._content.height - this.contentHeight) * this._slider.y) / _local_2))));
+            }
         }
 
         public function get content():DisplayObject

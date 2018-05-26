@@ -75,7 +75,7 @@
       </AnimatedTexture>
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/dark_elves_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <XpMult>0.0</XpMult>
       <Size>120</Size>
       <Defense>200</Defense>
@@ -99,7 +99,7 @@
       </AnimatedTexture>
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/dark_elves_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <XpMult>0.0</XpMult>
       <Size>60</Size>
       <Defense>200</Defense>
@@ -176,9 +176,8 @@
       <Class>Character</Class>
       <StasisImmune/>
       <Enemy/>
-      <NoMiniMap/>
-      <MaxHitPoints>1200</MaxHitPoints>
-      <XpMult>0.0</XpMult>
+      <MaxHitPoints>23000</MaxHitPoints>
+      <XpMult>2.0</XpMult>
       <Size>90</Size>
       <Defense>5</Defense>
       <Texture>
@@ -210,7 +209,7 @@
       </AnimatedTexture>
       <HitSound>monster/medusa_hit</HitSound>
       <DeathSound>monster/medusa_death</DeathSound>
-      <MaxHitPoints>96000</MaxHitPoints>
+      <MaxHitPoints>69000</MaxHitPoints>
       <XpMult>5.13</XpMult>
       <ShadowSize>0</ShadowSize>
       <God/>

@@ -5,10 +5,7 @@
       <configuration name="Crazy Client" pure-as="true" main-class="WebMain" output-file="AssembleeGameClientProxy.swf" output-folder="$MODULE_DIR$/out">
         <dependencies target-player="11.1">
           <entries>
-            <entry library-id="284277c3-71b8-4e92-b8e0-14300a950278">
-              <dependency linkage="Merged" />
-            </entry>
-            <entry library-name="as3-signals" library-level="application">
+            <entry library-id="c2266e08-9343-4149-9e0f-1d3dd6d5f210">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -37,7 +34,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="284277c3-71b8-4e92-b8e0-14300a950278" />
+        <properties id="c2266e08-9343-4149-9e0f-1d3dd6d5f210" />
         <CLASSES>
           <root url="file://$MODULE_DIR$/libs" />
         </CLASSES>
@@ -46,6 +43,5 @@
         <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="as3-signals" level="application" />
   </component>
 </module>

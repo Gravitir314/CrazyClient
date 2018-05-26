@@ -6,10 +6,10 @@ import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendModel;
-import io.decagames.rotmg.friends.model.FriendRequestVO;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
+import io.decagames.rotmg.social.config.FriendsActions;
+import io.decagames.rotmg.social.model.FriendRequestVO;
+import io.decagames.rotmg.social.model.SocialModel;
+import io.decagames.rotmg.social.signals.FriendActionSignal;
 
 import kabam.rotmg.chat.control.ShowChatInputSignal;
 import kabam.rotmg.core.model.PlayerModel;
@@ -28,7 +28,7 @@ public class FriendListMediator extends Mediator
         [Inject]
         public var view:FriendListView;
         [Inject]
-        public var model:FriendModel;
+        public var model:SocialModel;
         [Inject]
         public var openDialog:OpenDialogSignal;
         [Inject]
@@ -49,8 +49,8 @@ public class FriendListMediator extends Mediator
         {
             this.view.actionSignal.add(this.onFriendActed);
             this.view.tabSignal.add(this.onTabSwitched);
-            this.model.dataSignal.add(this.initView);
-            this.model.loadData();
+            this.model.socialDataSignal.add(this.initView);
+            this.model.loadFriendsData();
         }
 
         override public function destroy():void
@@ -63,11 +63,7 @@ public class FriendListMediator extends Mediator
         {
             if (_arg_1)
             {
-                this.view.init(this.model.getAllFriends(), this.model.getAllInvitations(), this.model.getCurrentServerName());
-            }
-            else
-            {
-                this.reportError(this.model.errorStr);
+                this.view.init(this.model.friendsList, this.model.getAllInvitations(), this.model.getCurrentServerName());
             }
         }
 
@@ -81,7 +77,7 @@ public class FriendListMediator extends Mediator
             switch (_arg_1)
             {
                 case FriendsActions.FRIEND_TAB:
-                    this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
+                    this.view.updateFriendTab(this.model.friendsList, this.model.getCurrentServerName());
                     return;
                 case FriendsActions.INVITE_TAB:
                     this.view.updateInvitationTab(this.model.getAllInvitations());
@@ -99,13 +95,13 @@ public class FriendListMediator extends Mediator
                 case FriendsActions.SEARCH:
                     if (((!(_arg_2 == null)) && (!(_arg_2 == ""))))
                     {
-                        this.view.updateFriendTab(this.model.getFilterFriends(_arg_2), this.model.getCurrentServerName());
+                        this.view.updateFriendTab(this.model.friendsList, this.model.getCurrentServerName());
                     }
                     else
                     {
                         if (_arg_2 == "")
                         {
-                            this.view.updateFriendTab(this.model.getAllFriends(), this.model.getCurrentServerName());
+                            this.view.updateFriendTab(this.model.friendsList, this.model.getCurrentServerName());
                         }
                     }
                     return;

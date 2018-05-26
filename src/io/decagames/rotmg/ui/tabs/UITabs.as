@@ -6,13 +6,16 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.geom.Point;
 
+import io.decagames.rotmg.social.signals.TabSelectedSignal;
 import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 
 import org.osflash.signals.Signal;
 
-public class UITabs extends Sprite 
+public class UITabs extends Sprite
     {
 
+        public var buttonsRenderedSignal:Signal = new Signal();
+        public var tabSelectedSignal:TabSelectedSignal = new TabSelectedSignal();
         private var tabsXSpace:int = 3;
         private var tabsButtonMargin:int = 14;
         private var content:Vector.<UITab>;
@@ -22,7 +25,6 @@ public class UITabs extends Sprite
         private var currentContent:UITab;
         private var defaultSelectedIndex:int;
         private var borderlessMode:Boolean;
-        public var buttonsRenderedSignal:Signal = new Signal();
 
         public function UITabs(_arg_1:int, _arg_2:Boolean=false)
         {
@@ -58,12 +60,13 @@ public class UITabs extends Sprite
 
         private function createTabButtons():void
         {
+            var _local_1:int;
             var _local_3:String;
             var _local_4:TabButton;
             var _local_5:UITab;
             var _local_6:TabButton;
-            var _local_1:int = 1;
             var _local_2:int = int((((this.tabsWidth - ((this.content.length - 1) * this.tabsXSpace)) - (this.tabsButtonMargin * 2)) / this.content.length));
+            _local_1 = 1;
             for each (_local_5 in this.content)
             {
                 if (_local_1 == 1)
@@ -102,61 +105,49 @@ public class UITabs extends Sprite
             this.buttonsRenderedSignal.dispatch();
         }
 
-        private function onButtonSelected(_arg_1:TabButton):void
-        {
-            var _local_2:TabButton;
-            var _local_3:int;
-            var _local_4:int;
+        private function onButtonSelected(_arg_1:TabButton):void{
+            var _local_3:TabButton;
+            var _local_2:int = this.buttons.indexOf(_arg_1);
             _arg_1.y = 0;
-            for each (_local_2 in this.buttons)
-            {
-                if (_local_2 != _arg_1)
-                {
-                    _local_2.selected = false;
-                    _local_2.y = 3;
+            this.tabSelectedSignal.dispatch(_arg_1.label.text);
+            for each (_local_3 in this.buttons) {
+                if (_local_3 != _arg_1){
+                    _local_3.selected = false;
+                    _local_3.y = 3;
+                    this.updateTabButtonGraphicState(_local_3, _local_2);
+                } else {
+                    _local_3.selected = true;
                 }
             }
-            _local_3 = this.buttons.indexOf(_arg_1);
-            for each (_local_2 in this.buttons)
-            {
-                if (!_local_2.selected)
-                {
-                    _local_4 = this.buttons.indexOf(_local_2);
-                    if (Math.abs((_local_4 - _local_3)) <= 1)
-                    {
-                        if (this.borderlessMode) {
-                            _local_2.changeBitmap("tab_button_borderless_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-                            _local_2.bitmap.alpha = 0;
-                        }
-                        else
-                        {
-                            if (_local_4 > _local_3){
-                                _local_2.changeBitmap("tab_button_right_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-                            } else {
-                                _local_2.changeBitmap("tab_button_left_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    _local_2.bitmap.alpha = 1;
-                }
-            }
-            if (this.currentContent)
-            {
+            if (this.currentContent){
                 this.currentContent.alpha = 0;
                 this.currentContent.mouseChildren = false;
                 this.currentContent.mouseEnabled = false;
             }
-            this.currentContent = this.content[_local_3];
+            this.currentContent = this.content[_local_2];
             if (this.background){
-                this.background.addDecor((_arg_1.x - 5), ((_arg_1.x + _arg_1.width) - 12), _local_3, this.buttons.length);
+                this.background.addDecor((_arg_1.x - 5), ((_arg_1.x + _arg_1.width) - 12), _local_2, this.buttons.length);
             }
             addChild(this.currentContent);
             this.currentContent.alpha = 1;
             this.currentContent.mouseChildren = true;
             this.currentContent.mouseEnabled = true;
+        }
+
+        private function updateTabButtonGraphicState(_arg_1:TabButton, _arg_2:int):void{
+            var _local_3:int = this.buttons.indexOf(_arg_1);
+            if (Math.abs((_local_3 - _arg_2)) <= 1){
+                if (this.borderlessMode){
+                    _arg_1.changeBitmap("tab_button_borderless_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
+                    _arg_1.bitmap.alpha = 0;
+                } else {
+                    if (_local_3 > _arg_2){
+                        _arg_1.changeBitmap("tab_button_right_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
+                    } else {
+                        _arg_1.changeBitmap("tab_button_left_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
+                    }
+                }
+            }
         }
 
         public function getTabButtonByLabel(_arg_1:String):TabButton

@@ -175,6 +175,7 @@ public class InteractiveItemTile extends ItemTile
         private function beginDrag(_arg_1:MouseEvent):void
         {
             this.isDragging = true;
+            toggleDragState(false);
             stage.addChild(itemSprite);
             itemSprite.startDrag(true);
             itemSprite.x = _arg_1.stageX;
@@ -186,6 +187,7 @@ public class InteractiveItemTile extends ItemTile
         private function endDrag(_arg_1:MouseEvent):void
         {
             this.isDragging = false;
+            toggleDragState(true);
             itemSprite.stopDrag();
             itemSprite.removeEventListener(MouseEvent.MOUSE_UP, this.endDrag);
             dispatchEvent(new ItemTileEvent(ItemTileEvent.ITEM_MOVE, this));

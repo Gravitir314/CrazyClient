@@ -146,6 +146,7 @@ public class GameObject extends BasicObject
         public var lastUpdate:int;
         public var footer_:Boolean;
         public var lastPercent_:int;
+        public var myPet:Boolean;
 
         public function GameObject(_arg_1:XML)
         {
@@ -1262,6 +1263,10 @@ public class GameObject extends BasicObject
                 }
                 _local_12 = _local_10;
             }
+            if (!Options.hidden && _local_3 && !this.myPet && Parameters.data_.alphaOnOthers && !map_.isPetYard)
+            {
+                _local_12 = CachingColorTransformer.alphaBitmapData(_local_12, Parameters.data_.alphaMan);
+            }
             return (_local_12);
         }
 
@@ -1483,6 +1488,12 @@ public class GameObject extends BasicObject
             var _local_8:Number;
             var _local_9:Matrix;
             var _local_10:int;
+                if (((((this is Player) && (!(this == map_.player_))) && Parameters.data_.alphaOnOthers && !Options.hidden) && (!((this as Player).starred_)))){
+                    if (this.icons_){
+                        this.icons_.length = 0;
+                        return;
+                    }
+                }
             if (this.icons_ == null)
             {
                 this.icons_ = new Vector.<BitmapData>();

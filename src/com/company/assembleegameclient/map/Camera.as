@@ -33,7 +33,7 @@ public class Camera
         public var wToS_:Matrix3D = new Matrix3D();
         public var wToV_:Matrix3D = new Matrix3D();
         public var vToS_:Matrix3D = new Matrix3D();
-        private var nonPPMatrix_:Matrix3D = new Matrix3D();
+        public var nonPPMatrix_:Matrix3D = new Matrix3D();
         private var p_:Vector3D = new Vector3D();
         private var f_:Vector3D = new Vector3D();
         private var u_:Vector3D = new Vector3D();

@@ -4,6 +4,7 @@ package com.company.assembleegameclient.objects
 {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.ui.panels.Panel;
@@ -45,6 +46,19 @@ public class Pet extends GameObject implements IInteractiveObject
         public function getTooltip():ToolTip
         {
             return (new TextToolTip(0x363636, 0x9B9B9B, TextKey.CLOSEDGIFTCHEST_TITLE, TextKey.TEXTPANEL_GIFTCHESTISEMPTY, 200));
+        }
+
+        override public function addTo(_arg_1:Map, _arg_2:Number, _arg_3:Number):Boolean{
+            if (!super.addTo(_arg_1, _arg_2, _arg_3))
+            {
+                return (false);
+            }
+            var _local_4:GameObject = this.map_.goDict_[(this.objectId_ - 1)];
+            if (((_local_4) && (_local_4 == this.map_.player_)))
+            {
+                myPet = true;
+            }
+            return (true);
         }
 
         public function getPanel(_arg_1:GameSprite):Panel

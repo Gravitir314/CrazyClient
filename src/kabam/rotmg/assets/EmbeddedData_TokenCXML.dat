@@ -1,6 +1,196 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x52A" id="June Mystery Shard x1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>50</feedPower>
+      <Treasure/>
+   </Object>
+   <Object type="0x52B" id="June Mystery Shard x2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>100</feedPower>
+   </Object>
+   <Object type="0x52C" id="June Mystery Shard x3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>150</feedPower>
+   </Object>
+   <Object type="0x52D" id="June Mystery Shard x4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>200</feedPower>
+   </Object>
+   <Object type="0x52E" id="June Mystery Shard x5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>250</feedPower>
+   </Object>
+   <Object type="0x52F" id="June Mystery Shard x6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>300</feedPower>
+   </Object>
+   <Object type="0x530" id="June Mystery Shard x7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>350</feedPower>
+   </Object>
+   <Object type="0x531" id="June Mystery Shard x8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>400</feedPower>
+   </Object>
+   <Object type="0x532" id="June Mystery Shard x9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>450</feedPower>
+   </Object>
+   <Object type="0x533" id="June Mystery Shard x10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in July.</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="June Mystery Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>500</feedPower>
+   </Object>
    <Object type="0x20A0" id="Kingdom Skins Token x1">
       <Class>Equipment</Class>
       <Item/>
@@ -536,906 +726,6 @@
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="30"/>
          <EffectInfo name="Event" description="Kingdom Skins"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21ab" id="ORYX April Shard x1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21ac" id="ORYX April Shard x2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21ad" id="ORYX April Shard x3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21ae" id="ORYX April Shard x4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21af" id="ORYX April Shard x5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b0" id="ORYX April Shard x6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b1" id="ORYX April Shard x7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b2" id="ORYX April Shard x8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b3" id="ORYX April Shard x9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b4" id="ORYX April Shard x10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b5" id="ORYX April Shard x11">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>11</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b6" id="ORYX April Shard x12">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>12</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b7" id="ORYX April Shard x13">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>13</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b8" id="ORYX April Shard x14">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>14</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21b9" id="ORYX April Shard x15">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>15</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21ba" id="ORYX April Shard x16">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>16</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21bb" id="ORYX April Shard x17">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>17</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21bc" id="ORYX April Shard x18">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>18</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21bd" id="ORYX April Shard x19">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>19</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x21be" id="ORYX April Shard x20">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x74</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect ORYX April Shards and exchange them for O, R, Y and X letters at the Tinkerer. Tokens will be removed in May.</Description>
-      <Quantity>20</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Monthly Dungeon Challenge"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x413" id="Golden Egg x1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x414" id="Golden Egg x2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x415" id="Golden Egg x3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x416" id="Golden Egg x4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x417" id="Golden Egg x5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x418" id="Golden Egg x6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x419" id="Golden Egg x7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x41A" id="Golden Egg x8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x41B" id="Golden Egg x9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x41C" id="Golden Egg x10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x41D" id="Golden Egg x11">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>11</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x41E" id="Golden Egg x12">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>12</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x41F" id="Golden Egg x13">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>13</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x420" id="Golden Egg x14">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>14</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x421" id="Golden Egg x15">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>15</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x422" id="Golden Egg x16">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>16</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x423" id="Golden Egg x17">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>17</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x424" id="Golden Egg x18">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>18</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x425" id="Golden Egg x19">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>19</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x426" id="Golden Egg x20">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Golden Eggs and bring them to the Tinkerer to exchange them for exclusive reward. Tokens will be removed in April.</Description>
-      <Quantity>20</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x408" id="Magic Egg x1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x409" id="Magic Egg x2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x40A" id="Magic Egg x3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x40B" id="Magic Egg x4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x40C" id="Magic Egg x5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x40D" id="Magic Egg x6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x40E" id="Magic Egg x7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x40F" id="Magic Egg x8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x410" id="Magic Egg x9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x411" id="Magic Egg x10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>buffedBunnyObjects8x8</File>
-         <Index>0x3e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Collect Magic Eggs and bring them to the Tinkerer to exchange them for Golden Eggs. Tokens will be removed in April.</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Easter 2018"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>

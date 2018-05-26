@@ -8,8 +8,8 @@ import com.company.assembleegameclient.ui.dialogs.DialogCloser;
 
 import flash.events.Event;
 
-import io.decagames.rotmg.friends.model.FriendRequestVO;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
+import io.decagames.rotmg.social.model.FriendRequestVO;
+import io.decagames.rotmg.social.signals.FriendActionSignal;
 
 import kabam.rotmg.core.StaticInjectorContext;
 

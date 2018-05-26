@@ -6,7 +6,7 @@
 package kabam.rotmg.account.securityQuestions.data{
     public class SecurityQuestionsModel {
 
-        private var _showSecurityQuestionsOnStartup:Boolean = false;
+        private var _showSecurityQuestionsOnStartup:Boolean;
         private var _securityQuestionsList:Array = [];
         public var securityQuestionsAnswers:Array = [];
 

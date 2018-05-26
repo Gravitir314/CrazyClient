@@ -13,6 +13,7 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.CachingColorTransformer;
 import com.company.util.MoreColorUtil;
@@ -24,6 +25,7 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.ColorMatrixFilter;
 import flash.filters.DropShadowFilter;
+import flash.geom.Vector3D;
 import flash.utils.ByteArray;
 import flash.utils.getTimer;
 
@@ -537,6 +539,17 @@ public class GameSprite extends AGameSprite
             var _local_2:Number = NaN;
             var _local_3:int = getTimer();
             var _local_4:int = (_local_3 - lastUpdate_);
+            var _local_8:int;
+            var _local_9:int;
+            if (mui_.held){
+                _local_9 = (WebMain.STAGE.mouseX - mui_.heldX);
+                Parameters.data_.cameraAngle = (mui_.heldAngle + (_local_9 * (3.14159265358979 / 180)));
+                if (!Options.hidden && Parameters.data_.tiltCam){
+                    _local_8 = (WebMain.STAGE.mouseY - mui_.heldY);
+                    mui_.heldY = WebMain.STAGE.mouseY;
+                    this.camera_.nonPPMatrix_.appendRotation(_local_8, Vector3D.X_AXIS, null);
+                }
+            }
             LoopedProcess.runProcesses(_local_3);
             this.frameTimeSum_ = (this.frameTimeSum_ + _local_4);
             this.frameTimeCount_ = (this.frameTimeCount_ + 1);

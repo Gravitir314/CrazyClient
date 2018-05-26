@@ -35,6 +35,51 @@ package com.company.assembleegameclient.util
             return (_local_3);
         }
 
+        public static function humanReadableTime(_arg_1:int):String{
+            var _local_2:String;
+            var _local_3:int;
+            var _local_4:int;
+            var _local_5:int;
+            var _local_6:int;
+            _local_6 = ((_arg_1 >= 0) ? _arg_1 : 0);
+            _local_3 = int((_local_6 / DAY_IN_S));
+            _local_6 = (_local_6 % DAY_IN_S);
+            _local_4 = int((_local_6 / HOUR_IN_S));
+            _local_6 = (_local_6 % HOUR_IN_S);
+            _local_5 = int((_local_6 / MIN_IN_S));
+            return (_getReadableTime(_arg_1, _local_3, _local_4, _local_5));
+        }
+
+        private static function _getReadableTime(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int):String{
+            var _local_5:String;
+            if (_arg_1 >= DAY_IN_S){
+                if (((_arg_3 == 0) && (_arg_4 == 0))){
+                    _local_5 = (_arg_2.toString() + ((_arg_2 > 1) ? "days" : "day"));
+                    return (_local_5);
+                }
+                if (_arg_4 == 0){
+                    _local_5 = (_arg_2.toString() + ((_arg_2 > 1) ? " days" : " day"));
+                    _local_5 = (_local_5 + ((", " + _arg_3.toString()) + ((_arg_3 > 1) ? " hours" : " hour")));
+                    return (_local_5);
+                }
+                _local_5 = (_arg_2.toString() + ((_arg_2 > 1) ? " days" : " day"));
+                _local_5 = (_local_5 + ((", " + _arg_3.toString()) + ((_arg_3 > 1) ? " hours" : " hour")));
+                _local_5 = (_local_5 + ((" and " + _arg_4.toString()) + ((_arg_4 > 1) ? " minutes" : " minute")));
+                return (_local_5);
+            }
+            if (_arg_1 >= HOUR_IN_S){
+                if (_arg_4 == 0){
+                    _local_5 = (_arg_3.toString() + ((_arg_3 > 1) ? " hours" : " hour"));
+                    return (_local_5);
+                }
+                _local_5 = (_arg_3.toString() + ((_arg_3 > 1) ? " hours" : " hour"));
+                _local_5 = (_local_5 + ((" and " + _arg_4.toString()) + ((_arg_4 > 1) ? " minutes" : " minute")));
+                return (_local_5);
+            }
+            _local_5 = (_arg_4.toString() + ((_arg_4 > 1) ? " minutes" : " minute"));
+            return (_local_5);
+        }
+
 
     }
 }//package com.company.assembleegameclient.util

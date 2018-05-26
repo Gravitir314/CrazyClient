@@ -42,7 +42,7 @@ public class WebChangePasswordTask extends BaseTask implements ChangePasswordTas
 
         private function onChangeDone():void
         {
-            this.account.updateUser(this.account.getUserId(), this.data.newPassword, this.account.getToken());
+            this.account.updateUser(this.account.getUserId(), this.data.newPassword, this.account.getToken(), this.account.getSecret());
             completeTask(true);
         }
 

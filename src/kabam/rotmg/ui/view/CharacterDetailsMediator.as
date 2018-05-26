@@ -12,8 +12,8 @@ import com.company.assembleegameclient.ui.options.Options;
 
 import flash.events.MouseEvent;
 
-import io.decagames.rotmg.friends.FriendsPopupView;
-import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.social.SocialPopupView;
+import io.decagames.rotmg.social.model.SocialModel;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
 import kabam.rotmg.chat.model.TellModel;
@@ -45,7 +45,7 @@ public class CharacterDetailsMediator extends Mediator {
     [Inject]
     public var tellModel:TellModel;
     [Inject]
-    public var friendsModel:FriendModel;
+    public var socialModel:SocialModel;
     [Inject]
     public var showPopupSignal:ShowPopupSignal;
     [Inject]
@@ -61,10 +61,10 @@ public class CharacterDetailsMediator extends Mediator {
         this.view.gotoNexus.add(this.onGotoNexus);
         this.view.gotoOptions.add(this.onGotoOptions);
         if (Parameters.USE_NEW_FRIENDS_UI){
-            this.friendsModel.noInvitationSignal.add(this.clearFriendsIndicator);
-            this.friendsModel.dataSignal.add(this.onFriendsData);
+            this.socialModel.noInvitationSignal.add(this.clearFriendsIndicator);
+            this.socialModel.socialDataSignal.add(this.onFriendsData);
         }
-        this.view.initFriendList(this.imageFactory, this.iconButtonFactory, this.onFriendsBtnClicked, ((Parameters.USE_NEW_FRIENDS_UI) && (this.friendsModel.hasInvitations)));
+        this.view.initFriendList(this.imageFactory, this.iconButtonFactory, this.onFriendsBtnClicked, ((Parameters.USE_NEW_FRIENDS_UI) && (this.socialModel.hasInvitations)));
     }
 
     private function clearFriendsIndicator():void{
@@ -73,15 +73,15 @@ public class CharacterDetailsMediator extends Mediator {
 
     private function onFriendsBtnClicked(_arg_1:MouseEvent):void{
         if (Parameters.USE_NEW_FRIENDS_UI){
-            this.showPopupSignal.dispatch(new FriendsPopupView(this.friendsModel.hasInvitations));
+            this.showPopupSignal.dispatch(new SocialPopupView());
         } else {
             this.openDialog.dispatch(new FriendListView());
         }
     }
 
-    private function onFriendsData(_arg_1:Boolean):void{
-        if (_arg_1){
-            if (this.friendsModel.hasInvitations){
+    private function onFriendsData(_arg_1:String, _arg_2:Boolean, _arg_3:String):void{
+        if (_arg_2){
+            if (this.socialModel.hasInvitations){
                 this.view.addInvitationIndicator();
             } else {
                 this.view.clearInvitationIndicator();
@@ -101,8 +101,8 @@ public class CharacterDetailsMediator extends Mediator {
         this.view.gotoOptions.remove(this.onGotoOptions);
         this.view.friendsBtn.removeEventListener(MouseEvent.CLICK, this.onFriendsBtnClicked);
         if (Parameters.USE_NEW_FRIENDS_UI){
-            this.friendsModel.noInvitationSignal.remove(this.clearFriendsIndicator);
-            this.friendsModel.dataSignal.remove(this.onFriendsData);
+            this.socialModel.noInvitationSignal.remove(this.clearFriendsIndicator);
+            this.socialModel.socialDataSignal.remove(this.onFriendsData);
         }
     }
 

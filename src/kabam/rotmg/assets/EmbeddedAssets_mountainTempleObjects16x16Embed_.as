@@ -8,7 +8,7 @@ import mx.core.*;
         public function EmbeddedAssets_mountainTempleObjects16x16Embed_()
         {
             super();
-            
+
         }
     }
 }

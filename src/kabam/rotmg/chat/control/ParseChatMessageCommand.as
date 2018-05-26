@@ -23,10 +23,11 @@ import flash.net.navigateToURL;
 import flash.utils.ByteArray;
 import flash.utils.getTimer;
 
+import io.decagames.rotmg.social.SocialPopupView;
+
 import kabam.rotmg.assets.EmbeddedData;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.friends.view.FriendListView;
 import kabam.rotmg.game.commands.PlayGameCommand;
 import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.messaging.impl.GameServerConnection;
@@ -798,9 +799,6 @@ public class ParseChatMessageCommand
                     Parameters.save();
                     this.addTextLine.dispatch(ChatMessage.make("", ((Parameters.data_.hideLockList) ? "Only Vault mode enabled" : "Only Vault mode disabled")));
                     return (true);
-                case "/keys":
-                    this.hudModel.gameSprite.mui_.findKeys();
-                    return (true);
                 case "/onlygods":
                     Parameters.data_.onlyGods = (!Parameters.data_.onlyGods);
                     Parameters.save();
@@ -917,7 +915,7 @@ public class ParseChatMessageCommand
                     this.hudModel.gameSprite.hudView.characterDetails.setName(_local_12.name_);
                     return (true);
                 case "/flist":
-                    this.openDialog.dispatch(new FriendListView());
+                    this.openDialog.dispatch(new SocialPopupView());
                     return (true);
                 case "/nexus":
                     _local_26.escapeUnsafe();

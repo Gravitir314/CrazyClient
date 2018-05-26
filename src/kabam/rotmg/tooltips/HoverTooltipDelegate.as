@@ -22,6 +22,7 @@ public class HoverTooltipDelegate implements TooltipAble
         public function setDisplayObject(_arg_1:DisplayObject):void
         {
             this.displayObject = _arg_1;
+            this.displayObject.addEventListener(MouseEvent.CLICK, this.onMouseOut);
             this.displayObject.addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
             this.displayObject.addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
             this.displayObject.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -31,6 +32,7 @@ public class HoverTooltipDelegate implements TooltipAble
         {
             if (this.displayObject != null)
             {
+                this.displayObject.removeEventListener(MouseEvent.CLICK, this.onMouseOut);
                 this.displayObject.removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
                 this.displayObject.removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
                 this.displayObject.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -69,6 +71,7 @@ public class HoverTooltipDelegate implements TooltipAble
             {
                 this.hideToolTips.dispatch();
             }
+            this.displayObject.removeEventListener(MouseEvent.CLICK, this.onMouseOut);
             this.displayObject.removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
             this.displayObject.removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
             this.displayObject.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);

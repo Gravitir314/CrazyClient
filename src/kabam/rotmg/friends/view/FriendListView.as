@@ -24,8 +24,8 @@ import flash.events.MouseEvent;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendVO;
+import io.decagames.rotmg.social.config.FriendsActions;
+import io.decagames.rotmg.social.model.FriendVO;
 
 import kabam.rotmg.pets.util.PetsViewAssetFactory;
 import kabam.rotmg.pets.view.components.DialogCloseButton;

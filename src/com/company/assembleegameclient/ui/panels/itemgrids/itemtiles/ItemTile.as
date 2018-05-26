@@ -4,7 +4,10 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+import com.company.assembleegameclient.util.FilterUtil;
+import com.company.assembleegameclient.util.TierUtil;
 import com.company.util.GraphicsUtil;
 
 import flash.display.GraphicsPath;
@@ -13,25 +16,28 @@ import flash.display.IGraphicsData;
 import flash.display.Shape;
 import flash.display.Sprite;
 
+import io.decagames.rotmg.ui.labels.UILabel;
+
 import kabam.rotmg.constants.ItemConstants;
 
 public class ItemTile extends Sprite
     {
-
-        public static const TILE_DOUBLE_CLICK:String = "TILE_DOUBLE_CLICK";
-        public static const TILE_SINGLE_CLICK:String = "TILE_SINGLE_CLICK";
         public static const WIDTH:int = 40;
         public static const HEIGHT:int = 40;
         public static const BORDER:int = 4;
 
-        private var fill_:GraphicsSolidFill;
-        private var path_:GraphicsPath;
-        private var graphicsData_:Vector.<IGraphicsData>;
-        private var restrictedUseIndicator:Shape;
         public var itemSprite:ItemTileSprite;
         public var tileId:int;
         public var ownerGrid:ItemGrid;
         public var blockingItemUpdates:Boolean;
+        private var fill_:GraphicsSolidFill;
+        private var path_:GraphicsPath;
+        private var graphicsData_:Vector.<IGraphicsData>;
+        private var restrictedUseIndicator:Shape;
+        private var tierText:UILabel;
+        private var itemContainer:Sprite;
+        private var tagContainer:Sprite;
+        private var isItemUsable:Boolean;
 
         public function ItemTile(_arg_1:int, _arg_2:ItemGrid)
         {
@@ -41,6 +47,10 @@ public class ItemTile extends Sprite
             super();
             this.tileId = _arg_1;
             this.ownerGrid = _arg_2;
+            this.init();
+        }
+
+        private function init():void{
             this.restrictedUseIndicator = new Shape();
             addChild(this.restrictedUseIndicator);
             this.setItemSprite(new ItemTileSprite());
@@ -72,16 +82,21 @@ public class ItemTile extends Sprite
                 return (true);
             }
             this.itemSprite.setType(_arg_1);
+            this.setTierTag();
             this.updateUseability(this.ownerGrid.curPlayer);
             return (true);
         }
 
         public function setItemSprite(_arg_1:ItemTileSprite):void
         {
+            if (!this.itemContainer){
+                this.itemContainer = new Sprite();
+                addChild(this.itemContainer);
+            }
             this.itemSprite = _arg_1;
             this.itemSprite.x = (WIDTH / 2);
             this.itemSprite.y = (HEIGHT / 2);
-            addChild(this.itemSprite);
+            this.itemContainer.addChild(this.itemSprite);
         }
 
         public function updateUseability(_arg_1:Player):void
@@ -91,13 +106,9 @@ public class ItemTile extends Sprite
             {
                 _local_2 = 36863;
             }
-            if (this.itemSprite.itemId != ItemConstants.NO_ITEM)
-            {
-                this.restrictedUseIndicator.visible = (!(ObjectLibrary.isUsableByPlayer(_local_2, _arg_1)));
-            }
-            else
-            {
-                this.restrictedUseIndicator.visible = false;
+            this.isItemUsable = ObjectLibrary.isUsableByPlayer(_local_2, _arg_1);
+            if (this.itemSprite.itemId != ItemConstants.NO_ITEM) {
+                this.restrictedUseIndicator.visible = (!(this.isItemUsable));
             }
         }
 
@@ -123,6 +134,47 @@ public class ItemTile extends Sprite
         protected function getBackgroundColor():int
         {
             return (0x545454);
+        }
+
+        public function setTierTag():void{
+            this.clearTierTag();
+            var _local_1:XML = ObjectLibrary.xmlLibrary_[this.itemSprite.itemId];
+            if (_local_1){
+                this.tierText = TierUtil.getTierTag(_local_1);
+                if (this.tierText){
+                    if (!this.tagContainer){
+                        this.tagContainer = new Sprite();
+                        addChild(this.tagContainer);
+                    }
+                    this.tierText.filters = FilterUtil.getTextOutlineFilter();
+                    this.tierText.x = (WIDTH - this.tierText.width);
+                    this.tierText.y = ((HEIGHT / 2) + 5);
+                    this.toggleTierTag(Parameters.data_.showTierTag);
+                    this.tagContainer.addChild(this.tierText);
+                }
+            }
+        }
+
+        private function clearTierTag():void{
+            if ((((this.tierText) && (this.tagContainer)) && (this.tagContainer.contains(this.tierText)))){
+                this.tagContainer.removeChild(this.tierText);
+                this.tierText = null;
+            }
+        }
+
+        public function toggleTierTag(_arg_1:Boolean):void{
+            if (this.tierText){
+                this.tierText.visible = _arg_1;
+            }
+        }
+
+        protected function toggleDragState(_arg_1:Boolean):void{
+            if (((this.tierText) && (Parameters.data_.showTierTag))){
+                this.tierText.visible = _arg_1;
+            }
+            if (((!(this.isItemUsable)) && (!(_arg_1)))){
+                this.restrictedUseIndicator.visible = _arg_1;
+            }
         }
 
 

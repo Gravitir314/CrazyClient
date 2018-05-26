@@ -895,6 +895,7 @@
       <Defense>7</Defense>
       <Flying/>
       <XpMult>0.0</XpMult>
+      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Green Bolt</ObjectId>
          <Damage>45</Damage>
@@ -920,6 +921,7 @@
       <Defense>7</Defense>
       <Flying/>
       <XpMult>0.4</XpMult>
+      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Green Bolt</ObjectId>
          <Damage>55</Damage>

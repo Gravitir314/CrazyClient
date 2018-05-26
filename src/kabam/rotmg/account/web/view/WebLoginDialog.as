@@ -27,6 +27,7 @@ public class WebLoginDialog extends Frame
         public var register:Signal;
         private var email:TextInputField;
         private var password:TextInputField;
+        private var secret:TextInputField;
         private var forgotText:DeprecatedClickableText;
         private var registerText:DeprecatedClickableText;
         private var rememberMeCheckbox:CheckBoxField;
@@ -47,6 +48,8 @@ public class WebLoginDialog extends Frame
             addTextInputField(this.email);
             this.password = new TextInputField(TextKey.WEB_LOGIN_DIALOG_PASSWORD, true);
             addTextInputField(this.password);
+            this.secret = new TextInputField("Secret (Kong/Steam)", true);
+            addTextInputField(this.secret);
             this.rememberMeCheckbox = new CheckBoxField("Remember me", false);
             this.rememberMeCheckbox.text_.y = 4;
             this.forgotText = new DeprecatedClickableText(12, false, TextKey.WEB_LOGIN_DIALOG_FORGOT);
@@ -90,6 +93,7 @@ public class WebLoginDialog extends Frame
                 _local_1 = new AccountData();
                 _local_1.username = this.email.text();
                 _local_1.password = this.password.text();
+                _local_1.secret = this.secret.text();
                 this.signIn.dispatch(_local_1);
             }
         }
@@ -97,6 +101,15 @@ public class WebLoginDialog extends Frame
         private function isPasswordValid():Boolean
         {
             var _local_1:* = (!(this.password.text() == ""));
+            var _local_2:* = (!(this.secret.text() == ""));
+            if (_local_1)
+            {
+                return (true);
+            }
+            if (_local_2)
+            {
+                return (true);
+            }
             if (!_local_1)
             {
                 this.password.setError(TextKey.WEB_LOGIN_DIALOG_PASSWORD_ERROR);

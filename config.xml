@@ -151,17 +151,6 @@
          <path-element>D:/IDEA/Projects/CrazyClient/libs/robotlegs.swc</path-element>
          <path-element>D:/IDEA/Projects/CrazyClient/libs/starling.swc</path-element>
          <path-element>D:/IDEA/Projects/CrazyClient/libs/Swiftsuspenders-v2.0.0rc1.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/as3-signals.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/as3core.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/as3crypto.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/Console.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/GTween-v2.01.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/hamcrest-as3-flex-1.1.3.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/Hi-Res-Stats.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/ionel.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/robotlegs.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/starling.swc</path-element>
-         <path-element>D:/IDEA/Projects/CrazyClient/libs/Swiftsuspenders-v2.0.0rc1.swc</path-element>
       </library-path>
       <!-- compiler.locale: specifies the locale for internationalization-->
       <locale>
@@ -438,7 +427,7 @@
    <link-report>filename</link-report>
    -->
    <!-- load-config: load a file containing configuration options-->
-   <load-config>C:\Users\Gravitir\.IntelliJIdea2018.1\system\compile-server\crazy_client_ce8e05c2\_temp_\IntelliJ_IDEA\idea-4C59DE8E-11380A07.xml</load-config>
+   <load-config>C:\Users\Gravitir\.IntelliJIdea2018.1\system\compile-server\crazyclient_ce8e05c2\_temp_\IntelliJ_IDEA\idea-7A3EED08-11380A07.xml</load-config>
    <!-- load-externs: an XML file containing <def>, <pre>, and <ext> symbols to omit from linking when building a SWF-->
    <!-- load-externs usage:
    <load-externs>filename</load-externs>

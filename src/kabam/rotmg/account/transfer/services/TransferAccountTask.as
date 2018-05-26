@@ -53,12 +53,12 @@ public class TransferAccountTask extends BaseTask implements MigrateAccountTask
             var _local_3:PlatformModel = StaticInjectorContext.getInjector().getInstance(PlatformModel);
             if (_local_3.getPlatform() == PlatformType.WEB)
             {
-                this.account.updateUser(this.transferData.newEmail, this.transferData.newPassword, "");
+                this.account.updateUser(this.transferData.newEmail, this.transferData.newPassword, "", "");
             }
             else
             {
                 _local_2 = new XML(_arg_1);
-                this.account.updateUser(_local_2.GUID, _local_2.Secret, "");
+                this.account.updateUser(_local_2.GUID, _local_2.Secret, "", "");
                 this.account.setPlatformToken(_local_2.PlatformToken);
             }
         }

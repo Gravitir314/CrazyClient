@@ -12,9 +12,9 @@ import com.company.util.AssetLibrary;
 import flash.events.Event;
 import flash.events.MouseEvent;
 
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendRequestVO;
-import io.decagames.rotmg.friends.signals.FriendActionSignal;
+import io.decagames.rotmg.social.config.FriendsActions;
+import io.decagames.rotmg.social.model.FriendRequestVO;
+import io.decagames.rotmg.social.signals.FriendActionSignal;
 
 import kabam.rotmg.chat.control.ShowChatInputSignal;
 import kabam.rotmg.core.StaticInjectorContext;

@@ -12,7 +12,6 @@ import kabam.rotmg.classes.view.CharacterSkinView;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.core.signals.BuyCharacterPendingSignal;
 import kabam.rotmg.core.signals.HideTooltipsSignal;
-import kabam.rotmg.core.signals.PurchaseCharacterSignal;
 import kabam.rotmg.core.signals.SetScreenSignal;
 import kabam.rotmg.core.signals.ShowTooltipSignal;
 import kabam.rotmg.core.signals.UpdateNewCharacterScreenSignal;
@@ -41,8 +40,6 @@ public class NewCharacterMediator extends Mediator
         [Inject]
         public var buyCharacterPending:BuyCharacterPendingSignal;
         [Inject]
-        public var purchaseCharacter:PurchaseCharacterSignal;
-        [Inject]
         public var classesModel:ClassesModel;
         [Inject]
         public var openDialog:OpenDialogSignal;
@@ -53,7 +50,6 @@ public class NewCharacterMediator extends Mediator
             this.view.selected.add(this.onSelected);
             this.view.close.add(this.onClose);
             this.view.tooltip.add(this.onTooltip);
-            this.view.buy.add(this.onBuy);
             this.updateNewCharacterScreen.add(this.onUpdate);
             this.buyCharacterPending.add(this.onBuyCharacterPending);
             this.view.initialize(this.playerModel);
@@ -69,7 +65,6 @@ public class NewCharacterMediator extends Mediator
             this.view.selected.remove(this.onSelected);
             this.view.close.remove(this.onClose);
             this.view.tooltip.remove(this.onTooltip);
-            this.view.buy.remove(this.onBuy);
             this.buyCharacterPending.remove(this.onBuyCharacterPending);
             this.updateNewCharacterScreen.remove(this.onUpdate);
         }
@@ -100,11 +95,6 @@ public class NewCharacterMediator extends Mediator
         private function onUpdate():void
         {
             this.view.update(this.playerModel);
-        }
-
-        private function onBuy(_arg_1:int):void
-        {
-            this.purchaseCharacter.dispatch(_arg_1);
         }
 
 

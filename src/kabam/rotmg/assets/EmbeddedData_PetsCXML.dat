@@ -1604,53 +1604,6 @@
       <DefaultSkin>Reaper Skin</DefaultSkin>
       <Size>80</Size>
    </Object>
-   <Object id="Jaco" type="0x6109">
-      <Pet/>
-      <Class>Pet</Class>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x15a</Index>
-      </Texture>
-      <Family>Spooky</Family>
-      <Rarity>Divine</Rarity>
-      <DefaultSkin>Jaco Skin</DefaultSkin>
-      <Size>80</Size>
-   </Object>
-   <Object id="Giant Vampire Bat" type="0x7ffb">
-      <Pet/>
-      <Class>Pet</Class>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x15a</Index>
-      </Texture>
-      <Family>Spooky</Family>
-      <Rarity>Divine</Rarity>
-      <DefaultSkin>Giant Vampire Bat Skin</DefaultSkin>
-      <WhileMoving>
-         <Z>0.25</Z>
-         <Flying/>
-      </WhileMoving>
-      <Size>80</Size>
-   </Object>
-   <Object type="0x7f8b" id="Pumpkin Head">
-      <Pet/>
-      <Class>Pet</Class>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x32</Index>
-      </Texture>
-      <Family>Spooky</Family>
-      <Rarity>Divine</Rarity>
-      <DefaultSkin>Pumpkin Head Skin</DefaultSkin>
-      <ShadowSize>80</ShadowSize>
-      <Size>60</Size>
-      <Flying/>
-      <Z>0.56</Z>
-      <WhileMoving>
-         <Flying/>
-         <Z>0.62</Z>
-      </WhileMoving>
-   </Object>
    <Object id="Battle God" type="0x7f80">
       <Pet/>
       <Class>Pet</Class>
@@ -1692,23 +1645,6 @@
       <ShadowSize>60</ShadowSize>
       <Size>80</Size>
    </Object>
-   <Object id="Marid" type="0x6100">
-      <Pet/>
-      <Class>Pet</Class>
-      <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xe0</Index>
-      </Texture>
-      <Family>Humanoid</Family>
-      <Rarity>Divine</Rarity>
-      <DefaultSkin>Marid Skin</DefaultSkin>
-      <WhileMoving>
-         <Z>0.25</Z>
-         <Flying/>
-      </WhileMoving>
-      <ShadowSize>60</ShadowSize>
-      <Size>80</Size>
-   </Object>
    <Object id="Lil' Oryx" type="0x7f83">
       <Pet/>
       <Class>Pet</Class>
@@ -1745,31 +1681,6 @@
       <DefaultSkin>Great Jelly Skin</DefaultSkin>
       <Size>80</Size>
       <ShadowSize>90</ShadowSize>
-   </Object>
-   <Object id="Sir Bagston" type="0x6103">
-      <Pet/>
-      <Class>Pet</Class>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x32</Index>
-      </Texture>
-      <Family>? ? ? ?</Family>
-      <Rarity>Divine</Rarity>
-      <DefaultSkin>Bagston Skin</DefaultSkin>
-      <ShadowSize>40</ShadowSize>
-      <Size>80</Size>
-   </Object>
-   <Object id="Goldy" type="0x6106">
-      <Pet/>
-      <Class>Pet</Class>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x32</Index>
-      </Texture>
-      <Family>? ? ? ?</Family>
-      <Rarity>Divine</Rarity>
-      <DefaultSkin>Goldy Skin</DefaultSkin>
-      <Size>80</Size>
    </Object>
    <Object id="Spiderbot" type="0x7f86">
       <Pet/>
@@ -3002,6 +2913,23 @@
          <Index>31</Index>
       </AnimatedTexture>
    </Object>
+   <Object id="Marid" type="0x6100">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObjBig</File>
+         <Index>0xe0</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Marid Skin</DefaultSkin>
+      <WhileMoving>
+         <Z>0.25</Z>
+         <Flying/>
+      </WhileMoving>
+      <ShadowSize>60</ShadowSize>
+      <Size>80</Size>
+   </Object>
    <Object type="0x89a2" id="Marid Skin">
       <PetSkin/>
       <DisplayId>Marid</DisplayId>
@@ -3028,6 +2956,19 @@
       <DisplayId>Marid Pet Skin</DisplayId>
       <feedPower>2000</feedPower>
    </Object>
+   <Object id="Sir Bagston" type="0x6103">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Bagston Skin</DefaultSkin>
+      <ShadowSize>40</ShadowSize>
+      <Size>80</Size>
+   </Object>
    <Object type="0x6104" id="Bagston Skin">
       <PetSkin/>
       <DisplayId>Sir Bagston</DisplayId>
@@ -3053,6 +2994,18 @@
       <DisplayId>Bagston Pet Skin</DisplayId>
       <feedPower>2000</feedPower>
    </Object>
+   <Object id="Goldy" type="0x6106">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Goldy Skin</DefaultSkin>
+      <Size>80</Size>
+   </Object>
    <Object type="0x6107" id="Goldy Skin">
       <PetSkin/>
       <DisplayId>Goldy</DisplayId>
@@ -3077,6 +3030,18 @@
       <BagType>8</BagType>
       <DisplayId>Goldy Pet Skin</DisplayId>
       <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Jaco" type="0x6109">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x15a</Index>
+      </Texture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Jaco Skin</DefaultSkin>
+      <Size>80</Size>
    </Object>
    <Object type="0x610a" id="Jaco Skin">
       <PetSkin/>
@@ -3104,6 +3069,22 @@
       <DisplayId>Jaco Pet Skin</DisplayId>
       <feedPower>2000</feedPower>
    </Object>
+   <Object id="Giant Vampire Bat" type="0x7ffb">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x15a</Index>
+      </Texture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Giant Vampire Bat Skin</DefaultSkin>
+      <WhileMoving>
+         <Z>0.25</Z>
+         <Flying/>
+      </WhileMoving>
+      <Size>80</Size>
+   </Object>
    <Object type="0x7ffc" id="Giant Vampire Bat Skin">
       <PetSkin/>
       <DisplayId>Giant Vampire Bat</DisplayId>
@@ -3113,6 +3094,41 @@
          <Index>34</Index>
       </AnimatedTexture>
    </Object>
+   <Object type="0x7ffd" id="Giant Vampire Bat Pet Stone">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x59b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Transform your pet into Giant Vampire Bat of the Spooky family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="32763">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <DisplayId>Giant Vampire Bat Skin</DisplayId>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x7f8b" id="Pumpkin Head">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Pumpkin Head Skin</DefaultSkin>
+      <ShadowSize>80</ShadowSize>
+      <Size>60</Size>
+      <Flying/>
+      <Z>0.56</Z>
+      <WhileMoving>
+         <Flying/>
+         <Z>0.62</Z>
+      </WhileMoving>
+   </Object>
    <Object type="0x7f8c" id="Pumpkin Head Skin">
       <PetSkin/>
       <DisplayId>Pumpkin Head</DisplayId>
@@ -3121,6 +3137,22 @@
          <File>chars8x8rPets1</File>
          <Index>109</Index>
       </AnimatedTexture>
+   </Object>
+   <Object type="0x7f8d" id="Pumpkin Head Pet Stone">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x1f</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Transform your pet into Pumpkin Head of the Spooky family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="32651">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <DisplayId>Pumpkin Head Pet Skin</DisplayId>
+      <feedPower>2000</feedPower>
    </Object>
    <Object type="0x7f9c" id="Christmas Tree">
       <Pet/>
@@ -3144,6 +3176,22 @@
          <Index>110</Index>
       </AnimatedTexture>
    </Object>
+   <Object type="0x7f9a" id="Christmas Tree Pet Stone">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x06</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Transform your pet into Christmas Tree of the ? ? ? ? family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="32668">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <DisplayId>Christmas Tree Skin</DisplayId>
+      <feedPower>2000</feedPower>
+   </Object>
    <Object type="0x7f9e" id="Red Nose">
       <Pet/>
       <Class>Pet</Class>
@@ -3165,6 +3213,22 @@
          <File>chars8x8rPets1</File>
          <Index>111</Index>
       </AnimatedTexture>
+   </Object>
+   <Object type="0x7f9b" id="Red Nose Pet Stone">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x07</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Transform your pet into Red Nose of the Woodland family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="32670">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <DisplayId>Red Nosed Skin</DisplayId>
+      <feedPower>2000</feedPower>
    </Object>
    <Object id="Red Bagston" type="0x7fbf">
       <Pet/>
@@ -8645,6 +8709,44 @@
       <SlotType>10</SlotType>
       <Description>Well, it looks like SOMEONE skipped leg day.\n\nSprite Credits: Piggby\n\nTransform your pet into Abyss Goliath of the Reptile family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
       <Activate skinId="9307">PetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Axolotl" type="0x25d">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Aquatic</Family>
+      <Rarity>Common</Rarity>
+      <DefaultSkin>Axolotl Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <FirstAbility>Heal</FirstAbility>
+   </Object>
+   <Object type="0x25e" id="Axolotl Pet Skin">
+      <PetSkin/>
+      <DisplayId>Axolotl</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>195</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x25f" id="Axolotl Pet Stone">
+      <DisplayId>Axolotl Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>195</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Kawaii horror of the deep.\n\nSprite Credits: Santeripe\n\nTransform your pet into Axolotl of the Aquatic family. This is irreversible and the item is consumed upon use. The rarity and abilities of your pet will be retained. If you fuse your pet to reach a new rarity level it is not guaranteed that your pet will retain the current skin.</Description>
+      <Activate skinId="605">PetSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>

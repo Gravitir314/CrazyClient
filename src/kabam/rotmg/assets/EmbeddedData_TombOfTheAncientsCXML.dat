@@ -575,6 +575,10 @@
          <Index>0x0e</Index>
       </Texture>
       <Size>0</Size>
+      <Enemy/>
+      <MaxHitPoints>90000</MaxHitPoints>
+      <XpMult>0</XpMult>
+      <EventChestBoss/>
    </Object>
    <Object type="0x0d3d" id="Tomb Support Statue">
       <Group>Tomb Boss Statues</Group>
@@ -729,7 +733,6 @@
       <XpMult>1</XpMult>
       <God/>
       <NoArticle/>
-      <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Darkness Bolt</ObjectId>
          <Damage>280</Damage>

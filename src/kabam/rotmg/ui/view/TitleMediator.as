@@ -4,7 +4,6 @@ package kabam.rotmg.ui.view
 {
 import com.company.assembleegameclient.mapeditor.MapEditor;
 import com.company.assembleegameclient.screens.ServersScreen;
-import com.company.assembleegameclient.ui.language.LanguageOptionOverlay;
 
 import flash.events.Event;
 import flash.external.ExternalInterface;
@@ -33,7 +32,7 @@ import kabam.rotmg.ui.signals.EnterGameSignal;
 import robotlegs.bender.bundles.mvcs.Mediator;
 import robotlegs.bender.framework.api.ILogger;
 
-public class TitleMediator extends Mediator 
+public class TitleMediator extends Mediator
     {
 
         private static var supportCalledBefore:Boolean = false;
@@ -157,11 +156,6 @@ public class TitleMediator extends Mediator
             ((this.view.quitClicked) && (this.view.quitClicked.add(this.attemptToCloseClient)));
         }
 
-        private function showLanguagesScreen():void
-        {
-            this.setScreen.dispatch(new LanguageOptionOverlay());
-        }
-
         private function makeEnvironmentData():EnvironmentData
         {
             var _local_1:EnvironmentData = new EnvironmentData();
@@ -183,14 +177,12 @@ public class TitleMediator extends Mediator
             ((this.view.quitClicked) && (this.view.quitClicked.remove(this.attemptToCloseClient)));
         }
 
-        private function openKabamTransferView():void
-        {
-            this.view.openKabamTransferView();
-        }
-
-        private function handleIntentionToPlay():void
-        {
-            this.enterGame.dispatch();
+        private function handleIntentionToPlay():void{
+            if (this.account.isRegistered()){
+                this.enterGame.dispatch();
+            } else {
+                this.openAccountInfo.dispatch(false);
+            }
         }
 
         private function showServersScreen():void

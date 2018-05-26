@@ -233,7 +233,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
         private function createDisableAutoReconCheckBox():void
         {
             this.disableAutoReconCheckBox = new CheckBoxField("Auto Reconnect", false);
-            this.disableAutoReconCheckBox.x = 150;
+            this.disableAutoReconCheckBox.x = (this.CHARACTER_LIST_X_POS + 300);
             this.disableAutoReconCheckBox.y = this.openCharactersText.y;
             if (Parameters.data_.autoRecon){
                 this.disableAutoReconCheckBox.setChecked();

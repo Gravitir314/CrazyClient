@@ -137,7 +137,7 @@ public class WebRegisterDialog extends Frame
         private function isAgeVerified():Boolean
         {
             var _local_1:uint = DateFieldValidator.getPlayerAge(this.ageVerificationInput);
-            var _local_2:* = (_local_1 >= 13);
+            var _local_2:* = (_local_1 >= 16);
             this.ageVerificationInput.setErrorHighlight((!(_local_2)));
             if (!_local_2)
             {

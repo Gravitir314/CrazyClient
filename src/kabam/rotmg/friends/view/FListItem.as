@@ -4,7 +4,7 @@ package kabam.rotmg.friends.view
 {
 import flash.display.Sprite;
 
-import io.decagames.rotmg.friends.model.FriendVO;
+import io.decagames.rotmg.social.model.FriendVO;
 
 import org.osflash.signals.Signal;
 

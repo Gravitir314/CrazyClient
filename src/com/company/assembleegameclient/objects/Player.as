@@ -1677,7 +1677,7 @@ public class Player extends Character
                     }
                 }
                 if (square_ != null && square_.props_.push_) {
-                    if (Parameters.data_.SWNoTileMove == false) {
+                    if (!Parameters.data_.SWNoTileMove) {
                         moveVec_.x = (moveVec_.x - (square_.props_.animate_.dx_ / 1000));
                         moveVec_.y = (moveVec_.y - (square_.props_.animate_.dy_ / 1000));
                     }

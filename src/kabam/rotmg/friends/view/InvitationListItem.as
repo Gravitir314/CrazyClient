@@ -12,8 +12,8 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.geom.ColorTransform;
 
-import io.decagames.rotmg.friends.config.FriendsActions;
-import io.decagames.rotmg.friends.model.FriendVO;
+import io.decagames.rotmg.social.config.FriendsActions;
+import io.decagames.rotmg.social.model.FriendVO;
 
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.text.model.TextKey;

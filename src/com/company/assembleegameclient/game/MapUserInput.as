@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.game
 {
 import com.company.assembleegameclient.game.events.ReconnectEvent;
+import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.GuildHallPortal;
 import com.company.assembleegameclient.objects.ObjectLibrary;
@@ -20,9 +21,9 @@ import flash.geom.Point;
 import flash.geom.Vector3D;
 import flash.utils.getTimer;
 
-import io.decagames.rotmg.friends.FriendsPopupView;
-import io.decagames.rotmg.friends.model.FriendModel;
+import io.decagames.rotmg.social.SocialPopupView;
 import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
+import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
 import kabam.rotmg.application.api.ApplicationSetup;
@@ -71,6 +72,10 @@ public class MapUserInput
         public var mouseDown_:Boolean = false;
         public var autofire_:Boolean = false;
         public var specialKeyDown_:Boolean = false;
+        public var held:Boolean = false;
+        public var heldX:int = 0;
+        public var heldY:int = 0;
+        public var heldAngle:Number = 0;
         private var maxprism:Boolean = false;
         private var spaceSpam:int = 0;
         private var tabStripModel:TabStripModel;
@@ -91,10 +96,12 @@ public class MapUserInput
         private var potionInventoryModel:PotionInventoryModel;
         private var openDialogSignal:OpenDialogSignal;
         private var closeDialogSignal:CloseDialogsSignal;
+        private var closePopupByClassSignal:ClosePopupByClassSignal;
         private var layers:Layers;
         private var exitGame:ExitGameSignal;
         private var areFKeysAvailable:Boolean;
         private var reskinPetFlowStart:ReskinPetFlowStartSignal;
+        private var isFriendsListOpen:Boolean;
         private var parseChatMessage:ParseChatMessageSignal;
 
         public function MapUserInput(_arg_1:GameSprite)
@@ -116,6 +123,7 @@ public class MapUserInput
             this.exitGame = _local_2.getInstance(ExitGameSignal);
             this.openDialogSignal = _local_2.getInstance(OpenDialogSignal);
             this.closeDialogSignal = _local_2.getInstance(CloseDialogsSignal);
+            this.closePopupByClassSignal = _local_2.getInstance(ClosePopupByClassSignal);
             this.parseChatMessage = _local_2.getInstance(ParseChatMessageSignal);
             var _local_3:ApplicationSetup = _local_2.getInstance(ApplicationSetup);
             this.areFKeysAvailable = _local_3.areDeveloperHotkeysEnabled();
@@ -174,7 +182,8 @@ public class MapUserInput
             _local_2.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             _local_2.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             _local_2.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            _local_2.addEventListener(MouseEvent.RIGHT_CLICK, this.disableRightClick);
+            this.gs_.map.addEventListener("rightMouseDown", this.onRightMouseDown_forWorld, false, 0, true);
+            this.gs_.map.addEventListener("rightMouseUp", this.onRightMouseUp_forWorld, false, 0, true);
         }
 
         public function disableRightClick(_arg_1:MouseEvent):void
@@ -196,7 +205,8 @@ public class MapUserInput
             _local_2.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             _local_2.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             _local_2.removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            _local_2.removeEventListener(MouseEvent.RIGHT_CLICK, this.disableRightClick);
+            this.gs_.map.removeEventListener("rightMouseDown", this.onRightMouseDown_forWorld);
+            this.gs_.map.removeEventListener("rightMouseUp", this.onRightMouseUp_forWorld);
         }
 
         private function onActivate(_arg_1:Event):void
@@ -629,7 +639,7 @@ public class MapUserInput
             var _local_20:CloseAllPopupsSignal;
             var _local_21:Player = this.gs_.map.player_;
             var _local_22:ShowPopupSignal;
-            var _local_23:FriendModel;
+            var _local_23:Square;
             var _local_24:OpenDialogSignal;
             switch (_arg_1.keyCode)
             {
@@ -800,21 +810,18 @@ public class MapUserInput
                     this.gs_.gsc_.escape();
                     break;
                 case Parameters.data_.friendList:
-                    Parameters.data_.friendListDisplayFlag = (!(Parameters.data_.friendListDisplayFlag));
-                    if (Parameters.data_.friendListDisplayFlag)
-                    {
+                    this.isFriendsListOpen = (!(this.isFriendsListOpen));
+                    if (this.isFriendsListOpen){
                         if (Parameters.USE_NEW_FRIENDS_UI){
                             _local_22 = StaticInjectorContext.getInjector().getInstance(ShowPopupSignal);
-                            _local_23 = StaticInjectorContext.getInjector().getInstance(FriendModel);
-                            _local_22.dispatch(new FriendsPopupView(_local_23.hasInvitations));
+                            _local_22.dispatch(new SocialPopupView());
                         } else {
                             _local_24 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
                             _local_24.dispatch(new FriendListView());
                         }
-                    }
-                    else
-                    {
+                    } else {
                         this.closeDialogSignal.dispatch();
+                        this.closePopupByClassSignal.dispatch(SocialPopupView);
                     }
                     break;
                 case Parameters.data_.options:
@@ -1089,42 +1096,28 @@ public class MapUserInput
                     Parameters.lowCPUMode = !Parameters.lowCPUMode;
                     _local_21.notifyPlayer((Parameters.lowCPUMode) ? "Low CPU enabled" : "Low CPU disabled", 0xFF00, 1500);
                     break;
-                case Parameters.data_.findKeysKey:
-                    this.findKeys();
-                    break;
-                case Parameters.data_.testKey:
-                    Parameters.data_.test = !Parameters.data_.test;
-                    _local_21.notifyPlayer((Parameters.data_.test) ? "Test started" : "Test ended", 0xFF00, 1500);
-                    break;
             }
             this.setPlayerMovement();
         }
 
-        public function findKeys():void{
-            var _local_4:int;
-            var _local_7:int;
-            var _local_3:* = null;
-            var _local_6:* = null;
-            var _local_1:String = "";
-            for each (var _local_2:GameObject in this.gs_.map.goDict_) {
-                if ((_local_2 is Player)){
-                    _local_4 = 0;
-                    while (_local_4 < 20) {
-                        _local_7 = _local_2.equipment_[_local_4];
-                        _local_3 = ObjectLibrary.xmlLibrary_[_local_7];
-                        if (((_local_3) && ("Consumable" in _local_3))){
-                            for each (var _local_5:XML in _local_3.Activate) {
-                                _local_6 = _local_5.toString();
-                                if ((((_local_6 == "Create") || (_local_6 == "UnlockPortal")) || (_local_6 == "CreatePortal"))){
-                                    _local_1 = (_local_1 + (((_local_2.name_ + " has ") + _local_3.@id) + "\n"));
-                                }
-                            }
-                        }
-                        _local_4++;
-                    }
+        public function onRightMouseDown_forWorld(_arg_1:MouseEvent):void{
+            if (Parameters.data_.rightClickOption == "Ability")
+            {
+                this.gs_.map.player_.sbAssist(this.gs_.map.mouseX, this.gs_.map.mouseY);
+            } else {
+                if (Parameters.data_.rightClickOption == "Camera")
+                {
+                    held = true;
+                    heldX = WebMain.STAGE.mouseX;
+                    heldY = WebMain.STAGE.mouseY;
+                    heldAngle = Parameters.data_.cameraAngle;
                 }
             }
-            this.gs_.map.player_.notifyPlayer(_local_1, 0xE25F00, 6000);
+        }
+
+        public function onRightMouseUp_forWorld(_arg_1:MouseEvent):void
+        {
+            held = false;
         }
 
         public function openOptions():void

@@ -121,7 +121,7 @@ public class ConfirmEmailModal extends Frame
             var _local_1:Account = StaticInjectorContext.getInjector().getInstance(Account);
             if (!this.isKabam)
             {
-                _local_1.updateUser(this.emailInput.text(), _local_1.getPassword(), _local_1.getToken());
+                _local_1.updateUser(this.emailInput.text(), _local_1.getPassword(), _local_1.getToken(), _local_1.getSecret());
             }
             removeChild(titleText_);
             titleText_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);

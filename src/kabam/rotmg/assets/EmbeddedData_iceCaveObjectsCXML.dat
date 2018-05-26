@@ -78,6 +78,7 @@
          <Speed>65</Speed>
          <Damage>130</Damage>
          <LifetimeMS>2000</LifetimeMS>
+         <MultiHit/>
          <Size>130</Size>
       </Projectile>
    </Object>

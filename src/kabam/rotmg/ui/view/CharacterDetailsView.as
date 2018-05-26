@@ -90,7 +90,7 @@ public class CharacterDetailsView extends Sprite {
     }
 
     public function initFriendList(_arg_1:ImageFactory, _arg_2:IconButtonFactory, _arg_3:Function, _arg_4:Boolean):void{
-        this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("lofiInterfaceBig", 13), "", TextKey.OPTIONS_FRIEND, "", 6);
+        this.friendsBtn = _arg_2.create(_arg_1.getImageFromSet("lofiInterfaceBig", 13), "", "Social", "", 6);
         this.friendsBtn.x = 146;
         this.friendsBtn.y = 12;
         this.friendsBtn.addEventListener(MouseEvent.CLICK, _arg_3);

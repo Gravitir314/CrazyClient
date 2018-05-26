@@ -4,13 +4,14 @@ package com.company.assembleegameclient.appengine
 {
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.ui.dialogs.TOSPopup;
 
 import flash.events.Event;
 
+import io.decagames.rotmg.tos.popups.ToSPopup;
+import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.promotions.model.BeginnersPackageModel;
 import kabam.rotmg.servers.api.LatLong;
 
@@ -214,7 +215,7 @@ public class SavedCharactersList extends Event
         {
             if (this.charsXML_.hasOwnProperty("TOSPopup"))
             {
-                StaticInjectorContext.getInjector().getInstance(OpenDialogSignal).dispatch(new TOSPopup());
+                StaticInjectorContext.getInjector().getInstance(ShowPopupSignal).dispatch(new ToSPopup());
             }
         }
 

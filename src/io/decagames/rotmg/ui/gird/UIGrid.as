@@ -100,6 +100,7 @@ public class UIGrid extends Sprite
             for each (_local_1 in this.elements)
             {
                 this.gridContent.removeChild(_local_1);
+                _local_1.dispose();
             }
             this.elements.length = 0;
         }

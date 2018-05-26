@@ -4611,4 +4611,22 @@
       </RandomTexture>
       <Rotation>100</Rotation>
    </Object>
+   <Object type="0x51b" id="Parasitic Stab">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x90</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+      <Size>80</Size>
+   </Object>
+   <Object type="0x518" id="Parasitic Blast">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x91</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+      <Size>100</Size>
+   </Object>
 </Objects>
