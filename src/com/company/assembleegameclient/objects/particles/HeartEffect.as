@@ -1,6 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.72
-// www.as3sorcerer.com
-
+﻿
 //com.company.assembleegameclient.objects.particles.HeartEffect
 
 package com.company.assembleegameclient.objects.particles{

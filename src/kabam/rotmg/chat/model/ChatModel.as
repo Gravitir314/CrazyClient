@@ -17,7 +17,7 @@ public class ChatModel
         {
             this.bounds = new Rectangle(0, 0, 600, 300);
             this.lineHeight = 20;
-            this.visibleItemCount = 10;
+            this.visibleItemCount = 5;
             this.storedItemCount = 150;
         }
 

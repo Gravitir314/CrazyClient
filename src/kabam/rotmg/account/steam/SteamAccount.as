@@ -1,6 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.72
-// www.as3sorcerer.com
-
+﻿
 //kabam.rotmg.account.steam.SteamAccount
 
 package kabam.rotmg.account.steam{

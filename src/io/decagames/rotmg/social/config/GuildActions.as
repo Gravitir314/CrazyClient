@@ -1,6 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.72
-// www.as3sorcerer.com
-
+﻿
 //io.decagames.rotmg.social.config.GuildActions
 
 package io.decagames.rotmg.social.config{

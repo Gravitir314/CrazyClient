@@ -1,6 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.72
-// www.as3sorcerer.com
-
+﻿
 //com.company.assembleegameclient.ui.panels.mediators.EquippedGridMediator
 
 package com.company.assembleegameclient.ui.panels.mediators{

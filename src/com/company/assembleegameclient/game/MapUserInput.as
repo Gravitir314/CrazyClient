@@ -182,16 +182,8 @@ public class MapUserInput
             _local_2.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             _local_2.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             _local_2.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            this.gs_.map.addEventListener("rightMouseDown", this.onRightMouseDown_forWorld, false, 0, true);
-            this.gs_.map.addEventListener("rightMouseUp", this.onRightMouseUp_forWorld, false, 0, true);
-        }
-
-        public function disableRightClick(_arg_1:MouseEvent):void
-        {
-            if ((((this.gs_) && (this.gs_.map)) && (this.gs_.map.player_)))
-            {
-                this.gs_.map.player_.mapLightSpeed = (!(this.gs_.map.player_.mapLightSpeed));
-            }
+            _local_2.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
+            _local_2.addEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
         }
 
         private function onRemovedFromStage(_arg_1:Event):void
@@ -205,8 +197,8 @@ public class MapUserInput
             _local_2.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
             _local_2.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
             _local_2.removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-            this.gs_.map.removeEventListener("rightMouseDown", this.onRightMouseDown_forWorld);
-            this.gs_.map.removeEventListener("rightMouseUp", this.onRightMouseUp_forWorld);
+            _local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
+            _local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
         }
 
         private function onActivate(_arg_1:Event):void

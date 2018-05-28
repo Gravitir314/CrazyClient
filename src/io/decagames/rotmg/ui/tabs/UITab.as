@@ -1,6 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.72
-// www.as3sorcerer.com
-
+﻿
 //io.decagames.rotmg.ui.tabs.UITab
 
 package io.decagames.rotmg.ui.tabs{

@@ -137,9 +137,12 @@ public class Party
                     _local_4.starred_ = (!(this.starred_[_local_4.accountId_] == undefined));
                     _local_4.ignored_ = (!(this.ignored_[_local_4.accountId_] == undefined));
                     _local_4.distSqFromThisPlayer_ = PointUtil.distanceSquaredXY(_local_5.x_, _local_5.y_, _local_4.x_, _local_4.y_);
-                    if (!(_local_4.distSqFromThisPlayer_ > PARTY_DISTANCE_SQ) && !_local_4.starred_)
+                    if (((!((_local_4.distSqFromThisPlayer_ > PARTY_DISTANCE_SQ) && (!(_local_4.starred_)))) || (this.members_.length < 6)))
                     {
-                        this.members_.push(_local_4);
+                        if (!(((this.map_.name_ == "Nexus") && (Parameters.data_.HidePlayerFilter)) && (_local_4.numStars_ <= Parameters.data_.chatStarRequirement)))
+                        {
+                            this.members_.push(_local_4);
+                        }
                     }
                 }
             }

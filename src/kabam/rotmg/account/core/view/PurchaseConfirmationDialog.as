@@ -1,6 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.64
-// www.as3sorcerer.com
-
+﻿
 //kabam.rotmg.account.core.view.PurchaseConfirmationDialog
 
 package kabam.rotmg.account.core.view{

@@ -248,7 +248,6 @@ public class Parameters
             setDefault("chatTrade", true);
             setDefault("rotateSpeed", 3);
             setDefault("normalUI", false);
-            setDefault("uiShadow", false);
             if (((data_.hasOwnProperty("playMusic")) && (data_.playMusic == true)))
             {
                 setDefault("musicVolume", 1);
@@ -498,6 +497,7 @@ public class Parameters
             setDefault("tpBeforeNexus", true);
             setDefault("rightClickOption", 0);
             setDefault("tiltCam", false);
+            setDefault("HidePlayerFilter", false);
         }
 
 
