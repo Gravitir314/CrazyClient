@@ -744,7 +744,7 @@ public class MapUserInput
                     Parameters.data_.HPBar = ((Parameters.data_.HPBar != 0) ? 0 : 1);
                     break;
                 case Parameters.data_.toggleProjectiles:
-                    Parameters.data_.disableAllyParticles = (!(Parameters.data_.disableAllyParticles));
+                    Parameters.data_.disableAllyShoot = ((Parameters.data_.disableAllyShoot != 0) ? 0 : 1);
                     break;
                 case Parameters.data_.toggleMasterParticles:
                     Parameters.data_.noParticlesMaster = (!(Parameters.data_.noParticlesMaster));

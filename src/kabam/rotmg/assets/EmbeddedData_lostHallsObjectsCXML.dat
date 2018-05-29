@@ -1149,7 +1149,7 @@
       <Size>0</Size>
       <MaxHitPoints>77000</MaxHitPoints>
       <Defense>30</Defense>
-      <XpMult>129.87013</XpMult>
+      <XpMult>51.2821</XpMult>
       <ParalyzeImmune/>
       <StasisImmune/>
       <Projectile id="0">
@@ -4649,7 +4649,7 @@
          <ObjectId>Cultist Basaran Shot</ObjectId>
          <Damage>135</Damage>
          <Speed>100</Speed>
-         <LifetimeMS>4000</LifetimeMS>
+         <LifetimeMS>2800</LifetimeMS>
          <MultiHit/>
          <ConditionEffect duration="3">Slowed</ConditionEffect>
       </Projectile>

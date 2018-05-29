@@ -3626,7 +3626,6 @@
       </Projectile>
    </Object>
    <Object type="0x6fc9" id="A helper">
-      <Enemy/>
       <NoMiniMap/>
       <Class>Character</Class>
       <Texture>
@@ -3644,7 +3643,6 @@
       <ParalyzeImmune/>
    </Object>
    <Object type="0x6fc8" id="B helper">
-      <Enemy/>
       <NoMiniMap/>
       <Class>Character</Class>
       <Texture>

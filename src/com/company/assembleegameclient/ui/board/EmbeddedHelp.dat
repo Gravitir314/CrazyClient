@@ -229,10 +229,6 @@
       <Command>/vaultonly</Command>
       <Explanation>Automatically send you to vault.</Explanation>
    </Article>
-    <Article>
-      <Command>/keys</Command>
-      <Explanation>Shows list of keyholders.</Explanation>
-   </Article>
    <Article>
       <Command>/ao</Command>
       <Explanation>Make other players transparent</Explanation>

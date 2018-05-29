@@ -175,6 +175,10 @@ public class Options extends Sprite
             return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("On"), new StaticStringBuilder("Self")]);
         }
 
+        private static function makeAllyShootLabels():Vector.<StringBuilder>{
+            return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("All"), new StaticStringBuilder("Proj")]);
+        }
+
         private static function makeBarTextLabels():Vector.<StringBuilder>
         {
             return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("All"), new StaticStringBuilder("Fame"), new StaticStringBuilder("HP/MP")]);
@@ -1066,7 +1070,7 @@ public class Options extends Sprite
         private function addExperimentalOptions():void
         {
             this.addOptionAndPosition(new ChoiceOption("disableEnemyParticles", makeOnOffLabels(), [true, false], "Disable Enemy Particles", "Disable enemy hit and death particles.", null));
-            this.addOptionAndPosition(new ChoiceOption("disableAllyParticles", makeOnOffLabels(), [true, false], "Disable Ally Projectiles", "Disable showing projectiles shot by allies.", null));
+            this.addOptionAndPosition(new ChoiceOption("disableAllyShoot", makeAllyShootLabels(), [0, 1, 2], "Disable Ally Shoot", "Disable showing shooting animations and projectiles shot by allies or only projectiles.", null));
             this.addOptionAndPosition(new ChoiceOption("disablePlayersHitParticles", makeOnOffLabels(), [true, false], "Disable Players Hit Particles", "Disable player and ally hit particles.", null));
             this.addOptionAndPosition(new ChoiceOption("toggleToMaxText", makeOnOffLabels(), [true, false], TextKey.OPTIONS_TOGGLE_TOMAXTEXT, TextKey.OPTIONS_TOGGLE_TOMAXTEXT_DESC, onToMaxTextToggle));
             this.addOptionAndPosition(new ChoiceOption("newMiniMapColors", makeOnOffLabels(), [true, false], TextKey.OPTIONS_TOGGLE_NEWMINIMAPCOLORS, TextKey.OPTIONS_TOGGLE_NEWMINIMAPCOLORS_DESC, null));

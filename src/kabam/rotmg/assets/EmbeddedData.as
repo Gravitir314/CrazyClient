@@ -1,4 +1,6 @@
-﻿
+﻿// Decompiled by AS3 Sorcerer 5.72
+// www.as3sorcerer.com
+
 //kabam.rotmg.assets.EmbeddedData
 
 package kabam.rotmg.assets{

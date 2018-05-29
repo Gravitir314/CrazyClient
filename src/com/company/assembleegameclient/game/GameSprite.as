@@ -543,7 +543,7 @@ public class GameSprite extends AGameSprite
             var _local_9:int;
             if (mui_.held){
                 _local_9 = (WebMain.STAGE.mouseX - mui_.heldX);
-                Parameters.data_.cameraAngle = (mui_.heldAngle + (_local_9 * (3.14159265358979 / 180)));
+                Parameters.data_.cameraAngle = (mui_.heldAngle + (_local_9 * (Math.PI / 180)));
                 if (!Options.hidden && Parameters.data_.tiltCam){
                     _local_8 = (WebMain.STAGE.mouseY - mui_.heldY);
                     mui_.heldY = WebMain.STAGE.mouseY;

@@ -106,9 +106,10 @@ public class ItemTile extends Sprite
             {
                 _local_2 = 36863;
             }
-            this.isItemUsable = ObjectLibrary.isUsableByPlayer(_local_2, _arg_1);
-            if (this.itemSprite.itemId != ItemConstants.NO_ITEM) {
-                this.restrictedUseIndicator.visible = (!(this.isItemUsable));
+            if (this.itemSprite.itemId != ItemConstants.NO_ITEM){
+                this.restrictedUseIndicator.visible = (!(ObjectLibrary.isUsableByPlayer(_local_2, _arg_1)));
+            } else {
+                this.restrictedUseIndicator.visible = false;
             }
         }
 
