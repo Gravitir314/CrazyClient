@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Objects>
+   <Object type="0x21C3" id="Mystery ST Shard x1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>50</feedPower>
+   </Object>
+   <Object type="0x21C4" id="Mystery ST Shard x2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>100</feedPower>
+   </Object>
+   <Object type="0x21C5" id="Mystery ST Shard x3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>150</feedPower>
+   </Object>
+   <Object type="0x21C6" id="Mystery ST Shard x4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>200</feedPower>
+   </Object>
+   <Object type="0x21C7" id="Mystery ST Shard x5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>250</feedPower>
+   </Object>
+   <Object type="0x21C8" id="Mystery ST Shard x6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>300</feedPower>
+   </Object>
+   <Object type="0x21C9" id="Mystery ST Shard x7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>350</feedPower>
+   </Object>
+   <Object type="0x21CA" id="Mystery ST Shard x8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>400</feedPower>
+   </Object>
+   <Object type="0x21CB" id="Mystery ST Shard x9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>450</feedPower>
+   </Object>
+   <Object type="0x21CC" id="Mystery ST Shard x10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x21CD" id="Mystery ST Shard x11">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>11</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>550</feedPower>
+   </Object>
+   <Object type="0x21CE" id="Mystery ST Shard x12">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>12</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>600</feedPower>
+   </Object>
+   <Object type="0x21CF" id="Mystery ST Shard x13">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>13</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>650</feedPower>
+   </Object>
+   <Object type="0x21D0" id="Mystery ST Shard x14">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>14</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>700</feedPower>
+   </Object>
+   <Object type="0x21D1" id="Mystery ST Shard x15">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x9d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Mystery ST Shards and use them to obtain a Mystery ST Chest.\n\nSprite Credits: Piggby</Description>
+      <Quantity>15</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="" description="Double click to create a Mystery ST Chest! Doing so will consume the Tokens."/>
+         <EffectInfo name="Stack limit" description="15"/>
+         <EffectInfo name="Event" description="Mystery ST Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>750</feedPower>
+      <Activate id="Mystery ST Chest">Exchange</Activate>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x52A" id="Summer Mystery Box Shard x1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <feedPower>50</feedPower>
+      <Treasure/>
+   </Object>
+   <Object type="0x52B" id="Summer Mystery Box Shard x2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>100</feedPower>
+   </Object>
+   <Object type="0x52C" id="Summer Mystery Box Shard x3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>150</feedPower>
+   </Object>
+   <Object type="0x52D" id="Summer Mystery Box Shard x4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>200</feedPower>
+   </Object>
+   <Object type="0x52E" id="Summer Mystery Box Shard x5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>250</feedPower>
+   </Object>
+   <Object type="0x52F" id="Summer Mystery Box Shard x6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>300</feedPower>
+   </Object>
+   <Object type="0x530" id="Summer Mystery Box Shard x7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>350</feedPower>
+   </Object>
+   <Object type="0x531" id="Summer Mystery Box Shard x8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>400</feedPower>
+   </Object>
+   <Object type="0x532" id="Summer Mystery Box Shard x9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>450</feedPower>
+   </Object>
+   <Object type="0x533" id="Summer Mystery Box Shard x10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x75</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Summer Mystery Box Shards and exchange them for Rare, Epic and Legendary mystery skins at the Tinkerer. Tokens will be removed in September.</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Summer Mystery Box Shard"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x25fb" id="Magic Pumpkin">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x34</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Pumpkin! Use it to obtain a Pumpkin Seed.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="1"/>
+         <EffectInfo name="Event" description="Halloween 2017"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate id="Pumpkin Seed x 1">Exchange</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x99f" id="Moss Token x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>50</feedPower>
+   </Object>
+   <Object type="0x9a0" id="Moss Token x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>100</feedPower>
+   </Object>
+   <Object type="0x9a1" id="Moss Token x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>150</feedPower>
+   </Object>
+   <Object type="0x9a2" id="Moss Token x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>200</feedPower>
+   </Object>
+   <Object type="0x9a3" id="Moss Token x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>250</feedPower>
+   </Object>
+   <Object type="0x9a4" id="Moss Token x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>300</feedPower>
+   </Object>
+   <Object type="0x9a5" id="Moss Token x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>350</feedPower>
+   </Object>
+   <Object type="0x9a6" id="Moss Token x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>400</feedPower>
+   </Object>
+   <Object type="0x9a7" id="Moss Token x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>450</feedPower>
+   </Object>
+   <Object type="0x9a8" id="Moss Token x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A small pile of moss! You can drag and drop tokens onto each other and exchange a stack for a Moss Bag!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="" description="Double click to create a Moss Bag! Doing so will consume the Tokens."/>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate id="Moss Bag MotMG">Exchange</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>500</feedPower>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x9a9" id="Stone Token x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>100</feedPower>
+   </Object>
+   <Object type="0x9aa" id="Stone Token x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>200</feedPower>
+   </Object>
+   <Object type="0x9ab" id="Stone Token x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>300</feedPower>
+   </Object>
+   <Object type="0x9ac" id="Stone Token x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>400</feedPower>
+   </Object>
+   <Object type="0x9ad" id="Stone Token x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x9ae" id="Stone Token x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>600</feedPower>
+   </Object>
+   <Object type="0x9af" id="Stone Token x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>700</feedPower>
+   </Object>
+   <Object type="0x9b0" id="Stone Token x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>800</feedPower>
+   </Object>
+   <Object type="0x9b1" id="Stone Token x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>900</feedPower>
+   </Object>
+   <Object type="0x9b2" id="Stone Token x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A chunk of stone, probably from some ancient statue. You can drag and drop tokens onto each other and exchange a stack for a Stone Skin at the Tinkerer!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="" description="The Tinkerer will exchange this stack for a Stone Skin of your choice."/>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>1000</feedPower>
+      <Track/>
+   </Object>
+   <Object type="0x9b3" id="Mad God Token x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>200</feedPower>
+   </Object>
+   <Object type="0x9b4" id="Mad God Token x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>400</feedPower>
+   </Object>
+   <Object type="0x9b5" id="Mad God Token x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>600</feedPower>
+   </Object>
+   <Object type="0x9b6" id="Mad God Token x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>800</feedPower>
+   </Object>
+   <Object type="0x9b7" id="Mad God Token x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>1000</feedPower>
+   </Object>
+   <Object type="0x9b8" id="Mad God Token x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      &gt;
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>1200</feedPower>
+   </Object>
+   <Object type="0x9b9" id="Mad God Token x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>1400</feedPower>
+   </Object>
+   <Object type="0x9ba" id="Mad God Token x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>1600</feedPower>
+   </Object>
+   <Object type="0x9bb" id="Mad God Token x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>1800</feedPower>
+   </Object>
+   <Object type="0x9bc" id="Mad God Token x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x31</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A token of the Mad God, rewarded only to the bravest in the Realm! You can drag and drop tokens onto each other and exchange a stack for a Kingdom Skin at the Tinkerer!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="" description="The Tinkerer will exchange this stack for a Kingdom Skin of your choice."/>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="MotMG"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+      <feedPower>2000</feedPower>
+   </Object>
+</Objects>
