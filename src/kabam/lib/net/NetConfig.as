@@ -14,23 +14,23 @@ import org.swiftsuspenders.Injector;
 import robotlegs.bender.framework.api.IConfig;
 
 public class NetConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var injector:Injector;
-        private var messageCenter:MessageCenter;
-
-
-        public function configure():void
-        {
-            this.messageCenter = new MessageCenter().setInjector(this.injector);
-            this.injector.map(Socket);
-            this.injector.map(MessageMap).toValue(this.messageCenter);
-            this.injector.map(MessageProvider).toValue(this.messageCenter);
-            this.injector.map(SocketServer).asSingleton();
-        }
+	[Inject]
+	public var injector:Injector;
+	private var messageCenter:MessageCenter;
 
 
-    }
+	public function configure():void
+	{
+		this.messageCenter = new MessageCenter().setInjector(this.injector);
+		this.injector.map(Socket);
+		this.injector.map(MessageMap).toValue(this.messageCenter);
+		this.injector.map(MessageProvider).toValue(this.messageCenter);
+		this.injector.map(SocketServer).asSingleton();
+	}
+
+
+}
 }//package kabam.lib.net
 

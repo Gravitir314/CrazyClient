@@ -6,17 +6,17 @@ import com.company.assembleegameclient.ui.SoundIcon;
 
 import flash.display.Sprite;
 
-public class ScreenBase extends Sprite 
-    {
-        internal static var TitleScreenBackground:Class = ScreenBase_TitleScreenBackground;
+public class ScreenBase extends Sprite
+{
+	internal static var TitleScreenBackground:Class = ScreenBase_TitleScreenBackground;
 
-        public function ScreenBase()
-        {
-            addChild(new TitleScreenBackground());
-            addChild(new DarkLayer());
-            addChild(new SoundIcon());
-        }
+	public function ScreenBase()
+	{
+		addChild(new TitleScreenBackground());
+		addChild(new DarkLayer());
+		addChild(new SoundIcon());
+	}
 
-    }
+}
 }//package kabam.rotmg.ui.view.components
 

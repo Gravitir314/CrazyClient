@@ -31,55 +31,55 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
-public class SteamAccountConfig implements IConfig 
-    {
+public class SteamAccountConfig implements IConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-
-
-        public function configure():void
-        {
-            this.mapModel();
-            this.mapCommands();
-            this.mapMediators();
-            this.mapServices();
-        }
-
-        protected function mapModel():void
-        {
-            this.injector.map(Account).toSingleton(SteamAccount);
-            this.injector.map(MoneyConfig).toSingleton(SteamMoneyConfig);
-            this.injector.map(CharListDataSignal).asSingleton();
-        }
-
-        protected function mapCommands():void
-        {
-            this.commandMap.map(OpenAccountInfoSignal).toCommand(SteamOpenAccountInfoCommand);
-            this.commandMap.map(RegisterAccountSignal).toCommand(SteamRegisterAccountCommand);
-        }
-
-        protected function mapMediators():void
-        {
-            this.mediatorMap.map(SteamAccountDetailDialog).toMediator(SteamAccountDetailMediator);
-            this.mediatorMap.map(RegisterWebAccountDialog).toMediator(SteamRegisterWebAccountMediator);
-        }
-
-        protected function mapServices():void
-        {
-            this.injector.map(SteamApi).toSingleton(LiveSteamApi);
-            this.injector.map(LoadAccountTask).toType(SteamLoadAccountTask);
-            this.injector.map(SteamLoadApiTask);
-            this.injector.map(MakePaymentTask).toType(SteamMakePaymentTask);
-            this.injector.map(PurchaseGoldTask).toType(SteamPurchaseGoldTask);
-            this.injector.map(RegisterAccountTask).toType(SteamRegisterAccountTask);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
 
 
-    }
+	public function configure():void
+	{
+		this.mapModel();
+		this.mapCommands();
+		this.mapMediators();
+		this.mapServices();
+	}
+
+	protected function mapModel():void
+	{
+		this.injector.map(Account).toSingleton(SteamAccount);
+		this.injector.map(MoneyConfig).toSingleton(SteamMoneyConfig);
+		this.injector.map(CharListDataSignal).asSingleton();
+	}
+
+	protected function mapCommands():void
+	{
+		this.commandMap.map(OpenAccountInfoSignal).toCommand(SteamOpenAccountInfoCommand);
+		this.commandMap.map(RegisterAccountSignal).toCommand(SteamRegisterAccountCommand);
+	}
+
+	protected function mapMediators():void
+	{
+		this.mediatorMap.map(SteamAccountDetailDialog).toMediator(SteamAccountDetailMediator);
+		this.mediatorMap.map(RegisterWebAccountDialog).toMediator(SteamRegisterWebAccountMediator);
+	}
+
+	protected function mapServices():void
+	{
+		this.injector.map(SteamApi).toSingleton(LiveSteamApi);
+		this.injector.map(LoadAccountTask).toType(SteamLoadAccountTask);
+		this.injector.map(SteamLoadApiTask);
+		this.injector.map(MakePaymentTask).toType(SteamMakePaymentTask);
+		this.injector.map(PurchaseGoldTask).toType(SteamPurchaseGoldTask);
+		this.injector.map(RegisterAccountTask).toType(SteamRegisterAccountTask);
+	}
+
+
+}
 }//package kabam.rotmg.account.steam
 
