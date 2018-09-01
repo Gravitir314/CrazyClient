@@ -1,67 +1,43 @@
-/**
- * VERSION: 12.0
- * DATE: 2012-01-15
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.VolumePlugin
+
 package com.greensock.plugins
 {
-import com.greensock.*;
+import com.greensock.TweenLite;
 
 import flash.media.SoundTransform;
 
-/**
- * [AS3/AS2 only] Tweens the volume of an object with a soundTransform property (MovieClip/SoundChannel/NetStream, etc.).
- *
- * <p><b>USAGE:</b></p>
- * <listing version="3.0">
- import com.greensock.TweenLite;
- import com.greensock.plugins.TweenPlugin;
- import com.greensock.plugins.VolumePlugin;
- TweenPlugin.activate([VolumePlugin]); //activation is permanent in the SWF, so this line only needs to be run once.
-
- TweenLite.to(mc, 1, {volume:0});
- </listing>
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class VolumePlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
 
-	/** @private **/
+	public static const API:Number = 2;
+
 	protected var _target:Object;
-	/** @private **/
 	protected var _st:SoundTransform;
 
-	/** @private **/
 	public function VolumePlugin()
 	{
 		super("volume");
 	}
 
-	/** @private **/
-	override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
+	override public function setRatio(_arg_1:Number):void
 	{
-		if (isNaN(value) || target.hasOwnProperty("volume") || !target.hasOwnProperty("soundTransform"))
-		{
-			return false;
-		}
-		_target = target;
-		_st = _target.soundTransform;
-		_addTween(_st, "volume", _st.volume, value, "volume");
-		return true;
-	}
-
-	/** @private **/
-	override public function setRatio(v:Number):void
-	{
-		super.setRatio(v);
+		super.setRatio(_arg_1);
 		_target.soundTransform = _st;
 	}
 
+	override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
+	{
+		if ((((isNaN(_arg_2)) || (_arg_1.hasOwnProperty("volume"))) || (!(_arg_1.hasOwnProperty("soundTransform")))))
+		{
+			return (false);
+		}
+		_target = _arg_1;
+		_st = _target.soundTransform;
+		_addTween(_st, "volume", _st.volume, _arg_2, "volume");
+		return (true);
+	}
+
+
 }
-}
+}//package com.greensock.plugins
+

@@ -1,117 +1,97 @@
-/**
- * VERSION: 12.0
- * DATE: 2012-01-12
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.EndArrayPlugin
+
 package com.greensock.plugins
 {
 import com.greensock.TweenLite;
 
-/**
- * [AS3/AS2 only] Tweens numbers in an Array.
- *
- * <p><b>USAGE:</b></p>
- * <listing version="3.0">
- import com.greensock.TweenLite;
- import com.greensock.plugins.TweenPlugin;
- import com.greensock.plugins.EndArrayPlugin;
- TweenPlugin.activate([EndArrayPlugin]); //activation is permanent in the SWF, so this line only needs to be run once.
-
- var myArray:Array = [1,2,3,4];
- TweenLite.to(myArray, 1.5, {endArray:[10,20,30,40]});
- </listing>
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class EndArrayPlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
 
-	/** @private **/
+	public static const API:Number = 2;
+
 	protected var _a:Array;
-	/** @private If the values should be rounded to the nearest integer, <code>_round</code> will be set to <code>true</code>. **/
-	protected var _round:Boolean;
-	/** @private **/
 	protected var _info:Array = [];
+	protected var _round:Boolean;
 
-	/** @private **/
 	public function EndArrayPlugin()
 	{
 		super("endArray");
 	}
 
-	/** @private **/
-	override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
+	override public function _roundProps(_arg_1:Object, _arg_2:Boolean = true):void
 	{
-		if (!(target is Array) || !(value is Array))
+		if (("endArray" in _arg_1))
 		{
-			return false;
+			_round = _arg_2;
 		}
-		_init(target as Array, value);
-		return true;
 	}
 
-	/** @private **/
-	public function _init(start:Array, end:Array):void
+	public function _init(_arg_1:Array, _arg_2:Array):void
 	{
-		_a = start;
-		var i:int = end.length, cnt:int = 0;
-		while (--i > -1)
+		_a = _arg_1;
+		var _local_3:int = _arg_2.length;
+		var _local_4:int;
+		while (--_local_3 > -1)
 		{
-			if (start[i] != end[i] && start[i] != null)
+			if (((!(_arg_1[_local_3] == _arg_2[_local_3])) && (!(_arg_1[_local_3] == null))))
 			{
-				_info[cnt++] = new ArrayTweenInfo(i, _a[i], end[i] - _a[i]);
+				var _local_5:* = _local_4++;
+				_info[_local_5] = new ArrayTweenInfo(_local_3, _a[_local_3], (_arg_2[_local_3] - _a[_local_3]));
 			}
 		}
 	}
 
-	override public function _roundProps(lookup:Object, value:Boolean = true):void
+	override public function setRatio(_arg_1:Number):void
 	{
-		if ("endArray" in lookup)
-		{
-			_round = value;
-		}
-	}
-
-	/** @private **/
-	override public function setRatio(v:Number):void
-	{
-		var i:int = _info.length, ti:ArrayTweenInfo, val:Number;
+		var _local_3:ArrayTweenInfo;
+		var _local_4:Number;
+		var _local_2:int = _info.length;
 		if (_round)
 		{
-			while (--i > -1)
+			while (--_local_2 > -1)
 			{
-				ti = _info[i];
-				_a[ti.i] = ((val = ti.c * v + ti.s) > 0) ? (val + 0.5) >> 0 : (val - 0.5) >> 0;
+				_local_3 = _info[_local_2];
+				_a[_local_3.i] = (((_local_4 = ((_local_3.c * _arg_1) + _local_3.s)) > 0) ? ((_local_4 + 0.5) >> 0) : ((_local_4 - 0.5) >> 0));
 			}
 		}
 		else
 		{
-			while (--i > -1)
+			while (--_local_2 > -1)
 			{
-				ti = _info[i];
-				_a[ti.i] = ti.c * v + ti.s;
+				_local_3 = _info[_local_2];
+				_a[_local_3.i] = ((_local_3.c * _arg_1) + _local_3.s);
 			}
 		}
 	}
 
-}
-}
+	override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
+	{
+		if (((!(_arg_1 is Array)) || (!(_arg_2 is Array))))
+		{
+			return (false);
+		}
+		_init((_arg_1 as Array), _arg_2);
+		return (true);
+	}
 
-internal class ArrayTweenInfo
+
+}
+}//package com.greensock.plugins
+
+class ArrayTweenInfo
 {
-	public var i:uint;
+
 	public var s:Number;
+	public var i:uint;
 	public var c:Number;
 
-	public function ArrayTweenInfo(index:uint, start:Number, change:Number)
+	public function ArrayTweenInfo(_arg_1:uint, _arg_2:Number, _arg_3:Number)
 	{
-		this.i = index;
-		this.s = start;
-		this.c = change;
+		this.i = _arg_1;
+		this.s = _arg_2;
+		this.c = _arg_3;
 	}
+
 }
+
+

@@ -1,9 +1,5 @@
-/**
- * VERSION: 12.0.1
- * DATE: 2013-02-09
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.TransformMatrixPlugin
+
 package com.greensock.plugins
 {
 import com.greensock.TweenLite;
@@ -11,284 +7,264 @@ import com.greensock.TweenLite;
 import flash.geom.Matrix;
 import flash.geom.Transform;
 
-/**
- * [AS3/AS2 only] TransformMatrixPlugin allows you to tween a DisplayObject's transform.matrix values directly
- * (<code>a, b, c, d, tx, and ty</code>) or use common properties like <code>x, y, scaleX, scaleY,
- * skewX, skewY, rotation</code> and even <code>shortRotation</code>.
- * To skew without adjusting scale visually, use skewX2 and skewY2 instead of skewX and skewY.
- *
- * <p>transformMatrix tween will affect all of the DisplayObject's transform properties, so do not use
- * it in conjunction with regular x/y/scaleX/scaleY/rotation tweens concurrently.</p>
- *
- * <p><b>USAGE:</b></p>
- * <listing version="3.0">
- import com.greensock.TweenLite;
- import com.greensock.plugins.~~;
- TweenPlugin.activate([TransformMatrixPlugin]); //activation is permanent in the SWF, so this line only needs to be run once.
-
- TweenLite.to(mc, 1, {transformMatrix:{x:50, y:300, scaleX:2, scaleY:2}});
-
- //-OR-
-
- TweenLite.to(mc, 1, {transformMatrix:{tx:50, ty:300, a:2, d:2}});
- </listing>
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class TransformMatrixPlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
-	/** @private **/
-	private static const _DEG2RAD:Number = Math.PI / 180;
 
-	/** @private **/
-	protected var _transform:Transform;
-	/** @private **/
-	protected var _matrix:Matrix;
-	/** @private **/
-	protected var _txStart:Number;
-	/** @private **/
-	protected var _txChange:Number;
-	/** @private **/
-	protected var _tyStart:Number;
-	/** @private **/
-	protected var _tyChange:Number;
-	/** @private **/
-	protected var _aStart:Number;
-	/** @private **/
-	protected var _aChange:Number;
-	/** @private **/
-	protected var _bStart:Number;
-	/** @private **/
-	protected var _bChange:Number;
-	/** @private **/
-	protected var _cStart:Number;
-	/** @private **/
-	protected var _cChange:Number;
-	/** @private **/
-	protected var _dStart:Number;
-	/** @private **/
+	public static const API:Number = 2;
+	private static const _DEG2RAD:Number = (Math.PI / 180);//0.0174532925199433
+
 	protected var _dChange:Number;
-	/** @private **/
+	protected var _txStart:Number;
+	protected var _cStart:Number;
+	protected var _matrix:Matrix;
+	protected var _tyStart:Number;
+	protected var _aStart:Number;
 	protected var _angleChange:Number = 0;
+	protected var _transform:Transform;
+	protected var _aChange:Number;
+	protected var _bChange:Number;
+	protected var _tyChange:Number;
+	protected var _txChange:Number;
+	protected var _cChange:Number;
+	protected var _dStart:Number;
+	protected var _bStart:Number;
 
-	/** @private **/
 	public function TransformMatrixPlugin()
 	{
 		super("transformMatrix,x,y,scaleX,scaleY,rotation,width,height,transformAroundPoint,transformAroundCenter");
 	}
 
-	/** @private **/
-	override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
+	override public function setRatio(_arg_1:Number):void
 	{
-		_transform = target.transform as Transform;
+		var _local_2:Number;
+		var _local_3:Number;
+		var _local_4:Number;
+		var _local_5:Number;
+		_matrix.a = (_aStart + (_arg_1 * _aChange));
+		_matrix.b = (_bStart + (_arg_1 * _bChange));
+		_matrix.c = (_cStart + (_arg_1 * _cChange));
+		_matrix.d = (_dStart + (_arg_1 * _dChange));
+		if (_angleChange)
+		{
+			_local_2 = Math.cos((_angleChange * _arg_1));
+			_local_3 = Math.sin((_angleChange * _arg_1));
+			_local_4 = _matrix.a;
+			_local_5 = _matrix.c;
+			_matrix.a = ((_local_4 * _local_2) - (_matrix.b * _local_3));
+			_matrix.b = ((_local_4 * _local_3) + (_matrix.b * _local_2));
+			_matrix.c = ((_local_5 * _local_2) - (_matrix.d * _local_3));
+			_matrix.d = ((_local_5 * _local_3) + (_matrix.d * _local_2));
+		}
+		_matrix.tx = (_txStart + (_arg_1 * _txChange));
+		_matrix.ty = (_tyStart + (_arg_1 * _tyChange));
+		_transform.matrix = _matrix;
+	}
+
+	override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
+	{
+		var _local_5:Number;
+		var _local_6:Number;
+		var _local_7:Number;
+		var _local_8:Number;
+		var _local_9:Number;
+		var _local_10:Number;
+		var _local_11:Number;
+		var _local_12:Number;
+		var _local_13:Number;
+		var _local_14:Number;
+		_transform = (_arg_1.transform as Transform);
 		_matrix = _transform.matrix;
-		var matrix:Matrix = _matrix.clone();
-		_txStart = matrix.tx;
-		_tyStart = matrix.ty;
-		_aStart = matrix.a;
-		_bStart = matrix.b;
-		_cStart = matrix.c;
-		_dStart = matrix.d;
-
-		if ("x" in value)
+		var _local_4:Matrix = _matrix.clone();
+		_txStart = _local_4.tx;
+		_tyStart = _local_4.ty;
+		_aStart = _local_4.a;
+		_bStart = _local_4.b;
+		_cStart = _local_4.c;
+		_dStart = _local_4.d;
+		if (("x" in _arg_2))
 		{
-			_txChange = (typeof(value.x) == "number") ? value.x - _txStart : Number(value.x.split("=").join(""));
-		}
-		else if ("tx" in value)
-		{
-			_txChange = value.tx - _txStart;
+			_txChange = ((typeof(_arg_2.x) == "number") ? (_arg_2.x - _txStart) : Number(_arg_2.x.split("=").join("")));
 		}
 		else
 		{
-			_txChange = 0;
+			if (("tx" in _arg_2))
+			{
+				_txChange = (_arg_2.tx - _txStart);
+			}
+			else
+			{
+				_txChange = 0;
+			}
 		}
-		if ("y" in value)
+		if (("y" in _arg_2))
 		{
-			_tyChange = (typeof(value.y) == "number") ? value.y - _tyStart : Number(value.y.split("=").join(""));
-		}
-		else if ("ty" in value)
-		{
-			_tyChange = value.ty - _tyStart;
+			_tyChange = ((typeof(_arg_2.y) == "number") ? (_arg_2.y - _tyStart) : Number(_arg_2.y.split("=").join("")));
 		}
 		else
 		{
-			_tyChange = 0;
+			if (("ty" in _arg_2))
+			{
+				_tyChange = (_arg_2.ty - _tyStart);
+			}
+			else
+			{
+				_tyChange = 0;
+			}
 		}
-		_aChange = ("a" in value) ? value.a - _aStart : 0;
-		_bChange = ("b" in value) ? value.b - _bStart : 0;
-		_cChange = ("c" in value) ? value.c - _cStart : 0;
-		_dChange = ("d" in value) ? value.d - _dStart : 0;
-
-		if (("rotation" in value) || ("shortRotation" in value) || ("scale" in value && !(value is Matrix)) || ("scaleX" in value) || ("scaleY" in value) || ("skewX" in value) || ("skewY" in value) || ("skewX2" in value) || ("skewY2" in value))
+		_aChange = (("a" in _arg_2) ? (_arg_2.a - _aStart) : 0);
+		_bChange = (("b" in _arg_2) ? (_arg_2.b - _bStart) : 0);
+		_cChange = (("c" in _arg_2) ? (_arg_2.c - _cStart) : 0);
+		_dChange = (("d" in _arg_2) ? (_arg_2.d - _dStart) : 0);
+		if (((((((((("rotation" in _arg_2) || ("shortRotation" in _arg_2)) || (("scale" in _arg_2) && (!(_arg_2 is Matrix)))) || ("scaleX" in _arg_2)) || ("scaleY" in _arg_2)) || ("skewX" in _arg_2)) || ("skewY" in _arg_2)) || ("skewX2" in _arg_2)) || ("skewY2" in _arg_2)))
 		{
-			var ratioX:Number, ratioY:Number;
-			var scaleX:Number = Math.sqrt(matrix.a * matrix.a + matrix.b * matrix.b); //Bugs in the Flex framework prevent DisplayObject.scaleX from working consistently, so we must determine it using the matrix.
-			if (scaleX == 0)
+			_local_7 = Math.sqrt(((_local_4.a * _local_4.a) + (_local_4.b * _local_4.b)));
+			if (_local_7 == 0)
 			{
-				matrix.a = scaleX = 0.0001;
+				_local_4.a = (_local_7 = 0.0001);
 			}
-			else if (matrix.a < 0 && matrix.d > 0)
+			else
 			{
-				scaleX = -scaleX;
-			}
-			var scaleY:Number = Math.sqrt(matrix.c * matrix.c + matrix.d * matrix.d); //Bugs in the Flex framework prevent DisplayObject.scaleY from working consistently, so we must determine it using the matrix.
-			if (scaleY == 0)
-			{
-				matrix.d = scaleY = 0.0001;
-			}
-			else if (matrix.d < 0 && matrix.a > 0)
-			{
-				scaleY = -scaleY;
-			}
-			var angle:Number = Math.atan2(matrix.b, matrix.a); //Bugs in the Flex framework prevent DisplayObject.rotation from working consistently, so we must determine it using the matrix
-			if (matrix.a < 0 && matrix.d >= 0)
-			{
-				angle += (angle <= 0) ? Math.PI : -Math.PI;
-			}
-			var skewX:Number = Math.atan2(-_matrix.c, _matrix.d) - angle;
-			var finalAngle:Number = angle;
-			if ("shortRotation" in value)
-			{
-				var dif:Number = ((value.shortRotation * _DEG2RAD) - angle) % (Math.PI * 2);
-				if (dif > Math.PI)
+				if (((_local_4.a < 0) && (_local_4.d > 0)))
 				{
-					dif -= Math.PI * 2;
+					_local_7 = -(_local_7);
 				}
-				else if (dif < -Math.PI)
+			}
+			_local_8 = Math.sqrt(((_local_4.c * _local_4.c) + (_local_4.d * _local_4.d)));
+			if (_local_8 == 0)
+			{
+				_local_4.d = (_local_8 = 0.0001);
+			}
+			else
+			{
+				if (((_local_4.d < 0) && (_local_4.a > 0)))
 				{
-					dif += Math.PI * 2;
+					_local_8 = -(_local_8);
 				}
-				finalAngle += dif;
 			}
-			else if ("rotation" in value)
+			_local_9 = Math.atan2(_local_4.b, _local_4.a);
+			if (((_local_4.a < 0) && (_local_4.d >= 0)))
 			{
-				finalAngle = (typeof(value.rotation) == "number") ? value.rotation * _DEG2RAD : Number(value.rotation.split("=").join("")) * _DEG2RAD + angle;
+				_local_9 = (_local_9 + ((_local_9 <= 0) ? Math.PI : -(Math.PI)));
 			}
-
-			var finalSkewX:Number = ("skewX" in value) ? (typeof(value.skewX) == "number") ? Number(value.skewX) * _DEG2RAD : Number(value.skewX.split("=").join("")) * _DEG2RAD + skewX : 0;
-
-			if ("skewY" in value)
-			{ //skewY is just a combination of rotation and skewX
-				var skewY:Number = (typeof(value.skewY) == "number") ? value.skewY * _DEG2RAD : Number(value.skewY.split("=").join("")) * _DEG2RAD - skewX;
-				finalAngle += skewY + skewX;
-				finalSkewX -= skewY;
-			}
-
-			if (finalAngle != angle)
+			_local_10 = (Math.atan2(-(_matrix.c), _matrix.d) - _local_9);
+			_local_11 = _local_9;
+			if (("shortRotation" in _arg_2))
 			{
-				if (("rotation" in value) || ("shortRotation" in value))
+				_local_13 = (((_arg_2.shortRotation * _DEG2RAD) - _local_9) % (Math.PI * 2));
+				if (_local_13 > Math.PI)
 				{
-					_angleChange = finalAngle - angle;
-					finalAngle = angle; //to correctly affect the skewX calculations below
+					_local_13 = (_local_13 - (Math.PI * 2));
 				}
 				else
 				{
-					matrix.rotate(finalAngle - angle);
+					if (_local_13 < -(Math.PI))
+					{
+						_local_13 = (_local_13 + (Math.PI * 2));
+					}
+				}
+				_local_11 = (_local_11 + _local_13);
+			}
+			else
+			{
+				if (("rotation" in _arg_2))
+				{
+					_local_11 = ((typeof(_arg_2.rotation) == "number") ? (_arg_2.rotation * _DEG2RAD) : ((Number(_arg_2.rotation.split("=").join("")) * _DEG2RAD) + _local_9));
 				}
 			}
-
-			if ("scale" in value)
+			_local_12 = (("skewX" in _arg_2) ? ((typeof(_arg_2.skewX) == "number") ? (Number(_arg_2.skewX) * _DEG2RAD) : ((Number(_arg_2.skewX.split("=").join("")) * _DEG2RAD) + _local_10)) : 0);
+			if (("skewY" in _arg_2))
 			{
-				ratioX = Number(value.scale) / scaleX;
-				ratioY = Number(value.scale) / scaleY;
-				if (typeof(value.scale) != "number")
-				{ //relative value
-					ratioX += 1;
-					ratioY += 1;
+				_local_14 = ((typeof(_arg_2.skewY) == "number") ? (_arg_2.skewY * _DEG2RAD) : ((Number(_arg_2.skewY.split("=").join("")) * _DEG2RAD) - _local_10));
+				_local_11 = (_local_11 + (_local_14 + _local_10));
+				_local_12 = (_local_12 - _local_14);
+			}
+			if (_local_11 != _local_9)
+			{
+				if ((("rotation" in _arg_2) || ("shortRotation" in _arg_2)))
+				{
+					_angleChange = (_local_11 - _local_9);
+					_local_11 = _local_9;
+				}
+				else
+				{
+					_local_4.rotate((_local_11 - _local_9));
+				}
+			}
+			if (("scale" in _arg_2))
+			{
+				_local_5 = (Number(_arg_2.scale) / _local_7);
+				_local_6 = (Number(_arg_2.scale) / _local_8);
+				if (typeof(_arg_2.scale) != "number")
+				{
+					_local_5 = (_local_5 + 1);
+					_local_6 = (_local_6 + 1);
 				}
 			}
 			else
 			{
-				if ("scaleX" in value)
+				if (("scaleX" in _arg_2))
 				{
-					ratioX = Number(value.scaleX) / scaleX;
-					if (typeof(value.scaleX) != "number")
-					{ //relative value
-						ratioX += 1;
+					_local_5 = (Number(_arg_2.scaleX) / _local_7);
+					if (typeof(_arg_2.scaleX) != "number")
+					{
+						_local_5 = (_local_5 + 1);
 					}
 				}
-				if ("scaleY" in value)
+				if (("scaleY" in _arg_2))
 				{
-					ratioY = Number(value.scaleY) / scaleY;
-					if (typeof(value.scaleY) != "number")
-					{ //relative value
-						ratioY += 1;
+					_local_6 = (Number(_arg_2.scaleY) / _local_8);
+					if (typeof(_arg_2.scaleY) != "number")
+					{
+						_local_6 = (_local_6 + 1);
 					}
 				}
 			}
-
-			if (finalSkewX != skewX)
+			if (_local_12 != _local_10)
 			{
-				matrix.c = -scaleY * Math.sin(finalSkewX + finalAngle);
-				matrix.d = scaleY * Math.cos(finalSkewX + finalAngle);
+				_local_4.c = (-(_local_8) * Math.sin((_local_12 + _local_11)));
+				_local_4.d = (_local_8 * Math.cos((_local_12 + _local_11)));
 			}
-
-			if ("skewX2" in value)
+			if (("skewX2" in _arg_2))
 			{
-				if (typeof(value.skewX2) == "number")
+				if (typeof(_arg_2.skewX2) == "number")
 				{
-					matrix.c = Math.tan(0 - (value.skewX2 * _DEG2RAD));
+					_local_4.c = Math.tan((0 - (_arg_2.skewX2 * _DEG2RAD)));
 				}
 				else
 				{
-					matrix.c += Math.tan(0 - (Number(value.skewX2) * _DEG2RAD));
+					_local_4.c = (_local_4.c + Math.tan((0 - (Number(_arg_2.skewX2) * _DEG2RAD))));
 				}
 			}
-			if ("skewY2" in value)
+			if (("skewY2" in _arg_2))
 			{
-				if (typeof(value.skewY2) == "number")
+				if (typeof(_arg_2.skewY2) == "number")
 				{
-					matrix.b = Math.tan(value.skewY2 * _DEG2RAD);
+					_local_4.b = Math.tan((_arg_2.skewY2 * _DEG2RAD));
 				}
 				else
 				{
-					matrix.b += Math.tan(Number(value.skewY2) * _DEG2RAD);
+					_local_4.b = (_local_4.b + Math.tan((Number(_arg_2.skewY2) * _DEG2RAD)));
 				}
 			}
-
-			if (ratioX || ratioX == 0)
-			{ //faster than isNaN()
-				matrix.a *= ratioX;
-				matrix.b *= ratioX;
-			}
-			if (ratioY || ratioY == 0)
+			if (((_local_5) || (_local_5 == 0)))
 			{
-				matrix.c *= ratioY;
-				matrix.d *= ratioY;
+				_local_4.a = (_local_4.a * _local_5);
+				_local_4.b = (_local_4.b * _local_5);
 			}
-			_aChange = matrix.a - _aStart;
-			_bChange = matrix.b - _bStart;
-			_cChange = matrix.c - _cStart;
-			_dChange = matrix.d - _dStart;
+			if (((_local_6) || (_local_6 == 0)))
+			{
+				_local_4.c = (_local_4.c * _local_6);
+				_local_4.d = (_local_4.d * _local_6);
+			}
+			_aChange = (_local_4.a - _aStart);
+			_bChange = (_local_4.b - _bStart);
+			_cChange = (_local_4.c - _cStart);
+			_dChange = (_local_4.d - _dStart);
 		}
-		return true;
+		return (true);
 	}
 
-	/** @private **/
-	override public function setRatio(v:Number):void
-	{
-		_matrix.a = _aStart + (v * _aChange);
-		_matrix.b = _bStart + (v * _bChange);
-		_matrix.c = _cStart + (v * _cChange);
-		_matrix.d = _dStart + (v * _dChange);
-		if (_angleChange)
-		{
-			//about 3-4 times faster than _matrix.rotate(_angleChange * n);
-			var cos:Number = Math.cos(_angleChange * v), sin:Number = Math.sin(_angleChange * v), a:Number = _matrix.a,
-					c:Number = _matrix.c;
-			_matrix.a = a * cos - _matrix.b * sin;
-			_matrix.b = a * sin + _matrix.b * cos;
-			_matrix.c = c * cos - _matrix.d * sin;
-			_matrix.d = c * sin + _matrix.d * cos;
-		}
-		_matrix.tx = _txStart + (v * _txChange);
-		_matrix.ty = _tyStart + (v * _tyChange);
-		_transform.matrix = _matrix;
-	}
 
 }
-}
+}//package com.greensock.plugins
+

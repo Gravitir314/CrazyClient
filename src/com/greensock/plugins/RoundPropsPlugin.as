@@ -1,110 +1,91 @@
-/**
- * VERSION: 12.0
- * DATE: 2012-01-14
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.RoundPropsPlugin
+
 package com.greensock.plugins
 {
 import com.greensock.TweenLite;
 import com.greensock.core.PropTween;
 
-/**
- * If you'd like the inbetween values in a tween to always get rounded to the nearest integer, use the roundProps
- * special property. Just pass in a comma-delimited String containing the property names that you'd like rounded. For example,
- * if you're tweening the x, y, and alpha properties of mc and you want to round the x and y values (not alpha)
- * every time the tween is rendered, you'd do: <br /><br /><code>
- *
- *    TweenMax.to(mc, 2, {x:300, y:200, alpha:0.5, roundProps:"x,y"});<br /><br /></code>
- *
- * <p><b>USAGE:</b></p>
- * <listing version="3.0">
- import com.greensock.TweenMax;
- import com.greensock.plugins.RoundPropsPlugin;
- TweenPlugin.activate([RoundPropsPlugin]); //activation is permanent in the SWF, so this line only needs to be run once.
-
- TweenMax.to(mc, 2, {x:300, y:200, alpha:0.5, roundProps:"x,y"});
- </listing>
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class RoundPropsPlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
 
-	/** @private **/
+	public static const API:Number = 2;
+
 	protected var _tween:TweenLite;
 
-	/** @private **/
 	public function RoundPropsPlugin()
 	{
 		super("roundProps", -1);
 		_overwriteProps.length = 0;
 	}
 
-	/** @private **/
-	override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
+	public function _add(_arg_1:Object, _arg_2:String, _arg_3:Number, _arg_4:Number):void
 	{
-		_tween = tween;
-		return true;
+		_addTween(_arg_1, _arg_2, _arg_3, (_arg_3 + _arg_4), _arg_2, true);
+		_overwriteProps[_overwriteProps.length] = _arg_2;
 	}
 
-	/** @private **/
+	override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
+	{
+		_tween = _arg_3;
+		return (true);
+	}
+
 	public function _onInitAllProps():Boolean
 	{
-		var rp:Array = (_tween.vars.roundProps is Array) ? _tween.vars.roundProps : _tween.vars.roundProps.split(","),
-				i:int = rp.length, lookup:Object = {}, rpt:PropTween = _tween._propLookup.roundProps, prop:String,
-				pt:PropTween, next:PropTween;
-		while (--i > -1)
+		var _local_5:String;
+		var _local_6:PropTween;
+		var _local_7:PropTween;
+		var _local_1:Array = ((_tween.vars.roundProps is Array) ? _tween.vars.roundProps : _tween.vars.roundProps.split(","));
+		var _local_2:int = _local_1.length;
+		var _local_3:Object = {};
+		var _local_4:PropTween = _tween._propLookup.roundProps;
+		while (--_local_2 > -1)
 		{
-			lookup[rp[i]] = 1;
+			_local_3[_local_1[_local_2]] = 1;
 		}
-		i = rp.length;
-		while (--i > -1)
+		_local_2 = _local_1.length;
+		while (--_local_2 > -1)
 		{
-			prop = rp[i];
-			pt = _tween._firstPT;
-			while (pt)
+			_local_5 = _local_1[_local_2];
+			_local_6 = _tween._firstPT;
+			while (_local_6)
 			{
-				next = pt._next; //record here, because it may get removed
-				if (pt.pg)
+				_local_7 = _local_6._next;
+				if (_local_6.pg)
 				{
-					pt.t._roundProps(lookup, true);
+					_local_6.t._roundProps(_local_3, true);
 				}
-				else if (pt.n == prop)
+				else
 				{
-					_add(pt.t, prop, pt.s, pt.c);
-					//remove from linked list
-					if (next)
+					if (_local_6.n == _local_5)
 					{
-						next._prev = pt._prev;
+						_add(_local_6.t, _local_5, _local_6.s, _local_6.c);
+						if (_local_7)
+						{
+							_local_7._prev = _local_6._prev;
+						}
+						if (_local_6._prev)
+						{
+							_local_6._prev._next = _local_7;
+						}
+						else
+						{
+							if (_tween._firstPT == _local_6)
+							{
+								_tween._firstPT = _local_7;
+							}
+						}
+						_local_6._next = (_local_6._prev = null);
+						_tween._propLookup[_local_5] = _local_4;
 					}
-					if (pt._prev)
-					{
-						pt._prev._next = next;
-					}
-					else if (_tween._firstPT == pt)
-					{
-						_tween._firstPT = next;
-					}
-					pt._next = pt._prev = null;
-					_tween._propLookup[prop] = rpt;
 				}
-				pt = next;
+				_local_6 = _local_7;
 			}
 		}
-		return false;
+		return (false);
 	}
 
-	/** @private **/
-	public function _add(target:Object, p:String, s:Number, c:Number):void
-	{
-		_addTween(target, p, s, s + c, p, true);
-		_overwriteProps[_overwriteProps.length] = p;
-	}
 
 }
-}
+}//package com.greensock.plugins
+

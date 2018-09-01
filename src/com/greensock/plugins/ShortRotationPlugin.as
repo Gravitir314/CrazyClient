@@ -1,87 +1,53 @@
-/**
- * VERSION: 12.0
- * DATE: 2012-02-14
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.ShortRotationPlugin
+
 package com.greensock.plugins
 {
 import com.greensock.TweenLite;
 
-/**
- * [AS3/AS2 only] To tween any rotation property of the target object in the shortest direction, use "shortRotation"
- * For example, if <code>myObject.rotation</code> is currently 170 degrees and you want to tween it to -170 degrees,
- * a normal rotation tween would travel a total of 340 degrees in the counter-clockwise direction,
- * but if you use shortRotation, it would travel 20 degrees in the clockwise direction instead. You
- * can define any number of rotation properties in the shortRotation object which makes 3D tweening
- * easier, like:<p><code>
- *
- *        TweenMax.to(mc, 2, {shortRotation:{rotationX:-170, rotationY:35, rotationZ:200}}); </code></p>
- *
- * <p>Normally shortRotation is defined in degrees, but if you prefer to have it work with radians instead,
- * simply set the <code>useRadians</code> special property to <code>true</code> like:</p><p><code>
- *
- *        TweenMax.to(myCustomObject, 2, {shortRotation:{customRotationProperty:Math.PI, useRadians:true}});</code></p>
- *
- * <p><b>USAGE:</b></p>
- * <listing version="3.0">
- import com.greensock.TweenLite;
- import com.greensock.plugins.TweenPlugin;
- import com.greensock.plugins.ShortRotationPlugin;
- TweenPlugin.activate([ShortRotationPlugin]); //activation is permanent in the SWF, so this line only needs to be run once.
-
- TweenLite.to(mc, 1, {shortRotation:{rotation:-170}});
-
- //or for a 3D tween with multiple rotation values...
- TweenLite.to(mc, 1, {shortRotation:{rotationX:-170, rotationY:35, rotationZ:10}});
- </listing>
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class ShortRotationPlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
 
-	/** @private **/
+	public static const API:Number = 2;
+
 	public function ShortRotationPlugin()
 	{
 		super("shortRotation");
 		_overwriteProps.pop();
 	}
 
-	/** @private **/
-	override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
+	public function _initRotation(_arg_1:Object, _arg_2:String, _arg_3:Number, _arg_4:Number, _arg_5:Boolean = false):void
 	{
-		if (typeof(value) == "number")
+		var _local_6:Number = ((_arg_5) ? (Math.PI * 2) : 360);
+		var _local_7:Number = ((_arg_4 - _arg_3) % _local_6);
+		if (_local_7 != (_local_7 % (_local_6 / 2)))
 		{
-			return false;
+			_local_7 = ((_local_7 < 0) ? (_local_7 + _local_6) : (_local_7 - _local_6));
 		}
-		var useRadians:Boolean = Boolean(value.useRadians == true), start:Number;
-		for (var p:String in value)
+		_addTween(_arg_1, _arg_2, _arg_3, (_arg_3 + _local_7), _arg_2);
+		_overwriteProps[_overwriteProps.length] = _arg_2;
+	}
+
+	override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
+	{
+		var _local_5:Number;
+		var _local_6:String;
+		if (typeof(_arg_2) == "number")
 		{
-			if (p != "useRadians")
+			return (false);
+		}
+		var _local_4:Boolean = Boolean((_arg_2.useRadians == true));
+		for (_local_6 in _arg_2)
+		{
+			if (_local_6 != "useRadians")
 			{
-				start = (target[p] is Function) ? target[((p.indexOf("set") || !("get" + p.substr(3) in target)) ? p : "get" + p.substr(3))]() : target[p];
-				_initRotation(target, p, start, (typeof(value[p]) == "number") ? Number(value[p]) : start + Number(value[p].split("=").join("")), useRadians);
+				_local_5 = ((_arg_1[_local_6] is Function) ? _arg_1[(((_local_6.indexOf("set")) || (!(("get" + _local_6.substr(3)) in _arg_1))) ? _local_6 : ("get" + _local_6.substr(3)))]() : _arg_1[_local_6]);
+				_initRotation(_arg_1, _local_6, _local_5, ((typeof(_arg_2[_local_6]) == "number") ? Number(_arg_2[_local_6]) : (_local_5 + Number(_arg_2[_local_6].split("=").join("")))), _local_4);
 			}
 		}
-		return true;
+		return (true);
 	}
 
-	/** @private **/
-	public function _initRotation(target:Object, p:String, start:Number, end:Number, useRadians:Boolean = false):void
-	{
-		var cap:Number = useRadians ? Math.PI * 2 : 360, dif:Number = (end - start) % cap;
-		if (dif != dif % (cap / 2))
-		{
-			dif = (dif < 0) ? dif + cap : dif - cap;
-		}
-		_addTween(target, p, start, start + dif, p);
-		_overwriteProps[_overwriteProps.length] = p;
-	}
 
 }
-}
+}//package com.greensock.plugins
+

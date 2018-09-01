@@ -25,6 +25,7 @@ public class TransformAroundCenterPlugin extends TransformAroundPointPlugin
 		return (super._onInitTween(_arg_1, _arg_2, _arg_3));
 	}
 
+
 }
 }//package com.greensock.plugins
 

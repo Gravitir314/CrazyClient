@@ -1,61 +1,16 @@
-/**
- * VERSION: 12.0
- * DATE: 2012-01-14
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.HexColorsPlugin
+
 package com.greensock.plugins
 {
 import com.greensock.TweenLite;
 
-/**
- * [AS3/AS2 only] Although hex colors are technically numbers, if you try to tween them conventionally,
- * you'll notice that they don't tween smoothly. To tween them properly, the red, green, and
- * blue components must be extracted and tweened independently. The HexColorsPlugin makes it easy.
- * To tween a property of your object that's a hex color to another hex color, just pass a hexColors
- * Object with properties named the same as your object's hex color properties. For example,
- * if myObject has a "myHexColor" property that you'd like to tween to red (<code>0xFF0000</code>) over the
- * course of 2 seconds, you'd do:<p><code>
- *
- *    TweenMax.to(myObject, 2, {hexColors:{myHexColor:0xFF0000}});</code></p>
- *
- * <p>You can pass in any number of properties. </p>
- *
- * <p><b>USAGE:</b></p>
- * <listing version="3.0">
- import com.greensock.TweenLite;
- import com.greensock.plugins.TweenPlugin;
- import com.greensock.plugins.HexColorsPlugin;
- TweenPlugin.activate([HexColorsPlugin]); //activation is permanent in the SWF, so this line only needs to be run once.
-
- TweenLite.to(myObject, 2, {hexColors:{myProperty:0xFF0000}});
- </listing>
- *
- * <p>Or if you just want to tween a color and apply it somewhere on every frame, you could do:</p>
- * <listing version="3.0">
- var myColor:Object = {hex:0xFF0000};
- TweenLite.to(myColor, 2, {hexColors:{hex:0x0000FF}, onUpdate:applyColor});
- function applyColor() {
-	mc.graphics.clear();
-	mc.graphics.beginFill(myColor.hex, 1);
-	mc.graphics.drawRect(0, 0, 100, 100);
-	mc.graphics.endFill();
-}
- </listing>
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class HexColorsPlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
 
-	/** @private **/
+	public static const API:Number = 2;
+
 	protected var _colors:Array;
 
-	/** @private **/
 	public function HexColorsPlugin()
 	{
 		super("hexColors");
@@ -63,88 +18,97 @@ public class HexColorsPlugin extends TweenPlugin
 		_colors = [];
 	}
 
-	/** @private **/
-	override public function _onInitTween(target:Object, value:*, tween:TweenLite):Boolean
+	public function _initColor(_arg_1:Object, _arg_2:String, _arg_3:uint):void
 	{
-		for (var p:String in value)
+		var _local_6:uint;
+		var _local_7:uint;
+		var _local_8:uint;
+		var _local_4:* = (typeof(_arg_1[_arg_2]) == "function");
+		var _local_5:uint = ((_local_4) ? _arg_1[(((_arg_2.indexOf("set")) || (!(("get" + _arg_2.substr(3)) in _arg_1))) ? _arg_2 : ("get" + _arg_2.substr(3)))]() : _arg_1[_arg_2]);
+		if (_local_5 != _arg_3)
 		{
-			_initColor(target, p, uint(value[p]));
-		}
-		return true;
-	}
-
-	/** @private **/
-	public function _initColor(target:Object, p:String, end:uint):void
-	{
-		var isFunc:Boolean = (typeof(target[p]) == "function"),
-				start:uint = (!isFunc) ? target[p] : target[((p.indexOf("set") || !("get" + p.substr(3) in target)) ? p : "get" + p.substr(3))]();
-		if (start != end)
-		{
-			var r:uint = start >> 16, g:uint = (start >> 8) & 0xff, b:uint = start & 0xff;
-			_colors[_colors.length] = new ColorProp(target, p, isFunc, r, (end >> 16) - r, g, ((end >> 8) & 0xff) - g, b, (end & 0xff) - b);
-			_overwriteProps[_overwriteProps.length] = p;
+			_local_6 = (_local_5 >> 16);
+			_local_7 = ((_local_5 >> 8) & 0xFF);
+			_local_8 = (_local_5 & 0xFF);
+			_colors[_colors.length] = new ColorProp(_arg_1, _arg_2, _local_4, _local_6, ((_arg_3 >> 16) - _local_6), _local_7, (((_arg_3 >> 8) & 0xFF) - _local_7), _local_8, ((_arg_3 & 0xFF) - _local_8));
+			_overwriteProps[_overwriteProps.length] = _arg_2;
 		}
 	}
 
-	/** @private **/
-	override public function _kill(lookup:Object):Boolean
+	override public function setRatio(_arg_1:Number):void
 	{
-		var i:int = _colors.length;
-		while (i--)
+		var _local_3:ColorProp;
+		var _local_4:Number;
+		var _local_2:int = _colors.length;
+		while (--_local_2 > -1)
 		{
-			if (lookup[_colors[i].p] != null)
+			_local_3 = _colors[_local_2];
+			_local_4 = ((((_local_3.rs + (_arg_1 * _local_3.rc)) << 16) | ((_local_3.gs + (_arg_1 * _local_3.gc)) << 8)) | (_local_3.bs + (_arg_1 * _local_3.bc)));
+			if (_local_3.f)
 			{
-				_colors.splice(i, 1);
-			}
-		}
-		return super._kill(lookup);
-	}
-
-	/** @private **/
-	override public function setRatio(v:Number):void
-	{
-		var i:int = _colors.length, clr:ColorProp, val:Number;
-		while (--i > -1)
-		{
-			clr = _colors[i];
-			val = (clr.rs + (v * clr.rc)) << 16 | (clr.gs + (v * clr.gc)) << 8 | (clr.bs + (v * clr.bc));
-			if (clr.f)
-			{
-				clr.t[clr.p](val);
+				var _local_5:* = _local_3.t;
+				(_local_5[_local_3.p](_local_4));
 			}
 			else
 			{
-				clr.t[clr.p] = val;
+				_local_3.t[_local_3.p] = _local_4;
 			}
 		}
 	}
 
+	override public function _onInitTween(_arg_1:Object, _arg_2:*, _arg_3:TweenLite):Boolean
+	{
+		var _local_4:String;
+		for (_local_4 in _arg_2)
+		{
+			_initColor(_arg_1, _local_4, uint(_arg_2[_local_4]));
+		}
+		return (true);
+	}
+
+	override public function _kill(_arg_1:Object):Boolean
+	{
+		var _local_2:int = _colors.length;
+		while (_local_2--)
+		{
+			if (_arg_1[_colors[_local_2].p] != null)
+			{
+				_colors.splice(_local_2, 1);
+			}
+		}
+		return (super._kill(_arg_1));
+	}
+
 
 }
-}
+}//package com.greensock.plugins
 
-internal class ColorProp
+class ColorProp
 {
-	public var t:Object;
-	public var p:String;
-	public var f:Boolean;
+
 	public var rs:int;
-	public var rc:int;
+	public var f:Boolean;
 	public var gs:int;
+	public var p:String;
+	public var rc:int;
+	public var t:Object;
+	public var bc:int;
 	public var gc:int;
 	public var bs:int;
-	public var bc:int;
 
-	public function ColorProp(t:Object, p:String, f:Boolean, rs:int, rc:int, gs:int, gc:int, bs:int, bc:int)
+	public function ColorProp(_arg_1:Object, _arg_2:String, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:int)
 	{
-		this.t = t;
-		this.p = p;
-		this.f = f;
-		this.rs = rs;
-		this.rc = rc;
-		this.gs = gs;
-		this.gc = gc;
-		this.bs = bs;
-		this.bc = bc;
+		this.t = _arg_1;
+		this.p = _arg_2;
+		this.f = _arg_3;
+		this.rs = _arg_4;
+		this.rc = _arg_5;
+		this.gs = _arg_6;
+		this.gc = _arg_7;
+		this.bs = _arg_8;
+		this.bc = _arg_9;
 	}
+
 }
+
+

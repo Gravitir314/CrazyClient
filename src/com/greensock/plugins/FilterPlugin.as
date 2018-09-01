@@ -1,9 +1,5 @@
-/**
- * VERSION: 12.0.1
- * DATE: 2013-05-21
- * AS3
- * UPDATES AND DOCS AT: http://www.greensock.com
- **/
+﻿//com.greensock.plugins.FilterPlugin
+
 package com.greensock.plugins
 {
 import com.greensock.TweenLite;
@@ -11,134 +7,124 @@ import com.greensock.TweenLite;
 import flash.filters.BitmapFilter;
 import flash.filters.BlurFilter;
 
-/**
- * @private
- * Base class for all filter plugins (like blurFilter, colorMatrixFilter, glowFilter, etc.). Handles common routines.
- * There is no reason to use this class directly.<br /><br />
- *
- * <p><strong>Copyright 2008-2014, GreenSock. All rights reserved.</strong> This work is subject to the terms in <a href="http://www.greensock.com/terms_of_use.html">http://www.greensock.com/terms_of_use.html</a> or for <a href="http://www.greensock.com/club/">Club GreenSock</a> members, the software agreement that was issued with the membership.</p>
- *
- * @author Jack Doyle, jack@greensock.com
- */
 public class FilterPlugin extends TweenPlugin
 {
-	/** @private **/
-	public static const API:Number = 2; //If the API/Framework for plugins changes in the future, this number helps determine compatibility
 
-	/** @private **/
-	protected var _target:Object;
-	/** @private **/
-	protected var _type:Class;
-	/** @private **/
-	protected var _filter:BitmapFilter;
-	/** @private **/
-	protected var _index:int;
-	/** @private **/
+	public static const API:Number = 2;
+
 	protected var _remove:Boolean;
-	/** @private **/
 	private var _tween:TweenLite;
+	protected var _target:Object;
+	protected var _index:int;
+	protected var _filter:BitmapFilter;
+	protected var _type:Class;
 
-	/** @private **/
-	public function FilterPlugin(props:String = "", priority:Number = 0)
+	public function FilterPlugin(_arg_1:String = "", _arg_2:Number = 0)
 	{
-		super(props, priority);
+		super(_arg_1, _arg_2);
 	}
 
-	/** @private **/
-	protected function _initFilter(target:*, props:Object, tween:TweenLite, type:Class, defaultFilter:BitmapFilter, propNames:Array):Boolean
+	protected function _initFilter(_arg_1:*, _arg_2:Object, _arg_3:TweenLite, _arg_4:Class, _arg_5:BitmapFilter, _arg_6:Array):Boolean
 	{
-		_target = target;
-		_tween = tween;
-		_type = type;
-		var filters:Array = _target.filters, p:String, i:int, colorTween:HexColorsPlugin;
-		var extras:Object = (props is BitmapFilter) ? {} : props;
-		if (extras.index != null)
+		var _local_8:String;
+		var _local_9:int;
+		var _local_10:HexColorsPlugin;
+		_target = _arg_1;
+		_tween = _arg_3;
+		_type = _arg_4;
+		var _local_7:Array = _target.filters;
+		var _local_11:Object = ((_arg_2 is BitmapFilter) ? {} : _arg_2);
+		if (_local_11.index != null)
 		{
-			_index = extras.index;
+			_index = _local_11.index;
 		}
 		else
 		{
-			_index = filters.length;
-			if (extras.addFilter != true)
+			_index = _local_7.length;
+			if (_local_11.addFilter != true)
 			{
-				while (--_index > -1 && !(filters[_index] is _type))
+				do
 				{
-				}
+				} while (((--_index > -1) && (!(_local_7[_index] is _type))));
 			}
 		}
-		if (_index < 0 || !(filters[_index] is _type))
+		if (((_index < 0) || (!(_local_7[_index] is _type))))
 		{
 			if (_index < 0)
 			{
-				_index = filters.length;
+				_index = _local_7.length;
 			}
-			if (_index > filters.length)
-			{ //in case the requested index is too high, pad the lower elements with BlurFilters that have a blur of 0. 
-				i = filters.length - 1;
-				while (++i < _index)
-				{
-					filters[i] = new BlurFilter(0, 0, 1);
-				}
-			}
-			filters[_index] = defaultFilter;
-			_target.filters = filters;
-		}
-		_filter = filters[_index];
-		_remove = (extras.remove == true);
-		i = propNames.length;
-		while (--i > -1)
-		{
-			p = propNames[i];
-			if (p in props && _filter[p] != props[p])
+			if (_index > _local_7.length)
 			{
-				if (p == "color" || p == "highlightColor" || p == "shadowColor")
+				_local_9 = (_local_7.length - 1);
+				while (++_local_9 < _index)
 				{
-					colorTween = new HexColorsPlugin();
-					colorTween._initColor(_filter, p, props[p]);
-					_addTween(colorTween, "setRatio", 0, 1, _propName);
+					_local_7[_local_9] = new BlurFilter(0, 0, 1);
 				}
-				else if (p == "quality" || p == "inner" || p == "knockout" || p == "hideObject")
+			}
+			_local_7[_index] = _arg_5;
+			_target.filters = _local_7;
+		}
+		_filter = _local_7[_index];
+		_remove = (_local_11.remove == true);
+		_local_9 = _arg_6.length;
+		while (--_local_9 > -1)
+		{
+			_local_8 = _arg_6[_local_9];
+			if (((_local_8 in _arg_2) && (!(_filter[_local_8] == _arg_2[_local_8]))))
+			{
+				if ((((_local_8 == "color") || (_local_8 == "highlightColor")) || (_local_8 == "shadowColor")))
 				{
-					_filter[p] = props[p];
+					_local_10 = new HexColorsPlugin();
+					_local_10._initColor(_filter, _local_8, _arg_2[_local_8]);
+					_addTween(_local_10, "setRatio", 0, 1, _propName);
 				}
 				else
 				{
-					_addTween(_filter, p, _filter[p], props[p], _propName);
+					if (((((_local_8 == "quality") || (_local_8 == "inner")) || (_local_8 == "knockout")) || (_local_8 == "hideObject")))
+					{
+						_filter[_local_8] = _arg_2[_local_8];
+					}
+					else
+					{
+						_addTween(_filter, _local_8, _filter[_local_8], _arg_2[_local_8], _propName);
+					}
 				}
 			}
 		}
-		return true;
+		return (true);
 	}
 
-	/** @private **/
-	override public function setRatio(v:Number):void
+	override public function setRatio(_arg_1:Number):void
 	{
-		super.setRatio(v);
-		var filters:Array = _target.filters;
-		if (!(filters[_index] is _type))
-		{ //a filter may have been added or removed since the tween began, changing the index.
-			_index = filters.length; //default (in case it was removed)
-			while (--_index > -1 && !(filters[_index] is _type))
+		super.setRatio(_arg_1);
+		var _local_2:Array = _target.filters;
+		if (!(_local_2[_index] is _type))
+		{
+			_index = _local_2.length;
+			do
 			{
-			}
+			} while (((--_index > -1) && (!(_local_2[_index] is _type))));
 			if (_index == -1)
 			{
-				_index = filters.length;
+				_index = _local_2.length;
 			}
 		}
-		if (v == 1 && _remove && _tween._time == _tween._duration && _tween.data != "isFromStart")
+		if (((((_arg_1 == 1) && (_remove)) && (_tween._time == _tween._duration)) && (!(_tween.data == "isFromStart"))))
 		{
-			if (_index < filters.length)
+			if (_index < _local_2.length)
 			{
-				filters.splice(_index, 1);
+				_local_2.splice(_index, 1);
 			}
 		}
 		else
 		{
-			filters[_index] = _filter;
+			_local_2[_index] = _filter;
 		}
-		_target.filters = filters;
+		_target.filters = _local_2;
 	}
 
+
 }
-}
+}//package com.greensock.plugins
+
