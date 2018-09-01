@@ -411,7 +411,6 @@ public class Parameters
 		setDefaultKey("msg7key", KeyCodes.UNSET);
 		setDefaultKey("msg8key", KeyCodes.UNSET);
 		setDefaultKey("msg9key", KeyCodes.UNSET);
-		setDefault("spamFilter", ["realmk!ngs", "rea!mkings", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org", "realmgold"]);
 		setDefault("eventCalls", ["Skull_Shrine.new", "Pentaract.new", "Cube_God.new", "Ghost_Ship.new", "shtrs_Defense_System.new", "Grand_Sphinx.new", "Hermit_God.new", "Temple_Encounter.new", "Lord_of_the_Lost_Lands.new", "Dragon_Head_Leader.new", "LH_Lost_Sentry.new"]);
 		setDefault("friendList2", []);
 		setDefault("tptoList", ["tp", "udl", "manor"]);

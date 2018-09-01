@@ -81,30 +81,27 @@ public class TextHandler
 	{
 		var _local_3:String;
 		var _local_4:String;
-		var _local_5:String;
 		var _local_6:String;
 		var _local_7:String;
 		var _local_8:String;
-		var _local_9:Array;
 		var _local_10:Array;
 		var _local_11:Vector.<Boolean>;
 		var _local_12:int;
 		var _local_13:Array;
 		var _local_16:int;
-		var _local_2:String = _arg_1.name_;
-		var _local_14:* = (_arg_1.numStars_ == -1);
+		var _local_14:Boolean = (_arg_1.numStars_ == -1);
 		var _local_15:Player = this.hudModel.gameSprite.map.player_;
-		if (((((!(Parameters.data_.chatAll)) && (!(_arg_1.name_ == this.model.player.name_))) && (!(_local_14))) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))
+		if (!Parameters.data_.chatAll && _arg_1.name_ != this.model.player.name_ && !_local_14 && !this.isSpecialRecipientChat(_arg_1.recipient_))
 		{
-			if (!((_arg_1.recipient_ == Parameters.GUILD_CHAT_NAME) && (Parameters.data_.chatGuild)))
+			if (_arg_1.recipient_ != Parameters.GUILD_CHAT_NAME && Parameters.data_.chatGuild)
 			{
-				if (!((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatWhisper)))
+				if (_arg_1.recipient_ == "" && !Parameters.data_.chatWhisper)
 				{
 					return;
 				}
 			}
 		}
-		if ((((!(_arg_1.recipient_ == "")) && (Parameters.data_.chatFriend)) && (!(this.socialModel.isMyFriend(_arg_1.recipient_)))))
+		if (_arg_1.recipient_ != "" && Parameters.data_.chatFriend && !this.socialModel.isMyFriend(_arg_1.recipient_))
 		{
 			return;
 		}
@@ -115,6 +112,13 @@ public class TextHandler
 		if ((((this.hudModel.gameSprite.map.name_ == "Nexus") && (_arg_1.name_.length > 0)) && (_arg_1.name_.charAt(0) == "#")))
 		{
 			return;
+		}
+		if (!_local_14 && _arg_1.name_.indexOf("#") == -1)
+		{
+			if (_arg_1.text_.toLowerCase().match("([,.]\\s+|[,.])(c[o0()-]+m|[1il]nf[o0]|n[e3]t|[o0]rg|[1li]n|c[o0]|uk|me|club|xyz|u[s$]|[1ln]n)") != null)
+			{
+				return;
+			}
 		}
 		_local_6 = _arg_1.text_.toLowerCase();
 		for each (_local_4 in Parameters.data_.wordNotiList)
@@ -184,13 +188,6 @@ public class TextHandler
 			}
 		}
 		_local_6 = _arg_1.text_.toLowerCase();
-		for each (_local_7 in Parameters.data_.spamFilter)
-		{
-			if (_local_6.indexOf(_local_7) != -1)
-			{
-				return;
-			}
-		}
 		if (_arg_1.recipient_)
 		{
 			if (((!(_arg_1.recipient_ == this.model.player.name_)) && (!(this.isSpecialRecipientChat(_arg_1.recipient_)))))

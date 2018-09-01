@@ -367,26 +367,6 @@
       <Explanation>Clears the local friends list</Explanation>
    </Article>
    <Article>
-      <Command>/asp &lt;word&gt;</Command>
-      <Explanation>Adds a word to the spam filter list&#xA;Messages containing filtered words will not be displayed</Explanation>
-   </Article>
-   <Article>
-      <Command>/rsp &lt;word&gt;</Command>
-      <Explanation>Removes a word from the spam filter list</Explanation>
-   </Article>
-   <Article>
-      <Command>/splist</Command>
-      <Explanation>Prints out the spam filter list</Explanation>
-   </Article>
-   <Article>
-      <Command>/spdefault</Command>
-      <Explanation>Sets the spam filter list to its default values</Explanation>
-   </Article>
-   <Article>
-      <Command>/spclear</Command>
-      <Explanation>Clears the spam filter list</Explanation>
-   </Article>
-   <Article>
       <Command>/atp &lt;word&gt;</Command>
       <Explanation>Adds a word to the teleport keyword list&#xA;You can teleport to the last person saying the keyword with a hotkey set in options</Explanation>
    </Article>

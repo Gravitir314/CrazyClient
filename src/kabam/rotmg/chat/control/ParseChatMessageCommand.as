@@ -171,27 +171,6 @@ public class ParseChatMessageCommand
 			Parameters.save();
 			return (true);
 		}
-		_local_2 = _arg_1.match("^/asp (.+)$");
-		if (_local_2 != null)
-		{
-			_local_4 = false;
-			for each (_local_5 in Parameters.data_.spamFilter)
-			{
-				if (_local_5 == _local_2[1])
-				{
-					_local_4 = true;
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" already being filtered out.')));
-					break;
-				}
-			}
-			if (_local_4 == false)
-			{
-				Parameters.data_.spamFilter.push(_local_2[1]);
-				this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('Added "' + _local_2[1]) + '" to spamfilter list.')));
-			}
-			Parameters.save();
-			return (true);
-		}
 		_local_2 = _arg_1.match("^/afr (\\w+)$");
 		if (_local_2 != null)
 		{
@@ -376,29 +355,6 @@ public class ParseChatMessageCommand
 			Parameters.save();
 			return (true);
 		}
-		_local_2 = _arg_1.match("^/rsp (.+)$");
-		if (_local_2 != null)
-		{
-			_local_3 = false;
-			_local_4 = 0;
-			while (_local_4 < Parameters.data_.spamFilter.length)
-			{
-				if (Parameters.data_.spamFilter[_local_4] == _local_2[1])
-				{
-					_local_3 = true;
-					Parameters.data_.spamFilter.splice(_local_4, 1);
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" removed from spamfilter list.')));
-					break;
-				}
-				_local_4++;
-			}
-			if (_local_3 == false)
-			{
-				this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (('"' + _local_2[1]) + '" not found in spamfilter list.')));
-			}
-			Parameters.save();
-			return (true);
-		}
 		_local_2 = _arg_1.match("^/rfr (\\w+)$");
 		if (_local_2 != null)
 		{
@@ -552,17 +508,6 @@ public class ParseChatMessageCommand
 			}
 			return (true);
 		}
-		if (_arg_1 == "/splist")
-		{
-			this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Spamfilter list (" + Parameters.data_.spamFilter.length) + " filtered words):")));
-			_local_2 = 0;
-			while (_local_2 < Parameters.data_.spamFilter.length)
-			{
-				this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, Parameters.data_.spamFilter[_local_2]));
-				_local_2++;
-			}
-			return (true);
-		}
 		if (_arg_1 == "/frlist")
 		{
 			this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (("Friend list (" + Parameters.data_.friendList2.length) + " friends):")));
@@ -637,13 +582,6 @@ public class ParseChatMessageCommand
 			Parameters.save();
 			return (true);
 		}
-		if (_arg_1 == "/spclear")
-		{
-			Parameters.data_.spamFilter = [];
-			this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Spamfilter list cleared."));
-			Parameters.save();
-			return (true);
-		}
 		if (_arg_1 == "/frclear")
 		{
 			Parameters.data_.friendList2 = [];
@@ -695,13 +633,6 @@ public class ParseChatMessageCommand
 		{
 			Parameters.data_.AAException = [3441, 3414, 3417, 3448, 3449, 3472, 3334, 5952, 2354, 2369, 3368, 3366, 3367, 3391, 3389, 3390, 5920, 2314, 3412, 3639, 3634, 2327, 1755, 24582, 24351, 24363, 24135, 24133, 24134, 24132, 24136, 3356, 3357, 3358, 3359, 3360, 3361, 3362, 3363, 3364, 2352, 28780, 28781, 28795, 28942, 28957, 28988, 28938, 29291, 29018, 29517, 24338, 29580, 29712, 6282, 29054, 29308, 29309, 29550, 29551, 29258, 29259, 29260, 29261, 29262];
 			this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default exception list restored."));
-			Parameters.save();
-			return (true);
-		}
-		if (_arg_1 == "/spdefault")
-		{
-			Parameters.data_.spamFilter = ["realmk!ngs", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org"];
-			this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Default spamfilter list restored."));
 			Parameters.save();
 			return (true);
 		}
