@@ -59,7 +59,7 @@ public class StatusBar extends Sprite
 		this.defaultForegroundColor = (this.color_ = _arg_3);
 		this.defaultBackgroundColor = (this.backColor_ = _arg_4);
 		this.textColor_ = 0xFFFFFF;
-		if (((!(_arg_5 == null)) && (!(_arg_5.length == 0))))
+		if (_arg_5 != null && _arg_5.length != 0)
 		{
 			this.labelText_ = new TextFieldDisplayConcrete().setSize(14).setColor(this.textColor_);
 			this.labelText_.setBold(true);
@@ -135,7 +135,7 @@ public class StatusBar extends Sprite
 		{
 			_arg_1 = Math.min(_arg_2, Math.max(0, _arg_1));
 		}
-		if (((((_arg_1 == this.val_) && (_arg_2 == this.max_)) && (_arg_3 == this.boost_)) && (_arg_4 == this.maxMax_)))
+		if (_arg_1 == this.val_ && _arg_2 == this.max_ && _arg_3 == this.boost_ && _arg_4 == this.maxMax_)
 		{
 			return;
 		}
@@ -239,13 +239,13 @@ public class StatusBar extends Sprite
 	public function drawWithMouseOver():void
 	{
 		var _local_1:int;
-		var _local_2:* = "";
+		var _local_2:String = "";
 		if (Parameters.data_.toggleToMaxText)
 		{
 			_local_1 = (this.maxMax_ - (this.max_ - this.boost_));
-			if (((this.level_ >= 20) && (_local_1 > 0)))
+			if (this.level_ >= 20 && _local_1 > 0)
 			{
-				_local_2 = (_local_2 + ("|" + Math.ceil((_local_1 / 5)).toString()));
+				_local_2 = _local_2 + "|" + Math.ceil(_local_1 / 5).toString();
 			}
 		}
 		if (this.max_ > 0)

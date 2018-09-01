@@ -27,13 +27,13 @@ public class StatMetersView extends Sprite
 
 	public function StatMetersView(_arg_1:Boolean = true)
 	{
-		this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL);
-		this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME);
+		this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, true);
+		this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, true);
 		this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
 		this.mpBar_.y = 44;
 		this.expBar_.visible = true;
 		this.fameBar_.visible = false;
-		this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, "HP");
+		this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
 		this.hpBar_.y = 16;
 		this.chpBar_ = new StatusBar(176, 12, 14693428, 0x545454, "CL");
 		this.chpBar_.y = 32;
@@ -123,11 +123,11 @@ public class StatMetersView extends Sprite
 			}
 			this.fameBar_.draw(_arg_1.currFame_, _arg_1.nextClassQuestFame_, 0);
 		}
-		this.hpBar_.draw(_arg_1.hp_, _arg_1.maxHP_, _arg_1.maxHPBoost_, _arg_1.maxHPMax_);
-		this.mpBar_.draw(_arg_1.mp_, _arg_1.maxMP_, _arg_1.maxMPBoost_, _arg_1.maxMPMax_);
+		this.hpBar_.draw(_arg_1.hp_, _arg_1.maxHP_, _arg_1.maxHPBoost_, _arg_1.maxHPMax_, _arg_1.level_);
+		this.mpBar_.draw(_arg_1.mp_, _arg_1.maxMP_, _arg_1.maxMPBoost_, _arg_1.maxMPMax_, _arg_1.level_);
 		if (this.chpBar_ != null)
 		{
-			this.chpBar_.draw(int(_arg_1.chp), _arg_1.cmaxhp, _arg_1.cmaxhpboost, _arg_1.maxHPMax_);
+			this.chpBar_.draw(int(_arg_1.chp), _arg_1.cmaxhp, _arg_1.cmaxhpboost, _arg_1.maxHPMax_, _arg_1.level_);
 		}
 	}
 

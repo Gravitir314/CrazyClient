@@ -86,12 +86,12 @@ public class StatsView extends Sprite
 
 	private function drawStats(_arg_1:Player):void
 	{
-		this.stats_[ATTACK].draw(_arg_1.attack_, _arg_1.attackBoost_, _arg_1.attackMax_);
-		this.stats_[DEFENSE].draw(_arg_1.defense_, _arg_1.defenseBoost_, _arg_1.defenseMax_);
-		this.stats_[SPEED].draw(_arg_1.speed_, _arg_1.speedBoost_, _arg_1.speedMax_);
-		this.stats_[DEXTERITY].draw(_arg_1.dexterity_, _arg_1.dexterityBoost_, _arg_1.dexterityMax_);
-		this.stats_[VITALITY].draw(_arg_1.vitality_, _arg_1.vitalityBoost_, _arg_1.vitalityMax_);
-		this.stats_[WISDOM].draw(_arg_1.wisdom_, _arg_1.wisdomBoost_, _arg_1.wisdomMax_);
+		this.stats_[ATTACK].draw(_arg_1.attack_, _arg_1.attackBoost_, _arg_1.attackMax_, _arg_1.level_);
+		this.stats_[DEFENSE].draw(_arg_1.defense_, _arg_1.defenseBoost_, _arg_1.defenseMax_, _arg_1.level_);
+		this.stats_[SPEED].draw(_arg_1.speed_, _arg_1.speedBoost_, _arg_1.speedMax_, _arg_1.level_);
+		this.stats_[DEXTERITY].draw(_arg_1.dexterity_, _arg_1.dexterityBoost_, _arg_1.dexterityMax_, _arg_1.level_);
+		this.stats_[VITALITY].draw(_arg_1.vitality_, _arg_1.vitalityBoost_, _arg_1.vitalityMax_, _arg_1.level_);
+		this.stats_[WISDOM].draw(_arg_1.wisdom_, _arg_1.wisdomBoost_, _arg_1.wisdomMax_, _arg_1.level_);
 	}
 
 	public function dock():void
