@@ -16,8 +16,8 @@ import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 public class CharacterRect extends Sprite
 {
 
-	public static const WIDTH:int = 207;
-	public static const HEIGHT:int = 49;
+	public static const WIDTH:int = 419;
+	public static const HEIGHT:int = 59;
 
 	public var color:uint;
 	public var overColor:uint;

@@ -49,7 +49,6 @@ public class StaticDialog extends Sprite
 	protected var rightButton:DeprecatedTextButton;
 	private var leftButtonKey:String;
 	private var rightButtonKey:String;
-	private var replaceTokens:Object;
 
 	private var outlineFill_:GraphicsSolidFill = new GraphicsSolidFill(0xFFFFFF, 1);
 	private var lineStyle_:GraphicsStroke = new GraphicsStroke(1, false, LineScaleMode.NORMAL, CapsStyle.NONE, JointStyle.ROUND, 3, outlineFill_);
@@ -63,7 +62,6 @@ public class StaticDialog extends Sprite
 	{
 		this.dialogWidth = this.setDialogWidth();
 		this.uiWaiter = new SignalWaiter();
-		this.replaceTokens = this.replaceTokens;
 		this.leftButtonKey = _arg_3;
 		this.rightButtonKey = _arg_4;
 		super();
@@ -250,11 +248,11 @@ public class StaticDialog extends Sprite
 
 	private function removeButtonsIfAlreadyAdded():void
 	{
-		if (((this.leftButton) && (this.box_.contains(this.leftButton))))
+		if (this.leftButton && this.box_.contains(this.leftButton))
 		{
 			this.box_.removeChild(this.leftButton);
 		}
-		if (((this.rightButton) && (this.box_.contains(this.rightButton))))
+		if (this.rightButton && this.box_.contains(this.rightButton))
 		{
 			this.box_.removeChild(this.rightButton);
 		}

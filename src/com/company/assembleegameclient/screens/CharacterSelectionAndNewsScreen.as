@@ -2,9 +2,6 @@
 
 package com.company.assembleegameclient.screens
 {
-import com.company.assembleegameclient.account.ui.CheckBoxField;
-import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.screens.charrects.PotionsNeededDisplay;
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
 import com.company.assembleegameclient.ui.Scrollbar;
 
@@ -40,13 +37,9 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 	private const SCROLLBAR_REQUIREMENT_HEIGHT:Number = 400;
 	private const CHARACTER_LIST_Y_POS:int = 108;
 	private const CHARACTER_LIST_X_POS:int = 18;
-	private const DROP_SHADOW:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
 
 	public var close:Signal;
 	public var showClasses:Signal;
-	public var newCharacter:Signal = new Signal();
-	public var chooseName:Signal = new Signal();
-	public var playGame:Signal = new Signal();
 	public var beginnersPackageButton:BeginnersPackageButton;
 	private var model:PlayerModel;
 	private var isInitialized:Boolean;
@@ -61,14 +54,16 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 	private var characterListHeight:Number;
 	private var lines:Shape;
 	private var scrollBar:Scrollbar;
+	private var menuOptionsBar:MenuOptionsBar;
+	private var BOUNDARY_LINE_ONE_Y:int = 106;
+
+	public var newCharacter:Signal = new Signal();
+	public var chooseName:Signal = new Signal();
+	public var playGame:Signal = new Signal();
+	private const DROP_SHADOW:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
 	private var playButton:TitleMenuOption = ButtonFactory.getPlayButton();
 	private var classesButton:TitleMenuOption = ButtonFactory.getClassesButton();
 	private var backButton:TitleMenuOption = ButtonFactory.getMainButton();
-	private var menuOptionsBar:MenuOptionsBar;
-	private var BOUNDARY_LINE_ONE_Y:int = 106;
-	private var potionDisplay:PotionsNeededDisplay;
-	private var disableNexusCheckBox:CheckBoxField;
-	private var disableAutoReconCheckBox:CheckBoxField;
 
 	public function CharacterSelectionAndNewsScreen()
 	{
@@ -97,7 +92,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		this.createNews();
 		this.createBoundaryLines();
 		this.createOpenCharactersText();
-		this.createPotionDisplay();
 		var _local_2:Graveyard = new Graveyard(_arg_1);
 		if (_local_2.hasCharacters())
 		{
@@ -110,25 +104,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		{
 			this.createChooseNameLink();
 		}
-		this.createDisableNexusCheckBox();
-		this.createDisableAutoReconCheckBox();
-	}
-
-	private function createPotionDisplay():void
-	{
-		this.potionDisplay = new PotionsNeededDisplay();
-		this.potionDisplay.y = 52;
-		this.potionDisplay.x = ((800 - this.potionDisplay.width) / 2);
-		addChild(this.potionDisplay);
-	}
-
-	private function createCreditDisplay():void
-	{
-		this.creditDisplay = new CreditDisplay();
-		this.creditDisplay.draw(this.model.getCredits(), this.model.getFame());
-		this.creditDisplay.x = this.getReferenceRectangle().width;
-		this.creditDisplay.y = 20;
-		addChild(this.creditDisplay);
 	}
 
 	private function makeMenuOptionsBar():void
@@ -178,7 +153,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		this.characterList.x = this.CHARACTER_LIST_X_POS;
 		this.characterList.y = this.CHARACTER_LIST_Y_POS;
 		this.characterListHeight = this.characterList.height;
-		if (this.model.getMaxCharacters() > 15)
+		if (this.characterListHeight > this.SCROLLBAR_REQUIREMENT_HEIGHT)
 		{
 			this.createScrollbar();
 		}
@@ -213,55 +188,11 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		}
 	}
 
-	private function createDisableNexusCheckBox():void
-	{
-		this.disableNexusCheckBox = new CheckBoxField("Vault", false);
-		this.disableNexusCheckBox.x = 700;
-		this.disableNexusCheckBox.y = this.openCharactersText.y;
-		if (Parameters.data_.disableNexus)
-		{
-			this.disableNexusCheckBox.setChecked();
-		}
-		else
-		{
-			this.disableNexusCheckBox.setUnchecked();
-		}
-		this.disableNexusCheckBox.addEventListener(MouseEvent.CLICK, this.onDisableVaultCheckBoxCheckedChanged);
-		addChild(this.disableNexusCheckBox);
-	}
-
-	private function createDisableAutoReconCheckBox():void
-	{
-		this.disableAutoReconCheckBox = new CheckBoxField("Auto Reconnect", false);
-		this.disableAutoReconCheckBox.x = (this.CHARACTER_LIST_X_POS + 300);
-		this.disableAutoReconCheckBox.y = this.openCharactersText.y;
-		if (Parameters.data_.autoRecon)
-		{
-			this.disableAutoReconCheckBox.setChecked();
-		}
-		else
-		{
-			this.disableAutoReconCheckBox.setUnchecked();
-		}
-		this.disableAutoReconCheckBox.addEventListener(MouseEvent.CLICK, this.onDisableAutoReconCheckBoxCheckedChanged);
-		addChild(this.disableAutoReconCheckBox);
-	}
-
-	public function onDisableVaultCheckBoxCheckedChanged(_arg_1:MouseEvent):void
-	{
-		Parameters.data_.disableNexus = this.disableNexusCheckBox.isChecked();
-	}
-
-	public function onDisableAutoReconCheckBoxCheckedChanged(_arg_1:MouseEvent):void
-	{
-		Parameters.data_.autoRecon = this.disableAutoReconCheckBox.isChecked();
-	}
-
 	private function createOpenCharactersText():void
 	{
 		this.openCharactersText = new TextFieldDisplayConcrete().setSize(18).setColor(TAB_UNSELECTED);
 		this.openCharactersText.setBold(true);
-		this.openCharactersText.setStringBuilder(new LineBuilder().setParams("Characters"));
+		this.openCharactersText.setStringBuilder(new LineBuilder().setParams(TextKey.CHARACTER_SELECTION_CHARACTERS));
 		this.openCharactersText.filters = [this.DROP_SHADOW];
 		this.openCharactersText.x = this.CHARACTER_LIST_X_POS;
 		this.openCharactersText.y = 79;
@@ -303,10 +234,19 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		}
 	}
 
+	private function createCreditDisplay():void
+	{
+		this.creditDisplay = new CreditDisplay();
+		this.creditDisplay.draw(this.model.getCredits(), this.model.getFame());
+		this.creditDisplay.x = this.getReferenceRectangle().width;
+		this.creditDisplay.y = 20;
+		addChild(this.creditDisplay);
+	}
+
 	private function createChooseNameLink():void
 	{
 		this.nameChooseLink_ = new DeprecatedClickableText(16, false, TextKey.CHARACTER_SELECTION_AND_NEWS_SCREEN_CHOOSE_NAME);
-		this.nameChooseLink_.y = 78;
+		this.nameChooseLink_.y = 50;
 		this.nameChooseLink_.setAutoSize(TextFieldAutoSize.CENTER);
 		this.nameChooseLink_.x = (this.getReferenceRectangle().width / 2);
 		this.nameChooseLink_.addEventListener(MouseEvent.CLICK, this.onChooseName);

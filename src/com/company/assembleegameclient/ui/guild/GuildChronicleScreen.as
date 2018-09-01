@@ -127,7 +127,7 @@ public class GuildChronicleScreen extends Sprite
 
 	private function onAddedToStage(_arg_1:Event):void
 	{
-		this.continueButton_.x = 400;
+		this.continueButton_.x = (stage.stageWidth / 2);
 		this.continueButton_.y = 550;
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown, false, 1);
 		stage.addEventListener(KeyboardEvent.KEY_UP, this.onKeyUp, false, 1);

@@ -43,7 +43,6 @@ public class GraveyardLine extends Sprite
 		this.icon_.y = (((HEIGHT / 2) - (_arg_1.height / 2)) - 3);
 		addChild(this.icon_);
 		this.titleText_ = new BaseSimpleText(18, COLOR, false, 0, 0);
-		_arg_2 = _arg_2.replace("????", "Samurai");
 		this.titleText_.text = _arg_2;
 		this.titleText_.updateMetrics();
 		this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
