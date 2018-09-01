@@ -499,6 +499,7 @@ public class Parameters
 		setDefault("rightClickOption", 0);
 		setDefault("tiltCam", false);
 		setDefault("HidePlayerFilter", false);
+		setDefault("vaultSelection", false);
 	}
 
 

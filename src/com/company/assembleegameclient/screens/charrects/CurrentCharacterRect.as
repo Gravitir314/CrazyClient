@@ -4,6 +4,7 @@ package com.company.assembleegameclient.screens.charrects
 {
 import com.company.assembleegameclient.appengine.CharacterStats;
 import com.company.assembleegameclient.appengine.SavedCharacter;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.events.DeleteCharacterEvent;
 import com.company.assembleegameclient.ui.tooltip.MyPlayerToolTip;
 import com.company.assembleegameclient.ui.tooltip.TextToolTip;
@@ -24,7 +25,6 @@ import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 import kabam.rotmg.assets.services.IconFactory;
 import kabam.rotmg.classes.model.CharacterClass;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -100,7 +100,7 @@ public class CurrentCharacterRect extends CharacterRect
 
 	private function onSelectVault(_arg_1:MouseEvent):void
 	{
-		GameServerConnectionConcrete.vaultSelect = true;
+		Parameters.data_.vaultSelection = true;
 		this.selected.dispatch(this.char);
 	}
 

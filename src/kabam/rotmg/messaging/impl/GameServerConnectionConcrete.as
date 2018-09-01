@@ -250,7 +250,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
 	public static var reconNexus:ReconnectEvent;
 	public static var sRec:Boolean = false;
 	public static var whereto:String;
-	public static var vaultSelect:Boolean = false;
 	public static var ignoredBag:int = -1;
 	public static var receivingGift:Vector.<Boolean>;
 	public static var sendingGift:Vector.<Boolean>;
@@ -1489,7 +1488,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
 		}
 		else
 		{
-			if (((vaultSelect) || (Parameters.data_.disableNexus)))
+			if (Parameters.data_.vaultSelection || Parameters.data_.disableNexus)
 			{
 				_local_2.gameId_ = Parameters.VAULT_GAMEID;
 			}
@@ -1528,11 +1527,11 @@ public class GameServerConnectionConcrete extends GameServerConnection
 		isFromArena_ = false;
 		var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
 		MapUserInput.reconVault = _local_8;
-		if ((((_arg_1.gameId_ == Parameters.NEXUS_GAMEID) || (_arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID)) || (vaultSelect)))
+		if (_arg_1.gameId_ == Parameters.NEXUS_GAMEID || _arg_1.gameId_ == Parameters.DAILYQUESTROOM_GAMEID || Parameters.data_.vaultSelection)
 		{
 			reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(server_.address).setPort(server_.port), -2, false, charId_, getTimer(), new ByteArray(), false);
 		}
-		vaultSelect = false;
+		Parameters.data_.vaultSelection = false;
 	}
 
 	private function onCreateSuccess(_arg_1:CreateSuccess):void

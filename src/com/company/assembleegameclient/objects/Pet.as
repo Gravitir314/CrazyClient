@@ -51,12 +51,12 @@ public class Pet extends GameObject implements IInteractiveObject
 
 	override public function addTo(_arg_1:Map, _arg_2:Number, _arg_3:Number):Boolean
 	{
-		if ((!(super.addTo(_arg_1, _arg_2, _arg_3))))
+		if (!super.addTo(_arg_1, _arg_2, _arg_3))
 		{
 			return (false);
 		}
 		var _local_4:GameObject = this.map_.goDict_[(this.objectId_ - 1)];
-		if (((_local_4) && (_local_4 == this.map_.player_)))
+		if (_local_4 && _local_4 == this.map_.player_)
 		{
 			myPet = true;
 		}
@@ -102,7 +102,7 @@ public class Pet extends GameObject implements IInteractiveObject
 
 	override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 	{
-		if ((((Parameters.data_.showPets) || (Options.hidden)) || (this.map_.isPetYard)))
+		if (Parameters.data_.showPets || Options.hidden || this.map_.isPetYard || myPet)
 		{
 			super.draw(_arg_1, _arg_2, _arg_3);
 		}
