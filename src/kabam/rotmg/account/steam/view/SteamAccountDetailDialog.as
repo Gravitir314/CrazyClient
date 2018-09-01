@@ -37,7 +37,7 @@ public class SteamAccountDetailDialog extends Sprite
 	public function setInfo(_arg_1:String, _arg_2:String, _arg_3:Boolean):void
 	{
 		var _local_4:Frame;
-		_local_4 = new Frame(TextKey.DETAIL_DIALOG_TITLE, "", TextKey.STEAM_ACCOUNT_DETAIL_DIALOG_RIGHTBUTTON);
+		_local_4 = new Frame(TextKey.DETAIL_DIALOG_TITLE, "", TextKey.STEAM_ACCOUNT_DETAIL_DIALOG_RIGHTBUTTON, "/steamworksCurrentLogin");
 		addChild(_local_4);
 		this.loginText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.loginText_.setBold(true);

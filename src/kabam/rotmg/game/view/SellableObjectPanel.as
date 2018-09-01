@@ -136,7 +136,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 	private function onRemovedFromStage(_arg_1:Event):void
 	{
 		stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-		if ((((!(parent == null)) && (!(this.confirmBuyModal == null))) && (this.confirmBuyModal.open)))
+		if (parent != null && this.confirmBuyModal != null && this.confirmBuyModal.open)
 		{
 			parent.removeChild(this.confirmBuyModal);
 		}
@@ -152,7 +152,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 
 	private function onKeyDown(_arg_1:KeyboardEvent):void
 	{
-		if ((((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)) && (ConfirmBuyModal.free)))
+		if (_arg_1.keyCode == Parameters.data_.interact && stage.focus == null && ConfirmBuyModal.free)
 		{
 			this.buyEvent();
 		}
@@ -161,7 +161,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 	private function buyEvent():void
 	{
 		var _local_1:Account = StaticInjectorContext.getInjector().getInstance(Account);
-		if ((((!(parent == null)) && (_local_1.isRegistered())) && (this.owner_ is Merchant)))
+		if (parent != null && _local_1.isRegistered() && this.owner_ is Merchant)
 		{
 			this.confirmBuyModal = new ConfirmBuyModal(this.buyItem, this.owner_, this.buyButton_.width, this.availableInventoryNumber);
 			parent.addChild(this.confirmBuyModal);
@@ -183,7 +183,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 			{
 				removeChild(this.buyButton_);
 			}
-			if (((this.rankReqText_ == null) || (!(contains(this.rankReqText_)))))
+			if (this.rankReqText_ == null || !contains(this.rankReqText_))
 			{
 				this.rankReqText_ = createRankReqText(_local_2);
 				this.rankReqText_.x = ((WIDTH / 2) - (this.rankReqText_.width / 2));
@@ -199,7 +199,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 				{
 					removeChild(this.buyButton_);
 				}
-				if (((this.guildRankReqText_ == null) || (!(contains(this.guildRankReqText_)))))
+				if (this.guildRankReqText_ == null || !contains(this.guildRankReqText_))
 				{
 					this.guildRankReqText_ = createGuildRankReqText(this.owner_.guildRankReq_);
 					this.guildRankReqText_.x = ((WIDTH / 2) - (this.guildRankReqText_.width / 2));
@@ -217,7 +217,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 				{
 					addChild(this.buyButton_);
 				}
-				if (((!(this.rankReqText_ == null)) && (contains(this.rankReqText_))))
+				if (this.rankReqText_ != null && contains(this.rankReqText_))
 				{
 					removeChild(this.rankReqText_);
 				}

@@ -326,21 +326,21 @@ public class GameSprite extends AGameSprite
 	{
 		var _local_1:NewsModel = StaticInjectorContext.getInjector().getInstance(NewsModel);
 		var _local_2:int = 66;
-		if (((this.giftStatusDisplay) && (this.giftStatusDisplay.isOpen)))
+		if (this.giftStatusDisplay && this.giftStatusDisplay.isOpen)
 		{
 			this.giftStatusDisplay.y = _local_2;
 			_local_2 = (_local_2 + DISPLAY_AREA_Y_SPACE);
 		}
-		if (((this.newsModalButton) && (((NewsModalButton.showsHasUpdate) || (_local_1.hasValidModalNews())))))
+		if (this.newsModalButton && (NewsModalButton.showsHasUpdate || _local_1.hasValidModalNews()))
 		{
 			this.newsModalButton.y = _local_2;
 			_local_2 = (_local_2 + DISPLAY_AREA_Y_SPACE);
 		}
-		if (((this.specialOfferButton) && (this.specialOfferButton.isSpecialOfferAvailable)))
+		if (this.specialOfferButton && this.specialOfferButton.isSpecialOfferAvailable)
 		{
 			this.specialOfferButton.y = _local_2;
 		}
-		if (((this.newsTicker) && (this.newsTicker.visible)))
+		if (this.newsTicker && this.newsTicker.visible)
 		{
 			this.newsTicker.y = _local_2;
 		}
@@ -474,7 +474,7 @@ public class GameSprite extends AGameSprite
 		var _local_3:IInteractiveObject;
 		var _local_4:IInteractiveObject;
 		var _local_1:Number = NaN;
-		if (((!(map)) || (!(map.player_))))
+		if (!map || !map.player_)
 		{
 			return;
 		}
@@ -485,7 +485,7 @@ public class GameSprite extends AGameSprite
 		for each (_local_2 in map.goDict_)
 		{
 			_local_3 = (_local_2 as IInteractiveObject);
-			if (((_local_3) && ((!(_local_3 is Pet)) || (this.map.isPetYard))))
+			if (_local_3 && (!(_local_3 is Pet) || this.map.isPetYard))
 			{
 				if (((Math.abs((_local_7 - _local_2.x_)) < GeneralConstants.MAXIMUM_INTERACTION_DISTANCE) || (Math.abs((_local_8 - _local_2.y_)) < GeneralConstants.MAXIMUM_INTERACTION_DISTANCE)))
 				{

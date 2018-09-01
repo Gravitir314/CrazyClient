@@ -72,7 +72,7 @@ public class TextHandler
 	private var now:CJDateUtil;
 
 
-	internal function trim(_arg_1:String):String
+	public function trim(_arg_1:String):String
 	{
 		return (_arg_1.replace(/^([\s|\t|\n]+)?(.*)([\s|\t|\n]+)?$/gm, "$2"));
 	}

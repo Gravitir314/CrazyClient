@@ -8,7 +8,7 @@ import flash.display.Sprite;
 
 public class ScreenBase extends Sprite
 {
-	internal static var TitleScreenBackground:Class = ScreenBase_TitleScreenBackground;
+	public static var TitleScreenBackground:Class = ScreenBase_TitleScreenBackground;
 
 	public function ScreenBase()
 	{

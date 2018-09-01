@@ -205,7 +205,7 @@ public class PetPortrait extends Sprite
 	{
 		if (this._petVO)
 		{
-			if (((this._enableAnimation) && (((!(this.petName.text == "")) && (!(this.petName.text == this.petVO.name))) || ((!(this.petFamily.text == "")) && (!(this.petFamily.text == this.petVO.family))))))
+			if ((this._enableAnimation && this.petName.text != "" && this.petName.text != this.petVO.name) || (this.petFamily.text != "" && this.petFamily.text != this.petVO.family))
 			{
 				this.startAnimation();
 			}
@@ -256,7 +256,7 @@ public class PetPortrait extends Sprite
 		this.petRarity.x = ((this.slotWidth / 2) - (this.petRarity.width / 2));
 		this.petFamily.x = ((this.slotWidth / 2) - (this.petFamily.width / 2));
 		this.petName.x = ((this.slotWidth / 2) - (this.petName.width / 2));
-		if (((this.showReleaseButton) && (!(this._releaseButton))))
+		if (this.showReleaseButton && !this._releaseButton)
 		{
 			_local_1 = StaticInjectorContext.getInjector().getInstance(IconButtonFactory);
 			this._releaseButton = _local_1.create(AssetLibrary.getImageFromSet("lofiInterfaceBig", 42), "", "", "");

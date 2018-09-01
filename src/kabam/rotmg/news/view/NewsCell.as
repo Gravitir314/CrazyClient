@@ -24,8 +24,8 @@ import org.swiftsuspenders.Injector;
 public class NewsCell extends Sprite
 {
 
-	internal static var DefaultGraphicLarge:Class = NewsCell_DefaultGraphicLarge;
-	internal static var DefaultGraphicSmall:Class = NewsCell_DefaultGraphicSmall;
+	public static var DefaultGraphicLarge:Class = NewsCell_DefaultGraphicLarge;
+	public static var DefaultGraphicSmall:Class = NewsCell_DefaultGraphicSmall;
 	private static const BOX_HEIGHT:uint = 30;
 	private static const LARGE:String = "LARGE";
 	private static const SMALL:String = "SMALL";

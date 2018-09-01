@@ -35,10 +35,6 @@ public class MiniMap extends Sprite
 	{
 	}
 
-	public function setLootBag(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:Boolean):void
-	{
-	}
-
 	public function zoomIn():void
 	{
 	}

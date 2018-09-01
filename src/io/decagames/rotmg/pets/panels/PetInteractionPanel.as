@@ -22,7 +22,7 @@ public class PetInteractionPanel extends Panel
 	private var title:String = "Console";
 	private var wardrobeButtonString:String = "Wardrobe";
 	private var objectType:int;
-	internal var wardrobeButton:DeprecatedTextButton;
+	public var wardrobeButton:DeprecatedTextButton;
 
 	public function PetInteractionPanel(_arg_1:GameSprite, _arg_2:int)
 	{

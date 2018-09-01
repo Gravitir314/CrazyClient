@@ -26,7 +26,7 @@ public class PetStatsGridMediator extends Mediator
 	override public function initialize():void
 	{
 		this.selectPetSignal.add(this.onPetSelected);
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.add(this.VOUpdated);
 		}
@@ -37,7 +37,7 @@ public class PetStatsGridMediator extends Mediator
 	override public function destroy():void
 	{
 		this.selectPetSignal.remove(this.onPetSelected);
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.remove(this.VOUpdated);
 		}
@@ -67,12 +67,12 @@ public class PetStatsGridMediator extends Mediator
 
 	private function onPetSelected(_arg_1:PetVO):void
 	{
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.remove(this.VOUpdated);
 		}
 		this.view.updateVO(_arg_1);
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.add(this.VOUpdated);
 		}

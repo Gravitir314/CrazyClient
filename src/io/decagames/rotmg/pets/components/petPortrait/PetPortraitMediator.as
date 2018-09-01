@@ -43,7 +43,7 @@ public class PetPortraitMediator extends Mediator
 		{
 			this.selectPetSignal.add(this.onPetSelected);
 		}
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.add(this.VOUpdated);
 		}
@@ -56,7 +56,7 @@ public class PetPortraitMediator extends Mediator
 	{
 		this.view.petSkin.removeEventListener(MouseEvent.CLICK, this.onSwitchPetHandler);
 		this.selectPetSignal.remove(this.onPetSelected);
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.remove(this.VOUpdated);
 		}
@@ -89,7 +89,7 @@ public class PetPortraitMediator extends Mediator
 	private function onPetSelected(_arg_1:PetVO):void
 	{
 		var _local_2:Boolean;
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.remove(this.VOUpdated);
 		}
@@ -100,7 +100,7 @@ public class PetPortraitMediator extends Mediator
 		}
 		this.view.petVO = _arg_1;
 		this.view.enableAnimation = _local_2;
-		if (((this.view.petVO) && (this.view.petVO.updated)))
+		if (this.view.petVO && this.view.petVO.updated)
 		{
 			this.view.petVO.updated.add(this.VOUpdated);
 		}

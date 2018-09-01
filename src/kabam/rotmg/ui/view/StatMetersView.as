@@ -24,7 +24,6 @@ public class StatMetersView extends Sprite
 	private var areTempXpListenersAdded:Boolean;
 	private var curXPBoost:int;
 	private var expTimer:ExperienceBoostTimerPopup;
-	public var myPlayer:Boolean = true;
 
 	public function StatMetersView(_arg_1:Boolean = true)
 	{

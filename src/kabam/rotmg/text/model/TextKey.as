@@ -257,11 +257,6 @@ public class TextKey
 	public static const OPTIONS_CHAT:String = "Options.Chat";
 	public static const OPTIONS_GRAPHICS:String = "Options.Graphics";
 	public static const OPTIONS_SOUND:String = "Options.Sound";
-	public static const OPTIONS_EXTRA:String = "Extra";
-	public static const OPTIONS_CONNECT:String = "Connect";
-	public static const OPTIONS_FAME:String = "Fame";
-	public static const OPTIONS_DEBUFFS:String = "Debuffs";
-	public static const OPTIONS_NULL:String = "";
 	public static const OPTIONS_MISC:String = "Options.Misc";
 	public static const OPTIONS_FRIEND:String = "Options.Friend";
 	public static const OPTIONS_CONTINUE_BUTTON:String = "Options.continueButton";

@@ -37,7 +37,8 @@ public class CreditDisplayMediator extends Mediator
 		this.model.creditsChanged.add(this.onCreditsChanged);
 		this.model.fameChanged.add(this.onFameChanged);
 		this.model.tokensChanged.add(this.onTokensChanged);
-		if (((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS)))
+		this.view.openAccountDialog.add(this.onOpenAccountDialog);
+		if (this.view.gs != null && this.view.gs.map.name_ == Map.NEXUS)
 		{
 			this.view.addResourceButtons();
 		}
@@ -45,7 +46,7 @@ public class CreditDisplayMediator extends Mediator
 		{
 			this.view.removeResourceButtons();
 		}
-		if (((this.view.creditsButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS))))
+		if (this.view.creditsButton && this.view.gs != null && this.view.gs.map.name_ == Map.NEXUS)
 		{
 			this.view.creditsButton.addEventListener(MouseEvent.CLICK, this.view.onCreditsClick, false, 0, true);
 			this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Buy Gold", "Click to buy more Realm Gold!", 190);
@@ -55,7 +56,7 @@ public class CreditDisplayMediator extends Mediator
 			this.hoverTooltipDelegate.setDisplayObject(this.view.creditsButton);
 			this.hoverTooltipDelegate.tooltip = this.toolTip;
 		}
-		if (((this.view.fameButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS))))
+		if (this.view.fameButton && this.view.gs != null && this.view.gs.map.name_ == Map.NEXUS)
 		{
 			this.view.fameButton.addEventListener(MouseEvent.CLICK, this.view.onFameClick);
 			this.toolTip = new TextToolTip(0x363636, 0x9B9B9B, "Fame", "Click to get an Overview!", 160);
@@ -83,11 +84,11 @@ public class CreditDisplayMediator extends Mediator
 		this.model.creditsChanged.remove(this.onCreditsChanged);
 		this.model.fameChanged.remove(this.onFameChanged);
 		this.view.openAccountDialog.remove(this.onOpenAccountDialog);
-		if (((this.view.fameButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS))))
+		if (this.view.fameButton && this.view.gs != null && this.view.gs.map.name_ == Map.NEXUS)
 		{
 			this.view.fameButton.removeEventListener(MouseEvent.CLICK, this.view.onFameClick);
 		}
-		if (((this.view.creditsButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS))))
+		if (this.view.creditsButton && this.view.gs != null && this.view.gs.map.name_ == Map.NEXUS)
 		{
 			this.view.creditsButton.removeEventListener(MouseEvent.CLICK, this.view.onCreditsClick);
 		}

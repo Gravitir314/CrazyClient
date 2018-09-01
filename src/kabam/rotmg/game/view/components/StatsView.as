@@ -35,7 +35,6 @@ public class StatsView extends Sprite
 	public var containerSprite:Sprite;
 	public var mouseDown:NativeSignal;
 	public var currentState:String = "state_docked";
-	public var myPlayer:Boolean = true;
 
 	public function StatsView()
 	{

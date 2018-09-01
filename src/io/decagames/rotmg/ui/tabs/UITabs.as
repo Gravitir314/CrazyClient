@@ -23,7 +23,7 @@ public class UITabs extends Sprite
 	private var tabsWidth:int;
 	private var background:TabContentBackground;
 	private var currentContent:UITab;
-	private var defaultSelectedIndex:int = 0; // TODO
+	private var defaultSelectedIndex:int = 0;
 	private var borderlessMode:Boolean;
 	private var _currentTabLabel:String;
 

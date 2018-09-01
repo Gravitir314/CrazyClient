@@ -108,8 +108,7 @@ public class ContinueOrQuitDialog extends Sprite
 
 	private function makeTitle():StaticTextDisplay
 	{
-		var _local_1:StaticTextDisplay;
-		_local_1 = new StaticTextDisplay();
+		var _local_1:StaticTextDisplay = new StaticTextDisplay();
 		_local_1.setSize(20).setBold(true).setColor(0xB3B3B3);
 		_local_1.setStringBuilder(new LineBuilder().setParams(TextKey.CONTINUE_OR_QUIT_TITLE));
 		_local_1.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];

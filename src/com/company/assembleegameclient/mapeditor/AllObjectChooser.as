@@ -7,7 +7,7 @@ import com.company.util.MoreStringUtil;
 
 import flash.utils.Dictionary;
 
-internal class AllObjectChooser extends Chooser
+public class AllObjectChooser extends Chooser
 {
 
 	public static const GROUP_NAME_MAP_OBJECTS:String = "All Map Objects";

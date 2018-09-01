@@ -63,14 +63,14 @@ public class PetStatsGrid extends UIGrid
 		if (this.abilityBars.length > _arg_2)
 		{
 			_local_3 = this.abilityBars[_arg_2];
-			if (((!(_local_3.maxValue == this._petVO.maxAbilityPower)) && (_arg_1.getUnlocked())))
+			if (_local_3.maxValue != this._petVO.maxAbilityPower && _arg_1.getUnlocked())
 			{
 				_local_3.maxValue = this._petVO.maxAbilityPower;
 				_local_3.value = _arg_1.level;
 			}
-			if (((!(_local_3.value == _arg_1.level)) && (_arg_1.getUnlocked())))
+			if (_local_3.value != _arg_1.level && _arg_1.getUnlocked())
 			{
-				_local_3.dynamicLabelString = ((("Lvl. " + ProgressBar.DYNAMIC_LABEL_TOKEN) + " / ") + ProgressBar.MAX_VALUE_TOKEN);
+				_local_3.dynamicLabelString = ("Lvl. " + ProgressBar.DYNAMIC_LABEL_TOKEN + " / " + ProgressBar.MAX_VALUE_TOKEN);
 				_local_3.value = _arg_1.level;
 			}
 		}

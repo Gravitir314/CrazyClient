@@ -9,7 +9,7 @@ import flash.utils.Dictionary;
 public class ParameterizedHandlerContainer
 {
 
-	internal var _handlers:Dictionary;
+	public var _handlers:Dictionary;
 
 	public function ParameterizedHandlerContainer()
 	{

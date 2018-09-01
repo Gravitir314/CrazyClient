@@ -9,7 +9,7 @@ import com.company.util.MoreStringUtil;
 import flash.events.Event;
 import flash.utils.Dictionary;
 
-internal class GroundChooser extends Chooser
+public class GroundChooser extends Chooser
 {
 
 	private var cache:Dictionary;

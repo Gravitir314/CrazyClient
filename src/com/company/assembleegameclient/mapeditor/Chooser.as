@@ -21,7 +21,7 @@ import flash.events.MouseEvent;
 import flash.net.FileReference;
 import flash.utils.ByteArray;
 
-internal class Chooser extends Sprite
+public class Chooser extends Sprite
 {
 
 	public static const WIDTH:int = 136;

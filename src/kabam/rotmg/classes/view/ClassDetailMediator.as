@@ -65,8 +65,7 @@ public class ClassDetailMediator extends Mediator
 
 	private function onFocusSet(_arg_1:CharacterSkin = null):void
 	{
-		_arg_1 = ((_arg_1) || (this.character.skins.getSelectedSkin()));
-		this.nextSkin = _arg_1;
+		this.nextSkin = (_arg_1 || this.character.skins.getSelectedSkin());
 		this.nextSkinTimer.start();
 	}
 

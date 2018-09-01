@@ -61,13 +61,11 @@ public class PlayerToolTip extends ToolTip
 			this.sBars.x = 6;
 			this.sBars.y = _local_2;
 			addChild(this.sBars);
-			this.sBars.myPlayer = false;
 			_local_2 = (_local_2 + 64);
 			this.stats = new StatsView();
 			this.stats.scaleX = 0.89;
 			this.stats.x = 6;
 			this.stats.y = _local_2;
-			this.stats.myPlayer = false;
 			addChild(this.stats);
 			_local_2 = (_local_2 + 52);
 		}

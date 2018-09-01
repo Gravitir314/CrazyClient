@@ -67,7 +67,7 @@ public class SelectedPetSkinInfoMediator extends Mediator
 	{
 		this.selectedSkin = _arg_1;
 		this.view.showPetInfo(_arg_1);
-		if (((this.currentPet == null) || (_arg_1 == null)))
+		if (this.currentPet == null || _arg_1 == null)
 		{
 			this.setAction(SelectedPetButtonType.NONE, _arg_1);
 		}
@@ -158,7 +158,7 @@ public class SelectedPetSkinInfoMediator extends Mediator
 		{
 			case SelectedPetButtonType.SKIN:
 			case SelectedPetButtonType.FAMILY:
-				if ((((_local_2.currency == Currency.GOLD) && (this.currentGold < _local_2.price)) || ((_local_2.currency == Currency.FAME) && (this.currentFame < _local_2.price))))
+				if (_local_2.currency == Currency.GOLD && this.currentGold < _local_2.price || _local_2.currency == Currency.FAME && this.currentFame < _local_2.price)
 				{
 					this.showPopupSignal.dispatch(new NotEnoughResources(300, _local_2.currency));
 					return;

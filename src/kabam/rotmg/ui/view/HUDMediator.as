@@ -95,7 +95,7 @@ public class HUDMediator extends Mediator
 		}
 	}
 
-	public function onUpdateHUD(_arg_1:Player):void
+	private function onUpdateHUD(_arg_1:Player):void
 	{
 		this.view.draw();
 	}

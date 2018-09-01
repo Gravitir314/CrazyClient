@@ -32,7 +32,7 @@ public class UITab extends Sprite
 		addChild(this._content);
 	}
 
-	internal function drawTransparentBackground():void
+	public function drawTransparentBackground():void
 	{
 		if (((!(this.lastSize.x == this.content.width)) || (!(this.lastSize.y == this._content.height))))
 		{

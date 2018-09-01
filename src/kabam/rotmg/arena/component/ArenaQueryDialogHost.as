@@ -18,8 +18,7 @@ public class ArenaQueryDialogHost extends Sprite
 
 	private function makeSpeechBubble():HostQuerySpeechBubble
 	{
-		var _local_1:HostQuerySpeechBubble;
-		_local_1 = new HostQuerySpeechBubble(HostQueryDialog.QUERY);
+		var _local_1:HostQuerySpeechBubble = new HostQuerySpeechBubble(HostQueryDialog.QUERY);
 		_local_1.x = 60;
 		addChild(_local_1);
 		return (_local_1);
@@ -27,16 +26,14 @@ public class ArenaQueryDialogHost extends Sprite
 
 	private function makeDetailBubble():HostQueryDetailBubble
 	{
-		var _local_1:HostQueryDetailBubble;
-		_local_1 = new HostQueryDetailBubble();
+		var _local_1:HostQueryDetailBubble = new HostQueryDetailBubble();
 		_local_1.y = 60;
 		return (_local_1);
 	}
 
 	private function makeHostIcon():Bitmap
 	{
-		var _local_1:Bitmap;
-		_local_1 = new Bitmap(this.makeDebugBitmapData());
+		var _local_1:Bitmap = new Bitmap(this.makeDebugBitmapData());
 		_local_1.x = 0;
 		_local_1.y = 0;
 		addChild(_local_1);

@@ -55,18 +55,11 @@ public class WebLoginMediatorForced extends Mediator
 		if (this.account.getUserId().toLowerCase() == _arg_1.username.toLowerCase())
 		{
 			_local_2 = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
-			if (_arg_1.secret != "")
-			{
-				_local_2.sendRequest("/account/verify", {
-					"guid": _arg_1.username, "password": _arg_1.password, "fromResetFlow": "yes"
-				});
-			}
-			else
-			{
-				_local_2.sendRequest("/account/verify", {
-					"guid": _arg_1.username, "password": _arg_1.password, "fromResetFlow": "yes"
-				});
-			}
+			_local_2.sendRequest("/account/verify", {
+				"guid": _arg_1.username,
+				"password": _arg_1.password,
+				"fromResetFlow": "yes"
+			});
 			_local_2.complete.addOnce(this.onComplete);
 		}
 		else

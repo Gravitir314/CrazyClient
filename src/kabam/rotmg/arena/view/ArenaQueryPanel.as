@@ -25,7 +25,7 @@ public class ArenaQueryPanel extends Panel
 	private var infoButtonString:String = "Pets.caretakerPanelButtonInfo";
 	private var upgradeYardButtonString:String = "ArenaQueryPanel.leaderboard";
 	private var waiter:SignalWaiter = new SignalWaiter();
-	private var type:uint;
+	public var type:uint;
 
 	public function ArenaQueryPanel(_arg_1:GameSprite, _arg_2:uint)
 	{

@@ -7,7 +7,7 @@ import com.company.util.MoreStringUtil;
 
 import flash.utils.Dictionary;
 
-internal class EnemyChooser extends Chooser
+public class EnemyChooser extends Chooser
 {
 
 	private var cache:Dictionary;

@@ -89,7 +89,7 @@ public class PetSkinSlot extends UIGridElement implements TooltipAble
 		}
 		this.renderSlotBackground();
 		this.clearNewLabel();
-		if (((this._isSkinSelectableSlot) && (!(this._skinVO.isOwned))))
+		if (this._isSkinSelectableSlot && !this._skinVO.isOwned)
 		{
 			_arg_1 = GreyScale.setGreyScale(_arg_1);
 		}
@@ -123,7 +123,7 @@ public class PetSkinSlot extends UIGridElement implements TooltipAble
 
 	public function clearNewLabel():void
 	{
-		if (((this.newLabel) && (this.newLabel.parent)))
+		if (this.newLabel && this.newLabel.parent)
 		{
 			removeChild(this.newLabel);
 		}
@@ -162,7 +162,7 @@ public class PetSkinSlot extends UIGridElement implements TooltipAble
 
 	private function clearSkinBitmap():void
 	{
-		if (((this.skinBitmap) && (this.skinBitmap.bitmapData)))
+		if (this.skinBitmap && this.skinBitmap.bitmapData)
 		{
 			this.skinBitmap.bitmapData.dispose();
 		}

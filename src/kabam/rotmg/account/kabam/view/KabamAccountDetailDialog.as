@@ -30,7 +30,7 @@ public class KabamAccountDetailDialog extends Sprite
 	public function setInfo(_arg_1:String):void
 	{
 		var _local_2:Frame;
-		_local_2 = new Frame(TextKey.KABAMACCOUNTDETAILDIALOG_TITLE, "", TextKey.KABAMACCOUNTDETAILDIALOG_RIGHTBUTTON);
+		_local_2 = new Frame(TextKey.KABAMACCOUNTDETAILDIALOG_TITLE, "", TextKey.KABAMACCOUNTDETAILDIALOG_RIGHTBUTTON, "/currentKabamLogin");
 		addChild(_local_2);
 		this.loginText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.loginText_.setBold(true);

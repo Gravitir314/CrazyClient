@@ -145,7 +145,6 @@ public class DailyQuestInfoMediator extends Mediator
 			}
 			this.lockScreen.dispatch();
 			this.hud.gameSprite.gsc_.questRedeem(this.model.currentQuest.id, _local_2, this.model.selectedItem);
-			this.model.currentQuest.completed = true;
 			if (!this.model.currentQuest.repeatable)
 			{
 				this.model.currentQuest.completed = true;

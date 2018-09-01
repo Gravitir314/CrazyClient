@@ -793,7 +793,7 @@ import flash.display.Shape;
 import flash.geom.Matrix;
 import flash.geom.Rectangle;
 
-internal class AutoFitItem
+public class AutoFitItem
 {
 	public var target:DisplayObject;
 	public var scaleMode:String;

@@ -63,7 +63,7 @@ public class PetInfoSlot extends Sprite
 		{
 			this.petPortrait.hideRarityLabel();
 		}
-		if (((this.showStats) && (_arg_2)))
+		if (this.showStats && _arg_2)
 		{
 			this.statsGrid = new PetStatsGrid(STATS_WIDTH, _arg_1);
 			addChild(this.statsGrid);

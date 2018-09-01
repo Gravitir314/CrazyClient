@@ -16,8 +16,8 @@ import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 public class GoldDisplay extends Sprite
 {
 
-	internal var graphic:DisplayObject;
-	internal var text:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF);
+	public var graphic:DisplayObject;
+	public var text:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF);
 
 
 	public function init():void

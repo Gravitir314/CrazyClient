@@ -32,10 +32,6 @@ public class StatMetersMediator extends Mediator
 
 	private function onUpdateHUD(_arg_1:Player):void
 	{
-		if (this.view.myPlayer == false)
-		{
-			return;
-		}
 		this.view.update(_arg_1);
 	}
 

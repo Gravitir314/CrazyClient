@@ -28,8 +28,8 @@ import org.osflash.signals.natives.NativeMappedSignal;
 public class TitleView extends Sprite
 {
 
-	internal static var TitleScreenGraphic:Class = TitleView_TitleScreenGraphic;
-	internal static var TitleScreenBackground:Class = TitleView_TitleScreenBackground;
+	public static var TitleScreenGraphic:Class = TitleView_TitleScreenGraphic;
+	public static var TitleScreenBackground:Class = TitleView_TitleScreenBackground;
 	public static const MIDDLE_OF_BOTTOM_BAND:Number = 589.45;
 	public static var queueEmailConfirmation:Boolean = false;
 	public static var queuePasswordPrompt:Boolean = false;

@@ -166,7 +166,7 @@ public class Renderer
 	private function onRender(_arg_1:Vector.<IGraphicsData>, _arg_2:Vector.<Object3DStage3D>, _arg_3:Number, _arg_4:Number, _arg_5:Camera, _arg_6:uint):void
 	{
 		WebMain.STAGE.scaleMode = StageScaleMode.NO_SCALE;
-		if (((!(((WebMain.STAGE.stageWidth * 3) / 4) == this.stageWidth)) || (!(WebMain.STAGE.stageHeight == this.stageHeight))))
+		if (((WebMain.STAGE.stageWidth * 3) / 4) != this.stageWidth || WebMain.STAGE.stageHeight != this.stageHeight)
 		{
 			this.resizeStage3DBackBuffer();
 		}
@@ -192,7 +192,7 @@ public class Renderer
 
 	private function resizeStage3DBackBuffer():void
 	{
-		if (((((WebMain.STAGE.stageWidth * 3) / 4) < 1) || (WebMain.STAGE.stageHeight < 1)))
+		if (((WebMain.STAGE.stageWidth * 3) / 4) < 1 || WebMain.STAGE.stageHeight < 1)
 		{
 			return;
 		}
@@ -237,7 +237,7 @@ public class Renderer
 				this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 0, BLIND_FRAGMENT_CONSTANTS);
 				break;
 			case STAGE3D_FILTER_DRUNK:
-				if (((this.blurFragmentConstants_[3] <= 0.2) || (this.blurFragmentConstants_[3] >= 1.8)))
+				if (this.blurFragmentConstants_[3] <= 0.2 || this.blurFragmentConstants_[3] >= 1.8)
 				{
 					this.blurFactor = (this.blurFactor * -1);
 				}
@@ -263,7 +263,7 @@ public class Renderer
 		for each (graphicsData in graphicsDatas)
 		{
 			this.context3D.GetContext3D().setCulling(Context3DTriangleFace.NONE);
-			if (((graphicsData is GraphicsBitmapFill) && (!(GraphicsFillExtra.isSoftwareDraw(GraphicsBitmapFill(graphicsData))))))
+			if (graphicsData is GraphicsBitmapFill && !GraphicsFillExtra.isSoftwareDraw(GraphicsBitmapFill(graphicsData)))
 			{
 				try
 				{
@@ -292,7 +292,7 @@ public class Renderer
 				this.context3D.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 4, Vector.<Number>([0.5, 0.25, 0, 0]));
 				this.graphic3D_.renderShadow(this.context3D);
 			}
-			if (((graphicsData == null) && (!(grahpicsData3d.length == 0))))
+			if (graphicsData == null && grahpicsData3d.length != 0)
 			{
 				try
 				{

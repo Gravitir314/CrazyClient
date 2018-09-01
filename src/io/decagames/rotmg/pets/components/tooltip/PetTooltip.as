@@ -94,7 +94,7 @@ public class PetTooltip extends ToolTip
 		var _local_1:AbilityVO;
 		for each (_local_1 in this.petVO.abilityList)
 		{
-			if (((_local_1.getUnlocked()) && (_local_1.level > 0)))
+			if (_local_1.getUnlocked() && _local_1.level > 0)
 			{
 				return (true);
 			}

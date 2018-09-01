@@ -67,8 +67,8 @@ public class LegendFactory
 		var _local_3:int = _arg_1.Texture;
 		var _local_4:CharacterClass = this.classesModel.getCharacterClass(_local_2);
 		var _local_5:CharacterSkin = _local_4.skins.getSkin(_local_3);
-		var _local_6:int = ((_arg_1.hasOwnProperty("Tex1")) ? int(_arg_1.Tex1) : 0);
-		var _local_7:int = ((_arg_1.hasOwnProperty("Tex2")) ? int(_arg_1.Tex2) : 0);
+		var _local_6:int = ((_arg_1.hasOwnProperty("Tex1")) ? _arg_1.Tex1 : 0);
+		var _local_7:int = ((_arg_1.hasOwnProperty("Tex2")) ? _arg_1.Tex2 : 0);
 		var _local_8:int = ((_local_5.is16x16) ? 50 : 100);
 		var _local_9:Legend = new Legend();
 		_local_9.place = (this.legends.length + 1);

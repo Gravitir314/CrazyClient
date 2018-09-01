@@ -34,11 +34,10 @@ public class ButtonLayoutHelper
 
 	private function twoButtons(_arg_1:int, _arg_2:DisplayObject, _arg_3:DisplayObject):void
 	{
-		var _local_4:Rectangle;
-		var _local_5:Rectangle = _arg_2.getRect(_arg_2);
-		_local_4 = _arg_3.getRect(_arg_3);
-		_arg_2.x = (((_arg_1 - (2 * _arg_2.width)) * 0.25) - _local_5.left);
-		_arg_3.x = ((((3 * _arg_1) - (2 * _arg_3.width)) * 0.25) - _local_4.left);
+		var _local_4:Rectangle = _arg_2.getRect(_arg_2);
+		var _local_5:Rectangle = _arg_3.getRect(_arg_3);
+		_arg_2.x = int((((_arg_1 - (2 * _arg_2.width)) * 0.25) - _local_4.left));
+		_arg_3.x = int(((((3 * _arg_1) - (2 * _arg_3.width)) * 0.25) - _local_5.left));
 	}
 
 

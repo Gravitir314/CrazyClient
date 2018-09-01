@@ -21,6 +21,11 @@ public class QueuedStatusText extends CharacterStatusText
 		setStringBuilder(_arg_2);
 	}
 
+	override public function dispose():void
+	{
+		this.list.shift();
+	}
+
 }
 }//package kabam.rotmg.game.view.components
 

@@ -27,7 +27,7 @@ public class NewsModalButton extends Sprite
 
 	public static const IMAGE_NAME:String = "lofiObj2";
 	public static const IMAGE_ID:int = 345;
-	public static var showsHasUpdate:Boolean = false;
+	public static var showsHasUpdate:Boolean;
 
 	private var bitmap:Bitmap;
 	private var background:Sprite;

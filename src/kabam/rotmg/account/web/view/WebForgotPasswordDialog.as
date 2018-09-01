@@ -22,7 +22,7 @@ public class WebForgotPasswordDialog extends Frame
 
 	public function WebForgotPasswordDialog()
 	{
-		super("WebForgotPasswordDialog.title", "WebForgotPasswordDialog.leftButton", "WebForgotPasswordDialog.rightButton");
+		super("WebForgotPasswordDialog.title", "WebForgotPasswordDialog.leftButton", "WebForgotPasswordDialog.rightButton", "/forgotPassword");
 		this.emailInput = new TextInputField("WebForgotPasswordDialog.email", false);
 		addTextInputField(this.emailInput);
 		this.registerText = new DeprecatedClickableText(12, false, "WebForgotPasswordDialog.register");

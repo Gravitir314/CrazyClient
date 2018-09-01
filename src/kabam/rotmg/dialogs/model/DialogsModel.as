@@ -24,7 +24,7 @@ public class DialogsModel
 
 	private function sortQueue():void
 	{
-		this.queue.sort(function (_arg_1:PopupQueueEntry, _arg_2:PopupQueueEntry):*
+		this.queue.sort(function (_arg_1:PopupQueueEntry, _arg_2:PopupQueueEntry):int
 		{
 			var _local_3:int = getPopupPriorityByName(_arg_1.name);
 			var _local_4:int = getPopupPriorityByName(_arg_2.name);

@@ -27,7 +27,7 @@ public class DailyQuestsPanel extends Panel
 	private var feedPetText:String = "See Quests";
 	private var checkBackLaterText:String = "Check Back Later";
 	private var objectType:int;
-	internal var feedButton:DeprecatedTextButtonStatic;
+	public var feedButton:DeprecatedTextButtonStatic;
 
 	public function DailyQuestsPanel(_arg_1:GameSprite)
 	{

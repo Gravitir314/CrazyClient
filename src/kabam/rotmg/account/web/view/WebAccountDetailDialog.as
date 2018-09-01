@@ -31,7 +31,7 @@ public class WebAccountDetailDialog extends Frame
 
 	public function WebAccountDetailDialog(_arg_1:String = "WebAccountDetailDialog.title", _arg_2:String = "WebAccountDetailDialog.loginText")
 	{
-		super(_arg_1, "", "WebAccountDetailDialog.rightButton");
+		super(_arg_1, "", "WebAccountDetailDialog.rightButton", "/currentLogin");
 		this.headerText = _arg_2;
 		this.makeLoginText();
 		this.makeEmailText();
