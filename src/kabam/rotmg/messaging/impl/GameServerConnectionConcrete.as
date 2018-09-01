@@ -3322,7 +3322,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
 	private function handleIncorrectVersionFailure(_arg_1:Failure):void
 	{
-		var _local_2:Dialog = new Dialog(TextKey.CLIENT_UPDATE_TITLE, "", TextKey.CLIENT_UPDATE_LEFT_BUTTON, null, "/clientUpdate");
+		var _local_2:Dialog = new Dialog(TextKey.CLIENT_UPDATE_TITLE, "", TextKey.CLIENT_UPDATE_LEFT_BUTTON, null);
 		_local_2.setTextParams(TextKey.CLIENT_UPDATE_DESCRIPTION, {
 			"client": Parameters.BUILD_VERSION, "server": _arg_1.errorDescription_
 		});

@@ -9,7 +9,7 @@ public class DeletingCharacterView extends Dialog
 
 	public function DeletingCharacterView()
 	{
-		super(null, "DeletingCharacterView.text", null, null, "/deletingChar");
+		super(null, "DeletingCharacterView.text", null, null);
 	}
 
 }

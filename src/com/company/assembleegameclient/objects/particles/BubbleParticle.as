@@ -37,7 +37,7 @@ public class BubbleParticle extends Particle
 		var _local_8:BubbleParticle = (FreeList.getObject(_arg_1) as BubbleParticle);
 		if (!_local_8)
 		{
-			_local_8 = new (BubbleParticle)(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7);
+			_local_8 = new BubbleParticle(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7);
 		}
 		return (_local_8);
 	}

@@ -24,7 +24,7 @@ public class ThrownProjectile extends BitmapParticle
 	public function ThrownProjectile(_arg_1:uint, _arg_2:int, _arg_3:Point, _arg_4:Point)
 	{
 		this.bitmapData = ObjectLibrary.getTextureFromType(_arg_1);
-		this.bitmapData = TextureRedrawer.redraw(this.bitmapData, 80, true, 0, false);
+		this.bitmapData = TextureRedrawer.redraw(this.bitmapData, ObjectLibrary.propsLibrary_[_arg_1].minSize_, true, 0, false);
 		_rotationDelta = 0.2;
 		super(this.bitmapData, 0);
 		this.lifetime_ = (this.timeLeft_ = _arg_2);

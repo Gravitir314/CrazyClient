@@ -1174,7 +1174,7 @@ public class GameObject extends BasicObject
 		return (_local_2.make(_local_1, 16, 0xFFFFFF, true, IDENTITY_MATRIX, true));
 	}
 
-	public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean):void
+	public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean=false):void
 	{
 		if (!Options.hidden && Parameters.lowCPUMode)
 		{
@@ -1556,7 +1556,7 @@ public class GameObject extends BasicObject
 		}
 		if ((((this.props_.showName_) && (!(this.name_ == null))) && (!(this.name_.length == 0))))
 		{
-			this.drawName(_arg_1, _arg_2, false);
+			this.drawName(_arg_1, _arg_2);
 		}
 		if (_local_5)
 		{

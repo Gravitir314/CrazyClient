@@ -9,8 +9,6 @@ public interface ApplicationSetup extends DebugSetup
 
 	function getAppEngineUrl(_arg_1:Boolean = false):String;
 
-	function getAnalyticsCode():String;
-
 	function useLocalTextures():Boolean;
 
 	function isToolingEnabled():Boolean;

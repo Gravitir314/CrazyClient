@@ -108,7 +108,7 @@ public class GuildChronicleScreen extends Sprite
 
 	private function showError(_arg_1:String):void
 	{
-		var _local_2:Dialog = new Dialog(TextKey.GUILD_CHRONICLE_LEFT, _arg_1, TextKey.GUILD_CHRONICLE_RIGHT, null, "/guildError");
+		var _local_2:Dialog = new Dialog(TextKey.GUILD_CHRONICLE_LEFT, _arg_1, TextKey.GUILD_CHRONICLE_RIGHT, null);
 		_local_2.addEventListener(Dialog.LEFT_BUTTON, this.onErrorTextDone);
 		stage.addChild(_local_2);
 	}

@@ -37,7 +37,7 @@ public class SubmitMapForm extends Frame
 
 	public function SubmitMapForm(_arg_1:String, _arg_2:Object, _arg_3:Account)
 	{
-		super("SubmitMapForm.Title", TextKey.FRAME_CANCEL, TextKey.WEB_CHANGE_PASSWORD_RIGHT, null, 300);
+		super("SubmitMapForm.Title", TextKey.FRAME_CANCEL, TextKey.WEB_CHANGE_PASSWORD_RIGHT, 300);
 		cancel = new Signal();
 		this.account = _arg_3;
 		this.mapjm = _arg_1;

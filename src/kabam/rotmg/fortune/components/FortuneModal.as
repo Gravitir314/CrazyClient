@@ -716,7 +716,7 @@ public class FortuneModal extends EmptyFrame
 	{
 		var _local_1:OpenDialogSignal;
 		_local_1 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
-		var _local_2:Dialog = new Dialog("MysteryBoxRollModal.purchaseFailedString", "MysteryBoxRollModal.pleaseTryAgainString", "MysteryBoxRollModal.okString", null, null);
+		var _local_2:Dialog = new Dialog("MysteryBoxRollModal.purchaseFailedString", "MysteryBoxRollModal.pleaseTryAgainString", "MysteryBoxRollModal.okString", null);
 		_local_2.addEventListener(Dialog.LEFT_BUTTON, this.onErrorOk, false, 0, true);
 		_local_1.dispatch(_local_2);
 	}

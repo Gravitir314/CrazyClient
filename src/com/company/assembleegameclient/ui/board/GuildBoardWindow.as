@@ -44,7 +44,7 @@ public class GuildBoardWindow extends Sprite
 		this.client = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
 		this.client.complete.addOnce(this.onGetBoardComplete);
 		this.client.sendRequest("/guild/getBoard", _local_1.getCredentials());
-		this.dialog_ = new Dialog(null, "Loading...", null, null, null);
+		this.dialog_ = new Dialog(null, "Loading...", null, null);
 		addChild(this.dialog_);
 		this.darkBox_.visible = false;
 	}
@@ -114,7 +114,7 @@ public class GuildBoardWindow extends Sprite
 		this.client.sendRequest("/guild/setBoard", _local_3);
 		removeChild(this.editBoard_);
 		this.editBoard_ = null;
-		this.dialog_ = new Dialog(null, "Saving...", null, null, null);
+		this.dialog_ = new Dialog(null, "Saving...", null, null);
 		addChild(this.dialog_);
 		this.darkBox_.visible = false;
 	}

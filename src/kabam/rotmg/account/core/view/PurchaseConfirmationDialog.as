@@ -11,7 +11,7 @@ public class PurchaseConfirmationDialog extends Dialog
 
 	public function PurchaseConfirmationDialog(_arg_1:Function):void
 	{
-		super("Purchase confirmation", "Continue with purchase?", "Yes", "No", null);
+		super("Purchase confirmation", "Continue with purchase?", "Yes", "No");
 		this.confirmedHandler = _arg_1;
 	}
 

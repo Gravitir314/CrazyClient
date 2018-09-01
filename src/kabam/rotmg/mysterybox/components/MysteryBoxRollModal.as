@@ -511,7 +511,7 @@ public class MysteryBoxRollModal extends Sprite
 					_local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.blockedForUser", {"date": _local_16[1]});
 				}
 			}
-			_local_9 = new Dialog("MysteryBoxRollModal.purchaseFailedString", _local_8, "MysteryBoxRollModal.okString", null, null);
+			_local_9 = new Dialog("MysteryBoxRollModal.purchaseFailedString", _local_8, "MysteryBoxRollModal.okString", null);
 			_local_9.addEventListener(Dialog.LEFT_BUTTON, this.onErrorOk);
 			_local_7.dispatch(_local_9);
 			_local_10 = StaticInjectorContext.getInjector();

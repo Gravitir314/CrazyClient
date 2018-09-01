@@ -1934,7 +1934,7 @@ public class Player extends Character
 		{
 			if (!Parameters.screenShotMode_)
 			{
-				drawName(_arg_1, _arg_2, false);
+				drawName(_arg_1, _arg_2);
 			}
 		}
 		else

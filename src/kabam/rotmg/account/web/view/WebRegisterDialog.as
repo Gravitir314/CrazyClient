@@ -39,7 +39,7 @@ public class WebRegisterDialog extends Frame
 
 	public function WebRegisterDialog()
 	{
-		super(TextKey.REGISTER_IMPERATIVE, "RegisterWebAccountDialog.leftButton", "RegisterWebAccountDialog.rightButton", "/registerAccount", 326);
+		super(TextKey.REGISTER_IMPERATIVE, "RegisterWebAccountDialog.leftButton", "RegisterWebAccountDialog.rightButton", 326);
 		this.makeUIElements();
 		this.makeSignals();
 	}

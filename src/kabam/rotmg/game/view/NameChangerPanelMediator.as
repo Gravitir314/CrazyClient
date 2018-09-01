@@ -42,7 +42,7 @@ public class NameChangerPanelMediator extends Mediator
 	{
 		if (this.account.isRegistered())
 		{
-			this.openDialog.dispatch(new ChooseNameFrame(this.view.gs_, this.view.buy_));
+			this.openDialog.dispatch(new ChooseNameFrame(this.view.gs_));
 		}
 		else
 		{

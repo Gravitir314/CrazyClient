@@ -11,7 +11,7 @@ public class NotEnoughFameDialog extends Dialog
 
 	public function NotEnoughFameDialog()
 	{
-		super(TextKey.NOT_ENOUGH_FAME_DIALOG_TITLE, TextKey.NOT_ENOUGH_FAME_DIALOG_TEXT, TextKey.NOT_ENOUGH_FAME_DIALOG_LEFTBUTTON, null, "/notEnoughFame");
+		super(TextKey.NOT_ENOUGH_FAME_DIALOG_TITLE, TextKey.NOT_ENOUGH_FAME_DIALOG_TEXT, TextKey.NOT_ENOUGH_FAME_DIALOG_LEFTBUTTON, null);
 		addEventListener(LEFT_BUTTON, this.onOk);
 	}
 

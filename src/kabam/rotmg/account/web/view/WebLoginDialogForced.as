@@ -35,7 +35,7 @@ public class WebLoginDialogForced extends Frame
 
 	public function WebLoginDialogForced(_arg_1:Boolean = false)
 	{
-		super(TextKey.WEB_LOGIN_DIALOG_TITLE, "", TextKey.WEB_LOGIN_DIALOG_RIGHT, "/signIn");
+		super(TextKey.WEB_LOGIN_DIALOG_TITLE, "", TextKey.WEB_LOGIN_DIALOG_RIGHT);
 		this.makeUI();
 		if (_arg_1)
 		{

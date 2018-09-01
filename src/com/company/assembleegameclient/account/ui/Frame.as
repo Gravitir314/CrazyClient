@@ -19,8 +19,6 @@ import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.account.web.view.LabeledField;
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
@@ -32,10 +30,8 @@ public class Frame extends Sprite
 	public var titleText_:TextFieldDisplayConcrete;
 	public var leftButton_:DeprecatedClickableText;
 	public var rightButton_:DeprecatedClickableText;
-	public var analyticsPageName_:String;
 	public var w_:int = 288;
 	public var h_:int = 100;
-	private var googleAnalytics:GoogleAnalytics;
 
 	public var textInputFields_:Vector.<TextInputField> = new Vector.<TextInputField>();
 	public var navigationLinks_:Vector.<DeprecatedClickableText> = new Vector.<DeprecatedClickableText>();
@@ -47,10 +43,9 @@ public class Frame extends Sprite
 	private var path2_:GraphicsPath = new GraphicsPath(new Vector.<int>(), new Vector.<Number>());
 	private const graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[backgroundFill_, path2_, GraphicsUtil.END_FILL, titleFill_, path1_, GraphicsUtil.END_FILL, lineStyle_, path2_, GraphicsUtil.END_STROKE];
 
-	public function Frame(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String = "", _arg_5:int = 288)
+	public function Frame(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:int = 288)
 	{
-		this.w_ = _arg_5;
-		this.googleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
+		this.w_ = _arg_4;
 		this.titleText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
 		this.titleText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
 		this.titleText_.filters = [new DropShadowFilter(0, 0, 0)];
@@ -60,7 +55,6 @@ public class Frame extends Sprite
 		addChild(this.titleText_);
 		this.makeAndAddLeftButton(_arg_2);
 		this.makeAndAddRightButton(_arg_3);
-		this.analyticsPageName_ = _arg_4;
 		filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
 		addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
 	}
@@ -210,10 +204,6 @@ public class Frame extends Sprite
 		if (this.textInputFields_.length > 0)
 		{
 			stage.focus = this.textInputFields_[0].inputText_;
-		}
-		if (((this.analyticsPageName_) && (this.googleAnalytics)))
-		{
-			this.googleAnalytics.trackPageView(this.analyticsPageName_);
 		}
 	}
 

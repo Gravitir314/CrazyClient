@@ -25,7 +25,7 @@ public class CreateGuildFrame extends Frame
 
 	public function CreateGuildFrame(_arg_1:GameSprite)
 	{
-		super(TextKey.GUILD_TITLE, TextKey.FRAME_CANCEL, TextKey.GUILD_CREATE, "/createGuild");
+		super(TextKey.GUILD_TITLE, TextKey.FRAME_CANCEL, TextKey.GUILD_CREATE);
 		this.gs_ = _arg_1;
 		this.name_ = new TextInputField(TextKey.GUILD_NAME, false);
 		this.name_.inputText_.restrict = "A-Za-z ";

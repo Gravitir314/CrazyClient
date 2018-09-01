@@ -17,14 +17,12 @@ public class ChooseNameFrame extends Frame
 	public const choose:Signal = new Signal(String);
 
 	public var gameSprite:AGameSprite;
-	public var isPurchase:Boolean;
 	private var nameInput:TextInputField;
 
-	public function ChooseNameFrame(_arg_1:AGameSprite, _arg_2:Boolean)
+	public function ChooseNameFrame(_arg_1:AGameSprite)
 	{
-		super(TextKey.CHOOSE_NAME_TITLE, TextKey.FRAME_CANCEL, TextKey.CHOOSE_NAME_CHOOSE, "/chooseName");
+		super(TextKey.CHOOSE_NAME_TITLE, TextKey.FRAME_CANCEL, TextKey.CHOOSE_NAME_CHOOSE);
 		this.gameSprite = _arg_1;
-		this.isPurchase = _arg_2;
 		this.nameInput = new TextInputField(TextKey.CHOOSE_NAME_NAME, false);
 		this.nameInput.inputText_.restrict = "A-Za-z";
 		var _local_3:int = 10;

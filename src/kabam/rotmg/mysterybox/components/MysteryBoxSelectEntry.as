@@ -416,7 +416,7 @@ public class MysteryBoxSelectEntry extends Sprite
 					"box": ((this.mbi.unitsLeft == 1) ? LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box") : LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes"))
 				});
 			}
-			_local_4 = new Dialog("MysteryBoxRollModal.purchaseFailedString", _local_3, "MysteryBoxRollModal.okString", null, null);
+			_local_4 = new Dialog("MysteryBoxRollModal.purchaseFailedString", _local_3, "MysteryBoxRollModal.okString", null);
 			_local_4.addEventListener(Dialog.LEFT_BUTTON, this.onErrorOk);
 			_local_2.dispatch(_local_4);
 		}

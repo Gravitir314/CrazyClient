@@ -70,8 +70,7 @@ public class SquareFace
 		if (Parameters.isGpuRender())
 		{
 			GraphicsFillExtra.setOffsetUV(this.face_.bitmapFill_, _local_4, _local_5);
-			_local_5 = 0;
-			_local_4 = _local_5;
+			_local_4 = (_local_5 = 0);
 		}
 		this.face_.uvt_.length = 0;
 		this.face_.uvt_.push((0 + _local_4), (0 + _local_5), 0, (1 + _local_4), (0 + _local_5), 0, (1 + _local_4), (1 + _local_5), 0, (0 + _local_4), (1 + _local_5), 0);

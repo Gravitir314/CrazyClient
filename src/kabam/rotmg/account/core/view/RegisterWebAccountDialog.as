@@ -28,7 +28,7 @@ public class RegisterWebAccountDialog extends Frame
 
 	public function RegisterWebAccountDialog()
 	{
-		super(TextKey.REGISTER_WEB_ACCOUNT_DIALOG_TITLE, TextKey.REGISTER_WEB_ACCOUNT_DIALOG_LEFTBUTTON, TextKey.REGISTER_WEB_ACCOUNT_DIALOG_RIGHTBUTTON, "/kongregateRegisterAccount");
+		super(TextKey.REGISTER_WEB_ACCOUNT_DIALOG_TITLE, TextKey.REGISTER_WEB_ACCOUNT_DIALOG_LEFTBUTTON, TextKey.REGISTER_WEB_ACCOUNT_DIALOG_RIGHTBUTTON);
 		this.createAssets();
 		this.enableForTabBehavior();
 		this.addEventListeners();

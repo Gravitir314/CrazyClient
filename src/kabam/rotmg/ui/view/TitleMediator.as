@@ -23,7 +23,6 @@ import kabam.rotmg.application.DynamicSettings;
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.build.api.BuildData;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.core.signals.SetScreenSignal;
 import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
 import kabam.rotmg.core.view.Layers;
@@ -68,8 +67,6 @@ public class TitleMediator extends Mediator
 	public var client:AppEngineClient;
 	[Inject]
 	public var buildData:BuildData;
-	[Inject]
-	public var tracking:GoogleAnalytics;
 
 
 	override public function initialize():void

@@ -87,7 +87,7 @@ public class GuildListItemMediator extends Mediator
 
 	private function onRemoveClick(_arg_1:MouseEvent):void
 	{
-		var _local_2:Dialog = new Dialog("", "", TextKey.REMOVE_LEFT, TextKey.REMOVE_RIGHT, "/removeFromGuild");
+		var _local_2:Dialog = new Dialog("", "", TextKey.REMOVE_LEFT, TextKey.REMOVE_RIGHT);
 		_local_2.setTextParams(TextKey.REMOVE_TEXT, {"name": this.view.getLabelText()});
 		_local_2.setTitleStringBuilder(new LineBuilder().setParams(TextKey.REMOVE_TITLE, {"name": this.view.getLabelText()}));
 		_local_2.addEventListener(Dialog.LEFT_BUTTON, this.onCancelDialog);
@@ -140,7 +140,7 @@ public class GuildListItemMediator extends Mediator
 	private function onPromoteClick(_arg_1:MouseEvent):void
 	{
 		var _local_2:String = GuildUtil.rankToString(GuildUtil.promotedRank(this.view.guildMemberVO.rank));
-		var _local_3:Dialog = new Dialog("", "", TextKey.PROMOTE_LEFTBUTTON, TextKey.PROMOTE_RIGHTBUTTON, "/promote");
+		var _local_3:Dialog = new Dialog("", "", TextKey.PROMOTE_LEFTBUTTON, TextKey.PROMOTE_RIGHTBUTTON);
 		_local_3.setTextParams(TextKey.PROMOTE_TEXT, {
 			"name": this.view.getLabelText(), "rank": _local_2
 		});
@@ -169,7 +169,7 @@ public class GuildListItemMediator extends Mediator
 	private function onDemoteClick(_arg_1:MouseEvent):void
 	{
 		var _local_2:String = GuildUtil.rankToString(GuildUtil.demotedRank(this.view.guildMemberVO.rank));
-		var _local_3:Dialog = new Dialog("", "", TextKey.DEMOTE_LEFT, TextKey.DEMOTE_RIGHT, "/demote");
+		var _local_3:Dialog = new Dialog("", "", TextKey.DEMOTE_LEFT, TextKey.DEMOTE_RIGHT);
 		_local_3.setTextParams(TextKey.DEMOTE_TEXT, {
 			"name": this.view.getLabelText(), "rank": _local_2
 		});

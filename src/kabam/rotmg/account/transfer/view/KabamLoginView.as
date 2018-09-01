@@ -33,7 +33,7 @@ public class KabamLoginView extends Frame
 
 	public function KabamLoginView()
 	{
-		super("Kabam.com account transfer", TextKey.WEB_LOGIN_DIALOG_LEFT, TextKey.WEB_LOGIN_DIALOG_RIGHT, "/signIn");
+		super("Kabam.com account transfer", TextKey.WEB_LOGIN_DIALOG_LEFT, TextKey.WEB_LOGIN_DIALOG_RIGHT);
 		this.makeUI();
 		this.forgot = new NativeMappedSignal(this.forgotText, MouseEvent.CLICK);
 		this.cancel = new NativeMappedSignal(leftButton_, MouseEvent.CLICK);

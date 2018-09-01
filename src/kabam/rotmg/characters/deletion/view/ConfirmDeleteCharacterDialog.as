@@ -28,7 +28,7 @@ public class ConfirmDeleteCharacterDialog extends Sprite
 
 	public function setText(_arg_1:String, _arg_2:String):void
 	{
-		var _local_3:Dialog = new Dialog(TextKey.CONFIRMDELETE_VERIFYDELETION, "", TextKey.CONFIRMDELETE_CANCEL, TextKey.CONFIRMDELETE_DELETE, "/deleteDialog");
+		var _local_3:Dialog = new Dialog(TextKey.CONFIRMDELETE_VERIFYDELETION, "", TextKey.CONFIRMDELETE_CANCEL, TextKey.CONFIRMDELETE_DELETE);
 		_local_3.setTextParams(TextKey.CONFIRMDELETECHARACTERDIALOG, {
 			"name": _arg_1, "displayID": _arg_2
 		});

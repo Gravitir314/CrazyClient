@@ -67,7 +67,7 @@ public class MapOverlay extends Sprite
 		while (_local_4 < numChildren)
 		{
 			_local_3 = (getChildAt(_local_4) as IMapOverlayElement);
-			if (((!(_local_3)) || (_local_3.draw(_arg_1, _arg_2))))
+			if (!_local_3 || _local_3.draw(_arg_1, _arg_2))
 			{
 				_local_4++;
 			}

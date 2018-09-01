@@ -33,7 +33,7 @@ public class ArenaPortal extends Portal implements IInteractiveObject
 	override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 	{
 		super.draw(_arg_1, _arg_2, _arg_3);
-		drawName(_arg_1, _arg_2, false);
+		drawName(_arg_1, _arg_2);
 	}
 
 	override protected function makeNameBitmapData():BitmapData

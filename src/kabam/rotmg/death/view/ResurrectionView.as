@@ -45,7 +45,7 @@ public class ResurrectionView extends Sprite
 
 	public function createPopup():void
 	{
-		this.popup = new Dialog(TextKey.RESURRECTION_VIEW_YOU_DIED, TextKey.RESURRECTION_VIEW_DEATH_TEXT, TextKey.RESURRECTION_VIEW_SAVE_ME, null, null);
+		this.popup = new Dialog(TextKey.RESURRECTION_VIEW_YOU_DIED, TextKey.RESURRECTION_VIEW_DEATH_TEXT, TextKey.RESURRECTION_VIEW_SAVE_ME, null);
 		this.popup.addEventListener(Dialog.LEFT_BUTTON, this.onButtonClick);
 		this.showDialog.dispatch(this.popup);
 	}

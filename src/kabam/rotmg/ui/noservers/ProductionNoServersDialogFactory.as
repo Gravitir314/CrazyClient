@@ -10,12 +10,11 @@ public class ProductionNoServersDialogFactory implements NoServersDialogFactory
 {
 
 	private static const forums_link:String = '<font color="#7777EE"><a href="http://forums.wildshadow.com/">forums.wildshadow.com</a></font>';
-	private static const TRACKING:String = "/offLine";
 
 
 	public function makeDialog():Dialog
 	{
-		var _local_1:Dialog = new Dialog(TextKey.PRODUCTIONNOSERVERSDIALOGFACTORY_TILE, "", null, null, TRACKING);
+		var _local_1:Dialog = new Dialog(TextKey.PRODUCTIONNOSERVERSDIALOGFACTORY_TILE, "", null, null);
 		_local_1.textText_.setHTML(true);
 		_local_1.setTextParams(TextKey.PRODUCTIONNOSERVERSDIALOGFACTORY_BODY, {"forums_link": forums_link});
 		return (_local_1);
