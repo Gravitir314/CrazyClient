@@ -32,37 +32,37 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
-public class DailyQuestsConfig implements IConfig 
-    {
+public class DailyQuestsConfig implements IConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-
-
-        public function configure():void
-        {
-            this.mediatorMap.map(DailyQuestsPanel).toMediator(DailyQuestsPanelMediator);
-            this.mediatorMap.map(DailyQuestsList).toMediator(DailyQuestsListMediator);
-            this.mediatorMap.map(DailyQuestListElement).toMediator(DailyQuestListElementMediator);
-            this.mediatorMap.map(DailyQuestInfo).toMediator(DailyQuestInfoMediator);
-            this.mediatorMap.map(DailyQuestItemSlot).toMediator(DailyQuestItemSlotMediator);
-            this.mediatorMap.map(DailyQuestWindow).toMediator(DailyQuestWindowMediator);
-            this.mediatorMap.map(DailyQuestRedeemPopup).toMediator(DailyQuestRedeemPopupMediator);
-            this.injector.map(DailyQuestsModel).asSingleton();
-            this.injector.map(ShowQuestInfoSignal).asSingleton();
-            this.injector.map(LockQuestScreenSignal).asSingleton();
-            this.injector.map(CloseRedeemPopupSignal).asSingleton();
-            this.injector.map(QuestRedeemCompleteSignal).asSingleton();
-            this.injector.map(SelectedItemSlotsSignal).asSingleton();
-            this.injector.map(UnselectAllSlotsSignal).asSingleton();
-            this.commandMap.map(QuestFetchCompleteSignal).toCommand(QuestFetchCompleteCommand);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
 
 
-    }
+	public function configure():void
+	{
+		this.mediatorMap.map(DailyQuestsPanel).toMediator(DailyQuestsPanelMediator);
+		this.mediatorMap.map(DailyQuestsList).toMediator(DailyQuestsListMediator);
+		this.mediatorMap.map(DailyQuestListElement).toMediator(DailyQuestListElementMediator);
+		this.mediatorMap.map(DailyQuestInfo).toMediator(DailyQuestInfoMediator);
+		this.mediatorMap.map(DailyQuestItemSlot).toMediator(DailyQuestItemSlotMediator);
+		this.mediatorMap.map(DailyQuestWindow).toMediator(DailyQuestWindowMediator);
+		this.mediatorMap.map(DailyQuestRedeemPopup).toMediator(DailyQuestRedeemPopupMediator);
+		this.injector.map(DailyQuestsModel).asSingleton();
+		this.injector.map(ShowQuestInfoSignal).asSingleton();
+		this.injector.map(LockQuestScreenSignal).asSingleton();
+		this.injector.map(CloseRedeemPopupSignal).asSingleton();
+		this.injector.map(QuestRedeemCompleteSignal).asSingleton();
+		this.injector.map(SelectedItemSlotsSignal).asSingleton();
+		this.injector.map(UnselectAllSlotsSignal).asSingleton();
+		this.commandMap.map(QuestFetchCompleteSignal).toCommand(QuestFetchCompleteCommand);
+	}
+
+
+}
 }//package io.decagames.rotmg.dailyQuests.config
 

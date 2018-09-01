@@ -7,10 +7,10 @@ import flash.events.IEventDispatcher;
 import org.osflash.signals.Signal;
 
 public interface DialogCloser extends IEventDispatcher
-    {
+{
 
-        function getCloseSignal():Signal;
+	function getCloseSignal():Signal;
 
-    }
+}
 }//package com.company.assembleegameclient.ui.dialogs
 

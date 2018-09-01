@@ -108,79 +108,79 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
-public class PetsConfig implements IConfig 
-    {
+public class PetsConfig implements IConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-        [Inject]
-        public var commandCenter:ICommandCenter;
-
-
-        public function configure():void
-        {
-            this.injector.map(ShowPetTooltip).asSingleton();
-            this.injector.map(NotifyActivePetUpdated).asSingleton();
-            this.injector.map(PetsViewAssetFactory).asSingleton();
-            this.injector.map(PetFeedResultSignal).asSingleton();
-            this.injector.map(FeedFuseCostModel).asSingleton();
-            this.injector.map(SelectPetSignal).asSingleton();
-            this.injector.map(ChangePetSkinSignal).asSingleton();
-            this.injector.map(SelectFusePetSignal).asSingleton();
-            this.injector.map(SelectFeedItemSignal).asSingleton();
-            this.injector.map(SimulateFeedSignal).asSingleton();
-            this.mediatorMap.map(PetsTabContentView).toMediator(PetsTabContentMediator);
-            this.mediatorMap.map(PetPanel).toMediator(PetPanelMediator);
-            this.mediatorMap.map(PetInteractionPanel).toMediator(PetInteractionPanelMediator);
-            this.mediatorMap.map(YardUpgraderPanel).toMediator(YardUpgraderPanelMediator);
-            this.mediatorMap.map(DialogCloseButton).toMediator(DialogCloseButtonMediator);
-            this.mediatorMap.map(PetTooltip).toMediator(PetTooltipMediator);
-            this.mediatorMap.map(CaretakerQueryDialog).toMediator(CaretakerQueryDialogMediator);
-            this.mediatorMap.map(DialogCloser).toMediator(DialogCloserMediator);
-            this.commandMap.map(UpdateActivePet).toCommand(UpdateActivePetCommand);
-            this.commandMap.map(UpdatePetYardSignal).toCommand(UpdatePetYardCommand);
-            this.commandMap.map(UpgradePetSignal).toCommand(UpgradePetCommand);
-            this.commandMap.map(DeactivatePet).toCommand(DeactivatePetCommand);
-            this.commandMap.map(ActivatePet).toCommand(ActivatePetCommand);
-            this.commandMap.map(AddPetsConsoleActionsSignal).toCommand(AddPetsConsoleActionsCommand);
-            this.commandMap.map(OpenCaretakerQueryDialogSignal).toCommand(OpenCaretakerQueryDialogCommand);
-            this.commandMap.map(EvolvePetSignal).toCommand(EvolvePetCommand);
-            this.commandMap.map(NewAbilitySignal).toCommand(NewAbilityCommand);
-            this.commandMap.map(DeletePetSignal).toCommand(DeletePetCommand);
-            this.commandMap.map(HatchPetSignal).toCommand(HatchPetCommand);
-            this.commandMap.map(ReleasePetSignal).toCommand(ReleasePetCommand);
-            this.mediatorMap.map(PetWardrobeWindow).toMediator(PetWardrobeWindowMediator);
-            this.mediatorMap.map(PetInfoSlot).toMediator(PetInfoSlotMediator);
-            this.mediatorMap.map(SelectedPetSkinInfo).toMediator(SelectedPetSkinInfoMediator);
-            this.mediatorMap.map(PetSkinsCollection).toMediator(PetSkinsCollectionMediator);
-            this.mediatorMap.map(ChoosePetPopup).toMediator(ChoosePetPopupMediator);
-            this.mediatorMap.map(PetPortrait).toMediator(PetPortraitMediator);
-            this.mediatorMap.map(PetStatsGrid).toMediator(PetStatsGridMediator);
-            this.mediatorMap.map(PetSkinSlot).toMediator(PetSkinSlotMediator);
-            this.injector.map(SelectPetSkinSignal).asSingleton();
-            this.mediatorMap.map(PetYardWindow).toMediator(PetYardWindowMediator);
-            this.mediatorMap.map(InteractionInfo).toMediator(InteractionInfoMediator);
-            this.mediatorMap.map(PetYardList).toMediator(PetYardListMediator);
-            this.mediatorMap.map(FuseTab).toMediator(FuseTabMediator);
-            this.mediatorMap.map(FeedTab).toMediator(FeedTabMediator);
-            this.mediatorMap.map(FeedItem).toMediator(FeedItemMediator);
-            this.mediatorMap.map(PetYardUpgradeDialog).toMediator(PetYardUpgradeDialogMediator);
-            this.mediatorMap.map(LeavePetYardDialog).toMediator(LeavePetYardDialogMediator);
-            this.mediatorMap.map(NewAbilityUnlockedDialog).toMediator(NewAbilityUnlockedDialogMediator);
-            this.mediatorMap.map(PetHatchingDialog).toMediator(PetHatchingDialogMediator);
-            this.mediatorMap.map(PetInfoDialog).toMediator(PetInfoDialogMediator);
-            this.mediatorMap.map(PetInfoItem).toMediator(PetInfoItemMediator);
-            this.mediatorMap.map(ReleasePetDialog).toMediator(ReleasePetDialogMediator);
-            this.mediatorMap.map(PetEvolvingDialog).toMediator(PetEvolvingDialogMediator);
-            this.injector.map(PetsModel).asSingleton();
-            this.injector.getInstance(AddPetsConsoleActionsSignal).dispatch();
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
+	[Inject]
+	public var commandCenter:ICommandCenter;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(ShowPetTooltip).asSingleton();
+		this.injector.map(NotifyActivePetUpdated).asSingleton();
+		this.injector.map(PetsViewAssetFactory).asSingleton();
+		this.injector.map(PetFeedResultSignal).asSingleton();
+		this.injector.map(FeedFuseCostModel).asSingleton();
+		this.injector.map(SelectPetSignal).asSingleton();
+		this.injector.map(ChangePetSkinSignal).asSingleton();
+		this.injector.map(SelectFusePetSignal).asSingleton();
+		this.injector.map(SelectFeedItemSignal).asSingleton();
+		this.injector.map(SimulateFeedSignal).asSingleton();
+		this.mediatorMap.map(PetsTabContentView).toMediator(PetsTabContentMediator);
+		this.mediatorMap.map(PetPanel).toMediator(PetPanelMediator);
+		this.mediatorMap.map(PetInteractionPanel).toMediator(PetInteractionPanelMediator);
+		this.mediatorMap.map(YardUpgraderPanel).toMediator(YardUpgraderPanelMediator);
+		this.mediatorMap.map(DialogCloseButton).toMediator(DialogCloseButtonMediator);
+		this.mediatorMap.map(PetTooltip).toMediator(PetTooltipMediator);
+		this.mediatorMap.map(CaretakerQueryDialog).toMediator(CaretakerQueryDialogMediator);
+		this.mediatorMap.map(DialogCloser).toMediator(DialogCloserMediator);
+		this.commandMap.map(UpdateActivePet).toCommand(UpdateActivePetCommand);
+		this.commandMap.map(UpdatePetYardSignal).toCommand(UpdatePetYardCommand);
+		this.commandMap.map(UpgradePetSignal).toCommand(UpgradePetCommand);
+		this.commandMap.map(DeactivatePet).toCommand(DeactivatePetCommand);
+		this.commandMap.map(ActivatePet).toCommand(ActivatePetCommand);
+		this.commandMap.map(AddPetsConsoleActionsSignal).toCommand(AddPetsConsoleActionsCommand);
+		this.commandMap.map(OpenCaretakerQueryDialogSignal).toCommand(OpenCaretakerQueryDialogCommand);
+		this.commandMap.map(EvolvePetSignal).toCommand(EvolvePetCommand);
+		this.commandMap.map(NewAbilitySignal).toCommand(NewAbilityCommand);
+		this.commandMap.map(DeletePetSignal).toCommand(DeletePetCommand);
+		this.commandMap.map(HatchPetSignal).toCommand(HatchPetCommand);
+		this.commandMap.map(ReleasePetSignal).toCommand(ReleasePetCommand);
+		this.mediatorMap.map(PetWardrobeWindow).toMediator(PetWardrobeWindowMediator);
+		this.mediatorMap.map(PetInfoSlot).toMediator(PetInfoSlotMediator);
+		this.mediatorMap.map(SelectedPetSkinInfo).toMediator(SelectedPetSkinInfoMediator);
+		this.mediatorMap.map(PetSkinsCollection).toMediator(PetSkinsCollectionMediator);
+		this.mediatorMap.map(ChoosePetPopup).toMediator(ChoosePetPopupMediator);
+		this.mediatorMap.map(PetPortrait).toMediator(PetPortraitMediator);
+		this.mediatorMap.map(PetStatsGrid).toMediator(PetStatsGridMediator);
+		this.mediatorMap.map(PetSkinSlot).toMediator(PetSkinSlotMediator);
+		this.injector.map(SelectPetSkinSignal).asSingleton();
+		this.mediatorMap.map(PetYardWindow).toMediator(PetYardWindowMediator);
+		this.mediatorMap.map(InteractionInfo).toMediator(InteractionInfoMediator);
+		this.mediatorMap.map(PetYardList).toMediator(PetYardListMediator);
+		this.mediatorMap.map(FuseTab).toMediator(FuseTabMediator);
+		this.mediatorMap.map(FeedTab).toMediator(FeedTabMediator);
+		this.mediatorMap.map(FeedItem).toMediator(FeedItemMediator);
+		this.mediatorMap.map(PetYardUpgradeDialog).toMediator(PetYardUpgradeDialogMediator);
+		this.mediatorMap.map(LeavePetYardDialog).toMediator(LeavePetYardDialogMediator);
+		this.mediatorMap.map(NewAbilityUnlockedDialog).toMediator(NewAbilityUnlockedDialogMediator);
+		this.mediatorMap.map(PetHatchingDialog).toMediator(PetHatchingDialogMediator);
+		this.mediatorMap.map(PetInfoDialog).toMediator(PetInfoDialogMediator);
+		this.mediatorMap.map(PetInfoItem).toMediator(PetInfoItemMediator);
+		this.mediatorMap.map(ReleasePetDialog).toMediator(ReleasePetDialogMediator);
+		this.mediatorMap.map(PetEvolvingDialog).toMediator(PetEvolvingDialogMediator);
+		this.injector.map(PetsModel).asSingleton();
+		this.injector.getInstance(AddPetsConsoleActionsSignal).dispatch();
+	}
+
+
+}
 }//package io.decagames.rotmg.pets.config
 

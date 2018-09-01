@@ -1,6 +1,6 @@
 ﻿//WebMain
 
-package 
+package
 {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.AssetLoader;
@@ -63,78 +63,78 @@ import robotlegs.bender.framework.api.IContext;
 public class WebMain extends Sprite
 {
 
-    public static var STAGE:Stage;
-    public static var USER_AGENT:String = "None";
-    public static var sWidth:Number = 800;
-    public static var sHeight:Number = 600;
+	public static var STAGE:Stage;
+	public static var USER_AGENT:String = "None";
+	public static var sWidth:Number = 800;
+	public static var sHeight:Number = 600;
 
-    [Inject]
-    public var stageproxy:StageProxy;
-    protected var context:IContext;
+	[Inject]
+	public var stageproxy:StageProxy;
+	protected var context:IContext;
 
-    public function WebMain()
-    {
-        if (stage)
-        {
-            stage.addEventListener(Event.RESIZE, this.onStageResize);
-            this.setup();
-        }
-        else
-        {
-            addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-        }
-    }
+	public function WebMain()
+	{
+		if (stage)
+		{
+			stage.addEventListener(Event.RESIZE, this.onStageResize);
+			this.setup();
+		}
+		else
+		{
+			addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		}
+	}
 
-    public function onStageResize(_arg_1:Event):void
-    {
-        if (stage.scaleMode == StageScaleMode.NO_SCALE)
-        {
-            this.scaleX = (stage.stageWidth / 800);
-            this.scaleY = (stage.stageHeight / 600);
-            this.x = ((800 - stage.stageWidth) / 2);
-            this.y = ((600 - stage.stageHeight) / 2);
-        }
-        else
-        {
-            this.scaleX = 1;
-            this.scaleY = 1;
-            this.x = 0;
-            this.y = 0;
-        }
-        sWidth = stage.stageWidth;
-        sHeight = stage.stageHeight;
-    }
+	public function onStageResize(_arg_1:Event):void
+	{
+		if (stage.scaleMode == StageScaleMode.NO_SCALE)
+		{
+			this.scaleX = (stage.stageWidth / 800);
+			this.scaleY = (stage.stageHeight / 600);
+			this.x = ((800 - stage.stageWidth) / 2);
+			this.y = ((600 - stage.stageHeight) / 2);
+		}
+		else
+		{
+			this.scaleX = 1;
+			this.scaleY = 1;
+			this.x = 0;
+			this.y = 0;
+		}
+		sWidth = stage.stageWidth;
+		sHeight = stage.stageHeight;
+	}
 
-    private function onAddedToStage(_arg_1:Event):void
-    {
-        removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-        this.setup();
-    }
+	private function onAddedToStage(_arg_1:Event):void
+	{
+		removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		this.setup();
+	}
 
-    private function setup():void
-    {
-        this.hackParameters();
-        this.createContext();
-        new AssetLoader().load();
-        stage.scaleMode = StageScaleMode.EXACT_FIT;
-        this.context.injector.getInstance(StartupSignal).dispatch();
-        STAGE = stage;
-        UIUtils.toggleQuality(Parameters.data_.uiQuality);
-    }
+	private function setup():void
+	{
+		this.hackParameters();
+		this.createContext();
+		new AssetLoader().load();
+		stage.scaleMode = StageScaleMode.EXACT_FIT;
+		this.context.injector.getInstance(StartupSignal).dispatch();
+		STAGE = stage;
+		UIUtils.toggleQuality(Parameters.data_.uiQuality);
+	}
 
-    private function hackParameters():void
-    {
-        Parameters.root = stage.root;
-    }
+	private function hackParameters():void
+	{
+		Parameters.root = stage.root;
+	}
 
-    private function createContext():void
-    {
-        this.context = new StaticInjectorContext();
-        this.context.injector.map(LoaderInfo).toValue(root.stage.root.loaderInfo);
-        var _local_1:StageProxy = new StageProxy(this);
-        this.context.injector.map(StageProxy).toValue(_local_1);
-        this.context.extend(MVCSBundle).extend(SignalCommandMapExtension).configure(BuildConfig).configure(StartupConfig).configure(NetConfig).configure(AssetsConfig).configure(DialogsConfig).configure(EnvironmentConfig).configure(ApplicationConfig).configure(LanguageConfig).configure(TextConfig).configure(AppEngineConfig).configure(AccountConfig).configure(ErrorConfig).configure(CoreConfig).configure(ApplicationSpecificConfig).configure(DeathConfig).configure(CharactersConfig).configure(ServersConfig).configure(GameConfig).configure(UIConfig).configure(MiniMapConfig).configure(LegendsConfig).configure(NewsConfig).configure(FameConfig).configure(TooltipsConfig).configure(PromotionsConfig).configure(ProTipConfig).configure(MapLoadingConfig).configure(ClassesConfig).configure(PackageConfig).configure(PetsConfig).configure(DailyLoginConfig).configure(Stage3DConfig).configure(ArenaConfig).configure(ExternalConfig).configure(MysteryBoxConfig).configure(FortuneConfig).configure(DailyQuestsConfig).configure(SocialConfig).configure(ToSConfig).configure(this);
-    }
+	private function createContext():void
+	{
+		this.context = new StaticInjectorContext();
+		this.context.injector.map(LoaderInfo).toValue(root.stage.root.loaderInfo);
+		var _local_1:StageProxy = new StageProxy(this);
+		this.context.injector.map(StageProxy).toValue(_local_1);
+		this.context.extend(MVCSBundle).extend(SignalCommandMapExtension).configure(BuildConfig).configure(StartupConfig).configure(NetConfig).configure(AssetsConfig).configure(DialogsConfig).configure(EnvironmentConfig).configure(ApplicationConfig).configure(LanguageConfig).configure(TextConfig).configure(AppEngineConfig).configure(AccountConfig).configure(ErrorConfig).configure(CoreConfig).configure(ApplicationSpecificConfig).configure(DeathConfig).configure(CharactersConfig).configure(ServersConfig).configure(GameConfig).configure(UIConfig).configure(MiniMapConfig).configure(LegendsConfig).configure(NewsConfig).configure(FameConfig).configure(TooltipsConfig).configure(PromotionsConfig).configure(ProTipConfig).configure(MapLoadingConfig).configure(ClassesConfig).configure(PackageConfig).configure(PetsConfig).configure(DailyLoginConfig).configure(Stage3DConfig).configure(ArenaConfig).configure(ExternalConfig).configure(MysteryBoxConfig).configure(FortuneConfig).configure(DailyQuestsConfig).configure(SocialConfig).configure(ToSConfig).configure(this);
+	}
 
 
 }

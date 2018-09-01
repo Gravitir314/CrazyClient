@@ -1,15 +1,17 @@
-﻿
-//kabam.rotmg.ui.signals.ToggleShowTierTagSignal
+﻿//kabam.rotmg.ui.signals.ToggleShowTierTagSignal
 
-package kabam.rotmg.ui.signals{
+package kabam.rotmg.ui.signals
+{
 import org.osflash.signals.Signal;
 
-public class ToggleShowTierTagSignal extends Signal {
+public class ToggleShowTierTagSignal extends Signal
+{
 
-        public function ToggleShowTierTagSignal(){
-            super(Boolean);
-        }
+	public function ToggleShowTierTagSignal()
+	{
+		super(Boolean);
+	}
 
-    }
+}
 }//package kabam.rotmg.ui.signals
 

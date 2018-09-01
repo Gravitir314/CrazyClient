@@ -3,30 +3,30 @@
 package com.company.assembleegameclient.ui.board
 {
 public class HelpXML
-    {
+{
 
-        public static var protipsXML:Class = EmbeddedHelp;
+	public static var protipsXML:Class = EmbeddedHelp;
 
-        public var commands:Vector.<String> = new Vector.<String>(0);
-        public var explanations:Vector.<String> = new Vector.<String>(0);
+	public var commands:Vector.<String> = new Vector.<String>(0);
+	public var explanations:Vector.<String> = new Vector.<String>(0);
 
-        public function HelpXML()
-        {
-            this.makeTipsVector();
-        }
+	public function HelpXML()
+	{
+		this.makeTipsVector();
+	}
 
-        private function makeTipsVector():void
-        {
-            var _local_1:String;
-            var _local_2:XML = XML(new protipsXML());
-            for (_local_1 in _local_2.Article)
-            {
-                this.commands.push(_local_2.Article.Command[_local_1]);
-                this.explanations.push(_local_2.Article.Explanation[_local_1]);
-            }
-        }
+	private function makeTipsVector():void
+	{
+		var _local_1:String;
+		var _local_2:XML = XML(new protipsXML());
+		for (_local_1 in _local_2.Article)
+		{
+			this.commands.push(_local_2.Article.Command[_local_1]);
+			this.explanations.push(_local_2.Article.Explanation[_local_1]);
+		}
+	}
 
 
-    }
+}
 }//package com.company.assembleegameclient.ui.board
 

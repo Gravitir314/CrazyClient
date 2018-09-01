@@ -18,8 +18,6 @@ import kabam.rotmg.packages.control.OpenPackageSignal;
 import kabam.rotmg.packages.control.PackageAvailableSignal;
 import kabam.rotmg.packages.services.GetPackagesTask;
 import kabam.rotmg.packages.services.PackageModel;
-import kabam.rotmg.packages.view.PackageButton;
-import kabam.rotmg.packages.view.PackageButtonMediator;
 import kabam.rotmg.packages.view.PackageInfoDialog;
 import kabam.rotmg.packages.view.PackageInfoMediator;
 import kabam.rotmg.packages.view.PackageOfferDialog;
@@ -32,37 +30,36 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
-public class PackageConfig implements IConfig 
-    {
+public class PackageConfig implements IConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-        [Inject]
-        public var sequence:StartupSequence;
-
-
-        public function configure():void
-        {
-            this.injector.map(PackageModel).asSingleton();
-            this.injector.map(PackageAvailableSignal).asSingleton();
-            this.injector.map(GetPackagesTask);
-            this.mediatorMap.map(PackageButton).toMediator(PackageButtonMediator);
-            this.mediatorMap.map(PackageOfferDialog).toMediator(PackageOfferDialogMediator);
-            this.mediatorMap.map(PackageInfoDialog).toMediator(PackageInfoMediator);
-            this.mediatorMap.map(Resizable).toMediator(ResizableMediator);
-            this.commandMap.map(BuyPackageSignal).toCommand(BuyPackageCommand).withGuards(IsAccountRegisteredToBuyPackageGuard, IsPackageAffordableGuard);
-            this.commandMap.map(AlreadyBoughtPackageSignal).toCommand(AlreadyBoughtPackageCommand);
-            this.commandMap.map(BuyPackageSuccessfulSignal).toCommand(BuyPackageSuccessfulCommand);
-            this.commandMap.map(InitPackagesSignal).toCommand(InitPackagesCommand);
-            this.commandMap.map(OpenPackageSignal).toCommand(OpenPackageCommand);
-            this.sequence.addTask(GetPackagesTask);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
+	[Inject]
+	public var sequence:StartupSequence;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(PackageModel).asSingleton();
+		this.injector.map(PackageAvailableSignal).asSingleton();
+		this.injector.map(GetPackagesTask);
+		this.mediatorMap.map(PackageOfferDialog).toMediator(PackageOfferDialogMediator);
+		this.mediatorMap.map(PackageInfoDialog).toMediator(PackageInfoMediator);
+		this.mediatorMap.map(Resizable).toMediator(ResizableMediator);
+		this.commandMap.map(BuyPackageSignal).toCommand(BuyPackageCommand).withGuards(IsAccountRegisteredToBuyPackageGuard, IsPackageAffordableGuard);
+		this.commandMap.map(AlreadyBoughtPackageSignal).toCommand(AlreadyBoughtPackageCommand);
+		this.commandMap.map(BuyPackageSuccessfulSignal).toCommand(BuyPackageSuccessfulCommand);
+		this.commandMap.map(InitPackagesSignal).toCommand(InitPackagesCommand);
+		this.commandMap.map(OpenPackageSignal).toCommand(OpenPackageCommand);
+		this.sequence.addTask(GetPackagesTask);
+	}
+
+
+}
 }//package kabam.rotmg.packages
 

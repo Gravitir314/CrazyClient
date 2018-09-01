@@ -9,17 +9,17 @@ import robotlegs.bender.bundles.mvcs.Mediator;
 public class ItemTileSpriteMediator extends Mediator
 {
 
-    [Inject]
-    public var bitmapFactor:BitmapTextFactory;
-    [Inject]
-    public var view:ItemTileSprite;
+	[Inject]
+	public var bitmapFactor:BitmapTextFactory;
+	[Inject]
+	public var view:ItemTileSprite;
 
 
-    override public function initialize():void
-    {
-        this.view.setBitmapFactory(this.bitmapFactor);
-        this.view.drawTile();
-    }
+	override public function initialize():void
+	{
+		this.view.setBitmapFactory(this.bitmapFactor);
+		this.view.drawTile();
+	}
 
 
 }

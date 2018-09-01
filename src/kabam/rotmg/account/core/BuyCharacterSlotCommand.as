@@ -19,72 +19,72 @@ import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.ui.view.CharacterSlotNeedGoldDialog;
 
-public class BuyCharacterSlotCommand 
-    {
+public class BuyCharacterSlotCommand
+{
 
-        [Inject]
-        public var price:int;
-        [Inject]
-        public var task:BuyCharacterSlotTask;
-        [Inject]
-        public var monitor:TaskMonitor;
-        [Inject]
-        public var setScreen:SetScreenSignal;
-        [Inject]
-        public var openDialog:OpenDialogSignal;
-        [Inject]
-        public var closeDialog:CloseDialogsSignal;
-        [Inject]
-        public var model:PlayerModel;
-        [Inject]
-        public var account:Account;
-        [Inject]
-        public var addTextLine:AddTextLineSignal;
-
-
-        public function execute():void
-        {
-            if (this.isSlotUnaffordable())
-            {
-                this.promptToGetMoreGold();
-            }
-            else
-            {
-                this.purchaseSlot();
-            }
-        }
-
-        private function isSlotUnaffordable():Boolean
-        {
-            return (this.model.getCredits() < this.model.getNextCharSlotPrice());
-        }
-
-        private function promptToGetMoreGold():void
-        {
-            this.openDialog.dispatch(new CharacterSlotNeedGoldDialog());
-        }
-
-        private function purchaseSlot():void
-        {
-            this.openDialog.dispatch(new BuyingDialog());
-            var _local_1:TaskSequence = new TaskSequence();
-            _local_1.add(new BranchingTask(this.task, this.makeSuccessTask(), this.makeFailureTask()));
-            _local_1.add(new DispatchSignalTask(this.closeDialog));
-            this.monitor.add(_local_1);
-            _local_1.start();
-        }
-
-        private function makeSuccessTask():Task
-        {
-            return (new DispatchSignalTask(this.setScreen, new CharacterSelectionAndNewsScreen()));
-        }
-
-        private function makeFailureTask():Task
-        {
-            return (new DispatchSignalTask(this.openDialog, new ErrorDialog("Unable to complete character slot purchase")));
-        }
+	[Inject]
+	public var price:int;
+	[Inject]
+	public var task:BuyCharacterSlotTask;
+	[Inject]
+	public var monitor:TaskMonitor;
+	[Inject]
+	public var setScreen:SetScreenSignal;
+	[Inject]
+	public var openDialog:OpenDialogSignal;
+	[Inject]
+	public var closeDialog:CloseDialogsSignal;
+	[Inject]
+	public var model:PlayerModel;
+	[Inject]
+	public var account:Account;
+	[Inject]
+	public var addTextLine:AddTextLineSignal;
 
 
-    }
+	public function execute():void
+	{
+		if (this.isSlotUnaffordable())
+		{
+			this.promptToGetMoreGold();
+		}
+		else
+		{
+			this.purchaseSlot();
+		}
+	}
+
+	private function isSlotUnaffordable():Boolean
+	{
+		return (this.model.getCredits() < this.model.getNextCharSlotPrice());
+	}
+
+	private function promptToGetMoreGold():void
+	{
+		this.openDialog.dispatch(new CharacterSlotNeedGoldDialog());
+	}
+
+	private function purchaseSlot():void
+	{
+		this.openDialog.dispatch(new BuyingDialog());
+		var _local_1:TaskSequence = new TaskSequence();
+		_local_1.add(new BranchingTask(this.task, this.makeSuccessTask(), this.makeFailureTask()));
+		_local_1.add(new DispatchSignalTask(this.closeDialog));
+		this.monitor.add(_local_1);
+		_local_1.start();
+	}
+
+	private function makeSuccessTask():Task
+	{
+		return (new DispatchSignalTask(this.setScreen, new CharacterSelectionAndNewsScreen()));
+	}
+
+	private function makeFailureTask():Task
+	{
+		return (new DispatchSignalTask(this.openDialog, new ErrorDialog("Unable to complete character slot purchase")));
+	}
+
+
+}
 }//package kabam.rotmg.account.core
 

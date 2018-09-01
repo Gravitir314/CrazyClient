@@ -6,14 +6,14 @@ import flash.display.Sprite;
 
 import org.osflash.signals.Signal;
 
-public class SetScreenWithValidDataSignal extends Signal 
-    {
+public class SetScreenWithValidDataSignal extends Signal
+{
 
-        public function SetScreenWithValidDataSignal()
-        {
-            super(Sprite);
-        }
+	public function SetScreenWithValidDataSignal()
+	{
+		super(Sprite);
+	}
 
-    }
+}
 }//package kabam.rotmg.core.signals
 

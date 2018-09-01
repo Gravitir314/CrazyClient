@@ -10,34 +10,34 @@ import kabam.rotmg.game.signals.UpdateGiftStatusDisplaySignal;
 public class GiftStatusDisplayMediator
 {
 
-    [Inject]
-    public var updateGiftStatusDisplay:UpdateGiftStatusDisplaySignal;
-    [Inject]
-    public var view:GiftStatusDisplay;
-    [Inject]
-    public var giftStatusModel:GiftStatusModel;
-    [Inject]
-    public var displayAreaChangedSignal:DisplayAreaChangedSignal;
+	[Inject]
+	public var updateGiftStatusDisplay:UpdateGiftStatusDisplaySignal;
+	[Inject]
+	public var view:GiftStatusDisplay;
+	[Inject]
+	public var giftStatusModel:GiftStatusModel;
+	[Inject]
+	public var displayAreaChangedSignal:DisplayAreaChangedSignal;
 
 
-    public function initialize():void
-    {
-        this.updateGiftStatusDisplay.add(this.onGiftChestUpdate);
-        this.onGiftChestUpdate();
-    }
+	public function initialize():void
+	{
+		this.updateGiftStatusDisplay.add(this.onGiftChestUpdate);
+		this.onGiftChestUpdate();
+	}
 
-    private function onGiftChestUpdate():void
-    {
-        if (this.giftStatusModel.hasGift)
-        {
-            this.view.drawAsOpen();
-        }
-        else
-        {
-            this.view.drawAsClosed();
-        }
-        this.displayAreaChangedSignal.dispatch();
-    }
+	private function onGiftChestUpdate():void
+	{
+		if (this.giftStatusModel.hasGift)
+		{
+			this.view.drawAsOpen();
+		}
+		else
+		{
+			this.view.drawAsClosed();
+		}
+		this.displayAreaChangedSignal.dispatch();
+	}
 
 
 }

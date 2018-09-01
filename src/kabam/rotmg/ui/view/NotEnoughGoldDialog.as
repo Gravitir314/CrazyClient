@@ -12,17 +12,17 @@ import org.osflash.signals.natives.NativeMappedSignal;
 public class NotEnoughGoldDialog extends Dialog
 {
 
-    private static const TRACKING_TAG:String = "/notEnoughGold";
+	private static const TRACKING_TAG:String = "/notEnoughGold";
 
-    public var cancel:Signal;
-    public var buyGold:Signal;
+	public var cancel:Signal;
+	public var buyGold:Signal;
 
-    public function NotEnoughGoldDialog()
-    {
-        super(TextKey.NOT_ENOUGH_GOLD, TextKey.GOLD_NOTENOUGHFORITEM, TextKey.FRAME_CANCEL, TextKey.BUY_GOLD, TRACKING_TAG);
-        this.cancel = new NativeMappedSignal(this, LEFT_BUTTON);
-        this.buyGold = new NativeMappedSignal(this, RIGHT_BUTTON);
-    }
+	public function NotEnoughGoldDialog()
+	{
+		super(TextKey.NOT_ENOUGH_GOLD, TextKey.GOLD_NOTENOUGHFORITEM, TextKey.FRAME_CANCEL, TextKey.BUY_GOLD, TRACKING_TAG);
+		this.cancel = new NativeMappedSignal(this, LEFT_BUTTON);
+		this.buyGold = new NativeMappedSignal(this, RIGHT_BUTTON);
+	}
 
 }
 }//package kabam.rotmg.ui.view

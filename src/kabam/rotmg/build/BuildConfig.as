@@ -11,19 +11,19 @@ import org.swiftsuspenders.Injector;
 import robotlegs.bender.framework.api.IConfig;
 
 public class BuildConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var injector:Injector;
-
-
-        public function configure():void
-        {
-            this.injector.map(BuildEnvironments).asSingleton();
-            this.injector.map(BuildData).toSingleton(CompileTimeBuildData);
-        }
+	[Inject]
+	public var injector:Injector;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(BuildEnvironments).asSingleton();
+		this.injector.map(BuildData).toSingleton(CompileTimeBuildData);
+	}
+
+
+}
 }//package kabam.rotmg.build
 

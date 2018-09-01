@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.sound
 {
-    public interface IMusic 
-    {
+public interface IMusic
+{
 
-        function load():void;
+	function load():void;
 
-    }
+}
 }//package com.company.assembleegameclient.sound
 

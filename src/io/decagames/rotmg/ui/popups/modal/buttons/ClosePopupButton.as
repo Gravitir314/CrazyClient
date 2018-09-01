@@ -7,15 +7,15 @@ import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 import io.decagames.rotmg.ui.texture.TextureParser;
 
 public class ClosePopupButton extends SliceScalingButton
-    {
+{
 
-        public function ClosePopupButton(_arg_1:String)
-        {
-            super(TextureParser.instance.getSliceScalingBitmap("UI", "generic_green_button"));
-            setLabel(_arg_1, DefaultLabelFormat.defaultButtonLabel);
-            width = 100;
-        }
+	public function ClosePopupButton(_arg_1:String)
+	{
+		super(TextureParser.instance.getSliceScalingBitmap("UI", "generic_green_button"));
+		setLabel(_arg_1, DefaultLabelFormat.defaultButtonLabel);
+		width = 100;
+	}
 
-    }
+}
 }//package io.decagames.rotmg.ui.popups.modal.buttons
 

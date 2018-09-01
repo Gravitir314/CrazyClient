@@ -19,27 +19,27 @@ import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
 public class LegendsConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-
-
-        public function configure():void
-        {
-            this.injector.map(LegendFactory).asSingleton();
-            this.injector.map(LegendsModel).asSingleton();
-            this.injector.map(FameListUpdateSignal).asSingleton();
-            this.mediatorMap.map(LegendsView).toMediator(LegendsMediator);
-            this.commandMap.map(RequestFameListSignal).toCommand(RequestFameListCommand);
-            this.commandMap.map(ExitLegendsSignal).toCommand(ExitLegendsCommand);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(LegendFactory).asSingleton();
+		this.injector.map(LegendsModel).asSingleton();
+		this.injector.map(FameListUpdateSignal).asSingleton();
+		this.mediatorMap.map(LegendsView).toMediator(LegendsMediator);
+		this.commandMap.map(RequestFameListSignal).toCommand(RequestFameListCommand);
+		this.commandMap.map(ExitLegendsSignal).toCommand(ExitLegendsCommand);
+	}
+
+
+}
 }//package kabam.rotmg.legends
 

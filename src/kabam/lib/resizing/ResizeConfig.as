@@ -10,23 +10,23 @@ import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 
-public class ResizeConfig 
-    {
+public class ResizeConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-
-
-        [PostConstruct]
-        public function setup():void
-        {
-            this.injector.map(Resize).asSingleton();
-            this.mediatorMap.map(Resizable).toMediator(ResizableMediator);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
 
 
-    }
+	[PostConstruct]
+	public function setup():void
+	{
+		this.injector.map(Resize).asSingleton();
+		this.mediatorMap.map(Resizable).toMediator(ResizableMediator);
+	}
+
+
+}
 }//package kabam.lib.resizing
 

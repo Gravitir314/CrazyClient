@@ -8,12 +8,12 @@ import org.osflash.signals.Signal;
 
 public class PackageModel
 {
+	public const updateSignal:Signal = new Signal();
 
 	public var numSpammed:int = 0;
-	public var dataChanged:Signal = new Signal();
 	private var models:Object;
 	private var initialized:Boolean;
-	private var maxSlots:int = 4;
+	private var maxSlots:int = 18;
 
 
 	public function getBoxesForGrid():Vector.<PackageInfo>
@@ -67,12 +67,7 @@ public class PackageModel
 			this.models[_local_2.id] = _local_2;
 		}
 		this.initialized = true;
-		this.dataChanged.dispatch();
-	}
-
-	private function onDataChanged():void
-	{
-		this.dataChanged.dispatch();
+		this.updateSignal.dispatch();
 	}
 
 	public function canPurchasePackage(_arg_1:int):Boolean
@@ -84,6 +79,11 @@ public class PackageModel
 	public function getPriorityPackage():PackageInfo
 	{
 		return (null);
+	}
+
+	public function setInitialized(_arg_1:Boolean):void
+	{
+		this.initialized = _arg_1;
 	}
 
 	public function hasPackages():Boolean

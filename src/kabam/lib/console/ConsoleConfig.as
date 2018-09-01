@@ -34,71 +34,71 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IContext;
 
-public class ConsoleConfig 
-    {
+public class ConsoleConfig
+{
 
-        [Inject]
-        public var context:IContext;
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-
-
-        [PostConstruct]
-        public function setup():void
-        {
-            this.mapModel();
-            this.mapCommands();
-            this.mapViewSignals();
-            this.mapMediators();
-            this.context.lifecycle.afterInitializing(this.init);
-        }
-
-        private function mapModel():void
-        {
-            this.injector.map(Console).asSingleton();
-            this.injector.map(ConsoleLogSignal).asSingleton();
-            this.injector.map(ConsoleWatchSignal).asSingleton();
-            this.injector.map(ConsoleUnwatchSignal).asSingleton();
-            this.injector.map(RemoveConsoleSignal).asSingleton();
-        }
-
-        private function mapCommands():void
-        {
-            this.commandMap.map(RegisterConsoleActionSignal).toCommand(RegisterConsoleActionCommand);
-            this.commandMap.map(ListActionsSignal).toCommand(ListActionsCommand);
-            this.commandMap.map(AddDefaultConsoleActionsSignal).toCommand(AddDefaultConsoleActionsCommand);
-        }
-
-        private function mapViewSignals():void
-        {
-            this.injector.map(ClearConsoleSignal).asSingleton();
-            this.injector.map(CopyConsoleTextSignal).asSingleton();
-            this.injector.map(ToggleConsoleSignal).asSingleton();
-            this.injector.map(ShowConsoleSignal).asSingleton();
-            this.injector.map(HideConsoleSignal).asSingleton();
-        }
-
-        private function mapMediators():void
-        {
-            this.mediatorMap.map(ConsoleInputView).toMediator(ConsoleInputMediator);
-            this.mediatorMap.map(ConsoleOutputView).toMediator(ConsoleOutputMediator);
-            this.mediatorMap.map(ConsoleView).toMediator(ConsoleMediator);
-            this.mediatorMap.map(ConsoleView).toMediator(ConsoleKeyMediator);
-        }
-
-        private function init():void
-        {
-            this.context.addLogTarget(new ConsoleLogTarget(this.context));
-            this.injector.getInstance(AddDefaultConsoleActionsSignal).dispatch();
-            var _local_1:Layers = this.context.injector.getInstance(Layers);
-            _local_1.console.addChild(new ConsoleView());
-        }
+	[Inject]
+	public var context:IContext;
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
 
 
-    }
+	[PostConstruct]
+	public function setup():void
+	{
+		this.mapModel();
+		this.mapCommands();
+		this.mapViewSignals();
+		this.mapMediators();
+		this.context.lifecycle.afterInitializing(this.init);
+	}
+
+	private function mapModel():void
+	{
+		this.injector.map(Console).asSingleton();
+		this.injector.map(ConsoleLogSignal).asSingleton();
+		this.injector.map(ConsoleWatchSignal).asSingleton();
+		this.injector.map(ConsoleUnwatchSignal).asSingleton();
+		this.injector.map(RemoveConsoleSignal).asSingleton();
+	}
+
+	private function mapCommands():void
+	{
+		this.commandMap.map(RegisterConsoleActionSignal).toCommand(RegisterConsoleActionCommand);
+		this.commandMap.map(ListActionsSignal).toCommand(ListActionsCommand);
+		this.commandMap.map(AddDefaultConsoleActionsSignal).toCommand(AddDefaultConsoleActionsCommand);
+	}
+
+	private function mapViewSignals():void
+	{
+		this.injector.map(ClearConsoleSignal).asSingleton();
+		this.injector.map(CopyConsoleTextSignal).asSingleton();
+		this.injector.map(ToggleConsoleSignal).asSingleton();
+		this.injector.map(ShowConsoleSignal).asSingleton();
+		this.injector.map(HideConsoleSignal).asSingleton();
+	}
+
+	private function mapMediators():void
+	{
+		this.mediatorMap.map(ConsoleInputView).toMediator(ConsoleInputMediator);
+		this.mediatorMap.map(ConsoleOutputView).toMediator(ConsoleOutputMediator);
+		this.mediatorMap.map(ConsoleView).toMediator(ConsoleMediator);
+		this.mediatorMap.map(ConsoleView).toMediator(ConsoleKeyMediator);
+	}
+
+	private function init():void
+	{
+		this.context.addLogTarget(new ConsoleLogTarget(this.context));
+		this.injector.getInstance(AddDefaultConsoleActionsSignal).dispatch();
+		var _local_1:Layers = this.context.injector.getInstance(Layers);
+		_local_1.console.addChild(new ConsoleView());
+	}
+
+
+}
 }//package kabam.lib.console
 

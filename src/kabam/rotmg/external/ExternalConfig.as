@@ -19,31 +19,31 @@ import robotlegs.bender.framework.api.IConfig;
 import robotlegs.bender.framework.api.IContext;
 
 public class ExternalConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var context:IContext;
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-        [Inject]
-        public var startupSequence:StartupSequence;
-
-
-        public function configure():void
-        {
-            this.injector.map(RequestPlayerCreditsTask);
-            this.injector.map(ExternalServiceHelper).asSingleton();
-            this.injector.map(RequestPlayerCreditsCompleteSignal).asSingleton();
-            this.commandMap.map(RequestPlayerCreditsSignal).toCommand(RequestPlayerCreditsCommand);
-            this.commandMap.map(MapExternalCallbacksSignal).toCommand(MapExternalCallbacksCommand);
-            this.startupSequence.addSignal(MapExternalCallbacksSignal);
-        }
+	[Inject]
+	public var context:IContext;
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
+	[Inject]
+	public var startupSequence:StartupSequence;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(RequestPlayerCreditsTask);
+		this.injector.map(ExternalServiceHelper).asSingleton();
+		this.injector.map(RequestPlayerCreditsCompleteSignal).asSingleton();
+		this.commandMap.map(RequestPlayerCreditsSignal).toCommand(RequestPlayerCreditsCommand);
+		this.commandMap.map(MapExternalCallbacksSignal).toCommand(MapExternalCallbacksCommand);
+		this.startupSequence.addSignal(MapExternalCallbacksSignal);
+	}
+
+
+}
 }//package kabam.rotmg.external
 

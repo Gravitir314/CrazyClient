@@ -59,92 +59,92 @@ import robotlegs.bender.framework.api.IContext;
 public class CoreConfig implements IConfig
 {
 
-    [Inject]
-    public var context:IContext;
-    [Inject]
-    public var setup:ApplicationSetup;
-    [Inject]
-    public var contextView:DisplayObjectContainer;
-    [Inject]
-    public var injector:Injector;
-    [Inject]
-    public var commandMap:ISignalCommandMap;
-    [Inject]
-    public var mediatorMap:IMediatorMap;
-    [Inject]
-    public var startup:StartupSequence;
-    private var layers:Layers;
+	[Inject]
+	public var context:IContext;
+	[Inject]
+	public var setup:ApplicationSetup;
+	[Inject]
+	public var contextView:DisplayObjectContainer;
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var startup:StartupSequence;
+	private var layers:Layers;
 
 
-    public function configure():void
-    {
-        this.configureModel();
-        this.configureCommands();
-        this.configureServices();
-        this.configureSignals();
-        this.configureViews();
-        this.startup.addSignal(SetupDomainSecuritySignal, -1000);
-        this.startup.addSignal(SetupAnalyticsSignal, -999);
-        this.startup.addTask(RequestAppInitTask);
-        this.context.lifecycle.afterInitializing(this.init);
-    }
+	public function configure():void
+	{
+		this.configureModel();
+		this.configureCommands();
+		this.configureServices();
+		this.configureSignals();
+		this.configureViews();
+		this.startup.addSignal(SetupDomainSecuritySignal, -1000);
+		this.startup.addSignal(SetupAnalyticsSignal, -999);
+		this.startup.addTask(RequestAppInitTask);
+		this.context.lifecycle.afterInitializing(this.init);
+	}
 
-    private function configureModel():void
-    {
-        this.injector.map(PlayerModel).asSingleton();
-        this.injector.map(MapModel).asSingleton();
-        this.injector.map(ScreenModel).asSingleton();
-    }
+	private function configureModel():void
+	{
+		this.injector.map(PlayerModel).asSingleton();
+		this.injector.map(MapModel).asSingleton();
+		this.injector.map(ScreenModel).asSingleton();
+	}
 
-    private function configureCommands():void
-    {
-        this.commandMap.map(SetupDomainSecuritySignal).toCommand(SetupDomainSecurityCommand);
-        this.commandMap.map(SetupAnalyticsSignal).toCommand(SetupAnalyticsCommand);
-        this.commandMap.map(TrackEventSignal).toCommand(TrackEventCommand);
-        this.commandMap.map(TrackPageViewSignal).toCommand(TrackPageViewCommand);
-        this.commandMap.map(InvalidateDataSignal).toCommand(InvalidateDataCommand);
-        this.commandMap.map(SetScreenWithValidDataSignal).toCommand(SetScreenWithValidDataCommand);
-        this.commandMap.map(AppInitDataReceivedSignal).toCommand(ConfigurePaymentsWindowCommand);
-        this.commandMap.map(CharListDataSignal).toCommand(UpdatePlayerModelCommand);
-        this.commandMap.map(CharListDataSignal).toCommand(UpdatePetsModelCommand);
-    }
+	private function configureCommands():void
+	{
+		this.commandMap.map(SetupDomainSecuritySignal).toCommand(SetupDomainSecurityCommand);
+		this.commandMap.map(SetupAnalyticsSignal).toCommand(SetupAnalyticsCommand);
+		this.commandMap.map(TrackEventSignal).toCommand(TrackEventCommand);
+		this.commandMap.map(TrackPageViewSignal).toCommand(TrackPageViewCommand);
+		this.commandMap.map(InvalidateDataSignal).toCommand(InvalidateDataCommand);
+		this.commandMap.map(SetScreenWithValidDataSignal).toCommand(SetScreenWithValidDataCommand);
+		this.commandMap.map(AppInitDataReceivedSignal).toCommand(ConfigurePaymentsWindowCommand);
+		this.commandMap.map(CharListDataSignal).toCommand(UpdatePlayerModelCommand);
+		this.commandMap.map(CharListDataSignal).toCommand(UpdatePetsModelCommand);
+	}
 
-    private function configureServices():void
-    {
-        this.injector.map(JsonParser).toSingleton(SoftwareJsonParser);
-        this.injector.map(TaskMonitor).asSingleton();
-        this.injector.map(PurchaseCharacterClassTask);
-        this.injector.map(PurchaseCharacterErrorTask);
-        this.injector.map(GoogleAnalytics).asSingleton();
-        this.injector.map(RequestAppInitTask);
-    }
+	private function configureServices():void
+	{
+		this.injector.map(JsonParser).toSingleton(SoftwareJsonParser);
+		this.injector.map(TaskMonitor).asSingleton();
+		this.injector.map(PurchaseCharacterClassTask);
+		this.injector.map(PurchaseCharacterErrorTask);
+		this.injector.map(GoogleAnalytics).asSingleton();
+		this.injector.map(RequestAppInitTask);
+	}
 
-    private function configureSignals():void
-    {
-        this.injector.map(SetScreenSignal).asSingleton();
-        this.injector.map(GotoPreviousScreenSignal).asSingleton();
-        this.injector.map(LaunchGameSignal).asSingleton();
-        this.injector.map(ShowTooltipSignal).asSingleton();
-        this.injector.map(HideTooltipsSignal).asSingleton();
-        this.injector.map(SetLoadingMessageSignal).asSingleton();
-        this.injector.map(UpdateNewCharacterScreenSignal).asSingleton();
-        this.injector.map(BuyCharacterPendingSignal).asSingleton();
-        this.injector.map(DisplayAreaChangedSignal).asSingleton();
-    }
+	private function configureSignals():void
+	{
+		this.injector.map(SetScreenSignal).asSingleton();
+		this.injector.map(GotoPreviousScreenSignal).asSingleton();
+		this.injector.map(LaunchGameSignal).asSingleton();
+		this.injector.map(ShowTooltipSignal).asSingleton();
+		this.injector.map(HideTooltipsSignal).asSingleton();
+		this.injector.map(SetLoadingMessageSignal).asSingleton();
+		this.injector.map(UpdateNewCharacterScreenSignal).asSingleton();
+		this.injector.map(BuyCharacterPendingSignal).asSingleton();
+		this.injector.map(DisplayAreaChangedSignal).asSingleton();
+	}
 
-    private function configureViews():void
-    {
-        this.mediatorMap.map(ScreensView).toMediator(ScreensMediator);
-        this.mediatorMap.map(TooltipAble).toMediator(TooltipAbleMediator);
-    }
+	private function configureViews():void
+	{
+		this.mediatorMap.map(ScreensView).toMediator(ScreensMediator);
+		this.mediatorMap.map(TooltipAble).toMediator(TooltipAbleMediator);
+	}
 
-    private function init():void
-    {
-        this.mediatorMap.mediate(this.contextView);
-        this.layers = new Layers();
-        this.injector.map(Layers).toValue(this.layers);
-        this.contextView.addChild(this.layers);
-    }
+	private function init():void
+	{
+		this.mediatorMap.mediate(this.contextView);
+		this.layers = new Layers();
+		this.injector.map(Layers).toValue(this.layers);
+		this.contextView.addChild(this.layers);
+	}
 
 
 }

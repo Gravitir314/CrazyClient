@@ -12,25 +12,25 @@ import io.decagames.rotmg.pets.panels.YardUpgraderPanel;
 import kabam.rotmg.text.model.TextKey;
 
 public class YardUpgrader extends GameObject implements IInteractiveObject
-    {
+{
 
-        public function YardUpgrader(_arg_1:XML)
-        {
-            super(_arg_1);
-            isInteractive_ = true;
-        }
+	public function YardUpgrader(_arg_1:XML)
+	{
+		super(_arg_1);
+		isInteractive_ = true;
+	}
 
-        public function getTooltip():ToolTip
-        {
-            return (new TextToolTip(0x363636, 0x9B9B9B, TextKey.CLOSEDGIFTCHEST_TITLE, TextKey.TEXTPANEL_GIFTCHESTISEMPTY, 200));
-        }
+	public function getTooltip():ToolTip
+	{
+		return (new TextToolTip(0x363636, 0x9B9B9B, TextKey.CLOSEDGIFTCHEST_TITLE, TextKey.TEXTPANEL_GIFTCHESTISEMPTY, 200));
+	}
 
-        public function getPanel(_arg_1:GameSprite):Panel
-        {
-            return (new YardUpgraderPanel(_arg_1, objectType_));
-        }
+	public function getPanel(_arg_1:GameSprite):Panel
+	{
+		return (new YardUpgraderPanel(_arg_1, objectType_));
+	}
 
 
-    }
+}
 }//package com.company.assembleegameclient.objects
 

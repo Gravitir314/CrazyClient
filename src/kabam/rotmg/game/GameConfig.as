@@ -84,94 +84,94 @@ import robotlegs.bender.framework.api.IConfig;
 import robotlegs.bender.framework.api.IContext;
 
 public class GameConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var context:IContext;
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-        [Inject]
-        public var setup:ApplicationSetup;
-
-
-        private function generalGameConfiguration():void
-        {
-            this.injector.map(UpdateGiftStatusDisplaySignal).asSingleton();
-            this.injector.map(SetWorldInteractionSignal).asSingleton();
-            this.injector.map(SetTextBoxVisibilitySignal).asSingleton();
-            this.injector.map(AddSpeechBalloonSignal).asSingleton();
-            this.injector.map(ChatFilter).asSingleton();
-            this.injector.map(GiftStatusModel).asSingleton();
-            this.injector.map(TabStripModel).asSingleton();
-            this.injector.map(ExitGameSignal).asSingleton();
-            this.injector.map(QueueStatusTextSignal).asSingleton();
-            this.injector.map(SocketServerModel).asSingleton();
-            this.makeTextPanelMappings();
-            this.makeGiftStatusDisplayMappings();
-            this.mediatorMap.map(PortalPanel).toMediator(PortalPanelMediator);
-            this.mediatorMap.map(PartyPanel).toMediator(PartyPanelMediator);
-            this.mediatorMap.map(InteractPanel).toMediator(InteractPanelMediator);
-            this.mediatorMap.map(ItemGrid).toMediator(ItemGridMediator);
-            this.mediatorMap.map(InventoryGrid).toMediator(InventoryGridMediator);
-            this.mediatorMap.map(EquippedGrid).toMediator(EquippedGridMediator);
-            this.mediatorMap.map(ItemTileSprite).toMediator(ItemTileSpriteMediator);
-            this.mediatorMap.map(TradeSlot).toMediator(TradeSlotMediator);
-            this.mediatorMap.map(MapOverlay).toMediator(MapOverlayMediator);
-            this.mediatorMap.map(Map).toMediator(MapMediator);
-            this.mediatorMap.map(StatView).toMediator(StatMediator);
-            this.mediatorMap.map(TabStripView).toMediator(TabStripMediator);
-            this.mediatorMap.map(StatsView).toMediator(StatsMediator);
-            this.commandMap.map(AppInitDataReceivedSignal).toCommand(ParsePotionDataCommand);
-            this.commandMap.map(GiftStatusUpdateSignal).toCommand(GiftStatusUpdateCommand);
-            this.commandMap.map(UseBuyPotionSignal).toCommand(UseBuyPotionCommand);
-            this.commandMap.map(GameClosedSignal).toCommand(TransitionFromGameToMenuCommand);
-            this.commandMap.map(PlayGameSignal).toCommand(PlayGameCommand);
-            this.mapLoopMonitor();
-        }
-
-        public function configure():void
-        {
-            this.context.configure(GameFocusConfig);
-            this.injector.map(GameModel).asSingleton();
-            this.generalGameConfiguration();
-            this.context.configure(ChatConfig);
-        }
-
-        private function makeTextPanelMappings():void
-        {
-            this.injector.map(TextPanelData).asSingleton();
-            this.commandMap.map(TextPanelMessageUpdateSignal, true).toCommand(TextPanelMessageUpdateCommand);
-            this.mediatorMap.map(TextPanel).toMediator(TextPanelMediator);
-        }
-
-        private function makeGiftStatusDisplayMappings():void
-        {
-            this.mediatorMap.map(GiftStatusDisplay).toMediator(GiftStatusDisplayMediator);
-            this.mediatorMap.map(ShopDisplay).toMediator(ShopDisplayMediator);
-            this.mediatorMap.map(GameSprite).toMediator(GameSpriteMediator);
-            this.mediatorMap.map(CreditDisplay).toMediator(CreditDisplayMediator);
-            this.mediatorMap.map(MoneyChangerPanel).toMediator(MoneyChangerPanelMediator);
-            this.mediatorMap.map(SellableObjectPanel).toMediator(SellableObjectPanelMediator);
-            this.mediatorMap.map(QuestHealthBar).toMediator(QuestHealthBarMediator);
-        }
-
-        private function mapLoopMonitor():void
-        {
-            if (this.setup.isGameLoopMonitored())
-            {
-                this.injector.map(LoopMonitor).toType(RollingMeanLoopMonitor);
-            }
-            else
-            {
-                this.injector.map(LoopMonitor).toType(NullLoopMonitor);
-            }
-        }
+	[Inject]
+	public var context:IContext;
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
+	[Inject]
+	public var setup:ApplicationSetup;
 
 
-    }
+	private function generalGameConfiguration():void
+	{
+		this.injector.map(UpdateGiftStatusDisplaySignal).asSingleton();
+		this.injector.map(SetWorldInteractionSignal).asSingleton();
+		this.injector.map(SetTextBoxVisibilitySignal).asSingleton();
+		this.injector.map(AddSpeechBalloonSignal).asSingleton();
+		this.injector.map(ChatFilter).asSingleton();
+		this.injector.map(GiftStatusModel).asSingleton();
+		this.injector.map(TabStripModel).asSingleton();
+		this.injector.map(ExitGameSignal).asSingleton();
+		this.injector.map(QueueStatusTextSignal).asSingleton();
+		this.injector.map(SocketServerModel).asSingleton();
+		this.makeTextPanelMappings();
+		this.makeGiftStatusDisplayMappings();
+		this.mediatorMap.map(PortalPanel).toMediator(PortalPanelMediator);
+		this.mediatorMap.map(PartyPanel).toMediator(PartyPanelMediator);
+		this.mediatorMap.map(InteractPanel).toMediator(InteractPanelMediator);
+		this.mediatorMap.map(ItemGrid).toMediator(ItemGridMediator);
+		this.mediatorMap.map(InventoryGrid).toMediator(InventoryGridMediator);
+		this.mediatorMap.map(EquippedGrid).toMediator(EquippedGridMediator);
+		this.mediatorMap.map(ItemTileSprite).toMediator(ItemTileSpriteMediator);
+		this.mediatorMap.map(TradeSlot).toMediator(TradeSlotMediator);
+		this.mediatorMap.map(MapOverlay).toMediator(MapOverlayMediator);
+		this.mediatorMap.map(Map).toMediator(MapMediator);
+		this.mediatorMap.map(StatView).toMediator(StatMediator);
+		this.mediatorMap.map(TabStripView).toMediator(TabStripMediator);
+		this.mediatorMap.map(StatsView).toMediator(StatsMediator);
+		this.commandMap.map(AppInitDataReceivedSignal).toCommand(ParsePotionDataCommand);
+		this.commandMap.map(GiftStatusUpdateSignal).toCommand(GiftStatusUpdateCommand);
+		this.commandMap.map(UseBuyPotionSignal).toCommand(UseBuyPotionCommand);
+		this.commandMap.map(GameClosedSignal).toCommand(TransitionFromGameToMenuCommand);
+		this.commandMap.map(PlayGameSignal).toCommand(PlayGameCommand);
+		this.mapLoopMonitor();
+	}
+
+	public function configure():void
+	{
+		this.context.configure(GameFocusConfig);
+		this.injector.map(GameModel).asSingleton();
+		this.generalGameConfiguration();
+		this.context.configure(ChatConfig);
+	}
+
+	private function makeTextPanelMappings():void
+	{
+		this.injector.map(TextPanelData).asSingleton();
+		this.commandMap.map(TextPanelMessageUpdateSignal, true).toCommand(TextPanelMessageUpdateCommand);
+		this.mediatorMap.map(TextPanel).toMediator(TextPanelMediator);
+	}
+
+	private function makeGiftStatusDisplayMappings():void
+	{
+		this.mediatorMap.map(GiftStatusDisplay).toMediator(GiftStatusDisplayMediator);
+		this.mediatorMap.map(ShopDisplay).toMediator(ShopDisplayMediator);
+		this.mediatorMap.map(GameSprite).toMediator(GameSpriteMediator);
+		this.mediatorMap.map(CreditDisplay).toMediator(CreditDisplayMediator);
+		this.mediatorMap.map(MoneyChangerPanel).toMediator(MoneyChangerPanelMediator);
+		this.mediatorMap.map(SellableObjectPanel).toMediator(SellableObjectPanelMediator);
+		this.mediatorMap.map(QuestHealthBar).toMediator(QuestHealthBarMediator);
+	}
+
+	private function mapLoopMonitor():void
+	{
+		if (this.setup.isGameLoopMonitored())
+		{
+			this.injector.map(LoopMonitor).toType(RollingMeanLoopMonitor);
+		}
+		else
+		{
+			this.injector.map(LoopMonitor).toType(NullLoopMonitor);
+		}
+	}
+
+
+}
 }//package kabam.rotmg.game
 

@@ -11,26 +11,26 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
-public class FriendConfig implements IConfig 
-    {
+public class FriendConfig implements IConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-
-
-        public function configure():void
-        {
-            this.injector.map(FriendDataRequestTask);
-            this.injector.map(FriendModel).asSingleton();
-            this.mediatorMap.map(FriendListView).toMediator(FriendListMediator);
-            this.commandMap.map(FriendActionSignal).toCommand(FriendActionCommand);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(FriendDataRequestTask);
+		this.injector.map(FriendModel).asSingleton();
+		this.mediatorMap.map(FriendListView).toMediator(FriendListMediator);
+		this.commandMap.map(FriendActionSignal).toCommand(FriendActionCommand);
+	}
+
+
+}
 }//package kabam.rotmg.friends
 

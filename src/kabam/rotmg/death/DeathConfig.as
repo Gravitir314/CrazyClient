@@ -24,28 +24,28 @@ import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
 public class DeathConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-
-
-        public function configure():void
-        {
-            this.injector.map(DeathModel).asSingleton();
-            this.commandMap.map(HandleDeathSignal).toCommand(HandleDeathCommand);
-            this.commandMap.map(HandleNormalDeathSignal).toCommand(HandleNormalDeathCommand);
-            this.commandMap.map(ZombifySignal).toCommand(ZombifyCommand);
-            this.commandMap.map(ResurrectPlayerSignal).toCommand(ResurrectPlayerCommand);
-            this.mediatorMap.map(GameSprite).toMediator(ZombifyGameMediator);
-            this.mediatorMap.map(ZombifyDialog).toMediator(ZombifyDialogMediator);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(DeathModel).asSingleton();
+		this.commandMap.map(HandleDeathSignal).toCommand(HandleDeathCommand);
+		this.commandMap.map(HandleNormalDeathSignal).toCommand(HandleNormalDeathCommand);
+		this.commandMap.map(ZombifySignal).toCommand(ZombifyCommand);
+		this.commandMap.map(ResurrectPlayerSignal).toCommand(ResurrectPlayerCommand);
+		this.mediatorMap.map(GameSprite).toMediator(ZombifyGameMediator);
+		this.mediatorMap.map(ZombifyDialog).toMediator(ZombifyDialogMediator);
+	}
+
+
+}
 }//package kabam.rotmg.death
 

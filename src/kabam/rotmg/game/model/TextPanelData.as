@@ -2,12 +2,12 @@
 
 package kabam.rotmg.game.model
 {
-    public class TextPanelData 
-    {
+public class TextPanelData
+{
 
-        public var message:String;
+	public var message:String;
 
 
-    }
+}
 }//package kabam.rotmg.game.model
 

@@ -161,6 +161,10 @@ public class MysteryBoxRollModalMediator extends Mediator
 			if (((_local_3.hasOwnProperty("Left")) && (!(this.view.info.unitsLeft == -1))))
 			{
 				this.view.info.unitsLeft = int(_local_3.Left);
+				if (this.view.info.unitsLeft == 0)
+				{
+					this.view.buyButton.soldOut = true;
+				}
 			}
 			_local_5 = this.gameModel.player;
 			if (_local_5 != null)
@@ -213,6 +217,7 @@ public class MysteryBoxRollModalMediator extends Mediator
 				if (_local_9.length == 2)
 				{
 					_local_10 = _local_9[1];
+					this.view.info.unitsLeft = _local_10;
 					if (_local_10 == 0)
 					{
 						_local_8 = "MysteryBoxError.soldOutAll";
@@ -258,7 +263,6 @@ public class MysteryBoxRollModalMediator extends Mediator
 	{
 		this.closePopupSignal.dispatch(this.view);
 		this.showPopupSignal.dispatch(new ErrorModal(300, LineBuilder.getLocalizedStringFromKey("MysteryBoxRollModal.purchaseFailedString", {}), LineBuilder.getLocalizedStringFromKey(_arg_1, {})));
-		this.getMysteryBoxesTask.clearLastRanBlock();
 		this.getMysteryBoxesTask.start();
 	}
 

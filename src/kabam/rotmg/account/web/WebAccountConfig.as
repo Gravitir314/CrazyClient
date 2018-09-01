@@ -58,67 +58,67 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
-public class WebAccountConfig implements IConfig 
-    {
+public class WebAccountConfig implements IConfig
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-        [Inject]
-        public var commandMap:ISignalCommandMap;
-
-
-        public function configure():void
-        {
-            this.mapModel();
-            this.mapCommands();
-            this.mapMediators();
-            this.mapTasks();
-        }
-
-        protected function mapModel():void
-        {
-            this.injector.map(Account).toSingleton(WebAccount);
-            this.injector.map(MoneyConfig).toSingleton(WebMoneyConfig);
-        }
-
-        protected function mapCommands():void
-        {
-            this.commandMap.map(OpenAccountInfoSignal).toCommand(WebOpenAccountInfoCommand);
-            this.commandMap.map(LoginSignal).toCommand(WebLoginCommand);
-            this.commandMap.map(LogoutSignal).toCommand(WebLogoutCommand);
-            this.commandMap.map(WebChangePasswordSignal).toCommand(WebChangePasswordCommand);
-            this.commandMap.map(SendPasswordReminderSignal).toCommand(WebSendPasswordReminderCommand);
-            this.commandMap.map(RegisterSignal).toCommand(WebRegisterAccountCommand);
-            this.commandMap.map(CharListDataSignal).toCommand(WebSetPaymentDataCommand);
-        }
-
-        protected function mapMediators():void
-        {
-            this.mediatorMap.map(WebAccountInfoView).toMediator(WebAccountInfoMediator);
-            this.mediatorMap.map(WebChangePasswordDialog).toMediator(WebChangePasswordMediator);
-            this.mediatorMap.map(WebForgotPasswordDialog).toMediator(WebForgotPasswordMediator);
-            this.mediatorMap.map(WebAccountDetailDialog).toMediator(WebAccountDetailMediator);
-            this.mediatorMap.map(WebRegisterDialog).toMediator(WebRegisterMediator);
-            this.mediatorMap.map(WebLoginDialog).toMediator(WebLoginMediator);
-            this.mediatorMap.map(WebLoginDialogForced).toMediator(WebLoginMediatorForced);
-            this.mediatorMap.map(WebChangePasswordDialogForced).toMediator(WebChangePasswordMediatorForced);
-        }
-
-        protected function mapTasks():void
-        {
-            this.injector.map(ChangePasswordTask).toType(WebChangePasswordTask);
-            this.injector.map(LoadAccountTask).toType(WebLoadAccountTask);
-            this.injector.map(LoginTask).toType(WebLoginTask);
-            this.injector.map(MakePaymentTask).toType(WebMakePaymentTask);
-            this.injector.map(PurchaseGoldTask).toType(WebPurchaseGoldTask);
-            this.injector.map(RegisterAccountTask).toType(WebRegisterAccountTask);
-            this.injector.map(SendPasswordReminderTask).toType(WebSendPasswordReminderTask);
-            this.injector.map(SendConfirmEmailAddressTask).toType(WebSendVerificationEmailTask);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
+	[Inject]
+	public var commandMap:ISignalCommandMap;
 
 
-    }
+	public function configure():void
+	{
+		this.mapModel();
+		this.mapCommands();
+		this.mapMediators();
+		this.mapTasks();
+	}
+
+	protected function mapModel():void
+	{
+		this.injector.map(Account).toSingleton(WebAccount);
+		this.injector.map(MoneyConfig).toSingleton(WebMoneyConfig);
+	}
+
+	protected function mapCommands():void
+	{
+		this.commandMap.map(OpenAccountInfoSignal).toCommand(WebOpenAccountInfoCommand);
+		this.commandMap.map(LoginSignal).toCommand(WebLoginCommand);
+		this.commandMap.map(LogoutSignal).toCommand(WebLogoutCommand);
+		this.commandMap.map(WebChangePasswordSignal).toCommand(WebChangePasswordCommand);
+		this.commandMap.map(SendPasswordReminderSignal).toCommand(WebSendPasswordReminderCommand);
+		this.commandMap.map(RegisterSignal).toCommand(WebRegisterAccountCommand);
+		this.commandMap.map(CharListDataSignal).toCommand(WebSetPaymentDataCommand);
+	}
+
+	protected function mapMediators():void
+	{
+		this.mediatorMap.map(WebAccountInfoView).toMediator(WebAccountInfoMediator);
+		this.mediatorMap.map(WebChangePasswordDialog).toMediator(WebChangePasswordMediator);
+		this.mediatorMap.map(WebForgotPasswordDialog).toMediator(WebForgotPasswordMediator);
+		this.mediatorMap.map(WebAccountDetailDialog).toMediator(WebAccountDetailMediator);
+		this.mediatorMap.map(WebRegisterDialog).toMediator(WebRegisterMediator);
+		this.mediatorMap.map(WebLoginDialog).toMediator(WebLoginMediator);
+		this.mediatorMap.map(WebLoginDialogForced).toMediator(WebLoginMediatorForced);
+		this.mediatorMap.map(WebChangePasswordDialogForced).toMediator(WebChangePasswordMediatorForced);
+	}
+
+	protected function mapTasks():void
+	{
+		this.injector.map(ChangePasswordTask).toType(WebChangePasswordTask);
+		this.injector.map(LoadAccountTask).toType(WebLoadAccountTask);
+		this.injector.map(LoginTask).toType(WebLoginTask);
+		this.injector.map(MakePaymentTask).toType(WebMakePaymentTask);
+		this.injector.map(PurchaseGoldTask).toType(WebPurchaseGoldTask);
+		this.injector.map(RegisterAccountTask).toType(WebRegisterAccountTask);
+		this.injector.map(SendPasswordReminderTask).toType(WebSendPasswordReminderTask);
+		this.injector.map(SendConfirmEmailAddressTask).toType(WebSendVerificationEmailTask);
+	}
+
+
+}
 }//package kabam.rotmg.account.web
 

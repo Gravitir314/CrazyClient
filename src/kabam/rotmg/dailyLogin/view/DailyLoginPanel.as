@@ -14,56 +14,56 @@ import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
 public class DailyLoginPanel extends Panel
-    {
+{
 
-        private const titleText:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xFFFFFF, 18, true);
+	private const titleText:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xFFFFFF, 18, true);
 
-        private var icon:Bitmap;
-        private var title:String = "Login Seer";
-        private var showCalendarText:String = "See rewards";
-        private var noCalendarText:String = "Check Back Later";
-        private var objectType:int;
-        public var calendarButton:DeprecatedTextButtonStatic;
+	private var icon:Bitmap;
+	private var title:String = "Login Seer";
+	private var showCalendarText:String = "See rewards";
+	private var noCalendarText:String = "Check Back Later";
+	private var objectType:int;
+	public var calendarButton:DeprecatedTextButtonStatic;
 
-        public function DailyLoginPanel(_arg_1:GameSprite)
-        {
-            super(_arg_1);
-            this.icon = PetsViewAssetFactory.returnBitmap(5978);
-            this.icon.x = -4;
-            this.icon.y = -8;
-            addChild(this.icon);
-            this.objectType = 5972;
-            this.titleText.setStringBuilder(new StaticStringBuilder(this.title));
-            this.titleText.x = 58;
-            this.titleText.y = 28;
-            addChild(this.titleText);
-        }
+	public function DailyLoginPanel(_arg_1:GameSprite)
+	{
+		super(_arg_1);
+		this.icon = PetsViewAssetFactory.returnBitmap(5978);
+		this.icon.x = -4;
+		this.icon.y = -8;
+		addChild(this.icon);
+		this.objectType = 5972;
+		this.titleText.setStringBuilder(new StaticStringBuilder(this.title));
+		this.titleText.x = 58;
+		this.titleText.y = 28;
+		addChild(this.titleText);
+	}
 
-        public function showCalendarButton():void
-        {
-            this.calendarButton = new DeprecatedTextButtonStatic(16, this.showCalendarText);
-            this.calendarButton.textChanged.addOnce(this.alignButton);
-            addChild(this.calendarButton);
-        }
+	public function showCalendarButton():void
+	{
+		this.calendarButton = new DeprecatedTextButtonStatic(16, this.showCalendarText);
+		this.calendarButton.textChanged.addOnce(this.alignButton);
+		addChild(this.calendarButton);
+	}
 
-        public function showNoCalendarButton():void
-        {
-            this.calendarButton = new DeprecatedTextButtonStatic(16, this.noCalendarText);
-            this.calendarButton.textChanged.addOnce(this.alignButton);
-            addChild(this.calendarButton);
-        }
+	public function showNoCalendarButton():void
+	{
+		this.calendarButton = new DeprecatedTextButtonStatic(16, this.noCalendarText);
+		this.calendarButton.textChanged.addOnce(this.alignButton);
+		addChild(this.calendarButton);
+	}
 
-        public function init():void
-        {
-        }
+	public function init():void
+	{
+	}
 
-        private function alignButton():void
-        {
-            this.calendarButton.x = ((WIDTH / 2) - (this.calendarButton.width / 2));
-            this.calendarButton.y = ((HEIGHT - this.calendarButton.height) - 4);
-        }
+	private function alignButton():void
+	{
+		this.calendarButton.x = ((WIDTH / 2) - (this.calendarButton.width / 2));
+		this.calendarButton.y = ((HEIGHT - this.calendarButton.height) - 4);
+	}
 
 
-    }
+}
 }//package kabam.rotmg.dailyLogin.view
 

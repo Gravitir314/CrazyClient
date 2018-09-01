@@ -3,10 +3,10 @@
 import mx.core.*;
 
 [Embed(source="DialogCloseButton_CloseButtonAsset.png")]
-	public class DialogCloseButton_CloseButtonAsset extends BitmapAsset
+public class DialogCloseButton_CloseButtonAsset extends BitmapAsset
+{
+	public function DialogCloseButton_CloseButtonAsset()
 	{
-		public function DialogCloseButton_CloseButtonAsset()
-		{
-		}
 	}
+}
 }

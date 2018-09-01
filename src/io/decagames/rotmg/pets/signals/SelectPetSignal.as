@@ -7,13 +7,13 @@ import io.decagames.rotmg.pets.data.vo.PetVO;
 import org.osflash.signals.Signal;
 
 public class SelectPetSignal extends Signal
-    {
+{
 
-        public function SelectPetSignal()
-        {
-            super(PetVO);
-        }
+	public function SelectPetSignal()
+	{
+		super(PetVO);
+	}
 
-    }
+}
 }//package io.decagames.rotmg.pets.signals
 

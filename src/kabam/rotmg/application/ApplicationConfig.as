@@ -23,54 +23,54 @@ import org.swiftsuspenders.Injector;
 import robotlegs.bender.framework.api.IConfig;
 
 public class ApplicationConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var root:DisplayObjectContainer;
-        [Inject]
-        public var data:BuildData;
-        [Inject]
-        public var loaderInfo:LoaderInfo;
-        [Inject]
-        public var domainModel:DomainModel;
-
-
-        public function configure():void
-        {
-            var _local_1:ApplicationSetup = this.makeTestingSetup();
-            this.injector.map(DebugSetup).toValue(_local_1);
-            this.injector.map(ApplicationSetup).toValue(_local_1);
-            this.injector.map(PlatformModel).asSingleton();
-        }
-
-        private function makeTestingSetup():ApplicationSetup
-        {
-            var _local_1:BuildEnvironment = this.data.getEnvironment();
-            switch (_local_1)
-            {
-                case BuildEnvironment.LOCALHOST:
-                    return (new LocalhostSetup());
-                case BuildEnvironment.FIXED_IP:
-                    return (this.makeFixedIPSetup());
-                case BuildEnvironment.PRIVATE:
-                    return (new PrivateSetup());
-                case BuildEnvironment.TESTING:
-                    return (new TestingSetup());
-                case BuildEnvironment.TESTING2:
-                    return (new Testing2Setup());
-                default:
-                    return (new ProductionSetup());
-            }
-        }
-
-        private function makeFixedIPSetup():FixedIPSetup
-        {
-            return (new FixedIPSetup().setAddress(this.data.getEnvironmentString()));
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var root:DisplayObjectContainer;
+	[Inject]
+	public var data:BuildData;
+	[Inject]
+	public var loaderInfo:LoaderInfo;
+	[Inject]
+	public var domainModel:DomainModel;
 
 
-    }
+	public function configure():void
+	{
+		var _local_1:ApplicationSetup = this.makeTestingSetup();
+		this.injector.map(DebugSetup).toValue(_local_1);
+		this.injector.map(ApplicationSetup).toValue(_local_1);
+		this.injector.map(PlatformModel).asSingleton();
+	}
+
+	private function makeTestingSetup():ApplicationSetup
+	{
+		var _local_1:BuildEnvironment = this.data.getEnvironment();
+		switch (_local_1)
+		{
+			case BuildEnvironment.LOCALHOST:
+				return (new LocalhostSetup());
+			case BuildEnvironment.FIXED_IP:
+				return (this.makeFixedIPSetup());
+			case BuildEnvironment.PRIVATE:
+				return (new PrivateSetup());
+			case BuildEnvironment.TESTING:
+				return (new TestingSetup());
+			case BuildEnvironment.TESTING2:
+				return (new Testing2Setup());
+			default:
+				return (new ProductionSetup());
+		}
+	}
+
+	private function makeFixedIPSetup():FixedIPSetup
+	{
+		return (new FixedIPSetup().setAddress(this.data.getEnvironmentString()));
+	}
+
+
+}
 }//package kabam.rotmg.application
 

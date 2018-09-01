@@ -2,12 +2,12 @@
 
 package kabam.rotmg.account.securityQuestions.data
 {
-    public class SecurityQuestionsData 
-    {
+public class SecurityQuestionsData
+{
 
-        public var answers:Array = [];
+	public var answers:Array = [];
 
 
-    }
+}
 }//package kabam.rotmg.account.securityQuestions.data
 

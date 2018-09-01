@@ -35,39 +35,39 @@ import robotlegs.bender.extensions.signalCommandMap.impl.SignalCommandMap;
 import robotlegs.bender.framework.api.IConfig;
 
 public class ChatConfig implements IConfig
-    {
+{
 
-        [Inject]
-        public var injector:Injector;
-        [Inject]
-        public var messageMap:MessageMap;
-        [Inject]
-        public var commandMap:SignalCommandMap;
-        [Inject]
-        public var mediatorMap:IMediatorMap;
-
-
-        public function configure():void
-        {
-            this.injector.map(ChatModel).asSingleton();
-            this.injector.map(ChatConfig).asSingleton();
-            this.injector.map(ChatListItemFactory).asSingleton();
-            this.injector.map(TellModel).asSingleton();
-            this.injector.map(AddChatSignal).asSingleton();
-            this.injector.map(ScrollListSignal).asSingleton();
-            this.injector.map(ShowChatInputSignal).asSingleton();
-            this.commandMap.map(AddTextLineSignal).toCommand(ParseAddTextLineCommand);
-            this.commandMap.map(ExitGameSignal).toCommand(ClearTellModelCommand);
-            this.commandMap.map(GameClosedSignal).toCommand(ClearTellModelCommand);
-            this.messageMap.map(GameServerConnection.TEXT).toMessage(Text).toHandler(TextHandler);
-            this.commandMap.map(ParseChatMessageSignal).toCommand(ParseChatMessageCommand);
-            this.mediatorMap.map(ChatInput).toMediator(ChatInputMediator);
-            this.mediatorMap.map(ChatList).toMediator(ChatListMediator);
-            this.mediatorMap.map(Chat).toMediator(ChatMediator);
-            this.mediatorMap.map(ChatInputNotAllowed).toMediator(ChatInputNotAllowedMediator);
-        }
+	[Inject]
+	public var injector:Injector;
+	[Inject]
+	public var messageMap:MessageMap;
+	[Inject]
+	public var commandMap:SignalCommandMap;
+	[Inject]
+	public var mediatorMap:IMediatorMap;
 
 
-    }
+	public function configure():void
+	{
+		this.injector.map(ChatModel).asSingleton();
+		this.injector.map(ChatConfig).asSingleton();
+		this.injector.map(ChatListItemFactory).asSingleton();
+		this.injector.map(TellModel).asSingleton();
+		this.injector.map(AddChatSignal).asSingleton();
+		this.injector.map(ScrollListSignal).asSingleton();
+		this.injector.map(ShowChatInputSignal).asSingleton();
+		this.commandMap.map(AddTextLineSignal).toCommand(ParseAddTextLineCommand);
+		this.commandMap.map(ExitGameSignal).toCommand(ClearTellModelCommand);
+		this.commandMap.map(GameClosedSignal).toCommand(ClearTellModelCommand);
+		this.messageMap.map(GameServerConnection.TEXT).toMessage(Text).toHandler(TextHandler);
+		this.commandMap.map(ParseChatMessageSignal).toCommand(ParseChatMessageCommand);
+		this.mediatorMap.map(ChatInput).toMediator(ChatInputMediator);
+		this.mediatorMap.map(ChatList).toMediator(ChatListMediator);
+		this.mediatorMap.map(Chat).toMediator(ChatMediator);
+		this.mediatorMap.map(ChatInputNotAllowed).toMediator(ChatInputNotAllowedMediator);
+	}
+
+
+}
 }//package kabam.rotmg.chat
 
