@@ -90,15 +90,15 @@ public class GiftStatusDisplay extends Sprite implements TooltipAble
 
 	public function drawAsClosed():void
 	{
-		if (((this.background) && (this.background.parent == this)))
+		if (this.background && this.background.parent == this)
 		{
 			removeChild(this.background);
 		}
-		if (((this.text) && (this.text.parent == this)))
+		if (this.text && this.text.parent == this)
 		{
 			removeChild(this.text);
 		}
-		if (((this.bitmap) && (this.bitmap.parent == this)))
+		if (this.bitmap && this.bitmap.parent == this)
 		{
 			removeChild(this.bitmap);
 		}

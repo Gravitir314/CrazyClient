@@ -512,6 +512,7 @@ public class GameSprite extends AGameSprite
 		var _local_3:Number = (800 / stage.stageWidth);
 		var _local_4:Number = (600 / stage.stageHeight);
 		var _local_5:Number = (_local_3 / _local_4);
+		var _local_6:int = 66;
 		if (this.map != null)
 		{
 			this.map.scaleX = (_local_3 * Parameters.data_.mscale);
@@ -569,7 +570,23 @@ public class GameSprite extends AGameSprite
 				this.rankText_.scaleY = _local_4;
 			}
 			this.rankText_.x = (8 * this.rankText_.scaleX);
-			this.rankText_.y = (4 * this.rankText_.scaleY);
+			this.rankText_.y = (2 * this.rankText_.scaleY);
+		}
+		if (this.giftStatusDisplay != null)
+		{
+			if (_local_2)
+			{
+				this.giftStatusDisplay.scaleX = _local_5;
+				this.giftStatusDisplay.scaleY = 1;
+			}
+			else
+			{
+				this.giftStatusDisplay.scaleX = _local_3;
+				this.giftStatusDisplay.scaleY = _local_4;
+			}
+			this.giftStatusDisplay.x = (6 * this.giftStatusDisplay.scaleX);
+			this.giftStatusDisplay.y = (_local_6 * this.giftStatusDisplay.scaleY);
+			_local_6 = (_local_6 + DISPLAY_AREA_Y_SPACE);
 		}
 		if (this.newsModalButton != null)
 		{
@@ -584,7 +601,38 @@ public class GameSprite extends AGameSprite
 				this.newsModalButton.scaleY = _local_4;
 			}
 			this.newsModalButton.x = (6 * this.newsModalButton.scaleX);
-			this.newsModalButton.y = (34 * this.newsModalButton.scaleY);
+			this.newsModalButton.y = (_local_6 * this.newsModalButton.scaleY);
+			_local_6 = (_local_6 + DISPLAY_AREA_Y_SPACE);
+		}
+		if (this.specialOfferButton != null)
+		{
+			if (_local_2)
+			{
+				this.specialOfferButton.scaleX = _local_5;
+				this.specialOfferButton.scaleY = 1;
+			}
+			else
+			{
+				this.specialOfferButton.scaleX = _local_3;
+				this.specialOfferButton.scaleY = _local_4;
+			}
+			this.specialOfferButton.x = (6 * this.specialOfferButton.scaleX);
+			this.specialOfferButton.y = (_local_6 * this.specialOfferButton.scaleY);
+		}
+		if (this.shopDisplay != null)
+		{
+			if (_local_2)
+			{
+				this.shopDisplay.scaleX = _local_5;
+				this.shopDisplay.scaleY = 1;
+			}
+			else
+			{
+				this.shopDisplay.scaleX = _local_3;
+				this.shopDisplay.scaleY = _local_4;
+			}
+			this.shopDisplay.x = (6 * this.shopDisplay.scaleX);
+			this.shopDisplay.y = (34 * this.shopDisplay.scaleY);
 		}
 		if (this.guildText_ != null)
 		{
@@ -599,7 +647,7 @@ public class GameSprite extends AGameSprite
 				this.guildText_.scaleY = _local_4;
 			}
 			this.guildText_.x = (64 * this.guildText_.scaleX);
-			this.guildText_.y = (6 * this.guildText_.scaleY);
+			this.guildText_.y = (2 * this.guildText_.scaleY);
 		}
 		if (this.creditDisplay_ != null)
 		{
