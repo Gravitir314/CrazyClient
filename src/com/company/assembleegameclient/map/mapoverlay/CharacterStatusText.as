@@ -53,11 +53,11 @@ public class CharacterStatusText extends Sprite implements IMapOverlayElement
 			return (true);
 		}
 		var _local_3:int = (_arg_2 - this.startTime_);
-		if (((_local_3 > this.lifetime_) || ((!(this.go_ == null)) && (this.go_.map_ == null))))
+		if (_local_3 > this.lifetime_ || (this.go_ != null && this.go_.map_ == null))
 		{
 			return (false);
 		}
-		if (((this.go_ == null) || (!(this.go_.drawn_))))
+		if (this.go_ == null || !this.go_.drawn_)
 		{
 			visible = false;
 			return (true);

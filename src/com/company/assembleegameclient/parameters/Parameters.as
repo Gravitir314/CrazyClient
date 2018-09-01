@@ -13,7 +13,7 @@ import flash.utils.Dictionary;
 
 public class Parameters
 {
-	// TODO last file: HurtOverlay.as
+	// TODO last file: ChatMediator.as
 	public static const BUILD_VERSION:String = "X28.0";
 	public static const MINOR_VERSION:String = "6";
 	public static const ENABLE_ENCRYPTION:Boolean = true;

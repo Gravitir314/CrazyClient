@@ -198,9 +198,9 @@ public class GameSpriteMediator extends Mediator
 		this.view.mui_.setEnablePlayerInput(_arg_1);
 	}
 
-	private function onBeginner(_arg_1:Boolean):void
+	private function onBeginner():void
 	{
-		this.view.showSpecialOfferIfSafe(_arg_1);
+		this.view.showSpecialOfferIfSafe();
 	}
 
 	private function onPackage():void

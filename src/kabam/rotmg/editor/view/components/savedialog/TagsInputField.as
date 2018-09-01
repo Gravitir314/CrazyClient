@@ -29,13 +29,13 @@ public class TagsInputField extends Sprite
 		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
 		addChild(this.nameText_);
 		this.inputText_ = new BaseSimpleText(16, 0xB3B3B3, true, _arg_2, _arg_3);
-		this.inputText_.x = ((_arg_4) ? Number(0) : Number(80));
-		this.inputText_.y = ((_arg_4) ? Number(30) : Number(0));
+		this.inputText_.x = ((_arg_4) ? 0 : 80);
+		this.inputText_.y = ((_arg_4) ? 30 : 0);
 		this.inputText_.border = false;
 		this.inputText_.maxChars = 0x0100;
 		this.inputText_.multiline = true;
 		this.inputText_.wordWrap = true;
-		this.inputText_.restrict = "a-z0-9 , ";
+		this.inputText_.restrict = "a-z0-9 ,";
 		this.inputText_.updateMetrics();
 		this.inputText_.text = _arg_1;
 		addChild(this.inputText_);
@@ -73,7 +73,7 @@ public class TagsInputField extends Sprite
 
 	private function onFocusOut(_arg_1:FocusEvent):void
 	{
-		if (((!(contains(this.instructionsText_))) && (this.inputText_.text == "")))
+		if (!contains(this.instructionsText_) && this.inputText_.text == "")
 		{
 			addChild(this.instructionsText_);
 		}

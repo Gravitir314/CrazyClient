@@ -92,7 +92,7 @@ public class CharacterDetailsView extends Sprite
 
 	public function clearInvitationIndicator():void
 	{
-		if (((this.indicator) && (this.indicator.parent)))
+		if (this.indicator && this.indicator.parent)
 		{
 			this.indicator.parent.removeChild(this.indicator);
 		}
@@ -138,7 +138,7 @@ public class CharacterDetailsView extends Sprite
 		{
 			this.expTimer.update(_arg_1.xpTimer);
 		}
-		if (((_arg_1.tierBoost) || (_arg_1.dropBoost)))
+		if (_arg_1.tierBoost || _arg_1.dropBoost)
 		{
 			this.boostPanelButton = ((this.boostPanelButton) || (new BoostPanelButton(_arg_1)));
 			if (this.portrait_)
@@ -177,10 +177,9 @@ public class CharacterDetailsView extends Sprite
 
 	public function setName(_arg_1:String):void
 	{
-		var _local_1:String = Parameters.data_.fakeName;
-		if ((_local_1 != null) && (!Options.hidden))
+		if (Parameters.data_.fakeName != null && !Options.hidden)
 		{
-			_arg_1 = _local_1;
+			_arg_1 = Parameters.data_.fakeName;
 		}
 		this.nameText_.text = _arg_1;
 		DefaultLabelFormat.characterViewNameLabel(this.nameText_);

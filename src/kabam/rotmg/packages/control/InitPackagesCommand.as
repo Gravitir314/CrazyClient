@@ -20,10 +20,9 @@ public class InitPackagesCommand
 
 	public function execute():void
 	{
-		var _local_1:Boolean = (((this.beginnersPackageModel.status == 0)) && (!((this.packageModel.startupPackage() == null))));
-		if (((this.beginnersPackageModel.isBeginnerAvailable()) || (_local_1)))
+		if (this.beginnersPackageModel.isBeginnerAvailable())
 		{
-			this.beginnersPackageAvailable.dispatch(_local_1);
+			this.beginnersPackageAvailable.dispatch();
 		}
 		else
 		{

@@ -2,10 +2,6 @@
 
 package kabam.rotmg.promotions.view
 {
-import io.decagames.rotmg.shop.packages.startupPackage.StartupPackage;
-import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-
-import kabam.rotmg.packages.services.PackageModel;
 import kabam.rotmg.promotions.model.BeginnersPackageModel;
 import kabam.rotmg.promotions.signals.PackageStatusUpdateSignal;
 import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;
@@ -23,10 +19,6 @@ public class SpecialOfferButtonMediator extends Mediator
 	public var showBeginnersPackage:ShowBeginnersPackageSignal;
 	[Inject]
 	public var packageStatusUpdateSignal:PackageStatusUpdateSignal;
-	[Inject]
-	public var packageModel:PackageModel;
-	[Inject]
-	public var showPopupSignal:ShowPopupSignal;
 
 	override public function initialize():void
 	{
@@ -38,7 +30,7 @@ public class SpecialOfferButtonMediator extends Mediator
 
 	private function updatePackageStatus():void
 	{
-		this.view.isSpecialOfferAvailable = ((!((this.beginnersPackageModel.status == BeginnersPackageModel.STATUS_CANNOT_BUY))) || (this.view.isPackageOffer));
+		this.view.isSpecialOfferAvailable = (this.beginnersPackageModel.status != BeginnersPackageModel.STATUS_CANNOT_BUY);
 		if (!this.view.isSpecialOfferAvailable)
 		{
 			this.view.destroy();
@@ -53,14 +45,7 @@ public class SpecialOfferButtonMediator extends Mediator
 
 	private function onButtonClick():void
 	{
-		if (this.view.isPackageOffer)
-		{
-			this.showPopupSignal.dispatch(new StartupPackage(this.packageModel.startupPackage()));
-		}
-		else
-		{
-			this.showBeginnersPackage.dispatch();
-		}
+		this.showBeginnersPackage.dispatch();
 	}
 
 	private function onMarkedAsPurchased():void

@@ -21,6 +21,15 @@ public class Background extends Sprite
 
 	public static function getBackground(_arg_1:int):Background
 	{
+		switch (_arg_1)
+		{
+			case NO_BACKGROUND:
+				return (null);
+			case STAR_BACKGROUND:
+				return (new StarBackground());
+			case NEXUS_BACKGROUND:
+				return (new NexusBackground());
+		}
 		return (null);
 	}
 

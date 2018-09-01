@@ -420,11 +420,11 @@ public class GameSprite extends AGameSprite
 		this.positionPackage();
 	}
 
-	public function showSpecialOfferIfSafe(_arg_1:Boolean):void
+	public function showSpecialOfferIfSafe():void
 	{
 		if (this.evalIsNotInCombatMapArea())
 		{
-			this.specialOfferButton = new SpecialOfferButton(_arg_1);
+			this.specialOfferButton = new SpecialOfferButton();
 			this.specialOfferButton.x = 6;
 			addChild(this.specialOfferButton);
 			this.positionDynamicDisplays();

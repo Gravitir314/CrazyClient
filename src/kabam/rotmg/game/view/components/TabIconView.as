@@ -18,7 +18,7 @@ public class TabIconView extends TabView
 		this.initBackground(_arg_2);
 		if (_arg_3)
 		{
-			this.initIcon(_arg_3, _arg_1);
+			this.initIcon(_arg_3);
 		}
 	}
 
@@ -28,7 +28,7 @@ public class TabIconView extends TabView
 		addChild(_arg_1);
 	}
 
-	private function initIcon(_arg_1:Bitmap, _arg_2:int):void
+	private function initIcon(_arg_1:Bitmap):void
 	{
 		this.icon = _arg_1;
 		_arg_1.x = (_arg_1.x - 5);

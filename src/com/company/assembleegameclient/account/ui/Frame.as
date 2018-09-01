@@ -199,8 +199,8 @@ public class Frame extends Sprite
 	protected function onAddedToStage(_arg_1:Event):void
 	{
 		this.draw();
-		x = (400 - ((this.w_ - 6) / 2));
-		y = (300 - (this.h_ / 2));
+		x = ((stage.stageWidth / 2) - ((this.w_ - 6) / 2));
+		y = ((stage.stageHeight / 2) - (height / 2));
 		if (this.textInputFields_.length > 0)
 		{
 			stage.focus = this.textInputFields_[0].inputText_;

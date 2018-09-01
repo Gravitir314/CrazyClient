@@ -29,11 +29,9 @@ public class SpecialOfferButton extends BasePackageButton
 	private var clickArea:Sprite;
 	private var buttonLabel:TextFieldDisplayConcrete;
 	private var _isSpecialOfferAvailable:Boolean;
-	private var _isPackageOffer:Boolean;
 
-	public function SpecialOfferButton(_arg_1:Boolean)
+	public function SpecialOfferButton()
 	{
-		this._isPackageOffer = _arg_1;
 		this.init();
 	}
 
@@ -83,11 +81,6 @@ public class SpecialOfferButton extends BasePackageButton
 	public function set isSpecialOfferAvailable(_arg_1:Boolean):void
 	{
 		this._isSpecialOfferAvailable = _arg_1;
-	}
-
-	public function get isPackageOffer():Boolean
-	{
-		return (this._isPackageOffer);
 	}
 
 }

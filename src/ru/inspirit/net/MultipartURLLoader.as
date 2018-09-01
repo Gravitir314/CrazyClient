@@ -53,24 +53,6 @@ public class MultipartURLLoader extends EventDispatcher
 		this.requestHeaders = [];
 	}
 
-	public function get bytesLoaded():uint
-	{
-		return (this._loader.bytesLoaded);
-	}
-
-	public function set bytesLoaded(_arg_1:uint):void
-	{
-	}
-
-	public function get data():*
-	{
-		return (this._loader.data);
-	}
-
-	public function set data(_arg_1:*):void
-	{
-	}
-
 	public function load(_arg_1:String, _arg_2:Boolean = false):void
 	{
 		if (((_arg_1 == null) || (_arg_1 == "")))
