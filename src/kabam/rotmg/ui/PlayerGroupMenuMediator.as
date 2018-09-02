@@ -18,8 +18,6 @@ public class PlayerGroupMenuMediator extends Mediator
 
 	[Inject]
 	public var view:PlayerGroupMenu;
-	[Inject]
-	private var addTextLine:AddTextLineSignal;
 
 
 	override public function initialize():void

@@ -7,6 +7,8 @@ import com.company.assembleegameclient.screens.NewCharacterScreen;
 
 import flash.display.Sprite;
 
+import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
+import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsInfoDialog;
 import kabam.rotmg.classes.model.ClassesModel;
 import kabam.rotmg.classes.view.CharacterSkinView;
 import kabam.rotmg.core.model.PlayerModel;
@@ -43,6 +45,8 @@ public class NewCharacterMediator extends Mediator
 	public var classesModel:ClassesModel;
 	[Inject]
 	public var openDialog:OpenDialogSignal;
+	[Inject]
+	public var securityQuestionsModel:SecurityQuestionsModel;
 
 
 	override public function initialize():void
@@ -53,6 +57,10 @@ public class NewCharacterMediator extends Mediator
 		this.updateNewCharacterScreen.add(this.onUpdate);
 		this.buyCharacterPending.add(this.onBuyCharacterPending);
 		this.view.initialize(this.playerModel);
+		if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
+		{
+			this.openDialog.dispatch(new SecurityQuestionsInfoDialog());
+		}
 	}
 
 	private function onBuyCharacterPending(_arg_1:int):void

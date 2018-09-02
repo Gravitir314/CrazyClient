@@ -182,7 +182,7 @@ public class SimpleButton extends BuyButton
 
 	private function updateIconPosition():void
 	{
-		this.icon.x = ((this.text.x + this.text.width) + PADDING);
+		this.icon.x = (this.text.x + this.text.width);
 		this.icon.y = (((this.getHeight() - this.icon.height) - 1) * 0.5);
 	}
 

@@ -20,7 +20,7 @@ public class TextToolTip extends ToolTip
 		super(_arg_1, 1, _arg_2, 1, _arg_7);
 		if (_arg_3 != null)
 		{
-			this.titleText_ = new TextFieldDisplayConcrete().setSize(20).setColor(0xFFFFFF);
+			this.titleText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF);
 			this.configureTextFieldDisplayAndAddChild(this.titleText_, _arg_5, _arg_3);
 		}
 		if (_arg_4 != null)
@@ -32,7 +32,7 @@ public class TextToolTip extends ToolTip
 
 	override protected function alignUI():void
 	{
-		this.tipText_.y = ((this.titleText_) ? (this.titleText_.height + 8) : 0);
+		this.tipText_.y = ((this.titleText_) ? (this.titleText_.height + 2) : 0);
 	}
 
 	public function configureTextFieldDisplayAndAddChild(_arg_1:TextFieldDisplayConcrete, _arg_2:int, _arg_3:String, _arg_4:Object = null):void

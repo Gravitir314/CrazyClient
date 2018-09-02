@@ -9,6 +9,7 @@ import flash.events.KeyboardEvent;
 
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.account.core.signals.RegisterSignal;
+import kabam.rotmg.account.core.view.RegisterPromptDialog;
 import kabam.rotmg.account.web.model.AccountData;
 import kabam.rotmg.chat.control.ScrollListSignal;
 import kabam.rotmg.chat.control.ShowChatInputSignal;
@@ -17,6 +18,7 @@ import kabam.rotmg.chat.model.ChatShortcutModel;
 import kabam.rotmg.chat.model.TellModel;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
+import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.ui.model.HUDModel;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
@@ -207,7 +209,17 @@ public class ChatMediator extends Mediator
 
 	private function triggerOrPromptRegistration(_arg_1:String):void
 	{
-		this.showChatInput.dispatch(true, _arg_1);
+		if (this.account.isRegistered())
+		{
+			this.showChatInput.dispatch(true, _arg_1);
+		}
+		else
+		{
+			if (this.hudModel.gameSprite != null && this.hudModel.gameSprite.evalIsNotInCombatMapArea())
+			{
+				this.openDialog.dispatch(new RegisterPromptDialog(TextKey.CHAT_REGISTER_TO_CHAT));
+			}
+		}
 	}
 
 

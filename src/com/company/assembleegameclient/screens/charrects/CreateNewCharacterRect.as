@@ -33,7 +33,7 @@ public class CreateNewCharacterRect extends CharacterRect
 		{
 			_local_2 = (FameUtil.maxStars() - _arg_1.getNumStars());
 			super.makeTaglineIcon();
-			super.makeTaglineText(new LineBuilder().setParams((_local_2 + " stars to go")));
+			super.makeTaglineText(new LineBuilder().setParams(TextKey.CREATE_NEW_CHARACTER_RECT_TAGLINE, {"remainingStars":_local_2}));
 			taglineText.x = (taglineText.x + taglineIcon.width);
 		}
 	}
@@ -46,7 +46,7 @@ public class CreateNewCharacterRect extends CharacterRect
 		this.bitmap_ = new Bitmap();
 		this.bitmap_.bitmapData = _local_2;
 		this.bitmap_.x = CharacterRectConstants.ICON_POS_X;
-		this.bitmap_.y = 0;
+		this.bitmap_.y = CharacterRectConstants.ICON_POS_Y;
 		selectContainer.addChild(this.bitmap_);
 	}
 

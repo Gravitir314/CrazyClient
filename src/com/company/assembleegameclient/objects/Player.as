@@ -1788,7 +1788,7 @@ public class Player extends Character
 				return (false);
 			}
 		}
-		if ((((((map_.player_ == this) && (square_.props_.maxDamage_ > 0)) && ((square_.lastDamage_ + 500) < _arg_1)) && (!(isInvincible()))) && ((square_.obj_ == null) || (!(square_.obj_.props_.protectFromGroundDamage_)))))
+		if (map_.player_ == this && square_.props_.maxDamage_ > 0 && (square_.lastDamage_ + 500) < _arg_1 && !isInvincible() && (square_.obj_ == null || !square_.obj_.props_.protectFromGroundDamage_))
 		{
 			_local_10 = map_.gs_.gsc_.getNextDamage(square_.props_.minDamage_, square_.props_.maxDamage_);
 			_local_11 = new Vector.<uint>();
@@ -2544,8 +2544,7 @@ public class Player extends Character
 		var _local_1:Vector3D;
 		var _local_2:Vector3D;
 		var _local_3:Point;
-		var _local_4:ProjectileProperties;
-		var _local_5:Vector3D;
+		var _local_4:ObjectProperties = ObjectLibrary.propsLibrary_[equipment_[0]];
 		_local_3 = this.sToW(map_.mouseX, map_.mouseY);
 		if (_local_3 == null)
 		{
@@ -2553,8 +2552,10 @@ public class Player extends Character
 		}
 		_local_2 = new Vector3D(_local_3.x, _local_3.y);
 		_local_1 = new Vector3D(x_, y_);
-		_local_4 = ObjectLibrary.propsLibrary_[equipment_[0]].projectiles_[0];
-		aimAssistPoint = this.autoAim_(_local_1, _local_2, _local_4);
+		if (_local_4 != null)
+		{
+			aimAssistPoint = this.autoAim_(_local_1, _local_2, _local_4.projectiles_[0]);
+		}
 		if (aimAssistPoint != null)
 		{
 			return (Math.atan2((aimAssistPoint.y - y_), (aimAssistPoint.x - x_)));
@@ -2588,10 +2589,10 @@ public class Player extends Character
 		var _local_3:Boolean = map_.gs_.mui_.mouseDown_;
 		var _local_4:Boolean = map_.gs_.mui_.autofire_;
 		var _local_5:Boolean = Parameters.data_.AAOn;
-		if (((_local_5) && (!(_local_3))))
+		if (_local_5 && !_local_3)
 		{
 			_local_2 = this.getAimAngle();
-			if (((!(_local_2 == Number.MAX_VALUE)) && (!(isUnstable()))))
+			if (_local_2 != Number.MAX_VALUE && !isUnstable())
 			{
 				this.shoot(_local_2);
 				this.isShooting = false;

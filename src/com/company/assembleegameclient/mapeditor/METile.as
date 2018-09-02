@@ -5,13 +5,12 @@ package com.company.assembleegameclient.mapeditor
 public class METile
 {
 
-	public var types_:Vector.<int>;
+	public var types_:Vector.<int> = new <int>[-1, -1, -1];
 	public var objName_:String = null;
 	public var layerNumber:int;
 
 	public function METile()
 	{
-		this.types_ = new <int>[-1, -1, -1];
 		this.layerNumber = 0;
 	}
 

@@ -25,13 +25,15 @@ public class WebLoginTask extends BaseTask implements LoginTask
 		if (this.data.secret != "")
 		{
 			this.client.sendRequest("/account/verify", {
-				"guid": this.data.username, "secret": this.data.secret
+				"guid": this.data.username,
+				"secret": this.data.secret
 			});
 		}
 		else
 		{
 			this.client.sendRequest("/account/verify", {
-				"guid": this.data.username, "password": this.data.password
+				"guid": this.data.username,
+				"password": this.data.password
 			});
 		}
 	}

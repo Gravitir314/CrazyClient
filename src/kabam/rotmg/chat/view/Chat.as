@@ -61,11 +61,11 @@ public class Chat extends Sprite
 
 	public function removeRegisterBlock():void
 	{
-		if (((!(this.notAllowed == null)) && (contains(this.notAllowed))))
+		if (this.notAllowed != null && contains(this.notAllowed))
 		{
 			removeChild(this.notAllowed);
 		}
-		if (((this.input == null) || (!(contains(this.input)))))
+		if (this.input == null || !contains(this.input))
 		{
 			this.addChatInput();
 		}

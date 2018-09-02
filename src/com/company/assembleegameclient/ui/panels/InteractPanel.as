@@ -63,7 +63,7 @@ public class InteractPanel extends Sprite
 			return;
 		}
 		_local_1 = this.requestInteractive();
-		if (((this.currentPanel == null) || (!(_local_1 == this.currObj_))))
+		if (this.currentPanel == null || _local_1 != this.currObj_)
 		{
 			this.currObj_ = _local_1;
 			this.partyPanel_ = new PartyPanel(this.gs_);
@@ -106,9 +106,9 @@ public class InteractPanel extends Sprite
 
 	private function positionPanelAndAdd():void
 	{
-		if ((this.currentPanel is ItemGrid))
+		if (this.currentPanel is ItemGrid)
 		{
-			this.currentPanel.x = 14;
+			this.currentPanel.x = ((this.w_ - this.currentPanel.width) * 0.5);
 			this.currentPanel.y = 8;
 		}
 		else
