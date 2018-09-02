@@ -896,6 +896,8 @@ public class Options extends Sprite
 		this.addOptionAndPosition(new ChoiceOption("SafeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles.", null));
 		this.addOptionAndPosition(new KeyMapper("SafeWalkKey", "Safe Walk Key", "Block movement onto tiles that cause damage. Click and hold left mouse to walk over these tiles."));
 		this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"));
+		this.addOptionAndPosition(new KeyMapper("followingPlayerKey", "Player Following", "Following to selected player. (/follow)"));
+		this.addOptionAndPosition(new KeyMapper("followingQuestKey", "Quest Following", "Following to current quest."));
 		this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null));
 		this.addOptionAndPosition(new ChoiceOption("rightClickOption", makeRightClickOptions(), ["Off", "Ability", "Camera"], "Right Click Option", "Select the functionality you want on right click: none, spellbomb/ability assist (uses your ability at the enemy closest to your cursor), camera (rotates your camera when holding right click)", null));
 		this.addOptionAndPosition(new ChoiceOption("tiltCam", makeOnOffLabels(), [true, false], "Tilt Camera X Axis", "Allows the Right Click Option, when on Camera, to rotate the X Axis of the Camera's perspective", null));

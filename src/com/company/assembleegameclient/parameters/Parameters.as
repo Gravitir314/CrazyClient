@@ -500,6 +500,10 @@ public class Parameters
 		setDefault("tiltCam", false);
 		setDefault("HidePlayerFilter", false);
 		setDefault("vaultSelection", false);
+		setDefault("followingPlayer", false);
+		setDefault("followingQuest", false);
+		setDefaultKey("followingPlayerKey", KeyCodes.UNSET);
+		setDefaultKey("followingQuestKey", KeyCodes.UNSET);
 	}
 
 

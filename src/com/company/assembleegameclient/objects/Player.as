@@ -24,6 +24,7 @@ import com.company.util.ConversionUtil;
 import com.company.util.GraphicsUtil;
 import com.company.util.IntPoint;
 import com.company.util.MoreColorUtil;
+import com.company.util.MoreStringUtil;
 import com.company.util.PointUtil;
 import com.company.util.Trig;
 
@@ -100,11 +101,14 @@ public class Player extends Character
 
 	private var lastreconnect:int = 0;
 	private var nextSwap:int = 0;
-	public var followTarget:GameObject;
 	public var questMob:GameObject;
 	public var questMob1:GameObject;
 	public var questMob2:GameObject;
 	public var questMob3:GameObject;
+	public var followPos:Point = new Point(0, 0);
+	public var followVec:Point = new Point(0, 0);
+	public var followLanded:Boolean = false;
+	public var followPlayer:GameObject;
 	public var mapLightSpeed:Boolean = false;
 	public var afkMsg:String = "";
 	public var sendStr:int = 2147483647;
@@ -1371,6 +1375,8 @@ public class Player extends Character
 		var _local_26:Point;
 		var _local_27:Server;
 		var _local_28:ReconnectEvent;
+		var following:Boolean;
+		var target:GameObject;
 		if (this == map_.player_)
 		{
 			if (Parameters.data_.dodBot)
@@ -1638,6 +1644,64 @@ public class Player extends Character
 					this.handleAutoH(_local_23);
 				}
 			}
+			// Following Player //
+			following = false;
+			if (this.followPos.x != 0 && this.followPos.y != 0)
+			{
+				if (Parameters.data_.followingPlayer && this.followPlayer)
+				{
+					if (this.followLanded)
+					{
+						this.followVec.x = 0;
+						this.followVec.y = 0;
+						this.followLanded = false;
+					}
+					else
+					{
+						following = true;
+						this.follow(this.followPos.x, this.followPos.y);
+					}
+				}
+			}
+			// Following Player END //
+			// Following Quest //
+			if (Parameters.data_.followingQuest)
+			{
+				if (this.followLanded)
+				{
+					this.followVec.x = 0;
+					this.followVec.y = 0;
+					this.followLanded = false;
+				}
+				else
+				{
+					target = map_.goDict_[map_.quest_.objectId_];
+					if (map_.quest_.objectId_ > 0)
+					{
+						if (target)
+						{
+							this.followPos.x = target.x_;
+							this.followPos.y = target.y_;
+						}
+						following = true;
+						this.follow(this.followPos.x, this.followPos.y);
+					}
+					else
+					{
+						this.followPos.x = this.x_;
+						this.followPos.y = this.y_;
+						this.follow(this.followPos.x, this.followPos.y);
+					}
+				}
+			}
+			// Following Quest END //
+			// Following //
+			if (!following)
+			{
+				this.followVec.x = 0;
+				this.followVec.y = 0;
+			}
+			// Following END //
 		}
 		if (((this.tierBoost) && (!(isPaused()))))
 		{
@@ -1710,32 +1774,14 @@ public class Player extends Character
 				moveVec_.x = (_local_6 * Math.cos(_local_7));
 				moveVec_.y = (_local_6 * Math.sin(_local_7));
 			}
-			else
-			{
-				if (this.followTarget != null)
-				{
-					_local_7 = (((this.followTarget.y_ - y_) * (this.followTarget.y_ - y_)) + ((this.followTarget.x_ - x_) * (this.followTarget.x_ - x_)));
-					if (_local_7 < 0.1)
-					{
-						moveVec_.x = 0;
-						moveVec_.y = 0;
-					}
-					else
-					{
-						if (this.lastteleport <= getTimer())
-						{
-							_local_3.teleport(this.followTarget.name_);
-							this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
-						}
-						_local_7 = Math.atan2((this.followTarget.y_ - y_), (this.followTarget.x_ - x_));
-						moveVec_.x = (_local_6 * Math.cos(_local_7));
-						moveVec_.y = (_local_6 * Math.sin(_local_7));
-					}
-				}
 				else
 				{
 					if (((!(this.relMoveVec_.x == 0)) || (!(this.relMoveVec_.y == 0))))
 					{
+						if (following)
+						{
+							following = false;
+						}
 						_local_7 = Math.atan2(this.relMoveVec_.y, this.relMoveVec_.x);
 						if (((square_.props_.slideAmount_ > 0) && (Parameters.data_.slideOnIce)))
 						{
@@ -1759,17 +1805,45 @@ public class Player extends Character
 					}
 					else
 					{
-						if ((((moveVec_.length > 0.00012) && (square_.props_.slideAmount_ > 0)) && (Parameters.data_.slideOnIce)))
+						// Following //
+						if (following && this.followPos && (this.followVec.x != 0 || this.followVec.y != 0))
 						{
-							moveVec_.scaleBy(square_.props_.slideAmount_);
+							_local_6 = this.getMoveSpeed();
+							_local_7 = Math.atan2(this.followVec.y, this.followVec.x);
+							if (this.square_.props_.slideAmount_ > 0 && (Options.hidden || !Parameters.data_.slideOnIce))
+							{
+								_local_8 = new Vector3D();
+								_local_8.x = (_local_6 * Math.cos(_local_7));
+								_local_8.y = (_local_6 * Math.sin(_local_7));
+								_local_8.z = 0;
+								_local_9 = _local_8.length;
+								_local_8.scaleBy(-(this.square_.props_.slideAmount_ - 1));
+								this.moveVec_.scaleBy(this.square_.props_.slideAmount_);
+								if (this.moveVec_.length < _local_9)
+								{
+									this.moveVec_ = this.moveVec_.add(_local_8);
+								}
+							}
+							else
+							{
+								this.moveVec_.x = (_local_6 * Math.cos(_local_7));
+								this.moveVec_.y = (_local_6 * Math.sin(_local_7));
+							}
+							// Following END //
 						}
 						else
 						{
-							moveVec_.x = 0;
-							moveVec_.y = 0;
+							if ((((moveVec_.length > 0.00012) && (square_.props_.slideAmount_ > 0)) && (Parameters.data_.slideOnIce)))
+							{
+								moveVec_.scaleBy(square_.props_.slideAmount_);
+							}
+							else
+							{
+								moveVec_.x = 0;
+								moveVec_.y = 0;
+							}
 						}
 					}
-				}
 			}
 			if (square_ != null && square_.props_.push_)
 			{
@@ -1779,7 +1853,14 @@ public class Player extends Character
 					moveVec_.y = (moveVec_.y - (square_.props_.animate_.dy_ / 1000));
 				}
 			}
-			this.walkTo((x_ + (_arg_2 * moveVec_.x)), (y_ + (_arg_2 * moveVec_.y)));
+			if (following)
+			{
+				this.walkTo_follow((this.x_ + (_arg_2 * this.moveVec_.x)), (this.y_ + (_arg_2 * this.moveVec_.y)));
+			}
+			else
+			{
+				this.walkTo((x_ + (_arg_2 * moveVec_.x)), (y_ + (_arg_2 * moveVec_.y)));
+			}
 		}
 		else
 		{
@@ -2998,6 +3079,60 @@ public class Player extends Character
 	public function getPSpeed():Number
 	{
 		return (this.getMoveSpeed());
+	}
+
+	public function getPlayer(_arg_1:String):GameObject
+	{
+		var _local_1:GameObject;
+		var _local_2:GameObject;
+		var _local_3:int = int.MAX_VALUE;
+		var _local_4:int;
+		for each (_local_1 in this.map_.goDict_)
+		{
+			if (_local_1 is Player)
+			{
+				_local_4 = MoreStringUtil.levenshtein(_arg_1, _local_1.name_.toLowerCase().substr(0, _arg_1.length));
+				if (_local_4 < _local_3)
+				{
+					_local_3 = _local_4;
+					_local_2 = _local_1;
+				}
+				if (_local_3 == 0) break;
+			}
+		}
+		return (_local_2);
+	}
+
+	public function follow(_arg_1:Number, _arg_2:Number):void
+	{
+		followVec.x = (followPos.x - x_);
+		followVec.y = (followPos.y - y_);
+	}
+
+	public function walkTo_follow(_arg_1:Number, _arg_2:Number):Boolean
+	{
+		var _local_3:Number;
+		var _local_6:Number;
+		var _local_5:Number;
+		var _local_4:Number;
+		this.modifyMove(_arg_1, _arg_2, newP);
+		if (Parameters.data_.followingName || Parameters.data_.questFollow)
+		{
+			if (!this.followLanded && isValidPosition(this.followPos.x, this.followPos.y))
+			{
+				_local_3 = Math.abs(this.x_ - this.followPos.x);
+				_local_6 = Math.abs(this.y_ - this.followPos.y);
+				_local_5 = Math.abs(this.x_ - newP.x);
+				_local_4 = Math.abs(this.y_ - newP.y);
+				if (_local_5 >= _local_3 && _local_4 >= _local_6)
+				{
+					newP.x = followPos.x;
+					newP.y = followPos.y;
+					this.followLanded = true;
+				}
+			}
+		}
+		return (this.moveTo(newP.x, newP.y));
 	}
 
 

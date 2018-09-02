@@ -848,8 +848,8 @@ public class ParseChatMessageCommand
 				_local_26.escapeUnsafe();
 				return (true);
 			case "/follow":
-				_local_12.followTarget = null;
-				_local_12.notifyPlayer("Stopped following");
+					Parameters.data_.followingPlayer = !Parameters.data_.followingPlayer;
+				_local_12.notifyPlayer((Parameters.data_.followingPlayer) ? "Following started" : "Following stopped", 0xFF00, 1500);
 				return (true);
 			case "/cchelp":
 				this.openDialog.dispatch(new HelpBoard());
@@ -984,6 +984,18 @@ public class ParseChatMessageCommand
 				Parameters.save();
 				return (true);
 			default:
+				_local_7 = this.data.match("^/follow (\\w+)");
+				if (_local_7 != null)
+				{
+					var target:GameObject = this.hudModel.gameSprite.map.player_.getPlayer(_local_7[1]);
+					if (target != null)
+					{
+						this.hudModel.gameSprite.map.player_.followPlayer = target;
+						Parameters.data_.followingPlayer = true;
+						_local_12.notifyPlayer((Parameters.data_.followingPlayer) ? "Following started" : "Following stopped", 0xFF00, 1500);
+					}
+					return (true);
+				}
 				_local_7 = this.data.match("^/death (.+)$");
 				if (_local_7 != null)
 				{
@@ -1286,7 +1298,7 @@ public class ParseChatMessageCommand
 				{
 					if (!Parameters.data_.blockTP)
 					{
-						_local_26.teleport(this.fixedName(_local_7[1]).name_);
+						_local_26.teleport(_local_12.getPlayer(_local_7[1]).name_);
 					}
 					return (true);
 				}
@@ -1295,16 +1307,8 @@ public class ParseChatMessageCommand
 				{
 					if (!Parameters.data_.blockTP)
 					{
-						_local_26.teleport(this.fixedName(_local_7[1]).name_);
+						_local_26.teleport(_local_12.getPlayer(_local_7[1]).name_);
 					}
-					return (true);
-				}
-				_local_7 = this.data.toLowerCase().match("^/follow (\\w+)$");
-				if (_local_7 != null)
-				{
-					_local_24 = this.fixedName(_local_7[1]);
-					_local_26.teleport(_local_24.name_);
-					_local_12.followTarget = _local_24;
 					return (true);
 				}
 				_local_7 = this.data.toLowerCase().match("^/setspd (-?\\d+)$");
@@ -1372,28 +1376,6 @@ public class ParseChatMessageCommand
 		return (_local_2.Tex1);
 	}
 
-	private function fixedName(_arg_1:String):GameObject
-	{
-		var _local_2:int;
-		var _local_3:GameObject;
-		var _local_4:GameObject;
-		var _local_5:int = int.MAX_VALUE;
-		for each (_local_3 in this.hudModel.gameSprite.map.goDict_)
-		{
-			if ((_local_3 is Player))
-			{
-				_local_2 = levenshtein(_arg_1, _local_3.name_.toLowerCase().substr(0, _arg_1.length));
-				if (_local_2 < _local_5)
-				{
-					_local_5 = _local_2;
-					_local_4 = _local_3;
-				}
-				if (_local_5 == 0) break;
-			}
-		}
-		return (_local_4);
-	}
-
 	private function findMatch2(_arg_1:String):int
 	{
 		var _local_2:Array;
@@ -1441,53 +1423,6 @@ public class ParseChatMessageCommand
 			}
 		}
 		return (_arg_1);
-	}
-
-	public static function levenshtein(_arg_1:String, _arg_2:String):int
-	{
-		var _local_3:int;
-		var _local_4:int;
-		var _local_6:int;
-		var _local_5:Array = [];
-		while (_local_6 <= _arg_1.length)
-		{
-			_local_5[_local_6] = [];
-			_local_4 = 0;
-			while (_local_4 <= _arg_2.length)
-			{
-				if (_local_6 != 0)
-				{
-					_local_5[_local_6].push(0);
-				}
-				else
-				{
-					_local_5[_local_6].push(_local_4);
-				}
-				_local_4++;
-			}
-			_local_5[_local_6][0] = _local_6;
-			_local_6++;
-		}
-		_local_6 = 1;
-		while (_local_6 <= _arg_1.length)
-		{
-			_local_4 = 1;
-			while (_local_4 <= _arg_2.length)
-			{
-				if (_arg_1.charAt((_local_6 - 1)) == _arg_2.charAt((_local_4 - 1)))
-				{
-					_local_3 = 0;
-				}
-				else
-				{
-					_local_3 = 1;
-				}
-				_local_5[_local_6][_local_4] = Math.min((_local_5[(_local_6 - 1)][_local_4] + 1), (_local_5[_local_6][(_local_4 - 1)] + 1), (_local_5[(_local_6 - 1)][(_local_4 - 1)] + _local_3));
-				_local_4++;
-			}
-			_local_6++;
-		}
-		return (_local_5[_arg_1.length][_arg_2.length]);
 	}
 
 	private function findItem(_arg_1:int):void

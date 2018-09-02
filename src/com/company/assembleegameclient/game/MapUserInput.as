@@ -1090,6 +1090,14 @@ public class MapUserInput
 				Parameters.lowCPUMode = !Parameters.lowCPUMode;
 				_local_21.notifyPlayer((Parameters.lowCPUMode) ? "Low CPU enabled" : "Low CPU disabled", 0xFF00, 1500);
 				break;
+			case Parameters.data_.followingPlayerKey:
+				Parameters.data_.followingPlayer = !Parameters.data_.followingPlayer;
+				_local_21.notifyPlayer((Parameters.data_.followingPlayer) ? "Following started" : "Following stopped", 0xFF00, 1500);
+				break;
+			case Parameters.data_.followingQuestKey:
+				Parameters.data_.followingQuest = !Parameters.data_.followingQuest;
+				_local_21.notifyPlayer((Parameters.data_.followingQuest) ? "Following started" : "Following stopped", 0xFF00, 1500);
+				break;
 		}
 		this.setPlayerMovement();
 	}

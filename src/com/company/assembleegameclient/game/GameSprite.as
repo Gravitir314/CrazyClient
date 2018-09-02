@@ -820,6 +820,11 @@ public class GameSprite extends AGameSprite
 				}
 			}
 			moveRecords_.addRecord(_local_3, _local_6.x_, _local_6.y_);
+			if (_local_6.followPlayer)
+			{
+				_local_6.followPos.x = _local_6.followPlayer.x_;
+				_local_6.followPos.y = _local_6.followPlayer.y_;
+			}
 		}
 		lastUpdate_ = _local_3;
 		var _local_7:int = (getTimer() - _local_3);
