@@ -78,7 +78,7 @@ public class PlayerGameObjectListItem extends GameObjectListItem implements Tool
 
 	public function setEnabled(_arg_1:Boolean):void
 	{
-		if (((!(this.enabled == _arg_1)) && (!(Player(go) == null))))
+		if (this.enabled != _arg_1 && Player(go) != null)
 		{
 			this.enabled = _arg_1;
 			this.hoverTooltipDelegate.tooltip = ((this.enabled) ? new PlayerToolTip(Player(go)) : null);

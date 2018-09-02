@@ -205,7 +205,7 @@ public class PetPortrait extends Sprite
 	{
 		if (this._petVO)
 		{
-			if ((this._enableAnimation && this.petName.text != "" && this.petName.text != this.petVO.name) || (this.petFamily.text != "" && this.petFamily.text != this.petVO.family))
+			if (this._enableAnimation && (this.petName.text != "" && this.petName.text != this.petVO.name || this.petFamily.text != "" && this.petFamily.text != this.petVO.family))
 			{
 				this.startAnimation();
 			}
