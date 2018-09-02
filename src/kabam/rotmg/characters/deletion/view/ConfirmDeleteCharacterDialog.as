@@ -14,8 +14,8 @@ import org.osflash.signals.Signal;
 public class ConfirmDeleteCharacterDialog extends Sprite
 {
 
-	private const CANCEL_EVENT:String = "dialogLeftButton";
-	private const DELETE_EVENT:String = "dialogRightButton";
+	private const CANCEL_EVENT:String = Dialog.LEFT_BUTTON;
+	private const DELETE_EVENT:String = Dialog.RIGHT_BUTTON;
 
 	public var deleteCharacter:Signal;
 	public var cancel:Signal;

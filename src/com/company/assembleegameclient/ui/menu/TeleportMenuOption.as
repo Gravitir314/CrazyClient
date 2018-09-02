@@ -63,7 +63,7 @@ public class TeleportMenuOption extends MenuOption
 		var _local_4:int = this.player_.msUtilTeleport();
 		if (_local_4 > 0)
 		{
-			_local_2 = ((_local_4 <= Player.MS_BETWEEN_TELEPORT) ? int(Player.MS_BETWEEN_TELEPORT) : int(Player.MS_REALM_TELEPORT));
+			_local_2 = ((_local_4 <= Player.MS_BETWEEN_TELEPORT) ? Player.MS_BETWEEN_TELEPORT : Player.MS_REALM_TELEPORT);
 			if (!contains(this.barText_))
 			{
 				addChild(this.barText_);

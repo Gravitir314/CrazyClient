@@ -55,27 +55,27 @@ public class SoundEffectLibrary
 
 	private static function makeSoundRequest(_arg_1:String):URLRequest
 	{
-		urlBase = ((urlBase) || (getUrlBase()));
+		urlBase = (urlBase || getUrlBase());
 		var _local_2:String = URL_PATTERN.replace("{URLBASE}", urlBase).replace("{NAME}", _arg_1);
 		return (new URLRequest(_local_2));
 	}
 
-	public static function play(_arg_1:String, _arg_2:Number = 1, _arg_3:Boolean = true):void
+	public static function play(name:String, volumeMultiplier:Number=1, isFX:Boolean=true):void
 	{
-		var _local_4:Number;
-		var _local_5:SoundTransform;
-		var _local_6:SoundChannel;
-		var _local_7:Sound = load(_arg_1);
-		var _local_8:* = (Parameters.data_.SFXVolume * _arg_2);
+		var actualVolume:Number;
+		var trans:SoundTransform;
+		var channel:SoundChannel;
+		var sound:Sound = load(name);
+		var volume:Number = (Parameters.data_.SFXVolume * volumeMultiplier);
 		try
 		{
-			_local_4 = ((((Parameters.data_.playSFX) && (_arg_3)) || ((!(_arg_3)) && (Parameters.data_.playPewPew))) ? _local_8 : 0);
-			_local_5 = new SoundTransform(_local_4);
-			_local_6 = _local_7.play(0, 0, _local_5);
-			_local_6.addEventListener(Event.SOUND_COMPLETE, onSoundComplete, false, 0, true);
-			activeSfxList_[_local_6] = _local_8;
+			actualVolume = ((Parameters.data_.playSFX && isFX || !isFX && Parameters.data_.playPewPew) ? volume : 0);
+			trans = new SoundTransform(actualVolume);
+			channel = sound.play(0, 0, trans);
+			channel.addEventListener(Event.SOUND_COMPLETE, onSoundComplete, false, 0, true);
+			activeSfxList_[channel] = volume;
 		}
-		catch (error:Error)
+		catch(error:Error)
 		{
 		}
 	}

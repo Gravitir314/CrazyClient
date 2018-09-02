@@ -161,7 +161,7 @@ public class PotionSlotView extends Sprite
 		{
 			this.potionIcon.x = _local_6;
 		}
-		if ((!(_local_5)))
+		if (!_local_5)
 		{
 			if (Parameters.data_.contextualPotionBuy)
 			{

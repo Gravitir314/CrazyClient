@@ -3,6 +3,7 @@
 package kabam.rotmg.game.commands
 {
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
 import flash.utils.getTimer;
@@ -55,7 +56,9 @@ public class UseBuyPotionCommand
 
 	private function canPurchasePotion():Boolean
 	{
-		return (false);
+		var _local_1:Boolean = (this.player.credits_ >= this.potion.currentCost(this.player.getPotionCount(this.potionId)));
+		var _local_2:Boolean = Parameters.data_.contextualPotionBuy;
+		return (_local_1 && _local_2);
 	}
 
 	private function usePotionIfEffective():void
@@ -87,7 +90,7 @@ public class UseBuyPotionCommand
 	private function sendServerRequest():void
 	{
 		var _local_1:int = PotionInventoryModel.getPotionSlot(this.vo.objectId);
-		this.gsc.useItem(getTimer(), this.player.objectId_, _local_1, this.potionId, this.player.x_, this.player.y_, 0);
+		this.gsc.useItem(getTimer(), this.player.objectId_, _local_1, this.potionId, this.player.x_, this.player.y_, Parameters.data_.contextualPotionBuy);
 		var _local_2:int = this.player.getSlotwithItem(this.potionId);
 		if (_local_2 != -1)
 		{

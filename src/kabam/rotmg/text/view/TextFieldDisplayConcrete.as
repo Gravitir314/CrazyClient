@@ -341,7 +341,7 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
 
 	private function isAble():Boolean
 	{
-		return (((this.stringMap) && (this.stringBuilder)) && (this.textField));
+		return (this.stringMap && this.stringBuilder && this.textField);
 	}
 
 	public function getVerticalSpace():Number
@@ -366,17 +366,17 @@ public class TextFieldDisplayConcrete extends Sprite implements TextFieldDisplay
 
 	public function hasTextField():Boolean
 	{
-		return (!(this.textField == null));
+		return (this.textField != null);
 	}
 
 	public function hasStringMap():Boolean
 	{
-		return (!(this.stringMap == null));
+		return (this.stringMap != null);
 	}
 
 	public function hasFont():Boolean
 	{
-		return (!(this.font == null));
+		return (this.font != null);
 	}
 
 	public function getTextFormat(_arg_1:int = -1, _arg_2:int = -1):TextFormat

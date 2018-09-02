@@ -29,6 +29,13 @@ public class TomeComparison extends SlotComparison
 		comparisonStringBuilder = new AppendingLineBuilder();
 		if (((nova.length() == 1) && (otherNova.length() == 1)))
 		{
+			if (nova.hasOwnProperty("@damage") && (int(nova.@damage) > 0))
+			{
+				comparisonStringBuilder.pushParams(TooltipHelper.wrapInFontTag("{damage} damage within {range} sqrs", ("#" + TooltipHelper.NO_DIFF_COLOR.toString(16))), {
+					"damage":nova.@damage,
+					"range":nova.@range
+				});
+			}
 			range = Number(nova.@range);
 			otherRange = Number(otherNova.@range);
 			amount = Number(nova.@amount);

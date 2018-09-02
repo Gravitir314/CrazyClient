@@ -50,7 +50,7 @@ public class WebRegisterAccountTask extends BaseTask implements RegisterAccountT
 	{
 		this.model.setIsAgeVerified(true);
 		var _local_2:XML = new XML(_arg_1);
-		if (("token" in _local_2))
+		if (_local_2.hasOwnProperty("token"))
 		{
 			this.data.token = _local_2.token;
 			this.account.updateUser(this.data.username, this.data.password, _local_2.token, "");
